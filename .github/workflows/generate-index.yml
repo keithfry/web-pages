@@ -16,39 +16,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
 
-      - name: Determine changed directories
-        id: changes
+      - name: Generate indexes
         run: |
-          # Find changed files
-          CHANGED=$(git diff --name-only HEAD^ HEAD || true)
-
-          if [ -z "$CHANGED" ]; then
-            echo "No changed files."
-            echo "dirs=" >> $GITHUB_OUTPUT
-            exit 0
-          fi
-
-          echo "Changed files:"
-          echo "$CHANGED"
-
-          # Convert to directories, dedupe, remove '.' and empty
-          DIRS=$(echo "$CHANGED" | xargs -I {} dirname {} | sort -u | grep -vE '^\.?$' || true)
-
-          echo "Detected changed dirs:"
-          echo "$DIRS"
-
-          # Output for next step
-          echo "dirs=$DIRS" >> $GITHUB_OUTPUT
-
-      - name: Generate indexes only where needed
-        if: ${{ steps.changes.outputs.dirs != '' }}
-        run: |
-          echo "Regenerating index.html for:"
-          echo "${{ steps.changes.outputs.dirs }}"
-          ./.github/scripts/generate-index.sh ${{ steps.changes.outputs.dirs }}
+          ./.github/scripts/generate-index.sh techradar
 
       - name: Commit & push index updates
         run: |

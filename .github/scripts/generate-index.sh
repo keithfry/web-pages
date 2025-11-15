@@ -16,8 +16,8 @@ generate_index() {
   local dir="$1"
   local index="$dir/index.html"
 
-  # Skip .git and .github
-  if [[ "$dir" == *"/.git"* ]] || [[ "$dir" == *"/.github"* ]]; then
+  # Skip .git and .github (both at root and nested)
+  if [[ "$dir" == .git* ]] || [[ "$dir" == .github* ]] || [[ "$dir" == *"/.git"* ]] || [[ "$dir" == *"/.github"* ]]; then
     return
   fi
 
