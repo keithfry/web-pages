@@ -16,12 +16,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Determine changed directories
         id: changes
         run: |
           # Find changed files
-          CHANGED=$(git diff --name-only HEAD~1 HEAD || true)
+          CHANGED=$(git diff --name-only HEAD^ HEAD || true)
 
           if [ -z "$CHANGED" ]; then
             echo "No changed files."
