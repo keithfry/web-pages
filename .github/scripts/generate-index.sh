@@ -23,18 +23,73 @@ generate_index() {
 
   echo " → Generating $index"
 
+  # Collect files and extract dates
+  declare -a files_list
+
+  for f in "$dir"/*; do
+    [[ -e "$f" ]] || continue
+    [[ "$f" == "$index" ]] && continue
+
+    fname=$(basename "$f")
+
+    # Try to extract date in YYYY-MM-DD format from filename
+    if [[ "$fname" =~ ([0-9]{4})-([0-9]{2})-([0-9]{2}) ]]; then
+      year="${BASH_REMATCH[1]}"
+      month="${BASH_REMATCH[2]}"
+      day="${BASH_REMATCH[3]}"
+
+      # Convert month number to name
+      case "$month" in
+        01) month_name="January" ;;
+        02) month_name="February" ;;
+        03) month_name="March" ;;
+        04) month_name="April" ;;
+        05) month_name="May" ;;
+        06) month_name="June" ;;
+        07) month_name="July" ;;
+        08) month_name="August" ;;
+        09) month_name="September" ;;
+        10) month_name="October" ;;
+        11) month_name="November" ;;
+        12) month_name="December" ;;
+      esac
+
+      month_key="$year-$month"
+      month_label="$month_name $year"
+
+      # Store file with its month key and full date for sorting
+      files_list+=("$month_key|$year-$month-$day|$month_label|$fname")
+    else
+      # No date found, use a default group
+      files_list+=("0000-00|0000-00-00|Other|$fname")
+    fi
+  done
+
   {
-    echo "<html><body><h2>Index of $dir</h2><ul>"
+    echo "<html><body><h2>Index of $dir</h2>"
 
-    for f in "$dir"/*; do
-      [[ -e "$f" ]] || continue
-      [[ "$f" == "$index" ]] && continue
+    # Sort files by date (latest first), then group by month
+    printf '%s\n' "${files_list[@]}" | sort -t'|' -k2 -r | {
+      current_month=""
+      while IFS='|' read -r month_key date month_label fname; do
+        if [[ "$month_key" != "$current_month" ]]; then
+          # Close previous month's list if any
+          [[ -n "$current_month" ]] && echo "</ul>"
 
-      fname=$(basename "$f")
-      echo "<li><a href=\"./$fname\">$fname</a></li>"
-    done
+          # Start new month section
+          echo "<h2>$month_label</h2>"
+          echo "<ul>"
+          current_month="$month_key"
+        fi
 
-    echo "</ul></body></html>"
+        echo "<li><a href=\"./$fname\">$fname</a></li>"
+      done
+
+      # Close final list
+      [[ -n "$current_month" ]] && echo "</ul>"
+    }
+
+    echo "</body></html>"
   } > "$index"
 }
 
