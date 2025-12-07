@@ -77,7 +77,24 @@ if [ "$LINE_23" -gt "$LINE_15" ]; then
   exit 1
 fi
 
+# Check for cache-prevention meta tags
+if ! grep -q '<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">' "$INDEX_FILE"; then
+  echo "FAIL: Missing Cache-Control meta tag"
+  exit 1
+fi
+
+if ! grep -q '<meta http-equiv="Pragma" content="no-cache">' "$INDEX_FILE"; then
+  echo "FAIL: Missing Pragma meta tag"
+  exit 1
+fi
+
+if ! grep -q '<meta http-equiv="Expires" content="0">' "$INDEX_FILE"; then
+  echo "FAIL: Missing Expires meta tag"
+  exit 1
+fi
+
 echo "PASS: All assertions passed!"
 echo "✓ Files grouped by month with <h2> headers"
 echo "✓ Months ordered latest first"
 echo "✓ Files within months ordered latest first"
+echo "✓ Cache-prevention meta tags present"

@@ -66,7 +66,13 @@ generate_index() {
   done
 
   {
-    echo "<html><body><h2>Index of $dir</h2>"
+    echo "<html>"
+    echo "<head>"
+    echo '<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">'
+    echo '<meta http-equiv="Pragma" content="no-cache">'
+    echo '<meta http-equiv="Expires" content="0">'
+    echo "</head>"
+    echo "<body><h2>Index of $dir</h2>"
 
     # Sort files by date (latest first), then group by month
     printf '%s\n' "${files_list[@]}" | sort -t'|' -k2 -r | {
