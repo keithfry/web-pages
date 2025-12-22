@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tech Radar – 2025-12-22</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 24px; line-height: 1.5; }
+    h1 { margin-bottom: 4px; }
+    h2 { margin-top: 24px; margin-bottom: 8px; }
+    .meta { color: #666; font-size: 0.9em; margin-bottom: 4px; }
+    .item { margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Tech Radar</h1>
+  <div class="meta">Generated on 2025-12-22</div>
+
+      <div class="item">
+        <h2>1. <a href="https://venturebeat.com/ai/agent-autonomy-without-guardrails-is-an-sre-nightmare" target="_blank" rel="noopener noreferrer">Agent autonomy without guardrails is an SRE nightmare</a></h2>
+        <div class="meta">RSS • 2025-12-21T19:00:00.000Z</div>
+        <p>The article highlights the rapid adoption of autonomous AI agents in enterprises, emphasizing the critical need for guardrails to manage risks related to shadow AI, unclear accountability, and lack of explainability. It stresses that without human oversight, robust security measures, and transparent decision logs, AI agents can become operational risks, complicating Incident Response and SRE responsibilities. For topics like LLMs, Agentic AI, RAG, PEFT, and frameworks such as Langchain and Ollama, this means implementing strict governance ensures AI agents enhance workflow automation securely without compromising system reliability or legal compliance. Ultimately, balancing AI agency with clear controls is essential to safely scale AI-driven innovation in engineering environments.</p>
+      </div>
+    
+      <div class="item">
+        <h2>2. <a href="https://www.marktechpost.com/2025/12/21/anthropic-ai-releases-bloom-an-open-source-agentic-framework-for-automated-behavioral-evaluations-of-frontier-ai-models/" target="_blank" rel="noopener noreferrer">Anthropic AI Releases Bloom: An Open-Source Agentic Framework for Automated Behavioral Evaluations of Frontier AI Models</a></h2>
+        <div class="meta">RSS • 2025-12-21T12:55:35.000Z</div>
+        <p>Anthropic’s new open-source framework, Bloom, automates behavioral evaluations of large language models by generating diverse, scenario-based tests from a single specified behavior, addressing the high cost and scalability issues of traditional safety assessments. It uses a four-stage agentic pipeline—understanding, ideation, rollout, and judgment—with configurable parameters and integrates with existing model APIs and experiment tracking tools. Validated on multiple frontier models and behaviors relevant to AI alignment, Bloom effectively distinguishes misaligned behaviors and correlates well with human judgment, making it a valuable tool for continuous, targeted evaluation of model safety and alignment. This advancement is critical for engineering teams working on LLMs, agentic AI, and related tooling in safe and scalable evaluation practices.</p>
+      </div>
+    
+      <div class="item">
+        <h2>3. <a href="https://www.marktechpost.com/2025/12/21/ai-interview-series-4-explain-kv-caching/" target="_blank" rel="noopener noreferrer">AI Interview Series #4: Explain KV Caching</a></h2>
+        <div class="meta">RSS • 2025-12-21T09:23:44.000Z</div>
+        <p>The article explains KV caching, a key optimization in autoregressive large language model (LLM) inference that addresses the slowdown in token generation as sequences grow longer. Without KV caching, the model recomputes attention over all previous tokens at each step, causing quadratic computation growth and significant latency. KV caching stores and reuses keys and values from prior tokens, reducing redundant computations and enabling near-linear scaling of generation time, which is critical for efficient production deployment of LLMs. This optimization directly impacts topics like LLM inference efficiency, agentic AI responsiveness, RAG systems, and frameworks like LangChain that rely on fast, scalable token generation.</p>
+      </div>
+    
+      <div class="item">
+        <h2>4. <a href="https://thesequence.substack.com/p/the-sequence-radar-775-last-week" target="_blank" rel="noopener noreferrer">The Sequence Radar #775: Last Week in AI: Tokens, Throughput, and Trillions</a></h2>
+        <div class="meta">RSS • 2025-12-21T12:03:03.000Z</div>
+        <p>Last week’s AI developments highlight a coordinated advancement across funding, platforms, and model releases, signaling a shift from isolated research to infrastructure-scale AI deployment. OpenAI’s massive potential funding ($100B+) emphasizes that the future of LLMs and agentic AI hinges on industrializing models for cost-efficient, low-latency throughput, optimizing them for real-world multi-agent workflows rather than benchmark scores. NVIDIA’s Nemotron 3 and Google’s Gemini 3 Flash exemplify models designed for sustained, high-throughput token processing and fast, ambient intelligence, essential for scalable retrieval-augmented generation (RAG) and agentic systems. OpenAI’s new ChatGPT Images integration further underscores a move toward multimodal, iterative workflows, making AI outputs editable artifacts, which matters for PEFT/LORA fine-tuning and Langchain-based agent orchestration in production environments.</p>
+      </div>
+    
+      <div class="item">
+        <h2>5. <a href="https://towardsdatascience.com/doing-evals-on-a-bloated-rag-pipeline/" target="_blank" rel="noopener noreferrer">How to Do Evals on a Bloated RAG Pipeline</a></h2>
+        <div class="meta">RSS • 2025-12-21T15:30:00.000Z</div>
+        <p>The article addresses the challenges of evaluating complex Retrieval-Augmented Generation (RAG) pipelines that integrate multiple components like LLMs, PEFT methods (e.g., LoRA), and agentic AI frameworks such as Langchain and Langgraph. It emphasizes best practices for metric comparison across diverse datasets and models to ensure meaningful performance insights. This is crucial for engineering teams working on scalable, multi-component RAG systems in legal and other domains, as it guides reliable evaluation despite pipeline complexity. The discussion also highlights tools like PIC and streaming k-means for efficient analysis, supporting robust model fine-tuning and deployment decisions.</p>
+      </div>
+    
+      <div class="item">
+        <h2>6. <a href="https://towardsdatascience.com/tools-for-your-llm-a-deep-dive-into-mcp/" target="_blank" rel="noopener noreferrer">Tools for Your LLM: a Deep Dive into MCP</a></h2>
+        <div class="meta">RSS • 2025-12-21T13:00:00.000Z</div>
+        <p>The article explores MCP, a crucial framework that equips large language models (LLMs) with tool-using capabilities to access real-time data and execute tasks, effectively transforming them into agentic AI. This development is significant for topics like Retrieval-Augmented Generation (RAG), Parameter-Efficient Fine-Tuning (PEFT) methods such as LoRA, and integration with platforms like Langchain and Langgraph, enhancing LLM utility in dynamic environments. MCP’s ability to unify streaming k-means clustering and tools like ollama addresses challenges in legal and other domain-specific applications, making LLMs more practical and responsive. This advancement marks a key step toward more autonomous and context-aware AI systems.</p>
+      </div>
+    
+      <div class="item">
+        <h2>7. <a href="https://www.reddit.com/r/reinforcementlearning/comments/1prttxz/let_me_know_whether_my_bigpicture_understanding/" target="_blank" rel="noopener noreferrer">let me know whether my big-picture understanding is wrong or missing something important...</a></h2>
+        <div class="meta">RSS • 2025-12-21T01:07:29.000Z</div>
+        <p>The article provides a clear overview of key reinforcement learning (RL) concepts, emphasizing that most RL problems are modeled as Markov Decision Processes (MDPs) with unknown models requiring approximation techniques like temporal-difference learning (TD(0), TD(n)) and combining direct and indirect RL (e.g., Dyna-Q). It highlights the evolution from tabular value functions to function approximation methods using linear models or neural networks, which is critical for scaling RL to complex and continuous domains. Furthermore, it notes the shift toward directly optimizing policies via policy gradient methods instead of relying solely on value-based approaches. This foundational understanding matters for advanced topics like LLMs, agentic AI, retrieval-augmented generation (RAG), and related frameworks (Langchain, LangGraph, Ollama) where RL techniques underpin model training, planning, and decision-making in complex environments.</p>
+      </div>
+    
+</body>
+</html>
