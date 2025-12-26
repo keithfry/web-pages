@@ -72,6 +72,18 @@ generate_index() {
     echo '<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">'
     echo '<meta http-equiv="Pragma" content="no-cache">'
     echo '<meta http-equiv="Expires" content="0">'
+    echo '<script>'
+    echo '(function() {'
+    echo '  var reloadKey = "reload_" + window.location.pathname;'
+    echo '  if (sessionStorage.getItem(reloadKey) === "true") {'
+    echo '    sessionStorage.removeItem(reloadKey);'
+    echo '    location.reload(true);'
+    echo '  }'
+    echo '  window.addEventListener("pagehide", function() {'
+    echo '    sessionStorage.setItem(reloadKey, "true");'
+    echo '  });'
+    echo '})();'
+    echo '</script>'
     echo "</head>"
     echo "<body><h2>Index of $dir</h2>"
 
