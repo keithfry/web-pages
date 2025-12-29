@@ -6,12 +6,16 @@
 <script>
 (function() {
   var reloadKey = "reload_" + window.location.pathname;
+  var isReloading = false;
   if (sessionStorage.getItem(reloadKey) === "true") {
     sessionStorage.removeItem(reloadKey);
+    isReloading = true;
     location.reload(true);
   }
   window.addEventListener("pagehide", function() {
-    sessionStorage.setItem(reloadKey, "true");
+    if (!isReloading) {
+      sessionStorage.setItem(reloadKey, "true");
+    }
   });
 })();
 </script>
