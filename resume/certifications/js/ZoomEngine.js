@@ -35,21 +35,21 @@ class ZoomEngine {
         }
         
         // Calculate center position
+        // Create center position
         const centerX = containerBounds.width / 2;
         const centerY = containerBounds.height / 2;
         
-        // Get image dimensions
-        const rect = imageElement.getBoundingClientRect();
-        const imageWidth = rect.width;
-        const imageHeight = rect.height;
+        // Get un-transformed dimensions
+        const imageWidth = imageElement.offsetWidth;
+        const imageHeight = imageElement.offsetHeight;
         
         // Calculate position to center the image
-        // We need to account for current position and move to center
+        // Target is simply center minus half size (to place top-left) minus current position
         const currentX = originalState.x;
         const currentY = originalState.y;
         
-        const targetX = centerX - (imageWidth * this.config.focusScale / 2) - currentX;
-        const targetY = centerY - (imageHeight * this.config.focusScale / 2) - currentY;
+        const targetX = centerX - (imageWidth / 2) - currentX;
+        const targetY = centerY - (imageHeight / 2) - currentY;
         
         // Store focus data
         this.focusData = {
