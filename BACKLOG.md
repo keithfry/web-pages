@@ -8,4 +8,7 @@
 - [x] Ensure initial image placement keeps (x + width) and (y + height) within screen bounds.
 - [x] Animate images floating into position from a nearby border upon loading.
 - [x] Ensure focused image is perfectly centered in the screen.
-- [ ] Dynamically adjust default image height based on window width for better mobile/small screen display.
+- [x] Dynamically adjust default image height based on window width for better mobile/small screen display.
+- [ ] Create a grid layout with a small overlap where the starting image starts in the center. this needs a little more definition.
+- [ ] the radial layout seems to load more images on the righ of the page. Also there is a lot of overlap. Also some images are partially off the screen on the left.
+

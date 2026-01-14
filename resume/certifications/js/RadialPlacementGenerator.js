@@ -12,14 +12,16 @@ class RadialPlacementGenerator {
      * Generate radial layout positions for images
      * @param {number} imageCount - Number of images to layout
      * @param {Object} containerBounds - Container dimensions {width, height}
+     * @param {Object} options - Optional overrides
      * @returns {Array} - Array of layout objects with position, rotation, scale
      */
-    generate(imageCount, containerBounds) {
+    generate(imageCount, containerBounds, options = {}) {
         const layouts = [];
         const { width, height } = containerBounds;
-        const { baseImageSize, fixedHeight, rotationRange } = this.config;
+        const { baseImageSize, rotationRange } = this.config;
         
-        // Use fixedHeight as the standard size metric if available, otherwise baseImageSize
+        // Use override fixedHeight if provided, else config fixedHeight, else baseImageSize
+        const fixedHeight = options.fixedHeight || this.config.fixedHeight;
         const imageSize = fixedHeight || baseImageSize;
         const cx = width / 2;
         const cy = height / 2;

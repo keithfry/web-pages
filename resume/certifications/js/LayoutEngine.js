@@ -43,10 +43,11 @@ class LayoutEngine {
      * Generate layou positions for images
      * @param {number} imageCount - Number of images to layout
      * @param {Object} containerBounds - Container dimensions {width, height}
+     * @param {Object} options - Optional overrides for configuration (e.g. fixedHeight)
      * @returns {Array} - Array of layout objects with position, rotation, scale
      */
-    generateLayout(imageCount, containerBounds) {
-        const layouts = this.generator.generate(imageCount, containerBounds);
+    generateLayout(imageCount, containerBounds, options = {}) {
+        const layouts = this.generator.generate(imageCount, containerBounds, options);
         
         // Store layouts for state retrieval
         layouts.forEach(layout => {

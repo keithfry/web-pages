@@ -12,9 +12,10 @@ class RandomPlacementGenerator {
      * Generate random layout positions for images
      * @param {number} imageCount - Number of images to layout
      * @param {Object} containerBounds - Container dimensions {width, height}
+     * @param {Object} options - Optional overrides
      * @returns {Array} - Array of layout objects with position, rotation, scale
      */
-    generate(imageCount, containerBounds) {
+    generate(imageCount, containerBounds, options = {}) {
         const layouts = [];
         const { width, height } = containerBounds;
         const { padding, baseImageSize, rotationRange, sizeVarianceMin, sizeVarianceMax } = this.config;

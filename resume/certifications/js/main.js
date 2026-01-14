@@ -18,6 +18,7 @@ const errorEl = document.getElementById('error');
 // State
 let imagesLoaded = false;
 let imageElements = [];
+let currentImageHeight = 225; // Default fallback
 
 // Configuration
 const DEFAULT_DRIVE_FOLDER = 'https://drive.google.com/drive/folders/19JY4GPJkTIVa5DwrqNftYOuJfGUWRU5t?usp=sharing';
@@ -96,8 +97,12 @@ async function createImageCloud(imageUrls) {
         height: imageCloud.offsetHeight || window.innerHeight * 0.7
     };
     
-    // Generate layout for images
-    const layouts = layoutEngine.generateLayout(imageUrls.length, containerBounds);
+    // Determine layout options
+    const imageHeight = getImageHeight();
+    currentImageHeight = imageHeight;
+    
+    // Generate layout for images with dynamic height
+    const layouts = layoutEngine.generateLayout(imageUrls.length, containerBounds, { fixedHeight: imageHeight });
     
     // Queue for loaded images
     const displayQueue = [];
@@ -126,10 +131,6 @@ async function createImageCloud(imageUrls) {
         
         // Stop interval if all images are processed
         if (processedCount >= imageUrls.length && displayQueue.length === 0) {
-            // Check if we're truly done (all fetched and processed)
-            // Ideally we track fetched count too, but checking length gives a good approximation
-            // if we assume this runs long enough. 
-            // Better: just check if we have processed all URLs provided.
             if (processedCount === imageUrls.length) {
                 clearInterval(queueInterval);
             }
@@ -146,7 +147,8 @@ async function createImageCloud(imageUrls) {
         // Apply initial layout
         const layout = layouts[index];
         const baseSize = CONFIG.isMobile() ? CONFIG.layout.mobileImageSize : layout.baseSize;
-        const imageHeight = CONFIG.layout.fixedHeight;
+        // Use the calculated height
+        // const imageHeight = CONFIG.layout.fixedHeight; // REMOVED
         
         // Allow natural aspect ratio, constrained by fixed height
         img.style.width = 'auto';
@@ -311,8 +313,16 @@ window.addEventListener('resize', () => {
     
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-        // Optionally regenerate layout on significant resize
-        console.log('Window resized');
+        // optionally regenerate layout on significant resize
+        const newHeight = getImageHeight();
+        
+        if (newHeight !== currentImageHeight) {
+            console.log(`Window resized to new breakpoint (height: ${newHeight}px). Reloading images...`);
+            handleLoadImages(DEFAULT_DRIVE_FOLDER);
+        } else {
+             // Just logging for minor resizes
+             console.log('Window resized (no breakpoint change)');
+        }
     }, 500);
 });
 
@@ -321,4 +331,20 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
 } else {
     init();
+}
+
+/**
+ * Get image height based on window width
+ */
+function getImageHeight() {
+    const width = window.innerWidth;
+    const heights = CONFIG.layout.responsiveHeights || [];
+    
+    // Sort descending by minWidth to find first match
+    for (const bh of heights) {
+        if (width >= bh.minWidth) {
+            return bh.height;
+        }
+    }
+    return 120; // Fallback
 }
