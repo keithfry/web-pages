@@ -11,8 +11,6 @@ const zoomEngine = new ZoomEngine(CONFIG.zoom, animationEngine);
 const driveLoader = new GoogleDriveLoader(CONFIG.googleDrive);
 
 // DOM elements
-const folderInput = document.getElementById('folderUrl');
-const loadBtn = document.getElementById('loadBtn');
 const imageCloud = document.getElementById('imageCloud');
 const loadingEl = document.getElementById('loading');
 const errorEl = document.getElementById('error');
@@ -21,22 +19,13 @@ const errorEl = document.getElementById('error');
 let imagesLoaded = false;
 let imageElements = [];
 
+// Configuration
+const DEFAULT_DRIVE_FOLDER = 'https://drive.google.com/drive/folders/19JY4GPJkTIVa5DwrqNftYOuJfGUWRU5t?usp=sharing';
+
 /**
  * Initialize the application
  */
 function init() {
-    // Set up event listeners
-    loadBtn.addEventListener('click', handleLoadImages);
-    folderInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            handleLoadImages();
-        }
-    });
-    
-    // Pre-fill with test URL if available
-    const testUrl = 'https://drive.google.com/drive/folders/19JY4GPJkTIVa5DwrqNftYOuJfGUWRU5t?usp=sharing';
-    folderInput.value = testUrl;
-
     // Add global event listeners for interaction
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
@@ -45,25 +34,24 @@ function init() {
     });
 
     document.addEventListener('click', (e) => {
-        // If user clicks background (not an image or control), reset zoom
-        if (!e.target.closest('.cloud-image') && 
-            !e.target.closest('.input-wrapper') && 
-            !e.target.closest('.instructions')) {
+        // If user clicks background (not an image), reset zoom
+        if (!e.target.closest('.cloud-image')) {
             zoomEngine.unfocusImage();
         }
     });
     
     console.log('Interactive Image Cloud initialized');
+    
+    // Auto-load images
+    handleLoadImages(DEFAULT_DRIVE_FOLDER);
 }
 
 /**
  * Handle loading images from Google Drive folder
  */
-async function handleLoadImages() {
-    const folderUrl = folderInput.value.trim();
-    
+async function handleLoadImages(folderUrl) {
     if (!folderUrl) {
-        showError('Please enter a Google Drive folder URL');
+        showError('No folder URL provided');
         return;
     }
     
@@ -205,12 +193,12 @@ function clearImageCloud() {
  * Show/hide loading state
  */
 function showLoading(show) {
+    if (!CONFIG.ui.showLoadingSpinner) return;
+    
     if (show) {
         loadingEl.classList.remove('hidden');
-        loadBtn.disabled = true;
     } else {
         loadingEl.classList.add('hidden');
-        loadBtn.disabled = false;
     }
 }
 

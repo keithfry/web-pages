@@ -9,34 +9,6 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <h1>Image Cloud Gallery</h1>
-            <p class="subtitle">Click any image to focus, click again to return</p>
-        </header>
-
-        <div class="input-section">
-            <div class="input-wrapper">
-                <input 
-                    type="text" 
-                    id="folderUrl" 
-                    class="folder-input" 
-                    placeholder="Paste Google Drive folder URL here..."
-                    aria-label="Google Drive folder URL">
-                <button id="loadBtn" class="load-btn">Load Images</button>
-            </div>
-            <div class="instructions">
-                <details>
-                    <summary>How to get a Google Drive folder URL</summary>
-                    <ol>
-                        <li>Open your Google Drive folder containing images</li>
-                        <li>Click "Share" in the top-right corner</li>
-                        <li>Change access to "Anyone with the link"</li>
-                        <li>Copy the link and paste it above</li>
-                    </ol>
-                </details>
-            </div>
-        </div>
-
         <div id="imageCloud" class="image-cloud" role="main" aria-label="Image gallery">
             <!-- Images will be dynamically inserted here -->
         </div>

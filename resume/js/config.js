@@ -10,6 +10,11 @@ const CONFIG = {
         easing: 'cubic-bezier(0.4, 0.0, 0.2, 1)',  // smooth easing
         bounceEasing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'  // bounce effect
     },
+
+    // UI settings
+    ui: {
+        showLoadingSpinner: false
+    },
     
     // Layout settings
     layout: {
@@ -52,5 +57,6 @@ CONFIG.isMobile = () => window.innerWidth <= CONFIG.breakpoints.mobile;
 Object.freeze(CONFIG.animation);
 Object.freeze(CONFIG.layout);
 Object.freeze(CONFIG.zoom);
+Object.freeze(CONFIG.ui);
 Object.freeze(CONFIG.googleDrive);
 Object.freeze(CONFIG.breakpoints);
