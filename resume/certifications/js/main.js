@@ -100,61 +100,53 @@ async function createImageCloud(imageUrls) {
     const layouts = layoutEngine.generateLayout(imageUrls.length, containerBounds);
     
     // Create image elements
-    const imagePromises = imageUrls.map((url, index) => {
-        return new Promise((resolve, reject) => {
-            const img = document.createElement('img');
-            img.src = url;
-            img.classList.add('cloud-image');
-            img.dataset.imageId = index;
-            
-            // Apply initial layout
-            const layout = layouts[index];
-            const baseSize = CONFIG.isMobile() ? CONFIG.layout.mobileImageSize : layout.baseSize;
-            
-            // Allow natural aspect ratio, constrained by baseSize
-            img.style.width = 'auto';
-            img.style.height = 'auto';
-            img.style.maxWidth = `${baseSize}px`;
-            img.style.maxHeight = `${baseSize}px`;
-            
-            img.style.left = `${layout.x}px`;
-            img.style.top = `${layout.y}px`;
-            
-            // Apply initial transform (rotation and scale)
-            img.style.transform = `rotate(${layout.rotation}deg) scale(${layout.scale})`;
-            
-            // Add click handler with stopPropagation to avoid triggering background click
-            img.addEventListener('click', (e) => {
-                e.stopPropagation();
-                handleImageClick(img, layout);
-            });
-            
-            // Wait for image to load
-            img.onload = () => {
-                imageCloud.appendChild(img);
-                imageElements.push(img);
-                
-                // Add entrance animation
-                setTimeout(() => {
-                    img.style.opacity = '1';
-                }, index * 50); // Stagger entrance
-                
-                resolve();
-            };
-            
-            img.onerror = () => {
-                console.error(`Failed to load image: ${url}`);
-                resolve(); // Continue even if one image fails
-            };
-            
-            // Set initial opacity for fade-in effect
-            img.style.opacity = '0';
-            img.style.transition = 'opacity 0.5s ease-in-out';
+    imageUrls.forEach((url, index) => {
+        const img = document.createElement('img');
+        img.src = url;
+        img.classList.add('cloud-image');
+        img.dataset.imageId = index;
+        
+        // Apply initial layout
+        const layout = layouts[index];
+        const baseSize = CONFIG.isMobile() ? CONFIG.layout.mobileImageSize : layout.baseSize;
+        
+        // Allow natural aspect ratio, constrained by baseSize
+        img.style.width = 'auto';
+        img.style.height = 'auto';
+        img.style.maxWidth = `${baseSize}px`;
+        img.style.maxHeight = `${baseSize}px`;
+        
+        img.style.left = `${layout.x}px`;
+        img.style.top = `${layout.y}px`;
+        
+        // Apply initial transform (rotation and scale)
+        img.style.transform = `rotate(${layout.rotation}deg) scale(${layout.scale})`;
+        
+        // Add click handler with stopPropagation to avoid triggering background click
+        img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            handleImageClick(img, layout);
         });
+        
+        // Set initial opacity for fade-in effect
+        img.style.opacity = '0';
+        img.style.transition = 'opacity 0.5s ease-in-out';
+        
+        // Wait for image to load before appending
+        img.onload = () => {
+            imageCloud.appendChild(img);
+            imageElements.push(img);
+            
+            // Add entrance animation
+            requestAnimationFrame(() => {
+                img.style.opacity = '1';
+            });
+        };
+        
+        img.onerror = () => {
+            console.error(`Failed to load image: ${url}`);
+        };
     });
-    
-    // Wait for all images to load
-    await Promise.all(imagePromises);
 }
 
 /**
