@@ -113,7 +113,12 @@ async function createImageCloud(imageUrls) {
             
             // Add entrance animation
             requestAnimationFrame(() => {
+                // Force reflow to ensure the initial transform is applied before transition starts
+                void img.offsetWidth;
+                
                 img.style.opacity = '1';
+                // Animate to final transform (remove translation offset)
+                img.style.transform = img.dataset.finalTransform;
             });
             
             processedCount++;
@@ -161,11 +166,72 @@ async function createImageCloud(imageUrls) {
         
         // Set initial opacity for fade-in effect
         img.style.opacity = '0';
-        img.style.transition = 'opacity 0.5s ease-in-out';
+        // Add transform to transition for floating effect, match duration with opacity or make it longer/smoother
+        img.style.transition = 'opacity 0.6s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
         
         // Wait for image to load before appending to queue
         img.onload = () => {
-             displayQueue.push(img);
+            // Task 4: Ensure placement keeps (x + width) and (y + height) with screen bounds
+            const aspectRatio = img.naturalWidth / img.naturalHeight;
+            const renderedWidth = imageHeight * aspectRatio;
+            const containerWidth = containerBounds.width;
+            const containerHeight = containerBounds.height;
+            const padding = CONFIG.layout.padding || 50;
+
+            // Adjust X if too far right
+            if (layout.x + renderedWidth > containerWidth - padding) {
+                layout.x = containerWidth - padding - renderedWidth;
+            }
+            // Adjust Y if too far down (less likely with fixed height logic but good safety)
+            if (layout.y + imageHeight > containerHeight - padding) {
+                layout.y = containerHeight - padding - imageHeight;
+            }
+
+            // Update element position
+            img.style.left = `${layout.x}px`;
+            img.style.top = `${layout.y}px`;
+
+            // Process Task 3: Animate images floating into position from a nearby border
+            // Determine closest border
+            const centerX = layout.x + renderedWidth / 2;
+            const centerY = layout.y + imageHeight / 2;
+            
+            let startTx = 0;
+            let startTy = 0;
+            
+            // Distances to borders
+            const distLeft = centerX;
+            const distRight = containerWidth - centerX;
+            const distTop = centerY;
+            const distBottom = containerHeight - centerY;
+            
+            const minDist = Math.min(distLeft, distRight, distTop, distBottom);
+            
+            // Set start translation to move it just off-screen
+            // We add extra buffer to ensure it's fully off-screen
+            const buffer = 100; 
+            
+            if (minDist === distLeft) {
+                startTx = -(layout.x + renderedWidth + buffer);
+            } else if (minDist === distRight) {
+                startTx = (containerWidth - layout.x) + buffer;
+            } else if (minDist === distTop) {
+                startTy = -(layout.y + imageHeight + buffer);
+            } else {
+                startTy = (containerHeight - layout.y) + buffer;
+            }
+            
+            // Store final transform for animation
+            const finalTransform = `rotate(${layout.rotation}deg) scale(${layout.scale})`;
+            const startTransform = `translate(${startTx}px, ${startTy}px) ${finalTransform}`;
+            
+            // Apply start state
+            img.style.transform = startTransform;
+            
+            // Store final state on element for easy access in queue
+            img.dataset.finalTransform = finalTransform;
+
+            displayQueue.push(img);
         };
         
         img.onerror = () => {
