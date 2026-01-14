@@ -11,57 +11,47 @@
 class LayoutEngine {
     constructor(config = {}) {
         this.config = {
+            type: config.type || 'random',
             rotationRange: config.rotationRange || 15,
             sizeVarianceMin: config.sizeVarianceMin || 0.8,
             sizeVarianceMax: config.sizeVarianceMax || 1.2,
             baseImageSize: config.baseImageSize || 200,
             padding: config.padding || 50,
-            minSpacing: config.minSpacing || 20
+            minSpacing: config.minSpacing || 20,
+            ...config // merging other potential config
         };
         
         this.layouts = new Map();  // Store original states by image ID
+        
+        // Initialize generator strategy
+        this.initGenerator();
     }
     
+    initGenerator() {
+        switch (this.config.type) {
+            case 'radial':
+                this.generator = new RadialPlacementGenerator(this.config);
+                break;
+            case 'random':
+            default:
+                this.generator = new RandomPlacementGenerator(this.config);
+                break;
+        }
+    }
+
     /**
-     * Generate random layout positions for images
+     * Generate layou positions for images
      * @param {number} imageCount - Number of images to layout
      * @param {Object} containerBounds - Container dimensions {width, height}
      * @returns {Array} - Array of layout objects with position, rotation, scale
      */
     generateLayout(imageCount, containerBounds) {
-        const layouts = [];
-        const { width, height } = containerBounds;
-        const { padding, baseImageSize, rotationRange, sizeVarianceMin, sizeVarianceMax } = this.config;
+        const layouts = this.generator.generate(imageCount, containerBounds);
         
-        // Calculate safe bounds (accounting for image size and padding)
-        const maxX = width - baseImageSize - padding;
-        const maxY = height - baseImageSize - padding;
-        const minX = padding;
-        const minY = padding;
-        
-        for (let i = 0; i < imageCount; i++) {
-            // Random position within safe bounds
-            const x = this.random(minX, maxX);
-            const y = this.random(minY, maxY);
-            
-            // Random rotation within range
-            const rotation = this.random(-rotationRange, rotationRange);
-            
-            // Random size variance
-            const scale = this.random(sizeVarianceMin, sizeVarianceMax);
-            
-            const layout = {
-                id: i,
-                x,
-                y,
-                rotation,
-                scale,
-                baseSize: baseImageSize
-            };
-            
-            layouts.push(layout);
-            this.layouts.set(i, layout);  // Store for later retrieval
-        }
+        // Store layouts for state retrieval
+        layouts.forEach(layout => {
+            this.layouts.set(layout.id, layout);
+        });
         
         return layouts;
     }
