@@ -8,7 +8,8 @@ const CONFIG = {
     animation: {
         duration: 600,  // milliseconds
         easing: 'cubic-bezier(0.4, 0.0, 0.2, 1)',  // smooth easing
-        bounceEasing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'  // bounce effect
+        bounceEasing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',  // bounce effect
+        queueInterval: 150 // ms between processing queue items
     },
 
     // UI settings
@@ -21,9 +22,10 @@ const CONFIG = {
         rotationRange: 15,  // degrees (+/-)
         minRotation: -15,
         maxRotation: 15,
-        sizeVarianceMin: 0.8,  // 80% of base size
-        sizeVarianceMax: 1.2,  // 120% of base size
+        sizeVarianceMin: 1.0,  // No variance for consistent height
+        sizeVarianceMax: 1.0,  // No variance for consistent height
         baseImageSize: 200,  // pixels
+        fixedHeight: 225, // Fixed height for all images
         mobileImageSize: 120,  // pixels for mobile devices
         padding: 50,  // padding from viewport edges
         minSpacing: 20  // minimum spacing between images to encourage overlap

@@ -99,6 +99,38 @@ async function createImageCloud(imageUrls) {
     // Generate layout for images
     const layouts = layoutEngine.generateLayout(imageUrls.length, containerBounds);
     
+    // Queue for loaded images
+    const displayQueue = [];
+    let processedCount = 0;
+    
+    // Process queue interval
+    const queueInterval = setInterval(() => {
+        if (displayQueue.length > 0) {
+            const img = displayQueue.shift();
+            
+            imageCloud.appendChild(img);
+            imageElements.push(img);
+            
+            // Add entrance animation
+            requestAnimationFrame(() => {
+                img.style.opacity = '1';
+            });
+            
+            processedCount++;
+        }
+        
+        // Stop interval if all images are processed
+        if (processedCount >= imageUrls.length && displayQueue.length === 0) {
+            // Check if we're truly done (all fetched and processed)
+            // Ideally we track fetched count too, but checking length gives a good approximation
+            // if we assume this runs long enough. 
+            // Better: just check if we have processed all URLs provided.
+            if (processedCount === imageUrls.length) {
+                clearInterval(queueInterval);
+            }
+        }
+    }, CONFIG.animation.queueInterval);
+
     // Create image elements
     imageUrls.forEach((url, index) => {
         const img = document.createElement('img');
@@ -109,12 +141,11 @@ async function createImageCloud(imageUrls) {
         // Apply initial layout
         const layout = layouts[index];
         const baseSize = CONFIG.isMobile() ? CONFIG.layout.mobileImageSize : layout.baseSize;
+        const imageHeight = CONFIG.layout.fixedHeight;
         
-        // Allow natural aspect ratio, constrained by baseSize
+        // Allow natural aspect ratio, constrained by fixed height
         img.style.width = 'auto';
-        img.style.height = 'auto';
-        img.style.maxWidth = `${baseSize}px`;
-        img.style.maxHeight = `${baseSize}px`;
+        img.style.height = `${imageHeight}px`;
         
         img.style.left = `${layout.x}px`;
         img.style.top = `${layout.y}px`;
@@ -132,19 +163,15 @@ async function createImageCloud(imageUrls) {
         img.style.opacity = '0';
         img.style.transition = 'opacity 0.5s ease-in-out';
         
-        // Wait for image to load before appending
+        // Wait for image to load before appending to queue
         img.onload = () => {
-            imageCloud.appendChild(img);
-            imageElements.push(img);
-            
-            // Add entrance animation
-            requestAnimationFrame(() => {
-                img.style.opacity = '1';
-            });
+             displayQueue.push(img);
         };
         
         img.onerror = () => {
             console.error(`Failed to load image: ${url}`);
+            // Increment processed count so the interval eventually clears
+             processedCount++; 
         };
     });
 }

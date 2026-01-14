@@ -5,4 +5,5 @@
 - [ ] Reorganize images on window resize to ensure they stay within the visible screen area.
 - [x] Render images progressively as they load instead of waiting for all to complete.
 - [ ] Animate images floating into position from a nearby border upon loading.
-- [ ] Standardize image height and use aspect ratio to maintain shape.
+- [x] Standardize image height and use aspect ratio to maintain shape.
+- [x] Create an image queue loader: fetch images, add to queue, and process queue every 250ms to float images in one by one.
