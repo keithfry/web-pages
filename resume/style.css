@@ -1,0 +1,309 @@
+/* CSS Custom Properties for Theming */
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #1a1a2e;
+    --bg-glass: rgba(255, 255, 255, 0.05);
+    --border-glass: rgba(255, 255, 255, 0.1);
+
+    --text-primary: #ffffff;
+    --text-secondary: #b8b8d1;
+    --text-muted: #6b6b8f;
+
+    --accent-primary: #6366f1;
+    --accent-secondary: #8b5cf6;
+    --accent-glow: rgba(99, 102, 241, 0.4);
+
+    --transition-smooth: cubic-bezier(0.4, 0.0, 0.2, 1);
+    --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 20px var(--accent-glow);
+}
+
+/* Global Resets & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 100vw;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeInDown 0.8s var(--transition-smooth);
+}
+
+.header h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* Input Section */
+.input-section {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    animation: fadeInUp 0.8s var(--transition-smooth) 0.2s backwards;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.folder-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem 1.5rem;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s var(--transition-smooth);
+}
+
+.folder-input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.folder-input::placeholder {
+    color: var(--text-muted);
+}
+
+.load-btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s var(--transition-smooth);
+    box-shadow: var(--shadow-md);
+    white-space: nowrap;
+}
+
+.load-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
+.load-btn:active {
+    transform: translateY(0);
+}
+
+.load-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Instructions */
+.instructions {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.instructions details {
+    cursor: pointer;
+}
+
+.instructions summary {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    user-select: none;
+    padding: 0.25rem;
+}
+
+.instructions summary:hover {
+    color: var(--accent-primary);
+}
+
+.instructions ol {
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+.instructions li {
+    margin-bottom: 0.5rem;
+}
+
+/* Image Cloud Container */
+.image-cloud {
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    margin: 2rem auto;
+    perspective: 1000px;
+}
+
+/* Cloud Images */
+.cloud-image {
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: transform 0.6s var(--transition-smooth),
+        box-shadow 0.6s var(--transition-smooth),
+        z-index 0s 0.6s;
+    will-change: transform;
+    user-select: none;
+}
+
+.cloud-image:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.cloud-image.focused {
+    z-index: 1000;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), var(--shadow-glow);
+    transition: transform 0.6s var(--transition-smooth),
+        box-shadow 0.6s var(--transition-smooth),
+        z-index 0s 0s;
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-secondary);
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 1rem;
+    border: 4px solid var(--border-glass);
+    border-top: 4px solid var(--accent-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Error State */
+.error {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 12px;
+    color: #fca5a5;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+    }
+
+    .folder-input,
+    .load-btn {
+        width: 100%;
+    }
+
+    .cloud-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .cloud-image {
+        width: 120px;
+        height: 120px;
+    }
+}

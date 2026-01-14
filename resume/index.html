@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive image cloud gallery with smooth zoom animations">
+    <title>Interactive Image Cloud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Image Cloud Gallery</h1>
+            <p class="subtitle">Click any image to focus, click again to return</p>
+        </header>
+
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="folderUrl" 
+                    class="folder-input" 
+                    placeholder="Paste Google Drive folder URL here..."
+                    aria-label="Google Drive folder URL">
+                <button id="loadBtn" class="load-btn">Load Images</button>
+            </div>
+            <div class="instructions">
+                <details>
+                    <summary>How to get a Google Drive folder URL</summary>
+                    <ol>
+                        <li>Open your Google Drive folder containing images</li>
+                        <li>Click "Share" in the top-right corner</li>
+                        <li>Change access to "Anyone with the link"</li>
+                        <li>Copy the link and paste it above</li>
+                    </ol>
+                </details>
+            </div>
+        </div>
+
+        <div id="imageCloud" class="image-cloud" role="main" aria-label="Image gallery">
+            <!-- Images will be dynamically inserted here -->
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading images...</p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+    </div>
+
+    <!-- Load modules in order -->
+    <script src="js/config.js"></script>
+    <script src="js/AnimationEngine.js"></script>
+    <script src="js/LayoutEngine.js"></script>
+    <script src="js/ZoomEngine.js"></script>
+    <script src="js/GoogleDriveLoader.js?v=8"></script>
+    <script src="js/main.js?v=8"></script>
+</body>
+</html>
