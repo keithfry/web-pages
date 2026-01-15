@@ -14,3 +14,5 @@
 - [x] the radial layout seems to load more images on the righ of the page. Also there is a lot of overlap. Also some images are partially off the screen on the left.
 - [ ] Tweak scaling and position on different window sizes
 - [x] Change page title to "Resume Certifications Gallery"
+- [ ] Radial layout has some extra border on the edges that we could take out.
+

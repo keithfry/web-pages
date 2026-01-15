@@ -31,7 +31,7 @@ const CONFIG = {
         responsiveHeights: [
             { minWidth: 1200, height: 225 }, // Large screens
             { minWidth: 768, height: 180 },  // Tablet / Small desktop
-            { minWidth: 0, height: 120 }     // Mobile / Default
+            { minWidth: 0, height: 100 }     // Mobile / Default
         ],
         padding: 50,  // padding from viewport edges
         minSpacing: 20  // minimum spacing between images to encourage overlap
