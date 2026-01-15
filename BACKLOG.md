@@ -15,4 +15,5 @@
 - [x] Tweak scaling and position on different window sizes
 - [x] Change page title to "Resume Certifications Gallery"
 - [ ] Radial layout has some extra border on the edges that we could take out.
+- [ ] Move google drive API key out of config.js and into a parameter passed the outermost method.
 

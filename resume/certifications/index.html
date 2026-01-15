@@ -9,7 +9,10 @@
 </head>
 <body>
     <div class="container">
-        <div id="imageCloud" class="image-cloud" role="main" aria-label="Image gallery">
+        <div id="imageCloud" class="image-cloud" role="main" aria-label="Image gallery"
+             data-image-gallery="true"
+             data-api-key="AIzaSyBKTCzznRaJt_Nyd9_9agTHDhFieMMe0u8"
+             data-folder-url="https://drive.google.com/drive/folders/19JY4GPJkTIVa5DwrqNftYOuJfGUWRU5t?usp=sharing">
             <!-- Images will be dynamically inserted here -->
         </div>
 
@@ -21,14 +24,7 @@
         <div id="error" class="error hidden"></div>
     </div>
 
-    <!-- Load modules in order -->
-    <script src="js/config.js?v=debug"></script>
-    <script src="js/AnimationEngine.js"></script>
-    <script src="js/RandomPlacementGenerator.js"></script>
-    <script src="js/RadialPlacementGenerator.js"></script>
-    <script src="js/LayoutEngine.js"></script>
-    <script src="js/ZoomEngine.js"></script>
-    <script src="js/GoogleDriveLoader.js?v=debug"></script>
-    <script src="js/main.js?v=debug"></script>
+    <!-- Load ImageGallery (dependencies will be loaded dynamically) -->
+    <script src="js/ImageGallery.js"></script>
 </body>
 </html>
