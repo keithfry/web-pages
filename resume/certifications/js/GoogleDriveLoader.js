@@ -100,26 +100,31 @@ class GoogleDriveLoader {
             file.mimeType === 'application/vnd.google-apps.folder'
         );
 
-        console.log(`Found ${data.files.length} total items in folder ${folderId}`);
+        debugLog(`Found ${data.files.length} total items in folder ${folderId}`);
         // Log details of all files to see what we are missing
-        data.files.forEach(f => console.log(` - File: ${f.name} (${f.mimeType})`));
+        data.files.forEach(f => debugLog(` - File: ${f.name} (${f.mimeType})`));
 
-        console.log(`- ${validFiles.length} valid files (images only)`);
-        console.log(`- ${subfolders.length} subfolders`);
+        debugLog(`- ${validFiles.length} valid files (images only)`);
+        debugLog(`- ${subfolders.length} subfolders`);
         
         // Add image URLs from this folder
         validFiles.forEach(file => {
             // Use the reliable thumbnail/preview endpoint for both Images and PDFs
             // This works for public folders and handles file format conversion automatically
             // 'sz=w1000' requests a high-quality preview (1000px width)
-            imageUrls.push(`https://drive.google.com/thumbnail?id=${file.id}&sz=w1000`);
+            // detailed explanation:
+            // 1. "drive.google.com" is blocked by ad-blockers (net::ERR_BLOCKED_BY_CLIENT)
+            // 2. The API's "thumbnailLink" is a signed URL that can expire or fail 403.
+            // 3. "lh3.googleusercontent.com/d/{ID}" is the permanent CDN link structure.
+            //    It bypasses the domain block AND the signing issues.
+            imageUrls.push(`https://lh3.googleusercontent.com/d/${file.id}=s1600`);
             
-            console.log(`Added file: ${file.name}`);
+            debugLog(`Added file: ${file.name}`);
         });
         
         // Recursively process subfolders
         for (const folder of subfolders) {
-            console.log(`Loading images from subfolder: ${folder.name}`);
+            debugLog(`Loading images from subfolder: ${folder.name}`);
             const subfolderImages = await this.loadImagesRecursively(folder.id);
             imageUrls.push(...subfolderImages);
         }

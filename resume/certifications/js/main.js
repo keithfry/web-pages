@@ -12,6 +12,17 @@ const driveLoader = new GoogleDriveLoader(CONFIG.googleDrive);
 
 // DOM elements
 const imageCloud = document.getElementById('imageCloud');
+
+// Polyfill debugLog if config.js failed to load or is cached without it
+if (typeof window.debugLog !== 'function') {
+    window.debugLog = function(...args) {
+        // Fallback: log to console if debugging might be intended, or suppress
+        // Checking for CONFIG existence just in case
+        if (typeof CONFIG !== 'undefined' && CONFIG.debugLogging) {
+            console.log(...args);
+        }
+    };
+}
 const loadingEl = document.getElementById('loading');
 const errorEl = document.getElementById('error');
 
@@ -41,7 +52,7 @@ function init() {
         }
     });
     
-    console.log('Interactive Image Cloud initialized');
+    debugLog('Interactive Image Cloud initialized');
     
     // Auto-load images
     handleLoadImages(DEFAULT_DRIVE_FOLDER);
@@ -72,7 +83,7 @@ async function handleLoadImages(folderUrl) {
             return;
         }
         
-        console.log(`Loaded ${imageUrls.length} images from Google Drive`);
+        debugLog(`Loaded ${imageUrls.length} images from Google Drive`);
         
         // Create and display images
         await createImageCloud(imageUrls);
@@ -141,6 +152,8 @@ async function createImageCloud(imageUrls) {
     imageUrls.forEach((url, index) => {
         const img = document.createElement('img');
         img.src = url;
+        // IMPORTANT: Prevent "403 Forbidden" by not sending "localhost" referrer
+        img.referrerPolicy = 'no-referrer';
         img.classList.add('cloud-image');
         img.dataset.imageId = index;
         
@@ -328,11 +341,11 @@ window.addEventListener('resize', () => {
         const newHeight = getImageHeight();
         
         if (newHeight !== currentImageHeight) {
-            console.log(`Window resized to new breakpoint (height: ${newHeight}px). Reloading images...`);
+            debugLog(`Window resized to new breakpoint (height: ${newHeight}px). Reloading images...`);
             handleLoadImages(DEFAULT_DRIVE_FOLDER);
         } else {
              // Just logging for minor resizes
-             console.log('Window resized (no breakpoint change)');
+             debugLog('Window resized (no breakpoint change)');
         }
     }, 500);
 });

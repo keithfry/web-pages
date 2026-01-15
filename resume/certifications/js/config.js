@@ -55,7 +55,10 @@ const CONFIG = {
     // Responsive breakpoints
     breakpoints: {
         mobile: 768
-    }
+    },
+
+    // Debugging
+    debugLogging: false
 };
 
 // Helper function to check if device is mobile
@@ -68,3 +71,16 @@ Object.freeze(CONFIG.zoom);
 Object.freeze(CONFIG.ui);
 Object.freeze(CONFIG.googleDrive);
 Object.freeze(CONFIG.breakpoints);
+
+/**
+ * Centralized debug logger
+ * Safe wrapper for console.log
+ * Explicitly attached to window for global access
+ */
+function debugLog(...args) {
+    if (typeof CONFIG !== 'undefined' && CONFIG.debugLogging) {
+        console.log(...args);
+    }
+}
+window.debugLog = debugLog;
+
