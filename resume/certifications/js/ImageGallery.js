@@ -426,19 +426,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Read configuration from data attributes
-        const apiKey = container.dataset.apiKey || '';
-        const folderUrl = container.dataset.folderUrl || '';
         const loaderType = container.dataset.loaderType || 'googleDrive';
+
+        // GoogleDrive specific attributes
+        const googleDriveApiKey = container.dataset.googleDriveApiKey || '';
+        const googleDriveFolderUrl = container.dataset.googleDriveFolderUrl || '';
+
+        // Static loader specific attributes
         const staticSources = container.dataset.staticSources ?
             JSON.parse(container.dataset.staticSources) : null;
 
         // Initialize gallery
         const gallery = new ImageGallery({
             containerId: container.id,
-            folderUrl: folderUrl,
+            folderUrl: googleDriveFolderUrl,
             loaderType: loaderType,
             googleDrive: {
-                apiKey: apiKey
+                apiKey: googleDriveApiKey
             },
             staticLoader: staticSources ? { sources: staticSources } : {}
         });
