@@ -58,7 +58,19 @@ const CONFIG = {
     },
 
     // Debugging
-    debugLogging: false
+    debugLogging: false,
+
+    // Image loader settings
+    loader: {
+        type: 'googleDrive',  // 'googleDrive' or 'static'
+        static: {
+            validateUrls: true,
+            validationTimeout: 5000,
+            validationMethod: 'head',  // 'head', 'simple', or 'none'
+            failOnAllMissing: true,
+            imageExtensions: ['jpg', 'jpeg', 'png', 'gif', 'webp', 'bmp']
+        }
+    }
 };
 
 // Helper function to check if device is mobile
@@ -71,6 +83,8 @@ Object.freeze(CONFIG.zoom);
 Object.freeze(CONFIG.ui);
 Object.freeze(CONFIG.googleDrive);
 Object.freeze(CONFIG.breakpoints);
+Object.freeze(CONFIG.loader);
+Object.freeze(CONFIG.loader.static);
 
 /**
  * Centralized debug logger

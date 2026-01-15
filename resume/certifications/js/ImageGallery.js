@@ -25,7 +25,7 @@ class ImageGallery {
         this.animationEngine = null;
         this.layoutEngine = null;
         this.zoomEngine = null;
-        this.driveLoader = null;
+        this.imageLoader = null;
         
         // DOM Elements (will be fetched on init)
         this.containerEl = null;
@@ -44,7 +44,8 @@ class ImageGallery {
             'js/RadialPlacementGenerator.js',
             'js/LayoutEngine.js',
             'js/ZoomEngine.js',
-            'js/GoogleDriveLoader.js'
+            'js/GoogleDriveLoader.js',
+            'js/StaticImageLoader.js'
         ];
 
         for (const src of scripts) {
@@ -94,12 +95,23 @@ class ImageGallery {
             this.layoutEngine = new LayoutEngine(CONFIG.layout);
             this.zoomEngine = new ZoomEngine(CONFIG.zoom, this.animationEngine);
 
-            // Create GoogleDrive config with API key override
-            const driveConfig = {
-                ...CONFIG.googleDrive,
-                apiKey: this.apiKey || CONFIG.googleDrive.apiKey
-            };
-            this.driveLoader = new GoogleDriveLoader(driveConfig);
+            // Initialize image loader based on type (factory pattern)
+            const loaderType = this.options.loaderType || CONFIG.loader?.type || 'googleDrive';
+
+            if (loaderType === 'static') {
+                const staticConfig = {
+                    ...CONFIG.loader?.static,
+                    ...(this.options.staticLoader || {})
+                };
+                this.imageLoader = new StaticImageLoader(staticConfig);
+            } else {
+                // Default to GoogleDrive loader
+                const driveConfig = {
+                    ...CONFIG.googleDrive,
+                    apiKey: this.apiKey || CONFIG.googleDrive.apiKey
+                };
+                this.imageLoader = new GoogleDriveLoader(driveConfig);
+            }
 
             // 4. Setup DOM
             this.containerEl = document.getElementById(this.containerId);
@@ -115,11 +127,17 @@ class ImageGallery {
             this.setupEventListeners();
 
             // 7. Load Images
-            // Use configured default folder if not provided in options
-            const folderUrl = this.options.folderUrl || 'https://drive.google.com/drive/folders/19JY4GPJkTIVa5DwrqNftYOuJfGUWRU5t?usp=sharing';
-            
             debugLog('ImageGallery initialized');
-            await this.handleLoadImages(folderUrl);
+
+            // For static loader, sources are in config; for GoogleDrive, use folderUrl
+            if (loaderType === 'static') {
+                // Static loader uses sources from config, pass null as folderUrl
+                await this.handleLoadImages(null);
+            } else {
+                // GoogleDrive loader uses folderUrl
+                const folderUrl = this.options.folderUrl || 'https://drive.google.com/drive/folders/19JY4GPJkTIVa5DwrqNftYOuJfGUWRU5t?usp=sharing';
+                await this.handleLoadImages(folderUrl);
+            }
 
         } catch (error) {
             console.error('Gallery initialization failed:', error);
@@ -163,16 +181,21 @@ class ImageGallery {
 
     handleResize() {
         if (!this.imagesLoaded) return;
-        
+
         clearTimeout(this.resizeTimeout);
         this.resizeTimeout = setTimeout(() => {
             const newHeight = this.getImageHeight();
-            
+
             if (newHeight !== this.currentImageHeight) {
                 debugLog(`Window resized to new breakpoint (height: ${newHeight}px). Reloading images...`);
                 // Reloading with current images would be ideal, but for now we re-fetch to reset layout
-                const folderUrl = this.options.folderUrl || 'https://drive.google.com/drive/folders/19JY4GPJkTIVa5DwrqNftYOuJfGUWRU5t?usp=sharing';
-                this.handleLoadImages(folderUrl);
+                const loaderType = this.options.loaderType || CONFIG.loader?.type || 'googleDrive';
+                if (loaderType === 'static') {
+                    this.handleLoadImages(null);
+                } else {
+                    const folderUrl = this.options.folderUrl || 'https://drive.google.com/drive/folders/19JY4GPJkTIVa5DwrqNftYOuJfGUWRU5t?usp=sharing';
+                    this.handleLoadImages(folderUrl);
+                }
             } else {
                  debugLog('Window resized (no breakpoint change)');
             }
@@ -191,7 +214,10 @@ class ImageGallery {
     }
 
     async handleLoadImages(folderUrl) {
-        if (!folderUrl) {
+        // For static loader, folderUrl is null (sources are in config)
+        // For GoogleDrive loader, folderUrl is required
+        const loaderType = this.options.loaderType || CONFIG.loader?.type || 'googleDrive';
+        if (!folderUrl && loaderType !== 'static') {
             this.showError('No folder URL provided');
             return;
         }
@@ -200,9 +226,9 @@ class ImageGallery {
             this.showLoading(true);
             this.hideError();
             this.clearImageCloud();
-            
-            // Load images from Google Drive
-            const imageUrls = await this.driveLoader.loadImagesFromFolder(folderUrl);
+
+            // Load images using configured loader
+            const imageUrls = await this.imageLoader.loadImagesFromFolder(folderUrl);
             
             if (imageUrls.length === 0) {
                 this.showError('No images found in the folder.');
@@ -402,14 +428,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // Read configuration from data attributes
         const apiKey = container.dataset.apiKey || '';
         const folderUrl = container.dataset.folderUrl || '';
+        const loaderType = container.dataset.loaderType || 'googleDrive';
+        const staticSources = container.dataset.staticSources ?
+            JSON.parse(container.dataset.staticSources) : null;
 
         // Initialize gallery
         const gallery = new ImageGallery({
             containerId: container.id,
             folderUrl: folderUrl,
+            loaderType: loaderType,
             googleDrive: {
                 apiKey: apiKey
-            }
+            },
+            staticLoader: staticSources ? { sources: staticSources } : {}
         });
 
         gallery.init();
