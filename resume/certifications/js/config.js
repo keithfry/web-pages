@@ -20,6 +20,7 @@ const CONFIG = {
     // Layout settings
     layout: {
         type: 'radial', // 'random' or 'radial'
+        debugRadials: true,
         rotationRange: 15,  // degrees (+/-)
         minRotation: -15,
         maxRotation: 15,

@@ -159,6 +159,17 @@ async function createImageCloud(imageUrls) {
         
         // Apply initial transform (rotation and scale)
         img.style.transform = `rotate(${layout.rotation}deg) scale(${layout.scale})`;
+
+        // Debug: Apply border if specified
+        if (layout.borderColor) {
+            img.style.border = `5px solid ${layout.borderColor}`;
+            img.style.boxSizing = 'border-box'; // Ensure border doesn't add to width
+        }
+        
+        // Apply Z-Index for radial layering
+        if (layout.zIndex) {
+            img.style.zIndex = layout.zIndex;
+        }
         
         // Add click handler with stopPropagation to avoid triggering background click
         img.addEventListener('click', (e) => {
@@ -174,24 +185,24 @@ async function createImageCloud(imageUrls) {
         // Wait for image to load before appending to queue
         img.onload = () => {
             // Task 4: Ensure placement keeps (x + width) and (y + height) with screen bounds
+            // Moved logic to RadialPlacementGenerator.js
+            
             const aspectRatio = img.naturalWidth / img.naturalHeight;
             const renderedWidth = imageHeight * aspectRatio;
             const containerWidth = containerBounds.width;
             const containerHeight = containerBounds.height;
-            const padding = CONFIG.layout.padding || 50;
-
+            
             // Adjust X if too far right
-            if (layout.x + renderedWidth > containerWidth - padding) {
-                layout.x = containerWidth - padding - renderedWidth;
-            }
-            // Adjust Y if too far down (less likely with fixed height logic but good safety)
-            if (layout.y + imageHeight > containerHeight - padding) {
-                layout.y = containerHeight - padding - imageHeight;
-            }
+            // Removed: Logic moved to generator
+            
+            // Adjust X if too far left
+            // Removed: Logic moved to generator
 
-            // Update element position
-            img.style.left = `${layout.x}px`;
-            img.style.top = `${layout.y}px`;
+            // Adjust Y if too far down (less likely with fixed height logic but good safety)
+            // Removed: Logic moved to generator
+
+            // Adjust Y if too far up
+            // Removed: Logic moved to generator
 
             // Process Task 3: Animate images floating into position from a nearby border
             // Determine closest border

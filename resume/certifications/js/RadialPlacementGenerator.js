@@ -18,7 +18,10 @@ class RadialPlacementGenerator {
     generate(imageCount, containerBounds, options = {}) {
         const layouts = [];
         const { width, height } = containerBounds;
-        const { baseImageSize, rotationRange } = this.config;
+        const { baseImageSize, rotationRange, debugRadials } = this.config;
+        
+        // Debug color palette
+        const debugPalette = ['green', 'blue', 'red', 'yellow', 'orange', 'purple'];
         
         // Use override fixedHeight if provided, else config fixedHeight, else baseImageSize
         const fixedHeight = options.fixedHeight || this.config.fixedHeight;
@@ -38,7 +41,9 @@ class RadialPlacementGenerator {
                 y: startY,
                 rotation: this.random(-5, 5), // Less rotation for center
                 scale: 1.0,
-                baseSize: imageSize
+                baseSize: imageSize,
+                zIndex: 100, // Center image is highest
+                borderColor: debugRadials ? 'cyan' : null // Special color for center
             });
         }
         
@@ -48,14 +53,14 @@ class RadialPlacementGenerator {
         while (processedCount < imageCount) {
             // Ring settings
             // Scale X more than Y to create horizontal oval shape
-            const radiusY = currentRing * (imageSize * 1.0); // Reduce overlap by increasing spacing (0.8 -> 1.0)
+            const radiusY = currentRing * (imageSize * 0.8); // Reduce overlap by 20% (1.0 -> 0.8)
             const radiusX = radiusY * 1.5; // Horizontal stretching factor
             
             const circumference = Math.PI * (3 * (radiusX + radiusY) - Math.sqrt((3 * radiusX + radiusY) * (radiusX + 3 * radiusY))); // Ramanujan's approximation
             
             const estimatedItemWidth = this.estimateWidth(imageSize);
-            // Increase spacing between items to reduce horizontal overlap
-            const itemsInRing = Math.floor(circumference / (estimatedItemWidth * 1.1)); 
+            // Increase density by ~40% (1.1 -> 0.7)
+            const itemsInRing = Math.floor(circumference / (estimatedItemWidth * 0.7)); 
             
             if (itemsInRing === 0) {
                 currentRing++;
@@ -64,16 +69,37 @@ class RadialPlacementGenerator {
             
             const angleStep = (2 * Math.PI) / itemsInRing;
             
+            // Add offset of 20 degrees per ring
+            const ringOffset = currentRing * (20 * Math.PI / 180);
+            
             for (let i = 0; i < itemsInRing && processedCount < imageCount; i++) {
-                const angle = i * angleStep;
+                const angle = (i * angleStep) + ringOffset;
                 
                 // Calculate center position of image using elliptical formula
                 const centerX = cx + Math.cos(angle) * radiusX;
                 const centerY = cy + Math.sin(angle) * radiusY;
                 
                 // Top-left position
-                const x = centerX - (estimatedItemWidth / 2);
-                const y = centerY - (imageSize / 2);
+                let x = centerX - (estimatedItemWidth / 2);
+                let y = centerY - (imageSize / 2);
+                
+                // Boundary Clamping
+                // Use padding from config or default to 50
+                const padding = this.config.padding || 50;
+                
+                // Clamp X
+                if (x < padding) {
+                    x = padding;
+                } else if (x + estimatedItemWidth > width - padding) {
+                    x = width - padding - estimatedItemWidth;
+                }
+                
+                // Clamp Y
+                if (y < padding) {
+                    y = padding;
+                } else if (y + imageSize > height - padding) {
+                    y = height - padding - imageSize;
+                }
                 
                 const rotation = this.random(-rotationRange, rotationRange);
                 
@@ -82,8 +108,11 @@ class RadialPlacementGenerator {
                     x,
                     y,
                     rotation,
+                    rotation,
                     scale: 1.0,
-                    baseSize: imageSize
+                    baseSize: imageSize,
+                    zIndex: Math.max(1, 100 - currentRing), // Outer rings have lower z-index
+                    borderColor: debugRadials ? debugPalette[(currentRing - 1) % debugPalette.length] : null
                 });
                 
                 processedCount++;
