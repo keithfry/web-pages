@@ -120,33 +120,60 @@ async function createImageCloud(imageUrls) {
     let processedCount = 0;
     
     // Process queue interval
-    const queueInterval = setInterval(() => {
-        if (displayQueue.length > 0) {
-            const img = displayQueue.shift();
-            
-            imageCloud.appendChild(img);
-            imageElements.push(img);
-            
-            // Add entrance animation
-            requestAnimationFrame(() => {
-                // Force reflow to ensure the initial transform is applied before transition starts
-                void img.offsetWidth;
+    // Function to start processing the queue
+    const startQueueProcessing = () => {
+        debugLog('Starting queue processing for ' + imageUrls.length + ' images');
+        const queueInterval = setInterval(() => {
+            if (displayQueue.length > 0) {
+                const img = displayQueue.shift();
                 
-                img.style.opacity = '1';
-                // Animate to final transform (remove translation offset)
-                img.style.transform = img.dataset.finalTransform;
-            });
-            
-            processedCount++;
-        }
-        
-        // Stop interval if all images are processed
-        if (processedCount >= imageUrls.length && displayQueue.length === 0) {
-            if (processedCount === imageUrls.length) {
-                clearInterval(queueInterval);
+                imageCloud.appendChild(img);
+                imageElements.push(img);
+                
+                // Add entrance animation
+                requestAnimationFrame(() => {
+                    // Force reflow to ensure the initial transform is applied before transition starts
+                    void img.offsetWidth;
+                    
+                    img.style.opacity = '1';
+                    // Animate to final transform (remove translation offset)
+                    img.style.transform = img.dataset.finalTransform;
+                });
+                
+                processedCount++;
             }
-        }
-    }, CONFIG.animation.queueInterval);
+            
+            // Stop interval if all images are processed
+            if (processedCount >= imageUrls.length && displayQueue.length === 0) {
+                if (processedCount === imageUrls.length) {
+                    clearInterval(queueInterval);
+                }
+            }
+        }, CONFIG.animation.queueInterval);
+    };
+
+    // Task 9: Delay initial animation until visible (IntersectionObserver)
+    if ('IntersectionObserver' in window) {
+        debugLog('Setting up IntersectionObserver for visibility check');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    debugLog('Gallery is visible (IntersectionObserver triggered). Starting animation.');
+                    startQueueProcessing();
+                    observer.disconnect();
+                }
+            });
+        }, { 
+            threshold: 0.1, // Trigger when 10% visible
+            rootMargin: '50px' // Start slightly before it comes into view
+        });
+        
+        observer.observe(imageCloud);
+    } else {
+        // Fallback for browsers without IntersectionObserver
+        debugLog('IntersectionObserver not supported. Starting immediately.');
+        startQueueProcessing();
+    }
 
     // Create image elements
     imageUrls.forEach((url, index) => {
