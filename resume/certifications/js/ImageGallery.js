@@ -40,12 +40,12 @@ class ImageGallery {
         const scripts = [
             'js/config.js',
             'js/AnimationEngine.js',
-            'js/RandomPlacementGenerator.js',
-            'js/RadialPlacementGenerator.js',
+            'js/generator/RandomPlacementGenerator.js',
+            'js/generator/RadialPlacementGenerator.js',
             'js/LayoutEngine.js',
             'js/ZoomEngine.js',
-            'js/GoogleDriveLoader.js',
-            'js/StaticImageLoader.js'
+            'js/loader/GoogleDriveLoader.js',
+            'js/loader/StaticImageLoader.js'
         ];
 
         for (const src of scripts) {
