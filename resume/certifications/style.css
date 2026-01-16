@@ -152,3 +152,27 @@ body {
         height: 120px;
     }
 }
+
+/* Github Overlay */
+.github-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: lightgray;
+    border: 2px solid black;
+    padding: 8px 12px;
+    font-family: 'Inter', monospace;
+    text-decoration: none;
+    z-index: 2000;
+    color: purple;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.github-overlay:hover {
+    color: blue;
+}
+
+.github-overlay:visited {
+    color: purple;
+}
