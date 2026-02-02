@@ -10,26 +10,49 @@
 <body>
     <div class="container">
         <div id="imageCloud" class="image-cloud" role="main" aria-label="Image gallery"
-             data-image-gallery="true"
-             data-loader-type="googleDrive"
-             data-google-drive-api-key="AIzaSyBKTCzznRaJt_Nyd9_9agTHDhFieMMe0u8"
-             data-google-drive-folder-url="https://drive.google.com/drive/folders/19JY4GPJkTIVa5DwrqNftYOuJfGUWRU5t?usp=sharing">
-            <!-- Images will be dynamically inserted here -->
+             data-image-cloud
+             data-config='{
+               "loader": {
+                 "type": "googleDrive",
+                 "googleDrive": {
+                   "apiKey": "AIzaSyBKTCzznRaJt_Nyd9_9agTHDhFieMMe0u8",
+                   "sources": [{
+                     "type": "folder",
+                     "folders": ["https://drive.google.com/drive/folders/19JY4GPJkTIVa5DwrqNftYOuJfGUWRU5t?usp=sharing"]
+                   }]
+                 }
+               }, 
+               "layout": {
+                "algorithm":"radial"
+               },
+                "image": {
+                    "sizing": {
+                      "mode": "adaptive"
+                    },
+                    "rotation": {
+                        "mode": "random",
+                        "range": {
+                            "min": -10,
+                            "max": 10
+                        }
+                    }
+                },
+                "styling": {
+                    "default": {
+                        "border": {
+                            "width": 2,
+                            "color": "#737373"
+                        }
+                    }
+                }
+             }'>
         </div>
-
-        <div id="loading" class="loading hidden">
-            <div class="spinner"></div>
-            <p>Loading images...</p>
-        </div>
-
-        <div id="error" class="error hidden"></div>
 
         <a href="https://github.com/frybynite/image-cloud" target="_blank" class="github-overlay">
             @frybynite/image-cloud
         </a>
     </div>
 
-    <!-- Load ImageGallery (dependencies will be loaded dynamically) -->
-    <script src="js/ImageGallery.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@frybynite/image-cloud@latest/dist/image-cloud-auto-init.js"></script>
 </body>
 </html>
