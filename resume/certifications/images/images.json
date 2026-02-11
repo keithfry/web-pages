@@ -1,11 +1,12 @@
 {
   "images": [
+    "images/00%20-%20DeepLearningAI%20-%20DLS%20-%20_FINAL%20Deep%20Learning%20Specialization%20Course%20Certificate.png",
+    "images/01%20-%20CertificateOfCompletion_AWS%20Essential%20Training%20for%20Architects.png",
     "images/01%20-%20ME-AGS%20-%20AI%20Literacy.png",
-    "images/02%20-%20ME-AGS%20-%20Advanced%20Generative%20AI%20-%20Building%20LLM%20Applications.png",
-    "images/03%20-%20ME-AGS%20-%20Advanced%20Generative%20AI%20-%20Models%20and%20Architecture.png",
-    "images/04%20-%20CertificateOfCompletion_AWS%20Essential%20Training%20for%20Architects.png",
-    "images/04%20-%20DeepLearningAI%20-%20DLS%20-%20_FINAL%20Deep%20Learning%20Specialization%20Course%20Certificate.png",
-    "images/05%20-%20Coursera%20AWS%20Cloud%20Solutions%20Architect%20Professional.png",
+    "images/02%20-%20Coursera%20AWS%20Cloud%20Solutions%20Architect%20Professional.png",
+    "images/03%20-%20DeepLearningAI%20-%20PTDL%20-%20_%20PyTorch%20for%20Deep%20Learning%20-%20Professional%20Certificate.png",
+    "images/04%20-%20ME-AGS%20-%20Advanced%20Generative%20AI%20-%20Building%20LLM%20Applications.png",
+    "images/05%20-%20ME-AGS%20-%20Advanced%20Generative%20AI%20-%20Models%20and%20Architecture.png",
     "images/Coursera%20AWS%20Architecting%20Solutions%20on%20AWS.png",
     "images/Coursera%20AWS%20Introduction%20to%20Designing%20Data%20Lakes.png",
     "images/Coursera%20Containers%2C%20Docker%2C%20Kubernetes.png",
@@ -15,6 +16,6 @@
     "images/DeepLearningAI%20-%20DLS%20-%20Improving%20Deep%20Neural%20Networks%20-%20Hyperparameter%20Tuning%2C%20Regularization%20and%20Optimization.png",
     "images/DeepLearningAI%20-%20DLS%20-%20Neural%20Networks%20%26%20Deep%20Learning.png",
     "images/DeepLearningAI%20-%20DLS%20-%20Structuring%20Machine%20Learning%20Projects.png",
-    "images/DeepLearningAI%20-%20PTDL%20-%20_%20PyTorch%20for%20Deep%20Learning%20-%20Professional%20Certificate.png"
+    "images/DeepLearningAI%20-%20Generative%20AI%20with%20Large%20Language%20Models.png"
   ]
 }
