@@ -1,0 +1,65 @@
+name: Generate Site Assets
+
+on:
+  push:
+    branches: ["main"]
+    paths-ignore:
+      - "**/index.html"
+      - "resume/certifications/images/images.json"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate indexes
+        run: |
+          ./.github/scripts/generate-index.sh techradar
+
+      - name: Generate certification images manifest
+        run: |
+          python3 << 'PYEOF'
+          import json, os, urllib.parse
+
+          image_dir = "resume/certifications/images"
+          output_file = os.path.join(image_dir, "images.json")
+          extensions = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"}
+
+          files = sorted(
+              f for f in os.listdir(image_dir)
+              if os.path.isfile(os.path.join(image_dir, f))
+              and os.path.splitext(f)[1].lower() in extensions
+          )
+
+          urls = [
+              f"images/{urllib.parse.quote(f)}"
+              for f in files
+          ]
+
+          with open(output_file, "w") as fh:
+              json.dump({"images": urls}, fh, indent=2)
+              fh.write("\n")
+
+          print(f"Generated {output_file} with {len(urls)} images")
+          PYEOF
+
+      - name: Commit & push generated assets
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add .
+          git add --force resume/certifications/images/images.json
+
+          if git diff-index --quiet HEAD; then
+            echo "No changes — nothing to commit."
+          else
+            git commit -m "Auto-generate site assets"
+            git push
+          fi

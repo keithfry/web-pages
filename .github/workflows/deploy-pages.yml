@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   workflow_run:
-    workflows: ["Generate Indexes on Change"]
+    workflows: ["Generate Site Assets"]
     types:
       - completed
     branches: ["main"]
