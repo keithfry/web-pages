@@ -164,7 +164,7 @@ body {
 /* Github Overlay */
 .github-overlay {
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     background-color: lightgray;
     border: 2px solid black;
