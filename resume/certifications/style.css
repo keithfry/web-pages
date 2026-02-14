@@ -145,7 +145,7 @@ body {
         height: 150px;
     }
 
-    .github-overlay {
+    .ref-overlay {
         bottom: 10px;
         right: 10px;
         padding: 4px 6px;
@@ -162,7 +162,7 @@ body {
 }
 
 /* Github Overlay */
-.github-overlay {
+.ref-overlay {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -177,11 +177,11 @@ body {
     border-radius: 4px;
 }
 
-.github-overlay:hover {
+.ref-overlay:hover {
     color: blue;
 }
 
-.github-overlay:visited {
+.ref-overlay:visited {
     color: purple;
 }
 
