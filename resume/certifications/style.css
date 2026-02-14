@@ -184,3 +184,8 @@ body {
 .github-overlay:visited {
     color: purple;
 }
+
+/* Image counter outline */
+.fbn-ic-counter {
+    outline: 2px solid white;
+}
