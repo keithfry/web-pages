@@ -146,11 +146,8 @@ body {
     }
 
     .ref-overlay {
-        bottom: 10px;
+        top: 10px;
         right: 10px;
-        padding: 4px 6px;
-        font-size: 0.7rem;
-        border-width: 1px;
     }
 }
 
