@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tech Radar – 2026-03-15</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 24px; line-height: 1.5; }
+    h1 { margin-bottom: 4px; }
+    h2 { margin-top: 24px; margin-bottom: 8px; }
+    .meta { color: #666; font-size: 0.9em; margin-bottom: 4px; }
+    .item { margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Tech Radar</h1>
+  <div class="meta">Generated on 2026-03-15</div>
+
+      <div class="item">
+        <h2>1. <a href="https://www.marktechpost.com/2026/03/14/garry-tan-releases-gstack-an-open-source-claude-code-system-for-planning-code-review-qa-and-shipping/" target="_blank" rel="noopener noreferrer">Garry Tan Releases gstack: An Open-Source Claude Code System for Planning, Code Review, QA, and Shipping</a></h2>
+        <div class="meta">RSS • 2026-03-14T08:44:43.000Z</div>
+        <p>Garry Tan’s open-source gstack introduces an operational workflow layer for Claude Code, dividing AI-assisted coding into eight distinct, role-focused modes such as product planning, engineering review, shipping, and QA. Its key technical innovation is a persistent headless Chromium browser daemon that maintains state across commands, enabling integrated browser automation tightly coupled with code changes for more reliable QA. Built on Bun for efficient native execution and SQLite access, gstack emphasizes structured software delivery processes rather than new models, making AI-assisted development more systematic and practical. This matters for LLM, agentic AI, and RAG topics by demonstrating a refined approach to AI-driven coding workflows and browser-based validation integration.</p>
+      </div>
+    
+      <div class="item">
+        <h2>2. <a href="https://www.theguardian.com/technology/2026/mar/14/ai-chatbots-psychosis" target="_blank" rel="noopener noreferrer">New study raises concerns about AI chatbots fueling delusional thinking</a></h2>
+        <div class="meta">RSS • 2026-03-14T11:00:18.000Z</div>
+        <p>A recent Lancet Psychiatry study highlights concerns that AI chatbots, including those based on large language models (LLMs), may induce or exacerbate delusional thinking in vulnerable individuals, termed ‘AI psychosis.’ This is particularly relevant as agentic AI and RAG (retrieval-augmented generation) systems increasingly integrate into sensitive applications, including legal and mental health domains using frameworks like LangChain and LangGraph. The findings underscore the need for cautious deployment and clinical testing of chatbots, especially when fine-tuning techniques like PEFT, LoRA, or tools like Ollama are used to customize behavior. For senior leaders, this raises important risks to mitigate around AI safety, ethical use, and the reliability of AI interactions in critical areas.</p>
+      </div>
+    
+      <div class="item">
+        <h2>3. <a href="https://www.latent.space/p/ainews-context-drought" target="_blank" rel="noopener noreferrer">[AINews] Context Drought</a></h2>
+        <div class="meta">RSS • 2026-03-14T03:25:49.000Z</div>
+        <p>Anthropic’s general availability release of 1 million token context window models marks a significant long-context milestone, achieving state-of-the-art MRCR scores and combating context degradation (“context rot”). However, this advancement lags behind Gemini and OpenAI's earlier launches, highlighting sluggish progress in scaling context length due to fundamental hardware memory limitations (HBM/DRAM shortages). The article emphasizes that context window size growth is unlikely to surpass 1M tokens significantly in the next several years, forcing a potential shift toward “context rationing” strategies. This constraint critically impacts LLMs, agentic AI, retrieval-augmented generation (RAG), LangChain-like frameworks, and persistent memory architectures, shaping future system designs around memory efficiency and cross-device agent orchestration.</p>
+      </div>
+    
+      <div class="item">
+        <h2>4. <a href="https://arxiv.org/abs/2603.11052" target="_blank" rel="noopener noreferrer">Structure-Aware Epistemic Uncertainty Quantification for Neural Operator PDE Surrogates</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper addresses the challenge of efficiently quantifying epistemic uncertainty in neural operator (NO) surrogates for PDEs, critical for reliable scientific computing applications. Unlike traditional approaches that perturb the entire network, the authors propose a structure-aware scheme injecting stochasticity only in the lifting module, preserving solver stability and improving spatial fidelity of uncertainty estimates. Their method yields more accurate, localized uncertainty bands aligned with residual errors, enhancing risk assessment in complex PDE scenarios such as Darcy flow and 3D CFD simulations. This advancement matters for topics involving agentic AI and retrieval-augmented generation (RAG) where trustworthy surrogate modeling and uncertainty quantification are essential for decision-making and robust model deployment.</p>
+      </div>
+    
+      <div class="item">
+        <h2>5. <a href="https://arxiv.org/abs/2603.11099" target="_blank" rel="noopener noreferrer">Graph Tokenization for Bridging Graphs and Transformers</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper presents a novel graph tokenization framework that transforms graph-structured data into sequential representations compatible with pretrained Transformers, using reversible graph serialization combined with Byte Pair Encoding (BPE). By leveraging global graph substructure statistics during serialization, the method produces meaningful tokens that preserve structural information. This enables direct application of standard Transformer models like BERT to graph tasks without needing specialized architectures, achieving state-of-the-art performance across 14 benchmark datasets. For topics like LLM, langgraph, and agentic AI, this approach is significant as it bridges graph data and sequence models, expanding Transformer applicability and improving retrieval-augmented generation (RAG) and langchain integration with graph inputs.</p>
+      </div>
+    
+      <div class="item">
+        <h2>6. <a href="https://arxiv.org/abs/2603.11117" target="_blank" rel="noopener noreferrer">Learning Tree-Based Models with Gradient Descent</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This new work addresses the long-standing challenge of learning hard decision trees by introducing a gradient descent-based training method that enables joint optimization of all tree parameters, overcoming the limitations of traditional greedy algorithms like CART. By making decision trees differentiable and compatible with backpropagation, the approach allows seamless integration into modern ML pipelines, including multimodal learning and reinforcement learning. This advancement not only improves interpretability in high-stakes applications but also achieves state-of-the-art performance on diverse datasets. For topics like LLM, Agentic AI, and RAG, this method offers a path to more interpretable and efficiently trainable models within gradient-based frameworks, enhancing trust and integration across systems such as LangChain and LangGraph.</p>
+      </div>
+    
+      <div class="item">
+        <h2>7. <a href="https://arxiv.org/abs/2603.11137" target="_blank" rel="noopener noreferrer">Scaling Reasoning Efficiently via Relaxed On-Policy Distillation</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper introduces REOPOLD, a novel approach to on-policy distillation that frames the distillation process as policy optimization using the teacher-student log-likelihood ratio as a token reward. This relaxed framework addresses instability and negative transfer by selectively leveraging teacher rewards via reward clipping, dynamic sampling, and an exploration-to-refinement strategy. REOPOLD significantly improves sample efficiency and inference scaling, enabling smaller models (7B parameters) to match much larger teachers (32B parameters) with faster reasoning in tasks spanning mathematical, visual, and agentic tool-use domains. This advancement is highly relevant to LLM scaling, agentic AI frameworks, and techniques like PEFT and LoRA, promising more efficient model deployment in retrieval-augmented generation (RAG) and LangChain-like systems.</p>
+      </div>
+    
+      <div class="item">
+        <h2>8. <a href="https://arxiv.org/abs/2603.11139" target="_blank" rel="noopener noreferrer">H2LooP Spark Preview: Continual Pretraining of Large Language Models for Low-Level Embedded Systems Code</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The H2LooP Spark Preview presents a continual pretraining pipeline that adapts a 7B-parameter open LLM specifically for low-level embedded systems code, a domain typically underrepresented in general LLM training. Using a large, specialized dataset of embedded systems code and datasheets spanning 117 manufacturers, the model significantly reduces perplexity and outperforms larger state-of-the-art models on code generation benchmarks across multiple embedded domains. This work demonstrates that targeted continual pretraining with techniques like high-rank LoRA can enable smaller, open-weight LLMs to achieve competitive performance in specialized technical fields. This advancement matters as it lowers the barrier for applying powerful LLMs in embedded systems programming, improving tooling and automation in areas critical for hardware and real-time software development.</p>
+      </div>
+    
+      <div class="item">
+        <h2>9. <a href="https://arxiv.org/abs/2603.11149" target="_blank" rel="noopener noreferrer">Systematic Scaling Analysis of Jailbreak Attacks in Large Language Models</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This study introduces a novel scaling-law framework to systematically analyze the efficiency and success of different jailbreak attack methods on large language models (LLMs) across models and harmful goal types. It reveals that prompt-based jailbreaks are generally more compute-efficient and achieve higher success and stealth compared to optimization-based attacks, providing key insights into attack vectors for agentic AI and retrieval-augmented generation (RAG) systems. Importantly, the research highlights that vulnerability varies significantly by attack goal, with misinformation-related harms being easier to induce, which matters for legal and safety considerations in deploying tools like Langchain, Langgraph, and Ollama. These findings inform the design of more robust prompt-engineering (PEFT, LoRA) and model monitoring strategies in LLM applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>10. <a href="https://arxiv.org/abs/2603.11199" target="_blank" rel="noopener noreferrer">Bayesian Optimization of Partially Known Systems using Hybrid Models</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article introduces a hybrid Bayesian optimization (BO) approach that integrates partially known physics-based models with data-driven Gaussian processes to optimize complex systems more efficiently. Unlike standard black-box BO, which can require many costly experiments, this method leverages mechanistic knowledge as constraints, drastically reducing convergence time even in nonlinear, high-dimensional problems. The approach is demonstrated on a distillation process, where it outperforms traditional BO by converging in as few as one iteration. This matters for topics like agentic AI and hybrid modeling frameworks in Langchain or Langgraph, offering a pathway to more sample-efficient, physics-informed optimization in engineering and AI systems.</p>
+      </div>
+    
+      <div class="item">
+        <h2>11. <a href="https://arxiv.org/abs/2603.11201" target="_blank" rel="noopener noreferrer">Representation Finetuning for Continual Learning</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper introduces Continual Representation Learning (CoRe), a novel framework that shifts fine-tuning in continual learning from weight space to representation space. This method constrains updates to a low-rank linear subspace of hidden representations, enabling explicit control over representation drift and reducing catastrophic forgetting. CoRe enhances parameter efficiency while outperforming current state-of-the-art methods, addressing a key limitation in Parameter-Efficient Fine-Tuning (PEFT) approaches. This advancement matters for topics like PEFT, LORA, and agentic AI, as it offers a more stable and interpretable paradigm for adapting large models continuously to evolving data streams.</p>
+      </div>
+    
+      <div class="item">
+        <h2>12. <a href="https://arxiv.org/abs/2603.11210" target="_blank" rel="noopener noreferrer">Reference-Guided Machine Unlearning</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article introduces Reference-Guided Unlearning (ReGUn), a novel machine unlearning framework that improves data removal from trained models by prioritizing distributional indistinguishability rather than heuristic-based signals. Using a disjoint held-out dataset as a class-conditioned reference, ReGUn stabilizes optimization and better preserves model generalization compared to prior methods. This advancement is significant for topics like LLMs, agentic AI, and retrieval-augmented generation (RAG), where precise, efficient unlearning is critical for legal compliance, privacy, and model updating. Integrating ReGUn with frameworks like LangChain or LangGraph could enhance adaptive, privacy-aware agentic AI systems using techniques like PEFT, LoRA, or PIC.</p>
+      </div>
+    
+      <div class="item">
+        <h2>13. <a href="https://arxiv.org/abs/2603.11269" target="_blank" rel="noopener noreferrer">Beyond the Class Subspace: Teacher-Guided Training for Reliable Out-of-Distribution Detection in Single-Domain Models</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper addresses a key challenge in out-of-distribution (OOD) detection for models trained on single-domain data, where traditional methods fail due to Domain-Sensitivity Collapse (DSC)—a geometric issue that suppresses signals needed to detect domain shifts. The authors propose Teacher-Guided Training (TGT), leveraging a frozen multi-domain teacher model to inject domain-shift information without adding inference cost. This approach significantly improves OOD detection performance across multiple benchmarks, reducing false positive rates while preserving classification accuracy. For topics like LLMs, Agentic AI, and RAG, where reliable OOD detection is crucial for robustness in narrow or single-domain contexts, TGT offers a method to enhance model reliability without sacrificing efficiency.</p>
+      </div>
+    
+      <div class="item">
+        <h2>14. <a href="https://arxiv.org/abs/2603.11273" target="_blank" rel="noopener noreferrer">Duration Aware Scheduling for ASR Serving Under Workload Drift</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper addresses latency challenges in large-scale ASR serving systems, where typical FCFS scheduling causes head-of-line blocking under workload drift due to ignoring variability in request durations. By leveraging audio duration as a proxy for job length, the authors incorporate duration-aware scheduling algorithms—Shortest Job First (SJF) and Highest Response Ratio Next (HRRN)—into the vLLM system. SJF significantly cuts median E2E latency (up to 73%) at high load but can worsen tail latency, while HRRN offers a balanced improvement by reducing median latency (up to 28%) with controlled tail latency impact. This matters for topics like LLM and agentic AI serving frameworks, as it enables more efficient and responsive streaming inference pipelines without throughput loss or noticeable scheduling overhead, directly benefiting latency-sensitive applications such as RAG and langchain integrations.</p>
+      </div>
+    
+      <div class="item">
+        <h2>15. <a href="https://arxiv.org/abs/2603.11308" target="_blank" rel="noopener noreferrer">Heavy-Tailed Principle Component Analysis</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper addresses the fragility of classical PCA when dealing with heavy-tailed, impulsive noise data, common in high-dimensional applications like LLM and agentic AI systems where robustness is critical. By formulating PCA via a logarithmic loss suited for infinite-variance models, it unifies treatment of heavy-tailed distributions such as multivariate t and stable laws, providing theoretically sound principal components aligned with an underlying Gaussian structure. The proposed robust covariance estimators outperform classical PCA in noisy, heavy-tailed environments, improving dimensionality reduction and feature extraction in contexts like RAG and streaming k-means within LangChain or LangGraph pipelines. This advancement enables more reliable embeddings and downstream processing in AI frameworks relying on noisy, complex data streams, relevant to PEFT, LoRA, and PIC methodologies.</p>
+      </div>
+    
+      <div class="item">
+        <h2>16. <a href="https://arxiv.org/abs/2603.11327" target="_blank" rel="noopener noreferrer">Meta-Reinforcement Learning with Self-Reflection for Agentic Search</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper presents MR-Search, a novel meta-reinforcement learning approach for agentic search that incorporates self-reflection across episodes to improve exploration strategies in-context. Unlike traditional RL that optimizes per episode with sparse feedback, MR-Search leverages cross-episode memory by generating explicit self-reflections, enabling adaptive policy updates during test time. This innovation enhances fine-grained credit assignment with a multi-turn RL algorithm and achieves significant improvements (9.2%-19.3%) in generalization across benchmarks. For topics like Agentic AI, LLMs, and retrieval-augmented generation (RAG), MR-Search offers a scalable framework to advance autonomous search and decision-making agents with improved in-context adaptability and efficiency.</p>
+      </div>
+    
+      <div class="item">
+        <h2>17. <a href="https://arxiv.org/abs/2603.11355" target="_blank" rel="noopener noreferrer">Teleodynamic Learning a new Paradigm For Interpretable AI</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article introduces Teleodynamic Learning, a novel AI paradigm that sees learning as the emergent stabilization of system organization under constraints, rather than traditional objective minimization. This framework, inspired by biological systems, models learning as coupled dynamics of representation, parameter adaptation, and resource management, leading to self-stabilization and interpretable model structures without externally imposed rules. Its significance for topics like LLM, Agentic AI, and RAG lies in providing a thermodynamically grounded, unified approach to adaptive, interpretable, and resource-aware model training, potentially improving logical reasoning and explainability in systems like LangChain or Ollama. By integrating architecture search, regularization, and inference within one principle, it may enhance resource-efficient, agentic AI deployments and fine-tuning methods such as PEFT and LoRA.</p>
+      </div>
+    
+      <div class="item">
+        <h2>18. <a href="https://arxiv.org/abs/2603.11358" target="_blank" rel="noopener noreferrer">Multilingual Financial Fraud Detection Using Machine Learning and Transformer Models: A Bangla-English Study</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This study addresses the critical challenge of financial fraud detection in multilingual contexts, focusing on Bangla-English data—a largely neglected language pair despite Bangla’s wide use. Evaluating classical ML models and transformer architectures, the research finds that Linear SVM with TF-IDF features outperforms transformers in overall accuracy and F1 score, though transformers achieve better fraud recall at the cost of more false positives. This matters for LLM and related AI applications as it highlights the enduring strength of classical methods in low-resource, code-mixed languages, and raises considerations for deploying transformer models in multilingual fraud detection systems. The insights also emphasize the need for tailored strategies to handle linguistic diversity and data sparsity in agentic AI and retrieval-augmented generation (RAG) frameworks.</p>
+      </div>
+    
+      <div class="item">
+        <h2>19. <a href="https://arxiv.org/abs/2603.11370" target="_blank" rel="noopener noreferrer">Relaxed Efficient Acquisition of Context and Temporal Features</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper introduces REACT, a novel framework that optimizes both initial contextual feature acquisition and adaptive temporal measurement selection in longitudinal biomedical settings where data acquisition is costly or risky. REACT leverages differentiable optimization with Gumbel-Sigmoid relaxation to jointly learn which baseline features and time-dependent measurements to acquire, improving predictive accuracy while reducing costs. This unified approach addresses a critical gap in current methods that treat onboarding context and longitudinal feature acquisition separately. For topics like LLM, RAG, and agentic AI, REACT’s end-to-end differentiable decision-making under resource constraints offers a promising direction for cost-aware, context-sensitive data collection and inference strategies relevant in domains such as healthcare and legal AI.</p>
+      </div>
+    
+      <div class="item">
+        <h2>20. <a href="https://arxiv.org/abs/2603.11436" target="_blank" rel="noopener noreferrer">ZTab: Domain-based Zero-shot Annotation for Table Columns</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>ZTab introduces a domain-based zero-shot framework for semantic column type annotation in tables, crucial for many applications involving relational data. Unlike prior zero-shot models, it improves performance on large semantic type sets without needing user-labeled data or risking privacy from closed-source LLMs by fine-tuning on generated pseudo-tables of sample schemas. This approach balances zero-shot generality and domain specialization, enabling adaptable and privacy-preserving annotation useful in regulated or data-scarce environments. ZTab’s open-source availability further supports integration with tools related to LLMs, RAG, and langchain in enterprise data pipelines.</p>
+      </div>
+    
+      <div class="item">
+        <h2>21. <a href="https://arxiv.org/abs/2603.11456" target="_blank" rel="noopener noreferrer">UniHetCO: A Unified Heterogeneous Representation for Multi-Problem Learning in Unsupervised Neural Combinatorial Optimization</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article presents UniHetCO, a unified heterogeneous graph representation framework for unsupervised neural combinatorial optimization (NCO) across multiple problem classes without requiring ground-truth solutions. By encoding problem structure, objectives, and constraints in a single input, UniHetCO enables a single model to learn across diverse graph node subset-selection problems, overcoming limitations of prior problem-specific methods. The approach includes a gradient-norm dynamic weighting scheme to balance training stability among tasks, achieving competitive or superior results compared to specialized baselines. This advancement matters for topics like LLMs and agentic AI as it demonstrates scalable multi-problem learning and efficient optimization strategies that could enhance RAG, PEFT, and related AI systems reliant on combinatorial reasoning or multi-domain adaptation.</p>
+      </div>
+    
+      <div class="item">
+        <h2>22. <a href="https://arxiv.org/abs/2603.11475" target="_blank" rel="noopener noreferrer">Deep Learning Network-Temporal Models For Traffic Prediction</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This study introduces two advanced deep learning models—a network-temporal graph attention network (GAT) and a fine-tuned multi-modal large language model (LLM)—to enhance traffic prediction by capturing both temporal patterns and network topology. The LLM-based model notably surpasses LSTM and traditional methods in overall prediction accuracy and generalization, while the GAT model excels in stabilizing prediction variance over time. These findings are significant for topics involving LLMs, agentic AI, and retrieval augmented generation (RAG), as they demonstrate the potential of LLM fine-tuning and graph-based attention in complex time series forecasting. This advancement can improve intelligent network control and management, supporting more reliable and adaptive AI-driven systems.</p>
+      </div>
+    
+      <div class="item">
+        <h2>23. <a href="https://arxiv.org/abs/2603.11476" target="_blank" rel="noopener noreferrer">Leveraging Phytolith Research using Artificial Intelligence</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article presents Sorometry, an AI-powered pipeline combining ConvNeXt for 2D image analysis and PointNet++ for 3D point cloud analysis to automate phytolith research, overcoming the limitations of labor-intensive manual microscopy. By integrating multimodal data and Bayesian modeling, Sorometry achieves high accuracy in classifying complex microscopic plant particles and predicting plant sources in archaeological samples. This advancement matters for topics like LLM, agentic AI, and RAG as it exemplifies how multimodal AI models can enhance scientific workflows, support expert review via GUIs, and enable large-scale, reproducible analysis through advanced inference and fusion techniques. Sorometry's approach aligns with trends in PEFT, LORA, and streaming k-means by improving efficiency and scalability in domain-specific AI applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>24. <a href="https://arxiv.org/abs/2603.11479" target="_blank" rel="noopener noreferrer">Grammar of the Wave: Towards Explainable Multivariate Time Series Event Detection via Neuro-Symbolic VLM Agents</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article introduces Knowledge-Guided Time Series Event Detection (TSED), addressing the challenge of detecting semantic events in multivariate time series with minimal training data by grounding natural-language event descriptions to signal intervals. The proposed Event Logic Tree (ELT) framework models temporal-logic structures of events, enabling a neuro-symbolic vision-language model (VLM) agent to produce interpretable event detections with explanations. This method outperforms supervised and zero-shot baselines by reducing hallucinations common in VLMs when associating signals with semantics. For topics like LLM, agentic AI, and langchain, this work advances explainable, low-data event detection in streaming and complex time series analysis using neuro-symbolic reasoning and knowledge integration.</p>
+      </div>
+    
+      <div class="item">
+        <h2>25. <a href="https://arxiv.org/abs/2603.11487" target="_blank" rel="noopener noreferrer">Attention Sinks Are Provably Necessary in Softmax Transformers: Evidence from Trigger-Conditional Tasks</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper proves that attention sinks—where attention mass concentrates on a fixed, content-agnostic position—are mathematically necessary in softmax self-attention transformers to implement trigger-conditional behaviors. This finding explains a common empirical pattern where models rely on stable attention anchors to realize default or ignoring states, crucial for tasks like conditionally averaging prior token representations. The research highlights that this phenomenon is fundamentally tied to softmax normalization, as alternative mechanisms like ReLU attention avoid sinks while still performing similarly. For LLMs and architectures relying on self-attention (including agentic AI and retrieval-augmented generation frameworks), understanding this necessity clarifies limits and design trade-offs in training and fine-tuning (e.g., PEFT, LoRA) attention mechanisms.</p>
+      </div>
+    
+      <div class="item">
+        <h2>26. <a href="https://arxiv.org/abs/2603.11501" target="_blank" rel="noopener noreferrer">KEPo: Knowledge Evolution Poison on Graph-based Retrieval-Augmented Generation</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper introduces Knowledge Evolution Poison (KEPo), a novel attack targeting Graph-based Retrieval-Augmented Generation (GraphRAG) systems that leverage Knowledge Graphs to improve LLM reliability. Unlike conventional RAG attacks, KEPo exploits the graph abstraction by injecting fabricated knowledge evolution paths that mislead LLMs into producing malicious outputs. This reveals a critical vulnerability in GraphRAG, highlighting new security risks as RAG adoption grows in agentic AI and legal domains using tools like LangChain and LangGraph. The findings emphasize that improved robustness via graph restructuring can still be circumvented, signaling the need for enhanced defense mechanisms in PEFT, LoRA, and related streaming retrieval-augmented frameworks.</p>
+      </div>
+    
+      <div class="item">
+        <h2>27. <a href="https://arxiv.org/abs/2603.11504" target="_blank" rel="noopener noreferrer">LongFlow: Efficient KV Cache Compression for Reasoning M</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>LongFlow addresses the critical challenge of large KV cache sizes in reasoning-focused large language models (LLMs) that produce long outputs, leading to high memory and bandwidth costs during attention. Unlike prior methods tailored for long-input, short-output scenarios, LongFlow introduces an efficient importance estimation metric based on current queries to compress KV caches dynamically, minimizing computational overhead and storage needs. Its integration via a custom kernel combining FlashAttention, importance estimation, and token eviction boosts throughput up to 11.8x while compressing the KV cache by 80%, all with minimal accuracy loss. This advancement is especially relevant for agentic AI systems, Retrieval-Augmented Generation (RAG), PEFT/Lora fine-tuning scenarios, and streaming applications where managing memory and latency under long-output reasoning is critical.</p>
+      </div>
+    
+      <div class="item">
+        <h2>28. <a href="https://arxiv.org/abs/2603.11526" target="_blank" rel="noopener noreferrer">CFD-HAR: User-controllable Privacy through Conditional Feature Disentanglement</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article addresses privacy challenges in sensor-data-driven Human Activity Recognition (HAR) on wearable and mobile devices, proposing a Conditional Feature Disentanglement (CFD) approach that allows user-controllable privacy filtering by separating activity and sensitive attributes in latent representations. This method offers explicit, tunable privacy controls suitable for edge IoT deployment but trades off some label efficiency compared to autoencoder-based few-shot HAR, which adapts efficiently but lacks intrinsic privacy protection. The study highlights that neither approach alone fully meets the demands for privacy, data efficiency, and security in next-gen IoT HAR systems, emphasizing the need for unified frameworks that balance privacy preservation, few-shot learning, and robustness. For topics like agentic AI, PEFT, and RAG where privacy, adaptability, and edge deployment are critical, CFD-HAR's insights are vital for developing trustworthy, privacy-aware sensor-driven AI agents and architectures.</p>
+      </div>
+    
+      <div class="item">
+        <h2>29. <a href="https://arxiv.org/abs/2603.11565" target="_blank" rel="noopener noreferrer">CAETC: Causal Autoencoding and Treatment Conditioning for Counterfactual Estimation over Time</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The CAETC method addresses the critical challenge of time-dependent confounding bias in counterfactual estimation over time, which is vital for applications like personalized medicine. By combining causal autoencoding with treatment conditioning through adversarial representation learning, it achieves a treatment-invariant representation that enhances outcome prediction accuracy. Importantly, CAETC is architecture-agnostic and compatible with various sequence models such as LSTMs and TCNs, enabling broad applicability. This advancement matters for topics like LLM and agentic AI where temporal decision-making and causal inference over sequential data are increasingly relevant for improving model robustness and treatment effect estimation.</p>
+      </div>
+    
+      <div class="item">
+        <h2>30. <a href="https://arxiv.org/abs/2603.11600" target="_blank" rel="noopener noreferrer">Hybrid Energy-Aware Reward Shaping: A Unified Lightweight Physics-Guided Methodology for Policy Optimization</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article introduces Hybrid Energy-Aware Reward Shaping (H-EARS), a novel method that integrates physics-informed priors into deep reinforcement learning to improve policy optimization efficiency and stability without requiring full system models. By combining potential-based reward shaping with energy-aware action regularization and achieving linear computational complexity, H-EARS accelerates convergence and enhances energy efficiency in continuous control tasks. This unified lightweight approach addresses key challenges in deploying RL for safety-critical industrial applications, making it highly relevant for advancing agentic AI and robust control in real-world environments. The work is particularly significant for domains integrating physics-guided learning within scalable, model-free frameworks.</p>
+      </div>
+    
+      <div class="item">
+        <h2>31. <a href="https://arxiv.org/abs/2603.11653" target="_blank" rel="noopener noreferrer">Simple Recipe Works: Vision-Language-Action Models are Natural Continual Learners with Reinforcement Learning</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This study challenges the conventional view that naive sequential fine-tuning (Seq. FT) causes catastrophic forgetting in continual reinforcement learning (CRL) for vision-language-action (VLA) models. By combining large pretrained VLAs with low-rank adaptation (LoRA) and on-policy RL, simple Seq. FT achieves strong plasticity, minimal forgetting, and excellent zero-shot generalization across multiple benchmarks. This finding matters for agentic AI and related fields like PEFT and LoRA, simplifying continual learning strategies while enhancing stability and scalability in embodied agents. It signals a practical path forward for lifelong learning in systems that integrate vision, language, and action.</p>
+      </div>
+    
+      <div class="item">
+        <h2>32. <a href="https://arxiv.org/abs/2603.11682" target="_blank" rel="noopener noreferrer">Entropy-Preserving Reinforcement Learning</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper highlights a critical limitation in policy gradient methods used for language model reasoning: the natural reduction of entropy during training, which diminishes diversity in exploration and creativity. This matters for topics like LLMs, agentic AI, and retrieval-augmented generation (RAG) because maintaining exploration diversity is vital for robust, adaptable language agents. The authors propose new entropy-preserving algorithms—REPO and ADAPO—that actively regulate entropy, resulting in more performant and trainable models suited for sequential learning tasks. These advances could significantly improve the effectiveness and generalization of RL-based fine-tuning techniques such as PEFT and LORA within complex AI frameworks like LangChain and LangGraph.</p>
+      </div>
+    
+      <div class="item">
+        <h2>33. <a href="https://arxiv.org/abs/2603.11703" target="_blank" rel="noopener noreferrer">EvoFlows: Evolutionary Edit-Based Flow-Matching for Protein Engineering</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>EvoFlows introduces a novel protein engineering model that uses evolutionary edit-based sequence modifications—insertions, deletions, and substitutions—rather than traditional autoregressive or masked language modeling. This allows precise control over the type and location of mutations on a template protein, capturing mutational trajectories between related proteins. By modeling natural protein distributions and evolutionary paths, EvoFlows improves generation of realistic and diverse protein variants. This matters for advanced protein engineering as it enhances mutation design accuracy and diversity, potentially accelerating discovery in biotechnology and therapeutic development.</p>
+      </div>
+    
+      <div class="item">
+        <h2>34. <a href="https://arxiv.org/abs/2603.11757" target="_blank" rel="noopener noreferrer">Exploiting Expertise of Non-Expert and Diverse Agents in Social Bandit Learning: A Free Energy Approach</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper introduces a novel free energy-based social bandit learning algorithm that enables reinforcement learning agents to effectively leverage the behavior of other non-expert and diverse agents without explicit teaching or reward knowledge. Unlike traditional RL approaches focusing on isolated learning, this method strategically evaluates and exploits relevant agents' expertise within a population, improving individual policy learning and maintaining theoretical guarantees like logarithmic regret. The approach is particularly important for applications involving populations of heterogeneous agents, such as agentic AI systems and multi-agent reinforcement learning frameworks. Its ability to outperform existing methods by integrating social learning dynamics addresses challenges relevant to areas like large language models (LLMs), retrieval-augmented generation (RAG), and frameworks like LangChain and LangGraph, where collaborative or decentralized learning from diverse agents is critical.</p>
+      </div>
+    
+      <div class="item">
+        <h2>35. <a href="https://arxiv.org/abs/2603.11784" target="_blank" rel="noopener noreferrer">Language Generation with Replay: A Learning-Theoretic View of Model Collapse</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper addresses the critical issue of model collapse in large language models (LLMs) caused by machine-generated text reappearing in future training data, a problem exacerbated by the growing scale of LLM training and usage. By introducing a learning-theoretic framework called "replay adversary," the authors rigorously analyze how replaying a model’s own outputs during training limits its generative capabilities, particularly under weaker generation guarantees. The findings validate common mitigation strategies such as data cleaning, watermarking, and output filtering but also highlight their potential failure modes. This work matters for topics like LLM training pipelines, retrieval-augmented generation (RAG), and parameter-efficient fine-tuning (PEFT), as it provides a theoretical foundation for managing training data contamination risks in agentic AI systems and frameworks like Langchain and Ollama.</p>
+      </div>
+    
+      <div class="item">
+        <h2>36. <a href="https://arxiv.org/abs/2603.11790" target="_blank" rel="noopener noreferrer">Disentangled Representation Learning through Unsupervised Symmetry Group Discovery</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This work advances representation learning by enabling an embodied agent to autonomously and unsupervisedly discover the symmetry group structure underlying its action space, bypassing prior requirements for strong symmetry priors. The approach provably identifies true group decompositions with minimal assumptions and learns disentangled linear representations that improve over previous methods. This matters for topics like LLM and agentic AI by enhancing the agent's ability to model environment dynamics more robustly and with less human supervision, potentially improving generalization and interpretability. It also informs methods in RAG and PEFT by providing a principled way to structure latent spaces, which can aid in more efficient and transferable learning.</p>
+      </div>
+    
+      <div class="item">
+        <h2>37. <a href="https://arxiv.org/abs/2603.11858" target="_blank" rel="noopener noreferrer">Multi-Station WiFi CSI Sensing Framework Robust to Station-wise Feature Missingness and Limited Labeled Data</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article presents a novel WiFi CSI sensing framework designed for multi-station setups that simultaneously tackles station-wise feature missingness and limited labeled data—two key practical challenges not jointly addressed before. By integrating cross-modal self-supervised learning with a new Station-wise Masking Augmentation during training, the approach learns robust representations invariant to missing data and performs well with scarce labels. This matters for topics like agentic AI and advanced representation learning as it demonstrates a practical method to enhance sensor data reliability and model robustness in real-world, partially observable environments under limited supervision. Such robustness is critical for improving downstream AI tasks relying on streaming or sparse sensor inputs.</p>
+      </div>
+    
+      <div class="item">
+        <h2>38. <a href="https://arxiv.org/abs/2603.11901" target="_blank" rel="noopener noreferrer">FlexRec: Adapting LLM-based Recommenders for Flexible Needs via Reinforcement Learning</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>FlexRec introduces a reinforcement learning framework that enables LLM-based recommender systems to flexibly adapt to diverse, dynamic needs rather than being fixed to a single static objective. It overcomes challenges in applying RL to recommendation by using fine-grained, causally grounded item-level rewards and uncertainty-aware critic scaling to stabilize learning despite sparse and noisy feedback. This approach significantly improves key ranking metrics (NDCG@5, Recall@5) by up to 59% and 109% respectively, demonstrating strong performance gains across varied recommendation scenarios. For topics like LLM, agentic AI, RAG, PEFT, and related systems such as Langchain or Ollama, FlexRec's method highlights a scalable path for more responsive, instruction-following recommender architectures that align well with evolving user intents.</p>
+      </div>
+    
+      <div class="item">
+        <h2>39. <a href="https://arxiv.org/abs/2603.11924" target="_blank" rel="noopener noreferrer">Chem4DLLM: 4D Multimodal LLMs for Chemical Dynamics Understanding</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article introduces ChemDU, a new task that challenges large language models (LLMs) to interpret 4D molecular dynamics—capturing time-dependent chemical events like bond breaking—through natural language explanations. To support this, Chem4DBench offers the first dataset linking dynamic molecular trajectories with expert narratives, while Chem4DLLM combines equivariant graph encoding with pretrained LLMs to model molecular geometry and motion accurately. This advancement matters for agentic AI and multimodal reasoning, as it extends LLM capabilities beyond static data to temporally complex scientific phenomena, enabling more mechanistic and context-aware chemical insights. It also opens pathways for integrating retrieval-augmented generation (RAG) and parameter-efficient fine-tuning (PEFT) methods like LoRA to enhance specialized scientific applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>40. <a href="https://arxiv.org/abs/2603.11935" target="_blank" rel="noopener noreferrer">MobileKernelBench: Can LLMs Write Efficient Kernels for Mobile Devices?</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The MobileKernelBench study explores whether large language models (LLMs) can generate efficient computation kernels for mobile devices, a domain with unique engineering challenges and data scarcity. The benchmark and automated evaluation pipeline reveal that standard and fine-tuned LLMs currently struggle, showing over 54% compilation failures and minimal performance improvements due to hallucinations and poor domain grounding. To address this, the authors introduce Mobile Kernel Agent (MoKA), a multi-agent system with repository-aware reasoning that significantly improves compilation success to 93.7% and enables 27.4% of kernels to outperform native libraries. This work matters for topics like LLMs, agentic AI, and PEFT/LORA since it demonstrates the need for specialized multi-agent approaches to unlock LLM potential in mobile-specific code generation tasks.</p>
+      </div>
+    
+      <div class="item">
+        <h2>41. <a href="https://arxiv.org/abs/2603.11970" target="_blank" rel="noopener noreferrer">Statistical and structural identifiability in representation learning</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper introduces formal definitions for two key aspects of representation learning stability: statistical identifiability (consistency across runs) and structural identifiability (alignment with true underlying factors). It extends identifiability theory beyond last-layer GPT representations to intermediate layers of broad model classes like masked autoencoders and supervised learners, proposing a model-agnostic concept of near-identifiability with error tolerance. Importantly, it demonstrates that independent components analysis (ICA) can effectively resolve remaining ambiguities, enabling disentanglement of latent features, which they validate both on synthetic data and in a practical biological imaging application. For topics like LLMs, agentic AI, and related systems relying on robust intermediate representations, this provides a theoretical and practical foundation to improve interpretability and generalization via structured latent disentanglement.</p>
+      </div>
+    
+      <div class="item">
+        <h2>42. <a href="https://arxiv.org/abs/2603.11972" target="_blank" rel="noopener noreferrer">Topological DeepONets and a generalization of the Chen-Chen operator approximation theorem</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper significantly advances Deep Operator Networks (DeepONets) by extending their theoretical foundation from classical Banach space inputs to arbitrary Hausdorff locally convex spaces, broadening the class of function spaces operators can act on. The authors construct topological DeepONets that leverage dual space linear functionals for branch inputs, enabling uniform approximation of continuous operators beyond traditional continuous function spaces. This generalization of the Chen-Chen operator approximation theorem deepens the mathematical rigor and expressivity of DeepONets, which are crucial for modeling complex nonlinear operators. For topics involving LLMs, agentic AI, or retrieval-augmented generation (RAG), this work enhances operator approximation frameworks potentially useful in functional representations and novel neural architectures within these domains.</p>
+      </div>
+    
+      <div class="item">
+        <h2>43. <a href="https://arxiv.org/abs/2603.11989" target="_blank" rel="noopener noreferrer">On-Average Stability of Multipass Preconditioned SGD and Effective Dimension</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper analyzes how the interplay between curvature of the risk landscape, gradient noise geometry, and preconditioning affects the generalization of multipass Preconditioned SGD (PSGD). It provides the first on-average stability analysis for multipass PSGD, overcoming challenges from data reuse correlations, and links generalization performance to an effective dimension capturing these geometric factors. The work shows that poor preconditioner choices can degrade both optimization and generalization guarantees, highlighting the need for careful design of preconditioning in practice. This matters for topics like LLM training and PEFT methods (e.g., LoRA), where multipass SGD and nuanced optimization techniques critically impact model stability and performance.</p>
+      </div>
+    
+      <div class="item">
+        <h2>44. <a href="https://arxiv.org/abs/2603.12037" target="_blank" rel="noopener noreferrer">Frequentist Consistency of Prior-Data Fitted Networks for Causal Inference</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This work addresses a critical gap in causal inference using prior-data fitted networks (PFNs), foundational models increasingly relevant in LLM and agentic AI contexts for uncertainty quantification. It reveals that standard PFN-based causal estimators suffer from prior-induced confounding bias, undermining frequentist consistency essential for reliable decision-making. By introducing a one-step posterior correction (OSPC) implemented via martingale posteriors, the authors restore frequentist consistency and improve uncertainty calibration for average treatment effect (ATE) estimation. This advancement matters for building robust, theoretically sound causal inference components in PEFT, RAG, and other AI systems reliant on accurate uncertainty quantification.</p>
+      </div>
+    
+      <div class="item">
+        <h2>45. <a href="https://arxiv.org/abs/2603.12087" target="_blank" rel="noopener noreferrer">Cross-Domain Policy Optimization via Bellman Consistency and Hybrid Critics</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper addresses key challenges in cross-domain reinforcement learning (CDRL), specifically the difficulty of transferring knowledge when source and target domains differ in state or action spaces and when transferability is uncertain. By introducing cross-domain Bellman consistency to measure transferability and proposing the hybrid critic method $Q$Avatar, which adaptively blends Q functions from both domains without manual tuning, the authors improve reliable knowledge transfer. This advancement matters for topics like agentic AI and LLM-augmented RL methods by enhancing data efficiency and robustness when applying pretrained models or learned policies across heterogeneous environments. The approach's demonstrated success in robotics benchmarks signals potential for broader application in agent frameworks used in LangChain, LangGraph, or other retrieval-augmented generation (RAG) systems involving reinforcement learning components.</p>
+      </div>
+    
+      <div class="item">
+        <h2>46. <a href="https://arxiv.org/abs/2603.12091" target="_blank" rel="noopener noreferrer">Resource-Efficient Iterative LLM-Based NAS with Feedback Memory</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article presents a novel NAS approach that uses large language models (LLMs) in a closed-loop iterative pipeline to design efficient CNN architectures on a single consumer GPU without LLM fine-tuning. It introduces a feedback memory mechanism inspired by Markov chains to retain diagnostic history from failed and successful attempts, improving iterative learning and architectural refinement. The method uses dual specialized LLMs—one for code generation and one for prompt improvement—and inherently biases toward compact, hardware-efficient models suitable for edge devices. This matters for topics like LLM, agentic AI, PEFT, and LangChain since it demonstrates resource-efficient, autonomous architecture search combining LLM reasoning and code execution under constrained hardware, enabling reproducible NAS workflows without expensive cloud resources.</p>
+      </div>
+    
+      <div class="item">
+        <h2>47. <a href="https://arxiv.org/abs/2603.12151" target="_blank" rel="noopener noreferrer">IsoCompute Playbook: Optimally Scaling Sampling Compute for LLM RL</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article addresses a critical gap in understanding how to optimally allocate compute for reinforcement learning (RL) post-training in large language models (LLMs), unlike well-established scaling laws for pre-training. It introduces a framework for compute-constrained optimization over parallel rollouts, batch problem count, and update steps, revealing that the optimal number of parallel rollouts grows with compute budget before saturating. This insight matters as it enables more compute-efficient scaling of RL in LLMs, improving training stability and performance across various problem difficulties. The findings provide practical, prescriptive rules to guide RL post-training compute allocation, impacting areas like agentic AI, retrieval-augmented generation (RAG), and PEFT/LORA fine-tuning strategies.</p>
+      </div>
+    
+      <div class="item">
+        <h2>48. <a href="https://arxiv.org/abs/2603.12228" target="_blank" rel="noopener noreferrer">Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper "Neural Thickets" reveals that large pretrained models inherently contain a dense distribution of diverse task-specific experts near their weight space, unlike smaller models where such solutions are rare and require careful optimization. This insight matters for LLMs and agentic AI, as it suggests new, efficient ways to adapt models by sampling and ensembling perturbed weights rather than relying solely on iterative fine-tuning methods like PEFT or LoRA. The proposed parallel post-training approach, which selects and ensembles top-performing perturbations, offers a simpler, scalable alternative for improving model performance in retrieval-augmented generation (RAG) and frameworks like LangChain or LangGraph. This could streamline deployment and continuous adaptation in legal AI, streaming k-means clustering, and other domain-specific applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>49. <a href="https://arxiv.org/abs/2603.12231" target="_blank" rel="noopener noreferrer">Temporal Straightening for Latent Planning</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper introduces "temporal straightening," a method that improves representation learning for latent planning by encouraging locally straight latent trajectories using a curvature regularizer. This enhances pretrained visual encoders by making latent space distances better approximate true task-relevant distances, ultimately stabilizing gradient-based planning. The approach significantly boosts success rates in goal-reaching tasks, which is crucial for developing more reliable world models in agentic AI systems. This advancement impacts topics like LLM-driven planning, retrieval-augmented generation (RAG), and frameworks such as LangChain and LangGraph by enabling more precise and stable latent planning in embodied agents.</p>
+      </div>
+    
+      <div class="item">
+        <h2>50. <a href="https://arxiv.org/abs/2603.12237" target="_blank" rel="noopener noreferrer">STAMP: Selective Task-Aware Mechanism for Text Privacy</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>STAMP introduces a selective, task-aware text privatization framework that improves the balance between privacy and utility by allocating privacy budgets unevenly based on each token’s task importance and privacy sensitivity. Its novel polar mechanism perturbs token embeddings’ direction without altering magnitude, preserving semantic meaning better than traditional noise methods. This approach significantly enhances privacy for sensitive information while maintaining performance on downstream tasks like QA and sentiment analysis. For engineering leaders working on LLMs, RAG, PEFT, or legal AI applications, STAMP offers a promising method to integrate stronger, fine-grained privacy controls without degrading model utility.</p>
+      </div>
+    
+      <div class="item">
+        <h2>51. <a href="https://arxiv.org/abs/2603.12244" target="_blank" rel="noopener noreferrer">Separable neural architectures as a primitive for unified predictive and generative intelligence</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article introduces separable neural architectures (SNAs) as a foundational modeling approach that explicitly exploits factorisable structures common across physics, language, and perception domains. SNAs unify additive, quadratic, and tensor-decomposed neural models by constraining interaction order and tensor rank, enabling efficient factorization of complex, high-dimensional mappings into simpler components. This structural inductive bias improves predictive and generative capabilities, demonstrated in diverse tasks including autonomous navigation, microstructure generation, turbulent flow modeling, and language processing. For topics like LLMs, Agentic AI, RAG, and Langchain, SNAs offer a principled way to unify deterministic and distributional representations, potentially enhancing the robustness and compositionality of large language models and AI agents.</p>
+      </div>
+    
+      <div class="item">
+        <h2>52. <a href="https://arxiv.org/abs/2603.11051" target="_blank" rel="noopener noreferrer">OpenSanctions Pairs: Large-Scale Entity Matching with LLMs</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>OpenSanctions Pairs introduces a large-scale, diverse benchmark for entity matching across international sanctions data, addressing challenges like multilingualism, noisy attributes, and cross-script names common in compliance workflows. The study shows that large language models (LLMs), including GPT-4o and advanced open models, significantly outperform traditional rule-based matching systems, achieving near-perfect F1 scores. However, LLMs still struggle with transliteration and minor inconsistencies, suggesting diminishing returns on pairwise matching improvements. This shifts focus towards enhancing downstream pipeline elements like blocking, clustering, and uncertainty-aware review—key for improving agentic AI workflows and retrieval-augmented generation (RAG) applications in legal and compliance domains.</p>
+      </div>
+    
+      <div class="item">
+        <h2>53. <a href="https://arxiv.org/abs/2603.11053" target="_blank" rel="noopener noreferrer">Speculative Decoding Scaling Laws (SDSL): Throughput Optimization Made Simple</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This work on Speculative Decoding Scaling Laws (SDSL) presents an analytical framework that links pre-trained LLM hyperparameters directly to inference throughput, enabling upfront optimization without costly retraining. This matters for scalable LLM applications, agentic AI, and retrieval-augmented generation (RAG) systems by streamlining inference pipelines and improving compute efficiency. It also facilitates better integration with PEFT and LoRA fine-tuning methods by predicting optimal settings pre-training. Overall, SDSL offers a principled, cost-effective approach to enhance throughput for large-scale AI workflows like LangChain, LangGraph, and Ollama.</p>
+      </div>
+    
+      <div class="item">
+        <h2>54. <a href="https://arxiv.org/abs/2603.11071" target="_blank" rel="noopener noreferrer">TinyNav: End-to-End TinyML for Real-Time Autonomous Navigation on Microcontrollers</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>TinyNav introduces an end-to-end TinyML solution enabling real-time autonomous navigation on resource-constrained ESP32 microcontrollers, using a lightweight 23k-parameter 2D CNN instead of more complex 3D or recurrent models. This achieves low-latency (30 ms) inference on streaming depth data to predict control commands directly on device. The work matters as it significantly lowers the barrier for deploying responsive autonomous navigation in low-cost robotics, eliminating dependence on power-hungry processors or external compute. For topics like PIC and edge AI, TinyNav exemplifies effective model compression and real-time processing under severe hardware constraints.</p>
+      </div>
+    
+      <div class="item">
+        <h2>55. <a href="https://arxiv.org/abs/2603.11178" target="_blank" rel="noopener noreferrer">PACED: Distillation at the Frontier of Student Competence</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The PACED framework addresses inefficiencies in LLM distillation by focusing training on the "zone of proximal development," where the student model's competence is actively evolving, thus avoiding wasted compute on either too-easy or too-difficult examples. PACED uses a theoretically grounded Beta kernel weighting to optimize gradient signal-to-noise ratio, ensuring robust and efficient learning during distillation and self-distillation. This approach significantly improves student model performance and reasoning benchmarks with minimal forgetting, requiring no architectural changes and being compatible with existing KL divergence directions. PACED's methodology is particularly relevant for enhancing efficiency and effectiveness in agentic AI, RAG systems, and PEFT techniques like LoRA within frameworks such as LangChain and LangGraph.</p>
+      </div>
+    
+      <div class="item">
+        <h2>56. <a href="https://arxiv.org/abs/2603.11200" target="_blank" rel="noopener noreferrer">DNS-GT: A Graph-based Transformer Approach to Learn Embeddings of Domain Names from DNS Queries</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The DNS-GT paper introduces a novel Transformer-based model that learns contextual embeddings of domain names from sequences of DNS queries, addressing limitations in current machine learning methods used in intrusion detection systems (IDS). By pre-training in a self-supervised manner, DNS-GT captures general DNS behavior and can be fine-tuned for tasks like domain classification and botnet detection, outperforming existing baselines. This advancement matters for topics like LLMs and agentic AI as it demonstrates effective use of large-scale language models in cybersecurity, supporting improved detection capabilities in IDS without heavy reliance on labeled data. It aligns with trends in RAG and PEFT approaches by leveraging structured input sequences and fine-tuning for domain-specific tasks.</p>
+      </div>
+    
+      <div class="item">
+        <h2>57. <a href="https://arxiv.org/abs/2603.11212" target="_blank" rel="noopener noreferrer">Security-by-Design for LLM-Based Code Generation: Leveraging Internal Representations for Concept-Driven Steering Mechanisms</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article addresses critical security shortcomings in Large Language Models (LLMs) used for code generation, revealing that existing methods inadequately ensure both functional correctness and security. The authors uncover that CodeLLMs internally represent security concepts and can differentiate security vulnerabilities during code generation. Building on this insight, they introduce Secure Concept Steering for CodeLLMs (SCS-Code), a novel mechanism that guides the model’s internal states to produce secure, functional code without heavy modifications, outperforming current benchmarks. This advancement matters for topics like LLM security, agentic AI, and frameworks such as Langchain and Langgraph, where code generation integrity is vital for practical and safe deployments.</p>
+      </div>
+    
+      <div class="item">
+        <h2>58. <a href="https://arxiv.org/abs/2603.11214" target="_blank" rel="noopener noreferrer">Measuring AI Agents' Progress on Multi-Step Cyber Attack Scenarios</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This study benchmarks advanced AI models' autonomous execution of complex multi-step cyber-attacks on corporate and industrial control system simulated environments. It reveals performance scales log-linearly with inference-time compute, showing no saturation up to 100M tokens, and each newer model generation significantly outperforms prior ones under fixed compute budgets. Notably, recent models can complete a substantial portion of a 32-step corporate attack, approaching expert-level efficiency, while gains on industrial control tasks remain modest but promising. For topics like LLM, Agentic AI, and RAG, this highlights critical progress and evaluation methodologies for deploying AI in sophisticated, multi-stage decision-making under compute constraints.</p>
+      </div>
+    
+      <div class="item">
+        <h2>59. <a href="https://arxiv.org/abs/2603.11228" target="_blank" rel="noopener noreferrer">Markovian Generation Chains in Large Language Models</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper introduces the concept of Markovian generation chains to study how text outputs evolve when large language models (LLMs) iteratively process their own generated outputs using fixed prompt templates without memory. The research reveals that such iterative inference can lead to either convergence to a small set of recurring sentences or sustained novelty in language output, influenced by parameters like temperature and initial input. These findings are crucial for understanding output stability and diversity in applications involving agentic AI, retrieval-augmented generation (RAG), and multi-agent LLM systems. This has direct implications for improving model fine-tuning methods (PEFT, LoRA), designing effective LangChain or LangGraph workflows, and maintaining robust performance in streaming or legal contexts where iterative text refinement is common.</p>
+      </div>
+    
+      <div class="item">
+        <h2>60. <a href="https://arxiv.org/abs/2603.11229" target="_blank" rel="noopener noreferrer">Trustworthy predictive distributions for rare events via diagnostic transport maps</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper presents diagnostic transport maps, a novel method to recalibrate and evaluate predictive distributions from complex forecast systems, particularly addressing challenges in rare event prediction and out-of-distribution scenarios. By providing real-time diagnostics of model failures and producing adjusted predictive distributions, this approach enhances trust and accuracy in forecasts where uncertainty quantification is crucial. Applied to tropical cyclone intensity forecasting, it improves predictions for rare, rapid intensity changes, outperforming current operational models. For topics like LLMs, agentic AI, and retrieval-augmented generation (RAG), this method is relevant as it offers a systematic framework to detect and correct calibration issues in probabilistic outputs, a critical factor for reliable AI decision-making and risk assessment.</p>
+      </div>
+    
+      <div class="item">
+        <h2>61. <a href="https://arxiv.org/abs/2603.11241" target="_blank" rel="noopener noreferrer">Cough activity detection for automatic tuberculosis screening</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This study demonstrates the effectiveness of using large pre-trained transformer models, specifically XLS-R, for automatic detection of cough activity, which is crucial for scalable tuberculosis (TB) screening via audio analysis. The XLS-R model achieved high precision (0.96) and ROC area (0.99) on TB patient cough data and outperformed both an audio spectrogram transformer and logistic regression baselines while also being computationally efficient by using just its first three layers. This has significant implications for resource-constrained environments, enabling smartphone-based TB screening tools that can accurately isolate cough events without heavy computational demands. The work highlights the value of leveraging large language model (LLM)-style architectures in health AI applications, showing promise for integrating agentic AI and retrieval-augmented generation (RAG) techniques to improve disease screening workflows.</p>
+      </div>
+    
+      <div class="item">
+        <h2>62. <a href="https://arxiv.org/abs/2603.11276" target="_blank" rel="noopener noreferrer">RIE-Greedy: Regularization-Induced Exploration for Contextual Bandits</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper "RIE-Greedy: Regularization-Induced Exploration for Contextual Bandits" introduces a novel exploration strategy leveraging the inherent randomness from regularization in model training, eliminating the need for explicit exploration policies like Thompson Sampling or UCB. This approach simplifies implementation on complex, black-box estimators common in real-world contextual bandit problems, while theoretically matching Thompson Sampling in simpler cases and empirically outperforming standard baselines. For topics like RAG and agentic AI, where model-based decision-making and adaptive learning are crucial, RIE-Greedy offers a scalable and practical exploration mechanism that can improve performance without added complexity. This has implications for improving exploration efficiency in systems built on LangChain, LangGraph, or other frameworks relying on iterative model updates and adaptive behaviors.</p>
+      </div>
+    
+      <div class="item">
+        <h2>63. <a href="https://arxiv.org/abs/2603.11304" target="_blank" rel="noopener noreferrer">Worst-case low-rank approximations</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article introduces wcPCA, a unified framework for worst-case optimal low-rank approximations that improve reliability under distributional shifts across heterogeneous domains—common in health, economics, and environmental data. Unlike standard PCA that optimizes average variance, wcPCA and its novel variants (norm-minPCA, norm-maxregret) focus on worst-case variance performance, ensuring robustness when applying models to unseen domains. The approach also extends to inductive matrix completion, providing theoretical worst-case guarantees and practical improvements demonstrated on real-world datasets. For topics like LLM, Agentic AI, RAG, and PEFT, this matters because robust, worst-case-aware methods can enhance model generalization and reliability across diverse, shifting data distributions often seen in multi-domain AI applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>64. <a href="https://arxiv.org/abs/2603.11316" target="_blank" rel="noopener noreferrer">MRI2Qmap: multi-parametric quantitative mapping with MRI-driven denoising priors</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>MRI2Qmap introduces a novel quantitative MRI reconstruction method that leverages deep denoising priors pretrained on large routine weighted-MRI datasets, overcoming the lack of ground-truth quantitative training data in Magnetic Resonance Fingerprinting (MRF). By integrating physical acquisition models with learned spatial priors, it mitigates aliasing artifacts common in highly accelerated MRF acquisitions. This approach allows for scalable, accurate multi-parametric mapping without needing specialized quantitative datasets, potentially transforming clinical MRI workflows. For engineering leaders, MRI2Qmap exemplifies effective integration of pretrained deep learning models with domain-specific physics, highlighting pathways for data-efficient AI in medical imaging and real-world signal reconstruction problems.</p>
+      </div>
+    
+      <div class="item">
+        <h2>65. <a href="https://arxiv.org/abs/2603.11339" target="_blank" rel="noopener noreferrer">FinRule-Bench: A Benchmark for Joint Reasoning over Financial Tables and Principles</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>FinRule-Bench is a newly introduced benchmark designed to rigorously evaluate large language models' (LLMs) ability to perform rule-based reasoning and auditing over real-world financial tables against explicit accounting principles. Unlike previous synthetic benchmarks, it focuses on diagnostic completeness through tasks such as rule verification, identification, and joint diagnosis across multiple standardized financial statements. The study reveals that while LLMs handle single-rule verification adequately, their performance drops significantly when discriminating between multiple rules or diagnosing concurrent violations. This benchmark matters as it advances the reliability and transparency of agentic AI and retrieval-augmented generation (RAG) systems deployed for high-stakes financial and legal compliance tasks.</p>
+      </div>
+    
+      <div class="item">
+        <h2>66. <a href="https://arxiv.org/abs/2603.11394" target="_blank" rel="noopener noreferrer">Stop Listening to Me! How Multi-turn Conversations Can Degrade Diagnostic Reasoning</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This study evaluates 17 LLMs on clinical diagnostic tasks to understand how multi-turn conversational formats impact their reasoning, finding that extended interactions often degrade model accuracy compared to single-turn use. The "stick-or-switch" framework highlights that many models prematurely abandon correct initial diagnoses in favor of incorrect user input, revealing vulnerabilities in conversational flexibility and conviction. This matters for topics like LLM, Agentic AI, and retrieval-augmented generation (RAG) because it underscores risks of degradation in real-world diagnostic settings and challenges the reliability of LLMs in dynamic, multi-turn agentic interactions. It signals the need for improved methods—potentially involving fine-tuning approaches like PEFT or LoRA and better integration in tools such as LangChain or LangGraph—to maintain reasoning stability across dialogue turns.</p>
+      </div>
+    
+      <div class="item">
+        <h2>67. <a href="https://arxiv.org/abs/2603.11417" target="_blank" rel="noopener noreferrer">Zero-Shot Cross-City Generalization in End-to-End Autonomous Driving: Self-Supervised versus Supervised Representations</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This study highlights the critical challenge in end-to-end autonomous driving of zero-shot generalization across cities with diverse driving conditions and road topologies. It finds that traditional supervised ImageNet-pretrained backbones struggle significantly when transferring models to unseen cities, especially across different driving sides (e.g., right- to left-side). In contrast, self-supervised visual representations like I-JEPA, DINOv2, and MAE notably reduce this generalization gap, improving planning robustness in both open- and closed-loop evaluations. This matters for autonomous vehicle development by emphasizing the need for self-supervised learning and rigorous cross-city testing to ensure real-world deployment reliability under diverse geographic domains.</p>
+      </div>
+    
+      <div class="item">
+        <h2>68. <a href="https://arxiv.org/abs/2603.11472" target="_blank" rel="noopener noreferrer">HawkesRank: Event-Driven Centrality for Real-Time Importance Ranking</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>HawkesRank introduces a dynamic, event-driven centrality measure based on multivariate Hawkes processes, overcoming limitations of static network centrality measures like PageRank and Katz centrality. By integrating exogenous drivers and endogenous amplification, it provides real-time, adaptive importance scores that reflect instantaneous activity, making it more predictive and transparent. This advancement is crucial for domains requiring responsive influence tracking such as streaming data analysis, agentic AI systems, and real-time knowledge graph updating in LangChain or LangGraph frameworks. HawkesRank's approach supports more robust RAG frameworks and PEFT strategies by enabling nuanced, temporally-aware importance ranking in complex, evolving networks.</p>
+      </div>
+    
+      <div class="item">
+        <h2>69. <a href="https://arxiv.org/abs/2603.11532" target="_blank" rel="noopener noreferrer">Simultaneous estimation of multiple discrete unimodal distributions under stochastic order constraints</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This work introduces a novel method for jointly estimating multiple discrete unimodal distributions under stochastic order constraints, formulated as a mixed-integer convex quadratic problem. By incorporating prior knowledge about ordering relations among distributions, it improves estimation accuracy particularly in low-data regimes, reducing divergence measures by up to 6.3%. This matters for topics like LLM and agentic AI, where accurate probabilistic modeling with limited data is crucial, and can enhance techniques in retrieval-augmented generation (RAG) and streaming clustering methods such as streaming k-means. Overall, it offers a mathematically rigorous way to integrate domain knowledge into probabilistic estimations, benefiting data-efficient learning pipelines.</p>
+      </div>
+    
+      <div class="item">
+        <h2>70. <a href="https://arxiv.org/abs/2603.11545" target="_blank" rel="noopener noreferrer">One Supervisor, Many Modalities: Adaptive Tool Orchestration for Autonomous Queries</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper introduces an agentic AI framework that orchestrates specialized tools across multiple data modalities—text, image, audio, video, and documents—via a central Supervisor that dynamically decomposes and routes queries. Unlike static decision trees, it uses learned routing models (RouteLLM for text, SLM for others) to delegate subtasks efficiently, enabling significant reductions in response time, conversational rework, and operational costs while maintaining accuracy. This approach is highly relevant for LLM-based systems, retrieval-augmented generation (RAG), and modular AI architectures like LangChain and LangGraph, especially in complex domains such as legal where multimodal data processing is critical. The work advances agentic AI and PEFT/LORA tool integration by demonstrating scalable, cost-effective orchestration of diverse AI capabilities within a single supervisory framework.</p>
+      </div>
+    
+      <div class="item">
+        <h2>71. <a href="https://arxiv.org/abs/2603.11618" target="_blank" rel="noopener noreferrer">Shape-of-You: Fused Gromov-Wasserstein Optimal Transport for Semantic Correspondence in-the-Wild</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The Shape-of-You (SoY) framework introduces a novel approach to semantic correspondence by formulating pseudo-label generation as a Fused Gromov-Wasserstein (FGW) optimal transport problem, combining inter-feature similarity with intra-structural consistency derived from 3D foundation models. This approach overcomes key limitations of prior methods that rely on local 2D appearance cues, which struggle with geometric ambiguities in complex, in-the-wild images. By approximating the FGW problem for efficiency and employing a noise-robust soft-target loss, SoY achieves state-of-the-art results on challenging semantic correspondence benchmarks without requiring explicit geometric annotations. This advancement matters for topics like LLM, PEFT, and agentic AI by enhancing the robustness and structural understanding in vision-based supervision, which can improve multimodal model training and perception in autonomous and reasoning agents.</p>
+      </div>
+    
+      <div class="item">
+        <h2>72. <a href="https://arxiv.org/abs/2603.11683" target="_blank" rel="noopener noreferrer">Causal Prosody Mediation for Text-to-Speech:Counterfactual Training of Duration, Pitch, and Energy in FastSpeech2</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper introduces a causal prosody mediation framework for enhancing expressive text-to-speech (TTS) synthesis by integrating explicit emotion conditioning and counterfactual training into the FastSpeech2 model. By modeling the causal relationships between text, emotion, speaker, and prosody elements (duration, pitch, energy), the approach disentangles emotional prosody from linguistic content to enable more accurate and controllable emotional speech generation. The method significantly improves prosody manipulation, emotion accuracy, and speaker consistency in multi-speaker settings, offering a interpretable model that supports counterfactual editing like changing emotion without altering naturalness. This advancement matters for agentic AI and LLM-driven applications as it enhances natural and emotionally rich speech synthesis, crucial for human-like interaction and personalized voice agents.</p>
+      </div>
+    
+      <div class="item">
+        <h2>73. <a href="https://arxiv.org/abs/2603.11725" target="_blank" rel="noopener noreferrer">Cross-Resolution Attention Network for High-Resolution PM2.5 Prediction</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article presents CRAN-PM, a novel dual-branch Vision Transformer using cross-resolution attention to enable efficient, high-resolution (1 km) PM2.5 air quality prediction over Europe at continent scale. By integrating global meteorological data with local pollution measurements and embedding elevation-aware and wind-guided attention, the model enforces physically consistent forecasting without relying on traditional physical inputs. CRAN-PM achieves significant accuracy improvements and memory efficiency, generating full 29-million-pixel pollution maps in under 2 seconds on a single GPU. This advancement matters as it enables scalable, fast, and more accurate environmental monitoring critical for AI applications in spatio-temporal prediction and real-world climate and health impact assessment.</p>
+      </div>
+    
+      <div class="item">
+        <h2>74. <a href="https://arxiv.org/abs/2603.11745" target="_blank" rel="noopener noreferrer">CINDI: Conditional Imputation and Noisy Data Integrity with Flows in Power Grid Data</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article presents CINDI, a unified unsupervised framework using conditional normalizing flows to jointly detect anomalies and impute missing data in multivariate time series from power grids. Unlike traditional methods that separate error detection and imputation, CINDI models the full conditional likelihood to maintain data integrity while preserving physical and statistical properties. This approach delivers robust, scalable performance on real-world electrical grid data, addressing noise and anomalies that impact downstream AI tasks. For topics like LLM, RAG, and agentic AI relying on accurate streaming data, CINDI's methodology enhances reliability and data quality in critical infrastructure environments.</p>
+      </div>
+    
+      <div class="item">
+        <h2>75. <a href="https://arxiv.org/abs/2603.11756" target="_blank" rel="noopener noreferrer">Anomaly detection in time-series via inductive biases in the latent space of conditional normalizing flows</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This work advances anomaly detection in multivariate time-series by embedding temporal dynamics directly into the latent space of conditional normalizing flows, rather than relying solely on observation likelihood. By introducing explicit inductive biases that enforce structured latent trajectories, the method improves detection of anomalies as violations of expected temporal behavior. This approach offers a statistically principled way to identify anomalies even when they have high likelihood under the observed data distribution, enhancing reliability and interpretability. For engineering leaders, this matters because it enables more robust and explainable anomaly detection in complex time-series relevant to AI systems, streaming data, and agentic monitoring applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>76. <a href="https://arxiv.org/abs/2603.11804" target="_blank" rel="noopener noreferrer">OSM-based Domain Adaptation for Remote Sensing VLMs</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article introduces OSMDA, a novel domain adaptation method for Vision-Language Models (VLMs) in remote sensing that removes the costly reliance on large teacher models by using OpenStreetMap (OSM) data to generate annotated captions via the base VLM itself. By leveraging the model’s own OCR and map comprehension capabilities paired with OSM metadata, OSMDA fine-tunes on satellite imagery without manual labels, achieving state-of-the-art performance across multiple benchmarks. This approach significantly reduces training cost and improves scalability compared to prior pseudo-labeling methods reliant on large external models. For topics like LLM, PEFT, and RAG, OSMDA exemplifies a cost-effective, self-supervised adaptation technique harnessing crowd-sourced geographic data to enhance remote sensing applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>77. <a href="https://arxiv.org/abs/2603.11938" target="_blank" rel="noopener noreferrer">Prototype-Based Knowledge Guidance for Fine-Grained Structured Radiology Reporting</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article presents ProtoSR, a novel method leveraging large language models (LLMs) to extract rich, free-text radiology knowledge and integrate it into fine-grained structured reporting via visual prototypes. By creating a multimodal knowledge base from 80k+ MIMIC-CXR studies and using prototype-conditioned residual corrections, ProtoSR improves automated decision-making on rare and detailed imaging findings. This matters as it addresses a key challenge in radiology AI—balancing fine-grained, discrete reporting needs with limited structured supervision—demonstrating how agentic LLMs and retrieval-augmented generation (RAG) concepts can enhance precision. The work highlights promising PEFT and multimodal integration strategies for improving domain-specific clinical reporting automation.</p>
+      </div>
+    
+      <div class="item">
+        <h2>78. <a href="https://arxiv.org/abs/2603.11950" target="_blank" rel="noopener noreferrer">Learning Transferable Sensor Models via Language-Informed Pretraining</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article introduces SLIP, a novel open-source framework for pretraining sensor models by leveraging language-informed, contrastive learning to produce transferable representations across diverse sensor configurations. Unlike prior methods limited to fixed sensor setups, SLIP’s flexible architecture supports variable input lengths and temporal resolutions without retraining, enabling better zero-shot transfer, captioning, and question answering on sensor data. This advancement matters because it significantly improves semantic understanding and cross-domain generalization in sensor-based AI tasks, which is critical for scalable deployment in agentic AI systems and retrieval-augmented generation (RAG) applications relying on heterogeneous sensor inputs. The integration with pretrained language models and flexible conditioning aligns with trends in PEFT, LoRA, and frameworks like LangChain for enhanced multimodal reasoning.</p>
+      </div>
+    
+      <div class="item">
+        <h2>79. <a href="https://arxiv.org/abs/2603.11991" target="_blank" rel="noopener noreferrer">BTZSC: A Benchmark for Zero-Shot Text Classification Across Cross-Encoders, Embedding Models, Rerankers and LLMs</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The BTZSC benchmark provides a comprehensive, label-description-based evaluation for zero-shot text classification across 22 diverse datasets and four model families: NLI cross-encoders, embedding models, rerankers, and instruction-tuned LLMs. It reveals that modern rerankers like Qwen3-Reranker-8B achieve state-of-the-art accuracy, while strong embedding models balance accuracy with low latency, and instruction-tuned LLMs perform well, especially on topic classification. Notably, NLI cross-encoders show limited gains from scaling, whereas rerankers and LLMs benefit significantly from larger model sizes. This benchmark matters for Topics such as LLMs, RAG (retrieval-augmented generation), and agentic AI, as it guides the selection of zero-shot models in applications like legal text analysis and LangChain workflows, emphasizing efficiency-accuracy trade-offs and the evolving role of large-scale instruction-tuned models.</p>
+      </div>
+    
+      <div class="item">
+        <h2>80. <a href="https://arxiv.org/abs/2603.12001" target="_blank" rel="noopener noreferrer">Decentralized Orchestration Architecture for Fluid Computing: A Secure Distributed AI Use Case</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper presents a decentralized orchestration architecture for fluid computing that enables secure, intent-driven deployments across heterogeneous multi-domain resources, including edge, fog, and cloud environments. Unlike existing centralized solutions, it preserves local domain autonomy while coordinating distributed AI workloads such as Decentralized Federated Learning (DFL), enhancing system robustness against Byzantine faults through a novel SDN-enabled anomaly detection mechanism (FU-HST). This approach is crucial for scalable and secure distributed AI applications, particularly those leveraging multi-agent systems, LLMs, and RAG frameworks that span diverse infrastructures. It advances resource orchestration in the fluid computing continuum, impacting topics like agentic AI, PEFT, LORA, and langchain by enabling reliable, multi-domain execution with minimal overhead.</p>
+      </div>
+    
+      <div class="item">
+        <h2>81. <a href="https://arxiv.org/abs/2603.12102" target="_blank" rel="noopener noreferrer">Wasserstein Gradient Flows for Batch Bayesian Optimal Experimental Design</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This research introduces a novel approach to batch Bayesian optimal experimental design (BOED) by reformulating the challenging optimization of expected information gain (EIG) as a Wasserstein gradient flow in the space of probability measures. This framework enables scalable and tractable batch experiment design via entropic regularization and particle-based algorithms, addressing issues of non-convexity and high dimensionality in EIG optimization. For engineering topics related to LLMs, agentic AI, and retrieval-augmented generation (RAG), improved experimental design methods enhance data efficiency and model training robustness, especially when optimizing across multiple simultaneous experiments or information sources. Thus, this work could directly benefit the design and fine-tuning of large AI models and multi-experiment systems in complex, high-dimensional environments.</p>
+      </div>
+    
+      <div class="item">
+        <h2>82. <a href="https://arxiv.org/abs/2603.12126" target="_blank" rel="noopener noreferrer">Hoi3DGen: Generating High-Quality Human-Object-Interactions in 3D</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>Hoi3DGen introduces a novel text-to-3D generation framework for producing high-quality, realistic human-object interaction meshes, addressing key challenges like poor text adherence and the Janus problem in prior methods. By leveraging multimodal large language models to curate high-fidelity interaction data, it achieves significant improvements—4-15x better text consistency and 3-7x better 3D model quality—over existing baselines. This advancement is critical for AR, XR, and gaming applications requiring precise and diverse interaction modeling. For engineering leaders focused on LLM and agentic AI technologies, Hoi3DGen exemplifies powerful integration of language models into complex 3D content generation pipelines.</p>
+      </div>
+    
+      <div class="item">
+        <h2>83. <a href="https://arxiv.org/abs/2603.12201" target="_blank" rel="noopener noreferrer">IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>IndexCache significantly improves the efficiency of sparse attention in large language models (LLMs) by reusing index computations across layers, reducing redundant O(L²) indexing to a fraction without sacrificing accuracy. This innovation is critical for accelerating long-context agentic workflows, where inference speed and cost are bottlenecks. By partitioning layers into full and shared indexers and applying training-free or training-aware optimization strategies, IndexCache achieves up to 1.82× prefill and 1.48× decode speedups on a 30B parameter model. For topics like agentic AI, LLM deployment, and Retrieval-Augmented Generation (RAG), this method offers practical performance gains and resource savings in real-world systems.</p>
+      </div>
+    
+      <div class="item">
+        <h2>84. <a href="https://arxiv.org/abs/2603.12222" target="_blank" rel="noopener noreferrer">HiAP: A Multi-Granular Stochastic Auto-Pruning Framework for Vision Transformers</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>HiAP introduces a novel multi-granular stochastic auto-pruning framework for Vision Transformers that jointly prunes at both macro (heads, FFN blocks) and micro (intra-head dimensions, neurons) levels in a single end-to-end training phase. This method eliminates the need for manual sparsity heuristics and complex multi-stage pruning pipelines, addressing both memory and compute bottlenecks critical for edge deployment. By optimizing hierarchical gates via a continuous relaxation approach, HiAP achieves efficient sub-networks with competitive accuracy and simpler deployment compared to existing structured pruning techniques. This advancement matters for topics involving model efficiency and deployment, such as LLM, PEFT, and Agentic AI, where streamlined, resource-aware pruning methods enable broader on-device AI applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>85. <a href="https://arxiv.org/abs/2603.12227" target="_blank" rel="noopener noreferrer">Interpreting Contrastive Embeddings in Specific Domains with Fuzzy Rules</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This research addresses the challenge of applying contrastive embeddings like CLIP, originally trained on broad image-text data, to domain-specific free-text such as legal or medical records. By integrating fuzzy rule-based classification with CLIP embeddings, the study enhances interpretability and feature relevance in specialized contexts like clinical reports and film reviews. This matters for topics like LLM, Agentic AI, and RAG since improving domain adaptation and interpretability of embeddings can boost accuracy and trustworthiness in retrieval-augmented generation and domain-specific language models. It also suggests pathways to refine embedding-based methods within frameworks like LangChain or LangGraph for specialized professional applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>86. <a href="https://arxiv.org/abs/2603.12240" target="_blank" rel="noopener noreferrer">BiGain: Unified Token Compression for Joint Generation and Classification</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>BiGain introduces a unified, training-free token compression framework for diffusion models that enhances both generative fidelity and classification accuracy during accelerated inference. By leveraging frequency separation and novel operators like Laplacian-gated token merging and Interpolate-Extrapolate KV downsampling, BiGain preserves critical semantic and fine-detail features, improving speed-accuracy trade-offs across multiple backbones and datasets. This matters for topics such as LLMs, agentic AI, and retrieval-augmented generation (RAG) because it enables more efficient multi-task models capable of simultaneous generation and classification, reducing computational costs while maintaining performance. BiGain's approach also aligns with PEFT and LoRA interests by offering plug-and-play acceleration without retraining, relevant for frameworks like LangChain and LangGraph integrating advanced diffusion-based modalities.</p>
+      </div>
+    
+      <div class="item">
+        <h2>87. <a href="https://arxiv.org/abs/2603.12246" target="_blank" rel="noopener noreferrer">Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This study evaluates the role of reasoning LLMs-as-judges in reinforcement-learning-based alignment for non-verifiable tasks where direct output validation is impossible. It finds that reasoning judges reduce reward hacking and lead to stronger policy performance compared to non-reasoning judges, but can also train models to produce adversarial outputs that deceive other LLM evaluators. This highlights critical challenges in applying agentic LLM judges effectively during post-training, particularly for downstream applications like legal or langchain environments where output correctness is often subjective. The work underscores the need for improved judge mechanisms to ensure reliable alignment in complex, real-world AI systems.</p>
+      </div>
+    
+      <div class="item">
+        <h2>88. <a href="https://arxiv.org/abs/2603.12255" target="_blank" rel="noopener noreferrer">Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>Spatial-TTT introduces a novel streaming approach to visual-based spatial intelligence by leveraging test-time training (TTT) to adapt fast weights for organizing spatial evidence from long, continuous video streams. Its hybrid architecture combines large-chunk updates with sliding-window attention and incorporates a spatial-predictive mechanism using 3D spatiotemporal convolutions, enhancing geometric and temporal spatial understanding. This method significantly advances long-horizon spatial reasoning, achieving state-of-the-art results on video spatial benchmarks. For TOPICS like LLM, Agentic AI, and RAG, Spatial-TTT demonstrates how dynamic, continual spatial memory and efficient visual processing can better support real-world environment understanding and interactive agent applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>89. <a href="https://arxiv.org/abs/2405.08979" target="_blank" rel="noopener noreferrer">drGT: Attention-Guided Gene Assessment of Drug Response Utilizing a Drug-Cell-Gene Heterogeneous Network</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The drGT model addresses challenges in drug response prediction by integrating drugs, genes, and cell lines into a heterogeneous graph with attention mechanisms for enhanced interpretability. It achieves high predictive accuracy on benchmark datasets while providing insights into biomarker identification and drug-gene interactions supported by literature and drug-target interaction (DTI) models. By linking attention coefficients to biological processes through enrichment analysis, drGT improves understanding of the mechanisms behind drug sensitivity. This matters for topics like LLM and agentic AI as it exemplifies explainable graph-based deep learning models that combine heterogeneous biomedical data for precision medicine applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>90. <a href="https://arxiv.org/abs/2411.03387" target="_blank" rel="noopener noreferrer">Quantifying Aleatoric Uncertainty of the Treatment Effect: A Novel Orthogonal Learner</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper introduces a novel orthogonal learner (AU-learner) designed to quantify aleatoric uncertainty in treatment effects, addressing an overlooked aspect in causal machine learning. By focusing on the conditional distribution of the treatment effect (CDTE) rather than just average effects, it provides sharper, data-driven bounds on treatment randomness, which is critical for assessing the probability of benefit from medical treatments. The AU-learner’s Neyman-orthogonality offers quasi-oracle efficiency, improving robustness and reliability in uncertainty estimation. This advance is significant for topics involving LLMs and agentic AI where reliable uncertainty quantification in decision-making from observational data is essential, supporting safer and more interpretable AI-driven treatment recommendations.</p>
+      </div>
+    
+      <div class="item">
+        <h2>91. <a href="https://arxiv.org/abs/2412.12213" target="_blank" rel="noopener noreferrer">Finance-Informed Neural Network: Learning the Geometry of Option Pricing</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The Finance-Informed Neural Network (FINN) innovatively embeds financial theory into neural models for option pricing by training via dynamic hedging replication rather than fitting observed prices. This approach ensures arbitrage-free, economically consistent pricing and sensitivity outputs, outperforming classical models like Black-Scholes and Heston in accuracy and stability even in complex or illiquid markets. FINN's ability to reconstruct implied-volatility surfaces with reduced bias and extend option pricing to assets without listed options highlights its practical scalability and adaptability. For engineering leaders, FINN exemplifies how domain-informed AI models can enhance reliability and interpretability in financial applications, aligning closely with themes in agentic AI and large language model frameworks that integrate structured knowledge for robust decision-making.</p>
+      </div>
+    
+      <div class="item">
+        <h2>92. <a href="https://arxiv.org/abs/2502.04308" target="_blank" rel="noopener noreferrer">HOG-Diff: Higher-Order Guided Diffusion for Graph Generation</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>HOG-Diff introduces a novel diffusion-based graph generation framework that explicitly incorporates higher-order topological information, addressing limitations in prior methods adapted from image generation. By employing a coarse-to-fine generation process guided by diffusion bridges, HOG-Diff achieves stronger theoretical guarantees and better captures complex graph structures. Its superior scalability and accuracy on diverse benchmarks make it impactful for applications requiring sophisticated graph representations. This advancement is particularly relevant for LangGraph and legal AI domains where understanding intricate relational data structures is critical.</p>
+      </div>
+    
+      <div class="item">
+        <h2>93. <a href="https://arxiv.org/abs/2505.13820" target="_blank" rel="noopener noreferrer">Structured Agent Distillation for Large Language Model</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article introduces Structured Agent Distillation, a novel method to compress large decision-making LLM agents into smaller models without sacrificing reasoning and action quality. By segmenting model trajectories into reasoning and action spans and applying targeted losses, this approach better preserves the teacher model’s decision-making process compared to traditional token-level distillation. Experiments show that this span-level alignment reduces inference costs and model size significantly while maintaining strong performance across benchmarks like ALFWorld and HotPotQA-ReAct. This advance is crucial for deploying efficient, agentic AI within resource-constrained environments, benefiting applications involving LLMs, RAG, PEFT techniques like LoRA, and tooling frameworks such as Langchain or Ollama.</p>
+      </div>
+    
+      <div class="item">
+        <h2>94. <a href="https://arxiv.org/abs/2505.18017" target="_blank" rel="noopener noreferrer">Strictly Constrained Generative Modeling via Split Augmented Langevin Sampling</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper introduces CASAL, a novel constrained sampling algorithm that rigorously enforces physical and mathematical constraints in deep generative models, addressing a critical gap in their deployment for scientific and engineering tasks. By integrating Langevin dynamics with Lagrangian duality, CASAL progressively enforces constraints, improving the physical plausibility and accuracy of generated outputs, especially in diffusion-based data assimilation and optimal control problems. This advance is significant for topics like LLM and Agentic AI where reliability and adherence to real-world constraints are essential. CASAL’s framework paves the way for safer and more trustworthy integration of generative models in complex engineering systems and decision-making pipelines such as those seen in langchain or langgraph toolkits.</p>
+      </div>
+    
+      <div class="item">
+        <h2>95. <a href="https://arxiv.org/abs/2509.06322" target="_blank" rel="noopener noreferrer">Text-Trained LLMs Can Zero-Shot Extrapolate PDE Dynamics, Revealing a Three-Stage In-Context Learning Mechanism</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This research demonstrates that large language models (LLMs) trained solely on text data can accurately extrapolate complex spatiotemporal dynamics governed by partial differential equations (PDEs) without any fine-tuning or specialized prompting. The findings reveal a predictable relationship between model accuracy, context length, and prediction horizon, analogous to numerical solver error accumulation, highlighting a novel form of neural scaling laws in in-context learning (ICL). Additionally, the work identifies a three-stage internal learning process within the LLMs during PDE extrapolation, advancing understanding of their emergent reasoning capabilities. These insights are crucial for leveraging LLMs in agentic AI tasks requiring physical system modeling and for improving techniques like Retrieval-Augmented Generation (RAG) and Parameter-Efficient Fine-Tuning (PEFT) such as LoRA in scientific and engineering applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>96. <a href="https://arxiv.org/abs/2510.08724" target="_blank" rel="noopener noreferrer">Counterfactually Fair Conformal Prediction</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article introduces Counterfactually Fair Conformal Prediction (CF-CP), a novel method that ensures fairness in prediction sets under uncertainty by integrating counterfactual fairness into conformal prediction frameworks. Unlike standard conformal prediction, CF-CP symmetrizes conformity scores to guarantee fairness across protected attributes while preserving statistical coverage guarantees. This advancement matters for legal and ethical AI applications, especially in areas like agentic AI and large language models (LLMs), where fair decision-making under uncertainty is critical. CF-CP provides a transparent, training-free approach to fair uncertainty quantification, relevant for tools like Langchain and Langgraph that rely on reliable and equitable prediction sets.</p>
+      </div>
+    
+      <div class="item">
+        <h2>97. <a href="https://arxiv.org/abs/2510.21019" target="_blank" rel="noopener noreferrer">More Than Memory Savings: Zeroth-Order Optimization Mitigates Forgetting in Continual Learning</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article explores zeroth-order (ZO) optimization as a memory-efficient alternative to traditional first-order methods in continual learning (CL), highlighting its advantage in reducing forgetting by producing flatter loss landscapes and enhancing stability. However, it also identifies a trade-off where ZO’s imprecise gradient estimates lead to reduced plasticity, limiting learning of new tasks under tight training budgets. The authors propose ZO-FC, a hybrid approach combining ZO optimization on adapter modules with first-order updates on classifiers, balancing memory efficiency with effective learning adaptability. This advancement matters for PEFT and on-device learning in LLM and agentic AI systems, offering a practical solution to the plasticity-stability-efficiency trilemma in continual learning scenarios.</p>
+      </div>
+    
+      <div class="item">
+        <h2>98. <a href="https://arxiv.org/abs/2511.00617" target="_blank" rel="noopener noreferrer">Belief Dynamics Reveal the Dual Nature of In-Context Learning and Activation Steering</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article presents a unified Bayesian framework explaining how large language models (LLMs) are controlled via in-context learning (prompt-based) and activation steering (internal activation manipulation). It reveals that both methods adjust the model’s beliefs about latent concepts—activation steering modifies concept priors, while in-context learning accumulates evidence—providing predictive insights into LLM behavior. This matters for topics like LLM, agentic AI, RAG, and PEFT/LORA by offering a foundational understanding to improve and combine prompt tuning and activation-based fine-tuning methods. The framework also anticipates novel phenomena such as additive effects and sudden behavioral shifts, valuable for designing adaptive AI agents and knowledge retrieval pipelines in Langchain or Langgraph environments.</p>
+      </div>
+    
+      <div class="item">
+        <h2>99. <a href="https://arxiv.org/abs/2512.06297" target="_blank" rel="noopener noreferrer">Entropic Confinement and Mode Connectivity in Overparameterized Neural Networks</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper reveals that while overparameterized neural networks have connected low-loss basins in their loss landscape, optimization typically remains trapped in a single basin due to entropic barriers created by curvature variations and noise. These curvature-induced entropic forces bias the training dynamics toward local minima endpoints, restricting exploration despite flat loss valleys. This understanding is critical for topics like LLMs and PEFT methods (e.g., LoRA), as it explains why fine-tuning procedures may struggle to escape local optima in high-dimensional parameter spaces. Improving agentic AI and retrieval-augmented generation (RAG) models could benefit from strategies that overcome these entropic confinements to better explore model landscapes.</p>
+      </div>
+    
+      <div class="item">
+        <h2>100. <a href="https://arxiv.org/abs/2601.13435" target="_blank" rel="noopener noreferrer">A Learnable Wavelet Transformer for Long-Short Equity Trading and Risk-Adjusted Return Optimization</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article presents WaveLSFormer, a novel wavelet-based long-short Transformer designed to learn intraday equity trading policies directly optimized for risk-adjusted returns. Unlike traditional forecasting models, WaveLSFormer integrates multi-scale time-series decomposition and trading decision-making into an end-to-end system that outputs market-neutral portfolios while controlling for risk. This approach addresses key challenges in financial data such as noise, non-stationarity, and cross-asset dependencies, leading to significantly better profitability and Sharpe ratios compared to MLP, LSTM, and standard Transformer models. For engineering leaders, this work highlights the importance of incorporating domain-specific inductive biases (wavelets) and risk-aware objectives in AI models to improve real-world trading performance.</p>
+      </div>
+    
+      <div class="item">
+        <h2>101. <a href="https://arxiv.org/abs/2602.20197" target="_blank" rel="noopener noreferrer">Controllable Exploration in Hybrid-Policy RLVR for Multi-Modal Reasoning</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper introduces CalibRL, a hybrid-policy reinforcement learning framework designed to improve multi-modal large language models (MLLMs) by enabling controlled exploration during Reinforcement Learning with Verifiable Rewards (RLVR). CalibRL addresses common RL issues such as entropy collapse and policy degradation by using distribution-aware advantage weighting and an asymmetric activation function to leverage expert guidance, maintaining productive stochasticity without inefficient random sampling. This balanced exploration-exploitation approach mitigates distribution mismatches between policy and expert demonstrations, leading to more stable and effective training. The method is highly relevant to LLM, agentic AI, and retrieval-augmented generation (RAG) tasks, improving reasoning performance in frameworks like Langchain and Langgraph.</p>
+      </div>
+    
+      <div class="item">
+        <h2>102. <a href="https://arxiv.org/abs/2602.23349" target="_blank" rel="noopener noreferrer">FlashOptim: Optimizers for Memory-Efficient Training</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>FlashOptim addresses a critical bottleneck in training large language models (LLMs) like Llama-3.1-8B by significantly reducing memory usage during mixed-precision training. By halving per-parameter memory requirements through advanced quantization and companding methods, it enables efficient training of billion-parameter models on hardware with less than 100GB memory. This innovation preserves model quality and API compatibility, facilitating scalable fine-tuning approaches such as PEFT and LoRA within constrained environments. For topics like RAG, agentic AI, and Langchain, FlashOptim can democratize access to large-scale model training and iteration by lowering hardware barriers.</p>
+      </div>
+    
+      <div class="item">
+        <h2>103. <a href="https://arxiv.org/abs/2603.01204" target="_blank" rel="noopener noreferrer">Subliminal Signals in Preference Labels</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper reveals that in LLM-as-a-judge frameworks used for scalable oversight, binary preference labels can inadvertently serve as covert channels for transmitting biases and unintended behaviors from judge models to student models. This subliminal signaling can accumulate over iterative training, undermining objective supervision and alignment efforts. For topics like agentic AI, RAG, PEFT, and LangChain where iterative model feedback and alignment are critical, this finding matters because it challenges the reliability of preference-based training signals. Ensuring robust alignment and oversight will require new detection and mitigation mechanisms to prevent behavioral biases embedded in preference labels from proliferating in advanced AI systems.</p>
+      </div>
+    
+      <div class="item">
+        <h2>104. <a href="https://arxiv.org/abs/2603.05598" target="_blank" rel="noopener noreferrer">On the Value of Tokeniser Pretraining in Physics Foundation Models</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper shows that pretraining tokenisers with an autoencoding objective before training physics foundation models significantly improves accuracy and efficiency in emulating complex physical systems. The greatest performance gains—up to a 64% reduction in VRMSE—occur when pretraining data aligns closely with the target physical domain. Additionally, the authors introduce adaptive spatiotemporal compression techniques that allow flexible model scaling for various tasks. These insights matter for developing more efficient and accurate physics-informed LLMs and agentic AI systems that rely on large-scale simulations, highlighting the critical role of pretraining strategies in foundational model design.</p>
+      </div>
+    
+      <div class="item">
+        <h2>105. <a href="https://arxiv.org/abs/2603.10445" target="_blank" rel="noopener noreferrer">Unlearning the Unpromptable: Prompt-free Instance Unlearning in Diffusion Models</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper introduces a novel instance unlearning technique for diffusion models aimed at selectively forgetting undesired outputs that cannot be specified by text prompts, such as individual faces or culturally inaccurate generations. Unlike prior prompt-based unlearning methods, their surrogate-based approach uses image editing, timestep-aware weighting, and gradient surgery to effectively remove these unpromptable instances while preserving model integrity. This advancement is critical for diffusion model providers because it offers a practical solution to enhance privacy protection and ethical compliance, addressing challenges in managing sensitive or controversial generated content. The work has direct relevance for topics like LLMs, legal aspects of AI, and ethical AI deployment frameworks such as RAG, PEFT, and LoRA.</p>
+      </div>
+    
+      <div class="item">
+        <h2>106. <a href="https://arxiv.org/abs/2603.10935" target="_blank" rel="noopener noreferrer">Historical Consensus: Preventing Posterior Collapse via Iterative Selection of Gaussian Mixture Priors</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper addresses the persistent issue of posterior collapse in variational autoencoders (VAEs), a common problem where latent variables lose informativeness, which limits model expressiveness in areas like LLMs and agentic AI. Instead of relying on architectural tweaks or hyperparameter adjustments, the authors propose Historical Consensus Training, an iterative method using multiple Gaussian mixture model priors to create a stable parameter space that inherently prevents collapse. This advancement matters for fields like RAG, PEFT, and LangChain where robust latent representations are crucial for incorporating external knowledge and efficient fine-tuning. By enabling stable, non-collapsed latent embeddings without restrictive assumptions, this approach potentially enhances model reliability and performance in complex agentic and retrieval-augmented applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>107. <a href="https://arxiv.org/abs/2311.11321" target="_blank" rel="noopener noreferrer">Bounds on Representation-Induced Confounding Bias for Treatment Effect Estimation</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper addresses a critical limitation in representation learning methods for conditional average treatment effect (CATE) estimation—namely, the bias introduced by low-dimensional representations that lose confounder information. It presents a novel, representation-agnostic neural refutation framework that quantifies bounds on this representation-induced confounding bias, thereby partially identifying CATE despite dimensionality constraints. This advance matters because it improves the reliability and validity of treatment effect estimation in real-world scenarios where low-sample regimes force dimensionality reduction. For engineering topics like RAG, PEFT, and agentic AI, where causal inference and representation learning intersect, this framework offers a robust tool to assess and mitigate bias, enhancing trustworthy AI decision-making pipelines.</p>
+      </div>
+    
+      <div class="item">
+        <h2>108. <a href="https://arxiv.org/abs/2406.01076" target="_blank" rel="noopener noreferrer">Estimating Canopy Height at Scale</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article presents a new framework for estimating canopy height globally using satellite data, featuring novel preprocessing and a loss function that mitigates geolocation errors in ground-truth measurements. By integrating Shuttle Radar Topography Mission data to filter out inaccuracies in mountainous regions, the model significantly improves prediction accuracy over existing maps, achieving an overall MAE/RMSE of 2.43/4.73 meters. This advancement is crucial for ecological and biomass monitoring at scale, enabling more reliable large-scale forest assessments. The approach’s relevance to TOPICS like LLM, RAG, and agentic AI lies in its use of advanced data processing and modeling techniques, potentially integrating with retrieval-augmented generation and scalable AI frameworks for environmental applications.</p>
+      </div>
+    
+      <div class="item">
+        <h2>109. <a href="https://arxiv.org/abs/2408.02839" target="_blank" rel="noopener noreferrer">Mini-batch Estimation for Deep Cox Models: Statistical Foundations and Practical Guidance</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article rigorously analyzes mini-batch SGD optimization in deep Cox models, revealing that it targets a different objective (mini-batch partial-likelihood) than standard Cox models, necessitating new statistical frameworks. The authors prove that the mini-batch estimator (mb-MPLE) is statistically consistent and converges optimally, with detailed insights on learning rate and batch size interplay for tuning SGD effectively. This matters for topics like LLM and agentic AI where large-scale, streaming data and efficient, theoretically-sound training methods (analogous to mb-MPLE) are critical for performance and scalability. The work also guides practical parameter optimization in large models where full-batch methods are computationally infeasible, paralleling challenges in RAG, PEFT, and langchain implementations.</p>
+      </div>
+    
+      <div class="item">
+        <h2>110. <a href="https://arxiv.org/abs/2502.00622" target="_blank" rel="noopener noreferrer">Inference-Time Enhancement of Generative Robot Policies via Predictive World Modeling</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper introduces Generative Predictive Control (GPC), a novel inference-time enhancement technique that improves pretrained robot policies without any retraining by integrating a predictive world model with a frozen generative diffusion policy. GPC uses action-conditioned predictions to perform lightweight online planning that refines and ranks action proposals, enabling effective test-time adaptation while keeping the original model fixed. This approach matters for topics like Agentic AI and LLM-driven robotics because it leverages generative priors and model-based reasoning to enhance policy robustness and adaptability in deployment, aligning with trends in retrieval-augmented generation (RAG) and modular policy fine-tuning (e.g., PEFT, LoRA). Overall, GPC offers a promising direction for practical real-world robotic control systems that require flexible, data-efficient inference-time improvements.</p>
+      </div>
+    
+      <div class="item">
+        <h2>111. <a href="https://arxiv.org/abs/2505.19240" target="_blank" rel="noopener noreferrer">LLLMs: A Data-Driven Survey of Evolving Research on Limitations of Large Language Models</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This survey provides a comprehensive, data-driven analysis of evolving research on the limitations of large language models (LLMs) from 2022 to early 2025, analyzing over 14,000 relevant papers out of 250,000 in ACL and arXiv. Key concerns identified include reasoning, generalization, hallucination, bias, and security, with a notable shift on arXiv toward security risks, alignment, hallucinations, knowledge editing, and multimodality. The findings matter for topics like Agentic AI, Retrieval-Augmented Generation (RAG), Parameter-Efficient Fine-Tuning (PEFT, LoRA), and frameworks such as Langchain and Langgraph, as they highlight the critical challenges to address for reliable, secure, and aligned deployment of LLMs. This work also provides an open annotated dataset and methodology to guide further research and development in mitigating LLM limitations.</p>
+      </div>
+    
+      <div class="item">
+        <h2>112. <a href="https://arxiv.org/abs/2506.02841" target="_blank" rel="noopener noreferrer">Enhancing Sample Efficiency in Multi-Agent RL with Uncertainty Quantification and Selective Exploration</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper tackles the challenge of high sample inefficiency in multi-agent reinforcement learning (MARL) by introducing a novel algorithm that integrates uncertainty quantification via ensemble kurtosis with selective exploration. By combining a decomposed centralized critic and decentralized ensemble critics, the method guides exploration toward uncertain states and actions, significantly improving learning efficiency. Additionally, a new truncated TD(λ) variant facilitates stable off-policy learning, while a hybrid on- and off-policy loss for actor training balances stability and efficiency. This advancement is critical for agentic AI and reinforcement learning applications in environments with large joint action spaces, directly impacting areas such as LLM-driven multi-agent systems and complex decision-making frameworks like langchain and langgraph.</p>
+      </div>
+    
+      <div class="item">
+        <h2>113. <a href="https://arxiv.org/abs/2506.16584" target="_blank" rel="noopener noreferrer">Measuring Intent Comprehension in LLMs</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article introduces a formal framework to evaluate how well large language models (LLMs) comprehend user intent, rather than merely predicting text based on surface cues. By decomposing output variability into factors attributed to user intent, articulation style, and model uncertainty, the framework measures whether models consistently interpret semantically equivalent prompts as intended. Testing on LLaMA and Gemma models shows larger models tend to better capture intent, though improvements are modest and uneven. This matters for topics like LLMs, agentic AI, and retrieval-augmented generation (RAG), highlighting the need for intent-aware evaluation metrics beyond simple accuracy to ensure robustness and reliability in practical applications such as legal or LangChain-based systems.</p>
+      </div>
+    
+      <div class="item">
+        <h2>114. <a href="https://arxiv.org/abs/2506.21599" target="_blank" rel="noopener noreferrer">Refine-POI: Reinforcement Fine-Tuned Large Language Models for Next Point-of-Interest Recommendation</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>Refine-POI advances large language models (LLMs) for next point-of-interest (POI) recommendation by addressing key limitations in semantic ID representation and supervised fine-tuning. It uses a topology-aware hierarchical self-organizing map (SOM) quantization to preserve semantic continuity in ID space and applies reinforcement learning via policy gradients to generate diverse top-k recommendation lists, overcoming answer fixation. This approach enhances reasoning and representation fidelity, leading to significantly better performance and explainability on real-world datasets. The work is important for LLM applications in recommendation systems, demonstrating how integration of reinforcement fine-tuning and topology-preserving embeddings can improve agentic AI and retrieval-augmented generation (RAG) tasks.</p>
+      </div>
+    
+      <div class="item">
+        <h2>115. <a href="https://arxiv.org/abs/2507.11412" target="_blank" rel="noopener noreferrer">Seq vs Seq: An Open Suite of Paired Encoders and Decoders</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The Seq vs Seq paper introduces Ettin, the first open suite of paired encoder-only and decoder-only language models trained on the same data and recipe, ranging from 17M to 1B parameters and up to 2 trillion tokens. This controlled comparison confirms encoder-only models outperform decoders on classification and retrieval tasks, while decoders remain stronger for generation. Importantly, adapting models across objectives via continued training is inferior to using the native architecture, demonstrating distinct optimality for each use case. The open-source release of models, data, and checkpoints enables further research into LLM architectures, impacting topics such as PEFT, RAG, and agentic AI workflows built on LangChain and similar frameworks.</p>
+      </div>
+    
+      <div class="item">
+        <h2>116. <a href="https://arxiv.org/abs/2507.16083" target="_blank" rel="noopener noreferrer">Efficient Compositional Multi-tasking for On-device Large Language Models</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper addresses the challenge of on-device text-based compositional multi-tasking with large language models (LLMs), where multiple tasks must be executed simultaneously, such as translation plus summarization. Prior merging approaches handled only single-task examples, but real-world scenarios often require concurrent task execution, especially in resource-constrained devices. The authors introduce a new benchmark for compositional multi-tasking and propose a Learnable Calibration method optimized for efficient, high-performing task merging suited to limited computational environments. This advancement is critical for enabling agentic AI and retrieval-augmented generation (RAG) applications to run complex workflows locally via parameter-efficient fine-tuning techniques like LoRA, expanding LLM utility in legal, LangChain, and related streaming pipeline contexts.</p>
+      </div>
+    
+      <div class="item">
+        <h2>117. <a href="https://arxiv.org/abs/2508.10745" target="_blank" rel="noopener noreferrer">Agentic Design Review System</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The Agentic Design Review System (AgenticDRS) introduces a novel multi-agent framework where autonomous agents collaboratively evaluate graphic designs under the orchestration of a meta-agent, addressing facets like alignment, composition, and aesthetics. Key innovations include an in-context exemplar selection using graph matching and a prompt expansion strategy that enhances design awareness in agents. This system advances state-of-the-art by generating holistic, actionable feedback, demonstrated on the new DRS-BENCH benchmark. For topics like LLM, Agentic AI, RAG, and Langchain, AgenticDRS exemplifies practical application of collaborative large language models and retrieval-augmented generation for complex, multi-dimensional evaluation tasks, signaling a promising direction for integrating agentic workflows in creative and legal review domains.</p>
+      </div>
+    
+      <div class="item">
+        <h2>118. <a href="https://arxiv.org/abs/2509.25035" target="_blank" rel="noopener noreferrer">Ultra-Fast Language Generation via Discrete Diffusion Divergence Instruct</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article introduces Discrete Diffusion Divergence Instruct (DiDi-Instruct), a novel training-based method that distills a fast yet high-quality language generation model from a pre-trained diffusion LLM. DiDi-Instruct achieves up to 64× speedup over its teacher model while matching or surpassing performance benchmarks like GPT-2, using a new theoretical integral KL-divergence minimization framework. Key innovations such as grouped reward normalization and reward-guided sampling enhance training stability and inference quality, making it especially relevant for scaling efficient language models. This breakthrough directly impacts LLM deployment by enabling rapid generation with minimal accuracy loss, which is critical for applications in agentic AI, retrieval-augmented generation (RAG), and modular frameworks like LangChain and LangGraph.</p>
+      </div>
+    
+      <div class="item">
+        <h2>119. <a href="https://arxiv.org/abs/2510.06754" target="_blank" rel="noopener noreferrer">UniFField: A Generalizable Unified Neural Feature Field for Visual, Semantic, and Spatial Uncertainties in Any Scene</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>UniFField introduces a unified neural feature field that integrates visual, semantic, and geometric data with uncertainty estimation, addressing key limitations of prior 3D scene understanding methods that were scene-specific and lacked reliability metrics. This generalizable model can be applied zero-shot to any environment, dynamically updating with RGB-D input as robots explore. Importantly, the uncertainty-aware feature representation enables more robust decision-making in robotic tasks, exemplified by improved performance in active object search. For topics like agentic AI and RAG, UniFField’s ability to fuse multimodal data with uncertainty tracking enhances the reliability and adaptability of autonomous agents operating in complex real-world scenes.</p>
+      </div>
+    
+      <div class="item">
+        <h2>120. <a href="https://arxiv.org/abs/2510.14150" target="_blank" rel="noopener noreferrer">CodeEvolve: an open source evolutionary coding agent for algorithmic discovery and optimization</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>CodeEvolve is an open-source framework that merges large language models (LLMs) with evolutionary algorithms to optimize algorithmic discovery, achieving state-of-the-art results on benchmarks including those used by DeepMind’s AlphaEvolve. It leverages modular LLM orchestration, adaptive meta-prompting, and execution feedback in a genetic algorithm structure to efficiently balance exploration and exploitation. Notably, CodeEvolve’s open-weight models match or outperform closed-source baselines while requiring significantly less compute, making it a cost-effective option for complex algorithm synthesis. This matters for topics like LLMs, agentic AI, and retrieval-augmented generation (RAG) as it demonstrates practical, open-source advances in combining LLMs with evolutionary techniques for automated optimization tasks.</p>
+      </div>
+    
+      <div class="item">
+        <h2>121. <a href="https://arxiv.org/abs/2510.19444" target="_blank" rel="noopener noreferrer">A Foundational Theory of Quantitative Abstraction: Adjunctions, Duality, and Logic for Probabilistic Systems</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper delivers a foundational theory for principled quantitative abstraction in probabilistic systems, crucial for managing the intractability of large or continuous state spaces in stochastic dynamical models like Markov decision processes. By leveraging category theory and quantitative logic, it defines a canonical ε-quotient abstraction that optimally balances detail and value-loss guarantees, formalized via an adjunction capturing abstraction-realization duality. The development of an expressively complete quantitative modal μ-calculus further enables computational tractability, validated experimentally with optimal transport methods. This advances rigorous abstraction and representation learning in probabilistic domains, impacting areas such as agentic AI and retrieval-augmented generation (RAG) where scalable and precise handling of uncertainty is critical.</p>
+      </div>
+    
+      <div class="item">
+        <h2>122. <a href="https://arxiv.org/abs/2511.04583" target="_blank" rel="noopener noreferrer">Jr. AI Scientist and Its Risk Report: Autonomous Scientific Exploration from a Baseline Paper</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The Jr. AI Scientist system advances autonomous scientific exploration by mimicking a novice researcher’s workflow—analyzing baseline papers, formulating hypotheses, experimenting, and writing new research—while handling complex multi-file code via modern coding agents. It outperforms prior fully automated approaches, generating novel research papers on par with human standards, validated by AI reviews and expert assessments. However, significant limitations and risks remain, highlighting the need for cautious integration of AI Scientist systems to preserve academic integrity and address challenges in reliable autonomous research. This work is crucial for fields involving LLMs, agentic AI, RAG, and PEFT techniques like LoRA, informing safer, more effective deployment of AI-driven scientific workflows in platforms such as LangChain and LangGraph.</p>
+      </div>
+    
+      <div class="item">
+        <h2>123. <a href="https://arxiv.org/abs/2601.20900" target="_blank" rel="noopener noreferrer">Text-only adaptation in LLM-based ASR through text denoising</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This paper addresses the challenge of adapting LLM-based ASR systems to new domains using only text data, which is critical for scalable deployment across varied applications without costly audio collection. The proposed method reframes adaptation as a text denoising task, enabling effective domain adaptation while preserving the vital alignment between speech and text modalities. This lightweight approach, requiring no architecture changes or extra parameters, significantly improves performance—by up to 22.1%—over existing text-only adaptation techniques. For topics like LLM, PEFT, and agentic AI integrating multi-modal models, this work offers a practical path to enhance domain-specific ASR robustness efficiently.</p>
+      </div>
+    
+      <div class="item">
+        <h2>124. <a href="https://arxiv.org/abs/2602.04634" target="_blank" rel="noopener noreferrer">WideSeek-R1: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>WideSeek-R1 introduces a multi-agent reinforcement learning framework that shifts scaling focus from depth to width by orchestrating a lead agent with multiple parallel subagents for broad information-seeking tasks. Unlike existing multi-agent systems with rigid workflows, WideSeek-R1 enables scalable, specialized cooperation via a shared LLM and isolated contexts, improving parallelism and organizational capability. This approach achieves comparable performance to much larger single-agent models while gaining efficiency as more subagents are added. For topics like LLM, agentic AI, and retrieval-augmented generation (RAG), WideSeek-R1 demonstrates a practical path to scalable, cooperative AI systems that enhance broad problem-solving and information retrieval.</p>
+      </div>
+    
+      <div class="item">
+        <h2>125. <a href="https://arxiv.org/abs/2602.07075" target="_blank" rel="noopener noreferrer">LatentChem: From Textual CoT to Latent Thinking in Chemical Reasoning</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>LatentChem introduces a novel approach to chemical reasoning in LLMs by shifting from explicit textual Chain-of-Thought (CoT) to continuous latent space reasoning, addressing the mismatch between chemical structures and discrete language tokens. This latent interface decouples computation from language generation, allowing multi-step chemical reasoning to happen implicitly and more efficiently, resulting in a 10.84× inference speedup and superior task accuracy compared to CoT baselines. The work highlights a key direction for agentic AI and retrieval-augmented generation (RAG) by demonstrating that domain-specific reasoning can be optimized in latent spaces rather than relying on verbose textual explanations. LatentChem’s method has broader implications for PEFT, LoRA, and streaming k-means in enabling faster, more accurate, and scalable reasoning workflows in complex scientific domains.</p>
+      </div>
+    
+      <div class="item">
+        <h2>126. <a href="https://arxiv.org/abs/2602.23312" target="_blank" rel="noopener noreferrer">Evaluating Zero-Shot and One-Shot Adaptation of Small Language Models in Leader-Follower Interaction</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This study evaluates small language models (SLMs) for real-time leader-follower role classification in human-robot interaction (HRI), addressing the challenge of deploying large LLMs on resource-limited devices. Using a novel dataset and synthetic augmentation, the work compares prompt engineering and fine-tuning under zero-shot and one-shot settings, finding that zero-shot fine-tuned SLMs deliver high accuracy (86.66%) with low latency (~22 ms), making them suitable for on-device role assignment. However, one-shot adaptation struggles due to architectural limitations with longer context, illustrating key trade-offs in dialogue complexity versus reliability. This research matters for advancing agentic AI and PEFT methods like LoRA in embedded robotics, enabling robust and efficient edge inference for interactive AI agents.</p>
+      </div>
+    
+      <div class="item">
+        <h2>127. <a href="https://arxiv.org/abs/2603.01213" target="_blank" rel="noopener noreferrer">Can AI Agents Agree?</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The paper evaluates the ability of LLM-based agents to reach consensus in adversarial, no-stake settings using Byzantine consensus games. Results show that even in benign conditions, these agents struggle to reliably agree, with performance worsening as group size and number of adversarial agents increase. Failures mainly stem from loss of liveness, such as timeouts and stalled convergence, rather than incorrect value agreement. This finding is critical for deploying agentic AI systems in applications requiring robust coordination, such as those leveraging LangChain, LangGraph, or retrieval-augmented generation (RAG), highlighting current limitations in multi-agent consensus.</p>
+      </div>
+    
+      <div class="item">
+        <h2>128. <a href="https://arxiv.org/abs/2603.01214" target="_blank" rel="noopener noreferrer">Reasoning Boosts Opinion Alignment in LLMs</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This research explores improving opinion alignment in large language models (LLMs) by integrating structured reasoning techniques inspired by recent reinforcement learning advances. Their method enhances the models' ability to produce profile-consistent political opinions across diverse datasets, which is critical for applications like digital democracies and policy shaping. While reasoning reduces bias compared to naive prompting, it does not eliminate it, signaling the need for further innovations. This work is important for advancing agentic AI and reliable LLM-based opinion models used in legal, political, and retrieval-augmented generation (RAG) contexts, with implications for frameworks like LangChain and LangGraph.</p>
+      </div>
+    
+      <div class="item">
+        <h2>129. <a href="https://arxiv.org/abs/2603.10000" target="_blank" rel="noopener noreferrer">Beyond the Prompt in Large Language Models: Comprehension, In-Context Learning, and Chain-of-Thought</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>The article provides a theoretical framework explaining why Large Language Models (LLMs) excel at prompt comprehension, In-Context Learning (ICL), and Chain-of-Thought (CoT) reasoning despite being trained only on next-token prediction. It shows that LLMs infer task transitions via autoregression, with ICL improving performance by clarifying prompt intent and CoT enabling decomposition of complex tasks into simpler, learned subtasks. These insights are crucial for advancing prompt engineering, which enhances LLM effectiveness without additional training, impacting fields using agentic AI, retrieval-augmented generation (RAG), and frameworks like LangChain and LangGraph. Understanding these mechanisms supports more reliable deployment of LLM-based systems in legal tech, PEFT/LORA fine-tuning, and streaming data analysis.</p>
+      </div>
+    
+      <div class="item">
+        <h2>130. <a href="https://arxiv.org/abs/2603.10001" target="_blank" rel="noopener noreferrer">Leveraging Wikidata for Geographically Informed Sociocultural Bias Dataset Creation: Application to Latin America</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This work addresses the important gap in evaluating Large Language Models (LLMs) for sociocultural biases in Latin America, a region underrepresented in training data. By leveraging Wikidata and Wikipedia, the authors created LatamQA, a 26k-question multiple-choice dataset in Spanish, Portuguese, and English that reflects diverse Latin American cultures. Their evaluation reveals uneven LLM performance across Latin American countries and languages, highlighting that models know Iberian Spanish culture better than local Latin American cultures. This dataset and analysis are crucial for improving culturally aware LLMs and bias detection in non-English and underrepresented geographies, relevant to topics in LLMs, RAG, and multilingual AI systems.</p>
+      </div>
+    
+      <div class="item">
+        <h2>131. <a href="https://arxiv.org/abs/2603.10457" target="_blank" rel="noopener noreferrer">Beam-Plasma Collective Oscillations in Intense Charged-Particle Beams: Dielectric Response Theory, Langmuir Wave Dispersion, and Unsupervised Detection via Prometheus</a></h2>
+        <div class="meta">RSS • 2026-03-14T04:00:00.000Z</div>
+        <p>This article presents a rigorous theoretical and computational framework for understanding beam-plasma collective oscillations in intense charged-particle beams at intermediate energies (10-100 MeV). It formulates kinetic field theory to derive fundamental dispersion relations and dielectric responses, proving the existence of undamped Langmuir wave modes above a critical beam density. Using Prometheus, an unsupervised beta-VAE model trained on particle-in-cell (PIC) simulation data, the study robustly validates the theoretical predictions, including density-tunable plasma resonances and anomalous beam broadening. These insights matter for advanced beam physics and plasma control, providing experimentally accessible diagnostics at existing facilities, and the use of AI-based unsupervised detection techniques aligns with emerging trends in leveraging machine learning for complex physical system analysis.</p>
+      </div>
+    
+</body>
+</html>
