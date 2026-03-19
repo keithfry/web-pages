@@ -1,119 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI & Robotics Daily Digest - March 19, 2026 - touched</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; background: #f5f6f8; color: #1a1a2e; line-height: 1.7; }
-  .container { max-width: 780px; margin: 0 auto; padding: 32px 20px; }
-  header { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: #fff; padding: 48px 40px; border-radius: 16px; margin-bottom: 32px; }
-  header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.5px; }
-  header .date { font-size: 15px; color: #a8a8c8; font-weight: 400; }
-  header .stats { margin-top: 16px; font-size: 13px; color: #8888b0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; }
-  header .stats span { display: inline-block; margin-right: 20px; }
-  .section-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #6c63ff; margin: 28px 0 16px; }
-  .card { background: #fff; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border-left: 4px solid #6c63ff; transition: box-shadow 0.2s; }
-  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-  .card h3 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
-  .card h3 a { color: #1a1a2e; text-decoration: none; }
-  .card h3 a:hover { color: #6c63ff; }
-  .card .source { font-size: 12px; color: #888; margin-bottom: 10px; }
-  .card .summary { font-size: 14.5px; color: #333; }
-  .rss-note { margin-top: 40px; padding: 16px 24px; background: #eef2ff; border-radius: 10px; font-size: 13px; color: #555; }
-  footer { text-align: center; padding: 32px 0 16px; font-size: 12px; color: #999; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI &amp; Robotics Daily Digest — March 19, 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        header {
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 35px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #1e40af;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .header-date {
+            font-size: 1.1em;
+            color: #666;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #1e40af;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .section-note {
+            font-size: 0.95em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            margin-bottom: 28px;
+            padding: 18px;
+            background-color: #f9fafb;
+            border-left: 4px solid #2563eb;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .item:hover {
+            background-color: #f3f4f6;
+        }
+
+        .item-title {
+            font-size: 1.25em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .item-title a {
+            color: #1e40af;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .item-title a:hover {
+            border-bottom-color: #1e40af;
+        }
+
+        .item-meta {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .source-label {
+            display: inline-block;
+            background-color: #dbeafe;
+            color: #0c4a6e;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .date-label {
+            color: #999;
+            font-size: 0.85em;
+        }
+
+        .item-summary {
+            color: #444;
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+
+        .problem-feeds {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 4px;
+        }
+
+        .problem-feeds h3 {
+            color: #92400e;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .problem-feeds ul {
+            margin-left: 20px;
+        }
+
+        .problem-feeds li {
+            color: #78350f;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .problem-feeds a {
+            color: #92400e;
+            text-decoration: none;
+            border-bottom: 1px solid #d97706;
+        }
+
+        .problem-feeds a:hover {
+            background-color: #fde68a;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.4em; }
+            .item { padding: 14px; }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
+    <div class="container">
+        <header>
+            <h1>AI &amp; Robotics Daily Digest</h1>
+            <p class="header-date">Thursday, March 19, 2026 &mdash; 8:00 AM ET</p>
+        </header>
 
-<header>
-  <h1>AI & Robotics Daily Digest</h1>
-  <div class="date">Wednesday, March 19, 2026 &mdash; 2:00 PM ET (Dry Run)</div>
-  <div class="stats">
-    <span>5 AI emails processed</span>
-    <span>10 unique topics</span>
-    <span>RSS feeds validated via Chrome</span>
-  </div>
-</header>
+        <h2>Today's News &amp; Analysis</h2>
 
-<div class="section-label">Top Stories</div>
+        <div class="item">
+            <div class="item-title"><a href="https://openai.com/index/openai-to-acquire-astral/">OpenAI to Acquire Astral</a></div>
+            <div class="item-meta">
+                <span class="source-label">OpenAI News</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">OpenAI announced the acquisition of Astral, the creators of the uv Python package manager and Ruff linter. This strategic move strengthens OpenAI's developer tooling capabilities and AI-assisted development infrastructure.</div>
+        </div>
 
-<div class="card">
-  <h3><a href="https://www.minimax.io/news/minimax-m27-en" target="_blank">MiniMax M2.7: Self-Evolving Model Matches GLM-5 at 1/3 the Cost</a></h3>
-  <div class="source">Via: TLDR AI, The Rundown AI, AINews / Latent Space</div>
-  <div class="summary">MiniMax released M2.7, positioning it as the first model that "deeply participated in its own evolution," writing its own training code and running autonomous improvement loops. The model achieved 56.2% on SWE-Pro and 55.6% on VIBE-Pro through 100+ cycles of autonomously analyzing mistakes, rewriting code, and testing fixes, showing a 30% accuracy boost on internal benchmarks. Artificial Analysis places it on the cost/performance frontier at $0.30/$1.20 per 1M input/output tokens — less than one-third of GLM-5's cost while matching its performance. Distribution was immediate across Ollama, OpenRouter, Vercel, and other platforms. The self-evolving approach signals a new paradigm where future models will increasingly train and improve themselves.</div>
-</div>
+        <div class="item">
+            <div class="item-title"><a href="https://aibusiness.com/">Samsung Pledges $73B to Boost AI Chip Standing</a></div>
+            <div class="item-meta">
+                <span class="source-label">AI Business</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">Samsung has committed $73 billion to strengthen its position in the AI chip market, signaling a major competitive push against NVIDIA and other semiconductor leaders in the booming AI hardware sector.</div>
+        </div>
 
-<div class="card">
-  <h3><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/" target="_blank">Google Introduces 'Vibe Design' with Stitch Overhaul</a></h3>
-  <div class="source">Via: The Deep View, The Rundown AI</div>
-  <div class="summary">Google overhauled Stitch into an AI-native infinite canvas for UI design, coining the term "vibe design" as the visual counterpart to vibe coding. The redesign adds a Design Agent that reasons across entire project evolution, voice capabilities for hands-free editing, and instant prototyping that turns static screens into interactive flows in seconds. A new DESIGN.md format enables portable design rules between Stitch and coding tools, with each project getting a style system out of the box. The tool also features an agent manager for running multiple design tasks in parallel and an MCP server/SDK for integration into other tools. Stitch is available free via Google Labs to users of all experience levels.</div>
-</div>
+        <div class="item">
+            <div class="item-title"><a href="https://thesequence.substack.com/">OpenClaw: NVIDIA's New Security Framework for Enterprise AI</a></div>
+            <div class="item-meta">
+                <span class="source-label">TheSequence Newsletter</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">NVIDIA has introduced the OpenClaw Stack, a comprehensive security framework designed to protect enterprise AI deployments. The framework addresses growing concerns around model security and adversarial resilience in production environments.</div>
+        </div>
 
-<div class="card">
-  <h3><a href="https://venturebeat.com/technology/xiaomi-stuns-with-new-mimo-v2-pro-llm-nearing-gpt-5-2-opus-4-6-performance" target="_blank">Xiaomi MiMo-V2-Pro: 1T Parameter Model at a Fraction of the Cost</a></h3>
-  <div class="source">Via: TLDR AI, AINews / Latent Space</div>
-  <div class="summary">Xiaomi's MiMo-V2-Pro is a 1-trillion-parameter foundation model using a sparse architecture that only activates 42 billion parameters during any single forward pass, approaching GPT-5.2 and Opus 4.6 performance at dramatically lower cost. The model features a Multi-Token Prediction layer that anticipates and generates multiple tokens simultaneously, reducing latency for reasoning tasks. Artificial Analysis scores it at 49 on the Intelligence Index with 1M context and favorable token efficiency. Currently API-only via Xiaomi's platform, with an open-source variant planned. The model initially appeared on OpenRouter under the mystery codename "Hunter Alpha" before being identified.</div>
-</div>
+        <div class="item">
+            <div class="item-title"><a href="https://www.latent.space/">AINews: MiniMax 2.7 and the Race for Long-Context Models</a></div>
+            <div class="item-meta">
+                <span class="source-label">Latent Space</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">MiniMax 2.7 raises the bar in the competitive landscape for long-context language models. The advancement reflects ongoing efforts to extend context windows while maintaining computational efficiency and model performance.</div>
+        </div>
 
-<div class="card">
-  <h3><a href="https://thesequence.substack.com/p/the-sequence-opinion-827-taming-the" target="_blank">Taming the Agentic Lobster: OpenClaw Architecture Deep Dive</a></h3>
-  <div class="source">Via: TheSequence, TLDR AI</div>
-  <div class="summary">TheSequence published a detailed architectural breakdown of OpenClaw, the open-source orchestration layer that has rapidly become the defining architecture for local autonomous AI agents. OpenClaw is not a new foundation model but a daemon that lives on your hardware, connects to an LLM, and executes workflows across messaging apps, local file systems, and the web. The piece argues we're moving from treating LLMs as stateless "brains in jars" to active, stateful agents with persistent memory, hands, and eyes. China is also aggressively promoting OpenClaw adoption through public events organized by Baidu and Tencent, supporting its vision for widespread AI integration by 2030.</div>
-</div>
+        <div class="item">
+            <div class="item-title"><a href="https://www.therundown.ai/">Google Stitch &amp; the Rise of Vibe Design</a></div>
+            <div class="item-meta">
+                <span class="source-label">The Rundown AI</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">Google Stitch introduces a new paradigm in AI-assisted design called "vibe design," enabling developers and designers to generate layouts and interfaces through intuitive, aesthetic-first approaches rather than traditional code-first workflows.</div>
+        </div>
 
-<div class="section-label">Industry &amp; Enterprise</div>
+        <div class="item">
+            <div class="item-title"><a href="https://towardsdatascience.com/">Vibe Coding: Best Practices for AI-Assisted Development</a></div>
+            <div class="item-meta">
+                <span class="source-label">Towards Data Science</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">A comprehensive guide on vibe coding techniques that maximize productivity with AI coding assistants. The article covers prompt engineering strategies, iteration patterns, and best practices for collaborative AI-human development.</div>
+        </div>
 
-<div class="card">
-  <h3><a href="https://www.anthropic.com/features/81k-interviews" target="_blank">Anthropic's 81,000-Person Study: What People Want from AI</a></h3>
-  <div class="source">Via: TLDR AI, AINews / Latent Space</div>
-  <div class="summary">Anthropic conducted a massive study using Claude to interview 80,508 global participants in one week about their hopes and fears around AI. Key desires include professional excellence and life improvements, while main concerns revolve around AI unreliability and job displacement. The research reveals people experience AI as both a productivity tool and a potential dependency, highlighting its dual role in enhancing and complicating life. Separately, Ramp data shows Anthropic capturing 73% of enterprise spending among first-time AI buyers, indicating strong market traction.</div>
-</div>
+        <div class="item">
+            <div class="item-title"><a href="https://www.theguardian.com/technology/artificialintelligenceai/">AI Tool Developed to Test for Online Bullying Before Posts Go Live</a></div>
+            <div class="item-meta">
+                <span class="source-label">The Guardian</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">Researchers have created an AI-powered tool that detects potentially bullying content before it is posted on social media platforms. The technology aims to reduce harassment and promote safer online communities through real-time intervention.</div>
+        </div>
 
-<div class="card">
-  <h3><a href="https://www.ft.com/content/e814f4c3-4fb5-4e2e-90a6-470044436b39" target="_blank">Microsoft Considers Legal Action Over Amazon-OpenAI Cloud Deal</a></h3>
-  <div class="source">Via: The Rundown AI</div>
-  <div class="summary">Microsoft is reportedly considering legal action against Amazon and OpenAI over a new $50B cloud deal that commits $138B in cloud spending to AWS, which Microsoft believes may violate its exclusive contract to host OpenAI models on Azure. While Microsoft dropped its exclusive hosting lock in October, it retained a clause forcing all developer access to OpenAI models through Azure. A source told the FT they would sue if the contract is breached, adding pressure to an already strained Microsoft-OpenAI relationship ahead of OpenAI's planned IPO.</div>
-</div>
+        <div class="item">
+            <div class="item-title"><a href="https://www.theguardian.com/technology/artificialintelligenceai/">Oil Prices Fall as Traders Weigh AI-Driven Demand Forecasts</a></div>
+            <div class="item-meta">
+                <span class="source-label">The Guardian</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">Financial markets are increasingly influenced by AI-generated demand predictions, with traders adjusting positions based on algorithmic forecasts of energy consumption and economic activity trends.</div>
+        </div>
 
-<div class="card">
-  <h3><a href="https://archive.thedeepview.com/p/nvidia-chases-scale-as-user-owned-ai-emerges" target="_blank">Nvidia GTC: Agentic Scaling vs. User-Owned AI</a></h3>
-  <div class="source">Via: The Deep View</div>
-  <div class="summary">At GTC 2026, Nvidia introduced a fourth scaling law — agentic scaling — where AI agents communicate with other AIs, vastly increasing demand for low-latency, large-context inference. Jensen Huang told a packed audience that intelligence is directly correlated to compute, positioning multi-agent systems to unlock multi-trillion parameter models. Meanwhile, Near co-founder Illia Polosukhin presented a contrasting vision of "user-owned AI" with decentralized agents and security-first platforms. A straw poll at GTC showed Claude Code was the most-used coding tool, mentioned by over three-fourths of attendees, reinforcing Anthropic's enterprise dominance.</div>
-</div>
+        <div class="item">
+            <div class="item-title"><a href="https://www.theguardian.com/technology/artificialintelligenceai/">PwC Mandates AI Tool Use for All UK Staff</a></div>
+            <div class="item-meta">
+                <span class="source-label">The Guardian</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">Professional services firm PwC has made AI tool usage mandatory across its entire UK workforce. This corporate-wide mandate reflects broader trends of enterprise adoption and integration of AI assistants into daily business operations.</div>
+        </div>
 
-<div class="section-label">AI Research &amp; Architecture</div>
+        <div class="item">
+            <div class="item-title"><a href="https://www.theguardian.com/technology/artificialintelligenceai/">Amazon Brings Major Alexa AI Upgrade to UK Users</a></div>
+            <div class="item-meta">
+                <span class="source-label">The Guardian</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">Amazon has rolled out a significant update to Alexa with enhanced natural language understanding and reasoning capabilities. The upgrade improves context awareness and multi-step task execution for UK customers.</div>
+        </div>
 
-<div class="card">
-  <h3><a href="https://www.latent.space/p/ainews-minimax-27-glm-5-at-13-cost" target="_blank">Agent Harness Engineering: The New Differentiator</a></h3>
-  <div class="source">Via: AINews / Latent Space</div>
-  <div class="summary">The AI ecosystem is converging on the view that harness engineering — not just base model improvements — is the real bottleneck for production-grade agents. Harrison Chase framed Claude Code, OpenClaw, and Manus as the same decomposition: open model + runtime + harness. Skills are solidifying as shared abstractions across agent stacks, with Anthropic clarifying that a skill is a folder with scripts/assets/data, not just a text snippet. Meanwhile, MCP momentum continues with Google Colab's open-source MCP server, though some pushback emerged with critics arguing CLI-first approaches may be simpler.</div>
-</div>
+        <div class="item">
+            <div class="item-title"><a href="https://www.theguardian.com/technology/artificialintelligenceai/">UK's First Self-Driving Taxi Service to Launch</a></div>
+            <div class="item-meta">
+                <span class="source-label">The Guardian</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">The United Kingdom will see its first commercial autonomous taxi service begin operations, marking a major milestone in the regulatory approval and deployment of self-driving vehicles in Europe.</div>
+        </div>
 
-<div class="card">
-  <h3><a href="https://www.latent.space/p/ainews-minimax-27-glm-5-at-13-cost" target="_blank">Mamba-3 and Attention Residuals: Architecture Innovation Continues</a></h3>
-  <div class="source">Via: AINews / Latent Space</div>
-  <div class="summary">Cartesia released Mamba-3, an SSM optimized for inference-heavy workloads, with early reactions focused on plugging it into transformer hybrids rather than standalone use. Kimi/Moonshot's Attention Residual work emerged as a case study in infrastructure-model co-design, showing how vertical attention across layers can be made practical with block attention residual plus cross-stage caching. Both releases signal that labs continue searching for ways to relax the full-transformer bottleneck while maintaining ecosystem compatibility.</div>
-</div>
+        <div class="item">
+            <div class="item-title"><a href="https://www.theguardian.com/technology/artificialintelligenceai/">China Accelerates Humanoid Robotics Investment</a></div>
+            <div class="item-meta">
+                <span class="source-label">The Guardian</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">China is significantly increasing funding and research initiatives in humanoid robotics. The accelerated investment reflects strategic priorities in automation, manufacturing, and AI-driven robotics development.</div>
+        </div>
 
-<div class="section-label">Products &amp; Tools</div>
+        <div class="item">
+            <div class="item-title"><a href="https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml">Using Generative AI to Improve Wireless Signal Processing</a></div>
+            <div class="item-meta">
+                <span class="source-label">MIT News</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">MIT researchers have applied generative AI techniques to enhance wireless signal processing and channel estimation. The approach improves communication reliability and throughput in challenging RF environments.</div>
+        </div>
 
-<div class="card">
-  <h3>AI Tools Roundup: Stripe Payments, Microsoft APM, Midjourney V8</h3>
-  <div class="source">Via: TLDR AI, The Rundown AI, The Deep View</div>
-  <div class="summary">Stripe announced the Machine Payments Protocol enabling programmable LLMs to create customized payment experiences. Microsoft open-sourced Agent Package Manager (APM), a dependency manager for AI agents that works with GitHub Copilot, Claude Code, Cursor, and OpenCode. Midjourney rolled out a preview of its V8 image model with improved speed, detail, and text rendering. Dispatch, a new Claude Cowork feature, allows users to message and control their desktop AI assistant from their phone. Baidu released Qianfan-VL, enterprise-focused vision-language models for document parsing and visual reasoning.</div>
-</div>
+        <div class="item">
+            <div class="item-title"><a href="https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml">New Method Reduces LLM Overconfidence in Uncertain Situations</a></div>
+            <div class="item-meta">
+                <span class="source-label">MIT News</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">MIT researchers developed a method to reduce overconfidence in large language models when faced with uncertainty. The technique improves model calibration and reliability in situations where ground truth is ambiguous or incomplete.</div>
+        </div>
 
-<div class="rss-note">
-  <strong>Note:</strong> This is a dry run. RSS blog feeds were validated via Chrome (NVIDIA blog confirmed working) but not fully processed for this run. The scheduled task will fetch all 32 feeds in parallel batches of 6 tabs each morning at 8AM ET.
-</div>
+        <div class="item">
+            <div class="item-title"><a href="https://www.marktechpost.com/">Mamba-3: A New State Space Model Architecture</a></div>
+            <div class="item-meta">
+                <span class="source-label">MarkTechPost</span>
+                <span class="date-label">Mar 19, 2026</span>
+            </div>
+            <div class="item-summary">Mamba-3 introduces improvements to state space model architectures, offering enhanced efficiency and performance characteristics. The advancement represents continued progress in transformer alternatives for sequence modeling.</div>
+        </div>
 
-<footer>
-  Generated by AI Radar &bull; Dry Run &bull; March 19, 2026
-</footer>
+        <div class="item">
+            <div class="item-title"><a href="https://blogs.nvidia.com/blog/build-robots-with-ai/">From Simulation to Production: How to Build Robots With AI</a></div>
+            <div class="item-meta">
+                <span class="source-label">NVIDIA Blog</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">NVIDIA outlines a comprehensive approach to robotics development using AI and simulation pipelines. The article covers methodologies for training robot controllers in virtual environments and transitioning to real-world deployment.</div>
+        </div>
 
-</div>
+        <div class="item">
+            <div class="item-title"><a href="https://aibusiness.com/">Mistral Pioneers Sovereign AI in Europe</a></div>
+            <div class="item-meta">
+                <span class="source-label">AI Business</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">Mistral is establishing itself as a leader in European AI sovereignty with locally-controlled model development and deployment. The initiative aims to reduce European dependence on US-based AI systems and platforms.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://aibusiness.com/">Nvidia Extends its Reach Into Self-Driving</a></div>
+            <div class="item-meta">
+                <span class="source-label">AI Business</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">NVIDIA continues to expand its presence in autonomous vehicle technology through new partnerships and platform offerings. The company is strengthening its position as critical AI infrastructure for the self-driving industry.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://www.marktechpost.com/">NVIDIA Devises OpenClaw Stack for Enterprise Security</a></div>
+            <div class="item-meta">
+                <span class="source-label">MarkTechPost</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">NVIDIA's OpenClaw Stack provides a new layer of security for enterprise AI deployments, addressing vulnerabilities in model serving infrastructure and data pipelines at scale.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://www.marktechpost.com/">Qianfan-OCR: A New Optical Character Recognition Model</a></div>
+            <div class="item-meta">
+                <span class="source-label">MarkTechPost</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">Qianfan-OCR presents a new approach to optical character recognition leveraging advanced neural architectures. The model demonstrates improved accuracy across diverse languages and document types.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://www.marktechpost.com/">OpenShell: Open-Source Shell Agent Framework</a></div>
+            <div class="item-meta">
+                <span class="source-label">MarkTechPost</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">OpenShell provides an open-source framework for building autonomous shell agents capable of executing command-line tasks. The platform enables developers to create AI agents that interact with system shells and APIs.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://www.marktechpost.com/">EnterpriseOps-Gym: A Benchmark for Enterprise AI Agents</a></div>
+            <div class="item-meta">
+                <span class="source-label">MarkTechPost</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">EnterpriseOps-Gym introduces a standardized benchmark environment for evaluating AI agents on enterprise operational tasks. The benchmark enables researchers to measure agent performance against realistic business workflows.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://thesequence.substack.com/">AutoResearch: Automated AI Research Systems (#826)</a></div>
+            <div class="item-meta">
+                <span class="source-label">TheSequence</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">AutoResearch explores frameworks for automating AI research processes through agent-based systems. The work focuses on enabling AI systems to autonomously conduct experiments, analyze results, and generate research insights.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://www.therundown.ai/">OpenAI's New Side Quests: What's Coming Next</a></div>
+            <div class="item-meta">
+                <span class="source-label">The Rundown AI</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">OpenAI is introducing new projects and features described as "side quests" across its product roadmap. These initiatives explore emerging use cases and experimental capabilities in AI assistants and developer tooling.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://towardsdatascience.com/">A New Experience of Coding with AI</a></div>
+            <div class="item-meta">
+                <span class="source-label">Towards Data Science</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">An exploration of how AI is transforming the coding experience through intelligent suggestions, code generation, and real-time assistance. The article discusses workflow changes and productivity gains from AI-augmented development.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://www.interconnects.ai/">GPT-4.5 Codex: What It Means for Developers</a></div>
+            <div class="item-meta">
+                <span class="source-label">Interconnects</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">Analysis of GPT-4.5 Codex capabilities and their implications for software developers. The model's enhanced code understanding and generation abilities are reshaping development practices and tool integration.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://www.latent.space/">Claude Cowork Mode Dispatch</a></div>
+            <div class="item-meta">
+                <span class="source-label">Latent Space</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">Coverage of Claude's new Cowork mode capabilities enabling collaborative AI interactions. The feature facilitates real-time cooperation between humans and AI systems on complex tasks and file management workflows.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://blog.langchain.dev/">Polly is Now Generally Available in LangSmith</a></div>
+            <div class="item-meta">
+                <span class="source-label">LangChain Blog</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">LangChain announced the general availability of Polly within LangSmith, providing enhanced evaluation and monitoring capabilities for language model applications in production environments.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://developer.nvidia.com/blog/">Building Deep Agents for Enterprise Search</a></div>
+            <div class="item-meta">
+                <span class="source-label">NVIDIA Developer Blog</span>
+                <span class="date-label">Mar 18, 2026</span>
+            </div>
+            <div class="item-summary">NVIDIA provides guidance on developing deep agents for enterprise search applications. The article covers architecture patterns and optimization techniques for deploying agentic search systems at scale.</div>
+        </div>
+
+        <h2>Latest Research Papers</h2>
+
+        <p class="section-note">New arXiv preprints from March 19, 2026 (cs.AI and cs.LG sections). Ten additional stat.ML papers were also indexed — visit <a href="https://arxiv.org/rss/stat.ML" style="color: #2563eb; text-decoration: none; border-bottom: 1px solid #93c5fd;">arxiv.org/rss/stat.ML</a> for the full list.</p>
+
+        <h3 style="font-size: 1.3em; color: #374151; margin-top: 20px; margin-bottom: 18px;">Computer Science &mdash; Artificial Intelligence (cs.AI)</h3>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.17021">Generative AI-assisted Participatory Modeling in Socio-Environmental Planning under Deep Uncertainty</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.AI</span></div>
+            <div class="item-summary">Uses LLMs to assist stakeholder participatory modeling for complex planning problems under deep uncertainty. Demonstrates how generative AI can translate natural-language stakeholder descriptions into quantitative models for collaborative decision-making.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.17063">Transformers are Bayesian Networks</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.AI</span></div>
+            <div class="item-summary">Proves in five ways that every sigmoid transformer implements weighted loopy belief propagation on its implicit factor graph. This theoretical result provides new understanding of how transformers perform probabilistic inference and why they generalize.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.17112">Cascade-Aware Multi-Agent Routing: Spatio-Temporal Sidecars and Geometry-Switching</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.AI</span></div>
+            <div class="item-summary">Introduces geometry-aware scheduling for symbolic graph networks (AI agent systems connected by delegation edges). Unlike geometry-blind schedulers, this approach models how failures propagate differently in tree-like versus cyclic agent topologies.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.17169">How Clued up are LLMs? Evaluating Multi-Step Deductive Reasoning in a Text-Based Game Environment</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.AI</span></div>
+            <div class="item-summary">Implements a multi-agent text version of the Clue board game as a testbed for evaluating multi-step deductive reasoning, with six agents drawn from GPT-4o-mini and Gemini-2.5-Flash. Investigates whether fine-tuning on structured logic puzzles transfers to improved in-game performance.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.17216">AI Scientist via Synthetic Task Scaling</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.AI</span></div>
+            <div class="item-summary">Presents a principled framework for training agentic systems that can perform ML research autonomously via synthetic task scaling. Addresses the gap that current LLMs often generate plausible-looking but ineffective research ideas.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.17233">Draft-and-Prune: Improving the Reliability of Auto-formalization for Logical Reasoning</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.AI</span></div>
+            <div class="item-summary">Addresses brittleness in auto-formalization pipelines where programs may fail to execute or encode incorrect semantics. The draft-and-prune approach reduces both syntactic and semantic errors in translating natural language to formal logical representations.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.17244">Graph-Native Cognitive Memory for AI Agents: Formal Belief Revision Semantics for Versioned Memory Architectures</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.AI</span></div>
+            <div class="item-summary">Introduces Kumiho, a graph-native cognitive memory architecture grounded in formal belief revision semantics. Provides structural primitives including immutable revisions and mutable tag pointers to support long-term agent memory management.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.17305">Contrastive Reasoning Alignment: Reinforcement Learning from Hidden Representations (CRAFT)</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.AI</span></div>
+            <div class="item-summary">A red-teaming alignment framework that uses a model's hidden representations to improve robustness against jailbreak attacks. Unlike defenses that operate at the output level, CRAFT explicitly optimizes safety-aware reasoning traces.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.17310">InfoDensity: Rewarding Information-Dense Traces for Efficient Reasoning</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.AI</span></div>
+            <div class="item-summary">An RL approach that rewards information-dense intermediate reasoning traces to curb LLM verbosity. Addresses the gap in existing approaches that optimize final response length while neglecting the quality of intermediate reasoning steps.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.17319">Physics-informed offline reinforcement learning eliminates catastrophic fuel waste in maritime routing (PIER)</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.AI</span></div>
+            <div class="item-summary">PIER is an offline RL framework learning fuel-efficient, safety-aware routing policies from physics-calibrated environments. Targets maritime shipping, which accounts for approximately 3% of global greenhouse gas emissions.</div>
+        </div>
+
+        <h3 style="font-size: 1.3em; color: #374151; margin-top: 28px; margin-bottom: 18px;">Computer Science &mdash; Machine Learning (cs.LG)</h3>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.16878">A foundation model for electrodermal activity data</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.LG</span></div>
+            <div class="item-summary">Addresses the lack of large-scale curated datasets for EDA (electrodermal activity) modeling with a new foundation model for sympathetic nervous system physiological signals. Opens doors for improved health and wellness applications using wearable sensor data.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.16881">Federated Multi Agent Deep Learning and Neural Networks for Advanced Distributed Sensing in Wireless Networks</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.LG</span></div>
+            <div class="item-summary">Presents MADL as a unifying framework for decision-making and inference in 5G-Advanced and 6G wireless systems where sensing, communication, and computing are tightly coupled. Enables intelligent distributed sensing without centralized control.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.16888">Multi-Agent Reinforcement Learning for Dynamic Pricing: Balancing Profitability, Stability and Fairness</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.LG</span></div>
+            <div class="item-summary">Systematic empirical evaluation of MAPPO and MADDPG for dynamic price optimization in simulated competitive retail markets. Addresses tradeoffs between profitability, market stability, and pricing fairness using a multi-agent framework.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.16901">From Language to Action in Arabic: Reliable Structured Tool Calling via Data-Centric Fine-Tuning</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.LG</span></div>
+            <div class="item-summary">Introduces AISA-AR-FunctionCall, a production-oriented Arabic function-calling framework built on a 270M-parameter FunctionGemma base. Enables Arabic-language LLMs to reliably invoke structured tools and APIs in agentic pipelines.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.16911">What on Earth is AlphaEarth? Hierarchical structure and functional interpretability for global land cover</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.LG</span></div>
+            <div class="item-summary">Interpretability study of Google AlphaEarth Foundation (GAEF) geospatial embeddings revealing whether hierarchical structure maps meaningfully to global land cover categories. Extends prior work on continuous environmental variable analysis to categorical structure.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.16917">HoloByte: Continuous Hyperspherical Distillation for Tokenizer-Free Modeling</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.LG</span></div>
+            <div class="item-summary">Proposes replacing discrete subword tokenization with continuous hyperspherical representations to eliminate artificial morphological boundaries and vocabulary dependence. Resolves discontinuities in the optimization landscape caused by tokenization quantization.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.16929">MHPO: Modulated Hazard-aware Policy Optimization for Stable Reinforcement Learning</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.LG</span></div>
+            <div class="item-summary">Addresses non-differentiable boundaries and vanishing gradient regions in GRPO-based RL frameworks with hazard-aware importance ratio regulation. Maintains gradient fidelity while improving training stability in complex RL tasks.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.16937">Integrating Explainable Machine Learning and Mixed-Integer Optimization for Personalized Sleep Quality Intervention</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.LG</span></div>
+            <div class="item-summary">Bridges ML sleep quality predictions to actionable personalized interventions through mixed-integer optimization. Moves beyond predictive risk identification to provide concrete, implementable lifestyle recommendations.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.16951">Minimum-Action Learning: Energy-Constrained Symbolic Model Selection for Physical Law Identification from Noisy Data</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.LG</span></div>
+            <div class="item-summary">Introduces MAL, which selects symbolic force laws from a library by minimizing a Triple-Action functional combining trajectory reconstruction, architectural sparsity, and energy conservation. Designed for discovering governing equations from noisy observational data.</div>
+        </div>
+
+        <div class="item">
+            <div class="item-title"><a href="https://arxiv.org/abs/2603.16983">Formal verification of tree-based machine learning models for lateral spreading</a></div>
+            <div class="item-meta"><span class="source-label">arXiv cs.LG</span></div>
+            <div class="item-summary">Applies formal verification to tree-based ML models for geotechnical hazard (lateral spreading) prediction, addressing physically inconsistent relationships learned from sparse or biased data. Goes beyond SHAP/LIME explainability to provide correctness guarantees.</div>
+        </div>
+
+        <div class="problem-feeds">
+            <h3>&#9888; Problem Feeds</h3>
+            <p style="color: #78350f; margin-bottom: 12px; font-size: 0.95em;">The following RSS feeds encountered errors and could not be indexed today:</p>
+            <ul>
+                <li><strong>Google AI Blog</strong> &mdash; <a href="https://blog.google/rss/">https://blog.google/rss/</a> &mdash; TrustedHTML Content Security Policy prevented RSS parsing</li>
+                <li><strong>VentureBeat AI</strong> &mdash; <a href="https://feeds.feedburner.com/venturebeat/SZYF">https://feeds.feedburner.com/venturebeat/SZYF</a> &mdash; TrustedHTML Content Security Policy prevented RSS parsing</li>
+                <li><strong>Import AI (jack-clark.net)</strong> &mdash; <a href="https://jack-clark.net/feed">https://jack-clark.net/feed</a> &mdash; Connection timeout after multiple retry attempts</li>
+                <li><strong>RL Reddit</strong> &mdash; <a href="https://www.reddit.com/r/reinforcementlearning/.rss?format=xml">reddit.com/r/reinforcementlearning/.rss</a> &mdash; Blocked by safety restrictions</li>
+                <li><strong>RL Paper Review (dtransposed.github.io)</strong> &mdash; <a href="https://dtransposed.github.io/feed.xml">https://dtransposed.github.io/feed.xml</a> &mdash; Network egress blocked</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
