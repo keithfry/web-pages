@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI & Robotics Daily Digest - March 19, 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; background: #f5f6f8; color: #1a1a2e; line-height: 1.7; }
+  .container { max-width: 780px; margin: 0 auto; padding: 32px 20px; }
+  header { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: #fff; padding: 48px 40px; border-radius: 16px; margin-bottom: 32px; }
+  header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.5px; }
+  header .date { font-size: 15px; color: #a8a8c8; font-weight: 400; }
+  header .stats { margin-top: 16px; font-size: 13px; color: #8888b0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; }
+  header .stats span { display: inline-block; margin-right: 20px; }
+  .section-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: #6c63ff; margin: 28px 0 16px; }
+  .card { background: #fff; border-radius: 12px; padding: 24px 28px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border-left: 4px solid #6c63ff; transition: box-shadow 0.2s; }
+  .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .card h3 { font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+  .card h3 a { color: #1a1a2e; text-decoration: none; }
+  .card h3 a:hover { color: #6c63ff; }
+  .card .source { font-size: 12px; color: #888; margin-bottom: 10px; }
+  .card .summary { font-size: 14.5px; color: #333; }
+  .rss-note { margin-top: 40px; padding: 16px 24px; background: #eef2ff; border-radius: 10px; font-size: 13px; color: #555; }
+  footer { text-align: center; padding: 32px 0 16px; font-size: 12px; color: #999; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>AI & Robotics Daily Digest</h1>
+  <div class="date">Wednesday, March 19, 2026 &mdash; 2:00 PM ET (Dry Run)</div>
+  <div class="stats">
+    <span>5 AI emails processed</span>
+    <span>10 unique topics</span>
+    <span>RSS feeds validated via Chrome</span>
+  </div>
+</header>
+
+<div class="section-label">Top Stories</div>
+
+<div class="card">
+  <h3><a href="https://www.minimax.io/news/minimax-m27-en" target="_blank">MiniMax M2.7: Self-Evolving Model Matches GLM-5 at 1/3 the Cost</a></h3>
+  <div class="source">Via: TLDR AI, The Rundown AI, AINews / Latent Space</div>
+  <div class="summary">MiniMax released M2.7, positioning it as the first model that "deeply participated in its own evolution," writing its own training code and running autonomous improvement loops. The model achieved 56.2% on SWE-Pro and 55.6% on VIBE-Pro through 100+ cycles of autonomously analyzing mistakes, rewriting code, and testing fixes, showing a 30% accuracy boost on internal benchmarks. Artificial Analysis places it on the cost/performance frontier at $0.30/$1.20 per 1M input/output tokens — less than one-third of GLM-5's cost while matching its performance. Distribution was immediate across Ollama, OpenRouter, Vercel, and other platforms. The self-evolving approach signals a new paradigm where future models will increasingly train and improve themselves.</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/" target="_blank">Google Introduces 'Vibe Design' with Stitch Overhaul</a></h3>
+  <div class="source">Via: The Deep View, The Rundown AI</div>
+  <div class="summary">Google overhauled Stitch into an AI-native infinite canvas for UI design, coining the term "vibe design" as the visual counterpart to vibe coding. The redesign adds a Design Agent that reasons across entire project evolution, voice capabilities for hands-free editing, and instant prototyping that turns static screens into interactive flows in seconds. A new DESIGN.md format enables portable design rules between Stitch and coding tools, with each project getting a style system out of the box. The tool also features an agent manager for running multiple design tasks in parallel and an MCP server/SDK for integration into other tools. Stitch is available free via Google Labs to users of all experience levels.</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://venturebeat.com/technology/xiaomi-stuns-with-new-mimo-v2-pro-llm-nearing-gpt-5-2-opus-4-6-performance" target="_blank">Xiaomi MiMo-V2-Pro: 1T Parameter Model at a Fraction of the Cost</a></h3>
+  <div class="source">Via: TLDR AI, AINews / Latent Space</div>
+  <div class="summary">Xiaomi's MiMo-V2-Pro is a 1-trillion-parameter foundation model using a sparse architecture that only activates 42 billion parameters during any single forward pass, approaching GPT-5.2 and Opus 4.6 performance at dramatically lower cost. The model features a Multi-Token Prediction layer that anticipates and generates multiple tokens simultaneously, reducing latency for reasoning tasks. Artificial Analysis scores it at 49 on the Intelligence Index with 1M context and favorable token efficiency. Currently API-only via Xiaomi's platform, with an open-source variant planned. The model initially appeared on OpenRouter under the mystery codename "Hunter Alpha" before being identified.</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://thesequence.substack.com/p/the-sequence-opinion-827-taming-the" target="_blank">Taming the Agentic Lobster: OpenClaw Architecture Deep Dive</a></h3>
+  <div class="source">Via: TheSequence, TLDR AI</div>
+  <div class="summary">TheSequence published a detailed architectural breakdown of OpenClaw, the open-source orchestration layer that has rapidly become the defining architecture for local autonomous AI agents. OpenClaw is not a new foundation model but a daemon that lives on your hardware, connects to an LLM, and executes workflows across messaging apps, local file systems, and the web. The piece argues we're moving from treating LLMs as stateless "brains in jars" to active, stateful agents with persistent memory, hands, and eyes. China is also aggressively promoting OpenClaw adoption through public events organized by Baidu and Tencent, supporting its vision for widespread AI integration by 2030.</div>
+</div>
+
+<div class="section-label">Industry &amp; Enterprise</div>
+
+<div class="card">
+  <h3><a href="https://www.anthropic.com/features/81k-interviews" target="_blank">Anthropic's 81,000-Person Study: What People Want from AI</a></h3>
+  <div class="source">Via: TLDR AI, AINews / Latent Space</div>
+  <div class="summary">Anthropic conducted a massive study using Claude to interview 80,508 global participants in one week about their hopes and fears around AI. Key desires include professional excellence and life improvements, while main concerns revolve around AI unreliability and job displacement. The research reveals people experience AI as both a productivity tool and a potential dependency, highlighting its dual role in enhancing and complicating life. Separately, Ramp data shows Anthropic capturing 73% of enterprise spending among first-time AI buyers, indicating strong market traction.</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.ft.com/content/e814f4c3-4fb5-4e2e-90a6-470044436b39" target="_blank">Microsoft Considers Legal Action Over Amazon-OpenAI Cloud Deal</a></h3>
+  <div class="source">Via: The Rundown AI</div>
+  <div class="summary">Microsoft is reportedly considering legal action against Amazon and OpenAI over a new $50B cloud deal that commits $138B in cloud spending to AWS, which Microsoft believes may violate its exclusive contract to host OpenAI models on Azure. While Microsoft dropped its exclusive hosting lock in October, it retained a clause forcing all developer access to OpenAI models through Azure. A source told the FT they would sue if the contract is breached, adding pressure to an already strained Microsoft-OpenAI relationship ahead of OpenAI's planned IPO.</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://archive.thedeepview.com/p/nvidia-chases-scale-as-user-owned-ai-emerges" target="_blank">Nvidia GTC: Agentic Scaling vs. User-Owned AI</a></h3>
+  <div class="source">Via: The Deep View</div>
+  <div class="summary">At GTC 2026, Nvidia introduced a fourth scaling law — agentic scaling — where AI agents communicate with other AIs, vastly increasing demand for low-latency, large-context inference. Jensen Huang told a packed audience that intelligence is directly correlated to compute, positioning multi-agent systems to unlock multi-trillion parameter models. Meanwhile, Near co-founder Illia Polosukhin presented a contrasting vision of "user-owned AI" with decentralized agents and security-first platforms. A straw poll at GTC showed Claude Code was the most-used coding tool, mentioned by over three-fourths of attendees, reinforcing Anthropic's enterprise dominance.</div>
+</div>
+
+<div class="section-label">AI Research &amp; Architecture</div>
+
+<div class="card">
+  <h3><a href="https://www.latent.space/p/ainews-minimax-27-glm-5-at-13-cost" target="_blank">Agent Harness Engineering: The New Differentiator</a></h3>
+  <div class="source">Via: AINews / Latent Space</div>
+  <div class="summary">The AI ecosystem is converging on the view that harness engineering — not just base model improvements — is the real bottleneck for production-grade agents. Harrison Chase framed Claude Code, OpenClaw, and Manus as the same decomposition: open model + runtime + harness. Skills are solidifying as shared abstractions across agent stacks, with Anthropic clarifying that a skill is a folder with scripts/assets/data, not just a text snippet. Meanwhile, MCP momentum continues with Google Colab's open-source MCP server, though some pushback emerged with critics arguing CLI-first approaches may be simpler.</div>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.latent.space/p/ainews-minimax-27-glm-5-at-13-cost" target="_blank">Mamba-3 and Attention Residuals: Architecture Innovation Continues</a></h3>
+  <div class="source">Via: AINews / Latent Space</div>
+  <div class="summary">Cartesia released Mamba-3, an SSM optimized for inference-heavy workloads, with early reactions focused on plugging it into transformer hybrids rather than standalone use. Kimi/Moonshot's Attention Residual work emerged as a case study in infrastructure-model co-design, showing how vertical attention across layers can be made practical with block attention residual plus cross-stage caching. Both releases signal that labs continue searching for ways to relax the full-transformer bottleneck while maintaining ecosystem compatibility.</div>
+</div>
+
+<div class="section-label">Products &amp; Tools</div>
+
+<div class="card">
+  <h3>AI Tools Roundup: Stripe Payments, Microsoft APM, Midjourney V8</h3>
+  <div class="source">Via: TLDR AI, The Rundown AI, The Deep View</div>
+  <div class="summary">Stripe announced the Machine Payments Protocol enabling programmable LLMs to create customized payment experiences. Microsoft open-sourced Agent Package Manager (APM), a dependency manager for AI agents that works with GitHub Copilot, Claude Code, Cursor, and OpenCode. Midjourney rolled out a preview of its V8 image model with improved speed, detail, and text rendering. Dispatch, a new Claude Cowork feature, allows users to message and control their desktop AI assistant from their phone. Baidu released Qianfan-VL, enterprise-focused vision-language models for document parsing and visual reasoning.</div>
+</div>
+
+<div class="rss-note">
+  <strong>Note:</strong> This is a dry run. RSS blog feeds were validated via Chrome (NVIDIA blog confirmed working) but not fully processed for this run. The scheduled task will fetch all 32 feeds in parallel batches of 6 tabs each morning at 8AM ET.
+</div>
+
+<footer>
+  Generated by AI Radar &bull; Dry Run &bull; March 19, 2026
+</footer>
+
+</div>
+</body>
+</html>
