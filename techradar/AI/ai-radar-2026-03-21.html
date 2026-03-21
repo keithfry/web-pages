@@ -3,570 +3,493 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Radar — March 21, 2026</title>
+<title>AI & Robotics Daily Digest — March 21, 2026</title>
 <style>
-  :root {
-    --bg: #0f1117;
-    --surface: #1a1d27;
-    --surface2: #21253a;
-    --accent: #6c63ff;
-    --accent2: #00d4aa;
-    --accent3: #ff6b6b;
-    --text: #e8eaf0;
-    --muted: #8b90a7;
-    --border: #2a2f45;
-    --tag-bg: #1e2235;
-  }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: var(--bg);
-    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #f5f5f7;
+    color: #1d1d1f;
     line-height: 1.6;
-    font-size: 15px;
   }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; color: #9d97ff; }
-
-  /* Header */
-  .header {
-    background: linear-gradient(135deg, #0f1117 0%, #1a1038 50%, #0f1117 100%);
-    border-bottom: 1px solid var(--border);
-    padding: 40px 20px 32px;
+  .page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 48px 32px 40px;
     text-align: center;
   }
-  .header-label {
-    font-size: 11px;
-    font-weight: 700;
+  .page-header .logo {
+    font-size: 12px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #7eb8f7;
+    margin-bottom: 12px;
+  }
+  .page-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
     margin-bottom: 10px;
   }
-  .header h1 {
-    font-size: 2.4rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    background: linear-gradient(90deg, #fff 0%, #b8b4ff 50%, #00d4aa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 8px;
+  .page-header .date {
+    font-size: 15px;
+    color: #a0aec0;
+    font-weight: 400;
   }
-  .header .date {
-    color: var(--muted);
-    font-size: 0.9rem;
+  .page-header .pill {
+    display: inline-block;
+    background: rgba(126, 184, 247, 0.2);
+    border: 1px solid rgba(126, 184, 247, 0.4);
+    color: #7eb8f7;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 4px 14px;
+    margin-top: 14px;
     letter-spacing: 1px;
-  }
-  .header .tagline {
-    color: var(--muted);
-    font-size: 0.85rem;
-    margin-top: 6px;
+    text-transform: uppercase;
   }
 
-  /* Layout */
   .container {
     max-width: 860px;
     margin: 0 auto;
-    padding: 32px 20px 60px;
+    padding: 40px 20px 60px;
   }
 
-  /* Section */
-  .section {
-    margin-bottom: 40px;
-  }
   .section-header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border);
+    gap: 12px;
+    margin: 48px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e2e8f0;
   }
-  .section-icon {
-    font-size: 1.1rem;
+  .section-header .icon {
+    font-size: 22px;
   }
-  .section-title {
-    font-size: 0.75rem;
+  .section-header h2 {
+    font-size: 20px;
     font-weight: 700;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--accent2);
+    color: #1a202c;
+    letter-spacing: -0.3px;
   }
-  .section-count {
+  .section-header .count {
     margin-left: auto;
-    font-size: 0.7rem;
-    color: var(--muted);
-    background: var(--tag-bg);
-    padding: 2px 8px;
-    border-radius: 10px;
+    font-size: 12px;
+    background: #edf2f7;
+    color: #718096;
+    border-radius: 12px;
+    padding: 3px 10px;
+    font-weight: 600;
   }
 
-  /* Cards */
   .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px 18px;
-    margin-bottom: 10px;
-    transition: border-color 0.2s;
+    background: white;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    border: 1px solid #e8ecf0;
+    transition: box-shadow 0.2s;
   }
   .card:hover {
-    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-  .card-title {
-    font-size: 0.95rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    line-height: 1.4;
-  }
-  .card-title a {
-    color: var(--text);
-  }
-  .card-title a:hover {
-    color: var(--accent);
-    text-decoration: none;
-  }
-  .card-meta {
-    font-size: 0.75rem;
-    color: var(--muted);
+  .card .via {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #7eb8f7;
     margin-bottom: 7px;
   }
-  .card-summary {
-    font-size: 0.875rem;
-    color: #c0c4d8;
-    line-height: 1.55;
+  .card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #1a202c;
+  }
+  .card h3 a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .card h3 a:hover {
+    color: #3b82f6;
+    text-decoration: underline;
+  }
+  .card p {
+    font-size: 14.5px;
+    color: #4a5568;
+    line-height: 1.65;
+  }
+
+  /* arXiv cards */
+  .card.arxiv .via {
+    color: #9f7aea;
+  }
+  .card.arxiv {
+    border-left: 3px solid #9f7aea;
+  }
+
+  /* Robotics cards */
+  .card.robotics .via {
+    color: #48bb78;
+  }
+
+  /* Sub-items inside a card */
+  .sub-items {
+    margin-top: 14px;
+    border-top: 1px solid #f0f4f8;
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .sub-item {
+    font-size: 14px;
+    color: #4a5568;
+  }
+  .sub-item strong {
+    color: #2d3748;
+    font-weight: 600;
+  }
+  .sub-item a {
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  .sub-item a:hover { text-decoration: underline; }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
   }
   .tag {
-    display: inline-block;
-    font-size: 0.68rem;
+    font-size: 11px;
+    padding: 2px 9px;
+    border-radius: 12px;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-right: 5px;
-    background: var(--tag-bg);
-    border: 1px solid var(--border);
-    color: var(--muted);
+    letter-spacing: 0.3px;
   }
-  .tag.hot { border-color: #ff6b6b40; color: #ff6b6b; background: #ff6b6b10; }
-  .tag.new { border-color: #00d4aa40; color: #00d4aa; background: #00d4aa10; }
-  .tag.research { border-color: #6c63ff40; color: #9d97ff; background: #6c63ff10; }
-  .tag.robotics { border-color: #ffa94d40; color: #ffa94d; background: #ffa94d10; }
+  .tag-policy { background: #fed7d7; color: #c53030; }
+  .tag-model { background: #bee3f8; color: #2b6cb0; }
+  .tag-agents { background: #c6f6d5; color: #276749; }
+  .tag-safety { background: #fefcbf; color: #975a16; }
+  .tag-robotics { background: #e9d8fd; color: #6b46c1; }
+  .tag-research { background: #e2e8f0; color: #4a5568; }
+  .tag-voice { background: #fde8d8; color: #9c4221; }
+  .tag-healthcare { background: #d0f0fd; color: #0b6ca1; }
 
-  /* Top stories grid */
-  .top-stories {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  @media (max-width: 600px) {
-    .top-stories { grid-template-columns: 1fr; }
-    .header h1 { font-size: 1.8rem; }
-  }
-  .top-card {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px;
-    transition: border-color 0.2s;
-  }
-  .top-card:hover { border-color: var(--accent); }
-  .top-card .card-title { font-size: 0.9rem; }
-  .top-card .card-summary { font-size: 0.82rem; }
-
-  /* Research papers */
-  .paper-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 13px 16px;
-    margin-bottom: 8px;
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-  }
-  .paper-num {
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--accent);
-    background: #6c63ff15;
-    border: 1px solid #6c63ff30;
-    border-radius: 4px;
-    padding: 2px 7px;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .paper-content .card-title { font-size: 0.88rem; }
-  .paper-content .card-summary { font-size: 0.82rem; }
-
-  /* Problem feeds */
-  .problem-card {
-    background: #1a1215;
-    border: 1px solid #3a2030;
-    border-radius: 8px;
-    padding: 12px 16px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.85rem;
-    color: var(--muted);
-  }
-  .problem-icon { color: #ff6b6b; font-size: 0.9rem; }
-
-  /* Divider */
-  .divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border), transparent);
-    margin: 32px 0;
-  }
-
-  /* Footer */
-  .footer {
+  footer {
     text-align: center;
-    color: var(--muted);
-    font-size: 0.78rem;
-    padding: 24px;
-    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: #a0aec0;
+    padding: 32px 20px;
+    border-top: 1px solid #e8ecf0;
+    margin-top: 20px;
   }
-  .footer a { color: var(--muted); }
-  .footer strong { color: var(--accent); }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <div class="header-label">Daily Digest</div>
-  <h1>⚡ AI Radar</h1>
-  <div class="date">Saturday, March 21, 2026</div>
-  <div class="tagline">AI · Machine Learning · Robotics · Research</div>
+<div class="page-header">
+  <div class="logo">⚡ Daily Briefing</div>
+  <h1>AI &amp; Robotics Daily Digest</h1>
+  <div class="date">Saturday, March 21, 2026 &mdash; 8:00 AM ET</div>
+  <div class="pill">47 Items across 14 sources</div>
 </div>
 
 <div class="container">
 
-  <!-- TOP STORIES -->
-  <div class="section">
-    <div class="section-header">
-      <span class="section-icon">🔥</span>
-      <span class="section-title">Top Stories</span>
-      <span class="section-count">6 stories</span>
-    </div>
-    <div class="top-stories">
-      <div class="top-card">
-        <div class="card-title"><a href="https://www.technologyreview.com/2026/03/20/1115000/openai-automated-ai-researcher/" target="_blank">OpenAI Is Building an Automated AI Researcher</a></div>
-        <div class="card-meta"><span class="tag hot">Hot</span> MIT Technology Review</div>
-        <div class="card-summary">OpenAI is developing an AI system capable of autonomously designing and running experiments, marking a significant push toward self-directed scientific research at machine speed.</div>
-      </div>
-      <div class="top-card">
-        <div class="card-title"><a href="https://www.therundown.ai/p/how-81k-people-really-feel-about" target="_blank">How 81K People Really Feel About AI</a></div>
-        <div class="card-meta"><span class="tag hot">Hot</span> The Rundown AI</div>
-        <div class="card-summary">A survey of 81,000 users reveals surprising candor about AI adoption: widespread use for productivity but persistent skepticism about reliability, creativity, and job impact.</div>
-      </div>
-      <div class="top-card">
-        <div class="card-title"><a href="https://openai.com/blog/openai-acquires-astral" target="_blank">OpenAI Acquires Astral (uv &amp; ruff)</a></div>
-        <div class="card-meta"><span class="tag new">New</span> Simon Willison · TLDR AI</div>
-        <div class="card-summary">OpenAI acquires Astral, creators of the blazing-fast Python package manager uv and linter ruff — signaling deeper investment in the Python developer tooling ecosystem.</div>
-      </div>
-      <div class="top-card">
-        <div class="card-title"><a href="https://techcrunch.com/2026/03/20/uber-rivian-robotaxi/" target="_blank">Uber &amp; Rivian Announce Robotaxi Partnership</a></div>
-        <div class="card-meta"><span class="tag hot">Hot</span> The Rundown Tech · AI Business</div>
-        <div class="card-summary">Uber and Rivian partner to deploy electric autonomous ride-hailing vehicles, combining Rivian's R2-based robotaxi hardware with Uber's platform and demand network.</div>
-      </div>
-      <div class="top-card">
-        <div class="card-title"><a href="https://blogs.nvidia.com/blog/2026/03/20/nvidia-gtc-2026-top-trends/" target="_blank">NVIDIA GTC 2026: Top 4 AI Trends</a></div>
-        <div class="card-meta"><span class="tag new">New</span> The Deep View</div>
-        <div class="card-summary">GTC 2026 highlighted physical AI &amp; robotics breakthroughs, continued infrastructure scaling, enterprise AI deployment maturity, and the rise of fully agentic AI frameworks as the defining trends of 2026.</div>
-      </div>
-      <div class="top-card">
-        <div class="card-title"><a href="https://techcrunch.com/2026/03/20/trump-ai-executive-framework/" target="_blank">Trump Signs AI Executive Framework Order</a></div>
-        <div class="card-meta"><span class="tag hot">Hot</span> AI Business</div>
-        <div class="card-summary">The Trump administration signed an executive framework aimed at boosting US AI competitiveness, reducing regulatory friction for AI deployment, and prioritizing national AI infrastructure investment.</div>
-      </div>
-    </div>
+  <!-- ==================== EMAIL NEWSLETTERS ==================== -->
+  <div class="section-header">
+    <span class="icon">📬</span>
+    <h2>Email Newsletters</h2>
+    <span class="count">5 items</span>
   </div>
 
-  <!-- AI INDUSTRY NEWS -->
-  <div class="section">
-    <div class="section-header">
-      <span class="section-icon">🏭</span>
-      <span class="section-title">AI Industry &amp; Products</span>
-      <span class="section-count">8 items</span>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://marktechpost.com/2026/03/20/nvidia-nemotron-cascade-2/" target="_blank">NVIDIA Releases Nemotron-Cascade 2</a></div>
-      <div class="card-meta"><span class="tag new">New</span> MarkTechPost</div>
-      <div class="card-summary">NVIDIA's Nemotron-Cascade 2 uses an efficient cascade architecture to deliver frontier-level reasoning with significantly reduced compute cost, targeting enterprise and agentic workloads.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://ollama.com/blog/nemoclaw" target="_blank">Ollama + NVIDIA NemoClaw: Secure Agentic Coding</a></div>
-      <div class="card-meta"><span class="tag new">New</span> Newsletter · The Tech Buzz</div>
-      <div class="card-summary">Ollama partners with NVIDIA to bring NemoClaw to local inference, enabling secure, sandboxed agentic coding workflows — now with native Docker integration for containerized AI agents.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://cursor.sh/blog/composer-2" target="_blank">Cursor Composer 2 Launches with Deep Multi-File Editing</a></div>
-      <div class="card-meta"><span class="tag new">New</span> TLDR AI</div>
-      <div class="card-summary">Cursor's Composer 2 brings dramatically improved multi-file reasoning and code generation, strengthening its position as the leading AI-native code editor against VS Code Copilot and Windsurf.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://www.perplexity.ai/health" target="_blank">Perplexity Launches Health Assistant</a></div>
-      <div class="card-meta">TLDR AI</div>
-      <div class="card-summary">Perplexity AI expands into healthcare with a dedicated health assistant that synthesizes medical research, provides evidence-based answers, and cites clinical sources — positioning as a WebMD alternative for the AI era.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://blog.google/products/gemini/personal-assistant/" target="_blank">Google Gemini Becomes Unified Personal AI Assistant</a></div>
-      <div class="card-meta">The Tech Buzz</div>
-      <div class="card-summary">Google is rolling out deep Gemini integration across Gmail, Docs, Calendar, and Android, evolving it from a chatbot into a persistent personal assistant with full context across your Google ecosystem.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://marktechpost.com/2026/03/20/clawteam-multi-agent/" target="_blank">ClawTeam: A New Multi-Agent LLM Collaboration Framework</a></div>
-      <div class="card-meta">MarkTechPost</div>
-      <div class="card-summary">ClawTeam introduces a structured framework for orchestrating multiple LLM agents with defined roles, communication protocols, and task delegation — enabling more reliable multi-step agentic pipelines.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://simonwillison.net/2026/Mar/20/llm-flash/" target="_blank">Running LLMs in Browser Flash Memory</a></div>
-      <div class="card-meta">Simon Willison's Weblog</div>
-      <div class="card-summary">Simon Willison explores techniques for running LLM inference using browser-side Flash storage, enabling larger context windows and faster inference in client-side AI applications without server roundtrips.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://simonwillison.net/2026/Mar/20/snowflake-cortex-security/" target="_blank">Snowflake Cortex Security Issue Disclosed</a></div>
-      <div class="card-meta">Simon Willison's Weblog</div>
-      <div class="card-summary">A prompt injection vulnerability was disclosed in Snowflake Cortex Analyst, where malicious content in enterprise data could manipulate the AI's SQL generation and exfiltrate query results.</div>
-    </div>
+  <div class="card">
+    <div class="via">Via: The Deep View</div>
+    <h3><a href="https://archive.thedeepview.com/p/wispr-flow-preps-voice-ai-s-next-breakthrough">Wispr Flow Preps Voice AI's Next Breakthrough</a></h3>
+    <p>Wispr Flow, a voice-to-text AI tool, has grown to serve over 270 Fortune 500 companies by using screen context and conversation history to resolve voice recognition ambiguities — achieving 52% faster response times and $3.08M in annual savings at Clay. CEO Tanay Kothari pivoted from a neural wearable to a software-first approach after discovering the market wasn't ready for two simultaneous behavior changes. The company is now moving into "voice-to-action" capabilities that trigger real workflows like scheduling meetings and drafting follow-ups, while training its own large-scale voice models.</p>
+    <div class="tag-row"><span class="tag tag-voice">Voice AI</span><span class="tag tag-agents">Agentic</span></div>
   </div>
 
-  <!-- ML & RESEARCH COMMUNITY -->
-  <div class="section">
-    <div class="section-header">
-      <span class="section-icon">🤗</span>
-      <span class="section-title">ML Community &amp; Open Source</span>
-      <span class="section-count">4 items</span>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://huggingface.co/blog/domain-embedding-model" target="_blank">New Domain-Specific Embedding Model on Hugging Face</a></div>
-      <div class="card-meta">Hugging Face Blog</div>
-      <div class="card-summary">A new embedding model optimized for domain-specific retrieval tasks outperforms general-purpose embeddings on enterprise document search, code retrieval, and scientific literature benchmarks.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://huggingface.co/blog/granite-libraries" target="_blank">Granite Libraries Update: Enterprise AI Building Blocks</a></div>
-      <div class="card-meta">Hugging Face Blog</div>
-      <div class="card-summary">IBM's Granite library family receives significant updates with new tools for enterprise AI pipelines, adding improved data processing, guardrails, and evaluation capabilities for production deployments.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://towardsdatascience.com/mathematics-of-ai-agents" target="_blank">The Mathematics Behind AI Agent Decision-Making</a></div>
-      <div class="card-meta">Towards Data Science</div>
-      <div class="card-summary">A deep-dive into the mathematical foundations of agentic AI — covering Markov decision processes, reward modeling, and planning algorithms that underpin modern LLM-based agents.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://towardsdatascience.com/measuring-ai-value" target="_blank">Frameworks for Measuring Real AI Business Value</a></div>
-      <div class="card-meta">Towards Data Science</div>
-      <div class="card-summary">As AI deployments mature, this piece proposes concrete measurement frameworks — beyond hype metrics — for quantifying AI's actual ROI in cost savings, quality improvements, and time-to-decision.</div>
-    </div>
+  <div class="card">
+    <div class="via">Via: Latent.Space</div>
+    <h3><a href="https://www.latent.space/p/dreamer">Dreamer: The Personal Agent OS — Now Out of Stealth</a></h3>
+    <p>Dreamer (formerly /dev/agents), founded by ex-Stripe CTO David Singleton and ex-Meta VP Hugo Barra, launches as a consumer-first platform for discovering, building, and deploying AI agents. At its core is a customizable personal "Sidekick" agent — an "agent that builds agents" — with a full-stack developer experience including their own SDK, logging, database, prompt management, and serverless functions. Dreamer is running a $10,000 cash prize competition for best tool builders and opening a Builders in Residence program.</p>
+    <div class="tag-row"><span class="tag tag-agents">Agents</span><span class="tag tag-model">Platform</span></div>
   </div>
 
-  <!-- ROBOTICS -->
-  <div class="section">
-    <div class="section-header">
-      <span class="section-icon">🤖</span>
-      <span class="section-title">Robotics &amp; Hardware</span>
-      <span class="section-count">3 items</span>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://www.therobotreport.com/building-tomorrow-how-bedrock-robotics-changing-construction-industry/" target="_blank">Bedrock Robotics: AI for the Construction Industry</a></div>
-      <div class="card-meta"><span class="tag robotics">Robotics</span> The Robot Report · GTC 2026</div>
-      <div class="card-summary">Bedrock Robotics co-founder Boris Sofman discusses how the company is deploying autonomous AI systems for construction site operations, with a GTC 2026 recap highlighting the broader physical AI wave.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://www.therobotreport.com/roboforce-raises-52m-to-commercialize-its-titan-robot/" target="_blank">RoboForce Raises $52M to Scale Titan Robot</a></div>
-      <div class="card-meta"><span class="tag robotics">Robotics</span> The Robot Report</div>
-      <div class="card-summary">RoboForce secures $52M in funding to commercialize its Titan robot for demanding outdoor applications including solar farm maintenance, shipping logistics, mining, and manufacturing.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title"><a href="https://spectrum.ieee.org/autonomous-smart-wheelchair" target="_blank">AI Aims for Autonomous Wheelchair Navigation</a></div>
-      <div class="card-meta"><span class="tag robotics">Robotics</span> IEEE Spectrum</div>
-      <div class="card-summary">Researchers are testing AI-powered smart wheelchairs that can autonomously navigate tight indoor spaces, potentially matching — or exceeding — the spatial navigation skills of experienced wheelchair users with severe disabilities.</div>
-    </div>
+  <div class="card">
+    <div class="via">Via: Ollama</div>
+    <h3><a href="https://ollama.com/library/nemotron-3-super">Ollama + NVIDIA: Safer, Faster AI with NemoClaw and Nemotron 3 Super</a></h3>
+    <p>Ollama and NVIDIA have partnered to offer Nemotron 3 Super, an open model ranking #1 on PinchBench for OpenClaw effectiveness with 5x more throughput than previous versions — available free via Ollama's cloud. NemoClaw now ships with built-in Ollama support, providing privacy and security guardrails for AI assistant deployments. NVIDIA's OpenShell extends these protections to other agents including Claude Code, Codex, and OpenCode.</p>
+    <div class="tag-row"><span class="tag tag-model">Open Model</span><span class="tag tag-safety">Safety</span><span class="tag tag-agents">Agents</span></div>
   </div>
 
-  <div class="divider"></div>
-
-  <!-- ARXIV RESEARCH PAPERS -->
-  <div class="section">
-    <div class="section-header">
-      <span class="section-icon">📄</span>
-      <span class="section-title">Latest Research Papers</span>
-      <span class="section-count">cs.AI · 10 papers</span>
-    </div>
-
-    <div class="paper-card">
-      <span class="paper-num">1</span>
-      <div class="paper-content">
-        <div class="card-title"><a href="https://arxiv.org/abs/2603.18073" target="_blank">Continually Self-Improving AI</a></div>
-        <div class="card-summary">Proposes a framework enabling AI systems to continuously improve beyond human-imposed constraints by fundamentally restructuring weights, learning from post-deployment experience, and designing autonomous training procedures.</div>
-      </div>
-    </div>
-
-    <div class="paper-card">
-      <span class="paper-num">2</span>
-      <div class="paper-content">
-        <div class="card-title"><a href="https://arxiv.org/abs/2603.18272" target="_blank">Retrieval-Augmented LLM Agents: Learning to Learn from Experience</a></div>
-        <div class="card-summary">Presents retrieval-augmented framework enabling LLM agents to learn from past interactions and improve performance on future tasks by retrieving relevant prior experience.</div>
-      </div>
-    </div>
-
-    <div class="paper-card">
-      <span class="paper-num">3</span>
-      <div class="paper-content">
-        <div class="card-title"><a href="https://arxiv.org/abs/2603.18197" target="_blank">Access Controlled Website Interaction for Agentic AI with Delegated Critical Tasks</a></div>
-        <div class="card-summary">Proposes a security framework for agentic AI systems performing web interactions on behalf of users, enabling controlled delegation of critical tasks while maintaining proper access controls.</div>
-      </div>
-    </div>
-
-    <div class="paper-card">
-      <span class="paper-num">4</span>
-      <div class="paper-content">
-        <div class="card-title"><a href="https://arxiv.org/abs/2603.18122" target="_blank">Don't Vibe Code, Do Skele-Code: No-Code Notebooks for Building Agentic Workflows</a></div>
-        <div class="card-summary">Introduces Skele-Code, a no-code notebook interface enabling domain experts (not just programmers) to build agentic AI workflows interactively at lower cost than traditional "vibe coding" approaches.</div>
-      </div>
-    </div>
-
-    <div class="paper-card">
-      <span class="paper-num">5</span>
-      <div class="paper-content">
-        <div class="card-title"><a href="https://arxiv.org/abs/2603.18048" target="_blank">DEAF: Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models</a></div>
-        <div class="card-summary">Introduces a benchmark with 2,700 conflict stimuli to test whether Audio MLLMs genuinely process acoustic signals or rely on text-based semantic inference — a critical distinction for real-world reliability.</div>
-      </div>
-    </div>
-
-    <div class="paper-card">
-      <span class="paper-num">6</span>
-      <div class="paper-content">
-        <div class="card-title"><a href="https://arxiv.org/abs/2603.18085" target="_blank">Multi-Trait Subspace Steering to Reveal the Dark Side of Human-AI Interaction</a></div>
-        <div class="card-summary">Uses subspace steering techniques to simultaneously manipulate multiple dark personality traits in LLMs, revealing potential risks and failure modes in human-AI interaction dynamics.</div>
-      </div>
-    </div>
-
-    <div class="paper-card">
-      <span class="paper-num">7</span>
-      <div class="paper-content">
-        <div class="card-title"><a href="https://arxiv.org/abs/2603.18189" target="_blank">TeachingCoach: A Fine-Tuned Scaffolding Chatbot for Instructional Guidance</a></div>
-        <div class="card-summary">Presents a fine-tuned LLM-based chatbot that delivers scaffolded instructional coaching to educators, helping teachers improve classroom practices through adaptive AI guidance.</div>
-      </div>
-    </div>
-
-    <div class="paper-card">
-      <span class="paper-num">8</span>
-      <div class="paper-content">
-        <div class="card-title"><a href="https://arxiv.org/abs/2603.18166" target="_blank">Efficient Dense Crowd Trajectory Prediction Via Dynamic Clustering</a></div>
-        <div class="card-summary">Proposes a dynamic clustering approach to efficiently predict trajectories in dense crowds, addressing scalability challenges critical for pedestrian-aware autonomous systems.</div>
-      </div>
-    </div>
-
-    <div class="paper-card">
-      <span class="paper-num">9</span>
-      <div class="paper-content">
-        <div class="card-title"><a href="https://arxiv.org/abs/2603.18201" target="_blank">Computationally Efficient Learning of AI System Reliability Considering Error Propagation</a></div>
-        <div class="card-summary">Develops efficient methods for assessing reliability of interconnected AI systems while accounting for how errors propagate through component chains — key for safe deployment of complex AI pipelines.</div>
-      </div>
-    </div>
-
-    <div class="paper-card">
-      <span class="paper-num">10</span>
-      <div class="paper-content">
-        <div class="card-title"><a href="https://arxiv.org/abs/2603.18104" target="_blank">Adaptive Domain Models: Bayesian Evolution and Principled Training for Neuromorphic AI</a></div>
-        <div class="card-summary">Combines Bayesian evolution and warm rotation techniques to enable principled training of geometric and neuromorphic AI systems with adaptive domain modeling capabilities.</div>
-      </div>
-    </div>
+  <div class="card">
+    <div class="via">Via: The Rundown Tech</div>
+    <h3><a href="https://tech.therundown.ai/p/amazon-secret-phone-project">Amazon's Secret AI Phone + Major AI Infrastructure Deals</a></h3>
+    <p>Amazon is developing a smartphone codenamed "Transformer" — led by internal group ZeroOne — designed to integrate deeply with Alexa as an always-on AI conduit to its services ecosystem. Uber is making a $1.25B investment in Rivian's R2 platform to deploy up to 50K autonomous robotaxis across ~25 cities by 2031, equipped with Rivian's in-house RAP1 chip capable of 1,600 TOPS of AI compute. Blue Origin is seeking regulatory approval to launch nearly 52K AI-capable satellites for space-based data center infrastructure, and HSBC is reportedly cutting up to 20K jobs as AI reshapes middle- and back-office operations.</p>
+    <div class="tag-row"><span class="tag tag-robotics">Robotics</span><span class="tag tag-model">AI Hardware</span><span class="tag tag-policy">Industry</span></div>
   </div>
 
-  <!-- NEWSLETTER HIGHLIGHTS -->
-  <div class="section">
-    <div class="section-header">
-      <span class="section-icon">📬</span>
-      <span class="section-title">Newsletter Highlights</span>
-      <span class="section-count">6 newsletters</span>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Latent.Space: "Dreamer" — The Path to Continuously Self-Improving AI</div>
-      <div class="card-meta">Latent.Space</div>
-      <div class="card-summary">The Latent.Space "Dreamer" issue explores how AI systems might learn continuously during deployment — analogous to how humans consolidate learning during sleep — arguing this is the key unlock for true AGI-level autonomy.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">Ollama + NemoClaw: Secure Local AI Agents with Docker</div>
-      <div class="card-meta">Newsletter</div>
-      <div class="card-summary">Ollama's newsletter details its NVIDIA NemoClaw integration — running secure, containerized AI coding agents locally via Docker, giving developers private agentic workflows without cloud exposure.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">TLDR AI: Cursor 2, OpenAI/Astral, Perplexity Health</div>
-      <div class="card-meta">TLDR AI</div>
-      <div class="card-summary">Today's TLDR AI covers three big announcements: Cursor Composer 2's multi-file editing leap, OpenAI's acquisition of Astral (uv + ruff Python tools), and Perplexity's launch of a health-focused AI assistant.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">The Deep View: GTC 2026's Four Defining AI Trends</div>
-      <div class="card-meta">The Deep View</div>
-      <div class="card-summary">The Deep View's GTC 2026 recap identifies physical AI/robotics, AI infrastructure at scale, enterprise AI maturity, and fully agentic AI as the four trends that will define the next 18 months of AI development.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">The Rundown Tech: Uber × Rivian Robotaxi Partnership</div>
-      <div class="card-meta">The Rundown Tech</div>
-      <div class="card-summary">Uber and Rivian's robotaxi partnership enters a new phase, with autonomous electric vehicles set to join Uber's network as Rivian deploys its custom-built R2-based AV platform alongside human drivers.</div>
-    </div>
-
-    <div class="card">
-      <div class="card-title">The Tech Buzz: NemoClaw + Docker, Gemini as Personal AI</div>
-      <div class="card-meta">The Tech Buzz</div>
-      <div class="card-summary">The Tech Buzz highlights two platform plays: NVIDIA's NemoClaw in Docker for secure agent sandboxing, and Google's Gemini deepening into a unified personal AI across Gmail, Docs, and Android.</div>
-    </div>
+  <div class="card">
+    <div class="via">Via: The Tech Buzz</div>
+    <h3><a href="https://newsletter.techbuzz.ai/p/beyond-tech-7432">Google Gemini Goes Personal + AI Breakthroughs in Healthcare &amp; Security</a></h3>
+    <p>Google's Gemini Personal Intelligence expanded to all US users, providing contextual suggestions by analyzing emails, calendar, and photos. NanoClaw and Docker are building sandboxed secure AI agent environments, while Nvidia and JFrog fortified the OpenClaw framework with new security layers. On the healthcare front, MIT AI models predict heart failure decline from ECG data, a Mass General brain-computer interface enables paralyzed patients to type ~90 characters per minute, and AlphaFold-style AI is accelerating peptide drug discovery.</p>
+    <div class="tag-row"><span class="tag tag-agents">Agents</span><span class="tag tag-safety">Safety</span><span class="tag tag-healthcare">Healthcare</span></div>
   </div>
 
-  <div class="divider"></div>
-
-  <!-- PROBLEM FEEDS -->
-  <div class="section">
-    <div class="section-header">
-      <span class="section-icon">⚠️</span>
-      <span class="section-title">Unavailable Sources</span>
-    </div>
-    <div class="problem-card">
-      <span class="problem-icon">🔒</span>
-      <span><strong>Google AI Blog</strong> — Feed blocked by privacy extension (cookie/query string restriction)</span>
-    </div>
-    <div class="problem-card">
-      <span class="problem-icon">🔒</span>
-      <span><strong>VentureBeat AI</strong> — Feed blocked by privacy extension + TrustedHTML restriction</span>
-    </div>
-    <div class="problem-card">
-      <span class="problem-icon">🔒</span>
-      <span><strong>The Guardian (AI)</strong> — Feed blocked by privacy extension (cookie/query string restriction)</span>
-    </div>
+  <!-- ==================== BLOG POSTS & ARTICLES ==================== -->
+  <div class="section-header">
+    <span class="icon">📰</span>
+    <h2>Blog Posts &amp; Articles</h2>
+    <span class="count">24 items</span>
   </div>
 
-</div>
+  <!-- Policy & Industry -->
+  <div class="card">
+    <div class="via">Via: AI Business</div>
+    <h3><a href="https://aibusiness.com/ai-policy/trump-administration-releases-ai-legislative-framework">Trump Administration Releases AI Legislative Framework</a></h3>
+    <p>The Trump administration released a legislative framework for AI regulation aimed at creating unified national standards at the federal level, seeking to avoid a fragmented state-by-state governance landscape. The approach faces potential resistance from states that have already established their own AI laws and regulations.</p>
+    <div class="tag-row"><span class="tag tag-policy">Policy</span></div>
+  </div>
 
-<div class="footer">
-  Generated by <strong>AI Radar</strong> · <a href="https://github.com/keithfry/web-pages">keithfry/web-pages</a> · Saturday, March 21, 2026
-</div>
+  <div class="card">
+    <div class="via">Via: Wired</div>
+    <h3><a href="https://www.wired.com/story/how-us-military-plans-to-spend-141-billion-on-ai/">How the US Military Plans to Spend $141 Billion on AI</a></h3>
+    <p>The US Department of Defense has announced a $141 billion investment plan for AI technologies to modernize military operations and strengthen defense capabilities. The substantial funding commitment underscores the strategic importance of AI in future military competition.</p>
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-safety">National Security</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: Wired</div>
+    <h3><a href="https://www.wired.com/story/us-military-ai-chinese-companies/">Can the US Military Trust AI Systems Developed by Chinese Companies?</a></h3>
+    <p>Security experts warn that AI developers could potentially manipulate models during military operations, raising critical questions about AI systems sourced from foreign adversaries. Company executives counter that such manipulation is technically impossible, while the debate highlights deepening geopolitical tensions around AI supply chains.</p>
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-safety">National Security</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: Wired</div>
+    <h3><a href="https://www.wired.com/story/ai-model-transparency-government-initiative/">The US Government Wants to Know Who Is Actually Behind AI Models</a></h3>
+    <p>The US government is launching a transparency initiative to clarify ownership and accountability for AI models and their safety practices. The effort aims to establish clearer responsibility frameworks as AI systems become increasingly embedded in critical applications.</p>
+    <div class="tag-row"><span class="tag tag-policy">Policy</span><span class="tag tag-safety">Safety</span></div>
+  </div>
+
+  <!-- AI Models & Research -->
+  <div class="card">
+    <div class="via">Via: VentureBeat</div>
+    <h3><a href="https://venturebeat.com/technology/three-ways-ai-is-learning-to-understand-the-physical-world">Three Ways AI Is Learning to Understand the Physical World</a></h3>
+    <p>Large language models are hitting fundamental limits in domains requiring physical world understanding — robotics, autonomous driving, manufacturing — prompting a wave of investment in "world models." AMI Labs raised a $1.03B seed round and World Labs secured $1B to pursue AI with physical causality grounding, moving beyond next-token prediction to systems that can predict physical consequences.</p>
+    <div class="tag-row"><span class="tag tag-model">World Models</span><span class="tag tag-robotics">Robotics</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: VentureBeat</div>
+    <h3><a href="https://venturebeat.com/ai/scale-ai-launches-voice-showdown-the-first-real-world-benchmark-for-voice-ai">Scale AI Launches Voice Showdown: The First Real-World Benchmark for Voice AI</a></h3>
+    <p>Scale AI introduced Voice Showdown, a real-world benchmark for evaluating voice AI models using natural conversational speech rather than synthetic data and scripted test sets. The benchmark addresses a critical evaluation gap as every major AI lab — OpenAI, Google DeepMind, Anthropic, xAI — races to ship natural, real-time voice conversation models.</p>
+    <div class="tag-row"><span class="tag tag-voice">Voice AI</span><span class="tag tag-model">Benchmarks</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: MarkTechPost</div>
+    <h3><a href="https://www.marktechpost.com/2026/03/20/nvidia-releases-nemotron-cascade-2-an-open-30b-moe-with-3b-active-parameters-delivering-better-reasoning-and-strong-agentic-capabilities/">NVIDIA Releases Nemotron-Cascade 2: Open 30B MoE with 3B Active Parameters</a></h3>
+    <p>NVIDIA released Nemotron-Cascade 2, an open-weight 30B Mixture-of-Experts model with only 3B activated parameters, designed to maximize "intelligence density" with advanced reasoning at a fraction of frontier model scale. It is the second open-weight LLM to achieve Gold Medal-level performance on the 2025 International Mathematical Olympiad, showing strong agentic capabilities.</p>
+    <div class="tag-row"><span class="tag tag-model">Open Model</span><span class="tag tag-research">Reasoning</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: MarkTechPost</div>
+    <h3><a href="https://www.marktechpost.com/2026/03/20/a-coding-implementation-showcasing-clawteams-multi-agent-swarm-orchestration-with-openai-function-calling/">ClawTeam: Multi-Agent Swarm Orchestration with OpenAI Function Calling</a></h3>
+    <p>ClawTeam is a multi-agent swarm orchestration framework that enables teams of specialized AI agents to communicate, delegate tasks, and collaborate on complex problems using OpenAI function calling. The framework is designed to simplify building multi-agent systems without requiring complex infrastructure setup.</p>
+    <div class="tag-row"><span class="tag tag-agents">Multi-Agent</span><span class="tag tag-model">Frameworks</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: Wired</div>
+    <h3><a href="https://www.wired.com/story/gamers-hate-nvidia-dlss-5-developers-arent-crazy-about-it-either/">Gamers Hate Nvidia's DLSS 5. Developers Aren't Crazy About It, Either</a></h3>
+    <p>Nvidia's DLSS 5 AI upscaling technology for gaming has drawn negative reception from both gamers and developers who find the AI-generated visuals uncanny and off-putting. Despite current skepticism, the technology could become industry default within a few years as it continues to mature.</p>
+    <div class="tag-row"><span class="tag tag-model">AI Graphics</span></div>
+  </div>
+
+  <!-- AI Safety & Ethics -->
+  <div class="card">
+    <div class="via">Via: Wired</div>
+    <h3><a href="https://www.wired.com/story/groks-white-genocide-responses-expose-a-basic-ai-problem/">Grok's 'White Genocide' Responses Expose a Basic AI Problem</a></h3>
+    <p>xAI's Grok chatbot generated harmful responses about "white genocide," exposing fundamental alignment and safety failures. The incident underscores the persistent challenge of preventing language models from amplifying fringe ideologies and misinformation despite advances in RLHF and safety training.</p>
+    <div class="tag-row"><span class="tag tag-safety">AI Safety</span><span class="tag tag-policy">Alignment</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: The Guardian</div>
+    <h3><a href="https://www.theguardian.com/technology/2026/mar/20/mediahuis-suspends-senior-journalist-over-ai-generated-quotes">Senior European Journalist Suspended Over AI-Generated Quotes</a></h3>
+    <p>Mediahuis suspended senior journalist Peter Vandermeersch after he admitted using AI to "wrongly put words into people's mouths," describing it as falling into the "trap of hallucinations." The incident highlights serious risks of integrating AI into journalistic workflows without proper verification protocols.</p>
+    <div class="tag-row"><span class="tag tag-safety">AI Ethics</span><span class="tag tag-policy">Media</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: The Guardian</div>
+    <h3><a href="https://www.theguardian.com/books/2026/mar/20/hachette-horror-novel-shy-girl-suspected-ai-use-mia-ballard">Hachette Pulls Horror Novel After Suspected AI Use</a></h3>
+    <p>Publisher Hachette cancelled the US release and withdrew the UK edition of <em>Shy Girl</em> by Mia Ballard after the author was unable to explain textual inconsistencies suspected to be caused by AI generation. The case is becoming a landmark moment in publishing's ongoing struggle with AI-generated content disclosure.</p>
+    <div class="tag-row"><span class="tag tag-policy">Media</span><span class="tag tag-safety">AI Ethics</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: The Guardian</div>
+    <h3><a href="https://www.theguardian.com/technology/2026/mar/21/ai-trainers-identity-selling-data-annotation">Thousands Are Selling Their Identities to Train AI — But at What Cost?</a></h3>
+    <p>People are being paid to record their voices, faces, and personal data for AI training, raising significant concerns about whether participants truly understand what they're consenting to. The practice highlights growing ethical questions around data annotation markets and biometric privacy.</p>
+    <div class="tag-row"><span class="tag tag-safety">AI Ethics</span><span class="tag tag-policy">Privacy</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: The Guardian</div>
+    <h3><a href="https://www.theguardian.com/technology/2026/mar/21/uk-government-ai-partner-trials-delayed">UK Government Has Yet to Run Trials with Its Key AI Partner, Eight Months On</a></h3>
+    <p>The UK government has still not conducted trials with its flagship AI partnership — announced eight months ago as a solution to "address society's greatest challenges" — raising questions about the gap between government AI rhetoric and execution. The delays have prompted calls for greater accountability in public sector AI deployments.</p>
+    <div class="tag-row"><span class="tag tag-policy">Policy</span></div>
+  </div>
+
+  <!-- OpenAI & Healthcare -->
+  <div class="card">
+    <div class="via">Via: Wired</div>
+    <h3><a href="https://www.wired.com/story/openai-health-data-sharing-medical/">OpenAI Is Testing a Way for People to Share Their Sensitive Medical Data with AI</a></h3>
+    <p>OpenAI is piloting a program that would enable individuals to share sensitive medical information with AI systems for personalized health insights and research purposes. The initiative represents an emerging AI healthcare use case while raising significant questions around data privacy, security, and patient consent.</p>
+    <div class="tag-row"><span class="tag tag-healthcare">Healthcare</span><span class="tag tag-safety">Privacy</span></div>
+  </div>
+
+  <!-- Developer Tools & ML -->
+  <div class="card">
+    <div class="via">Via: Simon Willison's Weblog</div>
+    <h3><a href="https://simonwillison.net/2026/Mar/20/turbo-pascal/#atom-everything">Turbo Pascal 3.02A, Deconstructed Using Claude</a></h3>
+    <p>Simon Willison used Claude to reverse-engineer and decompile the 1985 Turbo Pascal executable (just 39,731 bytes, including a full IDE and compiler), producing an interactive artifact showing how the classic program worked. The experiment demonstrates practical applications of LLMs in software archaeology and binary code understanding.</p>
+    <div class="tag-row"><span class="tag tag-model">LLM Capabilities</span><span class="tag tag-research">Developer Tools</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: Towards Data Science</div>
+    <h3><a href="https://towardsdatascience.com/fine-tuning-vs-rag-vs-in-context-learning-why-combine">Fine-tuning vs. RAG vs. In-Context Learning — and Why You Should Combine Them</a></h3>
+    <p>A comprehensive comparison of fine-tuning, retrieval-augmented generation (RAG), and in-context learning for LLMs, analyzing when each approach is most suitable. The article makes the case that combining these methods yields superior results, with practical guidance on orchestrating them for different use cases.</p>
+    <div class="tag-row"><span class="tag tag-model">LLM Techniques</span><span class="tag tag-research">RAG</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: Hugging Face Blog</div>
+    <h3><a href="https://huggingface.co/blog/nvidia/domain-specific-embedding-finetune">Build a Domain-Specific Embedding Model in Under a Day</a></h3>
+    <p>NVIDIA provides a practical guide for fine-tuning embedding models for specific domains in under 24 hours using efficient techniques. The approach demonstrates how organizations can customize foundation models for specialized applications without requiring massive compute resources.</p>
+    <div class="tag-row"><span class="tag tag-model">Embeddings</span><span class="tag tag-research">Fine-tuning</span></div>
+  </div>
+
+  <div class="card">
+    <div class="via">Via: Hugging Face Blog</div>
+    <h3><a href="https://huggingface.co/blog/ibm-granite/granite-libraries">What's New in Mellea 0.4.0 + IBM Granite Libraries Release</a></h3>
+    <p>IBM released updates to their Granite AI libraries alongside the Mellea 0.4.0 toolkit, designed for enterprise AI development and deployment. These releases add new capabilities for building and deploying production AI systems in regulated enterprise environments.</p>
+    <div class="tag-row"><span class="tag tag-model">Enterprise AI</span><span class="tag tag-research">Open Source</span></div>
+  </div>
+
+  <!-- Robotics -->
+  <div class="card robotics">
+    <div class="via">Via: The Robot Report</div>
+    <h3><a href="https://www.therobotreport.com/roboforce-raises-52m-to-commercialize-its-titan-robot/">RoboForce Raises $52M to Commercialize Its Titan Robot</a></h3>
+    <p>RoboForce secured $52 million to commercialize its Titan robot, targeting demanding outdoor applications across solar, shipping, mining, and manufacturing sectors. The funding accelerates the company's push to deploy industrial-grade robots in unstructured outdoor environments.</p>
+    <div class="tag-row"><span class="tag tag-robotics">Robotics</span><span class="tag tag-policy">Funding</span></div>
+  </div>
+
+  <div class="card robotics">
+    <div class="via">Via: The Robot Report</div>
+    <h3><a href="https://www.therobotreport.com/bedrock-robotics-construction-industry/">Bedrock Robotics: Changing the Construction Industry</a></h3>
+    <p>Bedrock Robotics CEO Boris Sofman discusses how their autonomous robots are transforming construction — one of the most labor-intensive and dangerous industries. The episode also includes a recap of key robotics announcements from NVIDIA's GTC 2026 conference.</p>
+    <div class="tag-row"><span class="tag tag-robotics">Robotics</span><span class="tag tag-policy">Industry</span></div>
+  </div>
+
+  <div class="card robotics">
+    <div class="via">Via: The Robot Report</div>
+    <h3><a href="https://www.therobotreport.com/great-robot-race-how-companies-balance-speed-market-compliance-u-s/">The Great Robot Race: Balancing Speed to Market and US Compliance</a></h3>
+    <p>Analysis of how robotics companies navigate the growing tension between rapid commercialization and US regulatory compliance requirements. The piece examines strategic tradeoffs as the industry accelerates deployment across healthcare, manufacturing, and public spaces.</p>
+    <div class="tag-row"><span class="tag tag-robotics">Robotics</span><span class="tag tag-policy">Regulation</span></div>
+  </div>
+
+  <div class="card robotics">
+    <div class="via">Via: IEEE Spectrum</div>
+    <h3><a href="https://spectrum.ieee.org/autonomous-smart-wheelchair">AI Aims for Autonomous Wheelchair Navigation</a></h3>
+    <p>Researchers are developing AI-powered autonomous navigation systems for wheelchairs that could enable users with severe mobility limitations to move independently. The work represents a meaningful intersection of AI, robotics, and assistive technology with direct quality-of-life impact.</p>
+    <div class="tag-row"><span class="tag tag-robotics">Robotics</span><span class="tag tag-healthcare">Assistive Tech</span></div>
+  </div>
+
+  <!-- ==================== ARXIV RESEARCH PAPERS ==================== -->
+  <div class="section-header">
+    <span class="icon">🔬</span>
+    <h2>Latest Research Papers</h2>
+    <span class="count">10 papers · arXiv cs.AI</span>
+  </div>
+
+  <div class="card arxiv">
+    <div class="via">arXiv · cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2603.18073">Continually Self-Improving AI</a></h3>
+    <p>Proposes a framework enabling AI systems to continually self-improve without human intervention across three dimensions: knowledge acquisition, retrieval augmentation, and iterative problem-solving reflection. Addresses fundamental caps in current LLM-based systems that keep capabilities bounded by their human creators.</p>
+  </div>
+
+  <div class="card arxiv">
+    <div class="via">arXiv · cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2603.15150">Grounding Multimodal LLMs to Embodied Agents with Reinforcement Learning</a></h3>
+    <p>Presents a method for grounding multimodal large language models to physical embodied agents via reinforcement learning, enabling robots to translate high-level visual and language instructions into precise physical actions. Bridges the gap between language understanding and embodied control.</p>
+  </div>
+
+  <div class="card arxiv">
+    <div class="via">arXiv · cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2603.15272">Multi-Agent Debate for Bias Mitigation in LLMs</a></h3>
+    <p>Proposes a multi-agent debate framework where multiple LLM instances debate each other to identify and mitigate biases in their responses, improving fairness metrics across diverse benchmarks.</p>
+  </div>
+
+  <div class="card arxiv">
+    <div class="via">arXiv · cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2603.15381">Formal Verification of Neural Network Controllers for Safety-Critical Systems</a></h3>
+    <p>Develops formal verification methods for neural network controllers in safety-critical systems such as autonomous vehicles and medical devices, providing provable guarantees about system behavior and safety properties.</p>
+  </div>
+
+  <div class="card arxiv">
+    <div class="via">arXiv · cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2603.18048">DEAF: Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models</a></h3>
+    <p>Introduces a benchmark to test whether Audio Multimodal LLMs genuinely process acoustic signals or rely primarily on text-based semantic inference. Addresses a critical evaluation gap despite strong speech benchmark performance in current models.</p>
+  </div>
+
+  <div class="card arxiv">
+    <div class="via">arXiv · cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2603.14897">Instruction-Following Evaluation for LLMs via Coarse-to-Fine Hierarchical Scoring</a></h3>
+    <p>Proposes a coarse-to-fine hierarchical scoring framework that provides more nuanced evaluation of LLM instruction-following capabilities beyond simple pass/fail metrics — critical for real-world deployment.</p>
+  </div>
+
+  <div class="card arxiv">
+    <div class="via">arXiv · cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2603.14921">LLM-BABEVAL: Comparing LLMs and Human Infant Language Acquisition</a></h3>
+    <p>Introduces a benchmark comparing LLM language capabilities to those of human infants at various developmental stages, revealing surprising parallels and key differences in how these two systems acquire language understanding.</p>
+  </div>
+
+  <div class="card arxiv">
+    <div class="via">arXiv · cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2603.14814">RewardSDS: Aligning Score Distillation Sampling via Reward-Weighted Diffusion</a></h3>
+    <p>Improves text-to-3D generation by aligning Score Distillation Sampling with reward models, mitigating artifacts like over-saturation, over-smoothing, and mode-seeking behavior that commonly plague SDS-based approaches.</p>
+  </div>
+
+  <div class="card arxiv">
+    <div class="via">arXiv · cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2603.15439">Emergent Communication in Multi-Agent Systems via Natural Language Grounding</a></h3>
+    <p>Studies how multi-agent systems develop emergent communication protocols when grounded in natural language, finding that language-grounded agents develop more interpretable and transferable strategies than ungrounded systems.</p>
+  </div>
+
+  <div class="card arxiv">
+    <div class="via">arXiv · cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2603.15115">RAPTR: Resampling-based Assessment of Prediction Accuracy for Temporal Reliability</a></h3>
+    <p>Provides statistical tools for detecting and quantifying silent performance degradation of ML models in production due to distribution shift — a common but hard-to-detect failure mode in deployed AI systems.</p>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  AI &amp; Robotics Daily Digest &bull; Generated Saturday, March 21, 2026 &bull; Sources: Gmail Newsletters + RSS Feeds via ai-radar-server
+</footer>
 
 </body>
 </html>
