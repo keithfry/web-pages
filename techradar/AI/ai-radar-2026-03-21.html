@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Radar — March 21, 2026</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #21253a;
+    --accent: #6c63ff;
+    --accent2: #00d4aa;
+    --accent3: #ff6b6b;
+    --text: #e8eaf0;
+    --muted: #8b90a7;
+    --border: #2a2f45;
+    --tag-bg: #1e2235;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; color: #9d97ff; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0f1117 0%, #1a1038 50%, #0f1117 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 40px 20px 32px;
+    text-align: center;
+  }
+  .header-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .header h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #fff 0%, #b8b4ff 50%, #00d4aa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+  .header .date {
+    color: var(--muted);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  .header .tagline {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 6px;
+  }
+
+  /* Layout */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+  }
+
+  /* Section */
+  .section {
+    margin-bottom: 40px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-icon {
+    font-size: 1.1rem;
+  }
+  .section-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent2);
+  }
+  .section-count {
+    margin-left: auto;
+    font-size: 0.7rem;
+    color: var(--muted);
+    background: var(--tag-bg);
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+
+  /* Cards */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    transition: border-color 0.2s;
+  }
+  .card:hover {
+    border-color: var(--accent);
+  }
+  .card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+  .card-title a {
+    color: var(--text);
+  }
+  .card-title a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card-meta {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-bottom: 7px;
+  }
+  .card-summary {
+    font-size: 0.875rem;
+    color: #c0c4d8;
+    line-height: 1.55;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    background: var(--tag-bg);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .tag.hot { border-color: #ff6b6b40; color: #ff6b6b; background: #ff6b6b10; }
+  .tag.new { border-color: #00d4aa40; color: #00d4aa; background: #00d4aa10; }
+  .tag.research { border-color: #6c63ff40; color: #9d97ff; background: #6c63ff10; }
+  .tag.robotics { border-color: #ffa94d40; color: #ffa94d; background: #ffa94d10; }
+
+  /* Top stories grid */
+  .top-stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 600px) {
+    .top-stories { grid-template-columns: 1fr; }
+    .header h1 { font-size: 1.8rem; }
+  }
+  .top-card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    transition: border-color 0.2s;
+  }
+  .top-card:hover { border-color: var(--accent); }
+  .top-card .card-title { font-size: 0.9rem; }
+  .top-card .card-summary { font-size: 0.82rem; }
+
+  /* Research papers */
+  .paper-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 13px 16px;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .paper-num {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: #6c63ff15;
+    border: 1px solid #6c63ff30;
+    border-radius: 4px;
+    padding: 2px 7px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .paper-content .card-title { font-size: 0.88rem; }
+  .paper-content .card-summary { font-size: 0.82rem; }
+
+  /* Problem feeds */
+  .problem-card {
+    background: #1a1215;
+    border: 1px solid #3a2030;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .problem-icon { color: #ff6b6b; font-size: 0.9rem; }
+
+  /* Divider */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 32px 0;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.78rem;
+    padding: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .footer a { color: var(--muted); }
+  .footer strong { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-label">Daily Digest</div>
+  <h1>⚡ AI Radar</h1>
+  <div class="date">Saturday, March 21, 2026</div>
+  <div class="tagline">AI · Machine Learning · Robotics · Research</div>
+</div>
+
+<div class="container">
+
+  <!-- TOP STORIES -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🔥</span>
+      <span class="section-title">Top Stories</span>
+      <span class="section-count">6 stories</span>
+    </div>
+    <div class="top-stories">
+      <div class="top-card">
+        <div class="card-title"><a href="https://www.technologyreview.com/2026/03/20/1115000/openai-automated-ai-researcher/" target="_blank">OpenAI Is Building an Automated AI Researcher</a></div>
+        <div class="card-meta"><span class="tag hot">Hot</span> MIT Technology Review</div>
+        <div class="card-summary">OpenAI is developing an AI system capable of autonomously designing and running experiments, marking a significant push toward self-directed scientific research at machine speed.</div>
+      </div>
+      <div class="top-card">
+        <div class="card-title"><a href="https://www.therundown.ai/p/how-81k-people-really-feel-about" target="_blank">How 81K People Really Feel About AI</a></div>
+        <div class="card-meta"><span class="tag hot">Hot</span> The Rundown AI</div>
+        <div class="card-summary">A survey of 81,000 users reveals surprising candor about AI adoption: widespread use for productivity but persistent skepticism about reliability, creativity, and job impact.</div>
+      </div>
+      <div class="top-card">
+        <div class="card-title"><a href="https://openai.com/blog/openai-acquires-astral" target="_blank">OpenAI Acquires Astral (uv &amp; ruff)</a></div>
+        <div class="card-meta"><span class="tag new">New</span> Simon Willison · TLDR AI</div>
+        <div class="card-summary">OpenAI acquires Astral, creators of the blazing-fast Python package manager uv and linter ruff — signaling deeper investment in the Python developer tooling ecosystem.</div>
+      </div>
+      <div class="top-card">
+        <div class="card-title"><a href="https://techcrunch.com/2026/03/20/uber-rivian-robotaxi/" target="_blank">Uber &amp; Rivian Announce Robotaxi Partnership</a></div>
+        <div class="card-meta"><span class="tag hot">Hot</span> The Rundown Tech · AI Business</div>
+        <div class="card-summary">Uber and Rivian partner to deploy electric autonomous ride-hailing vehicles, combining Rivian's R2-based robotaxi hardware with Uber's platform and demand network.</div>
+      </div>
+      <div class="top-card">
+        <div class="card-title"><a href="https://blogs.nvidia.com/blog/2026/03/20/nvidia-gtc-2026-top-trends/" target="_blank">NVIDIA GTC 2026: Top 4 AI Trends</a></div>
+        <div class="card-meta"><span class="tag new">New</span> The Deep View</div>
+        <div class="card-summary">GTC 2026 highlighted physical AI &amp; robotics breakthroughs, continued infrastructure scaling, enterprise AI deployment maturity, and the rise of fully agentic AI frameworks as the defining trends of 2026.</div>
+      </div>
+      <div class="top-card">
+        <div class="card-title"><a href="https://techcrunch.com/2026/03/20/trump-ai-executive-framework/" target="_blank">Trump Signs AI Executive Framework Order</a></div>
+        <div class="card-meta"><span class="tag hot">Hot</span> AI Business</div>
+        <div class="card-summary">The Trump administration signed an executive framework aimed at boosting US AI competitiveness, reducing regulatory friction for AI deployment, and prioritizing national AI infrastructure investment.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI INDUSTRY NEWS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🏭</span>
+      <span class="section-title">AI Industry &amp; Products</span>
+      <span class="section-count">8 items</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://marktechpost.com/2026/03/20/nvidia-nemotron-cascade-2/" target="_blank">NVIDIA Releases Nemotron-Cascade 2</a></div>
+      <div class="card-meta"><span class="tag new">New</span> MarkTechPost</div>
+      <div class="card-summary">NVIDIA's Nemotron-Cascade 2 uses an efficient cascade architecture to deliver frontier-level reasoning with significantly reduced compute cost, targeting enterprise and agentic workloads.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://ollama.com/blog/nemoclaw" target="_blank">Ollama + NVIDIA NemoClaw: Secure Agentic Coding</a></div>
+      <div class="card-meta"><span class="tag new">New</span> Newsletter · The Tech Buzz</div>
+      <div class="card-summary">Ollama partners with NVIDIA to bring NemoClaw to local inference, enabling secure, sandboxed agentic coding workflows — now with native Docker integration for containerized AI agents.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://cursor.sh/blog/composer-2" target="_blank">Cursor Composer 2 Launches with Deep Multi-File Editing</a></div>
+      <div class="card-meta"><span class="tag new">New</span> TLDR AI</div>
+      <div class="card-summary">Cursor's Composer 2 brings dramatically improved multi-file reasoning and code generation, strengthening its position as the leading AI-native code editor against VS Code Copilot and Windsurf.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://www.perplexity.ai/health" target="_blank">Perplexity Launches Health Assistant</a></div>
+      <div class="card-meta">TLDR AI</div>
+      <div class="card-summary">Perplexity AI expands into healthcare with a dedicated health assistant that synthesizes medical research, provides evidence-based answers, and cites clinical sources — positioning as a WebMD alternative for the AI era.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://blog.google/products/gemini/personal-assistant/" target="_blank">Google Gemini Becomes Unified Personal AI Assistant</a></div>
+      <div class="card-meta">The Tech Buzz</div>
+      <div class="card-summary">Google is rolling out deep Gemini integration across Gmail, Docs, Calendar, and Android, evolving it from a chatbot into a persistent personal assistant with full context across your Google ecosystem.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://marktechpost.com/2026/03/20/clawteam-multi-agent/" target="_blank">ClawTeam: A New Multi-Agent LLM Collaboration Framework</a></div>
+      <div class="card-meta">MarkTechPost</div>
+      <div class="card-summary">ClawTeam introduces a structured framework for orchestrating multiple LLM agents with defined roles, communication protocols, and task delegation — enabling more reliable multi-step agentic pipelines.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://simonwillison.net/2026/Mar/20/llm-flash/" target="_blank">Running LLMs in Browser Flash Memory</a></div>
+      <div class="card-meta">Simon Willison's Weblog</div>
+      <div class="card-summary">Simon Willison explores techniques for running LLM inference using browser-side Flash storage, enabling larger context windows and faster inference in client-side AI applications without server roundtrips.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://simonwillison.net/2026/Mar/20/snowflake-cortex-security/" target="_blank">Snowflake Cortex Security Issue Disclosed</a></div>
+      <div class="card-meta">Simon Willison's Weblog</div>
+      <div class="card-summary">A prompt injection vulnerability was disclosed in Snowflake Cortex Analyst, where malicious content in enterprise data could manipulate the AI's SQL generation and exfiltrate query results.</div>
+    </div>
+  </div>
+
+  <!-- ML & RESEARCH COMMUNITY -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🤗</span>
+      <span class="section-title">ML Community &amp; Open Source</span>
+      <span class="section-count">4 items</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://huggingface.co/blog/domain-embedding-model" target="_blank">New Domain-Specific Embedding Model on Hugging Face</a></div>
+      <div class="card-meta">Hugging Face Blog</div>
+      <div class="card-summary">A new embedding model optimized for domain-specific retrieval tasks outperforms general-purpose embeddings on enterprise document search, code retrieval, and scientific literature benchmarks.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://huggingface.co/blog/granite-libraries" target="_blank">Granite Libraries Update: Enterprise AI Building Blocks</a></div>
+      <div class="card-meta">Hugging Face Blog</div>
+      <div class="card-summary">IBM's Granite library family receives significant updates with new tools for enterprise AI pipelines, adding improved data processing, guardrails, and evaluation capabilities for production deployments.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://towardsdatascience.com/mathematics-of-ai-agents" target="_blank">The Mathematics Behind AI Agent Decision-Making</a></div>
+      <div class="card-meta">Towards Data Science</div>
+      <div class="card-summary">A deep-dive into the mathematical foundations of agentic AI — covering Markov decision processes, reward modeling, and planning algorithms that underpin modern LLM-based agents.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://towardsdatascience.com/measuring-ai-value" target="_blank">Frameworks for Measuring Real AI Business Value</a></div>
+      <div class="card-meta">Towards Data Science</div>
+      <div class="card-summary">As AI deployments mature, this piece proposes concrete measurement frameworks — beyond hype metrics — for quantifying AI's actual ROI in cost savings, quality improvements, and time-to-decision.</div>
+    </div>
+  </div>
+
+  <!-- ROBOTICS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🤖</span>
+      <span class="section-title">Robotics &amp; Hardware</span>
+      <span class="section-count">3 items</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://www.therobotreport.com/building-tomorrow-how-bedrock-robotics-changing-construction-industry/" target="_blank">Bedrock Robotics: AI for the Construction Industry</a></div>
+      <div class="card-meta"><span class="tag robotics">Robotics</span> The Robot Report · GTC 2026</div>
+      <div class="card-summary">Bedrock Robotics co-founder Boris Sofman discusses how the company is deploying autonomous AI systems for construction site operations, with a GTC 2026 recap highlighting the broader physical AI wave.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://www.therobotreport.com/roboforce-raises-52m-to-commercialize-its-titan-robot/" target="_blank">RoboForce Raises $52M to Scale Titan Robot</a></div>
+      <div class="card-meta"><span class="tag robotics">Robotics</span> The Robot Report</div>
+      <div class="card-summary">RoboForce secures $52M in funding to commercialize its Titan robot for demanding outdoor applications including solar farm maintenance, shipping logistics, mining, and manufacturing.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://spectrum.ieee.org/autonomous-smart-wheelchair" target="_blank">AI Aims for Autonomous Wheelchair Navigation</a></div>
+      <div class="card-meta"><span class="tag robotics">Robotics</span> IEEE Spectrum</div>
+      <div class="card-summary">Researchers are testing AI-powered smart wheelchairs that can autonomously navigate tight indoor spaces, potentially matching — or exceeding — the spatial navigation skills of experienced wheelchair users with severe disabilities.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ARXIV RESEARCH PAPERS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">📄</span>
+      <span class="section-title">Latest Research Papers</span>
+      <span class="section-count">cs.AI · 10 papers</span>
+    </div>
+
+    <div class="paper-card">
+      <span class="paper-num">1</span>
+      <div class="paper-content">
+        <div class="card-title"><a href="https://arxiv.org/abs/2603.18073" target="_blank">Continually Self-Improving AI</a></div>
+        <div class="card-summary">Proposes a framework enabling AI systems to continuously improve beyond human-imposed constraints by fundamentally restructuring weights, learning from post-deployment experience, and designing autonomous training procedures.</div>
+      </div>
+    </div>
+
+    <div class="paper-card">
+      <span class="paper-num">2</span>
+      <div class="paper-content">
+        <div class="card-title"><a href="https://arxiv.org/abs/2603.18272" target="_blank">Retrieval-Augmented LLM Agents: Learning to Learn from Experience</a></div>
+        <div class="card-summary">Presents retrieval-augmented framework enabling LLM agents to learn from past interactions and improve performance on future tasks by retrieving relevant prior experience.</div>
+      </div>
+    </div>
+
+    <div class="paper-card">
+      <span class="paper-num">3</span>
+      <div class="paper-content">
+        <div class="card-title"><a href="https://arxiv.org/abs/2603.18197" target="_blank">Access Controlled Website Interaction for Agentic AI with Delegated Critical Tasks</a></div>
+        <div class="card-summary">Proposes a security framework for agentic AI systems performing web interactions on behalf of users, enabling controlled delegation of critical tasks while maintaining proper access controls.</div>
+      </div>
+    </div>
+
+    <div class="paper-card">
+      <span class="paper-num">4</span>
+      <div class="paper-content">
+        <div class="card-title"><a href="https://arxiv.org/abs/2603.18122" target="_blank">Don't Vibe Code, Do Skele-Code: No-Code Notebooks for Building Agentic Workflows</a></div>
+        <div class="card-summary">Introduces Skele-Code, a no-code notebook interface enabling domain experts (not just programmers) to build agentic AI workflows interactively at lower cost than traditional "vibe coding" approaches.</div>
+      </div>
+    </div>
+
+    <div class="paper-card">
+      <span class="paper-num">5</span>
+      <div class="paper-content">
+        <div class="card-title"><a href="https://arxiv.org/abs/2603.18048" target="_blank">DEAF: Diagnostic Evaluation of Acoustic Faithfulness in Audio Language Models</a></div>
+        <div class="card-summary">Introduces a benchmark with 2,700 conflict stimuli to test whether Audio MLLMs genuinely process acoustic signals or rely on text-based semantic inference — a critical distinction for real-world reliability.</div>
+      </div>
+    </div>
+
+    <div class="paper-card">
+      <span class="paper-num">6</span>
+      <div class="paper-content">
+        <div class="card-title"><a href="https://arxiv.org/abs/2603.18085" target="_blank">Multi-Trait Subspace Steering to Reveal the Dark Side of Human-AI Interaction</a></div>
+        <div class="card-summary">Uses subspace steering techniques to simultaneously manipulate multiple dark personality traits in LLMs, revealing potential risks and failure modes in human-AI interaction dynamics.</div>
+      </div>
+    </div>
+
+    <div class="paper-card">
+      <span class="paper-num">7</span>
+      <div class="paper-content">
+        <div class="card-title"><a href="https://arxiv.org/abs/2603.18189" target="_blank">TeachingCoach: A Fine-Tuned Scaffolding Chatbot for Instructional Guidance</a></div>
+        <div class="card-summary">Presents a fine-tuned LLM-based chatbot that delivers scaffolded instructional coaching to educators, helping teachers improve classroom practices through adaptive AI guidance.</div>
+      </div>
+    </div>
+
+    <div class="paper-card">
+      <span class="paper-num">8</span>
+      <div class="paper-content">
+        <div class="card-title"><a href="https://arxiv.org/abs/2603.18166" target="_blank">Efficient Dense Crowd Trajectory Prediction Via Dynamic Clustering</a></div>
+        <div class="card-summary">Proposes a dynamic clustering approach to efficiently predict trajectories in dense crowds, addressing scalability challenges critical for pedestrian-aware autonomous systems.</div>
+      </div>
+    </div>
+
+    <div class="paper-card">
+      <span class="paper-num">9</span>
+      <div class="paper-content">
+        <div class="card-title"><a href="https://arxiv.org/abs/2603.18201" target="_blank">Computationally Efficient Learning of AI System Reliability Considering Error Propagation</a></div>
+        <div class="card-summary">Develops efficient methods for assessing reliability of interconnected AI systems while accounting for how errors propagate through component chains — key for safe deployment of complex AI pipelines.</div>
+      </div>
+    </div>
+
+    <div class="paper-card">
+      <span class="paper-num">10</span>
+      <div class="paper-content">
+        <div class="card-title"><a href="https://arxiv.org/abs/2603.18104" target="_blank">Adaptive Domain Models: Bayesian Evolution and Principled Training for Neuromorphic AI</a></div>
+        <div class="card-summary">Combines Bayesian evolution and warm rotation techniques to enable principled training of geometric and neuromorphic AI systems with adaptive domain modeling capabilities.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER HIGHLIGHTS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">📬</span>
+      <span class="section-title">Newsletter Highlights</span>
+      <span class="section-count">6 newsletters</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Latent.Space: "Dreamer" — The Path to Continuously Self-Improving AI</div>
+      <div class="card-meta">Latent.Space</div>
+      <div class="card-summary">The Latent.Space "Dreamer" issue explores how AI systems might learn continuously during deployment — analogous to how humans consolidate learning during sleep — arguing this is the key unlock for true AGI-level autonomy.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ollama + NemoClaw: Secure Local AI Agents with Docker</div>
+      <div class="card-meta">Newsletter</div>
+      <div class="card-summary">Ollama's newsletter details its NVIDIA NemoClaw integration — running secure, containerized AI coding agents locally via Docker, giving developers private agentic workflows without cloud exposure.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">TLDR AI: Cursor 2, OpenAI/Astral, Perplexity Health</div>
+      <div class="card-meta">TLDR AI</div>
+      <div class="card-summary">Today's TLDR AI covers three big announcements: Cursor Composer 2's multi-file editing leap, OpenAI's acquisition of Astral (uv + ruff Python tools), and Perplexity's launch of a health-focused AI assistant.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">The Deep View: GTC 2026's Four Defining AI Trends</div>
+      <div class="card-meta">The Deep View</div>
+      <div class="card-summary">The Deep View's GTC 2026 recap identifies physical AI/robotics, AI infrastructure at scale, enterprise AI maturity, and fully agentic AI as the four trends that will define the next 18 months of AI development.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">The Rundown Tech: Uber × Rivian Robotaxi Partnership</div>
+      <div class="card-meta">The Rundown Tech</div>
+      <div class="card-summary">Uber and Rivian's robotaxi partnership enters a new phase, with autonomous electric vehicles set to join Uber's network as Rivian deploys its custom-built R2-based AV platform alongside human drivers.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">The Tech Buzz: NemoClaw + Docker, Gemini as Personal AI</div>
+      <div class="card-meta">The Tech Buzz</div>
+      <div class="card-summary">The Tech Buzz highlights two platform plays: NVIDIA's NemoClaw in Docker for secure agent sandboxing, and Google's Gemini deepening into a unified personal AI across Gmail, Docs, and Android.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PROBLEM FEEDS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">⚠️</span>
+      <span class="section-title">Unavailable Sources</span>
+    </div>
+    <div class="problem-card">
+      <span class="problem-icon">🔒</span>
+      <span><strong>Google AI Blog</strong> — Feed blocked by privacy extension (cookie/query string restriction)</span>
+    </div>
+    <div class="problem-card">
+      <span class="problem-icon">🔒</span>
+      <span><strong>VentureBeat AI</strong> — Feed blocked by privacy extension + TrustedHTML restriction</span>
+    </div>
+    <div class="problem-card">
+      <span class="problem-icon">🔒</span>
+      <span><strong>The Guardian (AI)</strong> — Feed blocked by privacy extension (cookie/query string restriction)</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  Generated by <strong>AI Radar</strong> · <a href="https://github.com/keithfry/web-pages">keithfry/web-pages</a> · Saturday, March 21, 2026
+</div>
+
+</body>
+</html>
