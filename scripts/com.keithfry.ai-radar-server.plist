@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.keithfry.ai-radar-server</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/keithfry/projects/web-pages/scripts/start_server.sh</string>
+    </array>
+
+    <!-- Start immediately on login and restart if it crashes -->
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+
+    <!-- Log stdout + stderr to the project logs folder -->
+    <key>StandardOutPath</key>
+    <string>/Users/keithfry/projects/web-pages/logs/server.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/keithfry/projects/web-pages/logs/server.log</string>
+
+    <!-- Throttle restarts to avoid a tight loop on persistent failures -->
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+</dict>
+</plist>
