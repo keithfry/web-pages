@@ -131,7 +131,7 @@ class Handler(BaseHTTPRequestHandler):
             })
             return r
 
-        r = run("git pull --rebase", ["git", "pull", "--rebase"])
+        r = run("git pull --rebase --autostash", ["git", "pull", "--rebase", "--autostash"])
         if r.returncode != 0:
             self.send_json(500, {"error": "git pull --rebase failed", "steps": steps})
             return
