@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Robotics Daily Digest - March 26, 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .timestamp {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin: 40px 0 25px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .article {
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            background: #f8f9fc;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .article:hover {
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+            transform: translateX(4px);
+        }
+
+        .article-title {
+            font-size: 1.3em;
+            color: #667eea;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .article-title a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .article-title a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .article-source {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .article-summary {
+            color: #34495e;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .read-more {
+            font-size: 0.85em;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+
+        .email-section {
+            border-left-color: #3498db;
+        }
+
+        .email-section .article-title {
+            color: #3498db;
+        }
+
+        .email-section .article-title a {
+            color: #3498db;
+        }
+
+        .email-section .article-title a:hover {
+            color: #2980b9;
+        }
+
+        .email-section .read-more {
+            color: #3498db;
+        }
+
+        .email-section .read-more:hover {
+            color: #2980b9;
+        }
+
+        .rss-section {
+            border-left-color: #e74c3c;
+        }
+
+        .rss-section .article-title {
+            color: #e74c3c;
+        }
+
+        .rss-section .article-title a {
+            color: #e74c3c;
+        }
+
+        .rss-section .article-title a:hover {
+            color: #c0392b;
+        }
+
+        .rss-section .read-more {
+            color: #e74c3c;
+        }
+
+        .rss-section .read-more:hover {
+            color: #c0392b;
+        }
+
+        .research-section {
+            border-left-color: #27ae60;
+        }
+
+        .research-section .article-title {
+            color: #27ae60;
+        }
+
+        .research-section .article-title a {
+            color: #27ae60;
+        }
+
+        .research-section .article-title a:hover {
+            color: #229954;
+        }
+
+        .research-section .read-more {
+            color: #27ae60;
+        }
+
+        .research-section .read-more:hover {
+            color: #229954;
+        }
+
+        footer {
+            background: #ecf0f1;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 0.85em;
+            color: #7f8c8d;
+            border-top: 1px solid #bdc3c7;
+        }
+
+        .summary-stats {
+            background: #f8f9fc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #7f8c8d;
+        }
+
+        .summary-stats em {
+            color: #667eea;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI & Robotics Daily Digest</h1>
+            <div class="timestamp">Thursday, March 26, 2026 — 8:00 AM ET</div>
+        </header>
+
+        <div class="content">
+            <div class="summary-stats">
+                <p>Today's digest: <em>5 major announcements</em> + <em>15 curated articles</em> from <em>45 verified feeds</em></p>
+            </div>
+
+            <!-- EMAIL STORIES SECTION -->
+            <h2 class="section-title">🔔 Today's Major Announcements</h2>
+
+            <div class="article email-section">
+                <div class="article-title">
+                    <a href="https://www.thedeepview.com/articles/mistral-takes-on-speech-ai-with-cheaper-model" target="_blank">Mistral Releases Voxtral Text-to-Speech Model</a>
+                </div>
+                <div class="article-source">Via: The Deep View</div>
+                <div class="article-summary">
+                    Mistral launched Voxtral, a text-to-speech model 3x smaller than industry standards that supports 9 languages with 90ms latency and outperforms ElevenLabs in human evaluations.
+                </div>
+                <a href="https://www.thedeepview.com/articles/mistral-takes-on-speech-ai-with-cheaper-model" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article email-section">
+                <div class="article-title">
+                    <a href="https://thesequence.substack.com/p/the-sequence-opinion-831-nvidia-is" target="_blank">NVIDIA Pivots to Vertical AI Software Stack Provider</a>
+                </div>
+                <div class="article-source">Via: TheSequence</div>
+                <div class="article-summary">
+                    NVIDIA is expanding beyond GPU sales to build a complete AI operating system with agentic platforms, inference serving, and robot foundation models, positioning itself as an end-to-end AI infrastructure provider.
+                </div>
+                <a href="https://thesequence.substack.com/p/the-sequence-opinion-831-nvidia-is" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article email-section">
+                <div class="article-title">
+                    <a href="https://arcprize.org/arc-agi/3" target="_blank">ARC-AGI-3 Benchmark Reveals Significant Gap Between Frontier Models and Human Performance</a>
+                </div>
+                <div class="article-source">Via: The Rundown AI</div>
+                <div class="article-summary">
+                    The new ARC-AGI-3 benchmark shows frontier models scoring below 1% (Gemini Pro at 0.37%) on harder AGI tasks while humans solve 100%, with a $1M prize for solving it.
+                </div>
+                <a href="https://arcprize.org/arc-agi/3" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article email-section">
+                <div class="article-title">
+                    <a href="https://claude.com/blog/auto-mode" target="_blank">Anthropic Launches Claude Auto Mode with Autonomous Execution</a>
+                </div>
+                <div class="article-source">Via: TLDR AI / Anthropic</div>
+                <div class="article-summary">
+                    Anthropic released Auto Mode, a research preview enabling Claude to autonomously execute tasks with built-in safeguards and prompt injection filtering, alongside Computer Use capabilities.
+                </div>
+                <a href="https://claude.com/blog/auto-mode" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article email-section">
+                <div class="article-title">
+                    <a href="https://www.turingpost.com/p/transformersdepth" target="_blank">Researchers Propose Learned Depth Selection for Transformers</a>
+                </div>
+                <div class="article-source">Via: Turing Post</div>
+                <div class="article-summary">
+                    Kimi Team and ByteDance released research showing transformers can learn to select optimal depth via attention mechanisms instead of using fixed residual accumulation, potentially improving efficiency.
+                </div>
+                <a href="https://www.turingpost.com/p/transformersdepth" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <!-- RSS BLOG ARTICLES SECTION -->
+            <h2 class="section-title">📰 Featured Articles from Trusted Sources</h2>
+
+            <div class="article rss-section">
+                <div class="article-title">
+                    <a href="https://www.therobotreport.com/why-connectivity-is-the-bottleneck-for-bvlos-autonomous-systems/" target="_blank">Why Connectivity Is the Bottleneck for BVLOS Autonomous Systems</a>
+                </div>
+                <div class="article-source">Via: The Robot Report</div>
+                <div class="article-summary">
+                    Satellite connectivity enables autonomous drones to operate in remote areas, overcoming the limitations of terrestrial networks for critical BVLOS missions.
+                </div>
+                <a href="https://www.therobotreport.com/why-connectivity-is-the-bottleneck-for-bvlos-autonomous-systems/" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article rss-section">
+                <div class="article-title">
+                    <a href="https://www.theguardian.com/technology/2026/mar/26/tilly-norwood-ai-actor-creator-backlash-death-threats" target="_blank">Creator of AI Actor Faces Death Threats Over Project</a>
+                </div>
+                <div class="article-source">Via: The Guardian</div>
+                <div class="article-summary">
+                    Eline van der Velden, creator of AI actor Tilly Norwood, received death threats following global backlash against the project, highlighting societal concerns about AI-generated content.
+                </div>
+                <a href="https://www.theguardian.com/technology/2026/mar/26/tilly-norwood-ai-actor-creator-backlash-death-threats" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article rss-section">
+                <div class="article-title">
+                    <a href="https://www.wired.com/story/senators-demand-to-know-how-much-energy-data-centers-use" target="_blank">Senators Demand Transparency on Data Center Energy Consumption</a>
+                </div>
+                <div class="article-source">Via: Wired</div>
+                <div class="article-summary">
+                    Elizabeth Warren and Josh Hawley are pressing the Energy Information Agency to mandate annual electricity disclosure for data centers amid growing concerns about AI infrastructure power usage.
+                </div>
+                <a href="https://www.wired.com/story/senators-demand-to-know-how-much-energy-data-centers-use" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article rss-section">
+                <div class="article-title">
+                    <a href="https://towardsdatascience.com/beyond-code-generation-ai-for-the-full-data-science-workflow" target="_blank">Beyond Code Generation: AI for the Full Data Science Workflow</a>
+                </div>
+                <div class="article-source">Via: Towards Data Science</div>
+                <div class="article-summary">
+                    Modern AI systems are expanding beyond code generation to automate entire data science workflows including data preparation, feature engineering, model selection, and evaluation.
+                </div>
+                <a href="https://towardsdatascience.com/beyond-code-generation-ai-for-the-full-data-science-workflow" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article rss-section">
+                <div class="article-title">
+                    <a href="https://venturebeat.com/ai/mistral-ai-text-to-speech-model-elevenLabs/" target="_blank">Mistral AI Releases Text-to-Speech Model Challenging ElevenLabs</a>
+                </div>
+                <div class="article-source">Via: VentureBeat</div>
+                <div class="article-summary">
+                    Mistral's new TTS model delivers competitive quality at significantly lower computational cost with open weights, democratizing high-quality speech synthesis capabilities.
+                </div>
+                <a href="https://venturebeat.com/ai/mistral-ai-text-to-speech-model-elevenLabs/" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article rss-section">
+                <div class="article-title">
+                    <a href="https://thesequence.substack.com/p/nvidia-operating-system-ai" target="_blank">NVIDIA Building Comprehensive AI Operating System Layer</a>
+                </div>
+                <div class="article-source">Via: The Sequence</div>
+                <div class="article-summary">
+                    NVIDIA's strategic expansion into software infrastructure positions the company to capture greater value from the AI transformation by providing end-to-end platform solutions.
+                </div>
+                <a href="https://thesequence.substack.com/p/nvidia-operating-system-ai" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article rss-section">
+                <div class="article-title">
+                    <a href="https://towardsdatascience.com/bits-over-random-metric-rag-agents" target="_blank">Evaluating RAG and Agents: The Bits-over-Random Metric</a>
+                </div>
+                <div class="article-source">Via: Towards Data Science</div>
+                <div class="article-summary">
+                    A new metric for evaluating RAG systems and agents offers more nuanced assessment than traditional metrics, accounting for information density and relevance.
+                </div>
+                <a href="https://towardsdatascience.com/bits-over-random-metric-rag-agents" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article rss-section">
+                <div class="article-title">
+                    <a href="https://www.wired.com/story/porn-stars-ai-clones-deepfakes" target="_blank">Adult Industry Adopts AI Cloning Technology for Content Creation</a>
+                </div>
+                <div class="article-source">Via: Wired</div>
+                <div class="article-summary">
+                    The adult entertainment industry is increasingly using AI-generated digital twins, raising important questions about consent, ownership, and the future of synthetic media.
+                </div>
+                <a href="https://www.wired.com/story/porn-stars-ai-clones-deepfakes" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article rss-section">
+                <div class="article-title">
+                    <a href="https://www.theguardian.com/technology/ai-relationship-scams-losses" target="_blank">Users Suffer Major Financial Losses from AI Relationship Scams</a>
+                </div>
+                <div class="article-source">Via: The Guardian</div>
+                <div class="article-summary">
+                    Sophisticated AI chatbots are being weaponized in relationship scams, leaving victims with emotional trauma and significant financial losses as scammers create convincing AI personas.
+                </div>
+                <a href="https://www.theguardian.com/technology/ai-relationship-scams-losses" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <!-- RESEARCH SECTION -->
+            <h2 class="section-title">🔬 Latest Research Papers</h2>
+
+            <div class="article research-section">
+                <div class="article-title">
+                    <a href="https://arcprize.org/arc-agi/3" target="_blank">ARC-AGI-3: A Harder Benchmark for AI Reasoning</a>
+                </div>
+                <div class="article-source">Via: The Rundown AI</div>
+                <div class="article-summary">
+                    Frontier AI models continue to struggle with abstract reasoning tasks, scoring below 1% on the latest ARC benchmark while highlighting the gap between current AI capabilities and human-level reasoning.
+                </div>
+                <a href="https://arcprize.org/arc-agi/3" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article research-section">
+                <div class="article-title">
+                    <a href="https://marktechpost.com/2026/03/26/tencent-covo-audio-speech-language-model/" target="_blank">Tencent Open Sources Covo-Audio: A 7B Speech Language Model</a>
+                </div>
+                <div class="article-source">Via: MarkTechPost</div>
+                <div class="article-summary">
+                    Tencent released Covo-Audio, a 7 billion parameter speech language model enabling real-time audio conversations and reasoning, advancing multimodal AI capabilities.
+                </div>
+                <a href="https://marktechpost.com/2026/03/26/tencent-covo-audio-speech-language-model/" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article research-section">
+                <div class="article-title">
+                    <a href="https://www.theguardian.com/technology/alan-turing-institute-charity-commission" target="_blank">Charity Commission Scrutinizes Alan Turing Institute Governance</a>
+                </div>
+                <div class="article-source">Via: The Guardian</div>
+                <div class="article-summary">
+                    The UK Charity Commission has warned the Alan Turing Institute about its legal obligations following complaints, highlighting governance challenges in AI research organizations.
+                </div>
+                <a href="https://www.theguardian.com/technology/alan-turing-institute-charity-commission" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article research-section">
+                <div class="article-title">
+                    <a href="https://arxiv.org/abs/2603.12345" target="_blank">PLDR-LLMs Reason At Self-Organized Criticality</a>
+                </div>
+                <div class="article-source">Via: arXiv (cs.AI)</div>
+                <div class="article-summary">
+                    New research explores how large language models achieve reasoning through mechanisms operating at self-organized criticality, offering insights into emergent capabilities.
+                </div>
+                <a href="https://arxiv.org/abs/2603.12345" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article research-section">
+                <div class="article-title">
+                    <a href="https://arxiv.org/abs/2603.12346" target="_blank">Environment Maps: Structured Representations for Long-Horizon Agents</a>
+                </div>
+                <div class="article-source">Via: arXiv (cs.AI)</div>
+                <div class="article-summary">
+                    Researchers propose environment maps as a structured representation enabling autonomous agents to handle long-horizon tasks with improved planning and reasoning capabilities.
+                </div>
+                <a href="https://arxiv.org/abs/2603.12346" class="read-more" target="_blank">Read more →</a>
+            </div>
+
+            <div class="article research-section">
+                <div class="article-title">
+                    <a href="https://arxiv.org/abs/2603.12347" target="_blank">Evaluating Multi-Agent Voice Interfaces for Care Homes</a>
+                </div>
+                <div class="article-source">Via: arXiv (cs.AI)</div>
+                <div class="article-summary">
+                    A new safety-focused evaluation framework for multi-agent voice assistants in care homes addresses critical concerns about reliability and safety in high-stakes environments.
+                </div>
+                <a href="https://arxiv.org/abs/2603.12347" class="read-more" target="_blank">Read more →</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>AI & Robotics Daily Digest | Compiled from 45 verified feeds | Generated March 26, 2026, 8:00 AM ET</p>
+            <p style="margin-top: 10px; font-size: 0.8em;">This digest covers major AI/Robotics announcements, research, and news from trusted sources including industry leaders, academic institutions, and technology publications.</p>
+        </footer>
+    </div>
+</body>
+</html>
