@@ -51,7 +51,16 @@ def tag(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> list[str]:
     prompt = (
         "Assign 1 to 3 tags to this AI/tech article from the following list ONLY. "
         "Return a JSON object with a single key 'tags' containing a list of tag strings.\n\n"
-        "Valid tags: policy, model, agents, safety, robotics, voice, health, research, ethics\n\n"
+        "Tag definitions — only use a tag if the article is clearly about that topic:\n"
+        "  policy   — government regulation, legislation, corporate AI policy, legal cases\n"
+        "  model    — LLMs, model releases, benchmarks, training, quantization, inference, local models\n"
+        "  agents   — AI agents, autonomous systems, multi-agent frameworks, agentic workflows\n"
+        "  safety   — AI safety, alignment, security vulnerabilities, privacy, guardrails\n"
+        "  robotics — physical robots, embodied AI, robotic hardware, autonomous vehicles\n"
+        "  voice    — speech recognition, voice assistants, text-to-speech, audio AI\n"
+        "  health   — healthcare, medical AI, biotech, drug discovery\n"
+        "  research — academic papers, datasets, novel ML techniques, experiments\n"
+        "  ethics   — bias, fairness, misinformation, AI misuse, societal impact\n\n"
         f"Title: {title}\n"
         f"Summary: {summary}\n\n"
         'Example response: {"tags": ["model", "research"]}'

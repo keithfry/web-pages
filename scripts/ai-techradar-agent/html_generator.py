@@ -93,11 +93,19 @@ _CSS = """\
   .problem-feeds li { font-size: 13px; color: #64748b; margin-bottom: 8px; }
   .problem-feeds li a { color: #2563eb; }
   .problem-feeds .error-reason { color: #dc2626; font-style: italic; }
-  footer { text-align: center; font-size: 12px; color: #94a3b8; padding: 28px 20px 40px; border-top: 1px solid #e2e8f0; margin-top: 16px; }"""
+  footer { text-align: center; font-size: 12px; color: #94a3b8; padding: 28px 20px 40px; border-top: 1px solid #e2e8f0; margin-top: 16px; }
+  .filter-bar { background: white; border-bottom: 1px solid #e2e8f0; padding: 12px 20px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .filter-chip { font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 12px; cursor: pointer; border: 2px solid transparent; transition: border-color 0.15s, opacity 0.15s; }
+  .filter-chip.active { border-color: currentColor; }
+  .filter-chip.dimmed { opacity: 0.4; }
+  .card.hidden { display: none; }
+  .subsection.hidden { display: none; }
+  .section-block.hidden { display: none; }"""
 
 
 def _card(item: dict, extra_class: str = "") -> str:
     cls = f"card {extra_class}".strip()
+    tag_keys = " ".join(t for t in item.get("tags", []) if t in TAG_META)
     title_html = escape(item.get("title", ""))
     link = item.get("link", "")
     via = escape(item.get("source", ""))
@@ -119,8 +127,9 @@ def _card(item: dict, extra_class: str = "") -> str:
         if tag_spans:
             tags_html = f'\n    <div class="tags">{tag_spans}</div>'
 
+    data_tags = f' data-tags="{tag_keys}"' if tag_keys else ""
     return (
-        f'  <div class="{cls}">\n'
+        f'  <div class="{cls}"{data_tags}>\n'
         f'    <div class="via">{via}</div>\n'
         f"    {title_block}\n"
         f"    <p>{summary}</p>{tags_html}\n"
@@ -156,6 +165,13 @@ def generate_html(
         f'    <span class="stat-pill">{"✅" if error_count == 0 else "⚠️"} {error_count} Feed Error{"s" if error_count != 1 else ""}</span>\n'
     )
 
+    # Collect tags that actually appear in this digest, sorted by display label
+    all_items = newsletters + articles + papers
+    used_tags = sorted(
+        {t for item in all_items for t in item.get("tags", []) if t in TAG_META},
+        key=lambda t: TAG_META[t][1],
+    )
+
     parts: list[str] = []
     parts.append(f"""<!DOCTYPE html>
 <html lang="en">
@@ -177,11 +193,21 @@ def generate_html(
 {stats}  </div>
 </div>
 
-<div class="container">
 """)
+
+    # --- Filter bar ---
+    if used_tags:
+        chip_html = "\n".join(
+            f'  <button class="filter-chip {TAG_META[t][0]}" data-tag="{t}">{TAG_META[t][1]}</button>'
+            for t in used_tags
+        )
+        parts.append(f'<div class="filter-bar">\n{chip_html}\n</div>\n\n')
+
+    parts.append('<div class="container">\n')
 
     # --- Email Newsletters ---
     if newsletters:
+        parts.append('  <div class="section-block">\n')
         parts.append(
             f'  <div class="section-header"><span class="icon">📬</span>'
             f'<h2>Email Newsletters</h2>'
@@ -189,15 +215,16 @@ def generate_html(
         )
         for item in newsletters:
             parts.append(_card(item))
+        parts.append('  </div>\n')
 
     # --- Blog Posts & Articles ---
     if articles:
+        parts.append('\n  <div class="section-block">\n')
         parts.append(
-            f'\n  <div class="section-header"><span class="icon">📰</span>'
+            f'  <div class="section-header"><span class="icon">📰</span>'
             f'<h2>Blog Posts &amp; Articles</h2>'
             f'<span class="badge">{len(articles)} item{"s" if len(articles) != 1 else ""}</span></div>\n'
         )
-        # Group by subsection
         subsections: dict[str, list[dict]] = {s: [] for s in _SUBSECTION_DISPLAY_ORDER}
         for item in articles:
             sub = _subsection_for(item)
@@ -213,17 +240,20 @@ def generate_html(
             for item in items_in_sub:
                 extra = "robotics" if "robotics" in item.get("tags", []) else ""
                 parts.append(_card(item, extra))
+        parts.append('  </div>\n')
 
     # --- Research Papers ---
     if papers:
         badge = f"{len(papers)} paper{'s' if len(papers) != 1 else ''} · arXiv"
+        parts.append('\n  <div class="section-block">\n')
         parts.append(
-            f'\n  <div class="section-header"><span class="icon">🔬</span>'
+            f'  <div class="section-header"><span class="icon">🔬</span>'
             f'<h2>Latest Research Papers</h2>'
             f'<span class="badge">{badge}</span></div>\n\n'
         )
         for item in papers:
             parts.append(_card(item, "arxiv"))
+        parts.append('  </div>\n')
 
     # --- Problem Feeds ---
     if errors:
@@ -250,6 +280,38 @@ def generate_html(
         f"  AI &amp; Robotics Daily Digest &bull; {footer_date} &bull; "
         f"Sources: Gmail + {feed_count} RSS items via ai-techradar-agent\n"
         f"</footer>\n\n"
+        f"<script>\n(function(){{\n"
+        f"  const active = new Set();\n"
+        f"  document.querySelectorAll('.filter-chip').forEach(chip => {{\n"
+        f"    chip.addEventListener('click', () => {{\n"
+        f"      active.has(chip.dataset.tag) ? active.delete(chip.dataset.tag) : active.add(chip.dataset.tag);\n"
+        f"      applyFilter();\n"
+        f"    }});\n"
+        f"  }});\n"
+        f"  function applyFilter() {{\n"
+        f"    document.querySelectorAll('.filter-chip').forEach(c => {{\n"
+        f"      c.classList.toggle('active', active.has(c.dataset.tag));\n"
+        f"      c.classList.toggle('dimmed', active.size > 0 && !active.has(c.dataset.tag));\n"
+        f"    }});\n"
+        f"    document.querySelectorAll('.card').forEach(card => {{\n"
+        f"      if (active.size === 0) {{ card.classList.remove('hidden'); return; }}\n"
+        f"      const tags = (card.dataset.tags || '').split(' ');\n"
+        f"      card.classList.toggle('hidden', !tags.some(t => active.has(t)));\n"
+        f"    }});\n"
+        f"    document.querySelectorAll('.subsection').forEach(sub => {{\n"
+        f"      let el = sub.nextElementSibling, any = false;\n"
+        f"      while (el && !el.classList.contains('subsection') && !el.classList.contains('section-header')) {{\n"
+        f"        if (el.classList.contains('card') && !el.classList.contains('hidden')) any = true;\n"
+        f"        el = el.nextElementSibling;\n"
+        f"      }}\n"
+        f"      sub.classList.toggle('hidden', !any);\n"
+        f"    }});\n"
+        f"    document.querySelectorAll('.section-block').forEach(block => {{\n"
+        f"      const any = [...block.querySelectorAll('.card')].some(c => !c.classList.contains('hidden'));\n"
+        f"      block.classList.toggle('hidden', !any);\n"
+        f"    }});\n"
+        f"  }}\n"
+        f"}})();\n</script>\n"
         f"</body>\n</html>\n"
     )
 
