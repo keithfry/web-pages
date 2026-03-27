@@ -144,8 +144,8 @@ def generate_html(
     date: datetime,
 ) -> str:
     day_str = date.strftime("%A, %B %-d, %Y")
-    # Approximate time; the digest is always described as morning
-    dateline = f"{day_str} &mdash; 8:00 AM ET"
+    time_str = date.strftime("%-I:%M %p ET")
+    dateline = f"{day_str} &mdash; {time_str}"
     date_title = date.strftime("%B %-d, %Y")
 
     error_count = len(errors)
@@ -244,7 +244,7 @@ def generate_html(
 
     # --- Footer ---
     feed_count = len(articles) + len(papers)
-    footer_date = date.strftime("%A, %B %-d, %Y")
+    footer_date = date.strftime("%A, %B %-d, %Y — %-I:%M %p ET")
     parts.append(
         f"<footer>\n"
         f"  AI &amp; Robotics Daily Digest &bull; {footer_date} &bull; "

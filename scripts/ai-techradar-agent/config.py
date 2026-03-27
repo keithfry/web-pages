@@ -42,3 +42,10 @@ GIT_USER_EMAIL = "keithfry@gmail.com"
 
 # arXiv feeds: max papers per feed to include
 ARXIV_MAX_PAPERS = 10
+
+# Parallel workers for LLM summarization — set OLLAMA_NUM_PARALLEL to the same value
+# so Ollama actually processes requests concurrently rather than queuing them
+LLM_WORKERS: int = int(os.environ.get("LLM_WORKERS", 2))
+
+# Parallel workers for URL fetching (I/O bound — can be higher than LLM_WORKERS)
+URL_WORKERS: int = int(os.environ.get("URL_WORKERS", 10))

@@ -70,4 +70,10 @@ def fetch_article_text(url: str, timeout: int = 10) -> str | None:
         print(f"[article_fetcher] skipping {url}: content too short ({len(result)} chars)", file=sys.stderr)
         return None
 
+    # Check the first 20% of the text for soft-404 signals
+    preview = result[:max(1, len(result) // 5)].lower()
+    if "404" in preview or "page not found" in preview:
+        print(f"[article_fetcher] skipping {url}: soft 404 detected in page header", file=sys.stderr)
+        return None
+
     return result
