@@ -1,0 +1,3 @@
+# Run the AI Techradar Agent daily at 8AM ET
+# To install: crontab -e  (or append via: (crontab -l; cat scripts/crontab.txt) | crontab -)
+0 8 * * * cd /Users/keithfry/projects/web-pages/scripts/ai-techradar-agent && /opt/homebrew/bin/uv run main.py >> /Users/keithfry/projects/web-pages/logs/ai-techradar-agent.log 2>&1
