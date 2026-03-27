@@ -1,6 +1,6 @@
 /* CSS Custom Properties for Theming */
 :root {
-    --bg-primary: #05060F;
+    --bg-primary: #080b14;
     --bg-secondary: #1a1a2e;
     --bg-glass: rgba(255, 255, 255, 0.05);
     --border-glass: rgba(255, 255, 255, 0.1);
@@ -31,7 +31,7 @@
 
 body {
     font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background: #05060F;
+    background: #080b14;
     background-attachment: fixed;
     color: var(--text-primary);
     overflow: hidden;
