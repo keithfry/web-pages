@@ -1,0 +1,16 @@
+[project]
+name = "ai-techradar-agent"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "feedparser",
+    "ollama",
+    "google-auth-oauthlib",
+    "google-auth-httplib2",
+    "google-api-python-client",
+    "python-dotenv",
+    "beautifulsoup4",
+]
+
+[project.scripts]
+ai-techradar-agent = "main:main"

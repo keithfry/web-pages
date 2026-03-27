@@ -1,3 +1,9 @@
 .DS_Store
 resume/certifications/images/images.json
 logs/
+scripts/ai-techradar-agent/credentials.json
+scripts/ai-techradar-agent/token.json
+scripts/ai-techradar-agent/.env
+scripts/ai-techradar-agent/.venv/
+**/__pycache__/
+**/*.pyc

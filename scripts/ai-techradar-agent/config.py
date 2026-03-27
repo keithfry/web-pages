@@ -1,0 +1,44 @@
+"""Central configuration — reads from .env or environment variables."""
+
+import os
+from pathlib import Path
+
+from dotenv import load_dotenv
+
+# Load Gmail credentials from ~/keys/kfopenclaw-gmail.env (outside the repo)
+load_dotenv(Path.home() / "keys" / "kfopenclaw-gmail.env")
+# Load project .env (non-secret settings); values already set above are not overwritten
+load_dotenv(Path(__file__).parent / ".env")
+
+# --- LLM models ---
+SUMMARIZE_MODEL: str = os.environ.get("SUMMARIZE_MODEL", "llama3.2")
+GENERATE_MODEL: str = os.environ.get("GENERATE_MODEL", "llama3.2")
+
+# --- Pipeline ---
+LOOKBACK_HOURS: int = int(os.environ.get("LOOKBACK_HOURS", 24))
+
+# --- Gmail ---
+# Option A: individual client ID + secret in .env (preferred)
+GMAIL_CLIENT_ID: str = os.environ.get("GMAIL_CLIENT_ID", "")
+GMAIL_CLIENT_SECRET: str = os.environ.get("GMAIL_CLIENT_SECRET", "")
+# Option B: path to a downloaded credentials.json file
+GMAIL_CREDENTIALS: Path = Path(
+    os.environ.get("GMAIL_CREDENTIALS", Path(__file__).parent / "credentials.json")
+)
+GMAIL_TOKEN: Path = Path(
+    os.environ.get("GMAIL_TOKEN", Path(__file__).parent / "token.json")
+)
+GMAIL_SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
+
+# --- Paths ---
+# Repo root is 2 levels up from this file (scripts/ai-techradar-agent/ → project root)
+REPO_ROOT: Path = Path(__file__).parent.parent.parent
+OUTPUT_DIR: Path = REPO_ROOT / "techradar" / "AI"
+FEEDS_CSV: Path = REPO_ROOT / "data" / "ai-rss-feeds.csv"
+
+# --- Git identity (matches existing server.py convention) ---
+GIT_USER_NAME = "Keith Fry"
+GIT_USER_EMAIL = "keithfry@gmail.com"
+
+# arXiv feeds: max papers per feed to include
+ARXIV_MAX_PAPERS = 10

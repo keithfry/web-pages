@@ -1,0 +1,73 @@
+"""Fetch and extract readable text from an article URL."""
+
+import sys
+from urllib.parse import urlparse
+
+import requests
+from bs4 import BeautifulSoup
+
+_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
+
+# Tags to try in order for main content extraction
+_CONTENT_TAGS = ["article", "main", '[role="main"]', ".post-content",
+                 ".article-body", ".entry-content", "#content", "body"]
+
+
+def source_name_from_url(url: str) -> str:
+    """Extract a readable source name from a URL (e.g. 'wired.com')."""
+    try:
+        host = urlparse(url).netloc.lower()
+        return host.removeprefix("www.")
+    except Exception:
+        return url
+
+
+def fetch_article_text(url: str, timeout: int = 10) -> str | None:
+    """Fetch a URL and return the main article text, or None on failure."""
+    try:
+        resp = requests.get(url, headers=_HEADERS, timeout=timeout, allow_redirects=True)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"[article_fetcher] fetch failed {url}: {e}", file=sys.stderr)
+        return None
+
+    content_type = resp.headers.get("content-type", "")
+    if "html" not in content_type:
+        return None
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+
+    # Remove noise
+    for tag in soup(["script", "style", "nav", "header", "footer",
+                     "aside", "form", "noscript", "iframe"]):
+        tag.decompose()
+
+    # Try to find the main content block
+    text = ""
+    for selector in _CONTENT_TAGS:
+        el = soup.select_one(selector)
+        if el:
+            text = el.get_text(separator="\n", strip=True)
+            if len(text) > 200:
+                break
+
+    if not text:
+        text = soup.get_text(separator="\n", strip=True)
+
+    # Collapse excessive whitespace
+    lines = [l.strip() for l in text.splitlines() if l.strip()]
+    result = "\n".join(lines)
+
+    # Treat short pages as failures — likely soft 404s, login walls, or empty pages
+    if len(result) < 400:
+        print(f"[article_fetcher] skipping {url}: content too short ({len(result)} chars)", file=sys.stderr)
+        return None
+
+    return result
