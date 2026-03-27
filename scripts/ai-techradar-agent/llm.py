@@ -79,8 +79,10 @@ def tag(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> list[str]:
 def classify_ai(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> bool:
     """Return True if the content is AI/ML/robotics related."""
     prompt = (
-        "Is the following content related to artificial intelligence, machine learning, "
-        "robotics, LLMs, or adjacent technology topics? "
+        "Is the following content specifically about artificial intelligence, machine learning, "
+        "robotics, or LLMs? Answer YES only if the primary topic is AI/ML/robotics technology.\n\n"
+        "Answer NO for: travel, lifestyle, product sales, referral programs, real estate, "
+        "finance, sports, gaming, cloud gaming, or any tech topic not primarily about AI/ML/robotics.\n\n"
         'Answer with a JSON object: {"relevant": true} or {"relevant": false}.\n\n'
         f"Title: {title}\n"
         f"Content: {summary[:500]}"

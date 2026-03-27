@@ -40,10 +40,11 @@ def log(msg: str) -> None:
 # ---------------------------------------------------------------------------
 
 _AI_KEYWORDS = {
-    "ai", "ml", "llm", "robot", "model", "neural", "machine learning",
-    "deep learning", "language model", "generative", "autonomous",
-    "reinforcement", "transformer", "diffusion", "anthropic", "openai",
-    "google deepmind", "nvidia", "hugging face",
+    "ai", "ml", "llm", "robot", "neural", "machine learning",
+    "deep learning", "language model", "generative", "autonomous vehicle",
+    "reinforcement learning", "transformer model", "diffusion model",
+    "anthropic", "openai", "google deepmind", "nvidia ai", "nvidia cuda",
+    "hugging face",
 }
 
 
