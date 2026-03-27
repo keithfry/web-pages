@@ -31,7 +31,7 @@
 
 body {
     font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background: #080b14;
+    background: #080b14 !important;
     background-attachment: fixed;
     color: var(--text-primary);
     overflow: hidden;
