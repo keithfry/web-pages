@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI &amp; Robotics Daily Digest &mdash; March 29, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1a1d23;
+    line-height: 1.6;
+  }
+  .page-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f3460 100%);
+    color: white;
+    padding: 52px 24px 44px;
+    text-align: center;
+  }
+  .page-header .eyebrow { font-size: 11px; letter-spacing: 3.5px; text-transform: uppercase; color: #60a5fa; margin-bottom: 14px; font-weight: 600; }
+  .page-header h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+  .page-header .dateline { font-size: 15px; color: #94a3b8; }
+  .header-stats { display: flex; justify-content: center; gap: 20px; margin-top: 22px; flex-wrap: wrap; }
+  .stat-pill { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; padding: 5px 16px; font-size: 12px; color: #cbd5e1; font-weight: 500; }
+  .container { max-width: 880px; margin: 0 auto; padding: 44px 20px 64px; }
+  .section-header { display: flex; align-items: center; gap: 10px; margin: 52px 0 18px; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0; }
+  .section-header .icon { font-size: 20px; }
+  .section-header h2 { font-size: 18px; font-weight: 700; color: #0f172a; letter-spacing: -0.2px; }
+  .section-header .badge { margin-left: auto; font-size: 11px; font-weight: 700; background: #f1f5f9; color: #64748b; border-radius: 12px; padding: 3px 11px; }
+  .subsection { font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #94a3b8; margin: 28px 0 10px; }
+  .card { background: white; border-radius: 10px; padding: 20px 22px; margin-bottom: 12px; border: 1px solid #e8edf3; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: box-shadow 0.15s ease; }
+  .card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.09); }
+  .card .via { font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #3b82f6; margin-bottom: 6px; }
+  .card h3 { font-size: 15.5px; font-weight: 700; line-height: 1.4; margin-bottom: 9px; color: #0f172a; }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #2563eb; text-decoration: underline; }
+  .card p { font-size: 14px; color: #475569; line-height: 1.65; }
+  .card.arxiv { border-left: 3px solid #8b5cf6; }
+  .card.arxiv .via { color: #8b5cf6; }
+  .card.robotics { border-left: 3px solid #10b981; }
+  .card.robotics .via { color: #10b981; }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+  .tag { font-size: 10.5px; font-weight: 600; padding: 2px 9px; border-radius: 10px; }
+  .t-policy   { background:#fee2e2; color:#b91c1c; }
+  .t-model    { background:#dbeafe; color:#1d4ed8; }
+  .t-agents   { background:#dcfce7; color:#15803d; }
+  .t-safety   { background:#fef9c3; color:#a16207; }
+  .t-robotics { background:#ede9fe; color:#6d28d9; }
+  .t-voice    { background:#ffedd5; color:#c2410c; }
+  .t-health   { background:#cffafe; color:#0e7490; }
+  .t-research { background:#f1f5f9; color:#475569; }
+  .t-ethics   { background:#fce7f3; color:#be185d; }
+  .problem-feeds { border: 1px solid #fca5a5; background: #fff7f7; border-radius: 10px; padding: 20px 22px; margin-top: 40px; }
+  .problem-feeds h2 { font-size: 15px; font-weight: 700; color: #b91c1c; margin-bottom: 12px; }
+  .problem-feeds ul { list-style: none; }
+  .problem-feeds li { font-size: 13px; color: #64748b; margin-bottom: 8px; }
+  .problem-feeds li a { color: #2563eb; }
+  .problem-feeds .error-reason { color: #dc2626; font-style: italic; }
+  footer { text-align: center; font-size: 12px; color: #94a3b8; padding: 28px 20px 40px; border-top: 1px solid #e2e8f0; margin-top: 16px; }
+  .filter-bar { background: white; border-bottom: 1px solid #e2e8f0; padding: 12px 20px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .filter-chip { font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 12px; cursor: pointer; border: 2px solid transparent; transition: border-color 0.15s, opacity 0.15s; }
+  .filter-chip.active { border-color: currentColor; }
+  .filter-chip.dimmed { opacity: 0.4; }
+  .card.hidden { display: none; }
+  .subsection.hidden { display: none; }
+  .section-block.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="eyebrow">⚡ Daily Briefing</div>
+  <h1>AI &amp; Robotics Daily Digest</h1>
+  <div class="dateline">Sunday, March 29, 2026 &mdash; 8:08 AM ET</div>
+  <div class="header-stats">
+    <span class="stat-pill">📬 2 Newsletters</span>
+    <span class="stat-pill">📰 22 Articles</span>
+    <span class="stat-pill">🔬 0 Papers</span>
+    <span class="stat-pill">⚠️ 2 Feed Errors</span>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-chip t-agents" data-tag="agents">Agents</button>
+  <button class="filter-chip t-ethics" data-tag="ethics">Ethics</button>
+  <button class="filter-chip t-health" data-tag="health">Healthcare</button>
+  <button class="filter-chip t-model" data-tag="model">Models</button>
+  <button class="filter-chip t-policy" data-tag="policy">Policy</button>
+  <button class="filter-chip t-research" data-tag="research">Research</button>
+  <button class="filter-chip t-robotics" data-tag="robotics">Robotics</button>
+  <button class="filter-chip t-safety" data-tag="safety">Safety</button>
+  <button class="filter-chip t-voice" data-tag="voice">Voice AI</button>
+</div>
+
+<div class="container">
+  <div class="section-block">
+  <div class="section-header"><span class="icon">📬</span><h2>Email Newsletters</h2><span class="badge">2 items</span></div>
+
+  <div class="card" data-tags="model research">
+    <div class="via">TheSequence</div>
+    <h3>The Sequence Radar #832: Last Week in AI: Compression, Voice, and Why It All Matters</h3>
+    <p>Google Research released TurboQuant, which compresses key-value (KV) cache vectors using polar coordinates and the Johnson-Lindenstrauss transform. This results in 3-bit KV cache compression with zero measurable accuracy loss, a 6x memory reduction, and up to an 8x speedup on H100s. TurboQuant is a drop-in solution that doesn&#x27;t require training. Its error rate approaches the Shannon lower bound, indicating a ceiling for compression-based gains in long-context inference.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card">
+    <div class="via">The Hustle</div>
+    <h3>The psychological pull of free stuff</h3>
+    <p>When something is free, people feel a positive emotional response and tend to abandon standard cost-benefit analyses. This can lead to irrational behavior, such as violence over free samples at Costco. Examples of such incidents include a 2015 fight over Nutella waffle samples in Southern California and a 2018 spat over cheeseburger sample line etiquette in South Carolina.</p>
+  </div>
+  </div>
+
+  <div class="section-block">
+  <div class="section-header"><span class="icon">📰</span><h2>Blog Posts &amp; Articles</h2><span class="badge">22 items</span></div>
+
+  <div class="subsection">Policy &amp; Industry</div>
+
+  <div class="card" data-tags="agents policy">
+    <div class="via">therundown.ai</div>
+    <h3><a href="https://www.therundown.ai/p/an-exclusive-q-a-with-alibaba-com-s-kuo-zhang?_bhlid=4eaa234680798ad3bdb45514b5705f029891f88c&amp;jwt_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWJzY3JpYmVyX2lkIjoiNzcwOWJlZGEtODg0OC00MDUyLTg0NzktYmQ5MTMxMmU2ZjRjIiwicHVibGljYXRpb25faWQiOiI0ZDAzMzkwZC0yNDgxLTQyOTktYjk0OS1mZmQ4YjM4YjRjMzgiLCJhY2Nlc3NfdHlwZSI6InJlYWQtb25seSIsImV4cCI6MTc3NDk1MTQ2NywiaXNzIjoiaHR0cHM6Ly9hcHAuYmVlaGlpdi5jb20iLCJpYXQiOjE3NzQ3Nzg2Njd9.07dY8Em7HVMZnoEja74Sdl_XB1GW4dABFHt3yGka4qo">Alibaba.com&#x27;s Kuo Zhang on Agentic AI Revolutionizing Business Operations</a></h3>
+    <p>Alibaba.com has launched Accio Work, a new agentic system that deploys digital employees to handle complex business tasks 24/7. The system sets up Qwen-powered agent teams for businesses based on their goals, with different connectors and skills enabling the &quot;digital workforce&quot; to handle multistep tasks. To integrate Accio Work, companies must focus on three key areas: prioritizing agentic AI&#x27;s value, building checkpoints for transparency, and rethinking team operations. This shift from AI assistants to operators is expected to unlock significant business advantages for companies that adapt.</p>
+    <div class="tags"><span class="tag t-agents">Agents</span><span class="tag t-policy">Policy</span></div>
+  </div>
+  <div class="card" data-tags="policy research">
+    <div class="via">thehustle.co</div>
+    <h3><a href="https://thehustle.co/join?ref=6693394292&amp;_hsenc=p2ANqtz-9CkL1kaEaiY5voDs-Ho0KASJqRsUxtaygAmsgJ7nvkOSEHNEU-Hu7KO3qZBsPLXDRScRiKY5S4h7DHdU2nJolK1S4o2A&amp;_hsmi=410851136">Weird Business Stories You Won&#x27;t Find Anywhere Else Every Morning</a></h3>
+    <p>Subscribe to The Hustle for a daily roundup of unconventional business news and trends delivered Monday through Friday. Access is always free and comes with a library of business-building resources. The publication also features an all-original deep dive on Sunday, called &quot;The Sunday Story&quot;. Additionally, readers can access a collection of free guides that aim to propel entrepreneurs to success.</p>
+    <div class="tags"><span class="tag t-policy">Policy</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="policy agents model">
+    <div class="via">MarkTechPost</div>
+    <h3><a href="https://www.marktechpost.com/2026/03/28/google-agent-vs-googlebot-google-defines-the-technical-boundary-between-user-triggered-ai-access-and-search-crawling-systems-today/">Google-Agent vs Googlebot: Google Defines the Technical Boundary Between User Triggered AI Access and Search Crawling Systems Today</a></h3>
+    <p>Google has introduced a new technical entity called &quot;Google-Agent&quot; in server logs, which is used for user-initiated AI access requests. This entity operates under different rules than autonomous crawlers, such as Googlebot. Understanding the distinction between Google-Agent and Googlebot is crucial for software developers to distinguish between automated indexers and real-time user requests.</p>
+    <div class="tags"><span class="tag t-policy">Policy</span><span class="tag t-agents">Agents</span><span class="tag t-model">Models</span></div>
+  </div>
+
+  <div class="subsection">Models &amp; Developer Tools</div>
+
+  <div class="card" data-tags="model research">
+    <div class="via">thesequence.substack.com</div>
+    <h3><a href="https://thesequence.substack.com/p/the-sequence-radar-832-last-week">Google Research Drops TurboQuant Algorithm for Efficient LLM Inference</a></h3>
+    <p>Google Research has released TurboQuant, an algorithm that efficiently reduces memory usage for Large Language Model (LLM) inference by compressing key-value cache vectors. The compression method involves converting KV vectors to polar coordinates and reducing each vector to a single sign bit, resulting in 3-bit KV cache compression with zero measurable accuracy loss. This allows for up to 6x memory reduction and an 8x speedup on H100s.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="research">
+    <div class="via">therundown.ai</div>
+    <h3><a href="https://www.therundown.ai/subscribe">Learn AI in just 5 minutes a day with our exclusive training</a></h3>
+    <p>A training program claims to teach AI concepts in just 5 minutes a day, with over 2 million registered users from companies such as Apple, OpenAI, and NASA. Upon registration, users can complete a quiz to receive a customized learning plan. The program also provides access to the latest AI news and its applications.</p>
+    <div class="tags"><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card">
+    <div class="via">store.thehustle.co</div>
+    <h3><a href="https://store.thehustle.co/?_hsenc=p2ANqtz-9CkL1kaEaiY5voDs-Ho0KASJqRsUxtaygAmsgJ7nvkOSEHNEU-Hu7KO3qZBsPLXDRScRiKY5S4h7DHdU2nJolK1S4o2A&amp;_hsmi=410851136">Candles Mugs Hats and Tees for Sale Starting at Just $5.75</a></h3>
+    <p>The product offerings include a scented candle ($8.00), a steel campfire mug ($14.00), and various apparel items from Bella + Canvas, such as hooded long sleeve tees ($40-$43) and poly-cotton fleece sweatshirts ($52.50-$55.50). A desk organizer ($30.00) and a notebook ($5.75) are also available for purchase. Some products have multiple variants with different price ranges. A 23oz stainless steel tumbler is priced at $20.00.</p>
+  </div>
+  <div class="card">
+    <div class="via">thehustle.co</div>
+    <h3><a href="https://thehustle.co/refer-the-hustle?_hsenc=p2ANqtz-9CkL1kaEaiY5voDs-Ho0KASJqRsUxtaygAmsgJ7nvkOSEHNEU-Hu7KO3qZBsPLXDRScRiKY5S4h7DHdU2nJolK1S4o2A&amp;_hsmi=410851136">Share The Hustle with Friends and Get Exclusive Perks</a></h3>
+    <p>To receive exclusive perks and credit for referrals, share a unique link (https://thehustle.co/join?ref=6693394292) with friends, who must subscribe through that link and confirm their subscription via email to credit the referrer. The person being referred can also purchase items from the shop even outside of the program.</p>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">VentureBeat - AI</div>
+    <h3><a href="https://venturebeat.com/orchestration/when-ai-turns-software-development-inside-out-170-throughput-at-80-headcount">When AI turns software development inside-out: 170% throughput at 80% headcount</a></h3>
+    <p>An engineering organization achieved 170% throughput at 80% headcount after implementing AI-first workflows. This resulted in subjective speed increase of twice as fast. Senior engineers who transitioned from traditional software development processes saw a significant improvement in productivity, with one example showing a drastic reduction in time spent on writing code and testing. The organization also improved quality assurance by automating unit and end-to-end tests, leading to higher business value from engineering work.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model agents research">
+    <div class="via">MarkTechPost</div>
+    <h3><a href="https://www.marktechpost.com/2026/03/29/chroma-releases-context-1-a-20b-agentic-search-model-for-multi-hop-retrieval-context-management-and-scalable-synthetic-task-generation/">Chroma Releases Context-1: A 20B Agentic Search Model for Multi-Hop Retrieval, Context Management, and Scalable Synthetic Task Generation</a></h3>
+    <p>Chroma releases Context-1, a 20 billion parameter agentic search model designed for multi-hop retrieval, context management, and scalable synthetic task generation. The current practice of expanding memory in AI models has led to issues with latency and astronomical storage needs. Chroma&#x27;s solution aims to address these problems in Retrieval-Augmented Generation (RAG) systems.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-agents">Agents</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="agents research">
+    <div class="via">MarkTechPost</div>
+    <h3><a href="https://www.marktechpost.com/2026/03/28/a-coding-guide-to-exploring-nanobots-full-agent-pipeline-from-wiring-up-tools-and-memory-to-skills-subagents-and-cron-scheduling/">A Coding Guide to Exploring nanobot’s Full Agent Pipeline, from Wiring Up Tools and Memory to Skills, Subagents, and Cron Scheduling</a></h3>
+    <p>nanobot is an ultra-lightweight personal AI agent framework with 4,000 lines of Python code, capable of full agent capabilities. The tutorial guides users through recreating its core subsystems manually, including wiring up tools and memory, skills, subagents, and cron scheduling. The framework is from HKUDS, a project that allows for in-depth exploration of nanobot&#x27;s agent pipeline. The tutorial is part of the MarkTechPost website.</p>
+    <div class="tags"><span class="tag t-agents">Agents</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model voice">
+    <div class="via">MarkTechPost</div>
+    <h3><a href="https://www.marktechpost.com/2026/03/28/mistral-ai-releases-voxtral-tts-a-4b-open-weight-streaming-speech-model-for-low-latency-multilingual-voice-generation/">Mistral AI Releases Voxtral TTS: A 4B Open-Weight Streaming Speech Model for Low-Latency Multilingual Voice Generation</a></h3>
+    <p>Mistral AI has released an open-weight text-to-speech model called Voxtral TTS, marking its entry into audio generation. The model is designed for low-latency multilingual voice generation and can be used to provide a direct competitor to proprietary voice APIs in the developer ecosystem. Voxtral TTS follows Mistral&#x27;s previous releases of transcription and language models. It completes the &quot;output layer&quot; of the audio stack.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-voice">Voice AI</span></div>
+  </div>
+  <div class="card" data-tags="agents research">
+    <div class="via">Towards Data Science</div>
+    <h3><a href="https://towardsdatascience.com/using-openclaw-as-a-force-multiplier-what-one-person-can-ship-with-autonomous-agents/">Using OpenClaw as a Force Multiplier: What One Person Can Ship with Autonomous Agents</a></h3>
+    <p>Using OpenClaw, one person can achieve a significant increase in output by leveraging autonomous agents, reportedly ten times the previous rate of work.</p>
+    <div class="tags"><span class="tag t-agents">Agents</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="agents research model">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1s6a7gm/universal_rl_approximation/">Universal RL Approximation</a></h3>
+    <p>AIXI, a theoretical RL agent, has several approximations, including MC-AIXI-CTW, which Infotheory&#x27;s library implements with ensemble models. This implementation allows for exceeding the capability of Context-Tree Weighting while maintaining its theoretical properties. Infotheory&#x27;s MC-AIXI-CTW base is also faster and more memory-efficient than competitors PyAIXI and MC-AIXI-CPP. Infotheory compiles to WebAssembly, enabling a web demo of MC-AIXI with customizable models and agent parameters.</p>
+    <div class="tags"><span class="tag t-agents">Agents</span><span class="tag t-research">Research</span><span class="tag t-model">Models</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1s6hhcp/i_trained_an_ai_to_play_resident_evil_4_remake/">I trained an AI to play Resident Evil 4 Remake using Behavioral Cloning + LSTM</a></h3>
+    <p>A researcher used Behavioral Cloning and LSTM to train an AI to play Resident Evil 4 Remake, recording gameplay trajectories of actions like running, shooting, and reloading. The AI handled single enemies reasonably well but struggled with fight-or-flee decisions when multiple enemies were on screen simultaneously. This nuance was difficult to imitate without more data.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1s5yp46/replicating_sethblings_mario_from_2015_that/">Replicating SethBling&#x27;s MarI/O from 2015, that inspired me to get into Reinforcement Learning 10 years later</a></h3>
+    <p>SethBling implemented Neuroevolution of Augmenting Topologies in Super Mario World in 2015. A 14-year-old at the time, a user attempted to replicate this work 10 years later while studying Machine Learning and specializing in Reinforcement Learning. The replication effort is now available on GitHub as &quot;SimpleNEAT&quot;.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="research agents">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1s66d85/have_you_tried_doing_some_selfimprovement_for/">Have you tried doing some self-improvement for agents?</a></h3>
+    <p>Researchers and developers are exploring methods for self-improving agents that can detect failures, diagnose root causes, and adjust their prompts or strategies accordingly. Examples of such systems include Reflexion, APO, ProTeGi, MemAPO, AutoPDL, Self-Challenging Agents, and Karpathy&#x27;s AutoResearch loop. These systems aim to close the full loop from attempt to prompt rewrite and persistence, with some handling prompt drift and combining with RL-based reward signals. Several frameworks and production systems are being developed or used for these applications.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-agents">Agents</span></div>
+  </div>
+
+  <div class="subsection">Safety, Ethics &amp; Society</div>
+
+  <div class="card" data-tags="health ethics research">
+    <div class="via">thehustle.co</div>
+    <h3><a href="https://thehustle.co/?_hsenc=p2ANqtz-9CkL1kaEaiY5voDs-Ho0KASJqRsUxtaygAmsgJ7nvkOSEHNEU-Hu7KO3qZBsPLXDRScRiKY5S4h7DHdU2nJolK1S4o2A&amp;_hsmi=410851136">The Inventor Behind the First At-Home Pregnancy Test Speaks Out</a></h3>
+    <p>For decades, the inventor of the first at-home pregnancy test has watched others take credit for her work. Her story is finally starting to be recognized as a pioneering achievement in medical technology. The inventor&#x27;s contributions have had a significant impact on women&#x27;s healthcare and reproductive rights.</p>
+    <div class="tags"><span class="tag t-health">Healthcare</span><span class="tag t-ethics">Ethics</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="safety ethics research">
+    <div class="via">The Guardian - Artificial Intelligence</div>
+    <h3><a href="https://www.theguardian.com/technology/2026/mar/29/ai-written-books-novel-shy-girl-publishers">‘Soon publishers won’t stand a chance’: literary world in struggle to detect AI-written books</a></h3>
+    <p>Publishers are struggling to detect AI-written books, with two recent cases of suspected AI use resulting in a US horror novel being cancelled and a UK book being discontinued. Literary agents have also noticed a shift towards more formulaic submission letters from authors, which may indicate AI-generated work. The literary world is feeling &quot;a cold shiver&quot; as the rise of AI-written content threatens to disrupt traditional publishing practices. Some experts suspect that AI-generated submissions are becoming more prevalent in the industry.</p>
+    <div class="tags"><span class="tag t-safety">Safety</span><span class="tag t-ethics">Ethics</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="health research">
+    <div class="via">The Guardian - Artificial Intelligence</div>
+    <h3><a href="https://www.theguardian.com/australia-news/2026/mar/29/doctors-using-ai-for-notes-australia">Two in five Australian GPs use AI scribes to record patient notes – but do they trade care for convenience?</a></h3>
+    <p>Approximately 40% of Australian GPs use artificial intelligence (AI) scribes to record patient notes. Some doctors claim this technology improves their ability to connect with patients. However, advocates argue that relying on AI scribes may compromise patient care for the sake of convenience. Patients are supposed to be asked for consent before an AI scribe is used to record their conversation.</p>
+    <div class="tags"><span class="tag t-health">Healthcare</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="agents safety research">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1s66e18/have_you_tried_doing_some_selfimprovement_for/">Have you tried doing some self-improvement for agents?</a></h3>
+    <p>The author is interested in self-improving agents that can detect failures and adjust their prompts or strategy to prevent similar failures from happening again, particularly systems that close the full loop of attempt → detection → diagnosis → rewriting prompt → persistence → verification. They are aware of existing work such as Reflexion, APO, ProTeGi, MemAPO, AutoPDL, Self-Challenging Agents, and others. The author is looking for examples of frameworks or production systems implementing this type of self-improvement. They also want to know how people handle prompt drift and whether anyone is combining self-reflection with RL-based reward signals.</p>
+    <div class="tags"><span class="tag t-agents">Agents</span><span class="tag t-safety">Safety</span><span class="tag t-research">Research</span></div>
+  </div>
+
+  <div class="subsection">Robotics</div>
+
+  <div class="card robotics" data-tags="agents robotics">
+    <div class="via">The Robot Report</div>
+    <h3><a href="https://www.therobotreport.com/shield-ai-raises-2b-defense-drones-acquire-aechelon/">Shield AI raises $2B for defense drone development, to acquire Aechelon</a></h3>
+    <p>Shield AI has raised $2 billion in funding for its defense drone development, including an acquisition of Aechelon, which provides high-fidelity simulation for aircraft testing and pilot training. Shield AI will use the funding to continue developing its technology and integrate Aechelon&#x27;s capabilities into its systems.</p>
+    <div class="tags"><span class="tag t-agents">Agents</span><span class="tag t-robotics">Robotics</span></div>
+  </div>
+  <div class="card robotics" data-tags="robotics research">
+    <div class="via">The Robot Report</div>
+    <h3><a href="https://www.therobotreport.com/mind-robotics-raises-series-a-develop-ai-driven-industrial-automation/">Mind Robotics raises Series A to develop AI-driven industrial automation</a></h3>
+    <p>Mind Robotics has raised millions of dollars to develop AI robots that mimic human-like dexterity, adaptability, and reasoning in industrial settings using production data.</p>
+    <div class="tags"><span class="tag t-robotics">Robotics</span><span class="tag t-research">Research</span></div>
+  </div>
+  </div>
+
+  <div class="problem-feeds">
+    <h2>⚠️ Problem Feeds</h2>
+    <ul>
+      <li><strong>Microsoft Research</strong> — <a href="https://www.microsoft.com/en-us/research/feed/">https://www.microsoft.com/en-us/research/feed/</a> — <span class="error-reason">[Errno 54] Connection reset by peer</span></li>
+      <li><strong>The Sequence</strong> — <a href="https://thesequence.substack.com/feed">https://thesequence.substack.com/feed</a> — <span class="error-reason">[Errno 54] Connection reset by peer</span></li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  AI &amp; Robotics Daily Digest &bull; Sunday, March 29, 2026 — 8:08 AM ET &bull; Sources: Gmail + 22 RSS items via ai-techradar-agent
+</footer>
+
+<script>
+(function(){
+  const active = new Set();
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      active.has(chip.dataset.tag) ? active.delete(chip.dataset.tag) : active.add(chip.dataset.tag);
+      applyFilter();
+    });
+  });
+  function applyFilter() {
+    document.querySelectorAll('.filter-chip').forEach(c => {
+      c.classList.toggle('active', active.has(c.dataset.tag));
+      c.classList.toggle('dimmed', active.size > 0 && !active.has(c.dataset.tag));
+    });
+    document.querySelectorAll('.card').forEach(card => {
+      if (active.size === 0) { card.classList.remove('hidden'); return; }
+      const tags = (card.dataset.tags || '').split(' ');
+      card.classList.toggle('hidden', !tags.some(t => active.has(t)));
+    });
+    document.querySelectorAll('.subsection').forEach(sub => {
+      let el = sub.nextElementSibling, any = false;
+      while (el && !el.classList.contains('subsection') && !el.classList.contains('section-header')) {
+        if (el.classList.contains('card') && !el.classList.contains('hidden')) any = true;
+        el = el.nextElementSibling;
+      }
+      sub.classList.toggle('hidden', !any);
+    });
+    document.querySelectorAll('.section-block').forEach(block => {
+      const any = [...block.querySelectorAll('.card')].some(c => !c.classList.contains('hidden'));
+      block.classList.toggle('hidden', !any);
+    });
+  }
+})();
+</script>
+</body>
+</html>
