@@ -9,9 +9,11 @@ Usage:
 """
 
 import argparse
+import io
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
+from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ET = ZoneInfo("America/New_York")
@@ -27,12 +29,25 @@ from publisher import save_html, commit_and_push
 MAX_LINKS_PER_EMAIL = 5
 
 _log_lock = threading.Lock()
+_log_file: io.TextIOWrapper | None = None
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def _open_log_file(date: datetime) -> io.TextIOWrapper:
+    log_dir = _REPO_ROOT / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    log_path = log_dir / f"ai-techradar-agent-{date.strftime('%Y-%m-%d')}.log"
+    return open(log_path, "a", buffering=1)
 
 
 def log(msg: str) -> None:
     ts = datetime.now().strftime("%H:%M:%S")
+    line = f"[{ts}] {msg}"
     with _log_lock:
-        print(f"[{ts}] {msg}", flush=True)
+        print(line, flush=True)
+        if _log_file:
+            print(line, file=_log_file, flush=True)
 
 
 # ---------------------------------------------------------------------------
@@ -46,6 +61,28 @@ _AI_KEYWORDS = {
     "anthropic", "openai", "google deepmind", "nvidia ai", "nvidia cuda",
     "hugging face",
 }
+
+# Patterns that strongly indicate promotional/advertisement content
+import re as _re
+_PRICE_PATTERN = _re.compile(r'\$\d+(\.\d{2})?')
+_AD_PHRASES = {
+    "shop now", "buy now", "add to cart", "free shipping", "order now",
+    "gift idea", "gift guide", "on sale", "discount code",
+    "promo code", "coupon", "limited time", "shop our", "browse our",
+    "new arrivals", "bestseller", "best seller",
+}
+
+
+def _is_advertisement(title: str, text: str) -> bool:
+    """Return True if the content looks like a promotional email or advertisement."""
+    combined = (title + " " + text).lower()
+    # Three or more price mentions is a strong signal
+    if len(_PRICE_PATTERN.findall(combined)) >= 3:
+        return True
+    # Any explicit ad phrase
+    if any(phrase in combined for phrase in _AD_PHRASES):
+        return True
+    return False
 
 
 def _process_one(idx: int, total: int, item: dict, source_type: str) -> dict | None:
@@ -71,6 +108,11 @@ def _process_one(idx: int, total: int, item: dict, source_type: str) -> dict | N
         return None
     else:
         log(f"  [{idx}/{total}] {label}: {title[:70]}")
+
+    # Advertisement pre-filter — drop promotional/sales emails before any LLM call
+    if _is_advertisement(title, existing_text):
+        log(f"    [{idx}] → skip (advertisement)")
+        return None
 
     # Keyword pre-filter — avoid an LLM call for obvious AI content
     lowered = (title + " " + existing_text).lower()
@@ -175,6 +217,8 @@ def _fetch_links_parallel(email_items: list[dict]) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def main() -> None:
+    global _log_file
+
     parser = argparse.ArgumentParser(description="Generate the daily AI Techradar digest.")
     parser.add_argument("--hours", type=int, default=LOOKBACK_HOURS,
                         help=f"Lookback window in hours (default: {LOOKBACK_HOURS})")
@@ -185,6 +229,15 @@ def main() -> None:
     args = parser.parse_args()
 
     now = datetime.now(ET)
+    _log_file = _open_log_file(now)
+    try:
+        _run(args, now)
+    finally:
+        _log_file.close()
+        _log_file = None
+
+
+def _run(args: argparse.Namespace, now: datetime) -> None:
     log(f"=== AI Techradar Agent ===")
     log(f"Date:            {now.strftime('%Y-%m-%d %H:%M ET')}")
     log(f"Lookback:        {args.hours}h")
