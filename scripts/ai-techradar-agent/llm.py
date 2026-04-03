@@ -2,22 +2,46 @@
 
 import json
 import sys
+import threading
+import time
 
 import ollama
 
 from config import SUMMARIZE_MODEL
 
+_llm_call_lock = threading.Lock()
+_llm_call_count = 0
+_llm_total_duration = 0.0
+
+
+def llm_stats() -> tuple[int, float]:
+    """Return (call_count, total_duration_seconds) accumulated so far."""
+    with _llm_call_lock:
+        return _llm_call_count, _llm_total_duration
+
 
 def _chat(prompt: str, model: str, json_mode: bool = False) -> str:
+    global _llm_call_count, _llm_total_duration
+
     kwargs: dict = {}
     if json_mode:
         kwargs["format"] = "json"
 
+    t0 = time.perf_counter()
     response = ollama.chat(
         model=model,
         messages=[{"role": "user", "content": prompt}],
         **kwargs,
     )
+    elapsed = time.perf_counter() - t0
+
+    with _llm_call_lock:
+        _llm_call_count += 1
+        _llm_total_duration += elapsed
+        cnt = _llm_call_count
+
+    print(f"  [llm:{cnt}] {model} {elapsed:.3f}s", flush=True)
+
     return response["message"]["content"].strip()
 
 

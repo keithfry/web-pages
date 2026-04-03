@@ -22,7 +22,7 @@ from config import LOOKBACK_HOURS, SUMMARIZE_MODEL, GENERATE_MODEL, LLM_WORKERS,
 from feed_fetcher import fetch_all_feeds, is_arxiv
 from email_fetcher import fetch_emails
 from article_fetcher import fetch_article_text, source_name_from_url
-from llm import summarize, summarize_title, tag, classify_ai, deduplicate
+from llm import summarize, summarize_title, tag, classify_ai, deduplicate, llm_stats
 from html_generator import generate_html
 from publisher import save_html, commit_and_push
 
@@ -332,6 +332,8 @@ def _run(args: argparse.Namespace, now: datetime) -> None:
     log(f"  Saved: {out_path}")
 
     if args.dry_run:
+        call_count, total_duration = llm_stats()
+        log(f"LLM calls: {call_count}  total time: {total_duration:.3f}s")
         log("")
         log("Dry run complete — skipping git commit and push.")
         log(f"Preview: open {out_path}")
@@ -341,6 +343,9 @@ def _run(args: argparse.Namespace, now: datetime) -> None:
     log("")
     log("── Step 8: Committing and pushing ──")
     commit_and_push(out_path, now)
+
+    call_count, total_duration = llm_stats()
+    log(f"LLM calls: {call_count}  total time: {total_duration:.3f}s")
     log("Done.")
 
 
