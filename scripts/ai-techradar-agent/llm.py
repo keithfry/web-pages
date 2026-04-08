@@ -153,7 +153,7 @@ def deduplicate(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
         if not isinstance(group, list) or len(group) < 2:
             continue
         # Clamp indices to valid range
-        group = [i for i in group if 0 <= i < len(items)]
+        group = [i for i in group if isinstance(i, int) and 0 <= i < len(items)]
         if len(group) < 2:
             continue
         best = max(group, key=lambda i: len(items[i].get("summary", "")))
