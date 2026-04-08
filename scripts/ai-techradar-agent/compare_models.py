@@ -35,7 +35,7 @@ def _get_model_size(model: str) -> str:
     try:
         models = ollama.list()["models"]
         for m in models:
-            if m["name"] == model or m["model"] == model:
+            if m["model"] == model:
                 size_bytes = m.get("size", 0)
                 size_gb = size_bytes / 1e9
                 return f"{size_gb:.1f} GB"
