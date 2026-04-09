@@ -20,10 +20,10 @@ def llm_stats() -> tuple[int, float]:
         return _llm_call_count, _llm_total_duration
 
 
-def _chat(prompt: str, model: str, json_mode: bool = False) -> str:
+def _chat(prompt: str, model: str, json_mode: bool = False, think: bool = False) -> str:
     global _llm_call_count, _llm_total_duration
 
-    kwargs: dict = {}
+    kwargs: dict = {"think": think}
     if json_mode:
         kwargs["format"] = "json"
 

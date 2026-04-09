@@ -18,6 +18,7 @@ import time
 from datetime import datetime
 
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import ollama
@@ -26,7 +27,7 @@ from config import LOOKBACK_HOURS
 from feed_fetcher import fetch_all_feeds
 
 MODELS = ["gemma4:e4b", "llama3.1:8b"]
-JUDGE_MODEL = "llama3.1:8b"
+JUDGE_MODEL = "qwen3.5:35b-a3b"
 ARTICLE_COUNT = 50
 
 
@@ -44,7 +45,9 @@ def _get_model_size(model: str) -> str:
     return "?"
 
 
-def _summarize(article_num: int, title: str, text: str, model: str) -> tuple[str, float]:
+def _summarize(
+    article_num: int, title: str, text: str, model: str
+) -> tuple[str, float]:
     prompt = (
         "Summarize the following article in 3-4 sentences. "
         "Be specific and factual. Return only the summary, no preamble.\n\n"
@@ -54,6 +57,7 @@ def _summarize(article_num: int, title: str, text: str, model: str) -> tuple[str
     response = ollama.chat(
         model=model,
         messages=[{"role": "user", "content": prompt}],
+        think=False,
     )
     elapsed = time.perf_counter() - t0
     print(f"  [#{article_num}] {model} {elapsed:.2f}s", flush=True)
@@ -61,9 +65,7 @@ def _summarize(article_num: int, title: str, text: str, model: str) -> tuple[str
 
 
 def _judge(article_num: int, title: str, summaries: dict[str, str]) -> dict:
-    sections = "\n\n".join(
-        f"=== Model: {m} ===\n{s}" for m, s in summaries.items()
-    )
+    sections = "\n\n".join(f"=== Model: {m} ===\n{s}" for m, s in summaries.items())
     prompt = (
         "You are evaluating AI-generated article summaries. "
         "Score each summary from 0.0 to 10.0 based on accuracy, clarity, "
@@ -79,13 +81,18 @@ def _judge(article_num: int, title: str, summaries: dict[str, str]) -> dict:
         model=JUDGE_MODEL,
         messages=[{"role": "user", "content": prompt}],
         format="json",
+        think=False,
     )
     elapsed = time.perf_counter() - t0
     print(f"  [#{article_num}] {JUDGE_MODEL} (judge) {elapsed:.2f}s", flush=True)
     try:
         return json.loads(response["message"]["content"])
     except json.JSONDecodeError:
-        return {"scores": {m: 0.0 for m in summaries}, "winner": "unknown", "reasoning": "parse error"}
+        return {
+            "scores": {m: 0.0 for m in summaries},
+            "winner": "unknown",
+            "reasoning": "parse error",
+        }
 
 
 def _generate_image(
@@ -95,16 +102,24 @@ def _generate_image(
     avg_scores: dict[str, float],
     final_scores: dict[str, float],
 ) -> None:
-    col_labels = ["Model", "Size", "Avg Latency", "Avg Quality\nScore (0–10)", "Final Score\n(0–10)"]
+    col_labels = [
+        "Model",
+        "Size",
+        "Avg Latency",
+        "Avg Quality\nScore (0–10)",
+        "Final Score\n(0–10)",
+    ]
     rows = []
     for m in models:
-        rows.append([
-            m,
-            sizes.get(m, "?"),
-            f"{avg_latency[m]:.2f}s",
-            f"{avg_scores[m]:.2f}",
-            f"{final_scores[m]:.2f}",
-        ])
+        rows.append(
+            [
+                m,
+                sizes.get(m, "?"),
+                f"{avg_latency[m]:.2f}s",
+                f"{avg_scores[m]:.2f}",
+                f"{final_scores[m]:.2f}",
+            ]
+        )
 
     # Sort by final score descending
     rows.sort(key=lambda r: float(r[4]), reverse=True)
@@ -140,11 +155,13 @@ def _generate_image(
 
     # Formula note — anchored just below the table
     ax.text(
-        0.5, 0.02,
+        0.5,
+        0.02,
         "Final Score = 0.7 × Avg Quality Score  +  0.3 × Avg Latency",
         transform=ax.transAxes,
         fontsize=10,
-        ha="center", va="bottom",
+        ha="center",
+        va="bottom",
         color="#444444",
         fontfamily="monospace",
         bbox=dict(boxstyle="round,pad=0.5", facecolor="#f5f5f5", edgecolor="#cccccc"),
@@ -170,7 +187,11 @@ def main() -> None:
     # --- Fetch articles ---
     print(f"Fetching RSS feeds (last {args.hours}h)...", flush=True)
     articles, _ = fetch_all_feeds(args.hours)
-    articles = [a for a in articles if a.get("title") and (a.get("summary") or "").strip()]
+    articles = [
+        a
+        for a in articles
+        if a.get("title") and (a.get("body") or a.get("summary") or "").strip()
+    ]
     articles = articles[:ARTICLE_COUNT]
     print(f"Using {len(articles)} articles\n", flush=True)
 
@@ -184,7 +205,7 @@ def main() -> None:
         print(f"── {model}: summarizing {len(articles)} articles ──", flush=True)
         for i, article in enumerate(articles):
             title = article["title"]
-            text = article.get("summary", "") or article.get("body", "")
+            text = article.get("body", "") or article.get("summary", "")
             summary, elapsed = _summarize(i + 1, title, text, model)
             summaries[i][model] = summary
             latencies[model].append(elapsed)
@@ -196,7 +217,10 @@ def main() -> None:
     for i, article in enumerate(articles):
         judgment = _judge(i + 1, article["title"], summaries[i])
         judgments.append(judgment)
-        print(f"  [#{i+1}] winner={judgment.get('winner')}  scores={judgment.get('scores')}", flush=True)
+        print(
+            f"  [#{i+1}] winner={judgment.get('winner')}  scores={judgment.get('scores')}",
+            flush=True,
+        )
     print(flush=True)
 
     # --- Write output file ---
@@ -246,14 +270,22 @@ def main() -> None:
                 except (TypeError, ValueError):
                     pass
 
-    avg_scores = {m: score_totals[m] / score_counts[m] if score_counts[m] else 0.0 for m in MODELS}
-    avg_latency = {m: sum(latencies[m]) / len(latencies[m]) if latencies[m] else 0.0 for m in MODELS}
+    avg_scores = {
+        m: score_totals[m] / score_counts[m] if score_counts[m] else 0.0 for m in MODELS
+    }
+    avg_latency = {
+        m: sum(latencies[m]) / len(latencies[m]) if latencies[m] else 0.0
+        for m in MODELS
+    }
 
     # Final score: 70% quality + 30% speed, both normalized 0–10
     # quality component: avg_score is already 0–10
     # speed component: best (lowest) latency = 10, others scaled proportionally
     min_latency = min(avg_latency.values()) or 1.0
-    speed_scores = {m: (min_latency / avg_latency[m]) * 10 if avg_latency[m] else 0.0 for m in MODELS}
+    speed_scores = {
+        m: (min_latency / avg_latency[m]) * 10 if avg_latency[m] else 0.0
+        for m in MODELS
+    }
     final_scores = {m: 0.7 * avg_scores[m] + 0.3 * speed_scores[m] for m in MODELS}
 
     lines += ["SUMMARY", "=" * 80]

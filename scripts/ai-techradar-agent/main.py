@@ -92,7 +92,7 @@ def _process_one(idx: int, total: int, item: dict, source_type: str) -> dict | N
     """
     label = "email" if source_type == "email" else "article"
     title = item.get("title", "").strip()
-    existing_text = item.get("summary") or item.get("body", "")
+    existing_text = item.get("body") or item.get("summary", "")
 
     # Linked articles have no title — derive from content
     if not title and item.get("_from_email_link"):
