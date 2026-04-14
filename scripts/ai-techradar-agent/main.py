@@ -2,10 +2,13 @@
 """AI Techradar Agent — daily AI/Robotics digest generator.
 
 Usage:
-    uv run main.py                  # 24h lookback, commit and push
-    uv run main.py --hours 48       # override lookback window
-    uv run main.py --dry-run        # generate HTML only, no git operations
-    uv run main.py --no-email       # skip Gmail (RSS only)
+    uv run main.py                          # 24h lookback ending now, commit and push
+    uv run main.py --hours 48               # override lookback window
+    uv run main.py --date 2026-04-13        # use a specific date (time defaults to now)
+    uv run main.py --time 08:00             # cut off at 08:00 ET today
+    uv run main.py --date 2026-04-13 --time 08:00  # cut off at 08:00 ET on that date
+    uv run main.py --dry-run                # generate HTML only, no git operations
+    uv run main.py --no-email               # skip Gmail (RSS only)
 """
 
 import argparse
@@ -70,6 +73,18 @@ _AD_PHRASES = {
     "gift idea", "gift guide", "on sale", "discount code",
     "promo code", "coupon", "limited time", "shop our", "browse our",
     "new arrivals", "bestseller", "best seller",
+    # Webinar / promotional event phrases
+    "register now", "register for free", "register today", "save your seat",
+    "save my seat", "reserve your spot", "claim your spot",
+    "join us live", "join us for a", "join our webinar", "join our live",
+    "free webinar", "live webinar", "upcoming webinar",
+}
+
+# Webinar/event phrases to check in the summarized output
+_WEBINAR_PHRASES = {
+    "webinar", "web seminar", "virtual event", "online event",
+    "register to attend", "register for this", "register at",
+    "upcoming event", "live session", "live demo",
 }
 
 
@@ -83,6 +98,26 @@ def _is_advertisement(title: str, text: str) -> bool:
     if any(phrase in combined for phrase in _AD_PHRASES):
         return True
     return False
+
+
+def _is_webinar_summary(summary: str) -> bool:
+    """Return True if the summary is primarily about attending a webinar or promotional event.
+
+    Called after summarization so the LLM-generated text is checked, catching cases
+    where the raw feed body didn't trigger the pre-filter.
+    """
+    lowered = summary.lower()
+    # Must mention a webinar/event term at all
+    if not any(phrase in lowered for phrase in _WEBINAR_PHRASES):
+        return False
+    # Additionally require a call-to-action or registration signal — avoids dropping
+    # legitimate news articles that merely mention a conference in passing.
+    cta_signals = {
+        "register", "sign up", "sign-up", "rsvp", "attend", "join us",
+        "reserve", "claim your", "save your seat", "free to attend",
+        "limited seats", "limited spots",
+    }
+    return any(signal in lowered for signal in cta_signals)
 
 
 def _process_one(idx: int, total: int, item: dict, source_type: str) -> dict | None:
@@ -125,6 +160,12 @@ def _process_one(idx: int, total: int, item: dict, source_type: str) -> dict | N
 
     log(f"    [{idx}] → summarizing...")
     summary_text = summarize(title, existing_text, SUMMARIZE_MODEL)
+
+    # Post-summarization webinar filter — drop if summary is primarily about attending an event
+    if _is_webinar_summary(summary_text):
+        log(f"    [{idx}] → skip (webinar/promotional event)")
+        return None
+
     log(f"    [{idx}] → tagging...")
     tags = tag(title, summary_text, SUMMARIZE_MODEL)
     log(f"    [{idx}] → done  tags={tags}")
@@ -222,6 +263,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Generate the daily AI Techradar digest.")
     parser.add_argument("--hours", type=int, default=LOOKBACK_HOURS,
                         help=f"Lookback window in hours (default: {LOOKBACK_HOURS})")
+    parser.add_argument("--date", type=str, default=None,
+                        help="Reference date YYYY-MM-DD in ET (default: today)")
+    parser.add_argument("--time", type=str, default=None,
+                        help="Reference time HH:MM in ET (default: current time). "
+                             "Only content published/received before this time is included.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Generate HTML only, skip git commit and push")
     parser.add_argument("--no-email", action="store_true",
@@ -229,17 +275,28 @@ def main() -> None:
     args = parser.parse_args()
 
     now = datetime.now(ET)
-    _log_file = _open_log_file(now)
+
+    # Build the as_of reference time from --date / --time if provided
+    if args.date or args.time:
+        ref_date = datetime.strptime(args.date, "%Y-%m-%d").date() if args.date else now.date()
+        ref_time_str = args.time or now.strftime("%H:%M")
+        ref_hour, ref_minute = (int(p) for p in ref_time_str.split(":"))
+        as_of = datetime(ref_date.year, ref_date.month, ref_date.day,
+                         ref_hour, ref_minute, tzinfo=ET)
+    else:
+        as_of = now
+
+    _log_file = _open_log_file(as_of)
     try:
-        _run(args, now)
+        _run(args, as_of)
     finally:
         _log_file.close()
         _log_file = None
 
 
-def _run(args: argparse.Namespace, now: datetime) -> None:
+def _run(args: argparse.Namespace, as_of: datetime) -> None:
     log(f"=== AI Techradar Agent ===")
-    log(f"Date:            {now.strftime('%Y-%m-%d %H:%M ET')}")
+    log(f"As-of:           {as_of.strftime('%Y-%m-%d %H:%M ET')}")
     log(f"Lookback:        {args.hours}h")
     log(f"Summarize model: {SUMMARIZE_MODEL}")
     log(f"Generate model:  {GENERATE_MODEL}")
@@ -248,9 +305,12 @@ def _run(args: argparse.Namespace, now: datetime) -> None:
     log(f"Dry run:         {args.dry_run}")
     log("")
 
+    # as_of in UTC for fetchers
+    as_of_utc = as_of.astimezone(timezone.utc)
+
     # --- Step 1: Fetch RSS feeds ---
     log("── Step 1: Fetching RSS feeds ──")
-    rss_articles, rss_errors = fetch_all_feeds(args.hours)
+    rss_articles, rss_errors = fetch_all_feeds(args.hours, as_of=as_of_utc)
     log(f"  {len(rss_articles)} articles fetched, {len(rss_errors)} feed errors")
     if rss_errors:
         for e in rss_errors:
@@ -262,7 +322,7 @@ def _run(args: argparse.Namespace, now: datetime) -> None:
     if not args.no_email:
         log("── Step 2: Fetching Gmail ──")
         try:
-            email_items = fetch_emails(args.hours)
+            email_items = fetch_emails(args.hours, as_of=as_of_utc)
             log(f"  {len(email_items)} emails fetched")
             for i, e in enumerate(email_items, 1):
                 log(f"  {i}. [{e['source']}] {e['title'][:70]}")
@@ -321,14 +381,14 @@ def _run(args: argparse.Namespace, now: datetime) -> None:
         articles=articles,
         papers=papers,
         errors=rss_errors,
-        date=now,
+        date=as_of,
     )
     log(f"  HTML generated ({len(html):,} chars)")
     log("")
 
     # --- Step 7: Save ---
     log("── Step 7: Saving ──")
-    out_path = save_html(html, now)
+    out_path = save_html(html, as_of)
     log(f"  Saved: {out_path}")
 
     if args.dry_run:
@@ -342,7 +402,7 @@ def _run(args: argparse.Namespace, now: datetime) -> None:
     # --- Step 8: Commit and push ---
     log("")
     log("── Step 8: Committing and pushing ──")
-    commit_and_push(out_path, now)
+    commit_and_push(out_path, as_of)
 
     call_count, total_duration = llm_stats()
     log(f"LLM calls: {call_count}  total time: {total_duration:.3f}s")

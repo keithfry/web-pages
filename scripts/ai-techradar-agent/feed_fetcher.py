@@ -40,7 +40,7 @@ def parse_entry_date(entry) -> datetime | None:
     return None
 
 
-def fetch_feed(source: str, feed_url: str, cutoff: datetime) -> dict:
+def fetch_feed(source: str, feed_url: str, cutoff: datetime, as_of: datetime | None = None) -> dict:
     try:
         parsed = feedparser.parse(feed_url)
     except Exception as e:
@@ -51,6 +51,8 @@ def fetch_feed(source: str, feed_url: str, cutoff: datetime) -> dict:
     for entry in parsed.entries:
         pub = parse_entry_date(entry)
         if pub and pub < cutoff:
+            continue
+        if pub and as_of and pub > as_of:
             continue
 
         summary = getattr(entry, "summary", "") or ""
@@ -72,21 +74,27 @@ def is_arxiv(source: str) -> bool:
     return "arxiv" in source.lower()
 
 
-def fetch_all_feeds(hours: int = LOOKBACK_HOURS) -> tuple[list[dict], list[dict]]:
+def fetch_all_feeds(hours: int = LOOKBACK_HOURS, as_of: datetime | None = None) -> tuple[list[dict], list[dict]]:
     """Fetch all verified feeds.
+
+    Args:
+        hours:  Lookback window in hours.
+        as_of:  Upper bound for item publication time (defaults to now).
+                Items published after this time are excluded.
 
     Returns:
         (articles, errors) where articles is a flat list of item dicts and
         errors is a list of {source, feed_url, error} dicts.
     """
     feeds = load_feeds(FEEDS_CSV)
-    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+    reference = as_of or datetime.now(timezone.utc)
+    cutoff = reference - timedelta(hours=hours)
 
     articles: list[dict] = []
     errors: list[dict] = []
 
     for feed in feeds:
-        result = fetch_feed(feed["source"], feed["feed_url"], cutoff)
+        result = fetch_feed(feed["source"], feed["feed_url"], cutoff, as_of=as_of)
         if "error" in result:
             errors.append(result)
         else:

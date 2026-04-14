@@ -1,6 +1,7 @@
 """Thin Ollama wrapper for all LLM operations in the pipeline."""
 
 import json
+import re
 import sys
 import threading
 import time
@@ -18,6 +19,19 @@ def llm_stats() -> tuple[int, float]:
     """Return (call_count, total_duration_seconds) accumulated so far."""
     with _llm_call_lock:
         return _llm_call_count, _llm_total_duration
+
+
+def _extract_json(text: str) -> str:
+    """Extract the first JSON object from text that may contain prose or markdown code blocks."""
+    # Strip markdown code fences: ```json ... ``` or ``` ... ```
+    fence = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
+    if fence:
+        return fence.group(1)
+    # Fall back to first {...} block in the text
+    brace = re.search(r"\{.*?\}", text, re.DOTALL)
+    if brace:
+        return brace.group(0)
+    return text
 
 
 def _chat(prompt: str, model: str, json_mode: bool = False, think: bool = False) -> str:
@@ -50,7 +64,8 @@ def summarize_title(text: str, model: str = SUMMARIZE_MODEL) -> str:
     prompt = (
         "Write a concise, specific headline (under 12 words) for the following article. "
         "Return only the headline, no punctuation at the end, no quotes.\n\n"
-        f"Article:\n{text[:2000]}"
+        f"Article:\n{text[:2000]}\n\n"
+        "Headline:"
     )
     return _chat(prompt, model).strip('"').strip()
 
@@ -91,7 +106,7 @@ def tag(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> list[str]:
     )
     raw = _chat(prompt, model, json_mode=True)
     try:
-        data = json.loads(raw)
+        data = json.loads(_extract_json(raw))
         tags = data.get("tags", [])
         valid = {"policy", "model", "agents", "safety", "robotics", "voice", "health", "research", "ethics"}
         return [t for t in tags if t in valid][:3]
@@ -115,7 +130,7 @@ def classify_ai(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> bool:
     )
     raw = _chat(prompt, model, json_mode=True)
     try:
-        return bool(json.loads(raw).get("relevant", False))
+        return bool(json.loads(_extract_json(raw)).get("relevant", False))
     except (json.JSONDecodeError, AttributeError):
         # Default to keeping the item if classification fails
         return True
@@ -142,7 +157,7 @@ def deduplicate(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
     raw = _chat(prompt, model, json_mode=True)
 
     try:
-        groups: list[list[int]] = json.loads(raw).get("duplicates", [])
+        groups: list[list[int]] = json.loads(_extract_json(raw)).get("duplicates", [])
     except (json.JSONDecodeError, AttributeError):
         print(f"[warn] deduplicate() failed to parse JSON: {raw!r}", file=sys.stderr)
         return items

@@ -127,15 +127,21 @@ def _sender_name(headers: list[dict]) -> str:
     return "Unknown"
 
 
-def fetch_emails(hours: int = LOOKBACK_HOURS) -> list[dict]:
-    """Return a list of email dicts from the past *hours* hours.
+def fetch_emails(hours: int = LOOKBACK_HOURS, as_of: datetime | None = None) -> list[dict]:
+    """Return a list of email dicts from the past *hours* hours up to *as_of*.
+
+    Args:
+        hours:  Lookback window in hours.
+        as_of:  Upper bound for email delivery time (defaults to now).
+                Emails received after this time are excluded.
 
     Each dict: {title, source, body, links}
     """
     creds = _get_credentials()
     service = build("gmail", "v1", credentials=creds)
 
-    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+    reference = as_of or datetime.now(timezone.utc)
+    cutoff = reference - timedelta(hours=hours)
     # Gmail date filter is day-granularity; we'll re-filter by exact time below
     after_date = cutoff.strftime("%Y/%m/%d")
     query = f"after:{after_date}"
@@ -155,6 +161,8 @@ def fetch_emails(hours: int = LOOKBACK_HOURS) -> list[dict]:
         ts_ms = int(msg.get("internalDate", 0))
         msg_time = datetime.fromtimestamp(ts_ms / 1000, tz=timezone.utc)
         if msg_time < cutoff:
+            continue
+        if as_of and msg_time > as_of:
             continue
 
         headers = msg["payload"].get("headers", [])
