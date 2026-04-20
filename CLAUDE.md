@@ -34,25 +34,27 @@ Server endpoints:
 
 Feed list: `data/ai-rss-feeds.csv` (columns: Company/Source, Verified, Feed URL, Summary). Only rows with `Verified = Y` are fetched by the server.
 
-## Daily Digest Skill
+## Techradar Agent Skill
 
-The `daily-ai-digest` skill (in `skills/`) orchestrates the full pipeline:
-1. Gathers AI-related emails from `kfopenclaw@gmail.com` (past 24h) via Gmail MCP
-2. Fetches RSS feeds via the local server
-3. Deduplicates via Haiku subagents
-4. Generates a styled HTML digest as Opus (orchestrator)
-5. Saves to `techradar/AI/ai-radar-YYYY-MM-DD.html`
-6. Commits and pushes via `/git-push` endpoint (fallback: bash git commands)
+Use `Skill(techradar-agent)` to run the daily AI/Robotics digest pipeline. The skill is defined in `skills/techradar-agent/SKILL.md`.
 
-Model strategy: Opus orchestrates, Haiku handles all summarization/text tasks.
+The agent runs as a standalone Python script (no local server required):
 
-Key constraints for digest generation:
-- Only include content from the past 24 hours
-- arXiv feeds: limit to 10 most recently published papers per feed
-- Output filename pattern: `ai-radar-YYYY-MM-DD.html` (not `ai-digest`)
-- Git commits require `-c user.name="Keith Fry" -c user.email="keithfry@gmail.com"`
-- If `.git/index.lock` exists, delete it before git operations
-- Gmail account is `kfopenclaw@gmail.com`; do NOT mark emails as read
+```bash
+cd scripts/ai-techradar-agent
+uv run main.py --date YYYY-MM-DD --time HH:MM
+```
+
+Default invocation uses today's date at 08:00 ET. Supports `--dry-run`, `--no-email`, and `--hours` overrides.
+
+Pipeline steps:
+1. Fetches RSS feeds from `data/ai-rss-feeds.csv` (Verified=Y rows)
+2. Gathers AI-related emails from `kfopenclaw@gmail.com` via Gmail API
+3. Classifies, summarizes, and deduplicates all content via local Ollama models
+4. Generates a styled HTML digest
+5. Saves to `techradar/AI/ai-radar-YYYY-MM-DD.html` and commits/pushes
+
+Output log: `logs/ai-techradar-agent-YYYY-MM-DD.log`
 
 ## GitHub Actions Workflows
 
