@@ -26,9 +26,9 @@ import ollama
 from config import LOOKBACK_HOURS
 from feed_fetcher import fetch_all_feeds
 
-MODELS = ["gemma4:e4b", "llama3.1:8b"]
-JUDGE_MODEL = "qwen3.5:35b-a3b"
-ARTICLE_COUNT = 50
+MODELS = ["gemma4:e4b", "llama3.1:8b", "llama3.2:3b"]
+JUDGE_MODEL = "qwen3.6:35b-a3b"
+ARTICLE_COUNT = 30
 
 
 def _get_model_size(model: str) -> str:
