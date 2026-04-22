@@ -64,7 +64,7 @@ def summarize_title(text: str, model: str = SUMMARIZE_MODEL) -> str:
     prompt = (
         "Write a concise, specific headline (under 12 words) for the following article. "
         "Return only the headline, no punctuation at the end, no quotes.\n\n"
-        f"Article:\n{text[:2000]}\n\n"
+        f"Article:\n{text[:8000]}\n\n"
         "Headline:"
     )
     return _chat(prompt, model).strip('"').strip()
@@ -77,7 +77,7 @@ def summarize(title: str, text: str, model: str = SUMMARIZE_MODEL) -> str:
         f"Be specific and factual. Do not start with 'The article' or 'This article'. "
         f"Return only the summary text, no preamble.\n\n"
         f"Title: {title}\n\n"
-        f"Content:\n{text[:3000]}"
+        f"Content:\n{text[:8000]}"
     )
     return _chat(prompt, model)
 
@@ -108,7 +108,17 @@ def tag(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> list[str]:
     try:
         data = json.loads(_extract_json(raw))
         tags = data.get("tags", [])
-        valid = {"policy", "model", "agents", "safety", "robotics", "voice", "health", "research", "ethics"}
+        valid = {
+            "policy",
+            "model",
+            "agents",
+            "safety",
+            "robotics",
+            "voice",
+            "health",
+            "research",
+            "ethics",
+        }
         return [t for t in tags if t in valid][:3]
     except (json.JSONDecodeError, AttributeError):
         print(f"[warn] tag() failed to parse JSON: {raw!r}", file=sys.stderr)
@@ -126,7 +136,7 @@ def classify_ai(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> bool:
         "primarily about AI/ML/robotics.\n\n"
         'Answer with a JSON object: {"relevant": true} or {"relevant": false}.\n\n'
         f"Title: {title}\n"
-        f"Content: {summary[:500]}"
+        f"Content: {summary[:3000]}"
     )
     raw = _chat(prompt, model, json_mode=True)
     try:
@@ -142,9 +152,7 @@ def deduplicate(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
         return items
 
     # Build a compact index for the LLM
-    index_lines = "\n".join(
-        f"{i}: {item['title']}" for i, item in enumerate(items)
-    )
+    index_lines = "\n".join(f"{i}: {item['title']}" for i, item in enumerate(items))
     prompt = (
         "The following is a numbered list of article titles. "
         "Identify groups of items that cover the same story or announcement. "
