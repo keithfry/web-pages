@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI &amp; Robotics Daily Digest &mdash; May 10, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1a1d23;
+    line-height: 1.6;
+  }
+  .page-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f3460 100%);
+    color: white;
+    padding: 52px 24px 44px;
+    text-align: center;
+  }
+  .page-header .eyebrow { font-size: 11px; letter-spacing: 3.5px; text-transform: uppercase; color: #60a5fa; margin-bottom: 14px; font-weight: 600; }
+  .page-header h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+  .page-header .dateline { font-size: 15px; color: #94a3b8; }
+  .header-stats { display: flex; justify-content: center; gap: 20px; margin-top: 22px; flex-wrap: wrap; }
+  .stat-pill { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; padding: 5px 16px; font-size: 12px; color: #cbd5e1; font-weight: 500; }
+  .container { max-width: 880px; margin: 0 auto; padding: 44px 20px 64px; }
+  .section-header { display: flex; align-items: center; gap: 10px; margin: 52px 0 18px; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0; }
+  .section-header .icon { font-size: 20px; }
+  .section-header h2 { font-size: 18px; font-weight: 700; color: #0f172a; letter-spacing: -0.2px; }
+  .section-header .badge { margin-left: auto; font-size: 11px; font-weight: 700; background: #f1f5f9; color: #64748b; border-radius: 12px; padding: 3px 11px; }
+  .subsection { font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #94a3b8; margin: 28px 0 10px; }
+  .card { background: white; border-radius: 10px; padding: 20px 22px; margin-bottom: 12px; border: 1px solid #e8edf3; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: box-shadow 0.15s ease; }
+  .card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.09); }
+  .card .via { font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #3b82f6; margin-bottom: 6px; }
+  .card h3 { font-size: 15.5px; font-weight: 700; line-height: 1.4; margin-bottom: 9px; color: #0f172a; }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #2563eb; text-decoration: underline; }
+  .card p { font-size: 14px; color: #475569; line-height: 1.65; }
+  .card.arxiv { border-left: 3px solid #8b5cf6; }
+  .card.arxiv .via { color: #8b5cf6; }
+  .card.robotics { border-left: 3px solid #10b981; }
+  .card.robotics .via { color: #10b981; }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+  .tag { font-size: 10.5px; font-weight: 600; padding: 2px 9px; border-radius: 10px; }
+  .t-policy   { background:#fee2e2; color:#b91c1c; }
+  .t-model    { background:#dbeafe; color:#1d4ed8; }
+  .t-agents   { background:#dcfce7; color:#15803d; }
+  .t-safety   { background:#fef9c3; color:#a16207; }
+  .t-robotics { background:#ede9fe; color:#6d28d9; }
+  .t-voice    { background:#ffedd5; color:#c2410c; }
+  .t-health   { background:#cffafe; color:#0e7490; }
+  .t-research { background:#f1f5f9; color:#475569; }
+  .t-ethics   { background:#fce7f3; color:#be185d; }
+  .problem-feeds { border: 1px solid #fca5a5; background: #fff7f7; border-radius: 10px; padding: 20px 22px; margin-top: 40px; }
+  .problem-feeds h2 { font-size: 15px; font-weight: 700; color: #b91c1c; margin-bottom: 12px; }
+  .problem-feeds ul { list-style: none; }
+  .problem-feeds li { font-size: 13px; color: #64748b; margin-bottom: 8px; }
+  .problem-feeds li a { color: #2563eb; }
+  .problem-feeds .error-reason { color: #dc2626; font-style: italic; }
+  footer { text-align: center; font-size: 12px; color: #94a3b8; padding: 28px 20px 40px; border-top: 1px solid #e2e8f0; margin-top: 16px; }
+  .filter-bar { background: white; border-bottom: 1px solid #e2e8f0; padding: 12px 20px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .filter-chip { font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 12px; cursor: pointer; border: 2px solid transparent; transition: border-color 0.15s, opacity 0.15s; }
+  .filter-chip.active { border-color: currentColor; }
+  .filter-chip.dimmed { opacity: 0.4; }
+  .card.hidden { display: none; }
+  .subsection.hidden { display: none; }
+  .section-block.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="eyebrow">⚡ Daily Briefing</div>
+  <h1>AI &amp; Robotics Daily Digest</h1>
+  <div class="dateline">Sunday, May 10, 2026 &mdash; 8:00 AM ET</div>
+  <div class="header-stats">
+    <span class="stat-pill">📬 4 Newsletters</span>
+    <span class="stat-pill">📰 22 Articles</span>
+    <span class="stat-pill">🔬 0 Papers</span>
+    <span class="stat-pill">✅ 0 Feed Errors</span>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-chip t-agents" data-tag="agents">Agents</button>
+  <button class="filter-chip t-ethics" data-tag="ethics">Ethics</button>
+  <button class="filter-chip t-model" data-tag="model">Models</button>
+  <button class="filter-chip t-policy" data-tag="policy">Policy</button>
+  <button class="filter-chip t-research" data-tag="research">Research</button>
+  <button class="filter-chip t-safety" data-tag="safety">Safety</button>
+</div>
+
+<div class="container">
+  <div class="section-block">
+  <div class="section-header"><span class="icon">📬</span><h2>Email Newsletters</h2><span class="badge">4 items</span></div>
+
+  <div class="card" data-tags="model research">
+    <div class="via">TheSequence</div>
+    <h3>The Sequence Radar #857: Last Week in AI: Inside the Machine, Outside the Text Box</h3>
+    <p>AI is moving from a model race to an infrastructure race, as companies like Anthropic and OpenAI are focusing on building foundations for AI applications rather than just competing with each other&#x27;s models. Anthropic published a paper on natural language autoencoders, which compresses hidden activations into natural language to try to reconstruct the internal state of neural networks. This is not a magical solution but a conceptual shift towards building linguistic interfaces into latent space. Meanwhile, OpenAI released new voice model software that changes interaction with AI from text-based querying to native interface assistance.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="research policy">
+    <div class="via">The Hustle</div>
+    <h3>The country with 9 million empty homes</h3>
+    <p>In the next decade, one in every three homes in Japan will be vacant, with an estimated 9 million empty homes in the country. The majority of these abandoned structures, around 3.9 million, are entirely uninhabited and not just vacant rental units or on-the-market properties. This rate surpasses that of other developed countries like the US, UK, France, and South Korea. A population crisis is believed to be one of the main reasons for Japan&#x27;s housing problem.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-policy">Policy</span></div>
+  </div>
+  <div class="card" data-tags="research agents">
+    <div class="via">🔳 Turing Post</div>
+    <h3>#5: AI Workflow Patterns: The Real Unit of AI Adoption in 2026</h3>
+    <p>An AI workflow is a repeating sequence of decisions and actions that turns an input into an output, with human judgment points along the way. Informal and under-specified workflows can now be addressed using LLMs, which allow for loosely coupled processes. The goal is to discover workflows, then choose which ones to automate first, understanding their primitives and human involvement.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-agents">Agents</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">The Deep View</div>
+    <h3>⚙️ How member voices shape Oura’s roadmap</h3>
+    <p>Oura is opening up about how member feedback shapes its decisions through a customer webinar. The company&#x27;s leaders will explain how they unify and use member feedback across product, engineering, and leadership. Experts from Oura, including VP of Member Experience John Moses, Sr. Support Engineering Manager Dzevad Kudic, and CX Strategy Dayu Aryanthi, will discuss the process. The webinar is scheduled for May 27th at 11am PT / 2pm ET, with a live Q&amp;A session.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  </div>
+
+  <div class="section-block">
+  <div class="section-header"><span class="icon">📰</span><h2>Blog Posts &amp; Articles</h2><span class="badge">22 items</span></div>
+
+  <div class="subsection">Policy &amp; Industry</div>
+
+  <div class="card" data-tags="research policy">
+    <div class="via">thefocus.ai</div>
+    <h3><a href="http://TheFocus.AI">Building an Intelligent Organization Through Legible Work Processes</a></h3>
+    <p>Building an Intelligent Organization Through Legible Work Processes is key to absorbing AI capabilities faster than organizations can. Organizations must document their own work in a form machines can act on. By doing so, they can create systems that learn and improve over time, leading to competitive advantage. The journey from &quot;tribal&quot; to &quot;coherent&quot; starts with making work legible to machines.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-policy">Policy</span></div>
+  </div>
+  <div class="card" data-tags="research policy">
+    <div class="via">thedeepview.com</div>
+    <h3><a href="https://www.thedeepview.com/author/jason-hiner">How process intelligence could decide the ROI of enterprise AI</a></h3>
+    <p>Process intelligence is crucial for achieving a return on investment (ROI) in enterprise AI, as companies risk automating inefficiency at scale without understanding their underlying processes. Alex Rinke, co-founder and co-CEO of Celonis, argues that there is no enterprise AI without process intelligence, and that deploying agents without it can lead to wasted resources. By analyzing how work actually happens across fragmented systems, companies can optimize their workflows and maximize the ROI of their AI investments.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-policy">Policy</span></div>
+  </div>
+  <div class="card" data-tags="research policy">
+    <div class="via">The Guardian - Artificial Intelligence</div>
+    <h3><a href="https://www.theguardian.com/technology/2026/may/09/google-developers-significantly-misstate-carbon-emissions-of-proposed-uk-datacentres">Google developers significantly misstate carbon emissions of proposed UK datacentres</a></h3>
+    <p>Google&#x27;s proposed 52-hectare datacentre in Thurrock and its airfield project in North Weald have been found to understate their carbon emissions by a factor of five, according to planning documents reviewed by the Guardian. Emissions for these projects are estimated to be significantly lower than actual values, with similar errors also found in plans for another Google site at Greystoke in Lincolnshire.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-policy">Policy</span></div>
+  </div>
+
+  <div class="subsection">Models &amp; Developer Tools</div>
+
+  <div class="card" data-tags="model research">
+    <div class="via">thesequence.substack.com</div>
+    <h3><a href="https://thesequence.substack.com/p/the-sequence-radar-857-last-week">Anthropic&#x27;s Natural Language Autoencoders Push AI Beyond Text Box Boundaries</a></h3>
+    <p>Anthropic published a paper on natural language autoencoders that compress neural network activations into natural language and attempt to reconstruct them from explanation. The concept shifts the focus from probing models with classifiers and activation maps to building linguistic interfaces in the latent space. This approach enables models to explain themselves in a medium humans understand best, marking a conceptual change in AI.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">thehustle.co</div>
+    <h3><a href="https://thehustle.co/join?ref=6693394292&amp;_hsenc=p2ANqtz-9TRxaoJynNDSz_AuTnzQ8J7N4lhjPoSNnxCpV3NN4PcFup2dDVhSOZEAPgB1FcX6U7NKjX2vVwN7-3_dpfxDA12mf3mA&amp;_hsmi=417951563">Subscribe to The Hustle for Unconventional Business Stories</a></h3>
+    <p>Join the 1.5 million+ subscribers to The Hustle for daily unconventional business stories, including oddball startups and daring moonshots. No ads or recycled headlines, just a fun, quick read of bold, bizarre, and brilliant business news. Subscription is always free, with access to a library of business-building resources.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card">
+    <div class="via">hubspotmedia-20627419.hs-sites.com</div>
+    <h3><a href="https://hubspotmedia-20627419.hs-sites.com/the-country-with-9-million-empty-homes?ecid=ACsprvv25jSPZ3vKYszAoebgG3pfW_PRG9GEHyDpii8ax46LILPjE3OUQbZ_Fcif1Ym4vNTO8Z5T&amp;_hsenc=p2ANqtz-9TRxaoJynNDSz_AuTnzQ8J7N4lhjPoSNnxCpV3NN4PcFup2dDVhSOZEAPgB1FcX6U7NKjX2vVwN7-3_dpfxDA12mf3mA&amp;_hsmi=417951563">Japan faces housing crisis with over 9 million vacant homes expected by 2038</a></h3>
+    <p>Japan&#x27;s estimated number of vacant homes will reach 9 million by 2038, with one in every three homes expected to be vacant, making it an alarming crisis. This is due to various factors, including Japan&#x27;s aging population and changing lifestyles. As people move abroad for work or retire, many homes remain unoccupied, contributing to the rising number of vacant properties.</p>
+  </div>
+  <div class="card">
+    <div class="via">thehustle.co</div>
+    <h3><a href="https://thehustle.co/refer-the-hustle?_hsenc=p2ANqtz-9TRxaoJynNDSz_AuTnzQ8J7N4lhjPoSNnxCpV3NN4PcFup2dDVhSOZEAPgB1FcX6U7NKjX2vVwN7-3_dpfxDA12mf3mA&amp;_hsmi=417951563">Share The Hustle with Friends and Get Exclusive Perks</a></h3>
+    <p>Share a unique link https://thehustle.co/join?ref=6693394292 to invite friends to join The Hustle and earn rewards for each friend who subscribes, with steps to track progress and receive exclusive perks. Referrals must subscribe using the personalized referral link and confirm subscription through an email confirmation link. Prizes are available for purchase outside of the program, and international shipping is available.</p>
+  </div>
+  <div class="card" data-tags="model agents research">
+    <div class="via">turingpost.com</div>
+    <h3><a href="https://www.turingpost.com/p/orgage3">Building AI-Native Startups from Day One with 5 Essential Principles</a></h3>
+    <p>An AI-native startup is a company designed so that machine intelligence can participate in ordinary work from the beginning. The 5 essential principles for building an AI-native startup include machine-legibility, tool portability, and others. McKinsey&#x27;s 2025 survey found that workflow redesign using generative AI results in significant EBIT impact, but only a minority of organizations have fundamentally redesigned their operations. A shared interface approach is emerging in the ecosystem, with simple agent systems, legible context, and added complexity as needed.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-agents">Agents</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="research">
+    <div class="via">turingpost.com</div>
+    <h3><a href="https://www.turingpost.com/p/orgage4">Enterprise Organizations Resist AI Transformation Due to Internal Physics</a></h3>
+    <p>There are no AI-native enterprises due to internal physics, including an internal economy running on different forces, where information becomes currency and groups form around functions to protect their territory. Every organization reaches a steady state, which resists change as it is optimized for the people inside. This is not pathology, but rather what an enterprise fundamentally is.</p>
+    <div class="tags"><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">VentureBeat - AI</div>
+    <h3><a href="https://venturebeat.com/infrastructure/intent-based-chaos-testing-is-designed-for-when-ai-behaves-confidently-and-wrongly">Intent-based chaos testing is designed for when AI behaves confidently — and wrongly</a></h3>
+    <p>Chaos testing is designed to identify when AI systems behave confidently but wrongly, such as in the scenario where an observability agent flags a false anomaly and triggers a rollback causing a four-hour outage. Traditional testing approaches, which assume determinism, isolated failure, and observable completion, are insufficient for agentic systems that can produce probabilistically similar outputs and signal task completion while operating in a degraded state. Intent-based chaos testing measures deviation from intent, not just from success, by defining behavioral dimensions that describe what &quot;acting correctly&quot; means for the specific agent in its deployment context. The output is an intent deviation score, which classifies failures into actionable levels: nominal, degraded, critical, and catastrophic.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">MarkTechPost</div>
+    <h3><a href="https://www.marktechpost.com/2026/05/09/nvidia-ai-just-released-cuda-oxide-an-experimental-rust-to-cuda-compiler-backend-that-compiles-simt-gpu-kernels-directly-to-ptx/">NVIDIA AI Just Released cuda-oxide: An Experimental Rust-to-CUDA Compiler Backend that Compiles SIMT GPU Kernels Directly to PTX</a></h3>
+    <p>NVlabs releases cuda-oxide v0.1.0, a custom Rustc codegen backend that compiles #[kernel]-annotated Rust functions directly to PTX through a multi-stage pipeline involving Stable MIR, Pliron IR, and LLVM IR. A single-source host+device compilation is achieved with one cargo oxide build command.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">MarkTechPost</div>
+    <h3><a href="https://www.marktechpost.com/2026/05/09/nvidia-ai-releases-star-elastic-one-checkpoint-that-contains-30b-23b-and-12b-reasoning-models-with-zero-shot-slicing/">NVIDIA AI Releases Star Elastic: One Checkpoint that Contains 30B, 23B, and 12B Reasoning Models with Zero-Shot Slicing</a></h3>
+    <p>NVIDIA researchers introduced Star Elastic, a method that embeds multiple reasoning models (30B, 23B, and 12B parameters) into a single checkpoint, eliminating the need for separate training runs or model weights per variant. This reduces the number of tokens needed to train all three variants from pretraining each model separately by 360×. Star Elastic achieves up to 16% higher accuracy and 1.9× lower latency compared to standard budget control. The method is built on the Nemotron Elastic framework and can be applied to Nematron Nano v3, bringing the full model family within reach of RTX-class GPUs.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">Towards Data Science</div>
+    <h3><a href="https://towardsdatascience.com/the-must-know-topics-for-an-llm-engineer/">The Must-Know Topics for an LLM Engineer</a></h3>
+    <p>Tokenization, which involves breaking down text into individual words or subwords, is a fundamental aspect of how modern language models work in practice. Evaluation metrics such as perplexity and BLEU score are used to measure the performance of these models. Language models can also be fine-tuned for specific tasks using techniques like few-shot learning and meta-learning. Understanding these topics is crucial for an LLM engineer.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">Towards Data Science</div>
+    <h3><a href="https://towardsdatascience.com/rag-is-blind-to-time-i-built-a-temporal-layer-to-fix-it-in-production/">RAG Is Blind to Time — I Built a Temporal Layer to Fix It in Production</a></h3>
+    <p>A learner reported receiving outdated information from an AI tutor after three weeks of testing. The issue was caused by the system&#x27;s lack of time sensitivity, which prioritized similar documents over current ones. To address this, the author built a temporal layer that filters out expired facts and boosts time-sensitive signals to prioritize true information.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research agents">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1t8s03s/rl_fellows_where_are_you_working_at_now/">RL fellows, where are you working at now?</a></h3>
+    <p>A Ph.D. researcher in Reinforcement Learning (RL) is now working in the LLM industry to develop LLM-RL applications, which they view as not being &quot;real&quot; RL. They express frustration with their current job, citing a lack of domain knowledge and a fear-based management style that prioritizes quick profits over meaningful research. The researcher hopes to pursue deeper research in robotics or other fields but feels constrained by financial responsibilities. Pursuing side projects related to robotics may be beneficial for career advancement.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-agents">Agents</span></div>
+  </div>
+  <div class="card" data-tags="research agents model">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1t93cn4/i_built_an_rl_trading_agent_for_crypto_futures/">I built an RL trading agent for crypto futures. Here’s why I abandoned supervised learning for Reinforcement Learning.</a></h3>
+    <p>A supervised model predicting a price move with 53% accuracy can still lose money due to fees, slippage, and path-dependent equity. An autonomous trading architecture using Reinforcement Learning (RL) was developed, featuring six independent agents managing a shared equity pool of Binance perpetuals. A differential Sharpe reward system prevents large, volatile bets by grading the agent on a risk-adjusted return curve. A 128-step purge gap between train and validation folds prevents leakage in walk-forward evaluation.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-agents">Agents</span><span class="tag t-model">Models</span></div>
+  </div>
+  <div class="card" data-tags="research agents model">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1t83wwf/what_rl_project_can_i_do_for_my_semester_prohect/">What RL project can i do for my semester prohect</a></h3>
+    <p>A Reddit user is looking for a Reinforcement Learning (RL) project to complete as part of their semester project, with a deadline of around 3.5 months. They want to apply q-learning to a dynamic pricing problem and are seeking suggestions or pointers from others. The user has already worked on other AI domains and wants to explore RL further.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-agents">Agents</span><span class="tag t-model">Models</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1t8aqda/how_have_ai_coding_tools_helped_your_experiments/">How have AI coding tools helped your experiments?</a></h3>
+    <p>AI coding tools have been extremely useful in achieving stable architectures, reviewing Wandb results, and writing ablation and attribution scripts to understand model training. This has significantly increased efficiency in experiments. The contributor is an experience CE with a background in ML from the 1990s.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1t8kl1u/a_3000_textbook_on_reinforcement_learning/">A $3000 textbook on reinforcement learning</a></h3>
+    <p>A $3000 textbook on reinforcement learning is available for purchase on Amazon, titled &quot;Reinforcement Learning: An Introduction&quot; by Dimitri Bertsekas. The book costs approximately $3000 and has a 4-star rating on the Amazon page. The author submitted a link to the textbook&#x27;s online version on GitHub.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">The Robot Report</div>
+    <h3><a href="https://www.therobotreport.com/cognex-releases-fully-integrated-ai-powered-vision-system-robotics/">Cognex releases fully integrated AI-powered vision system for robotics</a></h3>
+    <p>Cognex has released an integrated AI-powered vision system for robotics that combines edge AI, advanced AI, and rule-based vision tools with a high-performance embedded compute.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+
+  <div class="subsection">Safety, Ethics &amp; Society</div>
+
+  <div class="card" data-tags="model research safety">
+    <div class="via">turingpost.com</div>
+    <h3><a href="https://www.turingpost.com/p/orgage1">Why AI Progress Is Outpacing Organizational Readiness Within Companies Today</a></h3>
+    <p>AI progress is outpacing organizational readiness within companies due to the faster arrival of technological capabilities than their ability to absorb them. Companies&#x27; lack of clear process maps, exceptions, ownership, feedback loops, and shared definitions hinder their ability to leverage AI effectively. The knowledge exists in human employees, not in systems, making &quot;organizational translation&quot; a crucial area of work for companies to succeed with AI.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-safety">Safety</span></div>
+  </div>
+  <div class="card" data-tags="research ethics">
+    <div class="via">turingpost.com</div>
+    <h3><a href="https://www.turingpost.com/p/orgage2">The Unsexy Truth of AI Adoption</a></h3>
+    <p>Most companies across the US are still at an early stage of AI adoption, with many using ChatGPT for writing and Copilot for code, but lacking a clear understanding of how to integrate AI into their operations. To become operational, companies need to know their own work, understand what knowledge is usable by machines, and undergo significant changes to their organization. The path to AI maturity involves making the organization legible to itself, trusting its own data, and allowing humans&#x27; roles to change.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-ethics">Ethics</span></div>
+  </div>
+  </div>
+
+</div>
+
+<footer>
+  AI &amp; Robotics Daily Digest &bull; Sunday, May 10, 2026 — 8:00 AM ET &bull; Sources: Gmail + 22 RSS items via ai-techradar-agent
+</footer>
+
+<script>
+(function(){
+  const active = new Set();
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      active.has(chip.dataset.tag) ? active.delete(chip.dataset.tag) : active.add(chip.dataset.tag);
+      applyFilter();
+    });
+  });
+  function applyFilter() {
+    document.querySelectorAll('.filter-chip').forEach(c => {
+      c.classList.toggle('active', active.has(c.dataset.tag));
+      c.classList.toggle('dimmed', active.size > 0 && !active.has(c.dataset.tag));
+    });
+    document.querySelectorAll('.card').forEach(card => {
+      if (active.size === 0) { card.classList.remove('hidden'); return; }
+      const tags = (card.dataset.tags || '').split(' ');
+      card.classList.toggle('hidden', !tags.some(t => active.has(t)));
+    });
+    document.querySelectorAll('.subsection').forEach(sub => {
+      let el = sub.nextElementSibling, any = false;
+      while (el && !el.classList.contains('subsection') && !el.classList.contains('section-header')) {
+        if (el.classList.contains('card') && !el.classList.contains('hidden')) any = true;
+        el = el.nextElementSibling;
+      }
+      sub.classList.toggle('hidden', !any);
+    });
+    document.querySelectorAll('.section-block').forEach(block => {
+      const any = [...block.querySelectorAll('.card')].some(c => !c.classList.contains('hidden'));
+      block.classList.toggle('hidden', !any);
+    });
+  }
+})();
+</script>
+</body>
+</html>
