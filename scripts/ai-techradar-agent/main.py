@@ -272,7 +272,20 @@ def main() -> None:
                         help="Generate HTML only, skip git commit and push")
     parser.add_argument("--no-email", action="store_true",
                         help="Skip Gmail — fetch RSS feeds only")
+    parser.add_argument("--refresh-token", action="store_true",
+                        help="Delete token.json and re-authenticate with Gmail, then exit")
     args = parser.parse_args()
+
+    if args.refresh_token:
+        from config import GMAIL_TOKEN
+        from email_fetcher import _get_credentials
+        if GMAIL_TOKEN.exists():
+            GMAIL_TOKEN.unlink()
+            print(f"Deleted {GMAIL_TOKEN}")
+        print("Starting Gmail OAuth flow...")
+        _get_credentials()
+        print("Token refreshed. Exiting.")
+        return
 
     now = datetime.now(ET)
 
@@ -329,6 +342,13 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
         except FileNotFoundError as e:
             log(f"  WARNING: {e}")
             log("  Continuing without email. Run with --no-email to suppress.")
+        except Exception as e:
+            from google.auth.exceptions import RefreshError
+            if isinstance(e, RefreshError):
+                log("  Gmail token is invalid or expired.")
+                log("  Run: uv run main.py --refresh-token")
+                return
+            raise
     else:
         log("── Step 2: Gmail skipped (--no-email) ──")
     log("")
