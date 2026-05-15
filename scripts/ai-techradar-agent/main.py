@@ -422,7 +422,7 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
     # --- Step 8: Commit and push ---
     log("")
     log("── Step 8: Committing and pushing ──")
-    commit_and_push(out_path, as_of)
+    commit_and_push(out_path, as_of, log=log)
 
     call_count, total_duration = llm_stats()
     log(f"LLM calls: {call_count}  total time: {total_duration:.3f}s")
