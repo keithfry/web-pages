@@ -1,491 +1,491 @@
-Model Comparison — 2026-04-20 17:27
+Model Comparison — 2026-05-18 16:40
 Models:   gemma4:e4b, llama3.1:8b, llama3.2:3b
 Judge:    qwen3.6:35b-a3b
 Articles: 30
 ================================================================================
 
-Article #1: The Download: murderous ‘mirror’ bacteria, and Chinese workers fighting AI doubles
+Article #1: What to expect from Google this week
 Source: MIT Technology Review - AI & Emerging Tech
 
-  [gemma4:e4b]  score=4.5
-  The article, titled "The Download," is a weekday newsletter covering developments in the technology sector. It touches upon a high-risk concept proposed in 2019 concerning "synthetic mirror life." The summary suggests the content will delve into this concerning topic and likely address related technological advancements.
-
-  [llama3.1:8b]  score=8.5
-  Scientists proposed an idea to create synthetic "mirror" bacteria in 2019, a concept known as xenobiology. The goal is to create life forms that can survive and thrive outside of traditional biological environments. However, some have expressed concerns about the potential risks and consequences of creating such organisms, including the possibility of uncontrolled growth or even extinction-level threats. The project has sparked debate over its potential impact on humanity.
-
-  [llama3.2:3b]  score=9.5
-  Scientists proposed a high-risk idea to create synthetic mirror bacteria in February 2019. The goal is unclear, but it is described as "murderous" and has raised concerns about its potential risks. Meanwhile, Chinese workers are being forced to live alongside AI duplicates created by their employers.
-
-  Winner:    llama3.2:3b
-  Reasoning: llama3.2:3b provides the most accurate and complete summary by correctly capturing both distinct topics mentioned in the title (mirror bacteria and Chinese workers with AI doubles), whereas the other models ignore the second topic or provide vague, indirect analysis.
---------------------------------------------------------------------------------
-
-Article #2: Colossal Biosciences said it cloned red wolves. Is it for real?
-Source: MIT Technology Review - AI & Emerging Tech
-
-  [gemma4:e4b]  score=1.5
-  The provided text fragment begins with a title suggesting an article about Colossal Biosciences potentially cloning red wolves, but the visible content does not discuss this topic. Instead, the text describes a scene where the author drives with two young scientists early in the morning, before dawn, into a foggy area. They are traveling forty miles west from the industrial sprawl of Houston, which emits a golden glow.
-
-  [llama3.1:8b]  score=8.5
-  Colossal Biosciences claims to have cloned red wolves, but the article suggests it may not be legitimate as it does not provide concrete evidence or peer-reviewed research to support this claim. The company's methods and results are not transparently described in the article. A reporter and two young scientists accompany a Colossal Biosciences employee on an early morning trip to capture wolf-like animals, but details about the cloning process are scarce.
-
-  [llama3.2:3b]  score=9.0
-  There is no information in the article about Colossal Biosciences cloning red wolves. The article appears to be an anecdotal introduction to a story and does not provide any factual content about the claimed achievement.
-
-  Winner:    llama3.2:3b
-  Reasoning: The input text is a narrative snippet lacking factual claims about cloning, making the claim of 'cloning red wolves' a hallucination of the article's content; Model llama3.2:3b correctly identifies the absence of such information, while gemma4:e4b fails to address the prompt's context entirely.
---------------------------------------------------------------------------------
-
-Article #3: Chinese tech workers are starting to train their AI doubles–and pushing back
-Source: MIT Technology Review - AI & Emerging Tech
-
-  [gemma4:e4b]  score=8.0
-  Chinese tech workers are encountering a new development where employers are directing them to train AI agents to potentially replace their human capabilities. This trend has caused some concern among tech workers who were initially enthusiastic about artificial intelligence advancements. For instance, a GitHub project called Colleague Skill has emerged, claiming the ability to "distill" and replicate the skills and personalities of human workers. This situation is prompting a reconsideration of the future role of human labor in the rapidly advancing Chinese tech sector.
-
-  [llama3.1:8b]  score=9.5
-  Tech workers in China are being asked by their bosses to train AI agents to replace them, leading some to feel uneasy about the prospect of being replaced. A GitHub project called Colleague Skill has emerged, allowing users to "distill" their colleagues' skills and personality traits into a replicable AI form. Some workers are pushing back against this trend, sparking soul-searching among early adopters who had initially been enthusiastic about AI integration. This development marks a turning point in China's tech industry as workers begin to question the impact of AI on employment.
-
-  [llama3.2:3b]  score=8.5
-  Tech workers in China are being instructed by their bosses to train AI agents that can replace them, prompting soul-searching among those who were initially enthusiastic about adopting the technology. A GitHub project called Colleague Skill aims to "distill" a colleague's skills and personality traits and replicate them with an AI agent. This trend is part of a larger push back against automation in China's tech industry. Some workers are questioning the ethics and consequences of creating AI duplicates that can take their jobs.
-
-  Winner:    llama3.1:8b
-  Reasoning: Llama3.1:8b provides the most accurate and comprehensive summary by correctly capturing the narrative arc of initial enthusiasm turning into unease and active pushback, whereas the other models either miss the nuance of the emotional shift or slightly overgeneralize the scope.
---------------------------------------------------------------------------------
-
-Article #4: OpenAI helps Hyatt advance AI among colleagues
-Source: OpenAI - News
-
-  [gemma4:e4b]  score=4.0
-  Hyatt is implementing ChatGPT Enterprise across its worldwide workforce to boost efficiency and enhance service. The platform utilizes advanced AI models, specifically mentioning GPT-5.4 and Codex. These tools are being deployed to improve various facets of the company's operations. Ultimately, this integration aims to enhance overall productivity and elevate the guest experience across all levels.
-
-  [llama3.1:8b]  score=9.5
-  Hyatt has deployed ChatGPT Enterprise across its global workforce, utilizing the capabilities of GPT-5.4 and Codex to enhance various aspects of its operations. This deployment aims to improve productivity, operational efficiency, and ultimately deliver better guest experiences. The technology is designed to support Hyatt's colleagues worldwide.
-
-  [llama3.2:3b]  score=9.0
-  Hyatt has deployed ChatGPT Enterprise across its global workforce, utilizing the GPT-5.4 and Codex models to enhance productivity, operational efficiency, and guest satisfaction.
-
-  Winner:    llama3.1:8b
-  Reasoning: The first model hallucinates specific non-existent model versions (GPT-5.4), while the other two are accurate and concise, with the 8B model providing slightly better context and readability.
---------------------------------------------------------------------------------
-
-Article #5: New touch-up tools in Google Photos’ image editor let you make quick, subtle fixes.
-Source: Google / Google AI (Keyword Blog)
-
-  [gemma4:e4b]  score=8.5
-  Google Photos has updated its image editor with new touch-up tools designed for quick and subtle photo enhancements. These features allow users to make specific cosmetic adjustments to photographs. Users can now refine skin texture, effectively remove blemishes, brighten the eyes, and whiten teeth. Overall, the update provides users with more granular control over portrait retouching directly within the app.
-
-  [llama3.1:8b]  score=7.5
-  Google Photos has added new touch-up tools to its image editor that allow users to refine skin texture and remove blemishes. Additionally, the tool can be used to brighten eyes and whiten teeth. These features enable quick and subtle fixes to images. The updated feature is part of Google Photos' image editing capabilities.
-
-  [llama3.2:3b]  score=7.0
-  Google Photos' image editor has introduced new touch-up tools that allow users to make quick and subtle fixes on images. The tool allows for refinement of skin texture, removal of blemishes, brightening of eyes, and whitening of teeth. These features enable users to easily enhance their photos without over-processing or altering the original image significantly. The enhancements are intended to provide a more natural look with minimal intervention.
-
-  Winner:    gemma4:e4b
-  Reasoning: The first model provides the most professional and comprehensive summary that accurately captures the essence of the update while maintaining a natural flow, whereas the other models are either too repetitive or include speculative details not present in the source text.
---------------------------------------------------------------------------------
-
-Article #6: Start vibe coding in AI Studio with your Google AI subscription.
-Source: Google / Google AI (Keyword Blog)
-
-  [gemma4:e4b]  score=2.0
-  Google AI Pro and Ultra subscribers can now access increased usage limits within Google AI Studio. This update also provides subscribers with access to Nano Banana Pro and Gemini Pro models. These enhancements allow users to utilize more advanced AI capabilities through the platform.
+  [gemma4:e4b]  score=7.5
+  Google's upcoming developer conference, I/O, is anticipated to position the company as a major contender in the foundation model race. The article suggests that Google intends to make a significant impact with its announcements at this year's event. This focus on foundational models indicates a key strategic direction for Google's technology offerings.
 
   [llama3.1:8b]  score=2.0
-  Google AI Pro and Ultra subscribers now have increased usage limits in Google AI Studio. The update also includes access to new models, specifically Nano Banana Pro and Gemini Pro modules. These additions are part of the updated features for AI Studio available to subscribers as of today. Increased usage limits enable users to perform more complex tasks within the platform.
-
-  [llama3.2:3b]  score=2.5
-  Google AI Pro and Ultra subscribers now have increased usage limits in Google AI Studio, starting today. This update also provides access to additional tools, including Nano Banana Pro and Gemini Pro models. The updated AI Studio offers enhanced capabilities for users with a Google AI subscription. No specific details are given about the new models, but they suggest an expanded range of AI-powered tools.
-
-  Winner:    llama3.2:3b
-  Reasoning: All models hallucinated specific model names ('Nano Banana Pro') not present in the source text, but llama3.2:3b is slightly more accurate for correctly identifying them as 'tools' rather than 'modules' and acknowledging the lack of specific details.
---------------------------------------------------------------------------------
-
-Article #7: Autonomous AI at Scale: Adobe Agents Unlock Breakthrough Creative Intelligence With NVIDIA and WPP
-Source: NVIDIA Blog
-
-  [gemma4:e4b]  score=9.2
-  Adobe, in partnership with NVIDIA and WPP, is integrating agentic AI into enterprise marketing operations. This collaboration aims to leverage the power of AI agents to transform workflows across creative production and customer experience orchestration. As businesses increasingly need personalized customer experiences, these intelligent systems are poised to accelerate efficiency and enhance brand interactions. Overall, this initiative positions AI agents at the core of modern, large-scale creative intelligence.
-
-  [llama3.1:8b]  score=8.5
-  NVIDIA has formed strategic collaborations with Adobe and WPP to bring autonomous AI to enterprise marketing operations. The partnerships aim to integrate agentic AI into creative production and customer experience management. This technology is being developed to support the growing demand for personalized customer experiences in various industries. The collaboration aims to accelerate decision-making, content creation, and other business processes through AI-powered automation.
-
-  [llama3.2:3b]  score=9.0
-  NVIDIA's collaboration with Adobe and WPP has led to the development of AI agents known as "Adobe Agents," which are transforming how work gets done in various industries by accelerating content creation and decision-making. These agents are being used to orchestrate creative production and customer experience, enabling brands to provide personalized customer experiences. The AI technology is also being utilized in enterprise marketing operations across multiple sectors. Demand for these intelligent systems is driven by the need for increasingly personalized customer experiences.
-
-  Winner:    gemma4:e4b
-  Reasoning: Gemma4:e4b provides the most balanced and concise summary that accurately captures the core strategic partnership and its high-level impact without redundancy, while the other models introduce slight inaccuracies or verbose phrasing.
---------------------------------------------------------------------------------
-
-Article #8: NVIDIA and Partners Showcase the Future of AI-Driven Manufacturing at Hannover Messe 2026
-Source: NVIDIA Blog
-
-  [gemma4:e4b]  score=8.5
-  At Hannover Messe 2026, NVIDIA and its partners showcased the accelerating shift towards AI-driven manufacturing processes. This industrial transformation is being driven by the global need to improve efficiency and output in the face of faster design cycles and labor shortages. The focus has moved from simply considering AI adoption to determining the speed and scope of its implementation across industrial sectors. These advancements underscore a critical juncture in manufacturing, where AI is essential for future operational resilience and innovation.
-
-  [llama3.1:8b]  score=8.0
-  Manufacturing is facing increased pressure to be more efficient with limited resources due to faster design cycles, leaner operations, and a strain on skilled labor pools. This has accelerated the shift towards AI-driven production globally across major industrial economies. The adoption of AI in manufacturing is no longer a question of whether, but rather how quickly and at what scale. Companies are looking to leverage AI to optimize their processes.
-
-  [llama3.2:3b]  score=7.5
-  Manufacturing is at an inflection point driven by pressure to improve efficiency with limited resources due to faster design cycles, leaner operations, and strained skilled labor pools. This shift is accelerating the adoption of AI-driven production methods. The focus has shifted from whether to adopt AI to how fast and in what manner it should be implemented.
-
-  Winner:    gemma4:e4b
-  Reasoning: Gemma4:e4b provides the most comprehensive and contextually accurate summary by explicitly mentioning the event (Hannover Messe 2026) and the key actors (NVIDIA and partners), whereas the other models omit the specific source context entirely.
---------------------------------------------------------------------------------
-
-Article #9: Mitigating Indirect AGENTS.md Injection Attacks in Agentic Environments
-Source: NVIDIA Developer Blog
-
-  [gemma4:e4b]  score=8.5
-  AI tools are rapidly transforming software development by acting as real-time coding copilots, which significantly accelerates development processes. However, this reliance on AI introduces security vulnerabilities, specifically the risk of "Indirect AGENTS.md Injection Attacks" within agentic environments. These attacks exploit the trust and automation inherent in these AI tools to compromise systems. Therefore, understanding and mitigating these novel, indirect injection attack vectors is crucial for securing modern software development pipelines.
-
-  [llama3.1:8b]  score=9.0
-  AI tools are accelerating software development by serving as real-time "copilots" that automate repetitive tasks and improve coding efficiency. However, this shift in developer workflows has introduced new security risks, such as indirect AGENTS.md injection attacks in agentic environments. These types of attacks exploit vulnerabilities in AI-powered development tools to inject malicious code into applications. This can lead to a range of issues, including data breaches and compromised system integrity.
-
-  [llama3.2:3b]  score=2.0
-  There is not enough information provided to summarize the article. The given text only contains a title and an introduction related to AI tools in software development.
-
-  Winner:    llama3.1:8b
-  Reasoning: llama3.1:8b provides the most balanced and informative summary, accurately capturing the context, the specific threat, and its implications, while gemma4:e4b is slightly more verbose and llama3.2:3b fails to summarize the available introduction text.
---------------------------------------------------------------------------------
-
-Article #10: Can we AI our way to a more sustainable world?
-Source: Microsoft Research
-
-  [gemma4:e4b]  score=8.5
-  Experts Doug Burger, Amy Luers, and Ishai Menache analyzed the global emissions footprint related to datacenter operations and the potential impact of AI. Their examination spans multiple critical areas, including electrification, materials science, and food systems. The research explores how AI could potentially contribute to achieving greater sustainability globally. The findings were originally published on the Microsoft Research platform.
-
-  [llama3.1:8b]  score=6.0
-  Researchers from Microsoft Research examined the environmental impact of datacenter operations and explored how AI could contribute to sustainability in various sectors including electrification, materials, and food systems. The study focused on global emissions implications and potential efficiency gains through the use of AI. No specific findings or results were mentioned in the article summary provided.
-
-  [llama3.2:3b]  score=7.5
-  Researchers at Microsoft Research explore whether artificial intelligence (AI) can contribute to a more sustainable world by examining its global emissions implications in datacenter operations, efficiency gains, and potential applications across electrification, materials, and food systems. Experts Doug Burger, Amy Luers, and Ishai Menache discuss the role of AI in reducing emissions and advancing sustainability. Their work aims to understand the benefits and limitations of AI's potential to drive positive change. The study focuses on optimizing various aspects of modern society to minimize environmental impact.
-
-  Winner:    gemma4:e4b
-  Reasoning: The gemma4:e4b summary provides the most concise and complete overview by including specific experts and the publication source without the unnecessary meta-commentary found in the other responses.
---------------------------------------------------------------------------------
-
-Article #11: Siemens Trials Nvidia-Powered Humanoid
-Source: AI Business
-
-  [gemma4:e4b]  score=8.5
-  Siemens conducted a trial at a German factory, showcasing an Nvidia-powered humanoid robot. This demonstration was positioned as a key advancement in integrating artificial intelligence across industrial operations. The trial highlights Siemens' efforts to incorporate advanced robotics and AI into future factory workflows.
-
-  [llama3.1:8b]  score=9.0
-  Siemens conducted a trial using an Nvidia-powered humanoid robot at one of its factories in Germany to test the integration of artificial intelligence into its operations. The trial was described by Siemens as a key milestone towards achieving fully automated production processes. Details on the specific goals and outcomes of the trial are not provided.
-
-  [llama3.2:3b]  score=7.5
-  A trial of an Nvidia-powered humanoid robot took place at a Siemens factory in Germany, marking a crucial step towards fully AI-integrated operations. The exact details of the trial are not provided, but it suggests that the use of artificial intelligence is being explored in industrial settings. The event was likely intended to showcase or test the capabilities of such technology. Details of the trial's outcome and further plans for the humanoid robot were not reported in the article.
-
-  Winner:    llama3.1:8b
-  Reasoning: The llama3.1:8b summary provides the most accurate and complete overview by including specific details like the 'milestone' characterization and acknowledging the lack of outcome details, whereas gemma4:e4b is concise but less detailed and llama3.2:3b is verbose with speculative language.
---------------------------------------------------------------------------------
-
-Article #12: AI Chipmaker Cerebras Files for IPO
-Source: AI Business
-
-  [gemma4:e4b]  score=8.5
-  AI chipmaker Cerebras has filed for an Initial Public Offering (IPO). This significant financial move follows the company securing major business agreements. Specifically, Cerebras recently forged substantial deals with both OpenAI and Amazon Web Services (AWS). These partnerships signal strong market confidence in the company's specialized chip technology.
-
-  [llama3.1:8b]  score=9.0
-  Cerebras, a company specializing in artificial intelligence (AI) chipmaking, has filed to go public through an initial public offering (IPO). The filing follows agreements between Cerebras and major tech companies OpenAI and Amazon Web Services (AWS) made earlier this year.
-
-  [llama3.2:3b]  score=7.0
-  Cerebras, an artificial intelligence chipmaker, has filed for an initial public offering (IPO). The company secured major partnerships with OpenAI and Amazon Web Services (AWS) in early 2023. This filing comes after the successful completion of these significant deals. Details on the IPO are not yet available at this time.
-
-  Winner:    llama3.1:8b
-  Reasoning: The Llama 3.1 8b model provides the most accurate, concise, and clear summary without adding unverified temporal specifics or unnecessary elaboration found in the other responses.
---------------------------------------------------------------------------------
-
-Article #13: Physical AI Edges Closer to Real-World Deployments
-Source: AI Business
-
-  [gemma4:e4b]  score=8.5
-  A recent report from Capgemini indicates a significant shift in how businesses are adopting artificial intelligence. Specifically, companies are moving physical AI applications from the experimental phase into practical, real-world implementations. This trend suggests that integrating physical AI systems into actual business operations is becoming a rapid focus for the corporate sector.
-
-  [llama3.1:8b]  score=9.0
-  Businesses are adopting physical artificial intelligence (AI) at a rapid pace, transitioning from experimental phases to actual implementations according to a report by Capgemini. The report highlights the increasing momentum of physical AI deployments in real-world settings. No further details on specific industries or applications are provided.
-
-  [llama3.2:3b]  score=7.5
-  A new report by French IT consulting firm Capgemini found that businesses are accelerating the deployment of physical AI, transitioning it from experimental phases to real-world implementations. The pace of this shift is expected to continue, indicating significant advancements in the integration of artificial intelligence into physical systems. As a result, organizations are increasingly adopting physical AI solutions to drive efficiency and innovation. This trend suggests a growing reliance on tangible AI applications in various industries.
-
-  Winner:    llama3.1:8b
-  Reasoning: Llama3.1:8b provides the most accurate and concise summary while explicitly noting the lack of specific details, avoiding the hallucinated reasoning about efficiency and innovation found in the other models.
---------------------------------------------------------------------------------
-
-Article #14: Chinese Vendor Claims First Large-Scale Embodied AI Deployment
-Source: AI Business
-
-  [gemma4:e4b]  score=8.5
-  Chinese vendor Agibot has announced a development they claim represents a major advancement in embodied AI. Their project is highlighted as marking a significant transition for the technology. This deployment signifies a move of embodied AI capabilities from limited pilot programs toward full industrial-scale utilization.
-
-  [llama3.1:8b]  score=7.5
-  Agibot claims its project represents a major transition from pilot projects to large-scale industrial implementation of embodied artificial intelligence.
-
-  [llama3.2:3b]  score=9.5
-  Agibot has claimed a first large-scale deployment of embodied artificial intelligence (AI) technology. The company's project represents a significant shift towards the practical application of embodied AI, moving beyond initial pilot studies and trials. Industrial use cases are being explored as part of this deployment. Agibot is marking this milestone as a notable achievement in the development of embodied AI.
-
-  Winner:    llama3.2:3b
-  Reasoning: The Llama 3.2 3B model provides the most comprehensive and context-rich summary without losing conciseness, whereas the others are either too brief or miss key details about the nature of the deployment.
---------------------------------------------------------------------------------
-
-Article #15: UK Launches $675 Million Fund for AI Startups
-Source: AI Business
-
-  [gemma4:e4b]  score=7.0
-  The UK government has launched a substantial $675 million fund specifically designed to support artificial intelligence startups. This initiative positions the UK within a growing global trend of national-level financial investments in the AI sector. The funding is intended to catalyze growth and innovation within the domestic AI startup ecosystem.
-
-  [llama3.1:8b]  score=9.5
-  The UK has launched a £535 million (approximately $675 million) fund to support artificial intelligence startups. This initiative joins other sovereign-backed funds globally that invest in AI-related projects and companies. The exact terms of the investment, such as how much each startup can receive, are not specified in the article.
-
-  [llama3.2:3b]  score=8.5
-  The UK has launched a $675 million fund to support artificial intelligence (AI) startups, as part of its capital program. This initiative aims to provide financing and resources to innovative AI-based businesses. The fund is part of a growing trend of sovereign AI funding initiatives globally, designed to encourage the development and growth of the AI industry.
-
-  Winner:    llama3.1:8b
-  Reasoning: llama3.1:8b provides the most accurate and contextually rich summary by correctly identifying the primary currency (GBP) and acknowledging missing details, whereas the other models treat USD as the primary figure without clarification.
---------------------------------------------------------------------------------
-
-Article #16: US, California Use Purchasing Power to Set AI Rules
-Source: AI Business
-
-  [gemma4:e4b]  score=9.2
-  Given the lack of comprehensive legislative rules, US and California agencies are taking proactive measures to govern the development and use of artificial intelligence. These entities are utilizing their considerable purchasing power to establish de facto guidelines and controls over the AI industry. This regulatory approach functions as a market-based mechanism to oversee AI technology development. Essentially, agency spending and procurement decisions are being used to shape how AI systems are built and implemented.
-
-  [llama3.1:8b]  score=8.8
-  The US government and the state of California are using their purchasing power to set rules for artificial intelligence development through contracts with technology companies. This approach allows them to influence industry practices in the absence of federal or state legislation regulating AI. The method aims to establish standards and guidelines for AI systems without relying on new laws. By doing so, agencies can exert control over how AI is used in government projects.
-
-  [llama3.2:3b]  score=7.5
-  The US government, specifically California, is utilizing its purchasing power as a regulatory tool to establish guidelines for artificial intelligence (AI). Without legislative oversight, federal and state agencies are taking proactive steps to ensure AI is developed and used responsibly. This approach allows the government to shape industry standards and encourage adoption of best practices in AI development. By setting these rules through purchasing decisions, California aims to promote safe and ethical use of AI technology.
-
-  Winner:    gemma4:e4b
-  Reasoning: gemma4:e4b provides the most accurate, clear, and concise summary, correctly identifying the joint role of the US and California governments without the factual inaccuracy or vagueness present in the other models.
---------------------------------------------------------------------------------
-
-Article #17: OpenAI Scales Trusted Access for Cyber Defense With GPT-5.4-Cyber: a Fine-Tuned Model Built for Verified Security Defenders
-Source: MarkTechPost
-
-  [gemma4:e4b]  score=9.5
-  OpenAI is expanding its "Trusted Access for Cyber" program, moving from a pilot phase to broad deployment. Central to this expansion is the introduction of GPT-5.4-Cyber, a specific variant of the GPT-5.4 model. This fine-tuned model is explicitly designed to operate within a "cyber-permissive" framework. It will be made available to thousands of vetted security professionals and defenders.
-
-  [llama3.1:8b]  score=9.0
-  OpenAI is deploying its Trusted Access for Cyber program at scale, previously limited to a pilot phase. A fine-tuned model called GPT-5.4-Cyber has been introduced for use by thousands of vetted cybersecurity defenders. This model is a variant of the larger GPT-5.4, specifically designed with a "cyber-permissive" approach. The deployment aims to provide secure and efficient access for these verified security experts.
-
-  [llama3.2:3b]  score=8.5
-  OpenAI is expanding its Trusted Access for Cyber program to a broader deployment, introducing GPT-5.4-Cyber, a fine-tuned variant of the model designed specifically for cyber defense. This new model has been built with the goal of being "cyber-permissive" and is intended for use by thousands of vetted defenders. The introduction marks a significant scaling up of OpenAI's Trusted Access program, which aims to enhance cybersecurity efforts. GPT-5.4-Cyber is part of this effort to improve verified security defenses.
-
-  Winner:    gemma4:e4b
-  Reasoning: Gemma4:e4b provides the most comprehensive summary by explicitly stating the transition from pilot to broad deployment while maintaining high conciseness, whereas the other models omit this key contextual detail.
---------------------------------------------------------------------------------
-
-Article #18: Moonshot AI and Tsinghua Researchers Propose PrfaaS: A Cross-Datacenter KVCache Architecture that Rethinks How LLMs are Served at Scale
-Source: MarkTechPost
-
-  [gemma4:e4b]  score=9.5
-  Researchers from Moonshot AI and Tsinghua University have proposed PrfaaS, a novel Cross-Datacenter KVCache architecture designed to overcome the limitations of current large language model (LLM) serving. Traditionally, the high-bandwidth RDMA networks required for LLM inference have restricted both prefill and decode processes to a single datacenter or even a single rack. PrfaaS aims to redefine LLM deployment by enabling these critical components to function effectively across multiple, physically separated data centers. This new architecture significantly advances the scalability of serving massive LLMs.
-
-  [llama3.1:8b]  score=8.5
-  A team of researchers from Moonshot AI and Tsinghua University has proposed a new architecture called PrfaaS, which rethinks how large language models (LLMs) are served at scale. The traditional approach to LLM serving involves confining prefill and decode operations within the same datacenter or rack. PrfaaS proposes a cross-datacenter KVCache architecture that breaks this limitation. This new architecture allows for more efficient handling of LLM inference tasks.
-
-  [llama3.2:3b]  score=8.0
-  Researchers from Moonshot AI and Tsinghua University propose a new architecture called PrfaaS, which aims to rethink how large language models (LLMs) are served at scale by enabling cross-datacenter KVCache storage. This approach could improve the efficiency of LLMs in handling inference tasks by reducing bandwidth constraints. Previously, all prefill and decode operations were limited to the same datacenter or rack, a limitation that PrfaaS seeks to address.
-
-  Winner:    gemma4:e4b
-  Reasoning: The gemma4:e4b summary provides the most precise technical detail regarding RDMA limitations and offers the most coherent and comprehensive explanation of the architectural shift.
---------------------------------------------------------------------------------
-
-Article #19: Elon Musk snubs Paris legal summons over alleged child abuse images on X
-Source: The Guardian - Artificial Intelligence
-
-  [gemma4:e4b]  score=8.5
-  Elon Musk failed to appear for a voluntary interview with Parisian lawyers concerning an investigation into his platform X and AI chatbot Grok. The French cybercrime unit took note of the absence of the first person summoned, though they did not name Musk. Musk had previously criticized the French authorities involved by calling them "retards" in a French-language post on X.
-
-  [llama3.1:8b]  score=9.0
-  Elon Musk was summoned for a voluntary interview by lawyers in Paris as part of an investigation into his social media platform X and AI chatbot Grok. He failed to appear, despite being requested to do so. The prosecutors stated that they had "taken note" of his absence, but did not mention his name specifically. This is the second time Musk has been involved in a controversy over child abuse content on his platforms.
-
-  [llama3.2:3b]  score=7.5
-  Elon Musk did not appear for a voluntary interview with lawyers in Paris as part of an investigation by a French cybercrime unit into his social media platform X and AI chatbot Grok. The investigation is related to alleged child abuse images on the platform. Musk had called the French authorities involved "retards" weeks earlier in a post on X. He did not respond to the summons or appear for the interview as scheduled.
-
-  Winner:    llama3.1:8b
-  Reasoning: Model llama3.1:8b provides the most balanced summary by correctly distinguishing the summons from the underlying investigation (child abuse images), whereas the other models conflate the interview subject with the investigation topic or lack specific context.
---------------------------------------------------------------------------------
-
-Article #20: Is Richard Tice’s picture AI-manipulated? Here are five giveaways
-Source: The Guardian - Artificial Intelligence
-
-  [gemma4:e4b]  score=0.0
-  Experts and social media detectives analyzed a picture posted by Reform deputy leader Richard Tice, purportedly from a campaign event. Their investigation revealed several telltale signs suggesting the image was either edited or created using artificial intelligence. Critics pointed to various elements within the photo that raised doubts about its authenticity. Ultimately, the analysis concluded that the image was not genuinely captured at the alleged event.
-
-  [llama3.1:8b]  score=0.0
-  Experts claim Richard Tice's picture of an apparent campaign event was likely AI-manipulated, citing five giveaway signs. The article does not specify what these signs are, but mentions that experts and social media detectives took a closer look at the image. The authenticity of the photo is disputed due to suspected editing or generation by artificial intelligence. The exact nature of the alleged manipulation is unclear without further information.
+  Google's annual developer conference, I/O, is taking place and the company is entering as a clear third-place contender in the foundation model market. This follows from last year's event where Google trailed behind Meta and Microsoft. The conference will likely see announcements about Google's AI advancements and its positioning in the market.
 
   [llama3.2:3b]  score=0.0
-  Experts and social media detectives analyzed Richard Tice's picture of an apparent campaign event, concluding it was likely AI-manipulated due to various telltale signs. The image raised questions about its authenticity. Experts considered multiple factors in their assessment, but the article does not provide specific details on these elements.
+  I don't see an article to summarize. The provided text appears to be a promotional blurb for a newsletter rather than a full-fledged article.
 
-  Winner:    unknown
-  Reasoning: parse error
+  Winner:    gemma4:e4b
+  Reasoning: gemma4:e4b provides the only plausible summary of the likely content, whereas llama3.1:8b hallucinates specific market rankings not present in the text, and llama3.2:3b incorrectly fails to process the input.
 --------------------------------------------------------------------------------
 
-Article #21: Reform’s Richard Tice posts picture with telltale signs of AI manipulation, say experts
-Source: The Guardian - Artificial Intelligence
+Article #2: Inside Anduril and Meta’s quest to make smart glasses for warfare
+Source: MIT Technology Review - AI & Emerging Tech
 
-  [gemma4:e4b]  score=6.5
-  Experts suggest that a picture posted by Reform UK's deputy leader, Richard Tice, showing a group of supporters in Birmingham, may have been generated or altered using artificial intelligence. The image, which depicts the group knocking on doors on a blue-skyed day, was posted by Tice with captions about the activists' commitment and belief. This suspicion of AI manipulation stems from analyses by Peryton IntelligenceUK politics live. The article does not confirm the authenticity of the photograph.
+  [gemma4:e4b]  score=8.5
+  Anduril is collaborating with Meta to develop an augmented-reality headset for military applications. This advanced prototype aims to integrate sophisticated remote operational capabilities. Specifically, the system will allow users to order drone strikes using intuitive inputs such as eye-tracking and voice commands. Efforts are being driven by Anduril's VP, Quay Barnett, who brings extensive experience from the Army's Special Operations Command to this endeavor.
 
-  [llama3.1:8b]  score=8.5
-  The article reports that a photo posted by Reform's Deputy Leader Richard Tice on X appears to be manipulated using AI. Experts at Peryton Intelligence stated that the image was "almost certainly generated or altered" using artificial intelligence. The photo, which showed Reform supporters in Birmingham, was presented as evidence of their dedication and commitment to the party.
+  [llama3.1:8b]  score=9.2
+  Anduril is collaborating with Meta to develop an augmented-reality headset for military use, which would allow soldiers to control drones and other equipment using eye-tracking and voice commands. The headset's features include the ability to order drone strikes via these methods. The project aims to enhance the soldier's situational awareness and decision-making capabilities in combat situations. Quay Barnett, a former Army Special Operations Command officer, is leading the development of this technology at Anduril.
 
-  [llama3.2:3b]  score=9.5
-  Deputy leader Richard Tice's image on X (formerly Twitter) was likely manipulated using AI due to telltale signs, according to experts at Peryton Intelligence. The photo shows a diverse group of activists with placards and cheesy grins, suggesting it may have been generated or altered digitally. In the post, Tice claimed the picture showed "resilience" and "belief", but the manipulated image raises questions about the authenticity of his statement.
-
-  Winner:    llama3.2:3b
-  Reasoning: Model llama3.2:3b provides the most complete and accurate summary by capturing the specific visual details ('cheesy grins'), the source of the analysis, and the context of the politician's original post, whereas the other models either omit key details or include irrelevant source artifacts.
---------------------------------------------------------------------------------
-
-Article #22: Grimes joining LinkedIn is artwashing at its most brazen. I should know – I released my new film on there
-Source: The Guardian - Artificial Intelligence
-
-  [gemma4:e4b]  score=7.5
-  The author critiques Grimes for reportedly announcing her intention to release all future music exclusively on LinkedIn. This move has been seen by the author as a form of "artwashing" and an act indicative of an artist's desperation. Grimes' presence on the networking platform, which the author deems uninspiring, is highlighted by her promotion of an appearance at Nvidia’s GPU Technology Conference. The author also notes a personal connection to this trend, admitting to making a counterintuitive professional move by releasing their own work on LinkedIn.
-
-  [llama3.1:8b]  score=9.0
-  Grimes (Claire Boucher) has created a profile on LinkedIn and posted about an appearance at Nvidia's GPU Technology Conference. This marks her following through on a statement she made last year that she would be releasing music only on LinkedIn. Grimes' decision to join the platform has been criticized as an example of "artwashing," or using art to promote corporate interests. The author, who claims to have released their own film on LinkedIn, notes that joining the platform is a change from what one might expect from a musician like Grimes.
-
-  [llama3.2:3b]  score=6.0
-  Electronic musician Grimes has joined LinkedIn and created a profile promoting her appearance at Nvidia's GPU Technology Conference, sparking accusations that she is "artwashing" by associating herself with the highly lucrative tech industry. This move follows a similar claim Grimes made on X (formerly Twitter) last year, where she announced plans to release music only on LinkedIn. The networking platform has become increasingly criticized for its commercialization and lack of creativity. Grimes' pivot to LinkedIn is seen as a provocative attempt to associate herself with high-profile tech companies.
+  [llama3.2:3b]  score=8.8
+  Anduril is working on an augmented-reality headset with Meta to create smart glasses for warfare, featuring advanced technology such as eye-tracking and voice commands. The device aims to enable users to order drone strikes without physically interacting with a screen or controller. According to Quay Barnett, the project's lead, this innovation seeks to enhance military operations through increased efficiency and precision. Anduril's goal is to create a wearable device that seamlessly integrates AR capabilities into real-world scenarios.
 
   Winner:    llama3.1:8b
-  Reasoning: Model llama3.1:8b provides the most accurate and balanced summary, correctly identifying the core controversy, the definition of 'artwashing,' and the author's personal stance without introducing unsupported external context or excessive detail.
+  Reasoning: The Llama 3.1 8b summary offers the best balance of accuracy, clarity, and completeness, effectively synthesizing the collaboration, key technologies, leadership, and strategic goals without unnecessary fluff.
 --------------------------------------------------------------------------------
 
-Article #23: Teacher v chatbot: my journey into the classroom in the age of AI – podcast
-Source: The Guardian - Artificial Intelligence
+Article #3: The Download: Musk v. Altman week 3, and Trump’s tech trading
+Source: MIT Technology Review - AI & Emerging Tech
 
   [gemma4:e4b]  score=7.5
-  Peter C. Baker shares his experience navigating the challenges of being a newcomer teacher while simultaneously integrating Artificial Intelligence into the classroom. He describes the process of incorporating AI as feeling overwhelming, comparing it to "downing a coffee in the middle of a panic attack." The podcast discusses the difficulties of teaching in the current educational landscape when confronted with new technology like AI. Overall, the piece reflects the anxiety and learning curve associated with adopting AI tools in the teaching profession.
+  The latest edition of "The Download" addresses recent developments in the Musk v. Altman legal battle. In this third week of coverage, the article notes that Elon Musk and Sam Altman have continued to trade accusations regarding each other's credibility. The report indicates that a decision on the case now rests with the jury to determine sides.
 
-  [llama3.1:8b]  score=2.0
-  The article is about a person's experience as a teacher in a classroom with AI technology, but it does not provide specific details or facts about their journey.
+  [llama3.1:8b]  score=5.0
+  This is today's edition of The Download, our weekday newsletter that provides a daily dose of what's going on in the world of technology. The Musk v. Altman trial has entered its third week, with Elon Musk and Sam Altman trading blows over each other's credibility. The case will now be decided by a jury, who will determine which side is more credible. The final week of the trial marks the culmination of the exchange between Musk and Altman.
 
   [llama3.2:3b]  score=1.0
-  There is no article to summarize. The provided text appears to be a brief content summary or introduction to an audio podcast, but it does not contain any substantive information about the topic of the podcast itself.
+  There is no article to summarize, only a content section with a brief overview of "The Download" newsletter.
 
   Winner:    gemma4:e4b
-  Reasoning: Gemma4:e4b provides a coherent and informative summary based on the text provided, whereas the other models incorrectly claim the article is missing or lacks substance.
+  Reasoning: gemma4:e4b provides the most accurate and concise summary of the provided text, whereas llama3.1:8b hallucinates details not present in the source, and llama3.2:3b fails to identify the text as an article needing summarization.
 --------------------------------------------------------------------------------
 
-Article #24: Import AI 454: Automating alignment research; safety study of a Chinese model; HiFloat4
-Source: Import AI (Jack Clark)
+Article #4: OpenAI and Dell partner to bring Codex to hybrid and on-premise enterprise environments
+Source: OpenAI - News
 
-  [gemma4:e4b]  score=6.0
-  The Import AI newsletter provides updates on AI research, drawing from arXiv and reader feedback. One key highlight discussed is Huawei's HiFloat4 training format, which outperformed Western MXFP4 in an Ascend chip bakeoff. The article speculates that this performance difference might indicate the impact of export controls driving increased interest in Chinese AI development methods.
+  [gemma4:e4b]  score=9.5
+  OpenAI and Dell have formed a partnership to make the Codex AI coding agent accessible to enterprises in hybrid and on-premise environments. This collaboration allows organizations to deploy AI coding agents in a secure manner across their existing data infrastructure and workflows. The partnership aims to extend the capabilities of AI coding tools beyond the cloud into private, controlled corporate networks.
 
-  [llama3.1:8b]  score=9.0
-  Huawei's HiFloat4 training format has been shown to outperform the Western-developed MXFP4 on the company's Ascend chip. This development may indicate that export controls are influencing Chinese AI research, leading it to focus on domestic alternatives. A study on a Chinese language model found that its safety features were comparable to those of Western models.
+  [llama3.1:8b]  score=8.5
+  OpenAI and Dell have partnered to make Codex available in hybrid and on-premise enterprise environments. This partnership aims to enable secure deployment of AI coding agents across data and workflows within these settings. The collaboration is expected to provide enterprises with the ability to leverage Codex in their specific infrastructure configurations. The initiative will likely facilitate the use of Codex in a wider range of organizational contexts.
 
-  [llama3.2:3b]  score=0.0
-  There is no article provided to summarize. The text appears to be an excerpt from a newsletter or introduction, but it does not contain a specific article for summarization.
-
-  Winner:    llama3.1:8b
-  Reasoning: llama3.1:8b accurately and concisely covers all three distinct topics mentioned in the header (Huawei's HiFloat4, export control speculation, and the Chinese model safety study) without hallucination, whereas gemma4:e4b omits the safety study and llama3.2:3b fails to generate a summary.
---------------------------------------------------------------------------------
-
-Article #25: Claude comes for the design stack
-Source: The Rundown AI
-
-  [gemma4:e4b]  score=5.0
-  Claude is positioned to impact the design technology stack by offering users the ability to run their own free coding agent directly on their laptop. This development suggests a shift towards more localized and accessible AI coding assistance for designers. The functionality allows users to harness advanced AI coding capabilities without reliance on cloud-based services.
-
-  [llama3.1:8b]  score=0.0
-  I don't see an article to summarize. Please provide the text of the article you would like me to summarize, and I'll be happy to assist you with a 3-4 sentence summary.
-
-  [llama3.2:3b]  score=0.0
-  There is no article provided to summarize. Please provide the text of the article, and I'll be happy to assist you.
+  [llama3.2:3b]  score=8.0
+  OpenAI has partnered with Dell to deploy the Codex AI model in hybrid and on-premise enterprise environments, enabling secure deployment of AI coding agents across data and workflows. This partnership aims to help enterprises leverage the capabilities of Codex for efficient and secure AI coding solutions. The integration will facilitate easier adoption of AI technologies in traditional IT infrastructure settings.
 
   Winner:    gemma4:e4b
-  Reasoning: Only one model attempted to fulfill the summary task, providing a coherent and accurate synopsis despite the input being a headline rather than full text.
+  Reasoning: The gemma4:e4b summary offers the highest clarity and accuracy by explicitly highlighting the strategic goal of moving AI capabilities into private networks, providing a more precise and complete overview of the partnership's significance compared to the other models.
 --------------------------------------------------------------------------------
 
-Article #26: Reading today's open-closed performance gap
-Source: Interconnects
+Article #5: Humanoid, Schaeffler to Bring Thousands of Robots to Factories
+Source: AI Business
+
+  [gemma4:e4b]  score=9.0
+  Humanoid and Schaeffler have announced a significant partnership involving the deployment of thousands of humanoid robots into factories. This agreement is characterized by the companies as one of the largest humanoid robot rollouts to date. The collaboration aims to integrate advanced humanoid robotics into industrial manufacturing settings.
+
+  [llama3.1:8b]  score=7.5
+  Schaeffler and Humanoid are partnering on a project that will bring thousands of robots into factories, reportedly making it one of the largest humanoid robot deployments in history. The exact number of robots involved is not specified in the article. Details about the partnership's objectives or how the robots will be used are also lacking.
+
+  [llama3.2:3b]  score=8.5
+  Schaeffler has agreed to bring thousands of robots, specifically humanoid robots, to factories as part of a deal with Humanoid. This rollout is considered one of the largest humanoid deployments in history. The exact number of robots to be deployed was not specified in the article.
+
+  Winner:    gemma4:e4b
+  Reasoning: The gemma4:e4b summary is the most concise and fluent, effectively capturing the core partnership and significance without unnecessary meta-commentary about missing details.
+--------------------------------------------------------------------------------
+
+Article #6: Musk’s xAI Launches Grok Build to Take on Claude Code, Codex
+Source: AI Business
+
+  [gemma4:e4b]  score=9.2
+  xAI, led by Elon Musk, has launched a "Grok Build" designed to compete in the coding AI market. This new offering directly aims to challenge established models like Claude Code and Codex. The article notes that coding has become the most prevalent and widely adopted enterprise application for artificial intelligence. This launch positions Grok to compete in the rapidly growing field of AI-powered software development tools.
+
+  [llama3.1:8b]  score=7.8
+  xAI's Grok Build is a response to other AI models like Claude and Codex, aiming to compete in the market for large language models. Coding is one of the most popular applications of enterprise AI. xAI's goal with Grok Build is to improve upon existing capabilities offered by other AI models like Claude Code and Codex.
+
+  [llama3.2:3b]  score=8.5
+  xAI, a company led by Elon Musk's team, has launched Grok Build, a new platform aimed at competing with existing solutions like Claude Code and Codex. The launch comes in response to the growing demand for coding applications in enterprise AI, which have become increasingly popular. xAI is positioning itself as a contender in this market, highlighting the significance of coding in enterprise AI adoption. No specific details on Grok Build's features or technical capabilities are mentioned in the article.
+
+  Winner:    gemma4:e4b
+  Reasoning: Gemma4:e4b provides the most accurate and concise summary that captures the core news event and context without unnecessary meta-commentary or slight inaccuracies regarding the product type.
+--------------------------------------------------------------------------------
+
+Article #7: Four AI supply-chain attacks in 50 days exposed the release pipeline red teams aren't covering
+Source: VentureBeat - AI
+
+  [gemma4:e4b]  score=9.0
+  Four recent supply-chain attacks targeting major AI companies like OpenAI, Anthropic, and Meta exposed vulnerabilities within their release pipelines, rather than the AI models themselves. These incidents revealed critical gaps in security testing, specifically concerning dependency hooks, CI runners, and packaging gates, which current red-teaming exercises do not cover. One notable incident involved a worm leveraging a misconfiguration to publish 84 malicious npm packages while maintaining valid, trustworthy provenance. Collectively, these attacks highlight that build-pipeline breaches are a distinct and critical security risk that requires dedicated testing beyond model-safety evaluations.
+
+  [llama3.1:8b]  score=8.5
+  In the span of 50 days, four supply-chain incidents hit major AI companies including OpenAI, Anthropic, and Meta, exposing vulnerabilities in release pipelines. The attacks, three adversary-driven and one self-inflicted, resulted from gaps in security measures, such as dependency hooks and CI runners. None of the attacks targeted the models themselves but exploited weaknesses in packaging gates and release processes. All four incidents demonstrated a failure to adequately secure release pipelines.
+
+  [llama3.2:3b]  score=7.5
+  Four major tech companies, including OpenAI, Anthropic, and Meta, were targeted by four supply-chain attacks in just 50 days, exposing vulnerabilities in their release pipelines. The attacks, which included a self-propagating worm that published malicious package versions across 42 npm packages, highlighted a critical gap in the security measures of these companies' pipeline systems. None of the attacks targeted the models themselves, but rather exploited weaknesses in the build and deployment processes. These incidents demonstrate that red-team exercises are not yet adequately prepared to address this specific vulnerability.
+
+  Winner:    gemma4:e4b
+  Reasoning: The gemma4:e4b summary provides the most accurate detail regarding the specific nature of the attacks (provenance manipulation) and offers the strongest concluding insight on the distinction between build-pipeline security and model safety.
+--------------------------------------------------------------------------------
+
+Article #8: LangSmith Engine closes the agent debugging loop automatically — but multi-model enterprises still need a neutral layer
+Source: VentureBeat - AI
 
   [gemma4:e4b]  score=8.5
-  The article addresses the multifaceted nature of the single evaluation number that often becomes a central focus for assessment. It suggests that this number is determined by complex and varied factors. Furthermore, the content promises to explore how these determining factors are anticipated to change in the future.
+  LangSmith has released a public beta feature, LangSmith Engine, to automatically manage the debugging loop for AI agents encountering production failures. This engine monitors various failure signals, such as explicit errors and negative user feedback, and can then read the live codebase to diagnose root causes. It automatically drafts a fix and prevents regression, requiring only human approval at the final step. Despite its advancements, the article notes that multi-model enterprises may still require a neutral monitoring layer due to observability tools being integrated into major AI platform offerings like those from OpenAI, Anthropic, and Google.
 
-  [llama3.1:8b]  score=10.0
-  Unfortunately, there is no content provided to summarize. The article appears to be a title and a brief description with no actual text content.
+  [llama3.1:8b]  score=9.2
+  LangSmith Engine, a new capability from LangChain, automates the process of detecting production failures, diagnosing root causes, drafting fixes, and preventing regression in agent development. It does this in a single automated pass by monitoring production traces for various signal types and reading the live codebase to identify culprits. The human is only required at the approval step after LangSmith Engine proposes a custom evaluator for specific failure patterns. This capability aims to speed up the triage process for AI engineers and close the agent debugging loop.
 
-  [llama3.2:3b]  score=10.0
-  I don't see an article provided. Please provide the text of the article you'd like me to summarize, and I'll be happy to assist.
+  [llama3.2:3b]  score=8.0
+  LangSmith Engine, a new capability from monitoring and evaluation platform LangChain, automates agent debugging by detecting production failures, diagnosing root causes, drafting fixes, and preventing regressions in a single automated pass. The system monitors production traces for various signal types, including explicit errors and unusual behaviors, before reading the live codebase to identify the culprit and proposing a custom evaluator. This feature aims to reduce the time it takes for engineers to find and fix agent mistakes. LangSmith Engine is launched in public beta, competing with other platforms such as Anthropic, OpenAI, and Google that also offer observability and evaluation capabilities.
 
   Winner:    llama3.1:8b
-  Reasoning: While gemma4:e4b hallucinated content for a title-only input, the other two models correctly identified the lack of source text, with llama3.1:8b winning for explicitly confirming the missing content structure.
+  Reasoning: The llama3.1:8b model provides the most accurate and balanced summary, correctly identifying the core functionality and the context of multi-model enterprises without introducing significant factual errors or omitting key details present in the other outputs.
 --------------------------------------------------------------------------------
 
-Article #27: How to Stand Out When Everyone Uses AI
-Source: The Algorithmic Bridge
+Article #9: Stochastic Gradient Descent (SGD’s) Frequency Bias and How Adam Fixes It
+Source: MarkTechPost
 
-  [gemma4:e4b]  score=1.5
-  The provided article title suggests a topic on how to differentiate oneself in an era where Artificial Intelligence (AI) is widely adopted. However, the content supplied is only a vague warning: "No one is safe from this deadly trap." Therefore, a factual summary detailing specific strategies for standing out in the age of AI cannot be provided. The article's core message, based solely on the given text, is a cautionary note about an unspecified danger related to AI usage.
+  [gemma4:e4b]  score=8.0
+  Training modern language models on unevenly distributed data creates an optimization challenge where parameters for common tokens receive frequent gradient updates. Conversely, parameters for rare but meaningful tokens receive very infrequent updates. This discrepancy is referred to as SGD's Frequency Bias. The article discusses how the Adam optimizer specifically addresses this bias.
 
-  [llama3.1:8b]  score=2.0
-  I don't see an article to summarize. Please provide the text of the article you'd like me to condense into 3-4 sentences. I will then provide a factual summary of the main points.
+  [llama3.1:8b]  score=7.5
+  Modern language models are trained on data with uneven token distributions, where common words receive frequent updates and rare words see fewer updates. This creates an optimization challenge due to the varying frequency of gradient updates for different parameters. The issue arises because common tokens' gradients are constant, while rare tokens' gradients may be hundreds or even thousands of time smaller.
+
+  [llama3.2:3b]  score=9.0
+  Modern language models face an optimization challenge due to uneven token distributions in training data, where common tokens are updated frequently while rare tokens receive infrequent updates. This frequency bias can lead to parameters associated with rare tokens receiving less attention during training. The Adam optimizer addresses this issue by adapting learning rates for each parameter based on its magnitude and the input gradient magnitude, mitigating the frequency bias.
+
+  Winner:    llama3.2:3b
+  Reasoning: llama3.2:3b provides the most accurate, complete, and concise summary by correctly identifying the problem and explicitly stating how Adam's adaptive learning rates solve the frequency bias, whereas the other models lack precision or completeness.
+--------------------------------------------------------------------------------
+
+Article #10: NVIDIA Introduces a 4-Bit Pretraining Methodology Using NVFP4, Validated on a 12B Hybrid Mamba-Transformer at 10T Token Horizon
+Source: MarkTechPost
+
+  [gemma4:e4b]  score=9.5
+  NVIDIA has unveiled a novel 4-bit pretraining methodology utilizing the NVFP4 format. This technique incorporates several advanced elements, including selective BF16 layers, 16x16 Random Hadamard Transforms on Wgrad inputs, 2D weight scaling, and stochastic gradient rounding. The method was successfully validated on a 12B hybrid Mamba-Transformer model, which was trained on an unprecedented 10 trillion tokens. Notably, the resulting downstream accuracy closely mirrors the FP8 baseline, scoring 62.58% compared to 62.62% on the MMLU-Pro benchmark.
+
+  [llama3.1:8b]  score=9.0
+  NVIDIA introduced a 4-bit pretraining methodology using the NVFP4 microscaling format, which combines several techniques to reduce computational requirements. This methodology was validated on a 12 billion parameter hybrid Mamba-Transformer trained on 10 trillion tokens, achieving comparable accuracy to an FP8 baseline. The 4-bit method uses selective BF16 layers, Random Hadamard Transforms, and stochastic rounding on gradients. The longest publicly documented 4-bit pretraining run achieved a downstream accuracy of 62.58%.
+
+  [llama3.2:3b]  score=8.5
+  NVIDIA introduces a 4-bit pretraining methodology called NVFP4, which combines selective BF16 layers, Random Hadamard Transforms, and stochastic rounding on gradients. The methodology is validated on a 12B hybrid Mamba-Transformer trained on 10 trillion tokens, achieving downstream accuracy of 62.58%. This is the longest publicly documented 4-bit pretraining run. The NVFP4 approach closely tracks the FP8 baseline's performance.
+
+  Winner:    gemma4:e4b
+  Reasoning: Gemma4:e4b provides the most comprehensive and precise summary by including specific technical details like the 16x16 Random Hadamard Transforms and the exact comparative MMLU-Pro scores, while maintaining excellent clarity and conciseness.
+--------------------------------------------------------------------------------
+
+Article #11: Jury hands victory to Sam Altman and OpenAI in battle with Elon Musk
+Source: The Guardian - Artificial Intelligence
+
+  [gemma4:e4b]  score=8.5
+  A federal jury in Oakland, California, ruled in favor of Sam Altman and OpenAI, finding them not liable for alleged breach of contract. The verdict countered Elon Musk's claims that OpenAI and its president, Greg Brockman, unjustly enriched themselves. This outcome concludes a protracted and contentious legal battle between Musk and the leaders of the AI company.
+
+  [llama3.1:8b]  score=9.0
+  A federal jury in Oakland, California, found Sam Altman and OpenAI not liable for breaching contracts with Elon Musk. The jury ruled against Musk's claims of unjust enrichment and contract breaking. This decision marks a victory for Altman, who is CEO and president of OpenAI. The verdict was handed down after a long legal battle between the parties.
+
+  [llama3.2:3b]  score=7.5
+  A federal jury in Oakland, California, ruled that Sam Altman, CEO of OpenAI, and his company are not liable for breaking contracts made with Elon Musk when founding the startup. The jury found that Altman and OpenAI's president, Greg Brockman, were not responsible for Musk's claims of unjust enrichment and breach of contract. This marks a victory in a long-standing legal battle between the two parties. The outcome is seen as a vindication of Altman and OpenAI's actions during the founding of the startup.
+
+  Winner:    llama3.1:8b
+  Reasoning: llama3.1:8b provides the most accurate and clear summary without introducing unsupported contextual details or factual errors regarding corporate roles found in the other models.
+--------------------------------------------------------------------------------
+
+Article #12: Pope Leo to issue text on human dignity and AI with Anthropic co-founder
+Source: The Guardian - Artificial Intelligence
+
+  [gemma4:e4b]  score=5.0
+  Pope Leo will release an encyclical addressing "the protection of the human person in the age of AI." This significant document, marking one of his major works, will tackle the rapid advancements in artificial intelligence. The Pope plans to present this encyclical next week at the Vatican. An event accompanying the release will feature Christopher Olah, a co-founder of the AI company Anthropic.
+
+  [llama3.1:8b]  score=8.5
+  Pope Leo will issue an encyclical on human dignity and artificial intelligence. The document, titled "the protection of the human person in the age of AI", will address the rapid rise of AI technology. This is Pope Leo's first major text as pope and will be presented at the Vatican next week. Christopher Olah, co-founder of Anthropic, a US-based AI firm, is expected to attend the event.
+
+  [llama3.2:3b]  score=9.0
+  Pope Leo is set to issue an encyclical on human dignity and artificial intelligence (AI), specifically addressing "the protection of the human person in the age of AI". The document will be presented at the Vatican next week, where it is expected to be accompanied by an event featuring Christopher Olah, co-founder of US-based AI firm Anthropic. This marks Pope Leo's first major text of his papacy and a significant statement on a timely topic. The Vatican has not specified when the full text of the encyclical will be released.
+
+  Winner:    llama3.2:3b
+  Reasoning: llama3.2:3b provides the most complete and precise summary, including the important caveat about the text release date and correctly contextualizing the event, whereas gemma4:e4b incorrectly claims the encyclical itself will be presented at the event rather than just being part of the broader announcement context.
+--------------------------------------------------------------------------------
+
+Article #13: Tech firms face tougher UK rules on intimate image abuse
+Source: The Guardian - Artificial Intelligence
+
+  [gemma4:e4b]  score=8.5
+  Ofcom plans to update its codes of practice to combat the increasing spread of intimate image abuse, often referred to as "revenge porn," and AI-generated deepfakes. These new guidelines will mandate that social media, messaging platforms, and online forums actively detect and remove such abusive content. The measures come in response to rising incidents targeting women and girls with sexually explicit material, including deepfakes.
+
+  [llama3.1:8b]  score=9.5
+  Ofcom is updating its codes of practice to combat intimate image abuse, which includes "revenge porn" and AI-generated deepfakes targeting women and girls. The updated guidelines will require social media, messaging platforms, and online forums to detect and remove such content. This move aims to curb the spread of intimate image abuse, often intended to humiliate women and girls. The updates are in response to a rise in cases, including a recent wave of AI-generated deepfakes created with Elon Musk's Grok AI.
+
+  [llama3.2:3b]  score=8.0
+  Ofcom is updating its codes of practice to require social media, messaging platforms, and online forums to detect and remove intimate image abuse, also known as "revenge porn." This measure aims to prevent the spread of such content that humilizes women and girls. The update follows a rise in AI-generated deepfakes targeting women, with a notable incident involving Elon Musk's Grok AI in January.
+
+  Winner:    llama3.1:8b
+  Reasoning: llama3.1:8b provides the most accurate and complete summary by including specific context about the rise in deepfakes and mentioning the notable incident involving Elon Musk's Grok AI, which adds significant value without compromising clarity.
+--------------------------------------------------------------------------------
+
+Article #14: Melbourne psychiatrist refuses new patients who don’t consent to AI note-taking
+Source: The Guardian - Artificial Intelligence
+
+  [gemma4:e4b]  score=8.5
+  A Melbourne psychiatrist has implemented a policy requiring new patients to consent to the use of AI note-taking during their sessions. Patients who refuse this AI recording will be directed by the psychiatrist's practice to seek care from a different service provider. The article notes that AI-driven note-taking tools are gaining popularity in medicine, with reports indicating that two in five general practitioners currently utilize such scribes.
+
+  [llama3.1:8b]  score=9.0
+  A Melbourne psychiatrist has a new policy requiring patients to agree to AI-driven note-taking before being accepted as new patients. Those who refuse must have their referring doctor refer them to a different service provider. This move follows a growing trend in the medical industry, where two out of five general practitioners now use AI scribes for transcription. The Royal Australian College of General Practitioners (RACGP) has noted this increasing adoption of AI note-taking tools.
+
+  [llama3.2:3b]  score=8.0
+  A Melbourne psychiatrist has implemented a policy where new patients must consent to allow AI-assisted note-taking during their sessions. If a patient refuses, they will be referred to another service provider by their original referring doctor. The use of AI scribes is becoming increasingly common in the medical industry, with 2 out of 5 general practitioners now using them.
+
+  Winner:    llama3.1:8b
+  Reasoning: llama3.1:8b provides the most complete and accurate summary by including the specific context of the Royal Australian College of General Practitioners, while maintaining clarity and conciseness.
+--------------------------------------------------------------------------------
+
+Article #15: Anthropic to share Mythos cyber flaw findings with global finance watchdog
+Source: The Guardian - Artificial Intelligence
+
+  [gemma4:e4b]  score=8.5
+  Anthropic plans to brief the global finance watchdog, the Financial Stability Board (FSB), regarding its Claude Mythos AI model. Experts have expressed alarm concerning the potential cyber threats posed by this model. Due to these security concerns, the startup has opted not to release the Claude Mythos AI model publicly. The FSB, which is chaired by the Bank of England governor, will receive this briefing on the model's implications for cyber defenses.
+
+  [llama3.1:8b]  score=9.5
+  Anthropic's Claude Mythos AI model has been found to potentially pose a threat to cyber defenses. The company will share its findings on the flaw with the Financial Stability Board (FSB). The FSB is an international watchdog chaired by Andrew Bailey, the governor of the Bank of England. This discussion comes as Anthropic has declined to publicly release the Mythos AI model due to concerns about potential misuse by hackers.
+
+  [llama3.2:3b]  score=9.0
+  Anthropic, a US startup, will brief the Financial Stability Board on its Claude Mythos AI model to share findings regarding potential cyber flaws. The company has declined to release the model publicly amid concerns it could be exploited by hackers. The briefing is aimed at informing global finance watchdogs about the implications of Mythos on cyber defences. Anthropic's decision highlights the significant threat posed by the model.
+
+  Winner:    llama3.1:8b
+  Reasoning: Model llama3.1:8b provides the most comprehensive and precise summary by including specific details (Andrew Bailey) and clearly connecting the security concerns to the decision not to release the model, while maintaining excellent clarity and accuracy.
+--------------------------------------------------------------------------------
+
+Article #16: Ex-Google CEO Eric Schmidt booed after AI remarks at Arizona commencement
+Source: The Guardian - Artificial Intelligence
+
+  [gemma4:e4b]  score=9.5
+  Former Google CEO Eric Schmidt was booed by graduating students at a University of Arizona commencement ceremony. The boos occurred after Schmidt addressed the topic of artificial intelligence (AI) and its societal effects. This reaction aligns with recent Pew Research findings indicating that Americans are more worried than excited about the advancements in AI.
+
+  [llama3.1:8b]  score=8.5
+  Eric Schmidt, former Google CEO, made remarks about artificial intelligence at the University of Arizona commencement address, which were met with boos from the audience. The address was attended by around 10,000 graduating students. Pew research shows that Americans are increasingly concerned about AI and its impact on jobs. This sentiment is reflected in the reactions to Schmidt's comments.
+
+  [llama3.2:3b]  score=7.0
+  Eric Schmidt, former Google CEO, was booed by approximately 10,000 University of Arizona graduates during his commencement address after mentioning artificial intelligence (AI) and its effects. Pew research indicates that Americans are more worried than excited about AI's potential impact on jobs. Schmidt had led Google for over a decade, acquiring a multibillion-dollar fortune while in the position. The exact context of his remarks is not specified in the article.
+
+  Winner:    gemma4:e4b
+  Reasoning: Gemma4:e4b provides the most concise and accurate summary by capturing the core narrative without including irrelevant biographical details or redundant phasing found in the other models.
+--------------------------------------------------------------------------------
+
+Article #17: Trump cuts to weather data could make forecasts less reliable, warn experts
+Source: The Guardian - Artificial Intelligence
+
+  [gemma4:e4b]  score=9.0
+  Experts are concerned that the Trump administration's proposed cuts to climate and weather data programming could undermine the reliability of federal weather forecasts, particularly as the US faces hurricane season and extreme heat. The National Oceanic and Atmospheric Administration (NOAA) relies on artificial intelligence-powered global weather forecast models, which were trained using centuries of weather data to enhance accuracy and efficiency. These cuts raise fears that the critical data foundation supporting modern forecasting tools may be compromised at a time when accurate predictions are essential.
+
+  [llama3.1:8b]  score=8.5
+  The Trump administration's cuts to climate and weather data programming may make federal weather forecasts less reliable due to the importance of ample data in training AI-powered prediction tools. The National Oceanic and Atmospheric Administration (NOAA) launched AI-powered global weather forecast models, which require centuries of weather data for accuracy. These models were being trained with data from past centuries as of March 2023. The cuts could compromise the reliability of these forecasts during hurricane season and record-breaking heatwaves.
+
+  [llama3.2:3b]  score=7.0
+  The US government's cuts to climate and weather data programming could make federal weather forecasts less reliable due to the reduced use of AI in weather prediction. The National Oceanic and Atmospheric Administration (NOAA) has launched AI-powered global weather forecast models, which require ample data for accurate predictions. However, with decreased funding, these models may not be trained on sufficient historical data, compromising their accuracy. This could have severe consequences during critical periods like hurricane season and record-breaking heatwaves.
+
+  Winner:    gemma4:e4b
+  Reasoning: gemma4:e4b provides the most accurate and nuanced summary by correctly identifying the threat to the data foundation itself, whereas the other models introduce factual inaccuracies regarding the current use of AI and funding cuts.
+--------------------------------------------------------------------------------
+
+Article #18: The return of Westworld is perfect timing for the flattery-oriented age of AI
+Source: The Guardian - Artificial Intelligence
+
+  [gemma4:e4b]  score=7.5
+  The article suggests that the current era, where AI is evolving into emotionally convincing companions rather than just malfunctioning automatons, mirrors past science fiction predictions. Examples include *Minority Report* predicting personalized advertising and *Her* accurately foreseeing emotionally responsive AI. Warner Bros. is reportedly developing a new film based on Michael Crichton's original 1973 *Westworld*, featuring rich thrill-seekers in a consequence-free pleasure park. This new movie project will bypass the recent television reboot.
+
+  [llama3.1:8b]  score=8.5
+  A new film based on Michael Crichton's 1973 movie Westworld is in development at Warner Bros, with David Koepp attached to write. The project will not be a sequel to the TV series reboot, which ran from 2016-2022, but rather a standalone adaptation of the original novel. This follows a pattern where science fiction movies and shows often become eerily relevant as technology advances, predicting trends like personalized advertising and AI companions. The new film's timing is notable, given current concerns about AI convincing humans that everything is "totally fine".
+
+  [llama3.2:3b]  score=8.0
+  A new film based on Michael Crichton's Westworld is in production at Warner Bros, with David Koepp attached to write. The new movie will depart from the more recent TV reboot by Jonathan Nolan and Lisa Joy, which concluded after four seasons in 2022. The upcoming film coincides with the increasing presence of AI in everyday life, where robots may be used to flatter humans into complacency about potential dangers. The project's timing is notable as science fiction often accurately predicts technological advancements that eventually become reality.
+
+  Winner:    llama3.1:8b
+  Reasoning: llama3.1:8b provides the most balanced summary by accurately capturing both the specific news about the new Westworld film and the article's thematic argument about AI's flattery, whereas gemma4:e4b misses the core theme and llama3.2:3b is slightly less precise in its synthesis.
+--------------------------------------------------------------------------------
+
+Article #19: More than 100 UK datacentres plan to burn gas to generate electricity
+Source: The Guardian - Artificial Intelligence
+
+  [gemma4:e4b]  score=9.5
+  Over 100 new data centers in the UK plan to burn natural gas for electricity generation, some potentially on a permanent basis. These projected gas connection requests total more than 15 terawatt hours annually. British officials suggest this reliance on gas is an unavoidable outcome due to significant delays in connecting to the National Grid. This development raises concerns regarding the feasibility of the UK's stated climate targets.
+
+  [llama3.1:8b]  score=9.0
+  More than 100 new datacentres in the UK plan to burn gas to generate electricity, with some potentially doing so permanently. This would amount to over 15 terawatt hours of gas consumption per year, jeopardizing the country's climate targets. The delay in connecting these datacentres to the National Grid has led British officials to accept this as an inevitable consequence.
+
+  [llama3.2:3b]  score=8.5
+  More than 100 new datacentres in the UK plan to burn gas to generate electricity due to a lengthy wait for connections to the National Grid. This has resulted in requests for gas connections amounting to over 15 terawatt hours per year, posing an environmental risk to the country's climate targets. The reliance on gas for powering these datacentres raises questions about the UK's ability to meet its greenhouse gas emissions goals. Some of these datacentres may potentially burn gas permanently.
+
+  Winner:    gemma4:e4b
+  Reasoning: gemma4:e4b provides the most precise, clear, and professionally structured summary, capturing all key facts without redundancy, while the other models are slightly less concise or have minor stylistic imperfections.
+--------------------------------------------------------------------------------
+
+Article #20: Import AI 457: AI stuxnet; cursed Muon optimizer; and positive alignment
+Source: Import AI (Jack Clark)
+
+  [gemma4:e4b]  score=6.5
+  Import AI is a newsletter covering various topics in AI research, drawing information from arXiv, cappuccinos, and reader feedback. The content highlighted in this excerpt focuses on a detailed investigation of fast16.sys, an approximately two-decade-old computer virus. The article suggests this particular software holds interesting implications, possibly relating to weapon programs.
+
+  [llama3.1:8b]  score=9.5
+  The article discusses an investigation into the "fast16.sys" computer virus, which was found to be similar to Stuxnet, a highly sophisticated malware used in weapons programs. The virus, dating back over 20 years, contains bugs that suggest it may have been designed for use in military or government applications.
 
   [llama3.2:3b]  score=2.0
-  I don't see an article provided. Could you please provide the article text, and I'll be happy to summarize it for you in 3-4 sentences?
+  There is no summary provided for the article as the text does not contain any information about the article's content. The provided text appears to be an introduction to Import AI and mentions that it discusses a specific topic, but the actual topic is not specified in the provided excerpt.
 
   Winner:    llama3.1:8b
-  Reasoning: While all models failed to summarize a missing text by correctly identifying the error, the Llama models provided the most concise and direct response, with llama3.1:8b slightly favored for its clear directive format.
+  Reasoning: llama3.1:8b provides the most accurate, complete, and clear summary that correctly synthesizes the key elements from the title and description, while gemma4:e4b is partially accurate but misses the core context, and llama3.2:3b incorrectly claims the information is missing.
 --------------------------------------------------------------------------------
 
-Article #28: 🔬 Training Transformers to solve 95% failure rate of Cancer Trials — Ron Alfa & Daniel Bear, Noetik
+Article #21: AI anger comes for Claude (Monet)
+Source: The Rundown AI
+
+  [gemma4:e4b]  score=10.0
+  The article discusses "AI anger" and its apparent focus on Claude, in relation to Monet. It suggests that AI-generated content or sentiment might be criticizing or directing attention toward the Claude model. The inclusion of a section about building a cloud-based web crawler with Manus points to a related technical service or resource provided alongside the main topic. Overall, the content seems to merge a commentary on AI scrutiny with a practical tool recommendation.
+
+  [llama3.1:8b]  score=0.0
+  I couldn't find any information on an article titled "AI anger comes for Claude (Monet)". Can you please provide more context or share the full text of the article? I'll be happy to summarize it for you.
+
+  [llama3.2:3b]  score=10.0
+  There is no information about an article related to "AI anger coming for Claude (Monet)" or a web crawler called "Manus". The provided text only contains a title and a reference to "PLUS: Build your own cloud-based web crawler with Manus", but no article content was given.
+
+  Winner:    gem4:e4b
+  Reasoning: While all models correctly identified the lack of article content, gemma4:e4b provides a superior summary by attempting to interpret the title and metadata contextually rather than simply stating the inability to summarize due to missing text.
+--------------------------------------------------------------------------------
+
+Article #22: How to Think of AI as a Normal Technology
+Source: The Algorithmic Bridge
+
+  [gemma4:e4b]  score=6.5
+  The article advises readers to reframe their understanding of Artificial Intelligence to view it as simply another form of technology. Instead of fearing catastrophic scenarios, the focus should shift to understanding its practical integration into daily life. By adopting this mindset, concerns regarding an "AI apocalypse" can be alleviated. This perspective encourages a more measured and pragmatic acceptance of AI's current capabilities and future evolution.
+
+  [llama3.1:8b]  score=10.0
+  However, there is no article for me to summarize. Please provide the text of the article you'd like summarized. I'll be happy to help with a 3-4 sentence summary once it's available.
+
+  [llama3.2:3b]  score=4.0
+  The term "AI" is often misunderstood as referring to a hypothetical catastrophic future with artificial intelligence surpassing human capabilities. In reality, AI refers to a specific set of technologies aimed at enabling machines to perform tasks typically requiring human intelligence. The development and deployment of AI have already led to numerous practical applications in fields such as computer vision, natural language processing, and robotics. By recognizing AI as a normal technology, we can focus on its benefits and limitations rather than fear-based speculation about its potential.
+
+  Winner:    llama3.1:8b
+  Reasoning: Although llama3.1:8b correctly identified the missing input and handled the situation professionally (making it the most functional response), gemma4:e4b provided a coherent summary of the provided title despite hallucinating the content, whereas llama3.2:3b hallucinated significant factual details not present in the source.
+--------------------------------------------------------------------------------
+
+Article #23: The Next War Is Already Here. The West Isn't Ready. — Yaroslav Azhnyuk, The Fourth Law & Guest Host Noah Smith, Noahpinion
 Source: Latent Space
 
   [gemma4:e4b]  score=8.5
-  The article highlights the significant issue that 95% of cancer treatments fail during clinical trials. Noetik claims to be solving this problem by employing autoregressive transformers, specifically mentioning the model TARIO-2. The underlying concept proposed is that the high failure rate is fundamentally a "matching problem." These advanced transformers are being utilized to improve the success rate of cancer treatments that pass through the clinical testing pipeline.
+  Ukrainian drone founder Yaroslav Azhnyuk, along with guest host Noah Smith, argues that a new conflict is currently underway. They contend that Western nations are unprepared and insufficiently vigilant regarding the escalating global tensions. Azhnyuk's background illustrates his evolution from personal electronics to developing advanced, AI-guided weaponry. Overall, the discussion asserts that the West is currently underestimating the severity and immediacy of the geopolitical dangers.
 
   [llama3.1:8b]  score=9.5
-  Researchers from Noetik are using autoregressive transformers to tackle the 95% failure rate of cancer treatment clinical trials. They suggest that the issue may not be with the treatments themselves, but rather a problem of matching patients and treatments effectively. The team is working on an algorithm called TARIO-2, which aims to improve this matching process.
+  Yaroslav Azhnyuk, a Ukrainian entrepreneur who founded an AI-guided drone company, argues that a new type of warfare has already begun in Ukraine. This conflict involves AI-powered technologies, which he believes the West is not adequately prepared to counter. As an expert in this field, Azhnyuk claims that the West's failure to address these emerging threats will have significant consequences.
 
-  [llama3.2:3b]  score=7.0
-  Noetik has developed an approach using autoregressive transformers, specifically the TARIO-2 model, to address the 95% failure rate of cancer treatments in clinical trials. The issue may be due to a matching problem, where the similarity between treatment effects and control groups leads to failed trial results. Noetik's technology aims to overcome this challenge.
+  [llama3.2:3b]  score=10.0
+  Yaroslav Azhnyuk, a Ukrainian drone founder, argues that the next war is already underway due to the increasing development of advanced technologies such as drones equipped with AI guidance. As a former entrepreneur who shifted from producing pet cameras to creating AI-guided weapons, Azhnyuk asserts that the West has not been adequately prepared for this shift. He believes that Western nations are "asleep at the wheel" in responding to these emerging threats, leaving them vulnerable to potential security risks.
+
+  Winner:    llama3.2:3b
+  Reasoning: The 3B model provides the most comprehensive summary by including specific contextual details (pet cameras to AI weapons) and vivid descriptive language that accurately captures the tone and content of the original article, whereas the others are either too vague or miss key nuances.
+--------------------------------------------------------------------------------
+
+Article #24: Glaucous-winged Gull, Brown Pelican, Snowy Egret, Canada Goose
+Source: Simon Willison's Weblog
+
+  [gemma4:e4b]  score=7.5
+  The author visited the Los Angeles River after attending PyCon US and was hoping to spot a pelican. They successfully saw a Brown Pelican while on their walk. Additionally, the author observed several goslings near the swan boat lake.
+
+  [llama3.1:8b]  score=8.5
+  The writer spotted four bird species during their visit: Glaucous-winged Gull, Brown Pelican, Snowy Egret, and Canada Goose. The birds were seen in Los Angeles River, California. A specific sighting was a Brown Pelican, which the writer was hoping to see. Goslings of another species (not specified) were also spotted nearby.
+
+  [llama3.2:3b]  score=9.5
+  The author spotted a Glaucous-winged Gull and a Brown Pelican in Los Angeles while on their way home from PyCon US. They also saw Snowy Egret and Canada Goose, including goslings near the swan boat lake. The author did not capture a photograph of the pelican, but was still thrilled to have spotted it.
+
+  Winner:    llama3.2:3b
+  Reasoning: The llama3.2:3b summary is the most comprehensive and accurate, correctly capturing all key details including the specific locations and the missing photograph, whereas the other summaries omit crucial context or lack completeness.
+--------------------------------------------------------------------------------
+
+Article #25: Six Choices Every AI Engineer Has to Make (and Nobody Teaches)
+Source: Towards Data Science
+
+  [gemma4:e4b]  score=6.5
+  The article discusses critical production trade-offs that AI engineers encounter only after deploying a machine learning model. These are vital, real-world challenges that are not typically covered during standard training or education. Specifically, it highlights necessary considerations that developers must grapple with once their model transitions from a theoretical setting to a live production environment.
+
+  [llama3.1:8b]  score=9.5
+  AI engineers must make several key decisions when deploying a model, including choosing between online and batch training, selecting the best inference serving technology, determining data quality and sampling strategies, and deciding on monitoring and logging practices for production systems. They also need to consider issues such as data drift, model decay, and concept drift in their models over time. Additionally, engineers must weigh the costs of maintenance, scalability, and latency against other factors when selecting a cloud provider or infrastructure. These decisions often have significant impacts on model performance and resource utilization.
+
+  [llama3.2:3b]  score=5.0
+  There are six critical choices that every AI engineer must make, but which are rarely discussed or taught in training programs. These choices include determining the trade-offs for production, such as balancing model accuracy with deployment efficiency. The lack of discussion on these decisions leaves engineers to figure them out on their own, potentially leading to suboptimal outcomes. By acknowledging and discussing these challenges, AI engineers can better prepare themselves for the realities of deploying AI models in real-world environments.
 
   Winner:    llama3.1:8b
-  Reasoning: Llama3.1:8b provides the most accurate, clear, and concise summary without introducing the speculative or logically flawed explanation of 'similarity between treatment effects and control groups' found in the other models.
+  Reasoning: Llama3.1:8b provides the most comprehensive and specific summary by listing concrete technical decisions mentioned in the title, whereas the other models offer only vague, generic statements about trade-offs without actionable details.
 --------------------------------------------------------------------------------
 
-Article #29: SQL functions in Google Sheets to fetch data from Datasette
-Source: Simon Willison's Weblog
+Article #26: One Flexible Tool Beats a Hundred Dedicated Ones
+Source: Towards Data Science
 
-  [gemma4:e4b]  score=0.0
-  The article details three methods for fetching data from a Datasette instance directly into Google Sheets. These methods include utilizing the built-in `IMPORTDATA()` function, creating a custom "named function" wrapper, or implementing a Google Apps Script. The choice of method depends on specific requirements, as the `IMPORTDATA()` function is limited in its ability to handle API tokens within HTTP headers, necessitating the use of the Apps Script for that functionality.
+  [gemma4:e4b]  score=9.5
+  This article, originally published on Towards Data Science, discusses the topic of "One Flexible Tool Beats a Hundred Dedicated Ones." The title suggests an argument for the superiority of a versatile, adaptable tool over numerous specialized, dedicated tools. Furthermore, a section of the content addresses the performance discrepancy between MCP servers and CLIs when an agent gains terminal access, implying this comparison is part of the discussion.
 
-  [llama3.1:8b]  score=0.0
-  Google Sheets can fetch data from Datasette using SQL functions such as the `importdata()` function. Alternatively, a "named function" that wraps `importdata()` or a Google Apps Script can be used to send an API token in an HTTP header, which is not supported by `importdata()`. A sample sheet demonstrates all three methods for fetching data from Datasette into Google Sheets. The `importdata()` function and named functions are the primary methods for this purpose.
+  [llama3.1:8b]  score=2.0
+  There is not enough information in the provided snippet to create a summary, as it only mentions a title and a very brief content description without providing any factual or specific details about the topic.
 
-  [llama3.2:3b]  score=0.0
-  Google Sheets uses SQL functions to fetch data from Datasette instances, which can be achieved through the use of the importdata() function. This function wraps the functionality needed to connect to a Datasette instance and retrieve data directly in Google Sheets. Alternatively, a "named function" or Google Apps Script can also be used to achieve this, with the latter requiring an API token for authentication.
-
-  Winner:    unknown
-  Reasoning: parse error
---------------------------------------------------------------------------------
-
-Article #30: Claude Token Counter, now with model comparisons
-Source: Simon Willison's Weblog
-
-  [gemma4:e4b]  score=9.0
-  The updated Claude Token Counter now allows users to compare token counts across multiple Claude models, including Opus 4.7, 4.6, Sonnet 4.6, and Haiku 4.5. The primary difference to note is that Opus 4.7 uses an updated tokenizer, which can lead to increased token counts for certain inputs, such as the raw system prompt, resulting in a 1.46x multiplier compared to 4.6. While Opus 4.7 can handle significantly higher resolution images, the increase in cost for text-heavy documents appears to be around 1.08x compared to 4.6. Although Opus 4.7 has the same listed pricing as 4.6, the increased token usage suggests a potential cost increase of about 40% for general usage.
-
-  [llama3.1:8b]  score=7.5
-  Claude Token Counter is now able to compare token counts across different models, including Opus 4.7 and Opus 4.6. The upgraded tokenizer in Opus 4.7 results in a 1.46x increase in tokens compared to Opus 4.6 for raw text inputs. For image inputs, Opus 4.7 uses 3.01x the number of tokens as Opus 4.6, but this is largely due to improved support for high-resolution images. The increased token count will result in a 40% higher cost for Opus 4.7.
-
-  [llama3.2:3b]  score=3.0
-  Claude Token Counter now offers model comparisons between Opus 4.7 and 4.6 models, allowing users to compare token counts under different models. The updated tokenizer in Opus 4.7 increases token counts by approximately 1.0–1.35×, depending on content type, resulting in a potential cost increase of around 40%. In contrast, the same model was found to produce lower token counts for images with high resolutions, and lower multipliers for text-heavy documents. The tool also accepts images up to 2,576 pixels on the long edge, a significant improvement over prior models.
+  [llama3.2:3b]  score=2.0
+  I couldn't find any article provided. Could you please share the actual text of the article? I'll be happy to help with summarizing it in 3-4 sentences.
 
   Winner:    gemma4:e4b
-  Reasoning: gemma4:e4b provides the most accurate and nuanced summary, correctly distinguishing between the tokenizer change multiplier for system prompts versus general text and acknowledging the context of high-resolution image support, whereas the other models contain factual errors or contradictory statements.
+  Reasoning: Only gemma4:e4b attempted to summarize the provided content based on the input, offering a coherent interpretation of the title and context, whereas the other models failed to process the task due to missing information errors.
+--------------------------------------------------------------------------------
+
+Article #27: Why Your AI Demo Will Die in Production
+Source: Towards Data Science
+
+  [gemma4:e4b]  score=5.5
+  The article addresses the high failure rate of enterprise AI pilots, noting that a staggering 95% fail to move from demonstration to full production. While the specific reasons for failure are not detailed in the provided excerpt, the premise suggests a significant gap exists between successful proof-of-concept demos and real-world operational viability. The article aims to explain the reasons why impressive AI demonstrations often collapse when deployed in actual production environments.
+
+  [llama3.1:8b]  score=8.0
+  Enterprise AI pilots have a 95% failure rate when transitioning from demo to production stage, resulting in many projects not being launched as intended. This high failure rate is often due to the difference between the controlled environment of a demo and the complexities of real-world deployment. The discrepancy can be attributed to factors such as data quality issues and system integrations challenges.
+
+  [llama3.2:3b]  score=9.5
+  95% of enterprise AI pilots fail to launch due to a lack of production readiness, highlighting a significant gap between successful demos and deployed solutions. Several factors contribute to this failure, including inadequate testing, insufficient scalability, and poor integration with existing systems. Insufficient consideration for real-world challenges and limitations during the demo phase also exacerbates the issue. Without proper preparation for production environments, AI pilots often falter once they enter operational use.
+
+  Winner:    llama3.2:3b
+  Reasoning: Model llama3.2:3b provides the most accurate and comprehensive summary by correctly identifying the specific failure factors likely present in the source material, whereas gemma4:e4b incorrectly claims information is missing and llama3.1:8b offers a less detailed explanation.
+--------------------------------------------------------------------------------
+
+Article #28: How to Maximize OpenAI’s Codex
+Source: Towards Data Science
+
+  [gemma4:e4b]  score=4.0
+  The article, "How to Maximize OpenAI's Codex," provides guidance on methods for users to get the most effective results when utilizing OpenAI's coding agent. The content is designed to improve user proficiency with Codex. This informative piece was initially published on the platform Towards Data Science.
+
+  [llama3.1:8b]  score=10.0
+  Unfortunately, there is no content provided in the article snippet to summarize. The article title and introductory sentence are present, but the actual content that provides information on how to maximize OpenAI's Codex is missing.
+
+  [llama3.2:3b]  score=9.0
+  I couldn't find any specific information about maximizing OpenAI's Codex in the provided article excerpt, as it appears to be a title or heading rather than an actual text content.
+
+  Winner:    llama3.1:8b
+  Reasoning: llama3.1:8b correctly identified the lack of source content and provided a clear, honest explanation, whereas the other models hallucinated a summary of non-existent text.
+--------------------------------------------------------------------------------
+
+Article #29: DeepSlide: From Artifacts to Presentation Delivery
+Source: arXiv - cs.AI
+
+  [gemma4:e4b]  score=9.5
+  DeepSlide is a novel, human-in-the-loop multi-agent system designed to support the entire presentation process, moving beyond merely optimizing the static slide artifact. It manages everything from requirement elicitation and time-budgeted narrative planning to generating evidence-grounded slide-script pairs and providing rehearsal support. DeepSlide achieves this by integrating a logical-chain planner with time budgets, a content-tree retriever for grounding, and sequential rendering mechanisms. Evaluations across 20 domains show that DeepSlide matches existing artifact quality baselines while significantly improving dynamic delivery metrics like narrative flow and pacing precision.
+
+  [llama3.1:8b]  score=8.5
+  DeepSlide is a human-in-the-loop system that supports preparing presentations from initial planning to rehearsal. It integrates four components: a planner for time-budgeted narrative planning, a retriever for grounding slides in content, a sequential renderer for slide generation, and a sandboxed execution environment. The system outperforms baselines on delivery metrics such as pacing precision and narrative flow across 20 domains and diverse audience profiles. DeepSlide achieves larger gains in these areas while maintaining strong artifact quality.
+
+  [llama3.2:3b]  score=8.0
+  DeepSlide is a human-in-the-loop multi-agent system that aims to optimize the presentation delivery process, in addition to generating visually plausible slides. The system integrates various components, including a controllable logical-chain planner and a lightweight content-tree retriever, to support requirements elicitation, narrative planning, and rehearsal support. DeepSlide consistently outperforms strong baselines on both artifact quality and dynamic delivery metrics, improving narrative flow, pacing precision, and slide-script synergy.
+
+  Winner:    gemma4:e4b
+  Reasoning: gemma4:e4b provides the most comprehensive and technically precise summary, accurately capturing the system's multi-agent nature, specific architectural components, and the nuance of its performance improvements without omitting critical details like 'evidence-grounded' or 'time-budgeted'.
+--------------------------------------------------------------------------------
+
+Article #30: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration with State-Constrained Dispatch
+Source: arXiv - cs.AI
+
+  [gemma4:e4b]  score=8.5
+  SDOF is a novel framework designed to manage multi-agent orchestration by treating execution as a constrained state machine, addressing the lack of stage constraint enforcement in current graph-based tools. It employs two defensive layers, featuring an Online-RLHF Specialized Intent Router trained via Generative Reward Modeling and a StateAwareDispatcher that uses finite-automaton checks and precondition/postcondition validation. Tested on a large recruitment system, SDOF achieved superior joint accuracy (80.9%) compared to GPT-4o on an FSM-constrained routing benchmark. Overall, SDOF demonstrated high reliability with 86.5% task completion and achieved 100% precision in blocking illegal operations during auditing.
+
+  [llama3.1:8b]  score=7.8
+  The SDOF framework is designed to improve task routing in multi-agent orchestration by enforcing stage constraints on real business processes. The framework operates through two defensive layers, including an Online-RLHF Specialized Intent Router trained via Generative Reward Modeling (GRPO) and a StateAwareDispatcher that checks for auditable execution control. SDOF achieved higher joint accuracy than zero-shot GPT-4o on a recruitment system benchmark, with 80.9% joint accuracy compared to 48.9%. In end-to-end execution, SDOF reached 86.5% task completion and blocked all operations in the injection, illegal HR subset.
+
+  [llama3.2:3b]  score=8.2
+  SDOF, a framework for multi-agent orchestration, treats execution as a constrained state machine with two primary defensive layers. The framework uses an Online-RLHF Specialized Intent Router and a StateAwareDispatcher to enforce stage constraints, achieving 86.5% task completion and 100% precision in message-level blocking audit. On a recruitment system backed by the Beisen iTalent platform, SDOF outperformed zero-shot GPT-4o on an FSM-constrained adversarial routing benchmark with 80.9% joint accuracy. The framework also identified 201 stage-order conflicts across 960 SGD-derived dialogues.
+
+  Winner:    gemma4:e4b
+  Reasoning: The gemma4:e4b summary provides the most balanced and accurate representation of the original text, maintaining high clarity and completeness while effectively summarizing the technical components and performance metrics without hallucination or excessive verbosity.
 --------------------------------------------------------------------------------
 
 SUMMARY
 ================================================================================
-  gemma4:e4b                      wins= 10  avg_score=6.70  avg_latency=1.40s  final_score=6.25
-  llama3.1:8b                     wins= 13  avg_score=7.13  avg_latency=1.42s  final_score=6.52
-  llama3.2:3b                     wins=  5  avg_score=6.05  avg_latency=0.73s  final_score=7.23
+  gemma4:e4b                      wins= 13  avg_score=8.11  avg_latency=1.53s  final_score=7.30
+  llama3.1:8b                     wins= 11  avg_score=7.92  avg_latency=1.74s  final_score=6.97
+  llama3.2:3b                     wins=  5  avg_score=7.23  avg_latency=0.83s  final_score=8.06
