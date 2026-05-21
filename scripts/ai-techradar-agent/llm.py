@@ -146,6 +146,72 @@ def classify_ai(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> bool:
         return True
 
 
+def classify_ad(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> tuple[bool, str]:
+    """Return (is_ad, reason). Fails open — returns (False, 'parse error') on JSON failure."""
+    prompt = (
+        "You are a content classifier. Identify promotional, advertising, or non-editorial "
+        "content that should be excluded from a curated AI/tech news feed.\n\n"
+        "Mark is_ad: true if the item primarily does ONE of these:\n\n"
+        "1. REFERRAL PROGRAM — asks reader to share a link for rewards/prizes.\n"
+        "   Signals: \"share your link\", \"refer a friend\", \"earn rewards\", \"prizes available\"\n\n"
+        "2. LEAD-GEN OFFER — free guide/ebook/template/checklist as lead capture.\n"
+        "   Signals: \"free guide\", \"download now\", \"150+ prompts\", \"get access\", \"free stack\"\n\n"
+        "3. NEWSLETTER CTA — asks reader to confirm subscription or re-engage to avoid removal.\n"
+        "   Signals: \"still interested?\", \"click to confirm\", \"monitoring subscriber activity\", "
+        "\"high email costs\", \"vote to stay\"\n\n"
+        "4. ADVERTISING PITCH — promotes buying ad slots in a newsletter or marketing platform.\n"
+        "   Signals: \"advertise in\", \"reach X million\", \"ROI\", \"pipeline value\", \"ad slot\"\n\n"
+        "5. SUBSCRIPTION PRODUCT — paid membership, exclusive access, or recurring service pitch.\n"
+        "   Signals: \"exclusive zip code\", \"one agent per city\", \"$X/year\", \"weekly leads\", "
+        "\"apply now\", \"acceptance rate\"\n\n"
+        "6. PRODUCT FEATURE DISGUISED AS NEWS — product email written to drive feature adoption.\n"
+        "   Signals: imperative language (\"start shopping\", \"try it\"), reader is the target "
+        "user, written from product POV\n\n"
+        "Do NOT mark as ad: news about product launches (neutrally reported by third parties), "
+        "research papers, analysis/opinion, technical tutorials, press releases from official "
+        "company blogs with no purchase CTA.\n\n"
+        "Examples:\n"
+        "Title: \"Refer Friends and Get Rewards with The Hustle Program\"\n"
+        "Summary: \"Share a unique link. Prizes are available for purchase.\"\n"
+        '→ {"is_ad": true, "reason": "referral program with prize incentive"}\n\n'
+        "Title: \"Free Guide to 150+ AI Prompts for Solopreneurs\"\n"
+        "Summary: \"A free guide provides 150+ plug-and-play AI prompts. Download your free stack.\"\n"
+        '→ {"is_ad": true, "reason": "lead-gen gated content offer"}\n\n'
+        "Title: \"Top-Tier Tech Marketers Advertise in TLDR Newsletter\"\n"
+        "Summary: \"Reach over 7 million tech professionals. Results: $382k in pipeline, 20.1x ROI.\"\n"
+        '→ {"is_ad": true, "reason": "newsletter advertising network pitch"}\n\n'
+        "Title: \"A faster way to shop\"\n"
+        "Summary: \"ChatGPT helps you browse and compare products side-by-side. Start shopping.\"\n"
+        '→ {"is_ad": true, "reason": "product feature pitch disguised as editorial"}\n\n'
+        "Title: \"Still interested in Tech news?\"\n"
+        "Summary: \"Due to high email costs, we monitor subscriber activity. Click to confirm.\"\n"
+        '→ {"is_ad": true, "reason": "newsletter re-engagement CTA"}\n\n'
+        "Title: \"Exclusive Real Estate Agent Program for Proven Performers Only\"\n"
+        "Summary: \"One agent per city. Apply now. 15+ closings required. $2000/year.\"\n"
+        '→ {"is_ad": true, "reason": "subscription product pitch with exclusivity framing"}\n\n'
+        "Title: \"Gemini 3.5 Flash, Karpathy joins Anthropic, OpenAI Guaranteed Capacity\"\n"
+        "Summary: \"Google introduced Gemini 3.5 Flash. Karpathy joins Anthropic.\"\n"
+        '→ {"is_ad": false, "reason": "neutral news digest about AI developments"}\n\n'
+        "Title: \"GPT-4o Gets New Voice Mode Capabilities\"\n"
+        "Summary: \"OpenAI released an update adding real-time voice conversation.\"\n"
+        '→ {"is_ad": false, "reason": "factual product capability news"}\n\n'
+        "Title: \"Andrej Karpathy Joins Anthropic: What Happens Next\"\n"
+        "Summary: \"Karpathy joins Anthropic as a researcher focused on AI capabilities.\"\n"
+        '→ {"is_ad": false, "reason": "industry hiring news, third-party analysis"}\n\n'
+        f"Now classify:\n"
+        f"Title: {title}\n"
+        f"Summary: {summary}\n\n"
+        'Respond ONLY with JSON: {"is_ad": true/false, "reason": "brief explanation"}'
+    )
+    raw = _chat(prompt, model, json_mode=True)
+    try:
+        data = json.loads(_extract_json(raw))
+        return bool(data.get("is_ad", False)), str(data.get("reason", ""))
+    except (json.JSONDecodeError, AttributeError):
+        print(f"[warn] classify_ad() failed to parse JSON: {raw!r}", file=sys.stderr)
+        return False, "parse error"
+
+
 def deduplicate(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
     """Remove near-duplicate items, keeping the one with the longer summary."""
     if len(items) <= 1:

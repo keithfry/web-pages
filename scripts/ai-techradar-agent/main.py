@@ -21,11 +21,11 @@ from zoneinfo import ZoneInfo
 
 ET = ZoneInfo("America/New_York")
 
-from config import LOOKBACK_HOURS, SUMMARIZE_MODEL, GENERATE_MODEL, LLM_WORKERS, URL_WORKERS
+from config import LOOKBACK_HOURS, SUMMARIZE_MODEL, GENERATE_MODEL, LLM_WORKERS, URL_WORKERS, AD_DETECTOR_MODEL, AD_GATE_ENABLED
 from feed_fetcher import fetch_all_feeds, is_arxiv
 from email_fetcher import fetch_emails
 from article_fetcher import fetch_article_text, source_name_from_url
-from llm import summarize, summarize_title, tag, classify_ai, deduplicate, llm_stats
+from llm import summarize, summarize_title, tag, classify_ai, classify_ad, deduplicate, llm_stats
 from html_generator import generate_html
 from publisher import save_html, commit_and_push
 
@@ -148,6 +148,13 @@ def _process_one(idx: int, total: int, item: dict, source_type: str) -> dict | N
     if _is_advertisement(title, existing_text):
         log(f"    [{idx}] → skip (advertisement)")
         return None
+
+    # LLM ad gate — catches contextual ads the heuristic misses (referrals, lead-gen, newsletter CTAs)
+    if AD_GATE_ENABLED:
+        is_ad, ad_reason = classify_ad(title, existing_text[:1000], AD_DETECTOR_MODEL)
+        if is_ad:
+            log(f"    [{idx}] → skip (ad gate: {ad_reason})")
+            return None
 
     # Keyword pre-filter — avoid an LLM call for obvious AI content
     lowered = (title + " " + existing_text).lower()

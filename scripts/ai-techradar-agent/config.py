@@ -13,6 +13,8 @@ load_dotenv(Path(__file__).parent / ".env")
 # --- LLM models ---
 SUMMARIZE_MODEL: str = os.environ.get("SUMMARIZE_MODEL", "llama3.2")
 GENERATE_MODEL: str = os.environ.get("GENERATE_MODEL", "llama3.2")
+AD_DETECTOR_MODEL: str = os.environ.get("AD_DETECTOR_MODEL", "ad-detector")
+AD_GATE_ENABLED: bool = os.environ.get("AD_GATE_ENABLED", "1") not in ("0", "false", "False", "no")
 
 # --- Pipeline ---
 LOOKBACK_HOURS: int = int(os.environ.get("LOOKBACK_HOURS", 24))
