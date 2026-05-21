@@ -261,6 +261,23 @@ def _fetch_links_parallel(email_items: list[dict]) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# Ollama model cleanup
+# ---------------------------------------------------------------------------
+
+def _stop_models(log_fn) -> None:
+    import subprocess
+    models = {SUMMARIZE_MODEL, AD_DETECTOR_MODEL, GENERATE_MODEL}
+    log_fn("")
+    log_fn("── Step 9: Stopping Ollama models ──")
+    for model in sorted(models):
+        result = subprocess.run(["ollama", "stop", model], capture_output=True, text=True)
+        if result.returncode == 0:
+            log_fn(f"  stopped: {model}")
+        else:
+            log_fn(f"  {model}: {(result.stderr or result.stdout).strip()}")
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -424,6 +441,7 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
         log("")
         log("Dry run complete — skipping git commit and push.")
         log(f"Preview: open {out_path}")
+        _stop_models(log)
         return
 
     # --- Step 8: Commit and push ---
@@ -433,6 +451,9 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
 
     call_count, total_duration = llm_stats()
     log(f"LLM calls: {call_count}  total time: {total_duration:.3f}s")
+
+    # --- Step 9: Release Ollama models ---
+    _stop_models(log)
     log("Done.")
 
 
