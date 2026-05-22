@@ -7,3 +7,4 @@ scripts/ai-techradar-agent/.env
 scripts/ai-techradar-agent/.venv/
 **/__pycache__/
 **/*.pyc
+worktrees/
