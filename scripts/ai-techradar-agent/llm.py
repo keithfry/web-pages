@@ -292,14 +292,30 @@ def rank_items(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
 
 
 def generate_audio_script(item: dict, model: str = SUMMARIZE_MODEL) -> str:
-    """Generate a ~70-word spoken-word script for a single podcast segment."""
+    """Generate a ~140-word news-report style spoken script for a single podcast segment.
+
+    Structure: source/title attribution → overview (5-10s) → body (45s) → conclusion (10-15s).
+    """
+    source = item.get("source", "")
+    title = item.get("title", "")
+    summary = item.get("summary", "")
+
     prompt = (
-        "Write a spoken-word podcast segment about the following AI/tech news item. "
-        "Write as if speaking naturally to a listener — conversational, engaging, specific. "
+        "Write a spoken podcast news segment in three parts. "
+        "Use a factual, third-person news-report tone — no personal opinions, no 'you', no 'we'. "
         "No bullet points. No markdown. No URLs. No 'click here' or 'read more'. "
-        "Target: approximately 70 words (about 30 seconds at normal speech pace).\n\n"
-        f"Title: {item.get('title', '')}\n"
-        f"Summary: {item.get('summary', '')}\n\n"
+        "Write as one continuous spoken passage.\n\n"
+        f"Source: {source}\n"
+        f"Title: {title}\n"
+        f"Summary: {summary}\n\n"
+        "Structure — write all three parts as a single flowing paragraph:\n"
+        f"1. ATTRIBUTION (1 sentence): Begin with 'From {source}, \"{title}\".' "
+        "then immediately state in one sentence what this story is about and its key result or finding.\n"
+        "2. BODY (about 100 words): Report the details — what was done, how it was accomplished, "
+        "the process, the methodology, the specific findings or announcements. Be precise and factual.\n"
+        "3. CONCLUSION (about 30 words): State what this means for the AI/tech industry "
+        "or what to watch for next. No rhetorical questions.\n\n"
+        "Target total: approximately 140 words.\n\n"
         "Spoken segment:"
     )
     return _chat(prompt, model).strip()
