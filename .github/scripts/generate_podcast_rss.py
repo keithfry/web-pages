@@ -55,7 +55,7 @@ def build_rss_feed(output_dir: Path, base_url: str, max_episodes: int = MAX_EPIS
         if not date:
             continue
 
-        date_str = mp3.stem.replace("ai-radar-", "")  # "2026-05-21"
+        date_str = f"{date.year:04d}-{date.month:02d}-{date.day:02d}"
         chap_json = output_dir / f"ai-radar-{date_str}.chapters.json"
         duration = _duration_from_chapters(chap_json) if chap_json.exists() else 0
         file_size = mp3.stat().st_size
@@ -73,8 +73,9 @@ def build_rss_feed(output_dir: Path, base_url: str, max_episodes: int = MAX_EPIS
     <title>AI &amp; Robotics Radar — {title_date}</title>
     <pubDate>{pub_date}</pubDate>
     <enclosure url="{mp3_url}" type="audio/mpeg" length="{file_size}"/>
-    <itunes:duration>{duration}</itunes:duration>
+    <itunes:duration>{duration // 3600:02d}:{(duration % 3600) // 60:02d}:{duration % 60:02d}</itunes:duration>
     <guid isPermaLink="true">{mp3_url}</guid>
+    <description>AI and Robotics Radar for {title_date}. {duration // 60} minutes of AI and robotics news.</description>
 {chap_tag}  </item>""")
 
     items_block = "\n".join(items_xml)
