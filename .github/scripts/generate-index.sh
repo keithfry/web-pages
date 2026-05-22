@@ -105,7 +105,14 @@ generate_index() {
           current_month="$month_key"
         fi
 
-        echo "<li><a href=\"./$fname\">$fname</a></li>"
+        audio_badge=""
+        if [[ "$fname" =~ ([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
+          date_part="${BASH_REMATCH[1]}"
+          if [[ -f "$dir/ai-radar-${date_part}.mp3" ]]; then
+            audio_badge=" <a href=\"./ai-radar-${date_part}.mp3\" title=\"Listen to podcast\" style=\"text-decoration:none;\">🎙</a>"
+          fi
+        fi
+        echo "<li><a href=\"./$fname\">$fname</a>${audio_badge}</li>"
       done
 
       # Close final list

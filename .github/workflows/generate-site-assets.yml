@@ -23,6 +23,10 @@ jobs:
         run: |
           ./.github/scripts/generate-index.sh techradar
 
+      - name: Generate podcast RSS feed
+        run: |
+          python3 .github/scripts/generate_podcast_rss.py
+
       - name: Generate certification images manifest
         run: |
           python3 << 'PYEOF'
