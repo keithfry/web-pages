@@ -21,7 +21,7 @@ from zoneinfo import ZoneInfo
 
 ET = ZoneInfo("America/New_York")
 
-from config import LOOKBACK_HOURS, SUMMARIZE_MODEL, GENERATE_MODEL, LLM_WORKERS, URL_WORKERS, AD_DETECTOR_MODEL, AD_GATE_ENABLED, OUTPUT_DIR
+from config import LOOKBACK_HOURS, SUMMARIZE_MODEL, RANK_MODEL, GENERATE_MODEL, LLM_WORKERS, URL_WORKERS, AD_DETECTOR_MODEL, AD_GATE_ENABLED, OUTPUT_DIR
 from feed_fetcher import fetch_all_feeds, is_arxiv
 from email_fetcher import fetch_emails
 from article_fetcher import fetch_article_text, source_name_from_url
@@ -268,15 +268,13 @@ def _fetch_links_parallel(email_items: list[dict]) -> list[dict]:
 
 def _stop_models(log_fn) -> None:
     import subprocess
-    models = {SUMMARIZE_MODEL, AD_DETECTOR_MODEL, GENERATE_MODEL}
+    models = {SUMMARIZE_MODEL, RANK_MODEL, AD_DETECTOR_MODEL, GENERATE_MODEL}
     log_fn("")
     log_fn("── Step 10: Stopping Ollama models ──")
     for model in sorted(models):
         result = subprocess.run(["ollama", "stop", model], capture_output=True, text=True)
         if result.returncode == 0:
             log_fn(f"  stopped: {model}")
-        else:
-            log_fn(f"  {model}: {(result.stderr or result.stdout).strip()}")
 
 
 # ---------------------------------------------------------------------------

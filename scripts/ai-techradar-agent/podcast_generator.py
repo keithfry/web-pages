@@ -169,7 +169,10 @@ def generate_podcast(
     # Build chapters list
     chapters = [{"startTime": 0, "title": "Introduction"}]
     for item, start in zip(podcast_items, actual_starts[1:]):
-        chapters.append({"startTime": int(start), "title": item["title"]})
+        chap = {"startTime": int(start), "title": item["title"]}
+        if item.get("link"):
+            chap["url"] = item["link"]
+        chapters.append(chap)
 
     # Add endTime to each chapter
     for i, chap in enumerate(chapters):

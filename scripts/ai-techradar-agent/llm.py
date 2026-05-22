@@ -8,7 +8,7 @@ import time
 
 import ollama
 
-from config import SUMMARIZE_MODEL
+from config import SUMMARIZE_MODEL, RANK_MODEL
 
 _llm_call_lock = threading.Lock()
 _llm_call_count = 0
@@ -253,7 +253,7 @@ def deduplicate(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
     return [item for i, item in enumerate(items) if i not in to_drop]
 
 
-def rank_items(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
+def rank_items(items: list[dict], model: str = RANK_MODEL) -> list[dict]:
     """Rank items by AI/robotics relevance and newsworthiness, 1 = most important.
 
     Returns a new list sorted by rank with a 'rank' field added to each item.
