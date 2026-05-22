@@ -1,5 +1,6 @@
 """Write the HTML digest to the repo and commit + push it."""
 
+import json
 import subprocess
 from datetime import datetime
 from pathlib import Path
@@ -18,7 +19,6 @@ def save_html(html: str, date: datetime) -> Path:
 
 def save_json(data: dict, date: datetime) -> Path:
     """Write enriched JSON to techradar/AI/ai-radar-YYYY-MM-DD.json."""
-    import json
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     filename = f"ai-radar-{date.strftime('%Y-%m-%d')}.json"
     out_path = OUTPUT_DIR / filename
@@ -41,10 +41,14 @@ def _run(
     return result
 
 
-def commit_and_push(out_paths: "Path | list[Path]", date: datetime, log=print) -> None:
+def commit_and_push(out_paths: Path | list[Path], date: datetime, log=print) -> None:
     """git pull --rebase, add all out_paths, commit, push."""
     if isinstance(out_paths, Path):
         out_paths = [out_paths]
+
+    if not out_paths:
+        log("  no paths to commit, skipping")
+        return
 
     commit_msg = f"Add AI radar for {date.strftime('%Y-%m-%d')}"
 
