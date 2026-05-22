@@ -41,6 +41,8 @@ def _estimate_chapter_times(intro_script: str, audio_scripts: list[str]) -> list
     times = [0]
     cursor = _seconds(_words(intro_script))
     times.append(cursor)
+    # Iterate all but the last script: each iteration appends the START of the
+    # *next* item. The last item's start = chapter_times[-1] via caller's fallback.
     for script in audio_scripts[:-1]:
         cursor += _seconds(_words(script))
         times.append(cursor)
@@ -50,7 +52,7 @@ def _estimate_chapter_times(intro_script: str, audio_scripts: list[str]) -> list
 def _build_enriched_dict(date: datetime, intro_script: str, items: list[dict]) -> dict:
     return {
         "date": date.strftime("%Y-%m-%d"),
-        "generated_at": datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
+        "generated_at": datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M:%S%z"),
         "intro_script": intro_script,
         "items": items,
     }
@@ -89,19 +91,19 @@ def enrich(
 
     # Rank podcast candidates
     log("  Ranking items by relevance...")
-    ranked = rank_items(podcast_candidates, model)
+    ranked = rank_items(podcast_candidates, model=model)
 
     # Generate audio script per item (in rank order)
     log(f"  Generating {len(ranked)} audio scripts...")
     for item in ranked:
-        item["audio_script"] = generate_audio_script(item, model)
+        item["audio_script"] = generate_audio_script(item, model=model)
         item["voice_index"] = (item["rank"] - 1) % len(KOKORO_VOICES)
         item["include_in_podcast"] = True
         log(f"    [{item['rank']}] scripted: {item['title'][:60]}")
 
     # Generate intro script
     log("  Generating intro script...")
-    intro_script = generate_intro_script(ranked, date, model)
+    intro_script = generate_intro_script(ranked, date, model=model)
 
     # Estimate chapter times
     audio_scripts = [item["audio_script"] for item in ranked]

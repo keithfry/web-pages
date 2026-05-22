@@ -28,6 +28,17 @@ class TestEstimateChapterTimes(unittest.TestCase):
         self.assertAlmostEqual(times[0], 0)
         self.assertAlmostEqual(times[1], 46, delta=5)
 
+    def test_single_item_uses_fallback(self):
+        from enricher import _estimate_chapter_times
+        intro = "Welcome to the AI radar podcast for today."  # ~8 words → >0 seconds
+        scripts = ["Single item script with about ten words in it."]
+        times = _estimate_chapter_times(intro, scripts)
+        # With 1 script, times has 2 entries: [0, intro_end]
+        # The caller uses times[-1] as fallback for the single item's start
+        self.assertEqual(len(times), 2)
+        self.assertEqual(times[0], 0)
+        self.assertGreater(times[1], 0)
+
 
 class TestEnrichJSONSchema(unittest.TestCase):
     def test_enriched_json_has_required_keys(self):
