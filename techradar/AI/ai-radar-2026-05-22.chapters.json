@@ -9,342 +9,282 @@
     {
       "startTime": 17,
       "title": "Security alert",
-      "endTime": 44
+      "endTime": 89
     },
     {
-      "startTime": 44,
+      "startTime": 89,
       "title": "AI 101: From Tokens to Answers: What Actually Happens During LLM Inference",
-      "endTime": 111
+      "endTime": 149
     },
     {
-      "startTime": 111,
+      "startTime": 149,
       "title": "Diving Deep into RAG, Document Extraction, and More",
-      "endTime": 160
+      "endTime": 221
     },
     {
-      "startTime": 160,
-      "title": "Dow Reaches Record High as US-Iran Peace Hopes Boost Stocks",
-      "endTime": 194
+      "startTime": 221,
+      "title": "Dow Hits Record High on US-Iran Peace Hopes",
+      "endTime": 276
     },
     {
-      "startTime": 194,
-      "title": "Token Taxonomy Explains AI Cost Speed and Capability",
-      "endTime": 227
+      "startTime": 276,
+      "title": "How Token Taxonomy Affects Your Bill",
+      "endTime": 348
     },
     {
-      "startTime": 227,
-      "title": "What is a Token in AI That Runs the Model Performance",
-      "endTime": 274
+      "startTime": 348,
+      "title": "Understanding AI Tokens Fundamentals for Better Model Performance and Efficiency",
+      "endTime": 392
     },
     {
-      "startTime": 274,
+      "startTime": 392,
       "title": "Google I/O showed how the path for AI-driven science is shifting",
-      "endTime": 296
+      "endTime": 435
     },
     {
-      "startTime": 296,
+      "startTime": 435,
       "title": "The Enhanced Games fit right in with the rest of 2026\u2019s longevity vibes",
-      "endTime": 323
+      "endTime": 525
     },
     {
-      "startTime": 323,
+      "startTime": 525,
       "title": "Roundtables: Can AI Learn to Understand the World?",
-      "endTime": 357
+      "endTime": 574
     },
     {
-      "startTime": 357,
+      "startTime": 574,
       "title": "Scaling creativity in the age of AI",
-      "endTime": 378
+      "endTime": 655
     },
     {
-      "startTime": 378,
+      "startTime": 655,
       "title": "Anthropic\u2019s Code with Claude showed off coding\u2019s future\u2014whether you like it or not",
-      "endTime": 415
+      "endTime": 746
     },
     {
-      "startTime": 415,
+      "startTime": 746,
       "title": "AdventHealth advances whole-person care with OpenAI",
-      "endTime": 440
+      "endTime": 798
     },
     {
-      "startTime": 440,
+      "startTime": 798,
       "title": "NVIDIA GTC Taipei at COMPUTEX: Live Updates on What\u2019s Next in AI",
-      "endTime": 468
+      "endTime": 869
     },
     {
-      "startTime": 468,
+      "startTime": 869,
       "title": "Get Real-Time Visibility into GPU Usage Across Kubernetes Clusters",
-      "endTime": 506
+      "endTime": 932
     },
     {
-      "startTime": 506,
+      "startTime": 932,
       "title": "Unlock Exascale Performance on NVIDIA GB200 NVL72 with Slurm Topology-Aware Job Scheduling",
-      "endTime": 549
+      "endTime": 1016
     },
     {
-      "startTime": 549,
+      "startTime": 1016,
       "title": "Building Token\u2011Metered AI Services on Telco AI Factories",
-      "endTime": 582
+      "endTime": 1078
     },
     {
-      "startTime": 582,
+      "startTime": 1078,
       "title": "We\u2019re launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks",
-      "endTime": 619
+      "endTime": 1125
     },
     {
-      "startTime": 619,
+      "startTime": 1125,
       "title": "MagenticLite, MagenticBrain, Fara1.5: An agentic experience optimized for small models",
-      "endTime": 659
+      "endTime": 1227
     },
     {
-      "startTime": 659,
+      "startTime": 1227,
       "title": "Vega: Zero-knowledge\u00a0proofs for\u00a0digital identity in the\u00a0age of AI",
-      "endTime": 695
+      "endTime": 1316
     },
     {
-      "startTime": 695,
+      "startTime": 1316,
       "title": "Microsoft and EY Link Up to Speed Enterprise AI Adoption",
-      "endTime": 717
+      "endTime": 1366
     },
     {
-      "startTime": 717,
+      "startTime": 1366,
+      "title": "SpaceX IPO Filing Opens Up xAI Finances",
+      "endTime": 1412
+    },
+    {
+      "startTime": 1412,
       "title": "Google Ads in AI Mode Will Help Businesses Be Discovered",
-      "endTime": 747
+      "endTime": 1457
     },
     {
-      "startTime": 747,
+      "startTime": 1457,
+      "title": "A 0.12% parameter add-on gives AI agents the working memory RAG can't",
+      "endTime": 1509
+    },
+    {
+      "startTime": 1509,
       "title": "Enterprise AI agents keep failing because they forget what they learned",
-      "endTime": 783
+      "endTime": 1596
     },
     {
-      "startTime": 783,
+      "startTime": 1596,
       "title": "MFA verifies who logged in. It has no idea what they do next.",
-      "endTime": 822
+      "endTime": 1646
     },
     {
-      "startTime": 822,
+      "startTime": 1646,
       "title": "Americans can\u2019t spot a deepfake, and that\u2019s a business crisis, not just a consumer problem",
-      "endTime": 866
+      "endTime": 1712
     },
     {
-      "startTime": 866,
-      "title": "Microsoft Releases Fara1.5: A Family of Browser Computer-Use Agents (4B/9B/27B) That Outperform OpenAI Operator and Gemini 2.5 Computer Use on Online-Mind2Web",
-      "endTime": 896
-    },
-    {
-      "startTime": 896,
+      "startTime": 1712,
       "title": "Build Recurrent-Depth Transformers with OpenMythos for MLA, GQA, Sparse MoE, and Loop-Scaled Reasoning",
-      "endTime": 926
+      "endTime": 1797
     },
     {
-      "startTime": 926,
-      "title": "How CopilotKit Is Redefining the Agentic AI Stack in 2026",
-      "endTime": 955
-    },
-    {
-      "startTime": 955,
+      "startTime": 1797,
       "title": "Qwen Introduces Qwen3.7-Max: A Reasoning Agent Model With a 1M-Token Context Window",
-      "endTime": 1002
+      "endTime": 1869
     },
     {
-      "startTime": 1002,
-      "title": "Cohere Releases Command A+: A 218B Sparse MoE Model for Agentic Workflows That Runs on as Few as Two H100 GPUs",
-      "endTime": 1041
-    },
-    {
-      "startTime": 1041,
+      "startTime": 1869,
       "title": "A musical Turing test for AI consciousness | Letters",
-      "endTime": 1080
-    },
-    {
-      "startTime": 1080,
-      "title": "Trump postpones executive order on AI over China concerns \u2013 US politics live",
-      "endTime": 1118
-    },
-    {
-      "startTime": 1118,
-      "title": "Standard Chartered boss apologises for \u2018lower-value human capital\u2019 comments amid job cuts",
-      "endTime": 1146
-    },
-    {
-      "startTime": 1146,
-      "title": "Mars colony and Grok warnings: five strange details in SpaceX\u2019s pitch to investors",
-      "endTime": 1197
-    },
-    {
-      "startTime": 1197,
-      "title": "If Australia is home to an AI gold rush, let\u2019s not squander it. Let\u2019s fjord a different path | Peter Lewis",
-      "endTime": 1231
-    },
-    {
-      "startTime": 1231,
-      "title": "Spotify and Universal Music agree deal to let subscribers create AI remixes",
-      "endTime": 1253
-    },
-    {
-      "startTime": 1253,
-      "title": "Sadiq Khan sparks row with Met after blocking \u00a350m AI deal with Palantir",
-      "endTime": 1280
-    },
-    {
-      "startTime": 1280,
-      "title": "OpenAI makes breakthrough on 80-year-old maths problem",
-      "endTime": 1304
-    },
-    {
-      "startTime": 1304,
-      "title": "WiseTech begins redundancies \u2013 but omits \u2018AI\u2019 from emails to Chinese employees, workers say",
-      "endTime": 1334
-    },
-    {
-      "startTime": 1334,
-      "title": "BT warns of smartphone price rises due to chip shortages from AI boom",
-      "endTime": 1360
-    },
-    {
-      "startTime": 1360,
-      "title": "Exclusive interview: Sundar Pichai on AI's flip phone moment",
-      "endTime": 1400
-    },
-    {
-      "startTime": 1400,
-      "title": "Do AI Risks Require Extraordinary Government Intervention?",
-      "endTime": 1424
-    },
-    {
-      "startTime": 1424,
-      "title": "[AINews] New AI Infra unicorns: Exa, Modal, TurboPuffer",
-      "endTime": 1452
-    },
-    {
-      "startTime": 1452,
-      "title": "Giving Agents Computers \u2014 Ivan Burazin, Daytona",
-      "endTime": 1485
-    },
-    {
-      "startTime": 1485,
-      "title": "FTC to Require Cox Media Group, Two Other Firms to Pay Nearly $1 Million to Settle Charges They Deceived Customers About \u201cActive Listening\u201d AI-Powered Marketing Service",
-      "endTime": 1535
-    },
-    {
-      "startTime": 1535,
-      "title": "Datasette Agent",
-      "endTime": 1566
-    },
-    {
-      "startTime": 1566,
-      "title": "datasette-agent 0.1a3",
-      "endTime": 1603
-    },
-    {
-      "startTime": 1603,
-      "title": "LLM Themes Are Not Observations",
-      "endTime": 1627
-    },
-    {
-      "startTime": 1627,
-      "title": "Prompt Engineering Isn\u2019t Enough \u2014 I Built a Control Layer That Works in Production",
-      "endTime": 1671
-    },
-    {
-      "startTime": 1671,
-      "title": "[R] PULSELoCo: 17x lower trainer-to-trainer bandwidth for distributed RL post-training, lossless",
-      "endTime": 1720
-    },
-    {
-      "startTime": 1720,
-      "title": "Peg-in-hole Insertion using Sensor Fusion & RL",
-      "endTime": 1750
-    },
-    {
-      "startTime": 1750,
-      "title": "pipeline is really slow - consulting",
-      "endTime": 1792
-    },
-    {
-      "startTime": 1792,
-      "title": "Brain Corp partners with UC San Diego to help robots operate in complex environments",
-      "endTime": 1820
-    },
-    {
-      "startTime": 1820,
-      "title": "FANUC partners with Google to advance physical AI in its robots",
-      "endTime": 1848
-    },
-    {
-      "startTime": 1848,
-      "title": "M\u0101ori Text-to-Speech Model Spurns Big Tech\u2019s Values",
-      "endTime": 1889
-    },
-    {
-      "startTime": 1889,
-      "title": "Open-Source Software Is Starting to Help Robots Think",
       "endTime": 1926
     },
     {
       "startTime": 1926,
-      "title": "Open-Source Software Is Starting to Help Robots Think",
-      "endTime": 1961
-    },
-    {
-      "startTime": 1961,
-      "title": "Figure AI Pops Champagne as Autonomous Marathon Crosses 200 Hours Without Hardware Failure",
+      "title": "Mars colony and Grok warnings: five strange details in SpaceX\u2019s pitch to investors",
       "endTime": 1990
     },
     {
       "startTime": 1990,
+      "title": "Sadiq Khan sparks row with Met after blocking \u00a350m AI deal with Palantir",
+      "endTime": 2045
+    },
+    {
+      "startTime": 2045,
+      "title": "WiseTech begins redundancies \u2013 but omits \u2018AI\u2019 from emails to Chinese employees, workers say",
+      "endTime": 2090
+    },
+    {
+      "startTime": 2090,
+      "title": "Do AI Risks Require Extraordinary Government Intervention?",
+      "endTime": 2171
+    },
+    {
+      "startTime": 2171,
+      "title": "[AINews] New AI Infra unicorns: Exa, Modal, TurboPuffer",
+      "endTime": 2224
+    },
+    {
+      "startTime": 2224,
+      "title": "Datasette Agent",
+      "endTime": 2301
+    },
+    {
+      "startTime": 2301,
+      "title": "datasette-agent 0.1a3",
+      "endTime": 2370
+    },
+    {
+      "startTime": 2370,
+      "title": "Lost in Translation: How AI Exposes the Rift Between Law and Logic",
+      "endTime": 2435
+    },
+    {
+      "startTime": 2435,
+      "title": "LLM Themes Are Not Observations",
+      "endTime": 2541
+    },
+    {
+      "startTime": 2541,
+      "title": "Prompt Engineering Isn\u2019t Enough \u2014 I Built a Control Layer That Works in Production",
+      "endTime": 2616
+    },
+    {
+      "startTime": 2616,
+      "title": "[R] PULSELoCo: 17x lower trainer-to-trainer bandwidth for distributed RL post-training, lossless",
+      "endTime": 2665
+    },
+    {
+      "startTime": 2665,
+      "title": "Peg-in-hole Insertion using Sensor Fusion & RL",
+      "endTime": 2716
+    },
+    {
+      "startTime": 2716,
+      "title": "Brain Corp partners with UC San Diego to help robots operate in complex environments",
+      "endTime": 2763
+    },
+    {
+      "startTime": 2763,
+      "title": "FANUC partners with Google to advance physical AI in its robots",
+      "endTime": 2828
+    },
+    {
+      "startTime": 2828,
+      "title": "M\u0101ori Text-to-Speech Model Spurns Big Tech\u2019s Values",
+      "endTime": 2954
+    },
+    {
+      "startTime": 2954,
+      "title": "Open-Source Software Is Starting to Help Robots Think",
+      "endTime": 3005
+    },
+    {
+      "startTime": 3005,
+      "title": "Open-Source Software Is Starting to Help Robots Think",
+      "endTime": 3051
+    },
+    {
+      "startTime": 3051,
+      "title": "Figure AI Pops Champagne as Autonomous Marathon Crosses 200 Hours Without Hardware Failure",
+      "endTime": 3123
+    },
+    {
+      "startTime": 3123,
       "title": "Hugging Face Drops a $2,500 3D-Printed Humanoid for Open Robot Learning",
-      "endTime": 2024
+      "endTime": 3171
     },
     {
-      "startTime": 2024,
-      "title": "From Prototype to Production: Humanoid Taps Bosch for European Manufacturing Push",
-      "endTime": 2054
-    },
-    {
-      "startTime": 2054,
-      "title": "Genesis AI Bolsters Leadership with Former X and Tesla Execs Ahead of Hardware Reveal",
-      "endTime": 2077
-    },
-    {
-      "startTime": 2077,
+      "startTime": 3171,
       "title": "ROS Discourse General: Build a MuJoCo + ROS2 Robotic Arm Workflow for Embodied AI",
-      "endTime": 2107
+      "endTime": 3238
     },
     {
-      "startTime": 2107,
+      "startTime": 3238,
       "title": "Doozy Robotics launches global expansion to scale AI-powered humanoid workforce for factories",
-      "endTime": 2141
+      "endTime": 3306
     },
     {
-      "startTime": 2141,
+      "startTime": 3306,
       "title": "Perspective from Harting: The industrial reality check \u2013 why factory winners execute, not just innovate",
-      "endTime": 2177
+      "endTime": 3404
     },
     {
-      "startTime": 2177,
+      "startTime": 3404,
       "title": "Brain Corp and UC San Diego partner to advance the foundational intelligence layer for physical AI",
-      "endTime": 2212
+      "endTime": 3478
     },
     {
-      "startTime": 2212,
+      "startTime": 3478,
       "title": "Flytrex opens drone manufacturing facility in Dallas",
-      "endTime": 2242
+      "endTime": 3545
     },
     {
-      "startTime": 2242,
+      "startTime": 3545,
       "title": "Humanoid secures partnership with manufacturing giant Bosch following a successful proof of concept",
-      "endTime": 2274
+      "endTime": 3600
     },
     {
-      "startTime": 2274,
+      "startTime": 3600,
       "title": "The Hidden Cost of Getting Interpretation Wrong: Why Professional Interpreters Are a Business Necessity",
-      "endTime": 2303
+      "endTime": 3664
     },
     {
-      "startTime": 2303,
+      "startTime": 3664,
       "title": "Why Semi-Truck Accident Claims Bring Unique Legal Hurdles",
-      "endTime": 2329
+      "endTime": 3729
     }
   ]
 }
