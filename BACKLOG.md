@@ -17,3 +17,6 @@
 - [ ] Radial layout has some extra border on the edges that we could take out.
 - [ ] Move google drive API key out of config.js and into a parameter passed the outermost method.
 
+## AI Techradar Agent
+
+- [ ] Filter Gmail "Security alert" emails from Google (subject: "Security alert", sender: no-reply@accounts.google.com) before classification — these are OAuth setup notifications, not news content.
