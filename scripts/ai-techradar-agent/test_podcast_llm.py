@@ -32,6 +32,10 @@ class TestPodcastLLM(unittest.TestCase):
         intro = generate_intro_script(SAMPLE_ITEMS, date, "llama3.2")
         self.assertIsInstance(intro, str)
         self.assertGreater(len(intro), 20)
+        self.assertTrue(
+            "May" in intro or "2026" in intro,
+            f"Intro doesn't mention date: {intro!r}"
+        )
 
 if __name__ == "__main__":
     unittest.main()

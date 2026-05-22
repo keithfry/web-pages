@@ -277,6 +277,7 @@ def rank_items(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
     raw = _chat(prompt, model, json_mode=True)
     try:
         order: list[int] = json.loads(_extract_json(raw)).get("ranked", [])
+        order = [int(x) for x in order]
         if sorted(order) != list(range(len(items))):
             raise ValueError(f"Bad ranking: {order}")
         ranked = []
@@ -297,16 +298,16 @@ def generate_audio_script(item: dict, model: str = SUMMARIZE_MODEL) -> str:
         "Write as if speaking naturally to a listener — conversational, engaging, specific. "
         "No bullet points. No markdown. No URLs. No 'click here' or 'read more'. "
         "Target: approximately 70 words (about 30 seconds at normal speech pace).\n\n"
-        f"Title: {item['title']}\n"
+        f"Title: {item.get('title', '')}\n"
         f"Summary: {item.get('summary', '')}\n\n"
         "Spoken segment:"
     )
     return _chat(prompt, model).strip()
 
 
-def generate_intro_script(items: list[dict], date, model: str = SUMMARIZE_MODEL) -> str:
+def generate_intro_script(items: list[dict], date: "datetime", model: str = SUMMARIZE_MODEL) -> str:
     """Generate a podcast intro mentioning date, item count, and top-3 topics."""
-    date_str = date.strftime("%B %-d, %Y")
+    date_str = f"{date.strftime('%B')} {date.day}, {date.year}"
     top3 = [item["title"] for item in items[:3]]
     top3_str = "\n".join(f"- {t}" for t in top3)
     prompt = (
