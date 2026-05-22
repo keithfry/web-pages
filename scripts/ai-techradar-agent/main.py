@@ -27,7 +27,7 @@ from email_fetcher import fetch_emails
 from article_fetcher import fetch_article_text, source_name_from_url
 from llm import summarize, summarize_title, tag, classify_ai, classify_ad, deduplicate, llm_stats
 from html_generator import generate_html
-from publisher import save_html, save_json, commit_and_push
+from publisher import save_html, commit_and_push
 from enricher import enrich
 from podcast_generator import generate_podcast
 
@@ -465,8 +465,17 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
     t_html.join()
     t_pod.join()
 
+    # Re-write JSON with actual chapter times from TTS (podcast updates items in-place)
+    if podcast_result:
+        from enricher import write_enriched_json
+        write_enriched_json(enriched_data, json_path)
+        log("  Updated JSON with actual chapter times")
+
     if html_error:
         raise html_error[0]
+
+    if not html_result:
+        raise RuntimeError("HTML generation thread exited without producing output")
 
     html = html_result[0]
 
