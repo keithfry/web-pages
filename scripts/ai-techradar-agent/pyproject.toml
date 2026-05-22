@@ -11,7 +11,7 @@ dependencies = [
     "python-dotenv",
     "beautifulsoup4",
     "matplotlib>=3.10.8",
-    "kokoro>=0.9.4",
+    "kokoro>=0.9.4,<1.0",
     "mutagen>=1.47",
     "soundfile>=0.12",
 ]
