@@ -21,13 +21,11 @@ def _build_chapters_json(chapters: list[dict]) -> str:
     return json.dumps({"version": "1.2.0", "chapters": chapters}, indent=2)
 
 
-def _tts_segment(text: str, voice: str, out_wav: Path) -> float:
-    """Synthesize text to WAV using Kokoro. Returns duration in seconds."""
+def _tts_segment(text: str, voice: str, out_wav: Path, pipeline) -> float:
+    """Synthesize text to WAV using Kokoro pipeline. Returns duration in seconds."""
     import soundfile as sf
     import numpy as np
-    from kokoro import KPipeline
 
-    pipeline = KPipeline(lang_code="a")
     audio_chunks = []
     sample_rate = 24000
 
@@ -55,7 +53,7 @@ def _concat_wavs_to_mp3(wav_files: list[Path], out_mp3: Path) -> None:
                 "ffmpeg", "-y",
                 "-f", "concat", "-safe", "0",
                 "-i", str(concat_file),
-                "-ar", "22050", "-ab", "128k",
+                "-ar", "22050", "-b:a", "128k",
                 str(out_mp3),
             ],
             check=True,
@@ -69,13 +67,14 @@ def _concat_wavs_to_mp3(wav_files: list[Path], out_mp3: Path) -> None:
 
 def _write_id3_chapters(mp3_path: Path, chapters: list[dict]) -> None:
     """Write ID3v2 CHAP frames to an MP3 file for chapter navigation."""
-    from mutagen.id3 import ID3, CHAP, CToc, TIT2
+    from mutagen.id3 import ID3, CHAP, CTOC, TIT2
     from mutagen.id3 import ID3NoHeaderError
 
     try:
         tags = ID3(str(mp3_path))
     except ID3NoHeaderError:
         tags = ID3()
+    # ID3() with no args creates a new header object; tags.save(path) writes it to file.
 
     # Remove existing chapter tags
     for key in list(tags.keys()):
@@ -97,7 +96,7 @@ def _write_id3_chapters(mp3_path: Path, chapters: list[dict]) -> None:
             sub_frames=[TIT2(encoding=3, text=[chap["title"]])],
         ))
 
-    tags.add(CToc(
+    tags.add(CTOC(
         element_id="toc",
         flags=0x03,  # top-level, ordered
         child_element_ids=chap_ids,
@@ -128,6 +127,12 @@ def generate_podcast(
 
     log(f"  Generating audio for intro + {len(podcast_items)} items...")
 
+    log("  Loading Kokoro TTS model...")
+    from kokoro import KPipeline
+    pipeline = KPipeline(lang_code="a")
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
         wav_files: list[Path] = []
@@ -137,7 +142,7 @@ def generate_podcast(
         # Intro segment (always voice 0)
         intro_wav = tmp / "intro.wav"
         log(f"  [tts] intro ({_voice_for(0)}): {intro_script[:60]}...")
-        intro_dur = _tts_segment(intro_script, _voice_for(0), intro_wav)
+        intro_dur = _tts_segment(intro_script, _voice_for(0), intro_wav, pipeline)
         wav_files.append(intro_wav)
         actual_starts.append(cursor)
         cursor += intro_dur
@@ -148,7 +153,7 @@ def generate_podcast(
             voice = _voice_for(item["voice_index"])
             script = item["audio_script"]
             log(f"  [tts] item {item['rank']} ({voice}): {item['title'][:50]}...")
-            dur = _tts_segment(script, voice, wav_path)
+            dur = _tts_segment(script, voice, wav_path, pipeline)
             wav_files.append(wav_path)
             actual_starts.append(cursor)
             item["chapter_start_seconds"] = int(cursor)
