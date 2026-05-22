@@ -21,13 +21,15 @@ from zoneinfo import ZoneInfo
 
 ET = ZoneInfo("America/New_York")
 
-from config import LOOKBACK_HOURS, SUMMARIZE_MODEL, GENERATE_MODEL, LLM_WORKERS, URL_WORKERS, AD_DETECTOR_MODEL, AD_GATE_ENABLED
+from config import LOOKBACK_HOURS, SUMMARIZE_MODEL, GENERATE_MODEL, LLM_WORKERS, URL_WORKERS, AD_DETECTOR_MODEL, AD_GATE_ENABLED, OUTPUT_DIR
 from feed_fetcher import fetch_all_feeds, is_arxiv
 from email_fetcher import fetch_emails
 from article_fetcher import fetch_article_text, source_name_from_url
 from llm import summarize, summarize_title, tag, classify_ai, classify_ad, deduplicate, llm_stats
 from html_generator import generate_html
-from publisher import save_html, commit_and_push
+from publisher import save_html, save_json, commit_and_push
+from enricher import enrich
+from podcast_generator import generate_podcast
 
 MAX_LINKS_PER_EMAIL = 5
 
@@ -268,7 +270,7 @@ def _stop_models(log_fn) -> None:
     import subprocess
     models = {SUMMARIZE_MODEL, AD_DETECTOR_MODEL, GENERATE_MODEL}
     log_fn("")
-    log_fn("── Step 9: Stopping Ollama models ──")
+    log_fn("── Step 10: Stopping Ollama models ──")
     for model in sorted(models):
         result = subprocess.run(["ollama", "stop", model], capture_output=True, text=True)
         if result.returncode == 0:
@@ -296,6 +298,8 @@ def main() -> None:
                         help="Generate HTML only, skip git commit and push")
     parser.add_argument("--no-email", action="store_true",
                         help="Skip Gmail — fetch RSS feeds only")
+    parser.add_argument("--no-podcast", action="store_true",
+                        help="Skip podcast audio generation")
     parser.add_argument("--refresh-token", action="store_true",
                         help="Delete token.json and re-authenticate with Gmail, then exit")
     args = parser.parse_args()
@@ -410,49 +414,90 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
     log(f"  {len(all_items)} items after deduplication")
     log("")
 
-    # --- Step 6: Generate HTML ---
+    # --- Step 6: Enrich — rank, audio scripts, chapter times, write JSON ---
+    log(f"── Step 6: Enriching {len(all_items)} items ──")
+    json_path = OUTPUT_DIR / f"ai-radar-{as_of.strftime('%Y-%m-%d')}.json"
+    enriched_data = enrich(all_items, as_of, json_path, model=SUMMARIZE_MODEL, log=log)
+    podcast_count = len([i for i in enriched_data["items"] if i.get("include_in_podcast")])
+    log(f"  Enrichment complete — {podcast_count} podcast items")
+    log("")
+
+    # --- Steps 7a + 7b: Generate HTML and podcast in parallel ---
     newsletters = [i for i in all_items if i["_source_type"] == "email"]
     papers      = [i for i in all_items if i.get("_is_arxiv")]
     articles    = [i for i in all_items if i["_source_type"] == "rss" and not i.get("_is_arxiv")]
 
-    log(f"── Step 6: Generating HTML ──")
-    log(f"  Newsletters: {len(newsletters)}")
-    log(f"  Articles:    {len(articles)}")
-    log(f"  Papers:      {len(papers)}")
-    log(f"  Feed errors: {len(rss_errors)}")
-    html = generate_html(
-        newsletters=newsletters,
-        articles=articles,
-        papers=papers,
-        errors=rss_errors,
-        date=as_of,
-    )
-    log(f"  HTML generated ({len(html):,} chars)")
-    log("")
+    html_result: list = []
+    html_error: list = []
+    podcast_result: list = []
+    podcast_error: list = []
 
-    # --- Step 7: Save ---
-    log("── Step 7: Saving ──")
-    out_path = save_html(html, as_of)
-    log(f"  Saved: {out_path}")
+    def _gen_html():
+        try:
+            log("── Step 7a: Generating HTML ──")
+            log(f"  Newsletters: {len(newsletters)}, Articles: {len(articles)}, Papers: {len(papers)}, Errors: {len(rss_errors)}")
+            html = generate_html(
+                newsletters=newsletters, articles=articles,
+                papers=papers, errors=rss_errors, date=as_of,
+            )
+            html_result.append(html)
+            log(f"  HTML generated ({len(html):,} chars)")
+        except Exception as e:
+            html_error.append(e)
+
+    def _gen_podcast():
+        if args.no_podcast:
+            log("── Step 7b: Podcast skipped (--no-podcast) ──")
+            return
+        try:
+            log("── Step 7b: Generating podcast audio ──")
+            mp3, chap_json = generate_podcast(enriched_data, as_of, OUTPUT_DIR, log=log)
+            podcast_result.append((mp3, chap_json))
+            log(f"  Podcast generated: {mp3.name}")
+        except Exception as e:
+            podcast_error.append(e)
+            log(f"  WARNING: podcast generation failed: {e}")
+
+    t_html = threading.Thread(target=_gen_html)
+    t_pod  = threading.Thread(target=_gen_podcast)
+    t_html.start()
+    t_pod.start()
+    t_html.join()
+    t_pod.join()
+
+    if html_error:
+        raise html_error[0]
+
+    html = html_result[0]
+
+    # --- Step 8: Save ---
+    log("── Step 8: Saving ──")
+    html_path = save_html(html, as_of)
+    log(f"  Saved HTML: {html_path}")
+
+    out_paths = [html_path, json_path]
+    if podcast_result:
+        mp3_path, chap_path = podcast_result[0]
+        out_paths.extend([mp3_path, chap_path])
 
     if args.dry_run:
         call_count, total_duration = llm_stats()
         log(f"LLM calls: {call_count}  total time: {total_duration:.3f}s")
         log("")
         log("Dry run complete — skipping git commit and push.")
-        log(f"Preview: open {out_path}")
+        log(f"Preview: open {html_path}")
         _stop_models(log)
         return
 
-    # --- Step 8: Commit and push ---
+    # --- Step 9: Commit and push ---
     log("")
-    log("── Step 8: Committing and pushing ──")
-    commit_and_push(out_path, as_of, log=log)
+    log("── Step 9: Committing and pushing ──")
+    commit_and_push(out_paths, as_of, log=log)
 
     call_count, total_duration = llm_stats()
     log(f"LLM calls: {call_count}  total time: {total_duration:.3f}s")
 
-    # --- Step 9: Release Ollama models ---
+    # --- Step 10: Release Ollama models ---
     _stop_models(log)
     log("Done.")
 
