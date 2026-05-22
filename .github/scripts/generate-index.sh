@@ -33,6 +33,9 @@ generate_index() {
     fname=$(basename "$f")
     [[ "$fname" == favicon.* ]] && continue
 
+    # Skip non-HTML files and directories
+    if [[ ! -d "$f" ]] && [[ "$fname" != *.html ]]; then continue; fi
+
     # Try to extract date in YYYY-MM-DD format from filename
     if [[ "$fname" =~ ([0-9]{4})-([0-9]{2})-([0-9]{2}) ]]; then
       year="${BASH_REMATCH[1]}"
