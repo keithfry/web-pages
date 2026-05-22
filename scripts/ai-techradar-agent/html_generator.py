@@ -128,8 +128,10 @@ def _card(item: dict, extra_class: str = "") -> str:
             tags_html = f'\n    <div class="tags">{tag_spans}</div>'
 
     data_tags = f' data-tags="{tag_keys}"' if tag_keys else ""
+    chapter_offset = item.get("chapter_start_seconds")
+    data_chapter = f' data-chapter-offset="{chapter_offset}"' if chapter_offset is not None else ""
     return (
-        f'  <div class="{cls}"{data_tags}>\n'
+        f'  <div class="{cls}"{data_tags}{data_chapter}>\n'
         f'    <div class="via">{via}</div>\n'
         f"    {title_block}\n"
         f"    <p>{summary}</p>{tags_html}\n"

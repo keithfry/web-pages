@@ -251,3 +251,71 @@ def deduplicate(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
                 to_drop.add(i)
 
     return [item for i, item in enumerate(items) if i not in to_drop]
+
+
+def rank_items(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
+    """Rank items by AI/robotics relevance and newsworthiness, 1 = most important.
+
+    Returns a new list sorted by rank with a 'rank' field added to each item.
+    Falls back to original order if LLM response cannot be parsed.
+    """
+    if not items:
+        return []
+
+    index_lines = "\n".join(
+        f"{i}: {item['title']}" for i, item in enumerate(items)
+    )
+    prompt = (
+        "You are an editor ranking AI and robotics news items by importance and interest "
+        "for a daily listener. Rank the following items from most to least important. "
+        "Consider: breadth of impact, novelty, practical significance for AI practitioners.\n\n"
+        "Return a JSON object with key 'ranked' — a list of original indices in order "
+        "from most to least important. Include every index exactly once.\n\n"
+        f"Items:\n{index_lines}\n\n"
+        'Example response: {"ranked": [3, 0, 2, 1]}'
+    )
+    raw = _chat(prompt, model, json_mode=True)
+    try:
+        order: list[int] = json.loads(_extract_json(raw)).get("ranked", [])
+        order = [int(x) for x in order]
+        if sorted(order) != list(range(len(items))):
+            raise ValueError(f"Bad ranking: {order}")
+        ranked = []
+        for rank, orig_idx in enumerate(order, 1):
+            item = dict(items[orig_idx])
+            item["rank"] = rank
+            ranked.append(item)
+        return ranked
+    except (json.JSONDecodeError, AttributeError, ValueError) as e:
+        print(f"[warn] rank_items() failed ({e}), using original order", file=sys.stderr)
+        return [dict(item, rank=i + 1) for i, item in enumerate(items)]
+
+
+def generate_audio_script(item: dict, model: str = SUMMARIZE_MODEL) -> str:
+    """Generate a ~70-word spoken-word script for a single podcast segment."""
+    prompt = (
+        "Write a spoken-word podcast segment about the following AI/tech news item. "
+        "Write as if speaking naturally to a listener — conversational, engaging, specific. "
+        "No bullet points. No markdown. No URLs. No 'click here' or 'read more'. "
+        "Target: approximately 70 words (about 30 seconds at normal speech pace).\n\n"
+        f"Title: {item.get('title', '')}\n"
+        f"Summary: {item.get('summary', '')}\n\n"
+        "Spoken segment:"
+    )
+    return _chat(prompt, model).strip()
+
+
+def generate_intro_script(items: list[dict], date: "datetime", model: str = SUMMARIZE_MODEL) -> str:
+    """Generate a podcast intro mentioning date, item count, and top-3 topics."""
+    date_str = f"{date.strftime('%B')} {date.day}, {date.year}"
+    top3 = [item["title"] for item in items[:3]]
+    top3_str = "\n".join(f"- {t}" for t in top3)
+    prompt = (
+        f"Write a short podcast intro (under 45 words). "
+        f"Date: {date_str}. Total items: {len(items)}. "
+        f"Mention up to 3 top stories by topic (not exact title). "
+        f"Sound natural and welcoming. No markdown. End naturally, don't say 'let's get started'.\n\n"
+        f"Top stories:\n{top3_str}\n\n"
+        "Intro:"
+    )
+    return _chat(prompt, model).strip()

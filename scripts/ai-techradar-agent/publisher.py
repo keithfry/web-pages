@@ -1,5 +1,6 @@
 """Write the HTML digest to the repo and commit + push it."""
 
+import json
 import subprocess
 from datetime import datetime
 from pathlib import Path
@@ -13,6 +14,15 @@ def save_html(html: str, date: datetime) -> Path:
     filename = f"ai-radar-{date.strftime('%Y-%m-%d')}.html"
     out_path = OUTPUT_DIR / filename
     out_path.write_text(html, encoding="utf-8")
+    return out_path
+
+
+def save_json(data: dict, date: datetime) -> Path:
+    """Write enriched JSON to techradar/AI/ai-radar-YYYY-MM-DD.json."""
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    filename = f"ai-radar-{date.strftime('%Y-%m-%d')}.json"
+    out_path = OUTPUT_DIR / filename
+    out_path.write_text(json.dumps(data, indent=2, default=str), encoding="utf-8")
     return out_path
 
 
@@ -31,19 +41,27 @@ def _run(
     return result
 
 
-def commit_and_push(out_path: Path, date: datetime, log=print) -> None:
-    """git pull --rebase, add, commit, push."""
-    rel_path = out_path.relative_to(REPO_ROOT)
+def commit_and_push(out_paths: Path | list[Path], date: datetime, log=print) -> None:
+    """git pull --rebase, add all out_paths, commit, push."""
+    if isinstance(out_paths, Path):
+        out_paths = [out_paths]
+
+    if not out_paths:
+        log("  no paths to commit, skipping")
+        return
+
     commit_msg = f"Add AI radar for {date.strftime('%Y-%m-%d')}"
 
-    # Remove stale lock file if present
     lock = REPO_ROOT / ".git" / "index.lock"
     if lock.exists():
         lock.unlink()
         log("  removed stale .git/index.lock")
 
     _run(["git", "-C", str(REPO_ROOT), "pull", "--rebase", "--autostash"], log=log)
-    _run(["git", "-C", str(REPO_ROOT), "add", str(rel_path)], log=log)
+
+    for path in out_paths:
+        rel = path.relative_to(REPO_ROOT)
+        _run(["git", "-C", str(REPO_ROOT), "add", str(rel)], log=log)
 
     result = _run(
         [
