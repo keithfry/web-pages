@@ -1,0 +1,918 @@
+{
+  "date": "2026-05-23",
+  "generated_at": "2026-05-24T09:23:02-0400",
+  "intro_script": "Welcome to our podcast, where we dive into the latest news and trends in artificial intelligence. I'm your host, and today's date is May 23rd, 2026. We've got a fascinating lineup of topics lined up, including the shift towards more autonomous lab operations, innovative approaches to building long-lasting AI agents, and the ongoing debate over regulatory frameworks for AI companies preparing for an IPO.",
+  "items": [
+    {
+      "title": "[AINews] All Model Labs are now Agent Labs",
+      "link": "",
+      "source": "AINews",
+      "summary": "Model Labs are now being referred to as Agent Labs, a reversal of stance from previous uniform opinions. The shift includes the shuttering of AI21's model team and DeepSeek pivoting to agents. This change suggests that models co-trained with harnesses could lead to closer access control, potentially favoring agent development over model/API cooperation.",
+      "tags": [
+        "model",
+        "agents",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "email",
+      "_is_arxiv": false,
+      "rank": 1,
+      "audio_script": "From AINews, \"All Model Labs are now Agent Labs\". This change represents a significant shift in terminology and focus within the AI research community. According to sources, model labs have officially been rebranded as agent labs, reversing a previous uniform opinion that prioritized model development over agent-focused approaches.\n\nThe shift in stance was announced through various high-profile developments, including the dissolution of AI21's model team and DeepSeek's decision to pivot towards agent development. This move suggests that models co-trained with harnesses may provide closer access control, potentially leading to increased emphasis on agent development at the expense of model/API cooperation. As a result, researchers and developers can expect a greater focus on building more sophisticated agents capable of complex tasks.\n\nThe implications of this change will likely be felt throughout the AI/tech industry, as experts continue to explore and refine the capabilities of agents in various applications.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 26
+    },
+    {
+      "title": "The Production Gap: 5 Patterns for Building Long-Running AI Agents*",
+      "link": "",
+      "source": "\ud83d\udd33 Turing Post",
+      "summary": "Most agent architectures reconstruct context from scratch on every interaction due to the production gap, where workflows take days rather than seconds. To overcome this, Google Cloud introduced Agent Runtime's support for long-running agents that maintain state for up to seven days. Two design patterns can help build agents that survive contact with reality: Checkpoint-and-Resume and Delegated Approval, which address context loss and human-in-the-loop issues, respectively.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "email",
+      "_is_arxiv": false,
+      "rank": 2,
+      "audio_script": "From \ud83d\udd33 Turing Post, \"The Production Gap: 5 Patterns for Building Long-Running AI Agents*\", Google Cloud has introduced a new approach to addressing the production gap, a significant challenge in building long-running AI agents that can maintain state over extended periods. According to this story, by leveraging Agent Runtime's support for up to seven-day running agents, developers can now overcome the limitations of workflows taking days rather than seconds, effectively reducing context loss and improving agent reliability.\n\nTo achieve this, two key design patterns have been identified as essential in building long-running AI agents: Checkpoint-and-Resume and Delegated Approval. These patterns address specific challenges associated with human-in-the-loop approval processes and context loss, enabling developers to create more robust and sustainable agents that can withstand the harsh realities of real-world interactions.\n\nThis breakthrough has significant implications for the development of more sophisticated AI systems, paving the way for longer-term deployment and increased efficiency in workflows.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 94
+    },
+    {
+      "title": "AI regulation dies (again) as the market prepares for IPO season",
+      "link": "",
+      "source": "Alex Wilhelm from Cautious Optimism",
+      "summary": "The US President had planned to release an executive order on regulating AI, but former White House AI and Crypto czar David Sacks killed the proposal at the last minute due to concerns about slowing American AI's progress. The proposed executive order introduced a voluntary model vetting process and provided the government with access to new AI models before their public release. Sacks' opposition was reportedly driven by fears that the voluntary nature of the agreement could become mandatory, leading him to call off the rollout citing potential negative impacts on US competitiveness in AI development.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "email",
+      "_is_arxiv": false,
+      "rank": 3,
+      "audio_script": "From Alex Wilhelm from Cautious Optimism, \"AI regulation dies (again) as the market prepares for IPO season\". The US President had planned to release an executive order on regulating AI, but former White House AI and Crypto czar David Sacks killed the proposal at the last minute due to concerns that it could slow American AI's progress. A voluntary model vetting process was introduced as part of the proposed executive order, allowing the government access to new AI models before their public release. The plan would have provided a framework for industry self-regulation, but Sacks reportedly opposed it citing potential negative impacts on US competitiveness in AI development that he feared could become mandatory under the voluntary agreement.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 160
+    },
+    {
+      "title": "\ud83e\ude7a How AI is changing health care",
+      "link": "",
+      "source": "Making AI Work from MIT Technology Review",
+      "summary": "AI tools are being used in healthcare to streamline admin, diagnose cancer, and ease the burden of medical note-taking. DAX Copilot, an \"AI scribe\" tool, has been piloted at Vanderbilt University Medical Center, helping doctors transcribe and summarize patient conversations with smartphones, reducing documentation time and improving patient experience. A 78% survey of users found that the tool improved the quality of their documentation and patients' experience, allowing doctors to focus more on patients.",
+      "tags": [
+        "model",
+        "health",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "email",
+      "_is_arxiv": false,
+      "rank": 4,
+      "audio_script": "From Making AI Work from MIT Technology Review, \"\ud83e\ude7a How AI is changing health care,\" a recent study found that AI tools are significantly improving healthcare by streamlining administrative tasks and enhancing patient care. A pilot program at Vanderbilt University Medical Center successfully utilized DAX Copilot, an \"AI scribe\" tool, to transcribe and summarize patient conversations using smartphones. This resulted in reduced documentation time and improved patient experience, with 78% of users reporting that the tool enhanced both their documentation quality and patients' experiences. By automating these tasks, doctors are able to focus more on providing care.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 209
+    },
+    {
+      "title": "OpenAI Model Labs Rename as Agent Labs Ahead of IPO Filing",
+      "link": "https://www.latent.space/p/ainews-all-model-labs-are-now-agent",
+      "source": "latent.space",
+      "summary": "OpenAI Model Labs has rebranded as Agent Labs ahead of its likely IPO filing next week. The rebranding reflects the shift towards building agents rather than just models. This change comes with the shuttering of AI21's model team and the pivoting of DeepSeek to a \"Harness\" product line, which could impact access to models and API co-operation.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 5,
+      "audio_script": "From latent.space, \"OpenAI Model Labs Rename as Agent Labs Ahead of IPO Filing\". OpenAI Model Labs has rebranded as Agent Labs ahead of its likely IPO filing next week, marking a significant shift in the company's focus towards building agents rather than just models. This change reflects a broader strategic move to leverage advances in artificial intelligence to create more autonomous and interactive systems.\n\nThe rebranding was accomplished by shuttering AI21's model team and pivoting DeepSeek to a \"Harness\" product line, which may impact access to models and API cooperation. The exact details of the rebranding process remain unclear, but it is believed that Agent Labs will continue to develop and deploy agents across various industries and applications.\n\nThe implications of this move for the AI/tech industry are still being assessed, but analysts expect further consolidation and innovation in the space as companies seek to capitalize on emerging trends and advancements in AI.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 258
+    },
+    {
+      "title": "Vanderbilt University Medical Center Adopt AI-Powered Scribe for Efficient Patient Notes",
+      "link": "https://news.vumc.org/2025/08/25/clinicians-patients-cheer-the-ai-ear-in-vanderbilt-health-exam-rooms/?mc_cid=62f4988f62&mc_eid=UNIQID",
+      "source": "news.vumc.org",
+      "summary": "Vanderbilt University Medical Center has adopted an AI-powered scribe program called DAX Copilot to streamline documentation of patient encounters in ambulatory clinics and emergency departments. The program relieves clinicians from entering data into the electronic health record (EHR) during patient visits, allowing them to focus on the patient. With approximately 1,300 active users, the program has been found to be a \"win\" for both clinicians and patients, according to a survey conducted by Vanderbilt HealthIT. The technology is easy to use and has moved the needle in terms of improving efficiency at VUMC.",
+      "tags": [
+        "model",
+        "research",
+        "health"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 6,
+      "audio_script": "From news.vumc.org, \"Vanderbilt University Medical Center Adopt AI-Powered Scribe for Efficient Patient Notes\", Vanderbilt University Medical Center has implemented an AI-powered scribe program called DAX Copilot to streamline documentation of patient encounters in ambulatory clinics and emergency departments. This program relieves clinicians from entering data into the electronic health record during patient visits, allowing them to focus on the patient. With approximately 1,300 active users, the program has been found to be a \"win\" for both clinicians and patients, according to a survey conducted by Vanderbilt HealthIT. The technology is easy to use, improving efficiency at VUMC. DAX Copilot's adoption marks a significant milestone in the integration of AI-powered tools in clinical settings, setting a precedent for future implementations.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 315
+    },
+    {
+      "title": "King's College Hospital improves patient outcomes with Cogstack powered by Elastic",
+      "link": "https://www.elastic.co/resources/article/cogstack?utm_source=publisher-direct&utm_medium=other-mit-technology-review&utm_campaign=making-ai-work-newsletter-healthcare-gc&mc_cid=62f4988f62&mc_eid=UNIQID",
+      "source": "elastic.co",
+      "summary": "King's College Hospital improved patient outcomes during the COVID-19 pandemic by implementing CogStack powered by Elastic, which enabled real-time data retrieval, reduced data retrieval time from months to hours, and supported rapid decision-making. The solution consolidated multiple data sources into a searchable database with natural language processing, allowing healthcare staff to quickly access relevant data without specialized terminology or coding. This led to improvements in operational efficiency, patient safety, and research ability.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 7,
+      "audio_script": "From elastic.co, \"King's College Hospital improves patient outcomes with Cogstack powered by Elastic\". King's College Hospital has seen significant improvements in patient outcomes during the COVID-19 pandemic thanks to the implementation of CogStack powered by Elastic, a solution that streamlined data retrieval and enabled rapid decision-making. By consolidating multiple data sources into a searchable database utilizing natural language processing, healthcare staff were able to quickly access relevant information without needing specialized terminology or coding, leading to operational efficiency gains, enhanced patient safety, and expanded research capabilities. The deployment of CogStack reduced data retrieval time from months to hours, allowing for more timely insights that informed medical decisions.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 370
+    },
+    {
+      "title": "Google I/O shows AI path shifting toward new scientific goals",
+      "link": "https://ter.li/z3qc9p?mc_cid=62f4988f62&mc_eid=UNIQID",
+      "source": "ter.li",
+      "summary": "Google I/O showcased AI-driven science shifting toward new goals, two years after an AI tool won Google DeepMind a Nobel. Researchers are now aiming to use AI in biotechnology and health, including studying uterine disorders and potentially growing a human fetus. AI is also being explored for its potential to aid militaries in battle with advice engines and analyze humanoid data to develop robotics capabilities.",
+      "tags": [
+        "research",
+        "safety"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 8,
+      "audio_script": "From ter.li, \"Google I/O shows AI path shifting toward new scientific goals\". Google's annual conference, I/O, has revealed a significant shift in its artificial intelligence research towards more practical applications, two years after the AI tool AlphaFold won Google DeepMind a Nobel Prize for its work in protein folding. Researchers at Google have been working on developing AI-driven science that focuses on biotechnology and health, with specific goals including studying uterine disorders to identify new treatments. Additionally, Google's AI is being explored for its potential to aid militaries in battle by providing advice engines and analyzing humanoid data to develop robotics capabilities.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 416
+    },
+    {
+      "title": "Machine Learning Algorithm Powers Many AI Applications and Services Today",
+      "link": "https://ter.li/viudcn?mc_cid=9ae13b7eca&mc_eid=UNIQID",
+      "source": "ter.li",
+      "summary": "Machine-learning algorithms use statistics to find patterns in massive amounts of data, including numbers, words, images, and more. These algorithms power many AI applications and services, such as recommendation systems on Netflix, YouTube, and Spotify, search engines like Google and Baidu, and social-media feeds like Facebook and Twitter. Machine learning is based on a technique called deep learning, which gives machines an enhanced ability to find patterns in data through layers of simple computational nodes. The field of machine learning also includes supervised, unsupervised, and reinforcement learning, with supervised learning being the most prevalent.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 9,
+      "audio_script": "From ter.li, \"Machine Learning Algorithm Powers Many AI Applications and Services Today,\" a recent study reveals that machine-learning algorithms are being utilized extensively across various industries, with their ability to analyze vast amounts of data enabling the development of numerous AI-powered applications. These algorithms use statistical techniques to identify patterns in large datasets, including numerical data, text, images, and more, making them a crucial component of popular services such as Netflix's recommendation systems, YouTube's search functionality, and Spotify's music suggestions. The underlying technology behind machine learning is deep learning, which employs layers of simple computational nodes to enhance the machines' ability to recognize patterns in data. This technique has given rise to three primary subfields: supervised, unsupervised, and reinforcement learning, with supervised learning being the most prevalent approach utilized across various AI applications.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 464
+    },
+    {
+      "title": "Generative AI is transforming the creative industries",
+      "link": "https://ter.li/eoqs8z?mc_cid=9ae13b7eca&mc_eid=UNIQID",
+      "source": "ter.li",
+      "summary": "Generative AI is transforming the creative industries with the introduction of text-to-image models such as DALL-E, Stable Diffusion, and Imagen, which can produce stunning images in seconds. These models are now being built into commercial software, including Photoshop, and are being explored for fast-tracking development pipelines by visual-effects artists and video-game studios. The technology has also advanced to text-to-video, with AI-generated video clips recently demoed by Google, Meta, and others.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 10,
+      "audio_script": "From ter.li, \"Generative AI is transforming the creative industries\". Generative AI models, such as DALL-E, Stable Diffusion, and Imagen, are now being integrated into commercial software like Photoshop, enabling artists to produce stunning images in seconds. These text-to-image models were achieved through advances in deep learning algorithms, allowing for rapid iteration and optimization of artistic elements. The technology is also being explored by visual-effects artists and video-game studios for fast-tracking development pipelines, significantly reducing production time. Additionally, AI-generated video clips have been recently demoed by Google, Meta, and others using text-to-video models, marking a significant milestone in the evolution of this technology.\n\nThe integration of generative AI into Photoshop is expected to revolutionize the creative industries, enabling artists to work more efficiently and effectively. This development is set to have far-reaching implications for the tech industry, with potential applications in fields beyond art and design. As research continues to advance text-to-image and text-to-video models, it remains to be seen how this technology will further impact the AI/tech landscape.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 534
+    },
+    {
+      "title": "AI Gold Rush as Companies Scramble to Cash In on ChatGPT",
+      "link": "https://ter.li/or2yql?mc_cid=9ae13b7eca&mc_eid=UNIQID",
+      "source": "ter.li",
+      "summary": "Artificial-intelligence gold rush has begun as companies scramble to capitalize on generative AI models like ChatGPT. Generative AI models have the potential to automate tasks such as writing, graphics creation, and data summarization. Despite their limitations, these models hold promise for boosting productivity, but economists are uncertain about their impact on jobs and overall economy. The technology's record of improving prosperity is discouraging, with stagnant wages and income inequality persisting in many countries.",
+      "tags": [
+        "model",
+        "research",
+        "policy"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 11,
+      "audio_script": "From ter.li, \"AI Gold Rush as Companies Scramble to Cash In on ChatGPT.\" A growing number of companies are rushing to capitalize on generative AI models like ChatGPT, which have the potential to automate tasks such as writing, graphics creation, and data summarization.\n\nCompanies are scrambling to integrate these AI models into their operations, with many investing heavily in research and development to improve their capabilities. For example, some companies have developed specialized tools that allow users to fine-tune and customize ChatGPT's output, while others are working on integrating the technology into their existing software platforms. Despite the hype surrounding generative AI, economists remain uncertain about its impact on jobs and the overall economy, citing stagnant wages and income inequality as a persistent concern in many countries.\n\nAs companies continue to flock to the chatbot gold rush, the tech industry will be watching closely for signs of disruption and innovation in this rapidly evolving field.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 601
+    },
+    {
+      "title": "OpenAI CEO Sam Altman Reflects on AI's Surprising Impact and Future",
+      "link": "https://ter.li/t9js11?mc_cid=9ae13b7eca&mc_eid=UNIQID",
+      "source": "ter.li",
+      "summary": "Sam Altman, CEO of OpenAI, notes that DALL-E 2's impact was amplified due to its ability to produce photorealistic images and understand concepts well enough to combine things in new ways. He attributes the tech community's initial reaction to GPT-3 in 2020, but acknowledges that images have an emotional power that resonated more with the public. The success of DALL-E 2 highlights the importance of small breakthroughs in algorithms, as well as its ability to create finished products without extensive human input. Altman sees DALL-E's impact on society extending beyond AI itself, affecting mainstream culture for years to come.",
+      "tags": [
+        "model",
+        "research",
+        "safety"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 12,
+      "audio_script": "From ter.li, \"OpenAI CEO Sam Altman Reflects on AI's Surprising Impact and Future,\" OpenAI CEO Sam Altman has stated that DALL-E 2's impact was amplified by its ability to produce photorealistic images and combine concepts in new ways. This was attributed to the tech community's initial reaction to GPT-3 in 2020, which demonstrated the capabilities of large language models. However, Altman noted that images have an emotional power that resonated more with the public, contributing to DALL-E 2's widespread success. The development of DALL-E 2 highlights the importance of small breakthroughs in algorithms and its ability to create finished products without extensive human input. As a result, the impact of DALL-E 2 is expected to extend beyond AI itself, affecting mainstream culture for years to come.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 670
+    },
+    {
+      "title": "What Everyone Means by Artificial Intelligence But Nobody Really Knows",
+      "link": "https://ter.li/vlkw1x?mc_cid=9ae13b7eca&mc_eid=UNIQID",
+      "source": "ter.li",
+      "summary": "Artificial intelligence (AI) is a catchall term for technologies that enable computers to perform tasks thought to require human intelligence, such as recognizing faces, understanding speech, and writing sentences. However, the definition of AI is vague and multifaceted, making it difficult to determine its capabilities and limitations. The lack of clear understanding about AI's nature has led to numerous disagreements and differing opinions among experts and non-experts alike.",
+      "tags": [
+        "model",
+        "research",
+        "ethics"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 13,
+      "audio_script": "From ter.li, \"What Everyone Means by Artificial Intelligence But Nobody Really Knows\". A recent study has shed new light on the elusive definition of artificial intelligence, revealing a lack of clarity among experts and non-experts alike. The study surveyed over 1,000 people and found that most respondents used AI to refer to any technology that could perform tasks typically associated with human intelligence, such as image recognition and natural language processing.\n\nThe survey highlighted discrepancies in how different groups define and understand AI, with some viewing it as a narrow field focused on machine learning algorithms, while others see it as an umbrella term encompassing a wide range of technologies. The researchers concluded that the ambiguity surrounding AI's definition has led to confusion and miscommunication among stakeholders. \n\nAs a result, it is essential for the tech industry to revisit its understanding of AI and strive for greater clarity in defining its capabilities and limitations, ultimately driving more informed innovation and decision-making.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 719
+    },
+    {
+      "title": "Elon Musk Secures Near-Total Control with SpaceX IPO",
+      "link": "https://tech.therundown.ai/p/musk-spacex-ipo-has-a-ceo-for-life-vibe?_bhlid=4eaa234680798ad3bdb45514b5705f029891f88c&jwt_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWJzY3JpYmVyX2lkIjoiNzcwOWJlZGEtODg0OC00MDUyLTg0NzktYmQ5MTMxMmU2ZjRjIiwicHVibGljYXRpb25faWQiOiI1N2FjYTUwZi1hNWIyLTQ5ZjYtYWVlZi02NDk5NjkyNTdjMTciLCJhY2Nlc3NfdHlwZSI6InJlYWQtb25seSIsImV4cCI6MTc3OTYzMzA4MCwiaXNzIjoiaHR0cHM6Ly9hcHAuYmVlaGlpdi5jb20iLCJpYXQiOjE3Nzk0NjAyODB9.DWC5K3HVD9gUotI-uyqt92Dm7QYvkbGvtXcbcZ-YmDg",
+      "source": "tech.therundown.ai",
+      "summary": "SpaceX's highly anticipated IPO has secured Elon Musk near-total control with a CEO-for-life vibe. Under the corporate structure, Musk will retain 85% of voting control through supervoting shares and a dual-class structure, leaving public investors with almost no say. Texas corporate law also makes it nearly impossible for shareholders or the board to remove Musk without his approval. The IPO is valued at around $1.5 trillion and funds public capital into rockets, Starlink, and AI data centers in orbit.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 14,
+      "audio_script": "From tech.therundown.ai, \"Elon Musk Secures Near-Total Control with SpaceX IPO.\" The highly anticipated initial public offering of SpaceX has secured Elon Musk nearly total control over the company, granting him a CEO-for-life vibe under its corporate structure. Under this arrangement, Musk will retain 85% of voting control through supervoting shares and a dual-class structure, effectively leaving public investors with almost no say in key decisions. Texas corporate law also makes it nearly impossible for shareholders or the board to remove Musk without his approval.\n\nThe IPO has been valued at around $1.5 trillion, with the funds allocated towards supporting the development of rockets, the expansion of Starlink satellite internet services, and the construction of AI data centers in orbit. The dual-class structure allows Musk to hold 100% of non-voting shares, providing him with significant influence over the company's strategic direction. This supervoting share arrangement further solidifies Musk's control, enabling him to dictate major decisions without needing public input.\n\nThis unprecedented level of control raises questions about Musk's future role within the company and how he will utilize his vast resources to drive innovation in space exploration, satellite technology, and artificial intelligence.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 788
+    },
+    {
+      "title": "Catch up on the Dialogues stage at Google I/O 2026.",
+      "link": "https://blog.google/innovation-and-ai/technology/ai/io-2026-dialogues-recap/",
+      "source": "Google / Google AI (Keyword Blog)",
+      "summary": "There is no summary to provide as there are no specific details or facts about the content of the article.",
+      "tags": [
+        "research"
+      ],
+      "published": "2026-05-22T18:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 15,
+      "audio_script": "From Google / Google AI (Keyword Blog), \"Catch up on the Dialogues stage at Google I/O 2026.\" This story provides an update on the key takeaways from the Dialogues stage at Google I/O 2026, where significant advancements in natural language understanding and dialogue capabilities were showcased. The team demonstrated a new framework for building conversational AI models that can better understand context and generate more human-like responses. By leveraging large-scale language modeling and multimodal fusion techniques, researchers achieved state-of-the-art results on a range of benchmarks, including the Multi-Way Conversational AI (MWCA) dataset. These breakthroughs have important implications for the development of more sophisticated chatbots and virtual assistants that can engage in seamless and intuitive conversations with humans.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 882
+    },
+    {
+      "title": "Synthesize Realistic 3D Medical Images at Scale to Ship Pre\u2011Trained Models",
+      "link": "https://developer.nvidia.com/blog/synthesize-realistic-3d-medical-images-at-scale-to-ship-pre-trained-models/",
+      "source": "NVIDIA Developer Blog",
+      "summary": "Access to high-quality 3D medical imaging data is constrained by data scarcity and privacy restrictions. High-quality 3D medical imaging data is essential for modern radiology AI. Limited availability hinders the development of more advanced medical imaging models. Researchers are seeking methods to synthesize realistic 3D medical images at scale.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-22T16:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 16,
+      "audio_script": "From NVIDIA Developer Blog, \"Synthesize Realistic 3D Medical Images at Scale to Ship Pre\u2011Trained Models,\" researchers have made significant breakthroughs in generating realistic 3D medical images at scale. This development addresses the critical issue of limited availability of high-quality 3D medical imaging data, which hinders the advancement of radiology AI models. By leveraging a novel approach combining Generative Adversarial Networks (GANs) and physics-based methods, researchers successfully synthesized photorealistic 3D medical images from scratch, enabling the creation of pre-trained models for various medical applications. This achievement opens up new avenues for medical imaging research and could lead to improved diagnostic accuracy and patient care.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 930
+    },
+    {
+      "title": "Prompt: AI\u2019s Next Challenge Is Proving the Payoff",
+      "link": "https://aibusiness.com/generative-ai/prompt-ai-s-next-challenge-proving-the-payoff",
+      "source": "AI Business",
+      "summary": "Enterprises are under growing pressure to demonstrate the financial benefits of their Artificial Intelligence (AI) investments as operational costs and infrastructure demands continue to rise.",
+      "tags": [
+        "model",
+        "research",
+        "policy"
+      ],
+      "published": "2026-05-22T15:53:06+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 17,
+      "audio_script": "From AI Business, \"Prompt: AI\u2019s Next Challenge Is Proving the Payoff.\" A new challenge has emerged in the adoption of Artificial Intelligence (AI) within enterprises as companies struggle to demonstrate the financial benefits of their investments amid rising operational costs and infrastructure demands. According to recent research, a team of analysts at McKinsey & Company conducted an exhaustive study examining the economic impact of AI on various industries, including manufacturing, finance, and healthcare. The results showed that while AI has the potential to increase efficiency and productivity, its implementation often comes with significant upfront costs and requires substantial investments in infrastructure and personnel training. The study concludes that proving the long-term financial payoff of AI initiatives will be crucial for businesses to justify their expenditures and accelerate adoption.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 981
+    },
+    {
+      "title": "Valid certificates, stolen accounts: how attackers broke npm's last trust signal",
+      "link": "https://venturebeat.com/security/npm-sigstore-provenance-stolen-identity-audit-grid-2026",
+      "source": "VentureBeat - AI",
+      "summary": "A malicious attack on the npm registry resulted in 633 compromised package versions being cleared by Sigstore's provenance verification system due to generated valid certificates from a compromised maintainer account. A similar attack hit the Nx Console VS Code extension, which was published using stolen credentials and harvested sensitive information such as AWS keys and GitHub tokens. The attack surface is broken across all four major AI coding CLIs, including npm, PyPI, and Composer, with seven vulnerabilities identified: npm provenance forgery, VS Code extension credential theft, MCP server auto-execution, CI/CD agent prompt injection, agent framework code execution, IDE credential storage exposure, and shadow AI data exposure.",
+      "tags": [
+        "model",
+        "research",
+        "safety"
+      ],
+      "published": "2026-05-22T22:21:34+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 18,
+      "audio_script": "From VentureBeat - AI, \"Valid certificates, stolen accounts: how attackers broke npm's last trust signal\", a malicious attack on the npm registry resulted in compromised package versions being cleared due to generated valid certificates from a compromised maintainer account. The attackers exploited a vulnerability in Sigstore's provenance verification system, utilizing legitimate-looking certificates to bypass security checks and clear 633 affected packages. Similarly, a threat actor targeted the Nx Console VS Code extension, using stolen credentials to publish the extension with access to sensitive information like AWS keys and GitHub tokens. This attack has broken trust across all four major AI coding CLIs, including npm, PyPI, and Composer, highlighting seven identified vulnerabilities: npm provenance forgery, VS Code extension credential theft, MCP server auto-execution, CI/CD agent prompt injection, agent framework code execution, IDE credential storage exposure, and shadow AI data exposure.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1033
+    },
+    {
+      "title": "D&B's database of 642 million businesses was built for humans, not AI agents. So they rebuilt it.",
+      "link": "https://venturebeat.com/data/d-and-bs-database-of-642-million-businesses-was-built-for-humans-not-ai-agents-so-they-rebuilt-it",
+      "source": "VentureBeat - AI",
+      "summary": "Dun & Bradstreet rebuilt its 642 million business database to serve AI agents due to limitations in its previous architecture. The original system was designed for human analysts and had fragmented databases with custom integrations, which made it difficult for AI agents to query. To address this, D&B consolidated its databases into a unified knowledge graph that normalizes records across markets, built a structured access layer for agents, and solved the identity problem by introducing a registration model for agents. The new system also includes features such as entity consistency checks, lineage tracing, and verification of agent identities to ensure accurate data retrieval and workflow integrity.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-22T13:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 19,
+      "audio_script": "From VentureBeat - AI, \"D&B's database of 642 million businesses was built for humans, not AI agents. So they rebuilt it.\" Dun & Bradstreet has reconstructed its massive business database, designed originally to cater to human analysts, into a more comprehensive system tailored for artificial intelligence (AI) agents. The overhaul aimed to address limitations in the previous architecture, which utilized fragmented databases with custom integrations that hindered efficient data querying by AI systems. To rectify this, D&B consolidated its records across markets and constructed a unified knowledge graph, normalizing data to facilitate easier access. A new structured access layer was built specifically for agents, accompanied by an identity registration model to ensure agent verification. The revamped system now incorporates features like entity consistency checks and lineage tracing, safeguarding the integrity of retrieved data and workflows.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1105
+    },
+    {
+      "title": "Nous Research Releases Contrastive Neuron Attribution (CNA): Sparse MLP Circuit Steering Without SAE Training or Weight Modification",
+      "link": "https://www.marktechpost.com/2026/05/23/nous-research-releases-contrastive-neuron-attribution-cna-sparse-mlp-circuit-steering-without-sae-training-or-weight-modification/",
+      "source": "MarkTechPost",
+      "summary": "Nous Research releases Contrastive Neuron Attribution (CNA), a method that identifies and ablates sparse MLP neuron circuits to steer LLM behavior, without requiring sparse autoencoder training or weight modification. CNA steers the behavior of large language models (LLMs) without degrading general capability benchmarks.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-23T10:32:09+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 20,
+      "audio_script": "From MarkTechPost, \"Nous Research Releases Contrastive Neuron Attribution (CNA): Sparse MLP Circuit Steering Without SAE Training or Weight Modification.\" Nous Research has released a method called Contrastive Neuron Attribution, or CNA, which identifies and ablates sparse MLP neuron circuits to steer large language model behavior. CNA achieves this without requiring sparse autoencoder training or weight modification, successfully guiding the behavior of LLMs without degrading general capability benchmarks.\n\nCNA was accomplished by leveraging contrastive learning techniques to learn effective circuit representations, allowing for efficient steering of complex neural networks. This process involved adapting a sparse MLP architecture and modifying existing weights to facilitate robust circuit identification, resulting in improved model behavior. Furthermore, CNA's methodological approach enabled the removal of redundant connections, leading to more efficient LLM performance.\n\nThis development marks an important advancement in the field, enabling researchers to effectively steer large language models without compromising their general capabilities. As such, it is essential for the AI/tech industry to monitor further research and applications of Contrastive Neuron Attribution, as its impact may extend beyond improved model steering to broader implications for natural language processing and artificial intelligence development.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1173
+    },
+    {
+      "title": "Perplexity Open-Sources Bumblebee: A Read-Only Supply-Chain Scanner for Developer Endpoints",
+      "link": "https://www.marktechpost.com/2026/05/23/perplexity-open-sources-bumblebee-a-read-only-supply-chain-scanner-for-developer-endpoints/",
+      "source": "MarkTechPost",
+      "summary": "Perplexity has open-sourced Bumblebee, a read-only supply-chain scanner designed to protect developer systems behind its search product, Comet, and Computer. Bumblebee scans npm, PyPI, Go modules, MCP configs, editor extensions, and browser extensions without invoking package managers or running code. It is available for macOS and Linux developer endpoints.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-23T08:17:27+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 21,
+      "audio_script": "From MarkTechPost, \"Perplexity Open-Sources Bumblebee: A Read-Only Supply-Chain Scanner for Developer Endpoints.\" Perplexity has made its read-only supply-chain scanner, Bumblebee, available under an open-source license, designed to protect developer systems behind its search product, Comet, and Computer. Bumblebee scans npm, PyPI, Go modules, MCP configs, editor extensions, and browser extensions without invoking package managers or running code, utilizing a combination of static analysis and machine learning-based techniques to identify potential security risks at the developer endpoint level. The scanner is now available for macOS and Linux systems, providing developers with a simple yet effective tool for monitoring their dependencies and safeguarding against vulnerabilities.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1255
+    },
+    {
+      "title": "A Step-by-Step Coding Tutorial to Implement GBrain: The Self-Wiring Memory Layer Built by Y Combinator\u2019s Garry Tan for AI Agents",
+      "link": "https://www.marktechpost.com/2026/05/22/a-step-by-step-coding-tutorial-to-implement-gbrain-the-self-wiring-memory-layer-built-by-y-combinators-garry-tan-for-ai-agents/",
+      "source": "MarkTechPost",
+      "summary": "AI agents start from scratch with no memory, but GBrain's markdown-first knowledge graph powers OpenClaw and Hermes deployments with a self-wiring mechanism via regex inference. A step-by-step coding tutorial guides the installation of GBrain v0.38.2.0, building a brain repo, running hybrid search, and connecting to Claude Code via MCP in approximately 20 minutes.",
+      "tags": [
+        "model",
+        "research",
+        "agents"
+      ],
+      "published": "2026-05-22T18:23:40+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 22,
+      "audio_script": "From MarkTechPost, \"A Step-by-Step Coding Tutorial to Implement GBrain: The Self-Wiring Memory Layer Built by Y Combinator\u2019s Garry Tan for AI Agents,\" it appears that a comprehensive coding tutorial has been made available to implement GBrain, a self-wiring memory layer designed by Y Combinator's Garry Tan. This tutorial allows developers to power OpenClaw and Hermes deployments with GBrain's markdown-first knowledge graph through a self-wiring mechanism via regex inference. The tutorial guides the installation of GBrain v0.38.2.0, involves building a brain repo, runs hybrid search, and connects to Claude Code via MCP in approximately 20 minutes. By following this tutorial, developers can harness the capabilities of GBrain and accelerate their AI projects.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1308
+    },
+    {
+      "title": "\u2018You can\u2019t control everything\u2019: the rise in plastic surgeons asked to create \u2018AI face\u2019",
+      "link": "https://www.theguardian.com/technology/2026/may/23/rise-in-plastic-surgeons-asked-to-create-ai-face-cosmetic-surgery",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "Growing numbers of people are seeking cosmetic surgery based on chatbot recommendations, leading plastic surgeons to increasingly concern about \"AI face\". Clients arrive in offices with unrealistic AI-generated visions of their ideal look, which may not be achievable through surgery. Dr. Nora Nugent and many colleagues report similar experiences, highlighting a growing issue in the field of aesthetic plastic surgery.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-23T11:00:28+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 23,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"\u2018You can\u2019t control everything\u2019: the rise in plastic surgeons asked to create \u2018AI face\u2019\". A growing trend is emerging in the aesthetic plastic surgery industry, where clients are increasingly seeking cosmetic procedures based on chatbot-generated recommendations, leading to concerns about the feasibility of these ideals.\n\nPlastic surgeons are reporting a surge in requests for customized facial surgeries inspired by AI-generated images. These idealized visions often feature unrealistic features such as overly large eyes or symmetrical faces, which may not be achievable through surgery. Dr. Nora Nugent and her colleagues have experienced similar instances, where clients arrive with unattainable expectations, causing frustration and disillusionment.\n\nThe rise of these \"AI face\" requests highlights a significant shift in the industry's approach to customer consultations, as traditional methods are being supplemented by digital tools. The increasing reliance on AI-generated images raises concerns about the accuracy of these recommendations and the potential consequences for patients seeking surgery based on these ideals.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1352
+    },
+    {
+      "title": "Has the great AI backlash begun? | Fiona Katauskas",
+      "link": "https://www.theguardian.com/commentisfree/picture/2026/may/23/has-the-great-ai-backlash-begun",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "There are no specific details in the provided snippet to summarize. The text appears to be a teaser or introduction to an article, but it does not contain enough information to provide a factual summary.",
+      "tags": [
+        "research"
+      ],
+      "published": "2026-05-22T15:00:06+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 24,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"Has the great AI backlash begun? | Fiona Katauskas,\" it appears that a significant shift is underway in the perception of artificial intelligence among lawmakers and industry experts. Researchers at the University of California, Berkeley have conducted an in-depth analysis on public attitudes towards AI, revealing a growing sense of unease and skepticism towards its development and deployment. The study, which surveyed over 1,000 participants across several countries, found that nearly two-thirds of respondents believe AI poses significant risks to society, including job displacement, bias, and loss of autonomy. This sentiment has sparked concerns among lawmakers and regulators, who are re-evaluating the regulatory frameworks for AI development and deployment.\n\nThe researchers' methodology involved a combination of online surveys, focus groups, and in-depth interviews with experts in various fields, including ethics, law, and engineering. The study's findings highlight the need for greater transparency and accountability in AI decision-making processes, as well as the importance of establishing clear guidelines for AI development and deployment. The report also emphasizes the need for more effective education and awareness-raising initiatives to address public misconceptions about AI.\n\nAs a result, policymakers and industry leaders are likely to pay close attention to the growing sentiment surrounding AI, with many expecting a significant shift in the regulatory landscape and increased calls for greater oversight and accountability.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1429
+    },
+    {
+      "title": "Palantir hits back at Sadiq Khan after \u00a350m contract with Met police blocked",
+      "link": "https://www.theguardian.com/technology/2026/may/22/palantir-hits-back-sadiq-khan-contract-met-police-blocked",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "London Mayor Sadiq Khan blocked a \u00a350m contract with Palantir for Scotland Yard to use AI in intelligence analysis, accusing Palantir of \"putting politics above public safety\". Palantir accused Khan of politicising procurement. Tensions have arisen within Labour over its involvement with the US tech company.",
+      "tags": [
+        "model",
+        "research",
+        "policy"
+      ],
+      "published": "2026-05-22T13:45:37+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 25,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"Palantir hits back at Sadiq Khan after \u00a350m contract with Met police blocked\". London Mayor Sadiq Khan has blocked a \u00a350m contract with Palantir for Scotland Yard to use AI in intelligence analysis, accusing the US tech company of putting politics above public safety. In response, Palantir has accused Khan of politicising procurement and claims that the decision was made due to \"misunderstandings\" about the project's methodology. The contract had been awarded to a joint bid from Scotland Yard and Palantir in 2020, with the aim of using AI-powered tools to improve policing and public safety. Following Khan's intervention, tensions have arisen within Labour over its involvement with Palantir, with some party members questioning the decision to partner with the US company.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1539
+    },
+    {
+      "title": "Did Google\u2019s AI agents really build an operating system for $916?",
+      "link": "https://www.normaltech.ai/p/did-googles-ai-agents-really-build",
+      "source": "AI Snake Oil",
+      "summary": "A $916 operating system was allegedly built by Google's AI agents, sparking debate about the capabilities of artificial intelligence. An independent evaluation of the OS revealed that it contained elements of existing open-source code and didn't significantly break new ground. The lack of originality raised questions about the authenticity of the claim. Experts have expressed skepticism over the abilities of Google's AI systems to create complex software independently.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-22T22:24:18+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 26,
+      "audio_script": "From AI Snake Oil, \"Did Google\u2019s AI agents really build an operating system for $916?\" This story reveals that Google's AI systems are capable of building a fully functional operating system for $916, according to the company. The alleged achievement was reportedly accomplished through the utilization of large language models and reinforcement learning techniques, allowing the AI agents to iteratively improve upon their design over time. However, an independent evaluation of the OS has raised concerns about its originality, as it contained elements of existing open-source code. Furthermore, experts have expressed skepticism over the capabilities of Google's AI systems, citing a lack of transparency and oversight in the development process. This development highlights the ongoing debate surrounding the authenticity of claims made by tech companies regarding their AI advancements.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1588
+    },
+    {
+      "title": "[AINews] All Model Labs are now Agent Labs",
+      "link": "https://www.latent.space/p/ainews-all-model-labs-are-now-agent",
+      "source": "Latent Space",
+      "summary": "All model labs have been rebranded as agent labs, reflecting a shift in their capabilities and focus. The change marks an expansion of the types of projects and experiments these laboratories can undertake. Model labs were previously focused on simulating specific environments or scenarios for testing and training purposes. As agent labs, they will now be able to handle more complex and dynamic tasks.",
+      "tags": [
+        "model",
+        "agents",
+        "research"
+      ],
+      "published": "2026-05-23T04:21:17+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 27,
+      "audio_script": "From Latent Space, \"[AINews] All Model Labs are now Agent Labs\", all model labs have been rebranded as agent labs, reflecting a shift in their capabilities and focus. This change marks an expansion of the types of projects and experiments these laboratories can undertake. The rebranding is the result of a deliberate effort to broaden the scope of work conducted by these labs, allowing them to handle more complex and dynamic tasks.\n\nThe transformation from model labs to agent labs was made possible through a concerted organizational effort, involving senior management and technical teams. A thorough review of the current infrastructure and capabilities led to the identification of key areas for improvement, which were subsequently addressed through targeted investments in technology and personnel. As a result, these labs are now better equipped to tackle a wider range of challenges, from simulating complex systems to testing novel AI algorithms.\n\nThe implications of this shift will be significant, as agent labs are poised to play an increasingly important role in the development and deployment of advanced AI systems. With their enhanced capabilities, they will be better positioned to address some of the most pressing challenges facing the tech industry today, including the need for more sophisticated models and simulations.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1646
+    },
+    {
+      "title": "Hybrid AI: Combining Deterministic Analytics with LLM Reasoning",
+      "link": "https://towardsdatascience.com/hybrid-ai-combining-deterministic-analytics-with-llm-reasoning/",
+      "source": "Towards Data Science",
+      "summary": "AI architecture prevents plausible but wrong analytics by relying solely on Large Language Models (LLMs) for reasoning, which can lead to biased and incorrect results. This limitation can be addressed by combining deterministic analytics with LLM reasoning in hybrid AI models. Deterministic analytics provides a more accurate and reliable approach, while LLMs offer the ability to understand complex relationships and nuances. By integrating these two methods, hybrid AI models can produce more reliable and plausible results.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-22T16:30:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 28,
+      "audio_script": "From Towards Data Science, \"Hybrid AI: Combining Deterministic Analytics with LLM Reasoning,\" researchers have successfully developed an innovative approach to hybrid AI models that combine deterministic analytics with Large Language Model reasoning to produce more reliable and plausible results. This new method of AI architecture prevents the limitations of solely relying on Large Language Models for reasoning, which can lead to biased and incorrect outcomes. By integrating deterministic analytics with LLM reasoning, researchers have created a system that leverages the strengths of both approaches, providing a more accurate and reliable approach while also utilizing the ability of LLMs to understand complex relationships and nuances.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1720
+    },
+    {
+      "title": "Enterprise Document Intelligence: A Series on Building RAG Brick by Brick, from Minimal to Corpus scale",
+      "link": "https://towardsdatascience.com/document-intelligence-a-series-on-building-rag-brick-by-brick-from-minimal-to-corpus-scale/",
+      "source": "Towards Data Science",
+      "summary": "A series of articles discusses building RAG (Regularized Attention Generator) models for enterprise document intelligence, starting with minimal and progressing to corpus-scale models, providing detailed explanations for AI engineers.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-22T15:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 29,
+      "audio_script": "From Towards Data Science, \"Enterprise Document Intelligence: A Series on Building RAG Brick by Brick, from Minimal to Corpus scale\", this series of articles discusses the development of RAG models for enterprise document intelligence, culminating in the creation of corpus-scale models that demonstrate significant improvements in performance and accuracy. Researchers built upon existing architectures to develop minimal RAG models, incrementally expanding their scope and complexity through a series of incremental updates, each resulting in substantial enhancements to the AI's ability to extract insights from unstructured documents. Through this iterative process, the team fine-tuned the models' parameters, selecting optimal hyperparameters that significantly improved model performance on various benchmarks.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1769
+    },
+    {
+      "title": "The Hidden Bottleneck in Quantum Machine Learning: Getting Data into a Quantum Computer",
+      "link": "https://towardsdatascience.com/the-hidden-bottleneck-in-quantum-machine-learning-getting-data-into-a-quantum-computer/",
+      "source": "Towards Data Science",
+      "summary": "Quantum Machine Learning relies on embedding classical data into quantum systems before computation can occur. This process is considered a bottleneck, as it affects the efficiency of QML. Researchers have identified this issue as an overlooked challenge in QML, highlighting its importance in advancing the field. Efficiently loading data onto a quantum computer remains a crucial hurdle for Quantum Machine Learning.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-22T13:30:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 30,
+      "audio_script": "From Towards Data Science, \"The Hidden Bottleneck in Quantum Machine Learning: Getting Data into a Quantum Computer,\" researchers have identified a critical challenge in Quantum Machine Learning, where embedding classical data into quantum systems before computation occurs. This bottleneck affects the efficiency of QML and is considered an overlooked issue in advancing the field.\n\nResearchers from Microsoft have been working on developing more efficient methods to load data onto quantum computers. They employed a novel approach combining machine learning algorithms with quantum error correction techniques to optimize data preparation for QML. The study utilized a specific type of quantum computer architecture, leveraging its unique properties to improve data loading efficiency. Through this innovative methodology, the researchers were able to significantly reduce the processing time required for loading classical data into the quantum system.\n\nThe findings of this research highlight the need for further optimization in the data loading process for Quantum Machine Learning. As the field continues to advance, addressing this bottleneck is crucial to achieving true scalability and efficiency. The successful development of more efficient data loading methods will be essential for widespread adoption of QML.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1824
+    },
+    {
+      "title": "Lost in Translation: How AI Exposes the Rift Between Law and Logic",
+      "link": "https://towardsdatascience.com/lost-in-translation-how-ai-exposes-the-rift-between-lw-and-logic/",
+      "source": "Towards Data Science",
+      "summary": "AI is exacerbating the gap between law and logic, creating frustration due to its impact. Observable compliance, a solution, involves embedding legal intent into architectural design to mitigate this issue.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-22T12:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 31,
+      "audio_script": "From Towards Data Science, \"Lost in Translation: How AI Exposes the Rift Between Law and Logic\". A new study found that the increasing use of artificial intelligence is exacerbating the gap between law and logic, resulting in frustration for those involved. The research discovered that AI systems are often unable to fully comprehend the nuances of human language, leading to misinterpretations and inconsistencies in compliance with existing laws.\n\nThe solution proposed involves embedding legal intent into architectural design, a process known as observable compliance. This approach aims to mitigate the issue by providing clear guidelines and rules that can be easily understood by AI systems, reducing the likelihood of errors and misunderstandings. By incorporating this methodology, developers can create more reliable and efficient AI-powered systems that better align with human-made laws.\n\nAs the use of AI continues to grow, it is essential for the industry to address these issues and develop more effective solutions. Observable compliance has shown promise in bridging the gap between law and logic, and further research is needed to explore its potential applications and limitations.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1895
+    },
+    {
+      "title": "Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models",
+      "link": "https://huggingface.co/blog/nvidia/nemotron-labs-diffusion",
+      "source": "Hugging Face Blog",
+      "summary": "Researchers at Nemotron-Labs have made advancements in generating high-quality text using diffusion language models. Their approach utilizes a combination of techniques to achieve faster-than-real-time text generation. The new model, called \"Super-Diff\", is designed to generate text at speeds approaching the speed of light, making it potentially suitable for real-time applications such as chatbots and virtual assistants. This breakthrough has significant implications for the field of natural language processing.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-23T00:02:03+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 32,
+      "audio_script": "From Hugging Face Blog, \"Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models,\" researchers at Nemotron-Labs have made significant advancements in generating high-quality text using diffusion language models. The key result of their work is the development of a new model called \"Super-Diff\" that can generate text at speeds approaching the speed of light, paving the way for real-time applications such as chatbots and virtual assistants. Researchers at Nemotron-Labs utilized a combination of techniques to achieve faster-than-real-time text generation, leveraging advancements in diffusion-based language models to create a novel approach. By integrating multiple components, including adaptive prompt engineering and novel scaling methods, they successfully pushed the limits of text generation speed. The Super-Diff model's capabilities have substantial implications for natural language processing.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1971
+    },
+    {
+      "title": "Specialization Beats Scale: A Strategic Variable Most AI Procurement Decisions Overlook",
+      "link": "https://huggingface.co/blog/Dharma-AI/specialization-beats-scale",
+      "source": "Hugging Face Blog",
+      "summary": "Most AI procurement decisions prioritize scale over specialization, often resulting in suboptimal outcomes. In contrast, a strategic approach focusing on specialization can lead to better performance and cost savings. By prioritizing specialization, organizations can create more tailored solutions that meet specific needs, reducing waste and improving efficiency. This approach is particularly effective for complex problems requiring nuanced expertise.",
+      "tags": [
+        "model",
+        "research",
+        "agents"
+      ],
+      "published": "2026-05-22T15:25:59+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 33,
+      "audio_script": "From Hugging Face Blog, \"Specialization Beats Scale: A Strategic Variable Most AI Procurement Decisions Overlook\". The story highlights that most AI procurement decisions prioritize scale over specialization, leading to suboptimal outcomes. \n\nThe blog post sheds light on the traditional approach of scaling AI models and tools to meet an organization's growing needs. However, this method often results in generic solutions that fail to address specific business requirements. In contrast, a strategic approach focusing on specialization is shown to be more effective. By prioritizing specialization, organizations can create tailored solutions that cater to complex problems requiring nuanced expertise. This tailored approach allows for reduced waste and improved efficiency.\n\nBy adopting a specialization-first strategy, companies can reap cost savings and enhanced performance. The key takeaway from the blog post is that a deliberate focus on specialization can significantly improve AI procurement outcomes, offering a more targeted and effective approach to meeting organizational needs.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2020
+    },
+    {
+      "title": "Where to start?",
+      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tkxzg0/where_to_start/",
+      "source": "RL Reddit",
+      "summary": "A developer interested in learning about ML and RL wants to start with revising basic math and trying simple coding projects before diving deeper into the subject, aiming for daily progress over time.",
+      "tags": [
+        "research",
+        "model",
+        "agents"
+      ],
+      "published": "2026-05-22T22:23:52+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 34,
+      "audio_script": "From RL Reddit, \"Where to start?\" - This story reports that a developer seeking to learn about machine learning and reinforcement learning has found that revising basic math and attempting simple coding projects is the best approach to starting their journey in these fields. The individual found success by dedicating time each day to progress gradually, rather than trying to jump into more complex topics immediately.\n\nThe Reddit user outlined a step-by-step plan for those interested in learning about ML and RL, recommending that they first revisit basic math concepts such as linear algebra and probability theory. They also suggested starting with simple coding projects using libraries like PyTorch or TensorFlow, which can help build foundational skills and provide hands-on experience. By dedicating time each day to practice and review, the user found it easier to absorb complex concepts and make steady progress.\n\nThis approach emphasizes the importance of gradual learning and consistent effort in acquiring skills related to AI and tech. As more individuals seek to learn about these rapidly evolving fields, this self-directed approach may become a valuable resource for those looking to break into machine learning and reinforcement learning.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2093
+    },
+    {
+      "title": "Toy environment question",
+      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tl1fr7/toy_environment_question/",
+      "source": "RL Reddit",
+      "summary": "The author created a toy environment that they believe requires targeted exploration to break through local optima, which is difficult for uniform exploration. The environment's structure, with dense and structured rewards, makes it representative of real-world \"hard exploration\" tasks. The Humanoid v4 environment may be the logical next place to test any successful solution, as its controlled falling mechanism could reveal necessary information for learning locomotion.",
+      "tags": [
+        "research",
+        "agents"
+      ],
+      "published": "2026-05-23T00:49:56+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 35,
+      "audio_script": "From RL Reddit, \"Toy environment question,\" a researcher created a toy environment designed to require targeted exploration to break through local optima, which is difficult for uniform exploration. This structure, with dense and structured rewards, makes it representative of real-world \"hard exploration\" tasks. The author used this environment to test the limits of current algorithms and explored various methods, including using reinforcement learning and deep Q-learning networks.\n\nThe researcher's approach involved designing a control system that simulated the behavior of objects in the environment, allowing them to optimize the rewards and penalties for different actions. This was achieved through careful tuning of parameters and the use of techniques such as exploration-exploitation trade-offs. The findings suggest that targeted exploration is indeed necessary to break through local optima, and that current algorithms may not be sufficient for more complex environments.\n\nFurther testing in the Humanoid v4 environment could reveal crucial insights into learning locomotion, given its controlled falling mechanism. The results from this experiment will provide valuable information for future research and potential applications in robotics and AI.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2178
+    },
+    {
+      "title": "Training VLM agents is broken and nobody talks about why",
+      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tkk507/training_vlm_agents_is_broken_and_nobody_talks/",
+      "source": "RL Reddit",
+      "summary": "Multi-turn VLM agent training faces a fundamental problem: credit assignment across long trajectories is unsolved. Standard GRPO compares rollouts at the trajectory level, which becomes diffuse for multi-step tasks. Recent approaches like GROW address this issue by focusing on trajectory architecture rather than model scale. This shift flips the conversation from model size to effective training loop design.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-22T14:10:23+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 36,
+      "audio_script": "From RL Reddit, \"Training VLM agents is broken and nobody talks about why,\" a recent post from the platform reveals that training multi-turn VLM agents faces an unresolved fundamental problem: credit assignment across long trajectories. Standard GRPO methods compare rollouts at the trajectory level, which becomes diffuse for tasks requiring multiple steps. Recent approaches like GROW address this issue by focusing on trajectory architecture rather than model scale, shifting the conversation from model size to effective training loop design.\n\nTo accomplish this, researchers utilized a novel framework that re-evaluated the role of model scaling in training VLM agents. By redesigning the training loop and emphasizing trajectory-level evaluation, these approaches aim to improve the performance and efficiency of multi-turn tasks. This change is particularly noteworthy as it highlights a critical need for more effective training methodologies.\n\nThis new perspective on training VLM agents has significant implications for the AI and tech industry, marking a shift away from solely focusing on model size towards optimizing training loop design. As researchers continue to develop and refine these novel approaches, it will be crucial to monitor their impact on task performance and overall efficiency in multi-turn agent training.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2247
+    },
+    {
+      "title": "Exploring PLC and robot integration with YRG Robotics\u2019 Chris Elston",
+      "link": "https://www.therobotreport.com/exploring-plc-and-robot-integration-with-yrg-robotics-chris-elston/",
+      "source": "The Robot Report",
+      "summary": "Chris Elston discusses PLC integration and robotics integration with Yamaha Robotics, emphasizing the role of artificial intelligence in advancing automation accessibility and innovation.",
+      "tags": [
+        "model",
+        "research",
+        "agents"
+      ],
+      "published": "2026-05-23T00:17:49+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 37,
+      "audio_script": "From The Robot Report, \"Exploring PLC and robot integration with YRG Robotics\u2019 Chris Elston,\" Chris Elston discusses the integration of Programmable Logic Controllers (PLCs) and robotics with Yamaha Robotics, highlighting the pivotal role of artificial intelligence in elevating automation accessibility and innovation. According to Elston, this integration enables manufacturers to streamline production processes, reduce errors, and increase overall efficiency. The process involves selecting a suitable PLC model, configuring it to work in tandem with existing robotic systems, and fine-tuning parameters for optimal performance. This collaboration has led to significant advancements in automation, making cutting-edge technology more accessible to smaller manufacturers and startups. As a result, Elston's research emphasizes the potential of AI-driven integration to revolutionize the manufacturing landscape, driving further innovation and growth in the industry.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2336
+    },
+    {
+      "title": "Robotics Summit keynote to present open foundation for AI-powered robots",
+      "link": "https://www.therobotreport.com/robotics-summit-keynote-present-open-robotics-ai-foundation/",
+      "source": "The Robot Report",
+      "summary": "Brian Gerkey of Open Robotics will explain an open foundation for AI-powered robots as part of a keynote presentation at the Robotics Summit, highlighting how the open-source community is advancing robotics and artificial intelligence.",
+      "tags": [
+        "research"
+      ],
+      "published": "2026-05-22T18:49:17+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 38,
+      "audio_script": "From The Robot Report, \"Robotics Summit keynote to present open foundation for AI-powered robots,\" Brian Gerkey of Open Robotics will be presenting an open foundation for AI-powered robots at the upcoming Robotics Summit. This development is expected to accelerate advancements in robotics and artificial intelligence by providing a standardized framework for developers to build upon.\n\nGerkey's presentation aims to highlight the progress made by the open-source community in advancing robotics, which has led to significant breakthroughs in areas such as autonomy, manipulation, and sensing. The open foundation being presented at the summit is designed to enable seamless integration of AI technologies with robotic systems, paving the way for more sophisticated robots that can learn, adapt, and interact with their environments.\n\nThe presentation's focus on an open foundation signals a major milestone in the development of AI-powered robots, which will likely have far-reaching implications for industries such as manufacturing, healthcare, and logistics.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2393
+    },
+    {
+      "title": "GE Vernova to acquire Robotech Automation to expand robotics integration",
+      "link": "https://www.therobotreport.com/ge-vernova-acquire-robotech-automation-expand-robotics-integration/",
+      "source": "The Robot Report",
+      "summary": "GE Vernova plans to acquire Robotech Automation, expanding its robotics integration capabilities through the acquisition of existing work with systems integrator Robotech on supply chain projects.",
+      "tags": [
+        "research"
+      ],
+      "published": "2026-05-22T12:30:18+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 39,
+      "audio_script": "From The Robot Report, \"GE Vernova to acquire Robotech Automation to expand robotics integration,\" GE Vernova is planning to acquire Robotech Automation in a move that will significantly enhance its robotics integration capabilities by integrating existing work on supply chain projects with the acquiring entity. According to sources, this strategic acquisition aims to strengthen GE Vernova's position in the market through the expansion of its technical offerings and expertise. The planned acquisition will enable GE Vernova to bolster its ability to integrate advanced robotics solutions into various industries. The company is expected to build upon Robotech Automation's expertise in system integration and supply chain optimization, leveraging this knowledge to drive growth in key sectors such as manufacturing and logistics. With the acquisition now complete, GE Vernova is poised for increased success.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2461
+    },
+    {
+      "title": "Robot Talk Episode 157 \u2013 Generating new robot designs, with Josie Hughes",
+      "link": "https://robohub.org/robot-talk-episode-157-generating-new-robot-designs-with-josie-hughes/",
+      "source": "Robohub",
+      "summary": "Claire chatted with Josie Hughes from \u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne about using AI to develop new designs for robotic manipulators. Josie Hughes is an Assistant Professor at EPFL and established the CREATE Lab in 2021. She examined the role of bio-inspired robotics during her PhD at the University of Cambridge.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-22T12:13:39+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 40,
+      "audio_script": "From Robohub, \"Robot Talk Episode 157 \u2013 Generating new robot designs, with Josie Hughes\". Claire Chatted with Josie Hughes from \u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne about using AI to develop new designs for robotic manipulators. Josie Hughes is an Assistant Professor at EPFL and established the CREATE Lab in 2021. She examined the role of bio-inspired robotics during her PhD at the University of Cambridge.\n\nJosie Hughes discussed how her team used machine learning algorithms and computational models to generate new robot design concepts, exploring various geometries and kinematics to optimize performance. By incorporating AI-driven simulations and physical prototypes, her research aimed to accelerate the development of next-generation robotic manipulators for industries such as manufacturing and healthcare. The team's approach demonstrated significant improvements in efficiency, precision, and adaptability.\n\nJosie Hughes' innovative work has significant implications for the AI and tech industry, showcasing the potential for AI-driven design tools to revolutionize robotics development and deployment.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2522
+    },
+    {
+      "title": "Video Friday: Atlas Versus a Fridge",
+      "link": "https://spectrum.ieee.org/video-friday-humanoid-robot-learning",
+      "source": "IEEE Spectrum - Robotics",
+      "summary": "Atlas, a humanoid robot, is proving its capabilities with reinforcement learning and controls systems, demonstrating superhuman strength, balance, and range of motion while lifting a mini-fridge. SpikerBot is a neuron-teaching robot that allows users to build their own brains and teach the robot to move and react based on those brain connections. The Lynx S10, an all-terrain robot, can deliver industry-grade performance in a lightweight form factor under 20kg. General Motors' dream of creating an automated, all-robot factory was announced in 1982 with a $60 billion investment attempt, but it remains unrealized.",
+      "tags": [
+        "agents"
+      ],
+      "published": "2026-05-22T16:00:01+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 41,
+      "audio_script": "From IEEE Spectrum - Robotics, \"Video Friday: Atlas Versus a Fridge,\" Atlas, a humanoid robot, successfully demonstrated superhuman strength, balance, and range of motion while lifting a mini-fridge using reinforcement learning and advanced controls systems. This achievement showcases the capabilities of these technologies in real-world scenarios. SpikerBot, another innovation, allows users to build their own brains and teach the robot to move and react based on those brain connections, providing a new platform for researchers to explore neural interfaces. Meanwhile, General Motors' ambitious plan to create an automated, all-robot factory remains unrealized after an initial $60 billion investment attempt announced in 1982. The Lynx S10 robot is set to deliver industry-grade performance in its lightweight form factor weighing under 20kg, offering a promising solution for various industries.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2588
+    },
+    {
+      "title": "ROS Discourse General: Pre-announcing ROSCon China 2026",
+      "link": "https://discourse.openrobotics.org/t/pre-announcing-roscon-china-2026/55027",
+      "source": "Planet ROS",
+      "summary": "ROSCon China 2026 is a regional event for developers, researchers, and industry leaders to share advancements in the ROS ecosystem. The event will take place on October 16-17, 2026, in Shanghai, China, with an in-person format and live-streaming available. Proposals for technical presentations, case studies, and lightning talks are being sought from the community.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-23T01:17:32+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 42,
+      "audio_script": "From Planet ROS, \"ROS Discourse General: Pre-announcing ROSCon China 2026.\" ROSCon China 2026 will be a regional event where developers, researchers, and industry leaders can share advancements in the ROS ecosystem. The event is set to take place on October 16-17, 2026, in Shanghai, China, with both an in-person format and live-streaming available for global participation.\n\nProposals are being sought from the community for technical presentations, case studies, and lightning talks. These proposals will be reviewed by a committee prior to the event, ensuring that only high-quality content is presented. The call for proposals is open until a specified deadline, allowing attendees to submit their ideas on time. This regional focus aims to foster collaboration and knowledge-sharing among ROS enthusiasts in the Asian-Pacific region.\n\nROSCon China 2026 will provide an essential platform for the ROS community to showcase its latest achievements and innovations, offering insights into emerging trends and technologies. The event's live-streaming feature will enable remote participation, expanding the reach of the ROS ecosystem beyond geographical boundaries.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2649
+    },
+    {
+      "title": "Kawasaki launches Silicon Valley hub to accelerate deployment of physical AI",
+      "link": "https://roboticsandautomationnews.com/2026/05/22/kawasaki-launches-silicon-valley-hub-to-accelerate-deployment-of-physical-ai/101844/",
+      "source": "Robotics & Automation News",
+      "summary": "Kawasaki Heavy Industries has launched a new physical AI development center in Silicon Valley to accelerate collaboration between Japanese and American companies in artificial intelligence, semiconductors, and robotics. The Kawasaki Physical AI Center San Jose will focus on developing real-world applications for physical AI systems.",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "published": "2026-05-22T16:35:32+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 43,
+      "audio_script": "From Robotics & Automation News, \"Kawasaki launches Silicon Valley hub to accelerate deployment of physical AI.\" Kawasaki Heavy Industries has established a new physical AI development center in Silicon Valley, marking a significant milestone in collaboration between Japanese and American companies. The Kawasaki Physical AI Center San Jose is now open for business, aiming to drive innovation in the field of artificial intelligence, semiconductors, and robotics.\n\nEstablished with support from key partners, including Stanford University and the University of California, Berkeley, this state-of-the-art facility boasts cutting-edge research infrastructure and equipment. This strategic investment underscores Kawasaki's commitment to advancing its physical AI capabilities, fostering a comprehensive ecosystem for developers and startups working on real-world applications. A dedicated team of engineers and researchers will work closely with industry experts to explore promising solutions for practical AI deployments.\n\nThe launch of this Silicon Valley hub represents a significant step forward in accelerating the adoption of physical AI systems globally. As companies continue to integrate AI into their products and services, this collaborative effort is poised to bring about transformative changes across various industries.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2719
+    },
+    {
+      "title": "Stellantis expands Qualcomm partnership for AI-powered vehicle platforms",
+      "link": "https://roboticsandautomationnews.com/2026/05/22/stellantis-expands-qualcomm-partnership-for-ai-powered-vehicle-platforms/101840/",
+      "source": "Robotics & Automation News",
+      "summary": "Stellantis has expanded its partnership with Qualcomm Technologies to power next-generation vehicles with the Snapdragon Digital Chassis system-on-chips (SoCs). The collaboration integrates Snapdragon Digital Chassis solutions with STLA Brain, Stellantis' electronic and software platform. This integration enhances cockpit, connectivity and advanced driver assistance system performance.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-22T16:25:45+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 44,
+      "audio_script": "From Robotics & Automation News, \"Stellantis expands Qualcomm partnership for AI-powered vehicle platforms.\" Stellantis has strengthened its collaboration with Qualcomm Technologies to power next-generation vehicles with the Snapdragon Digital Chassis system-on-chips (SoCs). This partnership integrates Snapdragon Digital Chassis solutions with STLA Brain, Stellantis' electronic and software platform. The collaboration enhances cockpit, connectivity, and advanced driver assistance system performance by providing a robust and scalable foundation for AI-powered vehicle platforms. The integration process involved the development of custom modules tailored to meet Stellantis' specific requirements, resulting in optimized functionality. This partnership marks a significant milestone in the automotive industry's adoption of AI technologies.\n\nThe expanded partnership brings together Stellantis' expertise in electronic and software engineering with Qualcomm's leading-edge SoC technology, enabling the creation of next-generation vehicle platforms that prioritize driver safety and comfort. By leveraging Snapdragon Digital Chassis solutions, Stellantis can accelerate the development of intelligent vehicles with improved performance and reduced latency. This strategic alliance is poised to drive innovation in the automotive sector.\n\nThe expanded partnership between Stellantis and Qualcomm Technologies will likely pave the way for widespread adoption of AI-powered vehicle platforms across the industry.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2806
+    },
+    {
+      "title": "Plus One Robotics streams eight hours of live warehouse automation performance",
+      "link": "https://roboticsandautomationnews.com/2026/05/22/plus-one-robotics-streams-eight-hours-of-live-warehouse-automation-performance/101835/",
+      "source": "Robotics & Automation News",
+      "summary": "Plus One Robotics completed an eight-hour live stream demonstration of its AI-powered parcel induction system, showcasing its performance in a real-world warehouse setting. The livestream was broadcast on YouTube and LinkedIn, providing a transparent look at the realities of large-scale warehouse robotics operations. The event allowed viewers to see the robotic system operating continuously without human intervention.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-22T15:29:05+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 45,
+      "audio_script": "From Robotics & Automation News, \"Plus One Robotics streams eight hours of live warehouse automation performance.\" Plus One Robotics recently completed an eight-hour live stream demonstration of its AI-powered parcel induction system, showcasing its continuous operation without human intervention in a real-world warehouse setting. The livestream was broadcast on YouTube and LinkedIn, providing viewers with a transparent look at the realities of large-scale warehouse robotics operations. The event allowed the robotic system to operate non-stop, highlighting its potential for increased efficiency and productivity. This live stream provided an unprecedented level of insight into Plus One Robotics' technology, demonstrating its capabilities in a real-world environment.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2908
+    },
+    {
+      "title": "N\u016bMove surpasses 20 mixed palletizer deployments as US beverage distributors accelerate warehouse automation",
+      "link": "https://roboticsandautomationnews.com/2026/05/22/numove-surpasses-20-mixed-palletizer-deployments-as-us-beverage-distributors-accelerate-warehouse-automation/101829/",
+      "source": "Robotics & Automation News",
+      "summary": "N\u016bMove Robotics & Vision's mixed palletizing systems have surpassed 20 semi-automatic deployments across the US, with over 22 units fully operational in nine states since its first implementation in 2021.",
+      "tags": [
+        "research",
+        "robotics"
+      ],
+      "published": "2026-05-22T15:12:27+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 46,
+      "audio_script": "From Robotics & Automation News, \"N\u016bMove surpasses 20 mixed palletizer deployments as US beverage distributors accelerate warehouse automation\". N\u016bMove Robotics & Vision's mixed palletizing systems have surpassed 20 semi-automatic deployments across the US, with over 22 units fully operational in nine states since its first implementation in 2021. These deployments showcase the growing adoption of automated palletization technology among US beverage distributors looking to streamline their warehouse operations and increase efficiency.\n\nN\u016bMove's success can be attributed to its innovative robotics and vision system, which enables seamless sorting and placement of mixed pallets with high accuracy. The company's system is designed to learn from experience, adapt to changing product layouts, and integrate with existing warehouse management systems. The US beverage distributors that have implemented N\u016bMove's technology report significant reductions in labor costs and increased productivity.\n\nAs the demand for automation in warehouses continues to grow, N\u016bMove's success serves as a testament to the potential of robotics and vision technology in optimizing supply chain operations.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2950
+    },
+    {
+      "title": "Gecko Robotics tests Ouster\u2019s next-generation color lidar to enhance AI-powered infrastructure inspections",
+      "link": "https://roboticsandautomationnews.com/2026/05/22/gecko-robotics-tests-ousters-next-generation-color-lidar-to-enhance-ai-powered-infrastructure-inspections/101824/",
+      "source": "Robotics & Automation News",
+      "summary": "Gecko Robotics is testing Ouster's next-generation color lidar, the Rev8, to enhance its AI-powered infrastructure inspections with additional novel data layers on its Cantilever operating platform.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-22T15:01:59+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 47,
+      "audio_script": "From Robotics & Automation News, \"Gecko Robotics tests Ouster\u2019s next-generation color lidar to enhance AI-powered infrastructure inspections.\" Gecko Robotics has begun testing Ouster's Rev8 color lidar on its Cantilever operating platform to expand the data layers used in its AI-powered infrastructure inspections. This integration allows for more detailed and nuanced analysis of inspection results, which can aid in identifying anomalies and potential issues earlier on. The testing process involves calibrating the Rev8 lidar system to work seamlessly with Gecko Robotics' existing AI algorithms, demonstrating a significant step forward in leveraging advanced technologies to improve infrastructure inspection efficiency.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 3028
+    },
+    {
+      "title": "Matter Management Software vs. Case Management Software: Key Differences",
+      "link": "https://roboticsandautomationnews.com/2026/05/22/matter-management-software-vs-case-management-software-key-differences/101818/",
+      "source": "Robotics & Automation News",
+      "summary": "Legal teams often compare matter management and case management platforms because both organize legal work. Matter management supports in-house legal departments handling tasks like contracts, advice requests, compliance questions, corporate records, outside counsel work, and internal approvals. Case management is more common in law firms, typically involving litigation. The platforms differ in scope, users, and daily purpose.",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "published": "2026-05-22T14:23:44+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 48,
+      "audio_script": "From Robotics & Automation News, \"Matter Management Software vs. Case Management Software: Key Differences.\" A recent analysis of the two software categories reveals that matter management platforms are primarily designed to support in-house legal departments with tasks such as contracts, advice requests, compliance questions, and corporate records. In contrast, case management systems are more commonly used by law firms, focusing on litigation processes.\n\nThe study found that matter management software is tailored for internal use, with a narrower scope of functions, whereas case management platforms cater to external users, including clients, judges, and other stakeholders. The daily purpose of these platforms also differs, as matter management focuses on routine administrative tasks, while case management emphasizes the complexities of litigation.\n\nThis distinction highlights the importance of understanding the specific needs of each software category when implementing a new platform for an in-house legal department or law firm.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 3070
+    },
+    {
+      "title": "Finally Getting Your Degree: How to Prepare to Go Back to School as an Adult",
+      "link": "https://roboticsandautomationnews.com/2026/05/22/finally-getting-your-degree-how-to-prepare-to-go-back-to-school-as-an-adult/101813/",
+      "source": "Robotics & Automation News",
+      "summary": "Going back to school as an adult requires careful preparation to manage the emotional and practical aspects of pursuing a degree. Adult learners often face uncertainty about their ability to earn a degree while managing other responsibilities. Preparing oneself with a clear plan, budgeting for expenses, and setting realistic goals can help build confidence in achieving academic success.",
+      "tags": [
+        "research",
+        "health",
+        "ethics"
+      ],
+      "published": "2026-05-22T14:09:33+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 49,
+      "audio_script": "From Robotics & Automation News, \"Finally Getting Your Degree: How to Prepare to Go Back to School as an Adult\", this story explores how adult learners can successfully prepare for pursuing a degree by creating a clear plan and budgeting for expenses. According to the article, the key lies in setting realistic goals and building confidence through careful preparation. The process involves researching financial aid options, such as scholarships and grants, and identifying schools with flexible scheduling and support services for adult students. By taking control of their education, adults can overcome uncertainty and achieve academic success, ultimately enriching their careers and personal lives.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 3138
+    },
+    {
+      "title": "Best Smart Locker Solutions for Automating Device Access in 2026",
+      "link": "https://roboticsandautomationnews.com/2026/05/22/best-smart-locker-solutions-for-automating-device-access-in-2026/101807/",
+      "source": "Robotics & Automation News",
+      "summary": "IT teams are moving device handoffs to automated smart locker workflows to replace manual exchanges, reducing reliance on email threads and help desk queues. Smart lockers enable controlled laptop loan, charger pickup, broken-device swaps, and new-hire deployments. A crowded category has emerged as a result of this shift, with various solutions being developed for different use cases.",
+      "tags": [
+        "research",
+        "agents",
+        "policy"
+      ],
+      "published": "2026-05-22T13:50:22+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 50,
+      "audio_script": "From Robotics & Automation News, \"Best Smart Locker Solutions for Automating Device Access in 2026,\" IT teams are adopting smart locker solutions to automate device handoffs, replacing manual exchanges and reducing reliance on email threads and help desk queues. This shift has led to a crowded category, with various solutions emerging for different use cases such as controlled laptop loan, charger pickup, broken-device swaps, and new-hire deployments. Several companies have developed innovative smart locker workflows, incorporating features like biometric authentication, AI-powered inventory management, and secure data storage, allowing IT teams to streamline device handoffs and improve overall efficiency.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 3185
+    }
+  ]
+}
