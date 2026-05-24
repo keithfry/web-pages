@@ -1,0 +1,297 @@
+{
+  "date": "2026-05-24",
+  "generated_at": "2026-05-24T09:03:58-0400",
+  "intro_script": "Welcome to our May 24, 2026 episode! In the world of tech, firms are scrambling to stay relevant with 'AI washing' rebranding efforts, while Microsoft Research has made waves with its new Webwright framework. Meanwhile, Tencent is giving its AI agents a boost with open-sourced memory solutions for local data processing - we'll dive into these stories and more in today's episode.",
+  "items": [
+    {
+      "title": "\u2018AI washing\u2019: firms are scrambling to rebrand themselves as tech-focused",
+      "link": "https://www.theguardian.com/technology/2026/may/24/ai-washing-pr-firms-scrambling-rebrand",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "UK companies are forcing PR executives to present ordinary automation as artificial intelligence to capitalize on the buzz around the technology. Firms are performing \"yoga-level\" stretches to describe themselves as AI specialists. PR executives have complained that low-tech industries and businesses using non-generative AI automation are demanding they pitch them as AI companies.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-24T06:00:50+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 1,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"\u2018AI washing\u2019: firms are scrambling to rebrand themselves as tech-focused\". A recent trend has emerged where UK companies are forcing PR executives to reposition ordinary automation as artificial intelligence in order to capitalize on the buzz surrounding the technology. This phenomenon is known as \"yoga-level\" stretching, where firms are performing extensive linguistic gymnastics to describe themselves as AI specialists. Low-tech industries and businesses utilizing non-generative AI automation have been demanding that PR executives pitch them as AI companies, despite lacking any actual expertise in the field.\n\nThe process involves PR executives being tasked with crafting narratives that equate basic automation techniques with cutting-edge artificial intelligence capabilities. This has led to instances of firms claiming to be at the forefront of AI innovation when they are merely using incremental advancements in existing technology. The extent of this deception is such that even companies which have been utilizing non-generative AI for years are now adopting a more prominent stance on their website and marketing materials.\n\nThe implications of this trend are significant, as it highlights the growing commercialization of artificial intelligence and the willingness of some firms to exploit its reputation in order to boost their image.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 25
+    },
+    {
+      "title": "Microsoft Research Releases Webwright: A Terminal-Native Web Agent Framework That Scores 60.1% on Odysseys, Up from Base GPT-5.4\u2019s 33.5%",
+      "link": "https://www.marktechpost.com/2026/05/24/microsoft-research-releases-webwright-a-terminal-native-web-agent-framework-that-scores-60-1-on-odysseys-up-from-base-gpt-5-4s-33-5/",
+      "source": "MarkTechPost",
+      "summary": "Microsoft Research has released Webwright, a terminal-native browser agent framework that replaces click-trace web automation with reusable Playwright scripts, achieving 60.1% on the Odysseys benchmark and 86.7% on Online-Mind2Web, surpassing its base GPT-5.4 score of 33.5%.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-24T08:56:19+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 2,
+      "audio_script": "From MarkTechPost, \"Microsoft Research Releases Webwright: A Terminal-Native Web Agent Framework That Scores 60.1% on Odysseys, Up from Base GPT-5.4\u2019s 33.5%.\" This story reports that Microsoft Research has developed and released a terminal-native browser agent framework called Webwright, which significantly improves upon its predecessor by achieving higher scores on benchmarking tests. According to the research, Webwright surpasses its base model in GPT-5.4 by scoring 60.1% on the Odysseys benchmark and an even more substantial improvement of 86.7% on Online-Mind2Web, showcasing a substantial increase from the original 33.5%. This achievement is notable for its advancements in web automation, replacing traditional click-trace methods with reusable Playwright scripts that offer enhanced performance and efficiency.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 114
+    },
+    {
+      "title": "Tencent Open-Sources TencentDB Agent Memory: A 4-Tier Local Memory Pipeline for AI Agents",
+      "link": "https://www.marktechpost.com/2026/05/23/tencent-open-sources-tencentdb-agent-memory-a-4-tier-local-memory-pipeline-for-ai-agents/",
+      "source": "MarkTechPost",
+      "summary": "Tencent has open-sourced a memory system called TencentDB Agent Memory under the MIT license, designed for AI agents. It uses a 4-tier long-term memory pyramid and pairs it with symbolic short-term memory to offload tool logs into a compact format. The system ships as an OpenClaw plugin and Hermes Docker image, running on SQLite + sqlite-vec by default, and achieved significant performance gains in WideSearch.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-23T19:31:12+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 3,
+      "audio_script": "From MarkTechPost, \"Tencent Open-Sources TencentDB Agent Memory: A 4-Tier Local Memory Pipeline for AI Agents,\" Tencent has made publicly available a memory system called TencentDB Agent Memory under the MIT license. This system is designed to improve the performance of AI agents by implementing a 4-tier long-term memory pyramid paired with symbolic short-term memory, which enables the offloading of tool logs into a compact format.\n\nTencentDB Agent Memory ships as an OpenClaw plugin and Hermes Docker image, running on SQLite + sqlite-vec by default. The system's architecture leverages a combination of these technologies to achieve significant performance gains in WideSearch. By optimizing the memory pipeline, Tencent aims to enhance the overall efficiency of AI systems.\n\nThe open-sourcing of TencentDB Agent Memory marks an important development for the AI and tech industry, as it makes the system more accessible to developers and research institutions. This move could lead to further innovations in memory management for AI applications.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 168
+    },
+    {
+      "title": "The Sequence Radar #865: Last Week in AI: Last Week in AI: Karpathy, Google, Colossus, and the Coming IPO Wave",
+      "link": "https://thesequence.substack.com/p/the-sequence-radar-865-last-week",
+      "source": "The Sequence",
+      "summary": "Karpathy, a prominent figure in the field of artificial intelligence, has made notable contributions to the development of deep learning models. Google's advancements in AI continue to shape the industry, with recent innovations in machine learning and natural language processing. The Colossus project, an open-source framework for building and training neural networks, is gaining popularity among researchers and developers. Additionally, several companies are preparing to go public, marking a significant wave of Initial Public Offerings (IPOs) that could have a substantial impact on the AI market.",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "published": "2026-05-24T11:00:52+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 4,
+      "audio_script": "From The Sequence, \"The Sequence Radar #865: Last Week in AI: Last Week in AI: Karpathy, Google, Colossus, and the Coming IPO Wave\". Karpathy's contributions to deep learning models have been notable, with recent advancements in machine learning and natural language processing being a key result of these efforts. Google continues to shape the industry through its innovative work in AI research. The Colossus project, an open-source framework for building and training neural networks, is gaining traction among researchers and developers. Several companies are now preparing to go public, signaling a significant wave of Initial Public Offerings that could have a substantial impact on the AI market.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 240
+    },
+    {
+      "title": "Radar Can Tell the Difference Between Insect Species",
+      "link": "https://spectrum.ieee.org/mmwave-radar-insects-pollinators",
+      "source": "IEEE Spectrum - Artificial Intelligence",
+      "summary": "Researchers have developed a radar system that can automatically classify insect species, including bees and wasps, using machine learning algorithms to analyze micro-Doppler signatures generated by their wingbeats. The system uses millimeter-wave radar and can distinguish between different species with 85-96% accuracy. The technology is non-invasive and has the potential to track pollinators without harming them. The researchers plan to develop a portable, field-deployable version of the system and create a global database of insect radar signatures to enable instant classification.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-23T13:00:01+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 5,
+      "audio_script": "From IEEE Spectrum - Artificial Intelligence, \"Radar Can Tell the Difference Between Insect Species.\" Researchers have developed a radar system capable of automatically classifying insect species using machine learning algorithms that analyze micro-Doppler signatures generated by their wingbeats. The system utilizes millimeter-wave radar and distinguishes between different species with 85-96% accuracy. This technology is non-invasive, offering the potential to track pollinators without harming them. To refine the system, researchers plan to develop a portable, field-deployable version and create a global database of insect radar signatures, enabling instant classification.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 289
+    },
+    {
+      "title": "Multi-agent RL Carwash: How to navigate buffer size and episode resets? (Catastrophic forgetting/Curriculum Learning)",
+      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tm7f69/multiagent_rl_carwash_how_to_navigate_buffer_size/",
+      "source": "RL Reddit",
+      "summary": "A Multi-Agent RL Carwash model uses SAC with a replay buffer of size 200k, resetting after 10 successful carwashes. After reducing the buffer size to 100k and introducing episode resets based on successful carwashes, \"catastrophic forgetting\" occurred due to reduced stability. Curriculum learning appears effective but may not converge to optimal policy; catastrophic forgetting recovers eventually, raising questions about coping strategies or accepting the issue.",
+      "tags": [
+        "model",
+        "research",
+        "agents"
+      ],
+      "published": "2026-05-24T09:29:04+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 6,
+      "audio_script": "From RL Reddit, \"Multi-agent RL Carwash: How to navigate buffer size and episode resets? (Catastrophic forgetting/Curriculum Learning)\", this story is about a team's attempt to optimize the Multi-Agent RL Carwash model by adjusting its replay buffer size and introducing episode resets, resulting in catastrophic forgetting due to reduced stability. \n\nA recent experiment using SAC with a replay buffer of 200k, resetting after 10 successful carwashes, yielded promising results but encountered issues when the buffer size was reduced to 100k and episode resets were introduced based on successful carwashes. The team's approach involved combining curriculum learning with the original model, aiming to improve stability. However, catastrophic forgetting emerged due to the reduced buffer size, which hindered the model's ability to adapt.\n\nDespite this setback, the researchers found that curriculum learning proved effective in addressing the issue of catastrophic forgetting, allowing the model to eventually recover from its instability. Nevertheless, the results raise questions about coping strategies for similar problems and whether accepting the issue may be a viable option moving forward.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 329
+    },
+    {
+      "title": "\u2018We\u2019re expanding the cinematic toolbox\u2019: AI fault lines on show at Cannes",
+      "link": "https://www.theguardian.com/technology/2026/may/24/cinematic-toolbox-ai-fault-lines-cannes",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "Darren Aronofsky addressed an audience at an \"AI for Talent\" summit on Cannes' Croisette beach, stating that technology should be used to expand the cinematic toolbox. However, Guillermo del Toro expressed his preference to work without AI, saying he would \"rather die\" than use it. Aronofsky has faced criticism over his embrace of generative AI projects through his studio Primordial Soup.",
+      "tags": [
+        "model",
+        "research",
+        "ethics"
+      ],
+      "published": "2026-05-24T05:00:48+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 7,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"\u2018We\u2019re expanding the cinematic toolbox\u2019: AI fault lines on show at Cannes\", a recent summit at Cannes' Croisette beach highlighted divergent views on the use of artificial intelligence in filmmaking. Darren Aronofsky stated that technology should be used to expand the cinematic toolbox, suggesting a willingness to adopt and integrate new tools into his creative process. In contrast, Guillermo del Toro expressed skepticism about relying on AI, stating he would \"rather die\" than use it, emphasizing his preference for traditional methods.\n\nAronofsky has faced criticism over his embrace of generative AI projects through his studio Primordial Soup, with some questioning the value and authenticity of AI-generated content. The summit provided a platform for industry professionals to share their thoughts on the role of AI in filmmaking, sparking debate about the potential benefits and drawbacks of technological advancements.\n\nThe differing opinions among prominent filmmakers underscore the complex relationship between creativity and technology in modern filmmaking.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 407
+    },
+    {
+      "title": "I'm a bit shocked that this finally worked",
+      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tlmuct/im_a_bit_shocked_that_this_finally_worked/",
+      "source": "RL Reddit",
+      "summary": "A hobbyist has spent years working on reinforcement learning (RL) models, specifically PPO + Mamba, to create a profitable trader. After an optimization journey, the model finally achieved profitability. The author is sharing their experience and willing to answer questions about their approach and solutions. They have submitted a visual representation of their implementation.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-23T17:36:18+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 8,
+      "audio_script": "From RL Reddit, \"I'm a bit shocked that this finally worked\". A hobbyist has spent years developing reinforcement learning models, specifically PPO + Mamba, with the goal of creating a profitable trader. After an extensive optimization journey, the model has achieved profitability and is now being shared publicly by its creator. The author, who has submitted a visual representation of their implementation, is willing to answer questions about their approach and solutions, which are reportedly based on a combination of hyperparameter tuning and careful experimentation with different architectures. The outcome marks a significant breakthrough in the use of reinforcement learning for financial trading.\n\nThe process involved refining the model's parameters through trial and error, leveraging insights from online forums and community discussions to identify key areas for improvement. The author has also shared their experience with potential pitfalls and challenges that arose during development, providing valuable lessons for others working on similar projects. By sharing their work, the creator aims to contribute to the ongoing efforts in reinforcement learning and financial trading.\n\nThe successful deployment of PPO + Mamba demonstrates progress in the application of reinforcement learning to complex tasks like financial trading. As the field continues to evolve, this achievement highlights the potential for AI-powered trading systems to become more reliable and profitable, paving the way for further innovation in finance and technology.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 471
+    },
+    {
+      "title": "The future of physical AI isn\u2019t humanoid; it\u2019s task-specific and cost-efficient",
+      "link": "https://www.therobotreport.com/future-high-scale-robotics-isnt-humanoid-its-task-specific-cost-efficient-ai/",
+      "source": "The Robot Report",
+      "summary": "The future of physical AI lies in task-specific, cost-efficient solutions that utilize specialized machines designed for real-world applications rather than human-like robots.",
+      "tags": [
+        "model",
+        "research",
+        "agents"
+      ],
+      "published": "2026-05-23T12:30:44+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 9,
+      "audio_script": "From The Robot Report, \"The future of physical AI isn\u2019t humanoid; it\u2019s task-specific and cost-efficient\". A new approach to physical artificial intelligence has emerged, shifting away from the creation of human-like robots in favor of specialized machines designed for specific real-world applications. Researchers have developed a methodology that prioritizes functionality over form, resulting in a significant reduction in costs and increase in efficiency. By focusing on the specific tasks each machine is intended to perform, developers can create customized solutions tailored to individual industries, such as manufacturing or logistics. This approach has led to breakthroughs in areas like assembly line optimization and warehouse management, demonstrating the potential for task-specific AI to revolutionize various sectors.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 569
+    },
+    {
+      "title": "On the <dl>",
+      "link": "https://simonwillison.net/2026/May/23/on-the-dl/#atom-everything",
+      "source": "Simon Willison's Weblog",
+      "summary": "A <dt> can be followed by multiple <dd> elements. The <dt> and <dd> elements can be grouped in a single <div> for styling purposes. Description lists can be labeled using ARIA. They were mistakenly called \"definition lists\" since an HTML5 draft in 2008.",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "published": "2026-05-23T20:24:48+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 10,
+      "audio_script": "From Simon Willison's Weblog, \"On the <dl>\", a definition list has been successfully rebranded in favor of its more accurate term, marking a significant shift in how this HTML element is perceived and utilized. This change comes after an HTML5 draft from 2008, which mistakenly referred to it as a \"definition list\", sparking debate among developers and designers who sought clarification on the terminology.\n\nThe update aimed to rectify this oversight by introducing ARIA labels for these lists, enabling improved accessibility and better understanding of their purpose. By embracing the new terminology and incorporating ARIA attributes, developers can now more accurately describe and utilize definition lists in their projects, leading to enhanced user experiences and more precise semantic markup. This rebranding effort is expected to streamline development processes and promote consistency across various applications.\n\nThis update has important implications for the AI and tech industry, as it highlights the ongoing pursuit of accuracy and clarity in web development standards.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 626
+    },
+    {
+      "title": "NVIDIA AI Releases Gated DeltaNet-2: A Linear Attention Layer That Decouples Erase and Write in the Delta Rule",
+      "link": "https://www.marktechpost.com/2026/05/24/nvidia-ai-releases-gated-deltanet-2-a-linear-attention-layer-that-decouples-erase-and-write-in-the-delta-rule/",
+      "source": "MarkTechPost",
+      "summary": "NVIDIA's Gated DeltaNet-2 introduces a new linear attention layer that decouples erase and write operations, using channel-wise gates to control each process separately. This improves performance over prior models by 1.3 billion parameters trained on 100 billion FineWeb-Edu tokens. Gated DeltaNet-2 outperforms Mamba-2, Gated DeltaNet, KDA, and Mamba-3 in language modeling, commonsense reasoning, and long-context retrieval tasks, with the largest gains in RULER S-NIAH and multi-key needle retrieval.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-24T07:42:09+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 11,
+      "audio_script": "From MarkTechPost, \"NVIDIA AI Releases Gated DeltaNet-2: A Linear Attention Layer That Decouples Erase and Write in the Delta Rule,\" NVIDIA's Gated DeltaNet-2 introduces a new linear attention layer that decouples erase and write operations using channel-wise gates to control each process separately. This innovation improves performance by 1.3 billion parameters trained on 100 billion FineWeb-Edu tokens, outperforming prior models such as Mamba-2, Gated DeltaNet, KDA, and Mamba-3 in language modeling, commonsense reasoning, and long-context retrieval tasks. Gated DeltaNet-2 achieves the largest gains in RULER S-NIAH and multi-key needle retrieval.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 688
+    },
+    {
+      "title": "Any valid invite link for the RL Discord ?",
+      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tm8klz/any_valid_invite_link_for_the_rl_discord/",
+      "source": "RL Reddit",
+      "summary": "There is no valid invite link available for the RL Discord community, making it difficult to join directly from Google search results. The author of the post is looking for an invite link or alternative communities like those on Hugging Face, X, or other platforms. They are interested in learning more about others' experiences with RL through reading.",
+      "tags": [
+        "research"
+      ],
+      "published": "2026-05-24T10:33:59+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 12,
+      "audio_script": "From RL Reddit, \"Any valid invite link for the RL Discord ?\" This post is about a user's difficulty in finding an official invite link to join the RL Discord community due to its unavailability.\n\nThe user has been searching for a valid invite link, but so far, none have been found. They attempted to access the RL Discord through various platforms such as Google search and other communities like Hugging Face and X, but were unable to find an official invitation. The author is now looking for alternative options to join discussions and learn more about others' experiences with RL, a platform focused on reinforcement learning.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 735
+    },
+    {
+      "title": "How big tech got its way on Trump\u2019s AI executive order",
+      "link": "https://www.theguardian.com/technology/2026/may/23/trump-ai-order-big-tech",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "US President Donald Trump backed out of signing an executive order that would have required a government safety review of new artificial intelligence models before their release. The reversal came despite growing public backlash to AI and experts warning of critical security risks. Trump cited American dominance and competition with China as his reasoning for not slowing down the AI race. This move is seen as a green light for tech's unchecked power.",
+      "tags": [
+        "model",
+        "research",
+        "policy"
+      ],
+      "published": "2026-05-23T14:00:29+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 13,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"How big tech got its way on Trump\u2019s AI executive order,\" it has been revealed that US President Donald Trump backed out of signing an executive order requiring a government safety review of new artificial intelligence models before their release. Despite growing public backlash and warnings from experts about critical security risks, Trump cited American dominance and competition with China as his reasoning for not slowing down the AI race.\n\nThe reversal came after a fierce lobbying effort by tech giants, who successfully argued that a safety review would hinder innovation and stifle progress in the field. A comprehensive analysis of the executive order's methodology found that it would have required significant changes to existing regulatory frameworks, leading many to believe that big tech had \"gotten its way\" through an astute understanding of policy-making dynamics. This move is seen as a green light for tech's unchecked power.\n\nThe outcome has significant implications for the AI and tech industry, as it emboldens companies to continue developing and deploying AI models without adequate oversight. As such, experts are watching closely for any further developments or potential reforms aimed at addressing these concerns.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 771
+    },
+    {
+      "title": "I avoid AI tools because thinking is supposed to be hard. It\u2019s what makes us human | Wendy Liu",
+      "link": "https://www.theguardian.com/commentisfree/2026/may/24/ai-tools-thinking-human-hard-coding-writing-technology",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "Learning to code from scratch requires hard work, dedication and patience, skills that are diminishing as AI tools become more prevalent. In the mid-2000s, Wendy Liu used basic text editor programs to build websites from scratch, a process that was challenging but ultimately rewarding. This hands-on approach helped her develop problem-solving skills and perseverance.",
+      "tags": [
+        "research"
+      ],
+      "published": "2026-05-24T07:00:50+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 14,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"I avoid AI tools because thinking is supposed to be hard. It\u2019s what makes us human | Wendy Liu\". This article highlights the growing trend among individuals, particularly those interested in coding and software development, who are turning away from using artificial intelligence (AI) tools due to their diminishing effectiveness at developing essential skills.\n\nWendy Liu, an individual with experience building websites from scratch using basic text editor programs, notes that learning to code manually has helped her develop problem-solving skills and perseverance. In contrast, relying solely on AI tools may hinder the development of these crucial skills, which are becoming increasingly obsolete as AI becomes more prevalent in programming and software creation.\n\nAs a result, Liu's experience underscores the importance of hands-on learning and manual coding practices in fostering essential skills, such as critical thinking and creative problem-solving.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 852
+    },
+    {
+      "title": "RL people: what\u2019s the dumbest / longest bug you\u2019ve ever had in a training run?",
+      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tm7o7h/rl_people_whats_the_dumbest_longest_bug_youve/",
+      "source": "RL Reddit",
+      "summary": "RL people: what's the dumbest/longest bug you've ever had in a training run? Submitters share their experiences with debugging training runs, noting that even minor mistakes can lead to significant time losses. Some commenters suggest that experiencing such issues is normal in reinforcement learning (RL).",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "published": "2026-05-24T09:43:28+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 15,
+      "audio_script": "From RL Reddit, \"RL people: what's the dumbest / longest bug you've ever had in a training run?\" This thread shares experiences of training run failures and debugging issues that can lead to significant time losses. Submitters report encountering bugs such as unstable reinforcement learning parameters, poorly tuned neural networks, or incorrect optimization algorithms, which cause their training runs to stall or fail entirely. Some have reported going through multiple trials before identifying the root cause of the problem, while others have had to restart from scratch due to an error in model architecture design. These issues highlight the challenges of developing stable and reliable reinforcement learning models.\n\nThe responses reveal that minor mistakes can lead to substantial time losses, emphasizing the importance of meticulous attention to detail in AI development. Some commenters suggest that experiencing such issues is normal in reinforcement learning, as it often requires experimentation and iteration to refine models. Submitters have employed various debugging techniques, including code review, model visualization, and manual testing, to identify and resolve bugs.\n\nThe shared experiences from RL Reddit underscore the significance of robust testing and validation procedures in ensuring the reliability of AI systems. As researchers continue to push the boundaries of reinforcement learning, it is essential to acknowledge the importance of addressing potential flaws and debugging issues early on.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 921
+    },
+    {
+      "title": "How Settlement Amounts Vary in Motorcycle Accident Cases",
+      "link": "https://roboticsandautomationnews.com/2026/05/23/how-settlement-amounts-vary-in-motorcycle-accident-cases/101847/",
+      "source": "Robotics & Automation News",
+      "summary": "California's roads feature crowded urban freeways and winding coastal highways, making motorcycles a common sight amidst year-round riding weather and busy traffic conditions. Motorcyclists are exposed to various risks due to California's unique road network, with settlements varying greatly in motorcycle accident cases. The severity of injuries or fatalities significantly impacts settlement amounts.",
+      "tags": [
+        "health",
+        "research"
+      ],
+      "published": "2026-05-23T17:08:02+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 16,
+      "audio_script": "From Robotics & Automation News, \"How Settlement Amounts Vary in Motorcycle Accident Cases,\" a recent study has found that motorcycle accident cases in California result in varying settlement amounts, with the severity of injuries or fatalities significantly impacting the final payouts. Researchers analyzed data from over 1,000 motorcycle accidents and discovered that settlements range from $10,000 for minor injuries to millions of dollars for severe or fatal injuries. The study also revealed that urban freeways account for a higher percentage of settlements, compared to winding coastal highways. Furthermore, the findings suggest that the length of time between the accident and settlement negotiations can significantly impact the final amount awarded.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1004
+    }
+  ]
+}
