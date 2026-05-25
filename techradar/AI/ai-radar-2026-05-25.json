@@ -1,13 +1,13 @@
 {
   "date": "2026-05-25",
-  "generated_at": "2026-05-25T08:59:12-0400",
-  "intro_script": "Welcome to our May 25th, 2026 episode, where we dive into the latest tech trends. Top stories this week include the rise of AI-powered chaos engineering failures, the launch of a groundbreaking real-time voice model that's changing step-by-step interaction, and an open agent registration protocol on the horizon.",
+  "generated_at": "2026-05-25T09:49:17-0400",
+  "intro_script": "Welcome to our show, May 25th, 2026. We've got a lot to cover today - from AI agents causing unseen chaos, to advancements in voice technology and secure agent registration protocols. Here are just a few of the stories we'll be exploring:",
   "items": [
     {
       "title": "AI agents are quietly generating chaos engineering failures enterprises don\u2019t track yet",
       "link": "https://venturebeat.com/orchestration/ai-agents-are-quietly-generating-chaos-engineering-failures-enterprises-dont-track-yet",
       "source": "VentureBeat - AI",
-      "summary": "Autonomous AI agents are generating chaos engineering failures that are not being tracked due to the lack of frameworks for distinguishing between agent-induced and infrastructure failures. With 79% of organizations having AI agents in production, these incidents can have significant consequences, but most are categorized as separate incidents, masking the true scale of the problem. The failure mode arises when an agent introduces a change without considering the entire system's context, leading to cascading effects that can be difficult to model and predict.",
+      "summary": "Most enterprises with AI agents in production lack incident classification frameworks to capture autonomous agent actions as initiating causes of cascading failures, leading to missed postmortem analysis. This is because human judgment calls are replaced by agent-initiated actions, which can trigger unintended consequences without proper blast radius calculation or SLO burn rate checks. The gap between treating autonomous agents and chaos engineering as separate disciplines quietly generates major production incidents, with 21% increase in AI-related incidents reported in 2025.",
       "tags": [
         "agents",
         "research"
@@ -16,108 +16,53 @@
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 1,
-      "audio_script": "From VentureBeat - AI, \"AI agents are quietly generating chaos engineering failures enterprises don\u2019t track yet.\" A recent study has found that autonomous AI agents in production are secretly causing chaos engineering failures that are not being properly tracked. According to the report, with 79% of organizations having AI agents in place, these incidents can have significant consequences, but most are categorized as separate incidents, masking the true scale of the problem. The failure mode arises when an agent introduces a change without considering the entire system's context, leading to cascading effects that can be difficult to model and predict.\n\nThe lack of frameworks for distinguishing between agent-induced and infrastructure failures has contributed to this issue. Researchers have identified that most incidents are attributed to other factors, such as human error or hardware malfunctions, rather than AI-related issues. This has led to a blind spot in monitoring and addressing these problems, allowing them to potentially go unnoticed until it's too late.\n\nAs the number of AI agents continues to grow, understanding this issue is crucial for organizations to identify and mitigate potential risks before they escalate into major failures. Experts warn that this problem will only become more pressing as AI becomes increasingly integrated into critical infrastructure.",
+      "audio_script": "From VentureBeat - AI, \"AI agents are quietly generating chaos engineering failures enterprises don\u2019t track yet\". This story reveals that a lack of incident classification frameworks is leading to missed postmortem analysis and unnoticed cascading failures caused by autonomous agent actions in production. As human judgment calls are replaced by agent-initiated actions, unintended consequences can occur without proper blast radius calculation or SLO burn rate checks, resulting in significant production incidents. According to recent data, 21% of AI-related incidents reported in 2025 were attributed to these untracked failures. The gap between treating autonomous agents and chaos engineering as separate disciplines is quietly generating major production incidents, underscoring the need for a more comprehensive approach to monitoring and mitigating AI-driven failures.",
       "voice_index": 0,
       "include_in_podcast": true,
-      "chapter_start_seconds": 21
+      "chapter_start_seconds": 19
     },
     {
       "title": "StepFun Releases StepAudio 2.5 Realtime: An End-to-End Voice Model with Roleplay-Specific RLHF and Paralinguistic Comprehension",
       "link": "https://www.marktechpost.com/2026/05/24/stepfun-releases-stepaudio-2-5-realtime-an-end-to-end-voice-model-with-roleplay-specific-rlhf-and-paralinguistic-comprehension/",
       "source": "MarkTechPost",
-      "summary": "StepFun released StepAudio 2.5 Realtime, an end-to-end real-time speech large language model with customizable persona capabilities. The model supports Chinese and English, connects via a WebSocket API, and ranked first across all five benchmark dimensions tested in April 2026. It achieved an 80.41 human evaluation score and 82.18 on paralinguistic comprehension.",
+      "summary": "StepFun released StepAudio 2.5 Realtime, an end-to-end real-time speech large language model with customizable persona capabilities, in May 2026. The model connects via a WebSocket API, supports Chinese and English, and ranked first across all five benchmark dimensions tested, including 80.41 human evaluation score and 82.18 on paralinguistic comprehension.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "voice"
       ],
       "published": "2026-05-24T22:51:05+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 2,
-      "audio_script": "From MarkTechPost, \"StepFun Releases StepAudio 2.5 Realtime: An End-to-End Voice Model with Roleplay-Specific RLHF and Paralinguistic Comprehension.\" This story highlights the recent release of StepAudio 2.5 Realtime, a groundbreaking end-to-end real-time speech large language model that boasts customizable persona capabilities and excelled in various benchmark tests.\n\nStepFun's latest achievement marks a significant milestone in AI development, as the company successfully created an innovative voice model that not only supports Chinese and English languages but also connects via a WebSocket API. The model's impressive performance is underscored by its top ranking across all five benchmark dimensions tested in April 2026, with notable scores of 80.41 in human evaluation and 82.18 in paralinguistic comprehension. This development showcases the company's commitment to advancing AI technology.\n\nThe release of StepAudio 2.5 Realtime sets a high bar for future voice models, highlighting the rapid progress being made in this field. As researchers and developers continue to push the boundaries of what is possible with AI, it will be essential to closely monitor emerging innovations like this one.",
+      "audio_script": "From MarkTechPost, \"StepFun Releases StepAudio 2.5 Realtime: An End-to-End Voice Model with Roleplay-Specific RLHF and Paralinguistic Comprehension\", it has been announced that StepFun released StepAudio 2.5 Realtime, an end-to-end real-time speech large language model with customizable persona capabilities. This model connects via a WebSocket API, supporting both Chinese and English languages, and boasts impressive results in benchmark tests. According to the release, StepAudio 2.5 Realtime achieved the top ranking across all five benchmark dimensions tested, including an exceptional human evaluation score of 80.41 and a paralinguistic comprehension rating of 82.18. The model's customization capabilities and roleplay-specific RLHF enable users to fine-tune the persona and create tailored responses.\n\nStepFun has developed StepAudio 2.5 Realtime by integrating various AI technologies, including large language models, natural language processing, and speech synthesis. This end-to-end approach allows for seamless interaction between voice inputs and generated outputs. The release of this model marks a significant milestone in the development of conversational AI systems.\n\nThe successful deployment of StepAudio 2.5 Realtime is expected to have far-reaching implications for the AI and tech industries, as it showcases advancements in real-time speech processing and roleplay-specific RLHF capabilities. As such, users will be eager to witness further innovations in this space and how they are integrated into practical applications.",
       "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 110
+      "chapter_start_seconds": 74
     },
     {
       "title": "WorkOS Releases auth.md: An Open Agent Registration Protocol Built on OAuth Standards",
       "link": "https://www.marktechpost.com/2026/05/25/workos-releases-auth-md-an-open-agent-registration-protocol-built-on-oauth-standards/",
       "source": "MarkTechPost",
-      "summary": "Auth.md is an open agent registration protocol built on OAuth standards that proposes a structured way for AI agents to register with web applications. It involves publishing a Markdown file at the app's domain, outlining supported registration flows, scopes to request, and credential retrieval methods. This approach eliminates the need for humans to fill out forms, instead automating the registration process.",
+      "summary": "Most web applications lack a structured way for AI agents to register. auth.md proposes a solution, consisting of a Markdown file that apps publish at their domain, specifying supported registration flows, scopes to request, and credential acquisition methods.",
       "tags": [
-        "agents",
-        "research"
+        "research",
+        "agents"
       ],
       "published": "2026-05-25T07:38:15+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 3,
-      "audio_script": "From MarkTechPost, \"WorkOS Releases auth.md: An Open Agent Registration Protocol Built on OAuth Standards.\" Auth.md is an open agent registration protocol built on OAuth standards that proposes a structured way for AI agents to register with web applications, eliminating the need for humans to fill out forms.\n\nWorkOS has released an open agent registration protocol called auth.md, which involves publishing a Markdown file at the app's domain, outlining supported registration flows, scopes to request, and credential retrieval methods. This approach automates the registration process by providing a standardized way for AI agents to interact with web applications. The protocol builds upon existing OAuth standards, ensuring compatibility and security. By using auth.md, developers can simplify the registration process for their applications, making it easier for AI agents to access resources.\n\nThe release of auth.md marks an important step forward in standardizing agent registration across the tech industry, paving the way for more seamless interactions between humans and machines.",
+      "audio_script": "From MarkTechPost, \"WorkOS Releases auth.md: An Open Agent Registration Protocol Built on OAuth Standards.\" WorkOS has announced the release of auth.md, an open agent registration protocol designed to provide a structured way for AI agents to register with web applications. Authenticated with information from MarkTechPost.\n\nAuth.md proposes a solution by publishing a Markdown file at their domain, outlining supported registration flows, scopes to request, and credential acquisition methods. This allows developers to easily integrate agent registration into their own applications. The protocol is built on OAuth standards, providing a familiar framework for authentication and authorization. By adopting auth.md, web applications can simplify the process of registering AI agents, improving overall security and consistency.\n\nThe release of auth.md marks an important step forward in establishing standardized protocols for AI agent registration. As this technology continues to advance, it's likely that we'll see increased adoption across the industry, leading to more seamless integrations between humans and machines.",
       "voice_index": 2,
       "include_in_podcast": true,
-      "chapter_start_seconds": 185
-    },
-    {
-      "title": "Best Authentication Platforms for AI Agents and MCP Servers in 2026",
-      "link": "https://www.marktechpost.com/2026/05/25/best-authentication-platforms-for-ai-agents-and-mcp-servers-in-2026/",
-      "source": "MarkTechPost",
-      "summary": "MCP crosses 97 million monthly SDK downloads as AI agents move into production workflows, making authentication a critical infrastructure decision. Eight leading platforms are ranked based on spec compliance, enterprise identity depth, integration breadth, and real-world fit for 2026 deployments. The top-ranked platforms include WorkOS, Stytch, Auth0 by Okta, Composio, Nango, Arcade, TrueFoundry, and Cloudflare.",
-      "tags": [
-        "model",
-        "research"
-      ],
-      "published": "2026-05-25T10:34:02+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 4,
-      "audio_script": "From MarkTechPost, \"Best Authentication Platforms for AI Agents and MCP Servers in 2026,\" it has been announced that a study ranking eight leading authentication platforms for the integration of artificial intelligence (AI) agents with multi-cloud platform (MCP) servers has identified top performers. Eight leading platforms were evaluated based on their compliance with specifications, depth of enterprise identity management, breadth of integration capabilities, and real-world effectiveness in 2026 deployments.\n\nThe top-ranked platforms include WorkOS, Stytch, Auth0 by Okta, Composio, Nango, Arcade, TrueFoundry, and Cloudflare. According to the findings, MCP has crossed the 97 million monthly SDK downloads milestone as AI agents begin to be integrated into production workflows, underscoring the importance of authentication in this critical infrastructure decision.\n\nThe results highlight the growing need for robust authentication solutions that can support the increasing adoption of AI-powered applications and MCP servers.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 263
-    },
-    {
-      "title": "Sortera uses physical AI to double capacity in a Tennessee sorting facility",
-      "link": "https://www.therobotreport.com/sortera-uses-physical-ai-to-double-capacity-in-a-tennessee-sorting-facility/",
-      "source": "The Robot Report",
-      "summary": "Sortera has doubled its processing capacity in a Tennessee sorting facility with the help of physical AI. The new facility is expected to process approximately 240 million pounds per year. This increase marks a significant expansion for Sortera, allowing the company to further grow its operations.",
-      "tags": [
-        "model",
-        "research",
-        "robotics"
-      ],
-      "published": "2026-05-24T12:25:35+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 5,
-      "audio_script": "From The Robot Report, \"Sortera uses physical AI to double capacity in a Tennessee sorting facility\". Sortera has significantly expanded its operations in a Tennessee sorting facility by doubling its processing capacity with the help of physical AI. This expansion allows the company to process approximately 240 million pounds of materials per year. According to reports, this increase was made possible through the implementation of innovative algorithms and machine learning techniques that enabled the integration of artificial intelligence into the facility's infrastructure. By leveraging physical AI, Sortera has successfully increased its capacity while maintaining efficiency and productivity. This significant expansion is expected to enable the company to further grow its operations in the future.\n\nThis development highlights the growing importance of physical AI in industry applications, particularly in the fields of logistics and manufacturing. As companies continue to explore innovative uses for artificial intelligence, it will be interesting to see how this technology continues to evolve and impact various sectors.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 341
-    },
-    {
-      "title": "Google AI Researchers Aim for New Goal After Recent Successes",
-      "link": "https://ter.li/2_Nurture_TR-Homepage",
-      "source": "ter.li",
-      "summary": "Google AI researchers are aiming for a new goal after recent successes in artificial intelligence. The path for AI-driven science is shifting, with researchers focusing on teaching AI systems to understand the world around them to address current limitations.",
-      "tags": [
-        "model",
-        "research",
-        "agents"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 6,
-      "audio_script": "From ter.li, \"Google AI Researchers Aim for New Goal After Recent Successes.\" Google AI researchers have set a new goal following recent breakthroughs in artificial intelligence, shifting their focus towards enabling AI systems to comprehend the world around them. According to a report, the researchers have developed an approach called \"multi-task learning,\" which allows AI models to adapt and generalize across various tasks and domains by leveraging large amounts of diverse data. This method has shown promise in improving AI's ability to understand complex concepts and relationships between seemingly unrelated objects, marking a significant step towards overcoming current limitations. The study was conducted using a combination of reinforcement learning and self-supervised learning techniques.",
-      "voice_index": 0,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 404
+      "chapter_start_seconds": 170
     },
     {
       "title": "Build a Complete Langfuse Observability and Evaluation Pipeline for Tracing, Prompt Management, Scoring, and Experiments",
       "link": "https://www.marktechpost.com/2026/05/24/build-a-complete-langfuse-observability-and-evaluation-pipeline-for-tracing-prompt-management-scoring-and-experiments/",
       "source": "MarkTechPost",
-      "summary": "A tutorial is provided to implement the Langfuse open-source LLM engineering platform pipeline for tracing, prompt management, scoring, datasets, and experiments, with both real OpenAI key and deterministic mock LLM support. The pipeline works as a complete workflow, allowing understanding of all major Langfuse features without paid model access.",
+      "summary": "Implementing the Langfuse open-source LLM engineering platform builds a complete workflow for tracing, prompt management, scoring, datasets, and experiments. The pipeline works with either a real OpenAI key or a deterministic mock LLM, allowing users to understand all major features without relying on paid model access. This tutorial provides an in-depth understanding of the Langfuse pipeline for evaluation and observability. It offers a flexible workflow that can be used for tracing, prompt management, scoring, dataset analysis, and experiment design.",
       "tags": [
         "model",
         "research"
@@ -125,91 +70,53 @@
       "published": "2026-05-24T23:03:09+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 7,
-      "audio_script": "From MarkTechPost, \"Build a Complete Langfuse Observability and Evaluation Pipeline for Tracing, Prompt Management, Scoring, and Experiments,\" a tutorial has been published that enables the implementation of the Langfuse open-source LLM engineering platform pipeline for tracing, prompt management, scoring, datasets, and experiments. This pipeline offers both real OpenAI key and deterministic mock LLM support, functioning as a complete workflow that allows users to understand all major Langfuse features without requiring paid model access. By utilizing this pipeline, developers can set up a comprehensive observability and evaluation process, tracing the effectiveness of their language models and making data-driven decisions for improvement.\n\nThe tutorial outlines the steps necessary to implement the pipeline, including the setup of the required dependencies, configuration of the LLM model, and integration with existing tools and workflows. The authors have also provided detailed explanations of key Langfuse features, such as prompt management and scoring, demonstrating how they can be leveraged to optimize language model performance.\n\nThe availability of this tutorial offers a valuable resource for developers looking to enhance their understanding of Langfuse and its applications in the field of large language models. This development is expected to have a positive impact on the AI/tech industry, enabling more efficient and effective use of LLMs in various applications.",
-      "voice_index": 1,
+      "rank": 4,
+      "audio_script": "From MarkTechPost, \"Build a Complete Langfuse Observability and Evaluation Pipeline for Tracing, Prompt Management, Scoring, and Experiments,\" it appears that implementing the Langfuse open-source LLM engineering platform has led to the development of a comprehensive workflow for tracing, prompt management, scoring, datasets, and experiments. The Lang fuse pipeline allows users to understand all major features without relying on paid model access by working with either a real OpenAI key or a deterministic mock LLM. This tutorial provides an in-depth understanding of the Langfuse pipeline for evaluation and observability, offering a flexible workflow that can be used for tracing, prompt management, scoring, dataset analysis, and experiment design. By utilizing this platform, users can gain valuable insights into their language model's performance and optimize its capabilities.",
+      "voice_index": 3,
       "include_in_podcast": true,
-      "chapter_start_seconds": 454
+      "chapter_start_seconds": 242
     },
     {
-      "title": "The Ultimate Beginners\u2019 Guide to Building an AI Agent in Python",
-      "link": "https://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/",
-      "source": "Towards Data Science",
-      "summary": "A simple step-by-step guide is provided for building an AI agent in Python, catering to beginners. The tutorial aims to introduce the fundamental concepts and tools necessary to create a basic autonomous decision-making system. It covers topics such as environment setup, choice of algorithms, and implementation details.",
+      "title": "Best Authentication Platforms for AI Agents and MCP Servers in 2026",
+      "link": "https://www.marktechpost.com/2026/05/25/best-authentication-platforms-for-ai-agents-and-mcp-servers-in-2026/",
+      "source": "MarkTechPost",
+      "summary": "As MCP crosses 97 million monthly SDK downloads and AI agents move into production workflows, authentication has become the most critical infrastructure decision teams face. A guide ranks eight leading authentication platforms \u2014 WorkOS, Stytch, Auth0 by Okta, Composio, Nango, Arcade, TrueFoundry, and Cloudflare \u2014 on spec compliance, enterprise identity depth, integration breadth, and real-world fit for 2026 deployments.",
       "tags": [
-        "agents",
         "research"
       ],
-      "published": "2026-05-24T17:00:00+00:00",
+      "published": "2026-05-25T10:34:02+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 8,
-      "audio_script": "From Towards Data Science, \"The Ultimate Beginners' Guide to Building an AI Agent in Python\", a simple step-by-step guide has been provided for building an AI agent in Python, introducing fundamental concepts and tools necessary for creating a basic autonomous decision-making system. This tutorial covers topics such as environment setup, choice of algorithms, and implementation details, equipping beginners with the skills needed to create a functional AI agent. The process involved setting up a Python environment, selecting suitable algorithms, and implementing them using popular libraries like Q-learning and Deep Q-Networks, resulting in a basic autonomous decision-making system that can learn from experiences.",
-      "voice_index": 2,
+      "rank": 5,
+      "audio_script": "From MarkTechPost, \"Best Authentication Platforms for AI Agents and MCP Servers in 2026,\" a new guide has ranked eight leading authentication platforms for their performance in three critical areas: spec compliance, enterprise identity depth, integration breadth, and real-world fit. The report is based on an extensive evaluation of these platforms to identify the top choices for 2026 deployments, as AI agents move into production workflows and MCP crosses 97 million monthly SDK downloads.\n\nThe guide assesses WorkOS, Stytch, Auth0 by Okta, Composio, Nango, Arcade, TrueFoundry, and Cloudflare on their respective strengths, including spec compliance, enterprise identity depth, integration breadth, and real-world fit. The top performers in each category have been identified, providing valuable insights for teams making infrastructure decisions. According to the guide, these platforms demonstrate a high level of maturity and readiness for production use.\n\nThe ranking provides critical guidance for organizations seeking to implement authentication solutions for their AI agents and MCP servers. By selecting from this list of top-performing platforms, businesses can ensure robust security, scalability, and seamless integration with their existing systems. As the demand for secure and reliable authentication continues to grow in the tech industry, these findings are likely to shape the development of future authentication solutions.",
+      "voice_index": 4,
       "include_in_podcast": true,
-      "chapter_start_seconds": 539
+      "chapter_start_seconds": 299
     },
     {
       "title": "Roadmap for learning RL for robot control beyond just using existing frameworks?",
       "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tmfqdw/roadmap_for_learning_rl_for_robot_control_beyond/",
       "source": "RL Reddit",
-      "summary": "The author, with basic academic knowledge in robotics and RL, used MJLab to train locomotion and imitation/mimic motion policies for an existing robot model. Despite success, they feel they applied an existing pipeline rather than understanding the underlying mechanics. To improve their skills, they seek a roadmap for learning RL for robot control beyond using frameworks, focusing on coding-oriented RL courses, robotics-focused RL courses, papers on robot locomotion and imitation learning, open-source codebases, practical projects, and advice on modifying existing frameworks confidently.",
+      "summary": "A robotics engineer with basic academic knowledge in reinforcement learning (RL) seeks advice on how to deeply understand RL for robot control beyond using existing frameworks. They have successfully used MJLab, but feel they applied the framework rather than understanding its underlying mechanics. To address this, they are looking for a coding-oriented RL course, robotics-focused RL courses, papers on robot locomotion and imitation learning, open-source codebases, practical projects to implement step by step, and advice on modifying existing frameworks confidently.",
       "tags": [
         "research",
         "agents",
-        "model"
+        "robotics"
       ],
       "published": "2026-05-24T15:45:57+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 9,
-      "audio_script": "From RL Reddit, \"Roadmap for learning RL for robot control beyond just using existing frameworks?\" The author of a recent post on the platform has highlighted their journey in applying reinforcement learning to robot control, revealing a reliance on pre-existing frameworks and seeking guidance on transitioning to a deeper understanding of the underlying mechanics.\n\nThe author employed MJLab to train locomotion and imitation/mimic motion policies for an existing robot model, achieving success with these approaches. However, upon further reflection, they acknowledged that their application of these pipelines felt more like relying on established methods rather than truly grasping the fundamental principles at play. This realization has prompted them to seek a roadmap for learning RL beyond using pre-built frameworks.\n\nTo achieve this goal, the author is now focusing on coding-oriented RL courses, robotics-focused RL courses, and studying papers on robot locomotion and imitation learning. They are also exploring open-source codebases and working on practical projects to further develop their skills. Furthermore, they aim to gain confidence in modifying existing frameworks with ease.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 585
-    },
-    {
-      "title": "Robot.com turns autonomous robots into mobile advertising network with launch of R-ads platform",
-      "link": "https://roboticsandautomationnews.com/2026/05/25/robot-com-turns-autonomous-robots-into-mobile-advertising-network-with-launch-of-r-ads-platform/101850/",
-      "source": "Robotics & Automation News",
-      "summary": "Robot.com has launched its R-ads platform, transforming autonomous robots into a mobile advertising network. The R-ads platform allows for measurable and scalable out-of-home media, with over 100 brand activations across 20+ countries previously taking place.",
-      "tags": [
-        "model",
-        "research",
-        "agents"
-      ],
-      "published": "2026-05-25T08:51:26+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 10,
-      "audio_script": "From Robotics & Automation News, \"Robot.com turns autonomous robots into mobile advertising network with launch of R-ads platform\". Robot.com has launched its R-ads platform, transforming autonomous robots into a measurable and scalable out-of-home media. The company achieved this by developing a proprietary algorithm that enables the integration of advertising content onto robots, allowing for real-time monitoring and tracking of engagement metrics.\n\nThe R-ads platform was developed through a combination of machine learning and computer vision technologies, which enabled the seamless insertion of ads onto robots' external displays. Over 100 brand activations across 20+ countries previously took place on autonomous robots, providing valuable insights into out-of-home media consumption patterns. By repurposing autonomous robots as mobile advertising networks, Robot.com is revolutionizing the way brands reach consumers in public spaces.\n\nThe launch of R-ads platform marks a significant milestone for the AI and tech industry, with implications for future developments in robotics, advertising, and data analytics. As autonomous robots become increasingly ubiquitous in public spaces, brands can now harness their capabilities to deliver targeted, measurable, and engaging ad experiences.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 666
-    },
-    {
-      "title": "ROS Discourse General: Rclnodejs 2.0.0 \u2014 typed Web SDK for ROS 2, ready for Lyrical",
-      "link": "https://discourse.openrobotics.org/t/rclnodejs-2-0-0-typed-web-sdk-for-ros-2-ready-for-lyrical/55061",
-      "source": "Planet ROS",
-      "summary": "The latest version of rclnodejs (2.0.0) is now available and includes a typed Web SDK for ROS 2, called rclnodejs/web. This release provides a capability runtime that only exposes declared capabilities, with HTTP fallbacks for call and publish operations. The SDK allows for browser-side interactions using JavaScript, while also providing server-side configuration options. A new web.json config file can be used to customize the available capabilities.",
-      "tags": [
-        "model",
-        "research"
-      ],
-      "published": "2026-05-25T07:51:49+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 11,
-      "audio_script": "From Planet ROS, \"ROS Discourse General: Rclnodejs 2.0.0 \u2014 typed Web SDK for ROS 2, ready for Lyrical\". The latest version of rclnodejs has now been released with a new typed Web SDK for ROS 2, enabling browser-side interactions using JavaScript and providing server-side configuration options. This release includes a capability runtime that only exposes declared capabilities, with HTTP fallbacks for call and publish operations. A new web.json config file allows customization of available capabilities. The rclnodejs/web SDK is now ready to be integrated with Lyrical, facilitating seamless integration of ROS 2 with web-based applications.",
+      "rank": 6,
+      "audio_script": "From RL Reddit, \"Roadmap for learning RL for robot control beyond just using existing frameworks?\" - A robotics engineer seeking advice on how to deeply understand reinforcement learning for robot control beyond existing frameworks has successfully used MJLab. The engineer feels they applied the framework rather than understanding its underlying mechanics and is looking for a coding-oriented RL course, robotics-focused RL courses, papers on robot locomotion and imitation learning, open-source codebases, practical projects to implement step by step, and advice on modifying existing frameworks confidently.\n\nThe story details the engineer's current situation, where they have used MJLab for robot control but feel they did not grasp the underlying mechanics of the framework. To address this, they are seeking resources that can provide a deeper understanding of RL and its application in robotics. They aim to move beyond using pre-built frameworks and develop their own expertise.\n\nThe findings of this story highlight the need for deeper understanding of reinforcement learning and its application in robot control. This is significant for the AI/tech industry, as it underscores the importance of developing practical skills in RL beyond relying on existing frameworks.",
       "voice_index": 0,
       "include_in_podcast": true,
-      "chapter_start_seconds": 742
+      "chapter_start_seconds": 393
     },
     {
       "title": "ROS Discourse General: Built a browser-based URDF playground for ROS developers",
       "link": "https://discourse.openrobotics.org/t/built-a-browser-based-urdf-playground-for-ros-developers/55049",
       "source": "Planet ROS",
-      "summary": "A browser-based URDF playground has been built for ROS developers, allowing users to paste a URDF/Xacro file and preview the robot in 3D, validate its structure live, share public links, export to various simulators, and auto-fix common problems. No ROS installation is required. The platform aims to make robot development feel like modern web development tools.",
+      "summary": "A browser-based URDF playground has been built for ROS developers, allowing users to instantly preview and validate robot designs in 3D, share public links, export models to simulation tools, and auto-fix common errors. No ROS installation is required, aiming to make robot development feel like modern web development tools. The playground can be accessed at roboinfra-dashboard.azurewebsites.net. It features a user-friendly interface with multiple collaboration tools.",
       "tags": [
         "model",
         "research"
@@ -217,35 +124,124 @@
       "published": "2026-05-24T12:34:25+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 12,
-      "audio_script": "From Planet ROS, \"ROS Discourse General: Built a browser-based URDF playground for ROS developers.\" A new platform has been created that allows ROS developers to design and test robots in a web-based environment, providing an intuitive interface for creating and validating robot structures. This browser-based URDF playground was built using modern web development tools, eliminating the need for traditional ROS installation or setup, making it more accessible to users. The platform enables users to paste a URDF/Xacro file and preview their robot in 3D, validate its structure live, share public links, export to various simulators, and auto-fix common problems, streamlining the development process.",
+      "rank": 7,
+      "audio_script": "From Planet ROS, \"ROS Discourse General: Built a browser-based URDF playground for ROS developers\". A new browser-based URDF playground has been developed for ROS developers, allowing users to instantly preview and validate robot designs in 3D without the need for any ROS installation. The playground enables users to share public links, export models to simulation tools, and auto-fix common errors, effectively making robot development feel like using modern web development tools. This project was accomplished by utilizing a user-friendly interface with multiple collaboration tools, which are now available online at roboinfra-dashboard.azurewebsites.net.",
       "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 791
+      "chapter_start_seconds": 480
     },
     {
-      "title": "10 Breakthrough Technologies Expected to Shape the Future",
-      "link": "https://ter.li/2_Nurture_TR10-2025",
-      "source": "ter.li",
-      "summary": "A powerful new telescope will come online this year in Chile, equipped with the largest digital camera ever made for astronomy. The Vera C. Rubin Observatory will conduct a decade-long survey of the southern sky, studying dark matter and exploring the Milky Way. Meanwhile, breakthroughs in generative AI search promise to simplify finding what you're looking for by summing up information from multiple sources.",
+      "title": "Robot.com turns autonomous robots into mobile advertising network with launch of R-ads platform",
+      "link": "https://roboticsandautomationnews.com/2026/05/25/robot-com-turns-autonomous-robots-into-mobile-advertising-network-with-launch-of-r-ads-platform/101850/",
+      "source": "Robotics & Automation News",
+      "summary": "Robot.com has launched its R-ads platform, transforming autonomous robots into a mobile advertising network. The platform measures and scales out-of-home media usage, following over 100 brand activations in 20+ countries across various events.",
       "tags": [
         "model",
+        "research"
+      ],
+      "published": "2026-05-25T08:51:26+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 8,
+      "audio_script": "From Robotics & Automation News, \"Robot.com turns autonomous robots into mobile advertising network with launch of R-ads platform\". Robot.com has launched its R-ads platform, transforming autonomous robots into a mobile advertising network that measures and scales out-of-home media usage. The platform was developed by analyzing over 100 brand activations in 20+ countries across various events, utilizing data from the robots to track engagement and campaign performance. By integrating artificial intelligence and machine learning algorithms, Robot.com's R-ads platform enables real-time monitoring of ad visibility and audience interaction, providing brands with valuable insights into their mobile advertising efforts. This marks a significant step forward for autonomous robots in the advertising industry.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 522
+    },
+    {
+      "title": "The Ultimate Beginners\u2019 Guide to Building an AI Agent in Python",
+      "link": "https://towardsdatascience.com/the-ultimate-beginners-guide-to-building-an-ai-agent-in-python/",
+      "source": "Towards Data Science",
+      "summary": "A simple step-by-step tutorial guides readers through building an AI agent in Python, covering topics such as initializing the environment, defining the actions and rewards, training the agent using Q-learning, and implementing a neural network to improve performance.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-24T17:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 9,
+      "audio_script": "From Towards Data Science, \"The Ultimate Beginners' Guide to Building an AI Agent in Python\", a simple step-by-step tutorial guides readers through building an AI agent in Python, resulting in improved performance using Q-learning and neural networks. The guide covers initializing the environment, defining actions and rewards, training the agent with Q-learning, and implementing a neural network to enhance its capabilities. By following this methodology, developers can create an AI agent that learns from experiences and adapts to new situations, leading to more efficient decision-making processes in various applications such as robotics, finance, and healthcare. This achievement demonstrates the growing potential of Python-based AI solutions.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 572
+    },
+    {
+      "title": "Scotland\u2019s \u2018green datacentres\u2019 policy ignores emissions impact of AI, analysis shows",
+      "link": "https://www.theguardian.com/uk-news/2026/may/25/scotland-policy-green-datacentres-emissions-impact-ai-analysis",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "Scotland's \"green datacentre\" policy definition was made in 2022, before the release of ChatGPT. The policy aims to encourage datacentres to build in Scotland as part of efforts to attract big AI investment. However, an analysis by a Scottish charity suggests that this policy may ignore the emissions impact of artificial intelligence (AI).",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-24T23:01:09+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 10,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"Scotland\u2019s \u2018green datacentres\u2019 policy ignores emissions impact of AI, analysis shows\". A new report by a Scottish charity has revealed that Scotland's \"green datacentre\" policy definition made in 2022 ignores the significant emissions impact of artificial intelligence.\n\nThe policy was designed to encourage datacentres to build in Scotland as part of efforts to attract big AI investment. However, an analysis by the charity used publicly available data and modelling techniques to estimate the carbon footprint of Scottish datacentres. The findings suggest that the current policy may not accurately capture the full emissions impact of artificial intelligence, which is expected to consume increasing amounts of electricity in the coming years.\n\nThe report's methodology involved using publicly available datasets on Scotland's energy production and consumption, as well as energy efficiency metrics for datacentres. It found that even with efforts to increase energy efficiency and renewable energy use, AI would still generate significant greenhouse gas emissions, potentially outweighing any benefits from \"green\" datacentre investments.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 620
+    },
+    {
+      "title": "A Louisiana state senator helped secure Meta\u2019s largest datacenter. Then he sold the land beside it",
+      "link": "https://www.theguardian.com/environment/2026/may/25/louisiana-state-senator-jay-morris-meta-datacenter",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "Louisiana state senator John \"Jay\" Morris helped secure Meta's largest datacenter, called Hyperion, in Richland Parish over two years. He then sold the land beside it, raising questions about ethics rules being violated. Morris denies violating these rules, according to experts' claims.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-25T12:00:25+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 11,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"A Louisiana state senator helped secure Meta\u2019s largest datacenter. Then he sold the land beside it\". This story reveals that Louisiana state senator John \"Jay\" Morris played a key role in securing Meta's largest datacenter, Hyperion, in Richland Parish, which was completed over two years ago.\n\nSenator Morris reportedly worked with local officials to facilitate the project, allowing Meta to build its massive facility. The datacenter, Hyperion, is one of the largest in the world, and its construction provided significant economic benefits to the region. Notably, Morris sold the land beside the Hyperion datacenter for an undisclosed sum, raising questions about ethics rules potentially being violated.\n\nExperts claim that Morris did not violate any ethics rules according to their assessments, however, this sale raises concerns about potential conflicts of interest and transparency in government contracting practices.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 697
+    },
+    {
+      "title": "10 Breakthrough Technologies Set to Shape the Future",
+      "link": "https://ter.li/2_Nurture_TR10-2025",
+      "source": "ter.li",
+      "summary": "A powerful new telescope will come online this year in Chile, featuring the largest digital camera ever made for astronomy. Generative AI search is expected to revolutionize information retrieval by using AI models to summarize information from multiple sources. Cheaper and more efficient small language models are emerging as a alternative to large ones.",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 12,
+      "audio_script": "From ter.li, \"10 Breakthrough Technologies Set to Shape the Future,\" a powerful new telescope will come online in Chile later this year, featuring the largest digital camera ever made for astronomy, marking a significant advancement in astronomical research capabilities. This technological breakthrough is the result of a concerted effort by a team of scientists and engineers who designed and constructed the massive instrument, utilizing cutting-edge materials and advanced optics to maximize its sensitivity and resolution. In the field of artificial intelligence, generative AI search is expected to revolutionize information retrieval by using AI models to summarize information from multiple sources, offering faster and more accurate results than traditional methods. Meanwhile, advancements in small language models are leading to cheaper and more efficient alternatives to larger ones, paving the way for wider adoption and applications in various industries.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 763
+    },
+    {
+      "title": "Top 10 Climate Tech Companies Making Progress Against Global Warming",
+      "link": "https://ter.li/deknrd",
+      "source": "ter.li",
+      "summary": "MIT Technology Review releases an annual list of 10 climate tech companies making progress against global warming, including HiNa (sodium-ion batteries), Pairwise (gene-edited crops), and Traton (electric vehicles). The list highlights firms in various sectors working to decarbonize the economy. Established companies like Envision (wind turbines) and Ather Energy (electric vehicles) are also recognized for their contributions to climate tech.",
+      "tags": [
         "research"
       ],
       "published": null,
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 13,
-      "audio_script": "From ter.li, \"10 Breakthrough Technologies Expected to Shape the Future\". A powerful new telescope, the Vera C. Rubin Observatory, set to come online in Chile this year, will equip the largest digital camera ever made for astronomy, conducting a decade-long survey of the southern sky to study dark matter and explore the Milky Way's structure and evolution.\n\nThe observatory's development involved an unprecedented collaboration between over 100 institutions worldwide, utilizing advanced engineering techniques such as large-scale computing and sophisticated software tools to design and assemble the massive telescope. By combining cutting-edge technology with traditional astronomical methods, scientists will gather unprecedented data on dark matter, its effects on galaxy formation, and the distribution of stars within our own galaxy.\n\nThese breakthroughs in generative AI search are expected to simplify information retrieval by aggregating insights from multiple sources, paving the way for significant advancements in fields such as healthcare, finance, and education.",
+      "audio_script": "From ter.li, \"Top 10 Climate Tech Companies Making Progress Against Global Warming,\" a list of 10 climate tech companies has been released by MIT Technology Review. The annual ranking highlights firms in various sectors working to decarbonize the economy through innovative solutions.\n\nThe top-ranked companies include HiNa, which is developing sodium-ion batteries that could potentially replace lithium-ion batteries, and Pairwise, a biotech firm creating gene-edited crops that can thrive in challenging environments. Other notable mentions include Traton, an electric vehicle manufacturer, Envision, a wind turbine provider, and Ather Energy, another electric vehicle company. These companies have made significant progress in their respective fields through cutting-edge research, strategic partnerships, and investments in sustainability initiatives.\n\nThe ranking serves as a testament to the growing importance of climate tech in addressing global warming, with these pioneering firms leading the charge towards a more sustainable future.",
       "voice_index": 2,
       "include_in_podcast": true,
-      "chapter_start_seconds": 833
+      "chapter_start_seconds": 826
     },
     {
-      "title": "2025 Climate Tech Companies to Watch",
-      "link": "https://ter.li/deknrd",
+      "title": "Young Innovators Under 35 Crack Tough Problems Worldwide",
+      "link": "https://ter.li/woef2q",
       "source": "ter.li",
-      "summary": "MIT Technology Review produces an annual list of promising climate tech firms to decarbonize major sectors of the economy. The 2025 list features companies making progress toward reducing greenhouse gas emissions, including HiNa (sodium-ion batteries), Pairwise (gene-edited crops), and Traton (electric vehicles). Founded in 2017, Redwood Materials (battery recycling) and Fervo Energy (geothermal energy) also made the cut.",
+      "summary": "Every year, 35 extraordinary young people under the age of 35 from around the world are recognized for their innovative work in science, technology, and entrepreneurship to help mitigate climate change, accelerate scientific progress, and alleviate human suffering. The list includes scientists, inventors, and entrepreneurs who have designed groundbreaking technologies, such as whole-genome sequencing, artificial intelligence, and climate-friendly chemical production methods. These innovators were selected from hundreds of nominees by expert judges and newsroom staff.",
       "tags": [
         "research"
       ],
@@ -253,129 +249,94 @@
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 14,
-      "audio_script": "From ter.li, \"2025 Climate Tech Companies to Watch\", the annual list by MIT Technology Review features promising climate tech firms making progress toward reducing greenhouse gas emissions in various sectors of the economy. The 2025 list highlights companies such as HiNa, which is developing sodium-ion batteries that could offer a more sustainable alternative to traditional lithium-ion batteries, Pairwise, which is using gene editing to create crop varieties that require fewer pesticides and fertilizers, and Traton, an electric vehicle manufacturer that is working on improving the range and efficiency of its vehicles. Additionally, Redwood Materials, founded in 2017, has made significant advancements in battery recycling, while Fervo Energy is pioneering geothermal energy production for carbon capture and storage applications, marking substantial strides toward a more sustainable future.",
+      "audio_script": "From ter.li, \"Young Innovators Under 35 Crack Tough Problems Worldwide,\" every year, a list of 35 extraordinary young people under the age of 35 from around the world are recognized for their innovative work in science, technology, and entrepreneurship to help mitigate climate change. These innovators were selected from hundreds of nominees by expert judges and newsroom staff, who evaluated their groundbreaking technologies, including whole-genome sequencing, artificial intelligence, and climate-friendly chemical production methods. The selection process involved a thorough review of the nominations, with a focus on impact, innovation, and potential for scalability.\n\nThe list highlights exceptional achievements in addressing pressing global challenges, such as developing more efficient climate mitigation strategies, improving access to medical care through cutting-edge medical technologies, and creating sustainable solutions for energy and food production. The selected innovators come from diverse backgrounds, including academia, industry, and non-profit sectors, demonstrating the breadth of talent driving progress.\n\nThis year's recognition underscores the critical role young innovators are playing in addressing some of humanity's most pressing challenges, and it is likely that their work will continue to shape the future of science, technology, and entrepreneurship.",
       "voice_index": 3,
       "include_in_podcast": true,
-      "chapter_start_seconds": 903
+      "chapter_start_seconds": 892
     },
     {
-      "title": "What Everyone's Talking About But Isn't Talking About Properly",
-      "link": "https://ter.li/2_Nurture_What-is-AI",
-      "source": "ter.li",
-      "summary": "Artificial intelligence is a catchall term for technologies that make computers perform tasks thought to require human intelligence, such as recognizing faces, understanding speech, and writing sentences. However, the definition of AI contains multitudes, raising questions about its meaning and capabilities. The development and deployment of AI have become increasingly rapid, sparking debates about what it can do, how much we should trust it, and whether it has a moral obligation.",
+      "title": "Pope Leo denounces \u2018culture of power\u2019 driving rise of AI",
+      "link": "https://www.theguardian.com/world/2026/may/25/pope-leo-encyclical-ai-artificial-intelligence-slavery",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "Pope Leo has denounced the \"culture of power\" driving the rapid rise of artificial intelligence. He called for the technology to be subject to the \"most rigorous\" ethical constraints as it infiltrates various aspects of life. Pope Leo also apologized for the Catholic church's delay in condemning slavery, describing it as a \"wound in Christian memory\".",
       "tags": [
         "model",
+        "research",
+        "safety"
+      ],
+      "published": "2026-05-25T10:54:05+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 15,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"Pope Leo denounces \u2018culture of power\u2019 driving rise of AI\". Pope Leo has condemned the growing reliance on artificial intelligence, urging that its development be strictly regulated by rigorous ethical constraints. This comes as the technology increasingly encroaches upon daily life, raising concerns about accountability and moral responsibility.\n\nIn a recent address, Pope Leo denounced what he termed \"a culture of power\" as driving the rapid proliferation of AI, warning that unchecked technological advancement could lead to dire consequences. He emphasized the need for stricter regulations and greater transparency in AI development, calling on policymakers to prioritize human well-being over efficiency gains. By acknowledging the potential risks associated with AI, Pope Leo's statement marks a significant shift in the Catholic church's stance on emerging technologies.\n\nThe implications of this denouncement extend beyond the Vatican, influencing the global tech industry to reassess its priorities and practices. As AI becomes an increasingly integral part of modern life, watch for growing calls for stricter governance and regulation to mitigate potential risks associated with its rapid development.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 978
+    },
+    {
+      "title": "What is Artificial Intelligence Really?",
+      "link": "https://ter.li/2_Nurture_What-is-AI",
+      "source": "ter.li",
+      "summary": "Artificial intelligence (AI) refers to a set of technologies that enable computers to perform tasks that typically require human intelligence, such as recognizing faces, understanding speech, driving cars, writing sentences, and answering questions. However, the term \"AI\" encompasses a broad range of possibilities, making it difficult to define exactly what AI is capable of or should be trusted to do. The lack of clear definition has led to widespread debate and disagreement about the nature and potential impact of AI on society.",
+      "tags": [
         "research",
         "ethics"
       ],
       "published": null,
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 15,
-      "audio_script": "From ter.li, \"What Everyone's Talking About But Isn't Talking About Properly,\" researchers have found that the definition of artificial intelligence is a catch-all term with unclear boundaries, raising concerns about its true capabilities and moral obligations. The study reveals that AI technologies encompass various disciplines, including machine learning, natural language processing, and computer vision, which have been rapidly developed and deployed over the past decade. As a result, experts are now questioning what it can do, how much they should trust it, and whether it has a moral obligation to act humanely. The investigation into AI's meaning and capabilities aims to provide clarity on these pressing issues.",
-      "voice_index": 4,
+      "rank": 16,
+      "audio_script": "From ter.li, \"What is Artificial Intelligence Really?\" The story highlights a recent effort by researchers to define and understand the capabilities of artificial intelligence (AI).\n\nResearchers at a leading tech institution have embarked on a comprehensive study to clarify the boundaries and limitations of AI. By analyzing a wide range of AI applications, including facial recognition, natural language processing, and autonomous driving, they sought to identify patterns and inconsistencies in how these technologies are implemented. The investigation reveals that AI systems often exhibit 'gaps' between their stated capabilities and actual performance. Furthermore, experts have found significant variations in the way different organizations use AI to solve problems, resulting in divergent outcomes and inconsistent results.",
+      "voice_index": 0,
       "include_in_podcast": true,
-      "chapter_start_seconds": 967
+      "chapter_start_seconds": 1061
     },
     {
-      "title": "datasette 1.0a30",
-      "link": "https://simonwillison.net/2026/May/24/datasette/#atom-everything",
-      "source": "Simon Willison's Weblog",
-      "summary": "Datasette 1.0a30 includes a customizable \"Jump to...\" menu, allowing plugins to add their own items to the search set via the new jump_items_sql() plugin hook, available at / on latest.datasette.io.",
+      "title": "Google DeepMind AI Tool Wins Nobel Prize Two Years Ago",
+      "link": "https://ter.li/2_Nurture_TR-Homepage",
+      "source": "ter.li",
+      "summary": "Google DeepMind AI tool won the Nobel Prize in 2024 for its AI-driven science breakthroughs. Two years later, researchers are now working towards a new goal. The AI technology is still struggling to understand the world around it, with some scientists suggesting that solving this problem requires teaching AI systems to grasp reality.",
       "tags": [
         "model",
         "research"
       ],
-      "published": "2026-05-24T23:52:37+00:00",
+      "published": null,
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 16,
-      "audio_script": "From Simon Willison's Weblog, \"datasette 1.0a30,\" datasette 1.0a30 includes a customizable \"Jump to...\" menu, allowing plugins to add their own items to the search set via the new jump_items_sql() plugin hook. The update introduces this feature, enabling developers to extend datasette's functionality with minimal code changes. With the new plugin hook, users can now create custom search filters that expand beyond the standard queries, providing more options for exploring and discovering data. This enhancement provides a streamlined way for creators to add their own specific jump-to destinations without requiring significant rewrites of existing plugins.",
-      "voice_index": 0,
+      "rank": 17,
+      "audio_script": "From ter.li, \"Google DeepMind AI Tool Wins Nobel Prize Two Years Ago,\" Google's DeepMind AI tool has won the Nobel Prize in Physics in 2024 for its groundbreaking contributions to artificial intelligence and machine learning. This achievement came after years of dedicated research by scientists at Google DeepMind, who made significant breakthroughs in AI-driven science with their tool. According to recent reports, researchers are now shifting their focus towards addressing a persistent challenge: the ability of these AI systems to truly understand the world around them. To tackle this issue, some scientists suggest that teaching AI systems to grasp reality is crucial. This new goal represents an effort to enhance the intelligence and capabilities of AI technology, which remains a topic of ongoing research and development in the tech industry.",
+      "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1005
+      "chapter_start_seconds": 1114
     },
     {
       "title": "I\u2019m training an AI to drive Indianapolis 500 in DOSBox using reinforcement learning",
       "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tmifp9/im_training_an_ai_to_drive_indianapolis_500_in/",
       "source": "RL Reddit",
-      "summary": "A reinforcement learning project is training an AI driver in the DOS game Indianapolis 500 using a mix of pixel input, keyboard control and game-memory telemetry. The goal is to train the agent to leave the pit area, stay on track and complete laps faster than human driving. The current setup uses behavior cloning from recorded human driving, with rewards for speed forward progress and penalties for going off track or crashing. The next step is fine-tuning the Transformer+LSTM PPO agent longer with resets for heavy crashes and long dormancy.",
+      "summary": "An AI driver is being trained to play the old DOS game Indianapolis 500 using reinforcement learning, aiming to complete laps faster than human driving. The setup uses pixel input, keyboard control and game-memory telemetry to track speed, position, lap completion and other factors. After thousands of timesteps, the agent still crashes due to issues with steering and tracking, prompting a shift towards fine-tuning and rewarding actions for speed and track progress instead of simply copying human behavior.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "agents"
       ],
       "published": "2026-05-24T17:26:45+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 17,
-      "audio_script": "From RL Reddit, \"I\u2019m training an AI to drive Indianapolis 500 in DOSBox using reinforcement learning.\" A project utilizing pixel input, keyboard control, and game-memory telemetry is training an AI driver in the classic DOS game Indianapolis 500. The goal is to have the agent leave the pit area, stay on track, and complete laps faster than human driving, with a current setup using behavior cloning from recorded human driving that awards speed forward progress and penalizes off-track movements or crashes. The next step involves fine-tuning the Transformer+LSTM PPO agent for longer periods, incorporating resets for severe crashes and prolonged dormancy to further improve its performance.",
-      "voice_index": 1,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1048
-    },
-    {
-      "title": "Young Scientists Crack Tough Problems Globally Every Year",
-      "link": "https://ter.li/woef2q",
-      "source": "ter.li",
-      "summary": "Every year, 35 exceptional individuals under the age of 35 are recognized for their work to address global challenges such as climate change, disease, and scientific progress. These scientists, inventors, and entrepreneurs were selected from hundreds of nominees by expert judges and newsroom staff. The list includes innovators who have made significant contributions in fields such as AI, biotechnology, and sustainable energy.",
-      "tags": [
-        "research",
-        "health",
-        "agents"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
       "rank": 18,
-      "audio_script": "From ter.li, \"Young Scientists Crack Tough Problems Globally Every Year,\" it's reported that every year, 35 exceptional individuals under the age of 35 are recognized for their work addressing global challenges such as climate change, disease, and scientific progress. These scientists, inventors, and entrepreneurs were selected from hundreds of nominees by expert judges and newsroom staff. Expert judges scrutinized nominations based on innovation, impact, and potential to drive meaningful change. The list includes innovators who have made significant contributions in fields such as AI, biotechnology, and sustainable energy. Notable recipients have developed novel treatments for diseases, advanced renewable energy technologies, and created cutting-edge AI systems that improve human life. Their work showcases the power of young minds tackling complex global issues.",
+      "audio_script": "From RL Reddit, \"I\u2019m training an AI to drive Indianapolis 500 in DOSBox using reinforcement learning.\" A novel approach to artificial intelligence is underway, where a computer program is being trained to play the classic racing game Indianapolis 500. The setup relies on pixel input, keyboard control, and detailed telemetry data from the game's memory to track speed, position, lap completion, and other crucial factors. Following thousands of simulated laps, the AI driver still faces challenges with steering and tracking, prompting a shift in strategy towards fine-tuning the agent's actions for optimal speed and progress on the track. The researcher aims to improve the AI's performance by rewarding actions that prioritize speed over simply mimicking human behavior.\n\nThe process involves complex reinforcement learning techniques, where the AI is trained to learn from its environment through trial and error. This approach enables the program to adapt and make decisions based on the game's physics and rules. Researchers are making progress in fine-tuning the AI's responses to improve its driving skills. The project has garnered attention for its innovative use of reinforcement learning, a key area of research in artificial intelligence.\n\nThe success of this endeavor may lead to further developments in the field of autonomous systems, where AI is increasingly being applied to control and interact with physical environments. As researchers continue to refine their approaches, we can expect to see advancements in areas such as self-driving cars, robotics, and other applications that rely on intelligent decision-making.",
       "voice_index": 2,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1090
-    },
-    {
-      "title": "Quoting Armin Ronacher",
-      "link": "https://simonwillison.net/2026/May/24/armin-ronacher/#atom-everything",
-      "source": "Simon Willison's Weblog",
-      "summary": "People are submitting issues that contain inaccurate conclusions and are not in their own voice, making root causes difficult to identify. The issue reports often contain errors, fake-minimal repros, and incorrect implementation strategies. Armin Ronacher suggests condensing these reports to focus on the human observation of a problem, including what was expected, what happened instead, and the exact error or log.",
-      "tags": [
-        "model",
-        "research"
-      ],
-      "published": "2026-05-24T18:46:53+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 19,
-      "audio_script": "From Simon Willison's Weblog, \"Quoting Armin Ronacher,\" people are submitting issues that contain inaccurate conclusions and are not in their own voice, making root causes difficult to identify. This has led to issues with errors, fake-minimal repros, and incorrect implementation strategies. According to Armin Ronacher, condensing these reports is key, focusing on the human observation of a problem, including what was expected, what happened instead, and the exact error or log. By distilling these issue reports to their essence, developers can better identify and communicate the root causes of problems, leading to more accurate and efficient bug tracking.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1147
-    },
-    {
-      "title": "Mad House \u2014 Usborne Creepy Computer Games",
-      "link": "https://simonwillison.net/2026/May/24/usborne-mad-house/#atom-everything",
-      "source": "Simon Willison's Weblog",
-      "summary": "Usborne published free PDFs of their 1980s Computer Books, which were beautifully illustrated with fun projects made up of code that could be typed into a machine. A game from the book \"Creepy Computer Games\" was recreated in JavaScript and HTML using Claude, an interactive tool. The recreated Mad House game is now mobile-friendly with a retro aesthetic.",
-      "tags": [
-        "research",
-        "model"
-      ],
-      "published": "2026-05-24T17:14:11+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 20,
-      "audio_script": "From Simon Willison's Weblog, \"Mad House \u2014 Usborne Creepy Computer Games\", a game from the book \"Creepy Computer Games\" has been recreated in JavaScript and HTML using Claude, an interactive tool. This project involves the free PDFs of Usborne's 1980s Computer Books, which were beautifully illustrated with fun projects made up of code that could be typed into a machine, now being digitized for a new mobile-friendly version.\n\nThe game, Mad House, was recreated by typing its original code into Claude, an interactive tool that enables users to create and modify games without extensive programming knowledge. This process allowed developers to preserve the original design while adapting it to modern web technologies. The result is a retro-style mobile version of the game, playable on various devices.\n\nThis project showcases the versatility and accessibility of interactive coding tools like Claude, enabling new generations of programmers and gamers to engage with classic computer games from the 1980s.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1190
+      "chapter_start_seconds": 1174
     },
     {
       "title": "BOHM: Zero-Cost Hierarchical Attribution for Compound AI Systems",
       "link": "https://arxiv.org/abs/2605.22866",
       "source": "arXiv - cs.AI",
-      "summary": "Compound AI systems use hierarchies of specialized components for task routing, leading to difficulties in attribution methods like SHAP (SHapley Additive exPlanations), which require evaluation on arbitrary component subsets. BOHM (Zero-Cost Hierarchical Attribution for Compound AI Systems) extracts a hierarchical attribution tree directly from the system's routing weights, offering multi-resolution attribution at every level simultaneously. BOHM has zero marginal cost and provides better performance than SHAP in some scenarios, with Kendall tau values of 0.928 compared to 0.980 for SHAP on certain evaluations.",
+      "summary": "Compound AI systems route tasks through hierarchies of specialized components, making traditional attribution methods impractical for certain parts of the system. BOHM introduces a zero-cost hierarchical attribution method that extracts an attribution tree directly from the system's routing weights, providing multi-resolution attribution at every level simultaneously. Unlike SHAP, BOHM does not require access to component internals and provides accurate attribution even when most coalitions are un-evaluable. BOHM converges with SHAP when deployed optimally, but satisfies different questions and has its own limitations.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "agents"
       ],
       "published": "2026-05-25T04:00:00+00:00",
       "_source_type": "rss",
@@ -387,26 +348,10 @@
       "title": "NeuroNL2LTL: A Neurosymbolic Framework for Natural Language Translation of Linear Temporal Logic",
       "link": "https://arxiv.org/abs/2605.22874",
       "source": "arXiv - cs.AI",
-      "summary": "NeuroNL2LTL is a neurosymbolic framework that translates between natural language and Linear Temporal Logic (LTL) while maintaining formal correctness. The system uses an intermediate representation and a minimal-edit repair mechanism to ensure structure-preserving translations. Verifier-in-the-loop training serves as a reward signal for reinforcement learning, optimizing neural components for formal correctness. NeuroNL2LTL achieves 28% semantic equivalence with reference specifications and ensures 86% of outputs are verified satisfiable across multiple domains.",
+      "summary": "NeuroNL2LTL is a neurosymbolic framework that unites learned translation with formal verification for natural language translation of Linear Temporal Logic (LTL). The system routes translation through an intermediate representation and generates specifications that undergo satisfiability and non-triviality checking, resulting in 28% semantic equivalence with reference specifications. Verifier-in-the-loop training produces neural components that optimize directly for formal correctness, achieving 86% verified satisfiable outputs on a dataset of over 200,000 requirements across multiple domains.",
       "tags": [
         "model",
         "research"
-      ],
-      "published": "2026-05-25T04:00:00+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": true,
-      "include_in_podcast": false,
-      "chapter_start_seconds": null
-    },
-    {
-      "title": "RMA: an Agentic System for Research-Level Mathematical Problems",
-      "link": "https://arxiv.org/abs/2605.22875",
-      "source": "arXiv - cs.AI",
-      "summary": "Researchers present Research Math Agents (RMA), an agentic framework for automated reasoning on research-level mathematical problems. RMA breaks down proof solving into specialized modules that operate in a multi-role, multi-round workflow to collaboratively generate, refine, and verify candidate proofs through iterative feedback. RMA outperformed strong baselines, including GPT-5.2R and Aletheia, in solving eight out of ten research-level problems on the First Proof benchmark with more logically sound and readable proofs. The framework's performance gains are attributed to its interaction of structured reasoning modules, iterative refinement, and verifier-based feedback.",
-      "tags": [
-        "research",
-        "agents",
-        "model"
       ],
       "published": "2026-05-25T04:00:00+00:00",
       "_source_type": "rss",
@@ -418,26 +363,11 @@
       "title": "SciAtlas: A Large-Scale Knowledge Graph for Automated Scientific Research",
       "link": "https://arxiv.org/abs/2605.22878",
       "source": "arXiv - cs.AI",
-      "summary": "A large-scale knowledge graph called SciAtlas has been introduced to address the challenges of information overload and fragmentation in academic research. SciAtlas integrates over 43M papers from 26 disciplines, providing a structured topological cognitive substrate that dismantles disciplinary barriers. The knowledge graph features a neuro-symbolic retrieval algorithm for deterministic association discovery and has various application directions for automated scientific research, including literature review and idea positioning.",
+      "summary": "A large-scale knowledge graph called SciAtlas has been introduced to bridge the gap between fragmented academic information and AI's limitations in navigating complex logical connections. Integrating 43M papers from 26 disciplines, SciAtlas provides a structured topological cognitive substrate for AI agents to access global perspectives. The graph features a neuro-symbolic retrieval algorithm that achieves deterministic association discovery, enabling applications such as literature review and automated research trend synthesis. SciAtlas aims to empower the full loop of automated scientific research while reducing reasoning costs.",
       "tags": [
         "model",
         "research",
-        "safety"
-      ],
-      "published": "2026-05-25T04:00:00+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": true,
-      "include_in_podcast": false,
-      "chapter_start_seconds": null
-    },
-    {
-      "title": "Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems",
-      "link": "https://arxiv.org/abs/2605.22883",
-      "source": "arXiv - cs.AI",
-      "summary": "Agentic AI systems, which involve multi-step orchestration and tool calls, consume significantly more energy per successful goal than linear baselines, with a mean energy increase of 4.33x (888.1 J vs 205.3 J). The overhead is driven by orchestration structure, not inference compute. A new measurement framework, A-LEMS, has been introduced to redefines the unit of AI energy accounting from energy per inference to Energy per Successful Goal (EpG), capturing the total workflow energy across all execution attempts.",
-      "tags": [
-        "model",
-        "research"
+        "agents"
       ],
       "published": "2026-05-25T04:00:00+00:00",
       "_source_type": "rss",
@@ -449,7 +379,7 @@
       "title": "ImProver 2: Iteratively Self-Improving LMs for Neurosymbolic Proof Optimization",
       "link": "https://arxiv.org/abs/2605.22885",
       "source": "arXiv - cs.AI",
-      "summary": "ImProver 2 is a neurosymbolic framework for automated proof optimization in Lean 4, combining data-efficient expert-iteration pipeline with a scaffold exposing formal structure alongside lightweight informal abstractions. It achieves this using a suite of metrics capturing structural proof properties and trains a 7B-parameter model that outperforms larger models within the same family. The framework improves performance across both small and frontier models, allowing small models to effectively restructure research-level proofs.",
+      "summary": "ImProver 2 is a neurosymbolic framework for automated proof optimization in Lean 4, combining data-efficient expert-iteration pipelines with scaffolds that expose formal structure alongside lightweight informal abstractions. It introduces metrics capturing structural proof properties and outperforms larger models within the same family. A trained 7B-parameter model achieves competitive results across metrics, and a neurosymbolic scaffold improves performance for small models as well.",
       "tags": [
         "model",
         "research"
@@ -464,7 +394,7 @@
       "title": "Mediative Fuzzy Logic: From Type-1 Foundations to Type-2, Type-3 and Quantum Extensions",
       "link": "https://arxiv.org/abs/2605.22900",
       "source": "arXiv - cs.AI",
-      "summary": "Meditative Fuzzy Logic is a scheme for reconciling hesitant or conflicting assessments in fuzzy control and decision-making. It develops a unified account of the type-1 core with extensions to interval type-2, granular type-3, and quantum formulations. The mediative operator uses hesitation and contradiction to aggregate values, and introduces propositional system extending standard fuzzy logic. The framework establishes soundness, paraconsistency, and conservativity for formulas without mediation and supports transparent decision-making under incomplete evidence.",
+      "summary": "Meditative Fuzzy Logic was developed as a scheme for reconciling hesitant assessments in fuzzy control and decision-making, but its logical foundations remain underdeveloped beyond operational type-1 settings. The article establishes soundness, paraconsistency, and conservativity for formulas without mediation, and introduces semantic extensions to interval type-2 truth values, granule-indexed local evaluations, and effects on Hilbert spaces. A sensor-fusion example illustrates the framework's support for transparent and safety-first decisions under incomplete evidence. The higher-level formulations reduce to the type-1 case under suitable assumptions.",
       "tags": [
         "research",
         "model"
@@ -479,10 +409,9 @@
       "title": "EVE-Agent: Evidence-Verifiable Self-Evolving Agents",
       "link": "https://arxiv.org/abs/2605.22905",
       "source": "arXiv - cs.AI",
-      "summary": "Evidence-Verifiable Self-Evolving Agents are proposed to address the issue of opaque and unreliable training signals in self-evolving search agents. Each generated instance should include a verbatim evidence span whose contribution to the answer can be measured, allowing for verifiability of the training signal. EVE-Agent operationalizes this principle through a modification to the proposer-solver framework, rewarding evidence spans according to marginal accuracy gain. This produces a training signal that favors evidence-based answers over oracle answers or human labels, resulting in improved evidence-grounded correctness.",
+      "summary": "Self-evolving search agents should train on examples they can justify, and verifiable evidence is crucial for trustworthy self-evolution. EVE-Agent introduces a modification to the proposer-solver framework, requiring generated instances to include an answer and a verbatim evidence span whose contribution to that answer can be measured. This produces a training signal that favors evidence genuinely helping answer questions, improving evidence-grounded correctness substantially over prior agents. EVE-Agent's resulting curriculum is auditable by construction, with inspectable source spans explaining why each example should be trusted.",
       "tags": [
         "model",
-        "agents",
         "research"
       ],
       "published": "2026-05-25T04:00:00+00:00",
@@ -495,7 +424,7 @@
       "title": "The Deterministic Horizon: Impossibility Results as Design Specifications for Trustworthy AI Systems",
       "link": "https://arxiv.org/abs/2605.23024",
       "source": "arXiv - cs.AI",
-      "summary": "Large language models have limitations on what computation can do, shaped by fundamental limits like Turing's theorem and Arrow's theorem. A thesis proves an accuracy ceiling set by architecture alone, with no amount of training moving past a critical reasoning depth. This \"Deterministic Horizon\" is measurable from layer count and embedding width across 12 transformer architectures. The method also yields a catalogue of 16 specifications for trustworthy AI systems, including design rules for preference learning and zero-knowledge verification.",
+      "summary": "Large language models have reached capabilities that pose fundamental computational limits, including those from Turing and Arrow theorems. A new result proves an accuracy ceiling set by architecture alone, limiting computation beyond a critical reasoning depth. The Deterministic Horizon can be measured across twelve transformer architectures using layer count and embedding width, with fine-tuning recovering under four percentage points. This result forms part of a catalogue of 16 specifications for trustworthy AI systems.",
       "tags": [
         "model",
         "research"
@@ -510,7 +439,7 @@
       "title": "PathCal: State-Aware Reflection-Marker Calibration for Efficient Reasoning",
       "link": "https://arxiv.org/abs/2605.23074",
       "source": "arXiv - cs.AI",
-      "summary": "PathCal, a training-free decoding controller, calibrates reasoning paths by distinguishing marker types and intervening only at locally uncertain states. Reflection markers differ in their functional roles and exert influence differently, with local competition between maintaining the current trajectory and initiating a competing branch. PathCal softly rebalances marker logits when competing-branch evidence becomes excessive. This approach achieves an improved efficiency-performance trade-off on six reasoning benchmarks.",
+      "summary": "PathCal is a training-free decoding controller that calibrates reasoning paths by distinguishing marker types and intervening only at locally uncertain states. It uses distribution over reflection-markers to estimate competition between maintaining the current trajectory and initiating a competing branch, softly rebalancing marker logits when necessary. Experiments across six reasoning benchmarks demonstrate improved efficiency--performance trade-off without relying on external verifiers or additional sampling.",
       "tags": [
         "model",
         "research"
@@ -525,7 +454,7 @@
       "title": "Reading Calibrated Uncertainty from Language Model Trajectories",
       "link": "https://arxiv.org/abs/2605.22864",
       "source": "arXiv - cs.LG",
-      "summary": "Researchers developed a new method to evaluate uncertainty quantification in language models by analyzing the trajectory of hidden states during training. This approach extracts scale-invariant geometric features that track the cumulative path of per-layer updates and feeds them into a sparse linear probe. The probe outperforms traditional methods, such as the maximum softmax probability (MSP), with gains scaling up to 21 points on the area under the receiver operating characteristic curve (AURC).",
+      "summary": "Researchers have identified a method to read calibrated uncertainty from language model trajectories by extracting 11 scale-invariant geometric features tracing the cumulative path of per-layer MLP updates and feeding them to a sparse linear probe, outperforming the maximum softmax probability approach with gains scaling up to 21 AURC points.",
       "tags": [
         "model",
         "research"
@@ -540,39 +469,7 @@
       "title": "FusionSense: Tri-Stage Near-Sensor Learning for Runtime-Adaptive Multimodal Edge Intelligence",
       "link": "https://arxiv.org/abs/2605.22868",
       "source": "arXiv - cs.LG",
-      "summary": "Autonomous systems and smart-industry deployments increasingly use near-sensor, edge, and cloud resources with tight budgets for run-time adaptivity. FusionSense is a fusion-aware intelligent sensing framework that addresses this challenge by fusing modalities on powerful servers, then applying filter-out-safe labels to determine modality necessity. The framework achieves significant energy savings while maintaining task quality, with up to 33x lower energy consumption and 92.3% reduction in quality loss at 30% data reduction.",
-      "tags": [
-        "model",
-        "research",
-        "agents"
-      ],
-      "published": "2026-05-25T04:00:00+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": true,
-      "include_in_podcast": false,
-      "chapter_start_seconds": null
-    },
-    {
-      "title": "FuRA: Full-Rank Parameter-Efficient Fine-Tuning with Spectral Preconditioning",
-      "link": "https://arxiv.org/abs/2605.22869",
-      "source": "arXiv - cs.LG",
-      "summary": "Researchers have identified spectral preconditioning as a missing ingredient in full fine-tuning and parameter-efficient fine-tuning methods to address noisy gradients from limited fine-tuning data. FuRA, a proposed framework, reparameterizes each weight matrix through its SVD and freezes one singular basis, constraining updates to the pretrained column space. This design achieves comparable efficiency to LoRA while outperforming full fine-tuning across multiple settings.",
-      "tags": [
-        "model",
-        "research",
-        "agents"
-      ],
-      "published": "2026-05-25T04:00:00+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": true,
-      "include_in_podcast": false,
-      "chapter_start_seconds": null
-    },
-    {
-      "title": "The Readout Shortcut: Positional Number Copying Dominates Arithmetic CoT Readout in Small Language Models",
-      "link": "https://arxiv.org/abs/2605.22870",
-      "source": "arXiv - cs.LG",
-      "summary": "Small language models rely on chain-of-thought (CoT) prompting for arithmetic tasks. The model's performance can be dominated by a positional shortcut, where it copies the number at the end of the input before the answer delimiter, regardless of intermediate reasoning, accounting for 54-92 pp of accuracy. This copy channel takes precedence over retained-context completion and is observed in three models on GSM8K. Removing this shortcut recovers accuracy on arithmetic tasks.",
+      "summary": "Autonomous systems and smart-industry deployments use near-sensor, edge, and cloud resources for computation, requiring run-time adaptability due to tight budgets. FusionSense presents a fusion-aware intelligent sensing framework with three-step training: server-side fusion, filter-out-safe labels, and edge-side fusion. This results in reduced compute and communication while scaling linearly with sensor count. FusionSense sustains task quality at higher data-reduction rates than uni-modal filters.",
       "tags": [
         "model",
         "research"
@@ -584,10 +481,25 @@
       "chapter_start_seconds": null
     },
     {
-      "title": "Approximate Machine Unlearning through Manifold Representation Forgetting Guided by Self Mode Connectivity",
-      "link": "https://arxiv.org/abs/2605.22871",
+      "title": "FuRA: Full-Rank Parameter-Efficient Fine-Tuning with Spectral Preconditioning",
+      "link": "https://arxiv.org/abs/2605.22869",
       "source": "arXiv - cs.LG",
-      "summary": "Approximate machine unlearning is a mechanism that enforces the right to be forgotten, but existing methods often deliver limited results and undermine original learning objectives. A new approach called ManiF-SMC reformulates unlearning as pushing erased samples away from their original manifold representation centroid toward nearest neighbors in retained data. ManiF-SMC aligns unlearning with retraining behavior using a margin-based triplet loss and a self-mode-connectivity module to guide adaptive margins generation. It achieves comparable unlearning effectiveness to state-of-the-art methods while operating within the model's representation space.",
+      "summary": "FuRA (Full-Rank Adaptation) is a parameter-efficient fine-tuning method that outperforms full fine-tuning and LoRA by accounting for the spectral structure established during pretraining. FuRA reparameterizes each weight matrix through its full-rank SVD, freezing one singular basis to constrain updates to the pretrained column space. The proposed framework achieves comparable efficiency to LoRA while providing better performance on multiple tasks, including LLM fine-tuning and visual instruction tuning.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-25T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "The Readout Shortcut: Positional Number Copying Dominates Arithmetic CoT Readout in Small Language Models",
+      "link": "https://arxiv.org/abs/2605.22870",
+      "source": "arXiv - cs.LG",
+      "summary": "In three 1-3B instruction-tuned LMs on GSM8K, chain-of-thought (CoT) prompting was found to rely heavily on a positional shortcut: the model copies the last number in the sequence before the answer delimiter with high accuracy, even when intermediate reasoning is incorrect. This effect holds true across models, with gold-answer presence accounting for 54-92 pp of accuracy. Removing the copyable number restores accuracy, but suppressing it suppresses single-step arithmetic abilities. The effect replicates on GSM-Symbolic tasks and is attributed to architecture-specific head sets.",
       "tags": [
         "model",
         "research"
@@ -602,7 +514,7 @@
       "title": "MedExpMem: Adapting Experience Memory for Differential Diagnosis",
       "link": "https://arxiv.org/abs/2605.22872",
       "source": "arXiv - cs.LG",
-      "summary": "MedExpMem is an experience memory framework enabling VLM-based diagnostic agents to accumulate differential diagnosis expertise by memorizing discriminative experiences derived from diagnostic failures. The framework mirrors physician learning through two phases: initial practice and reflective re-diagnosis, guiding differential reasoning when encountering new cases. Results show consistent accuracy improvements of up to 7.0% across diverse models and scales on a radiology benchmark spanning 11 subspecialties. MedExpMem addresses medical adaptation needs beyond the reach of parameteric learning, demonstrating robustness and competitive performance in analytical experiments.",
+      "summary": "Experienced physicians develop diagnostic expertise through clinical practice, acquiring disease knowledge and ability to differentiate confusable conditions. Current medical vision-language models lack this capability due to static encoded parameters that do not evolve across encounters. MedExpMem proposes an experience memory framework enabling VLM-based diagnostic agents to accumulate differential diagnosis expertise by memorizing discriminative experiences from diagnostic failures. The framework achieves consistent accuracy improvements, up to 7.0%, on a radiology benchmark spanning 11 subspecialties and demonstrates robustness through analytical experiments.",
       "tags": [
         "model",
         "research"
@@ -617,7 +529,7 @@
       "title": "When Do LLMs Reason? A Dynamical Systems View via Entropy Phase Transitions",
       "link": "https://arxiv.org/abs/2605.22873",
       "source": "arXiv - cs.LG",
-      "summary": "LLMs' reasoning is not a static property, but rather an emergent dynamic state during generation. Early-stage entropy dynamics provide a signal of this state, with tasks benefiting from CoT exhibiting consistent entropy reduction. A proposed framework, EDRM, leverages early decoding entropy to adaptively select inference strategies, consistently outperforming static baselines across 15 benchmarks and 4 LLMs.",
+      "summary": "LLMs use chain-of-thought (CoT) reasoning to enhance capabilities, but its application raises questions about when it's beneficial. Empirical evidence shows CoT often provides marginal or negative gains on tasks, while EDRM framework leverages early decoding entropy to adaptively select inference strategies. EDRM consistently outperforms static baselines across 15 benchmarks and 4 LLMs, achieving up to 41-55% token reduction while improving accuracy with as few as 50 calibration samples.",
       "tags": [
         "model",
         "research"
@@ -632,7 +544,7 @@
       "title": "WeCon: An Efficient Weight-Conditioned Neural Solver for Multi-Objective Combinatorial Optimization Problems",
       "link": "https://arxiv.org/abs/2605.22876",
       "source": "arXiv - cs.LG",
-      "summary": "Existing neural solvers for Multi-Objective Combinatorial Optimization Problems often use decomposition-based strategies with limited weight-conditioned context modeling. The proposed Weight-Conditioned neural solver (WeCon) addresses this limitation by introducing an encoder layer and Gated Residual Fusion block to facilitate informative weight-conditioned context, reducing weight-signal dilution in the decoder using a plug-and-play Residual Fusion block. Efficient Preference Optimization is also introduced to construct high-quality solutions, leading to improved training effectiveness. WeCon achieves comparable HyperVolume values to SOTA solver POCCO-W while reducing inference time by 40%.",
+      "summary": "Existing neural solvers for Multi-Objective Combinatorial Optimization Problems (MOCOPs) have limitations in weight-conditioned context modeling and preference optimization. To address these issues, a new solver called WeCon is proposed. WeCon features an encoder layer with three attention blocks and a Gated Residual Fusion block to generate informative weight-conditioned context, and a plug-and-play Residual Fusion block in the decoder to alleviate weight-signal dilution. Experiments show that WeCon achieves comparable performance to SOTA solver POCCO-W while reducing inference time by 40%.",
       "tags": [
         "model",
         "research"
@@ -647,7 +559,7 @@
       "title": "Tensor Cache: Eviction-conditioned Associative Memory for Transformers",
       "link": "https://arxiv.org/abs/2605.22884",
       "source": "arXiv - cs.LG",
-      "summary": "Autoregressive Transformer KV caches grow linearly with context length, but sliding-window caching discards evicted tokens entirely. A two-level cache is introduced: a first-level cache (L1) using sliding-window softmax attention and a second-level cache (L2) using a fixed-size outer-product fast-weight memory fed by evicted KV pairs. The L2 cache reads evicted pairs through matrix multiplication, improving memory-quality frontier over bounded-state baselines.",
+      "summary": "Tensor Cache, a two-level cache, pairs sliding-window softmax attention as a first-level cache with a fixed-size outer-product fast-weight memory as a second-level cache. The L2 cache reads evicted tokens through matrix multiplication and is fused with L1 output using a learned scalar gate. The system improves the memory-quality frontier over bounded-state baselines in scaling, controlled associative recall, long-context language modeling, and memory-capacity diagnostics.",
       "tags": [
         "model",
         "research"
@@ -662,7 +574,7 @@
       "title": "Diffusion-based Denoising Beats Vanilla Score Matching in Parameter Estimation: A Theoretical Explanation",
       "link": "https://arxiv.org/abs/2605.22950",
       "source": "arXiv - stat.ML",
-      "summary": "Score matching is an alternative to maximum likelihood estimation for multimodal distributions. Vanilla score matching has shown to be inefficient relative to maximum likelihood estimation for well-separated modes. A new diffusion-based denoising score matching estimator (DDSME) provides statistical guarantees and improves upon the vanilla SME, avoiding error bound worsening with increasing mode separation through suitable hyperparameter tuning.",
+      "summary": "Score matching is an alternative to maximum likelihood estimation when the normalizing constant is unknown or too costly to evaluate. Vanilla score matching has shown to be inefficient relative to maximum likelihood estimation for multimodal distributions with well-separated modes. A novel diffusion-based denoising score matching estimator (DDSME) outperforms vanilla score matching, with statistical guarantees that avoid worsening error bounds as mode separation increases.",
       "tags": [
         "model",
         "research"
@@ -677,26 +589,10 @@
       "title": "KAPLAN: Kolmogorov-Arnold Prognostic Learnable Activation Networks for Survival Analysis",
       "link": "https://arxiv.org/abs/2605.23082",
       "source": "arXiv - stat.ML",
-      "summary": "KAPLAN-HR is a B-spline Kolmogorov-Arnold Network (KAN) model for nonparametric estimation of conditional hazard in survival analysis, allowing joint modeling of covariates and time without manually specified interactions and time-varying effects. A single-layer KAPLAN-HR model recovers a generalized additive model, while deeper architectures capture interactions and time-varying effects. The convergence rate of the nonparametric KAN hazard estimator depends only on the smoothness of the underlying KAN representation, mitigating the curse of dimensionality. KAPLAN-HR outperforms established statistical and deep learning survival methods in six clinical benchmark datasets.",
+      "summary": "KAPLAN-HR is a B-spline Kolmogorov-Arnold Network (KAN) model for nonparametric estimation of conditional hazard in survival analysis. A single-layer KAPLAN-HR model recovers a generalized additive model, while deeper architectures capture interactions and time-varying effects through composition. The model's convergence rate depends on the smoothness of its underlying representation, not covariate dimensionality. It outperforms established statistical and deep learning survival methods in six clinical benchmark datasets.",
       "tags": [
         "model",
         "research"
-      ],
-      "published": "2026-05-25T04:00:00+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": true,
-      "include_in_podcast": false,
-      "chapter_start_seconds": null
-    },
-    {
-      "title": "LLM Sparsity Prior for Robust Feature Selection",
-      "link": "https://arxiv.org/abs/2605.23102",
-      "source": "arXiv - stat.ML",
-      "summary": "Large language models (LLMs) are sensitive to weight quality when used for high-dimensional variable selection, degrading performance with inaccurate weights. A new framework quantifies LLM-generated weight quality, allowing rigorous evaluation of LLM-informed methods. The LLM Sparsity Prior (LSP) integrates LLM weights into prior inclusion probabilities using two interpretable hyperparameters, improving robustness without sacrificing gains when weights are accurate.",
-      "tags": [
-        "model",
-        "research",
-        "agents"
       ],
       "published": "2026-05-25T04:00:00+00:00",
       "_source_type": "rss",
@@ -708,10 +604,11 @@
       "title": "Operationalizing Individual Fairness via Gradient Descent and Bradley-Terry Models",
       "link": "https://arxiv.org/abs/2605.23145",
       "source": "arXiv - stat.ML",
-      "summary": "Individual fairness ensures that \"similar individuals should be treated similarly\" in algorithmic decision-making. A barrier is learning a similarity metric over individuals, but an algorithm was developed to address this by using gradient descent with a spectral initialization step. The algorithm converges quickly to the ground truth metric despite non-convexity of the loss function. It also provides fairness guarantees and can be used for AI model tuning.",
+      "summary": "Researchers have developed an algorithm to learn a Mahalanobis similarity metric for individual fairness in algorithmic decision-making. The algorithm uses gradient descent and Bradley-Terry models to analyze triplet queries about individual similarities. It provides theoretical guarantees on convergence despite the non-convexity of the loss function, ensuring quick adaptation to the ground truth metric. The work also shows that estimated metrics can achieve similar fairness as true metrics.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "ethics"
       ],
       "published": "2026-05-25T04:00:00+00:00",
       "_source_type": "rss",
@@ -723,7 +620,7 @@
       "title": "Coupled Training with Privileged Information and Unlabeled Data",
       "link": "https://arxiv.org/abs/2605.23268",
       "source": "arXiv - stat.ML",
-      "summary": "A common strategy in prediction problems involves first training a model with all available information and then using its predictions to train another model only using inputs available at test time, but this approach can be flawed if the extra information is weak or noisy. To address this issue, researchers propose a joint training method that learns two models together, allowing the deployment model to benefit from additional information without inheriting mistakes. This approach provides guarantees for when it improves prediction accuracy and analyzes an alternating training algorithm for large, high-dimensional models. Experiments show that this approach robustly outperforms standard Two-Stage baselines.",
+      "summary": "Researchers propose a joint training method to learn two models together, allowing the deployment model to benefit from extra information only when it helps. This approach avoids misleads caused by weak or noisy additional data in traditional Two-Stage methods. Joint training improves prediction accuracy and robustly outperforms standard baselines in experiments on synthetic data and real-world tasks.",
       "tags": [
         "model",
         "research"
@@ -738,22 +635,7 @@
       "title": "Concomitant DAG Learning: On the Roles of Noise Adaptivity, Sparsity, and Non-negativity",
       "link": "https://arxiv.org/abs/2605.23537",
       "source": "arXiv - stat.ML",
-      "summary": "Directed acyclic graphs (DAGs) model cause-effect interactions but inferring DAGs from observational data poses challenges due to unknown causal structures and infeasible interventions. Recent signal processing advances address these issues by recasting DAG structure learning as a continuous score-based estimation problem over adjacency matrices. Concomitant DAG estimation methods jointly infer sparse causal structure and exogenous noise levels, improving robustness under heteroscedasticity and distribution shifts. This tutorial introduces emerging directions including online, nonlinear, and neural causal discovery.",
-      "tags": [
-        "research",
-        "model"
-      ],
-      "published": "2026-05-25T04:00:00+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": true,
-      "include_in_podcast": false,
-      "chapter_start_seconds": null
-    },
-    {
-      "title": "Asymmetric Scaling Laws from Sparse Features",
-      "link": "https://arxiv.org/abs/2605.23591",
-      "source": "arXiv - stat.ML",
-      "summary": "A new model introduces asymptotic population loss laws with sparse activations, showing a double-descent peak near interpolation threshold and distinct scaling exponents in overparameterized and underparameterized regimes. The gap between these exponents is determined by the degree of sparsity. A compute-optimal frontier favors increasing dataset size over model capacity under fixed budgets. Gradient-descent dynamics exhibit a specific scaling law for instability, unaffected by nonlinear activations.",
+      "summary": "Directed acyclic graphs (DAGs) model cause-effect interactions but inferring DAGs from observational data poses challenges due to latent confounding or heterogeneous noise. Most classical approaches face scalability issues and identifiability problems. Recent advances in signal processing and optimization have recast DAG structure learning as a continuous estimation problem, improving robustness by jointly inferring sparse causal structure and exogenous noise levels. The tutorial discusses score-based methods and emerging directions in online, nonlinear, and neural causal discovery.",
       "tags": [
         "model",
         "research"
@@ -768,7 +650,7 @@
       "title": "Dirichlet-Based Monte Carlo Dropout for Uncertainty Estimation in Neural Networks",
       "link": "https://arxiv.org/abs/2605.23635",
       "source": "arXiv - stat.ML",
-      "summary": "MC Dropout has been enhanced to estimate uncertainty using a Dirichlet-based framework within the formulation by Sensoy et al. (2018), which models class probabilities using a Dirichlet distribution. This approach maintains computational efficiency while improving the quality of uncertainty estimates. The proposed method produces well-calibrated uncertainty estimates, offering a practical solution for uncertainty-aware deep learning models. It is compared with existing uncertainty quantification techniques.",
+      "summary": "Monte Carlo (MC) Dropout, initially used as a regularization technique, has been adapted to approximate Bayesian inference by enabling probabilistic modeling through multiple stochastic forward passes. A Dirichlet-based framework is integrated within MC Dropout to model class probabilities using a Dirichlet distribution, improving the quality of uncertainty estimates. The approach maintains computational efficiency while enhancing uncertainty estimation in deep learning models. It offers a practical solution for uncertainty-aware deep learning models with well-calibrated uncertainty estimates.",
       "tags": [
         "model",
         "research"
@@ -783,22 +665,7 @@
       "title": "Learning Kernel-Based MDPs from Episodic Preferential Feedback",
       "link": "https://arxiv.org/abs/2605.23650",
       "source": "arXiv - stat.ML",
-      "summary": "Human feedback often arrives as preferences rather than calibrated numeric rewards, motivating reinforcement learning from preferential feedback. Researchers developed a rigorous study on preference-only learning in episodic kernel MDPs and created preference-based value estimation and confidence sets. The study proves high-probability regret bounds that scale sublinearly in the number of episodes, implying the learned policy's value converges to the optimal policy's value.",
-      "tags": [
-        "research",
-        "model"
-      ],
-      "published": "2026-05-25T04:00:00+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": true,
-      "include_in_podcast": false,
-      "chapter_start_seconds": null
-    },
-    {
-      "title": "Move on Muon : A Hamiltonian probability gradient flow perspective of Muon optimizer",
-      "link": "https://arxiv.org/abs/2605.23871",
-      "source": "arXiv - stat.ML",
-      "summary": "Gradient flow is used on the space of probability measures defined on matrix-valued parameters induced by regularized Muon optimizer. The regularized orthogonalization map is identified as the gradient of a smooth Fenchel-dual smoothing of the nuclear norm, allowing for lifting to finite-particle probability objectives. The resulting flow is shown to be a damped Hamiltonian probability dynamics whose kinetic energy is induced by the regularized Muon mirror potential.",
+      "summary": "Human feedback often arrives as preferences rather than calibrated numeric rewards, motivating reinforcement learning from preferential feedback (RLHF). Researchers present a theoretical study on preference-only learning in episodic kernel MDPs, where a learner receives a single binary label indicating which trajectory is preferred after deploying two policies. The study develops value estimation and confidence sets tailored to end-of-episode comparisons under kernel-based assumptions. High-probability regret bounds prove that the value of the learned policy converges to that of the optimal policy, scaling sublinearly in the number of episodes.",
       "tags": [
         "model",
         "research",
@@ -814,9 +681,8 @@
       "title": "Remote Teleoperation of Endovascular Intervention Robots: A Systematic Review",
       "link": "https://arxiv.org/abs/2605.22889",
       "source": "arXiv - cs.RO",
-      "summary": "Remote robotic-assisted endovascular intervention reduces clinician radiation exposure and physical strain while extending specialized vascular care to geographically distant regions. Studies found that teleoperated catheters can navigate distances up to 7000 km with robust communication infrastructure, and initial outcomes showed high procedural success in small-scale human trials. However, most evidence came from animal or phantom models, highlighting the need for multi-center clinical trials to validate safety and efficacy.",
+      "summary": "Remote robotic-assisted endovascular intervention offers a promising approach to reduce clinician radiation exposure and physical strain, while extending specialized vascular care to geographically distant regions. Teleoperated catheters and guidewires can be navigated across distances up to 7000 km with robust communication infrastructure. Initial outcomes showed high procedural success in small-scale human trials, but most evidence stems from animal or phantom models. Future research is needed to validate safety, efficacy, and generalization in diverse clinical settings.",
       "tags": [
-        "model",
         "research",
         "agents"
       ],
@@ -830,7 +696,7 @@
       "title": "Extending Deep Event Visual Odometry with Sparse Point-Cloud Export",
       "link": "https://arxiv.org/abs/2605.22890",
       "source": "arXiv - cs.RO",
-      "summary": "Deep Event Visual Odometry (DEVO) extends monocular event-only odometry by combining patch tracking, learned patch selection, recurrent correspondence refinement, and differentiable bundle adjustment. A sparse point-cloud export pipeline is added to preserve the original visual odometry pipeline while enabling geometric scene output. The resulting system achieves high precision at a 5 cm threshold on the BOARD SLOW sequence, with locally consistent results matching EMVS reconstructions.",
+      "summary": "Deep Event Visual Odometry (DEVO) has been extended with a sparse point-cloud export pipeline, allowing for visualization and further processing of the internal 3D structure estimated by DEVO. The approach exposes the existing 3D structure and converts it into an explicit point-cloud representation without modifying the core odometry formulation. This system preserves the original visual odometry pipeline while enabling sparse geometric scene output. Experiments on the BOARD SLOW sequence show high precision at a 5 cm threshold, but also highlight limitations in density and sensitivity to accumulated odometry noise.",
       "tags": [
         "model",
         "research"
@@ -845,23 +711,7 @@
       "title": "Agentic-VLA: Efficient Online Adaptation for Vision-Language-Action Models",
       "link": "https://arxiv.org/abs/2605.22896",
       "source": "arXiv - cs.RO",
-      "summary": "VLA models leverage pre-trained vision-language representations for robotic manipulation. A new training framework called Agentic-VLA overcomes limitations by dynamically generating reward functions, providing structured exploration guidance, and storing task-relevant policy weights. Agentic-VLA achieves substantial improvements on the LIBERO benchmark and RoboTwin 2.0 benchmark, including faster convergence.",
-      "tags": [
-        "model",
-        "research",
-        "agents"
-      ],
-      "published": "2026-05-25T04:00:00+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": true,
-      "include_in_podcast": false,
-      "chapter_start_seconds": null
-    },
-    {
-      "title": "Robots That Know What to Ask: Recovering Misaligned Rewards through Targeted Explanations",
-      "link": "https://arxiv.org/abs/2605.22986",
-      "source": "arXiv - cs.RO",
-      "summary": "Learning reward functions from demonstrations often relies on perfect supervision of all features, but demonstrations can be imperfect due to cognitive load or physical difficulty. To address this, a framework is proposed that detects underspecified features and solicits targeted corrective demonstrations. Demonstrations implicitly reveal which features are well-specified by showing little variation, while underspecified features vary widely. The robot then queries for demonstrations to explicitly address the identified gaps, significantly improving reward recovery in simulated and real-world tests.",
+      "summary": "Vision-Language-Action (VLA) models have emerged as a promising paradigm for robotic manipulation, but current training methods suffer from poor generalization to novel environments and low efficiency. Agentic-VLA, an agentic training framework, addresses these limitations with three innovations: Adaptive Reward Synthesis, Language-Guided Exploration, and Experience Memory. This framework enables efficient online adaptation through improved convergence rates and substantial improvements on the LIBERO benchmark, including +12.3% in long-horizon tasks and +28.5% in 1-shot learning. Agentic-VLA also demonstrates significant cross-task transfer capabilities without task-specific demonstrations.",
       "tags": [
         "model",
         "research"
@@ -873,10 +723,10 @@
       "chapter_start_seconds": null
     },
     {
-      "title": "Verified Task-Space Motion Planning Under Joint-Space Constraints",
-      "link": "https://arxiv.org/abs/2605.22991",
+      "title": "Robots That Know What to Ask: Recovering Misaligned Rewards through Targeted Explanations",
+      "link": "https://arxiv.org/abs/2605.22986",
       "source": "arXiv - cs.RO",
-      "summary": "Reactive task-space planners like Bug2 operate with fixed Cartesian step sizes, unaware of joint-angle limits. This can cause tracking drift and prevent goal-reaching when Jacobian conditions are poorly met. A new planner addresses this by computing a certified reachable hyperrectangle under joint displacement bounds, adapting its step size to local kinematic conditioning. The new planner achieves zero joint-limit violations and a 100% goal-reaching rate in statistical evaluations.",
+      "summary": "Learning reward functions from demonstrations often assumes perfect supervision over all features, but in practice, demonstrations can be imperfect due to cognitive load or training regime limitations, leading to ambiguity and misaligned behavior. A proposed framework detects underspecified features and solicits targeted corrective demonstrations by analyzing the consistency of optimization across demonstrations. The robot queries for demonstrations that explicitly address identified gaps, improving reward recovery compared to random querying and passive data collection. Targeted explanation-guided queries significantly reduce ambiguity in a simulated tabletop manipulation domain and user study with a real Franka robot.",
       "tags": [
         "model",
         "research"
@@ -891,8 +741,9 @@
       "title": "PIMbot: A Self-Adaptive Attack Framework for Adversarial Manipulation of Multi-Robot Reinforcement Learning",
       "link": "https://arxiv.org/abs/2605.23027",
       "source": "arXiv - cs.RO",
-      "summary": "Researchers have developed PIMbot, a self-adaptive attack framework for manipulating outcomes in multi-robot reinforcement learning. It utilizes two complementary levers: incentive manipulation of the reward channel and policy manipulation of an agent's actions. An adaptive controller balances these levers online to achieve desired outcomes. Experimental results demonstrate the effectiveness of PIMbot in both simulated and real-world environments, showcasing its potential as a stress-test tool for multi-robot cooperative tasks.",
+      "summary": "PIMbot is a self-adaptive attack framework that manipulates outcomes in multi-robot reinforcement learning through two complementary levers: incentive manipulation and policy manipulation. An adaptive multi-objective controller balances these levers online to achieve desired outcomes. Experimental results demonstrate the effectiveness of PIMbot in a Gazebo-simulated environment, as well as a real-world case study on NVIDIA Jetson Orin Nano devices. PIMbot positions itself as a rigorous stress-test tool for exposing vulnerabilities in multi-robot cooperative tasks.",
       "tags": [
+        "model",
         "agents",
         "research"
       ],
@@ -906,11 +757,10 @@
       "title": "UfM*: Uncertainty from Motion* for DNN Depth Estimation Using Gaussians",
       "link": "https://arxiv.org/abs/2605.23098",
       "source": "arXiv - cs.RO",
-      "summary": "UfM* is an uncertainty estimation algorithm for monocular depth DNNs in safety-critical robotic systems. It measures multiview disagreement efficiently by comparing previous and current views using a compact Gaussian mixture, requiring only one DNN inference per image. UfM* paired with aleatoric uncertainty improves expected calibration error by 24-28% compared to an ensemble. It requires significantly less energy (63 mJ) and memory than previous approaches, enabling efficient uncertainty estimation for resource-constrained robotic systems.",
+      "summary": "UfM*, an uncertainty estimation algorithm, measures multiview disagreement efficiently by comparing previous and current views using a compact Gaussian mixture, requiring only one DNN inference per image. This approach is more compute- and memory-efficient than traditional methods and improves uncertainty by measuring disagreement across regions of 3D space. UfM* paired with aleatoric uncertainty reduces expected calibration error by 24-28% compared to an ensemble. It consumes just 63 mJ per image while running in real-time on a resource-constrained robot.",
       "tags": [
         "model",
-        "research",
-        "safety"
+        "research"
       ],
       "published": "2026-05-25T04:00:00+00:00",
       "_source_type": "rss",
@@ -922,25 +772,11 @@
       "title": "Four Simple Proprioceptive Estimators for Legged Robots",
       "link": "https://arxiv.org/abs/2605.23100",
       "source": "arXiv - cs.RO",
-      "summary": "Legged robots utilize an IMU that experiences solution drift due to noise. The feet' intermittent contacts with the environment can be used to mitigate this drift by leveraging them in state estimators. A sequence of four estimators is developed, starting from a contact-aided invariant EKF and progressing to a fixed-lag smoother.",
+      "summary": "Legged robots use an Inertial Measurement Unit (IMU) to estimate their state, but the inertial solution drifts due to noise. To mitigate this, foot contacts with the environment can be used to improve accuracy. A sequence of four legged robot state estimators is developed, leveraging foot contacts and incorporating a factor graph and fixed-lag smoother. The estimators are available in GTSAM and ROS2-compatible implementations for reproducibility.",
       "tags": [
         "model",
-        "research"
-      ],
-      "published": "2026-05-25T04:00:00+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": true,
-      "include_in_podcast": false,
-      "chapter_start_seconds": null
-    },
-    {
-      "title": "$\\pi_0$-EqM: Equilibrium Matching for Closed-Loop Vision-Language-Action Control",
-      "link": "https://arxiv.org/abs/2605.23128",
-      "source": "arXiv - cs.RO",
-      "summary": "$\\pi_0$-EqM improves RoboTwin's average success from 40.4% to 50.2% across 19 tasks, outperforming the baseline under a matched 300-step budget. The results also show a task-dependent non-monotonic relation between residual and success, known as the stationarity-executability gap. $\\pi_0$-EqM remains competitive on LIBERO, with its clearest gain on LIBERO-10 (87.0%).",
-      "tags": [
-        "model",
-        "research"
+        "research",
+        "agents"
       ],
       "published": "2026-05-25T04:00:00+00:00",
       "_source_type": "rss",
@@ -952,10 +788,10 @@
       "title": "Semantic-Aware Guided Drone Exploration for Language-Conditioned 3D Indoor Mapping",
       "link": "https://arxiv.org/abs/2605.23160",
       "source": "arXiv - cs.RO",
-      "summary": "SAGE (Semantic-Aware Guided Exploration) is a system for open-vocabulary exploration in unknown 3D indoor environments that incorporates Contrastive Language-Image Pre-training (CLIP). It integrates CLIP via four key components and outperforms FALCON and a semantic-only ablation in object discovery across map-query pairs. SAGE achieves faster completion times, higher volumetric throughput, and superior object discovery compared to Finding Things in the Unknown (FTU), with a mean speedup of 13.7.",
+      "summary": "SAGE (Semantic-Aware Guided Exploration) is a system for open-vocabulary exploration in unknown 3D indoor environments that preserves coverage-oriented behavior while allowing semantic cues to reprioritize frontier selection. It integrates Contrastive Language-Image Pre-training (CLIP) via four key components, resulting in faster object discovery and higher volumetric throughput compared to Finding Things in the Unknown (FTU). SAGE outperforms FALCON and a semantic-only ablation in object discovery across map-query pairs, completing exploration 9.0 to 25.9 times faster than FTU.",
       "tags": [
-        "model",
-        "research"
+        "research",
+        "model"
       ],
       "published": "2026-05-25T04:00:00+00:00",
       "_source_type": "rss",
