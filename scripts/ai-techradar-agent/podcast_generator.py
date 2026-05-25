@@ -53,7 +53,7 @@ def _concat_wavs_to_mp3(wav_files: list[Path], out_mp3: Path) -> None:
                 "ffmpeg", "-y",
                 "-f", "concat", "-safe", "0",
                 "-i", str(concat_file),
-                "-ar", "22050", "-b:a", "128k",
+                "-ar", "22050", "-ac", "1", "-b:a", "64k",
                 str(out_mp3),
             ],
             check=True,
