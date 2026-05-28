@@ -4,10 +4,13 @@ Requires ffmpeg on PATH and Kokoro TTS installed (uv sync).
 """
 
 import json
+import shutil
 import subprocess
 import tempfile
 from datetime import datetime
 from pathlib import Path
+
+_FFMPEG = shutil.which("ffmpeg") or "/opt/homebrew/bin/ffmpeg"
 
 from enricher import KOKORO_VOICES
 
@@ -50,7 +53,7 @@ def _concat_wavs_to_mp3(wav_files: list[Path], out_mp3: Path) -> None:
     try:
         subprocess.run(
             [
-                "ffmpeg", "-y",
+                _FFMPEG, "-y",
                 "-f", "concat", "-safe", "0",
                 "-i", str(concat_file),
                 "-ar", "22050", "-ac", "1", "-b:a", "64k",
