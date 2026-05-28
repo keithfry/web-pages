@@ -298,6 +298,8 @@ def main() -> None:
                         help="Skip Gmail — fetch RSS feeds only")
     parser.add_argument("--no-podcast", action="store_true",
                         help="Skip podcast audio generation")
+    parser.add_argument("--podcast-only", action="store_true",
+                        help="Rebuild podcast from existing JSON (skip fetch/enrich/HTML)")
     parser.add_argument("--refresh-token", action="store_true",
                         help="Delete token.json and re-authenticate with Gmail, then exit")
     args = parser.parse_args()
@@ -338,6 +340,7 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
     log(f"As-of:           {as_of.strftime('%Y-%m-%d %H:%M ET')}")
     log(f"Lookback:        {args.hours}h")
     log(f"Summarize model: {SUMMARIZE_MODEL}")
+    log(f"Rank model:      {RANK_MODEL}")
     log(f"Generate model:  {GENERATE_MODEL}")
     log(f"LLM workers:     {LLM_WORKERS}  (set OLLAMA_NUM_PARALLEL={LLM_WORKERS} to match)")
     log(f"URL workers:     {URL_WORKERS}")
@@ -346,6 +349,32 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
 
     # as_of in UTC for fetchers
     as_of_utc = as_of.astimezone(timezone.utc)
+
+    # --- Podcast-only shortcut ---
+    if args.podcast_only:
+        json_path = OUTPUT_DIR / f"ai-radar-{as_of.strftime('%Y-%m-%d')}.json"
+        if not json_path.exists():
+            log(f"ERROR: no JSON found at {json_path} — run without --podcast-only first")
+            return
+        log(f"── Podcast-only mode: loading {json_path.name} ──")
+        import json as _json
+        from enricher import write_enriched_json
+        enriched_data = _json.loads(json_path.read_text())
+        log("── Generating podcast audio ──")
+        try:
+            mp3_path, chap_path = generate_podcast(enriched_data, as_of, OUTPUT_DIR, log=log)
+            log(f"  Podcast generated: {mp3_path.name}")
+        except Exception as e:
+            log(f"ERROR: podcast generation failed: {e}")
+            return
+        write_enriched_json(enriched_data, json_path)
+        log("  Updated JSON with actual chapter times")
+        if not args.dry_run:
+            log("── Committing and pushing ──")
+            commit_and_push([mp3_path, chap_path, json_path], as_of, log=log)
+        else:
+            log("Dry run — skipping commit.")
+        return
 
     # --- Step 1: Fetch RSS feeds ---
     log("── Step 1: Fetching RSS feeds ──")
@@ -415,7 +444,7 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
     # --- Step 6: Enrich — rank, audio scripts, chapter times, write JSON ---
     log(f"── Step 6: Enriching {len(all_items)} items ──")
     json_path = OUTPUT_DIR / f"ai-radar-{as_of.strftime('%Y-%m-%d')}.json"
-    enriched_data = enrich(all_items, as_of, json_path, model=SUMMARIZE_MODEL, log=log)
+    enriched_data = enrich(all_items, as_of, json_path, summarize_model=SUMMARIZE_MODEL, rank_model=RANK_MODEL, log=log)
     podcast_count = len([i for i in enriched_data["items"] if i.get("include_in_podcast")])
     log(f"  Enrichment complete — {podcast_count} podcast items")
     log("")
