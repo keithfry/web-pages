@@ -9,3 +9,4 @@ scripts/ai-techradar-agent/uv.lock
 **/__pycache__/
 **/*.pyc
 worktrees/
+.gstack/
