@@ -21,6 +21,14 @@ def llm_stats() -> tuple[int, float]:
         return _llm_call_count, _llm_total_duration
 
 
+def unload_all_models() -> list[str]:
+    """Evict all loaded Ollama models from VRAM/RAM. Returns names unloaded."""
+    loaded = [m.model for m in ollama.ps().models]
+    for name in loaded:
+        ollama.generate(model=name, prompt="", keep_alive=0)
+    return loaded
+
+
 def _extract_json(text: str) -> str:
     """Extract the first JSON object from text that may contain prose or markdown code blocks."""
     # Strip markdown code fences: ```json ... ``` or ``` ... ```
@@ -278,15 +286,25 @@ def rank_items(items: list[dict], model: str = RANK_MODEL) -> list[dict]:
     try:
         order: list[int] = json.loads(_extract_json(raw)).get("ranked", [])
         order = [int(x) for x in order]
-        if sorted(order) != list(range(len(items))):
-            raise ValueError(f"Bad ranking: {order}")
+        # Deduplicate (keep first occurrence) and clamp to valid range
+        seen: set[int] = set()
+        clean: list[int] = []
+        for idx in order:
+            if 0 <= idx < len(items) and idx not in seen:
+                clean.append(idx)
+                seen.add(idx)
+        # Append any indices the model dropped, preserving original relative order
+        missing = [i for i in range(len(items)) if i not in seen]
+        if missing:
+            print(f"[warn] rank_items() model omitted {len(missing)} indices, appending at end", file=sys.stderr)
+        clean.extend(missing)
         ranked = []
-        for rank, orig_idx in enumerate(order, 1):
+        for rank, orig_idx in enumerate(clean, 1):
             item = dict(items[orig_idx])
             item["rank"] = rank
             ranked.append(item)
         return ranked
-    except (json.JSONDecodeError, AttributeError, ValueError) as e:
+    except (json.JSONDecodeError, AttributeError) as e:
         print(f"[warn] rank_items() failed ({e}), using original order", file=sys.stderr)
         return [dict(item, rank=i + 1) for i, item in enumerate(items)]
 

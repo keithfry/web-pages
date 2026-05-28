@@ -8,7 +8,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-from config import SUMMARIZE_MODEL
+from config import SUMMARIZE_MODEL, RANK_MODEL
 
 # Words per minute for Kokoro TTS (approximate, used for time estimation)
 _TTS_WPM = 130
@@ -66,7 +66,8 @@ def enrich(
     all_items: list[dict],
     date: datetime,
     output_path: Path,
-    model: str = SUMMARIZE_MODEL,
+    summarize_model: str = SUMMARIZE_MODEL,
+    rank_model: str = RANK_MODEL,
     log=print,
 ) -> dict:
     """Rank, script, and time-estimate all items. Write JSON. Return enriched dict.
@@ -75,13 +76,14 @@ def enrich(
         all_items: deduplicated items from the pipeline (emails + articles + papers)
         date: as_of datetime (ET)
         output_path: where to write the JSON file
-        model: Ollama model for LLM calls
+        summarize_model: Ollama model for scripting/intro generation
+        rank_model: Ollama model for ranking
         log: logging function
 
     Returns:
         enriched dict (same structure as JSON file)
     """
-    from llm import rank_items, generate_audio_script, generate_intro_script
+    from llm import rank_items, generate_audio_script, generate_intro_script, unload_all_models
 
     # Separate podcast candidates (emails + articles) from papers
     podcast_candidates = [i for i in all_items if not i.get("_is_arxiv")]
@@ -89,21 +91,26 @@ def enrich(
 
     log(f"  Enriching {len(podcast_candidates)} podcast candidates + {len(papers)} papers (excluded from audio)")
 
+    # Evict summarize-phase models before loading the (larger) rank model
+    evicted = unload_all_models()
+    if evicted:
+        log(f"  Unloaded models before ranking: {', '.join(evicted)}")
+
     # Rank podcast candidates
-    log("  Ranking items by relevance...")
-    ranked = rank_items(podcast_candidates, model=model)
+    log(f"  Ranking items by relevance (model: {rank_model})...")
+    ranked = rank_items(podcast_candidates, model=rank_model)
 
     # Generate audio script per item (in rank order)
-    log(f"  Generating {len(ranked)} audio scripts...")
+    log(f"  Generating {len(ranked)} audio scripts (model: {summarize_model})...")
     for item in ranked:
-        item["audio_script"] = generate_audio_script(item, model=model)
+        item["audio_script"] = generate_audio_script(item, model=summarize_model)
         item["voice_index"] = (item["rank"] - 1) % len(KOKORO_VOICES)
         item["include_in_podcast"] = True
         log(f"    [{item['rank']}] scripted: {item['title'][:60]}")
 
     # Generate intro script
     log("  Generating intro script...")
-    intro_script = generate_intro_script(ranked, date, model=model)
+    intro_script = generate_intro_script(ranked, date, model=summarize_model)
 
     # Estimate chapter times
     audio_scripts = [item["audio_script"] for item in ranked]
