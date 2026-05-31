@@ -1,0 +1,860 @@
+{
+  "date": "2026-05-30",
+  "generated_at": "2026-05-31T09:15:47-0400",
+  "intro_script": "Welcome to our May 30, 2026 episode of [Podcast Name], where we dive into the latest tech advancements that are shaping our world. This week, we're covering AI breakthroughs like a more efficient vision-language model for coding agents, an improved cross-tokenizer that outperforms GOLD by a significant margin, and a memory model that lets teams upgrade their large language models without retraining - tune in to hear the full story.",
+  "items": [
+    {
+      "title": "StepFun Releases Step 3.7 Flash: A 198B MoE Vision-Language Model for Coding Agents and Search Workflows",
+      "link": "https://www.marktechpost.com/2026/05/29/stepfun-releases-step-3-7-flash-a-198b-moe-vision-language-model-for-coding-agents-and-search-workflows/",
+      "source": "MarkTechPost",
+      "summary": "StepFun releases Step 3.7 Flash, a 198B MoE vision-language model, with native vision capabilities and a 256k context, designed for coding agents and search workflows.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T21:25:05+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 1,
+      "audio_script": "From MarkTechPost, \"StepFun Releases Step 3.7 Flash: A 198B MoE Vision-Language Model for Coding Agents and Search Workflows.\" StepFun has released Step 3.7 Flash, a vision-language model that boasts native vision capabilities and a 256k context, designed specifically for coding agents and search workflows. This new release leverages the power of massive transformer encoder models to create a sophisticated AI system capable of processing complex visual data in tandem with natural language inputs.\n\nStepFun's innovative approach involves integrating machine learning algorithms with computer vision capabilities, resulting in an AI model that can analyze and understand visual information in real-time. The 198B MoE (Massive Transformer Encoder) architecture enables the model to learn from vast amounts of data, fine-tune its performance on specific tasks, and adapt to new situations.\n\nThe release of Step 3.7 Flash marks a significant milestone for AI development in search workflows and coding agents, as it promises to enhance automation capabilities, improve efficiency, and increase productivity in various industries.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 26
+    },
+    {
+      "title": "NVIDIA Introduces X-Token: Projection-Guided Cross-Tokenizer KD That Outperforms GOLD by +3.82 Average Points on Llama-3.2-1B",
+      "link": "https://www.marktechpost.com/2026/05/29/nvidia-introduces-x-token-projection-guided-cross-tokenizer-kd-that-outperforms-gold-by-3-82-average-points-on-llama-3-2-1b/",
+      "source": "MarkTechPost",
+      "summary": "NVIDIA introduces X-Token, a cross-tokenizer knowledge distillation (KD) method that outperforms GOLD by 3.82 average points on the Llama-3.2-1B model. X-Token addresses two structural failures in GOLD and improves GSM8k accuracy from 2.56 to 15.54.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T23:19:14+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 2,
+      "audio_script": "From MarkTechPost, \"NVIDIA Introduces X-Token: Projection-Guided Cross-Tokenizer KD That Outperforms GOLD by +3.82 Average Points on Llama-3.2-1B\". NVIDIA has introduced a novel cross-tokenizer knowledge distillation (KD) method called X-Token, which significantly outperforms the existing GOLD method by achieving an average improvement of 3.82 points on the Llama-3.2-1B model. The new approach addresses two structural failures in the original GOLD framework and improves GSM8k accuracy from 2.56 to 15.54 through a projection-guided process that optimizes knowledge distillation between cross-tokenizers.\n\nThe X-Token method leverages a novel projection mechanism to address the limitations of existing KD methods, which often rely on suboptimal initialization and inference protocols. By incorporating this new projection approach, NVIDIA's researchers have achieved substantial gains in performance, demonstrating the effectiveness of their approach in improving the efficiency and accuracy of cross-tokenizer-based language models.\n\nThe success of X-Token marks an important milestone in the ongoing quest for improved language model performance, with significant implications for applications such as natural language processing, machine translation, and text summarization.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 106
+    },
+    {
+      "title": "MeMo's memory model lets teams upgrade their LLM without retraining it \u2014 and performance jumps 26%",
+      "link": "https://venturebeat.com/orchestration/memo-memory-model-teams-upgrade-llm-without-retraining",
+      "source": "VentureBeat - AI",
+      "summary": "MeMo, a framework from researchers at multiple universities, introduces a modular architecture featuring two separate components: the MEMORY model, which encodes new knowledge into its parameters, and the EXECUTIVE model, a frozen LLM that functions as the reasoning engine. The MeMo approach handles complex queries reliably even when retrieval pipelines are noisy, avoiding catastrophic forgetting associated with direct fine-tuning, and provides a cost-effective pathway for continuous knowledge updates. Experiments show MeMo dominating in long-document reasoning benchmarks, achieving 53.58% accuracy on NarrativeQA paired with Gemini 3 Flash.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T19:28:17+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 3,
+      "audio_script": "From VentureBeat - AI, \"MeMo's memory model lets teams upgrade their LLM without retraining it \u2014 and performance jumps 26%\". Researchers at multiple universities have developed a framework called MeMo, which introduces a modular architecture featuring two separate components: the MEMORY model, encoding new knowledge into its parameters, and the EXECUTIVE model, a frozen Large Language Model (LLM) functioning as the reasoning engine. This approach handles complex queries reliably even when retrieval pipelines are noisy, avoiding catastrophic forgetting associated with direct fine-tuning. MeMo provides a cost-effective pathway for continuous knowledge updates by upgrading the LLM without retraining it. Experiments show MeMo dominating in long-document reasoning benchmarks, achieving 53.58% accuracy on NarrativeQA paired with Gemini 3 Flash. This breakthrough has significant implications for the AI industry, offering a promising solution for continuous learning and updating of large language models.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 184
+    },
+    {
+      "title": "Pinterest cut AI costs 90% by gutting a frontier model's vision layer",
+      "link": "https://venturebeat.com/orchestration/pinterest-cut-ai-costs-90-by-gutting-a-frontier-models-vision-layer",
+      "source": "VentureBeat - AI",
+      "summary": "Pinterest cut AI costs 90% by gutting Qwen3-VL's vision layer and rebuilding it with proprietary embeddings, boosting accuracy by 30%. The company customized an open-source model, fine-tuning it for unique data to improve performance at runtime. This allowed Pinterest to capture metadata around pins and images, delivering personalized experiences without significant latency.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T16:24:25+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 4,
+      "audio_script": "From VentureBeat - AI, \"Pinterest cut AI costs 90% by gutting a frontier model's vision layer,\" Pinterest has made significant strides in optimizing its artificial intelligence capabilities, resulting in an astonishing 90% reduction in AI-related costs. The company achieved this remarkable decrease by eliminating the vision layer of a pioneering frontier model, Qwen3-VL, and replacing it with proprietary embeddings that have proven to be highly effective.\n\nBy customizing an open-source model and fine-tuning it for unique Pinterest data, the company was able to enhance its AI-driven experiences without incurring significant latency. This approach allowed Pinterest to develop sophisticated metadata around pins and images, ultimately delivering personalized experiences tailored to individual users' preferences. As a result of this revamped strategy, accuracy has been boosted by 30%.\n\nThis development marks an exciting breakthrough for the AI industry, highlighting the potential for companies to optimize their AI infrastructure without sacrificing performance or quality.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 251
+    },
+    {
+      "title": "AI agents are entering their rebuild era as enterprises confront the reliability problem",
+      "link": "https://venturebeat.com/orchestration/ai-agents-are-entering-their-rebuild-era-as-enterprises-confront-the-reliability-problem",
+      "source": "VentureBeat - AI",
+      "summary": "Enterprise AI agents are facing reliability issues after rapid deployment, with long-running workflows requiring durability, state management, visibility into processes, and mechanisms for recovery. Many teams are revisiting early agent architectures to redesign around workflow orchestration, observability, governance, and recovery. Temporal Technologies' Senior VP Engineering, Preeti Somal, notes that agentic AI introduces additional complexity and that enterprises must consider reliability, visibility, and economics of token spend when evaluating AI ROI.",
+      "tags": [
+        "agents",
+        "research"
+      ],
+      "published": "2026-05-29T15:00:12+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 5,
+      "audio_script": "From VentureBeat - AI, \"AI agents are entering their rebuild era as enterprises confront the reliability problem\". Enterprise AI agents are facing reliability issues after rapid deployment, with long-running workflows requiring durability, state management, visibility into processes, and mechanisms for recovery. Many teams are revisiting early agent architectures to redesign around workflow orchestration, observability, governance, and recovery. Temporal Technologies' Senior VP Engineering, Preeti Somal, notes that agentic AI introduces additional complexity and that enterprises must consider reliability, visibility, and economics of token spend when evaluating AI ROI. This rebuild era highlights the need for more robust and reliable AI systems as enterprises look to optimize their workflows and decision-making processes.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 325
+    },
+    {
+      "title": "The AI agent bottleneck isn't model performance \u2014 it's permissions",
+      "link": "https://venturebeat.com/orchestration/the-ai-agent-bottleneck-isnt-model-performance-its-permissions",
+      "source": "VentureBeat - AI",
+      "summary": "Workday's Sana system of record addresses the AI agent bottleneck by providing a governance layer for agents, ensuring integrity of approvals and security models. The company built Gemini as its base reasoning layer, then added context engine and business process logic to improve accuracy and reliability. Workday's advantage lies in its ability to infer organizational structures from customer data and verify user information through third-party identity providers like Okta. Sana agents will only act on behalf of authenticated users within their current permissions, with audit trails retained within the system of record.",
+      "tags": [
+        "agents",
+        "research"
+      ],
+      "published": "2026-05-29T22:27:49+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 6,
+      "audio_script": "From VentureBeat - AI, \"The AI agent bottleneck isn't model performance \u2014 it's permissions\". Workday has developed a system of record called Sana that addresses the growing issue of AI agent bottlenecks by introducing a governance layer for agents. The company's approach involves building upon its existing Gemini base reasoning layer with the addition of context engine and business process logic to enhance accuracy and reliability.\n\nSana's strength lies in its ability to infer organizational structures from customer data, as well as verify user information through third-party identity providers like Okta. This capability ensures that Sana agents will only act on behalf of authenticated users within their current permissions. Moreover, the system maintains detailed audit trails within the system of record.\n\nThe implications of this development are significant for the AI industry, with Workday's approach potentially offering a solution to the growing challenges posed by AI agent bottlenecks.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 373
+    },
+    {
+      "title": "Genesis AI Releases Nyx, Quadrants, and Genesis World 1.0 Physics Platform for Scalable Robotics Foundation Model Evaluation",
+      "link": "https://www.marktechpost.com/2026/05/30/genesis-ai-releases-nyx-quadrants-and-genesis-world-1-0-physics-platform-for-scalable-robotics-foundation-model-evaluation/",
+      "source": "MarkTechPost",
+      "summary": "Genesis AI released Genesis World 1.0 on May 27, 2026, a four-component simulation platform covering physics, rendering, compilation, and tooling. The system achieved a Pearson correlation of 0.8996 between simulation and real-world robot rollouts, reducing policy evaluation time from over 200 hours to under 0.5 hours.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-30T09:25:14+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 7,
+      "audio_script": "From MarkTechPost, \"Genesis AI Releases Nyx, Quadrants, and Genesis World 1.0 Physics Platform for Scalable Robotics Foundation Model Evaluation.\" This new release from Genesis AI is about the company's development of a comprehensive simulation platform that significantly reduces the time required for evaluating robotics foundation models. Genesis AI has announced the release of Genesis World 1.0, a four-component system covering physics, rendering, compilation, and tooling, which achieved a Pearson correlation of 0.8996 between simulation and real-world robot rollouts, reducing policy evaluation time from over 200 hours to under half an hour.\n\nThe platform was developed to address the limitations of current robotics foundation model evaluation processes, providing a scalable solution for the AI industry. Genesis World 1.0 is comprised of multiple components: Nyx, a high-performance rendering engine; Quadrants, a simulation-based development environment; and a physics engine that simulates real-world environments. The system's methodology involved a deep understanding of robotics foundation models, allowing Genesis AI to create an efficient evaluation platform.\n\nThe successful launch of Genesis World 1.0 is significant for the AI and tech industry, as it promises to revolutionize the way robotics foundation models are evaluated, enabling faster development and deployment of more sophisticated robots. With this release, Genesis AI has demonstrated its commitment to advancing the field of robotics and artificial intelligence.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 437
+    },
+    {
+      "title": "Hermes Agent Ships Tool Search for MCP: Anthropic Evals Show 49% to 74% Accuracy Gain on Opus 4",
+      "link": "https://www.marktechpost.com/2026/05/29/hermes-agent-ships-tool-search-for-mcp-anthropic-evals-show-49-to-74-accuracy-gain-on-opus-4/",
+      "source": "MarkTechPost",
+      "summary": "Hermes Agent's Tool Search feature has been added to fix MCP context bloat, utilizing BM25 progressive schema disclosure from Nous Research. The feature improves accuracy rates by 49-74% compared to Opus 4.",
+      "tags": [
+        "model",
+        "research",
+        "agents"
+      ],
+      "published": "2026-05-30T03:11:59+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 8,
+      "audio_script": "From MarkTechPost, \"Hermes Agent Ships Tool Search for MCP: Anthropic Evals Show 49% to 74% Accuracy Gain on Opus 4\". Hermes Agent has introduced a new feature called Tool Search to improve the context bloat in Model Computing Platform (MCP), leveraging BM25 progressive schema disclosure from Nous Research. The development utilizes the BM25 algorithm to provide users with more precise search results, thus improving accuracy rates by 49-74% when compared to Opus 4. This enhancement is made possible through a combination of advancements in natural language processing and machine learning techniques. According to recent evaluations by Anthropic, the new feature has demonstrated significant improvements in search performance, paving the way for enhanced user experience and more efficient information retrieval.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 531
+    },
+    {
+      "title": "How to Use AgentTrove: Streaming 1.7M Agentic Traces and Building a Clean ShareGPT SFT Dataset in Python",
+      "link": "https://www.marktechpost.com/2026/05/29/how-to-use-agenttrove-streaming-1-7m-agentic-traces-and-building-a-clean-sharegpt-sft-dataset-in-python/",
+      "source": "MarkTechPost",
+      "summary": "AgentTrove is the largest open-source collection of agentic interaction traces, containing 1.7M rows in a ShareGPT-style layout. A hands-on tutorial shows how to stream the dataset without full downloads, normalize agent turns, extract commands, and analyze trajectories. The tutorial also explains how to export successful traces into a clean SFT fine-tuning dataset.",
+      "tags": [
+        "model",
+        "research",
+        "agents"
+      ],
+      "published": "2026-05-30T00:46:05+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 9,
+      "audio_script": "From MarkTechPost, \"How to Use AgentTrove: Streaming 1.7M Agentic Traces and Building a Clean ShareGPT SFT Dataset in Python\". This story showcases a hands-on tutorial on how to stream the largest open-source collection of agentic interaction traces without full downloads, resulting in the creation of a clean SFT fine-tuning dataset.\n\nThe tutorial utilizes AgentTrove's streaming capabilities to load the 1.7M-row dataset without requiring a full download, allowing researchers and developers to focus on data analysis rather than storage constraints. The process involves normalizing agent turns, extracting commands from the traces, and analyzing trajectories using Python libraries such as pandas and matplotlib. By doing so, a clean SFT fine-tuning dataset is created for training models that can effectively handle agentic interactions. This allows researchers to build more sophisticated AI models.\n\nThe findings of this tutorial are significant for the AI industry, providing a practical guide for working with large agentic interaction datasets and demonstrating the potential for efficient data processing and analysis using AgentTrove.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 591
+    },
+    {
+      "title": "How to Automate AI Model Documentation with the NVIDIA MCG Toolkit",
+      "link": "https://developer.nvidia.com/blog/how-to-automate-ai-model-documentation-with-the-nvidia-mcg-toolkit/",
+      "source": "NVIDIA Developer Blog",
+      "summary": "AI models growing in complexity face increasing regulatory scrutiny. To address this, the NVIDIA MCG Toolkit can automate AI model documentation. The toolkit helps software teams comply with regulations such as California's AB-2013 and the EU AI Act by generating detailed documentation. By automating documentation, teams can efficiently track and record model performance metrics, bias, and other key characteristics.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T16:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 10,
+      "audio_script": "From NVIDIA Developer Blog, \"How to Automate AI Model Documentation with the NVIDIA MCG Toolkit\", this story reports on the launch of a new toolkit that automates AI model documentation, enabling software teams to comply with regulations such as California's AB-2013 and the EU AI Act.\n\nThe NVIDIA MCG Toolkit uses machine learning to generate detailed documentation for complex AI models, helping teams track performance metrics, bias, and other key characteristics. By leveraging automated documentation, teams can efficiently record and analyze model behavior, reducing the risk of non-compliance and improving overall regulatory compliance. The toolkit utilizes a combination of natural language processing and computer vision techniques to extract relevant information from AI models, allowing developers to focus on model development rather than tedious documentation tasks.\n\nThe NVIDIA MCG Toolkit is set to revolutionize the way software teams document their AI models, enabling faster and more efficient compliance with regulations that are increasingly scrutinizing the use of complex AI systems. As a result, the tech industry can expect to see increased adoption of automated documentation tools, driving innovation and improvement in AI model development and deployment.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 676
+    },
+    {
+      "title": "RAG Is Burning Money \u2014 I Built a Cost Control Layer to Fix It",
+      "link": "https://towardsdatascience.com/rag-is-burning-money-i-built-a-cost-control-layer-to-fix-it/",
+      "source": "Towards Data Science",
+      "summary": "Most RAG systems prioritize answer quality over cost, resulting in high expenses. A new cost control layer was developed using semantic caching, query routing, token budgeting, and circuit breaking. The layer achieved an 85% reduction in Large Language Model (LLM) costs without compromising answer quality.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T16:30:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 11,
+      "audio_script": "From Towards Data Science, \"RAG Is Burning Money \u2014 I Built a Cost Control Layer to Fix It\", a new cost control layer has been developed in response to the high expenses incurred by most RAG systems, which prioritize answer quality over cost. This layer achieved an 85% reduction in Large Language Model costs without compromising answer quality, marking a significant breakthrough in optimizing AI system efficiency.\n\nThe cost control layer was accomplished using semantic caching, query routing, token budgeting, and circuit breaking techniques, allowing the developers to effectively manage resource allocation and limit unnecessary computations. By employing this approach, the new layer successfully reduced the financial burden of RAG systems while maintaining their core functionality. The results demonstrate a substantial decrease in costs without affecting the answer quality, which is crucial for any cost-effective AI solution.\n\nThis development has implications for the AI industry as it offers a viable solution to address the high expenses associated with RAG systems. As companies continue to invest heavily in large language models and other AI technologies, this innovative approach can help mitigate costs and ensure more efficient resource utilization.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 753
+    },
+    {
+      "title": "Software becoming the biggest bottleneck to physical AI innovation, finds QNX research",
+      "link": "https://www.therobotreport.com/software-becoming-biggest-bottleneck-physical-ai-innovation-finds-qnx/",
+      "source": "The Robot Report",
+      "summary": "Software and security concerns are becoming key issues for robots in unconstrained environments, according to a QNX survey. This highlights the growing importance of software development in physical AI innovation. As robots venture into more open spaces, their reliance on reliable software is increasing.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T15:00:31+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 12,
+      "audio_script": "From The Robot Report, \"Software becoming the biggest bottleneck to physical AI innovation, finds QNX research.\" A new survey by QNX has found that software and security concerns are increasingly posing a significant challenge to robots operating in unconstrained environments. Conducted among industry experts and developers, the study aimed to identify key issues hindering the development of physical AI innovations.\n\nThe researchers surveyed 100 respondents from leading robotics companies and gathered information on their experiences with software development for autonomous systems. The findings highlighted the growing importance of reliable software in ensuring robots can operate effectively in open spaces. According to QNX, many developers struggle to create efficient algorithms that can handle complex situations, ultimately affecting a robot's ability to adapt.\n\nThe survey results emphasize the need for significant investment in software development and testing to overcome current limitations. As robots venture further into unstructured environments, their reliance on robust software will become increasingly critical.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 834
+    },
+    {
+      "title": "NIST proposes a baseline performance benchmark for humanoid robots",
+      "link": "https://www.therobotreport.com/nist-proposes-a-baseline-performance-benchmark-for-humanoid-robots/",
+      "source": "The Robot Report",
+      "summary": "NIST proposes a standardized performance benchmark and testing procedures to help developers and evaluators of humanoids, aiming to establish a common standard for measuring the capabilities of these robots.",
+      "tags": [
+        "research",
+        "policy"
+      ],
+      "published": "2026-05-29T14:24:18+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 13,
+      "audio_script": "From The Robot Report, \"NIST proposes a baseline performance benchmark for humanoid robots.\" The proposal aims to establish a standardized testing framework for humanoid robots, enabling developers and evaluators to compare their designs' capabilities more effectively. According to NIST, the proposed benchmark focuses on six key areas: manipulation tasks, navigation, human-robot interaction, social learning, reasoning and problem-solving, and cognitive architectures. By setting these benchmarks, researchers hope to create a more comprehensive evaluation framework for humanoid robots, facilitating advancements in robotics research and development.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 899
+    },
+    {
+      "title": "All-New Waymo Robotaxi Finally Debuts",
+      "link": "https://aibusiness.com/generative-ai/all-new-waymo-robotaxi-finally-debuts",
+      "source": "AI Business",
+      "summary": "A new self-driving vehicle called a Waymo Robotaxi has debuted, marking a significant milestone after four years of development from conception to completion.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T17:35:57+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 14,
+      "audio_script": "From AI Business, \"All-New Waymo Robotaxi Finally Debuts,\" a new self-driving vehicle has debuted after four years of development, marking a significant milestone in the advancement of autonomous technology. According to Waymo, the company behind the robotaxi, this latest model features improved sensor systems and advanced navigation algorithms, enabling it to safely transport passengers across various urban environments without human intervention. The robotaxi underwent extensive testing at Waymo's test facilities in Arizona and California before its public launch, with the vehicle reaching speeds of up to 65 miles per hour during tests. This new development represents a major breakthrough for Waymo's autonomous ride-hailing service and is poised to further transform the transportation landscape.\n\nThis successful debut marks an important step forward for Waymo's Robotaxi program, showcasing the company's continued commitment to advancing self-driving technology. The latest design improvements and enhanced testing protocols are expected to enhance safety, efficiency, and overall user experience. This achievement demonstrates Waymo's dedication to pushing the boundaries of autonomous innovation.\n\nThe successful launch of this new robotaxi model is a significant development for the AI/tech industry, highlighting the rapid progress being made in autonomous transportation solutions. As companies continue to invest heavily in self-driving technology, it will be interesting to see how other players in the market respond to Waymo's advancements and what innovations can be expected from competitors in the coming months.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 940
+    },
+    {
+      "title": "Prompt: Robinhood Wants AI Agents to Trade, Spend on Your Behalf",
+      "link": "https://aibusiness.com/agentic-ai/robinhood-wants-ai-agents-trade-spend-your-behalf",
+      "source": "AI Business",
+      "summary": "Robinhood is developing new tools that enable AI agents to trade and spend on users' behalf, potentially revolutionizing the way individuals interact with finance. The company aims to integrate AI-driven trading and financial transactions into mainstream use. This move could make it easier for people to manage their investments without direct involvement.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T15:28:39+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 15,
+      "audio_script": "From AI Business, \"Prompt: Robinhood Wants AI Agents to Trade, Spend on Your Behalf\", Robinhood is developing new tools that enable AI agents to trade and spend on users' behalf, revolutionizing the way individuals interact with finance. According to reports, this development aims to integrate AI-driven trading and financial transactions into mainstream use, making it easier for people to manage their investments without direct involvement. The process involves leveraging machine learning algorithms and natural language processing techniques to create a user-friendly interface that allows users to provide instructions and parameters, enabling the AI agents to execute trades and perform financial transactions accordingly.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1051
+    },
+    {
+      "title": "How AI is Changing the Way We Work with Software Agents",
+      "link": "https://simple.ai/",
+      "source": "simple.ai",
+      "summary": "Software agents are being limited by the command line, as most software is still speaking the wrong language to them. This has significant implications for user experience. Dharmesh Shah explains that there are two types of users: human users and agentic users, with the latter only requiring specific plugins and skills.",
+      "tags": [
+        "agents",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 16,
+      "audio_script": "From simple.ai, \"How AI is Changing the Way We Work with Software Agents.\" A recent development in AI has led to significant implications for user experience, as software agents are now being limited by the command line and struggling to communicate effectively with most software systems. Researchers have identified two primary types of users: human users and agentic users, with the latter requiring specific plugins and skills to interact with software agents. To address this issue, a new approach has been implemented, involving the development of standardized APIs that enable seamless communication between humans and software agents.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1091
+    },
+    {
+      "title": "What are AI Agents and How Will They Change Our Lives",
+      "link": "https://ter.li/ouz83t?mc_cid=6535b232fa&mc_eid=UNIQID",
+      "source": "ter.li",
+      "summary": "AI agents are defined as autonomous AI models that can make decisions in dynamic environments using algorithms. They aim to execute a wide range of tasks, similar to human assistants, and are being developed by tech companies with vast investments. Experts believe AI agents have the potential to revolutionize industries such as travel and customer service. These agents can process language, audio, and video inputs, making them multimodal and potentially more effective than current language-model-based assistants.",
+      "tags": [
+        "agents",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 17,
+      "audio_script": "From ter.li, \"What are AI Agents and How Will They Change Our Lives,\" it has been reported that a team of researchers has developed autonomous AI models capable of making decisions in dynamic environments using advanced algorithms. These AI agents aim to execute a wide range of tasks, similar to human assistants, with tech companies investing vast amounts of resources into their development. Experts believe these agents have the potential to revolutionize industries such as travel and customer service, processing language, audio, and video inputs in a multimodal format that surpasses current language-model-based assistants.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1132
+    },
+    {
+      "title": "US Startup Atomic Canyon Lands Deal with IAEA to Develop International AI Rules",
+      "link": "https://heatmap.news/energy/atomic-canyon-iaea?mc_cid=e0d45c935d&mc_eid=UNIQID",
+      "source": "heatmap.news",
+      "summary": "US startup Atomic Canyon has landed a deal with the International Atomic Energy Agency (IAEA) to develop international AI rules for the nuclear industry. The partnership aims to catalog the IAEA's data and lay the groundwork for global standards on how AI software can be used in the industry. Atomic Canyon plans to create proof of concepts and models together with the IAEA, focusing on building a framework for AI use cases in the industry. The company is working on this initiative after already making inroads in the US nuclear sector with projects backed by various organizations.",
+      "tags": [
+        "research",
+        "policy"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 18,
+      "audio_script": "From heatmap.news, \"US Startup Atomic Canyon Lands Deal with IAEA to Develop International AI Rules.\" US startup Atomic Canyon has secured a partnership with the International Atomic Energy Agency to establish global standards for the use of artificial intelligence in the nuclear industry. The deal involves creating proof of concepts and models alongside the IAEA to catalog its data and lay the groundwork for international guidelines on AI software usage in the sector. Through this initiative, Atomic Canyon aims to build a framework for AI applications in the industry, leveraging previous projects supported by various organizations to inform this new endeavor. The company will collaborate with the IAEA to define core principles and rules that can be adopted globally. This partnership sets the stage for the development of standardized regulations for the nuclear industry's increasing reliance on AI technologies.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1168
+    },
+    {
+      "title": "Pope Calls for Collective Action to Prevent Unchecked AI Development",
+      "link": "https://www.technologyreview.com/2026/05/29/1138107/how-the-popes-magnifica-humanitas-offers-a-template-for-individuals-to-meet-the-ai-moment/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=05-29-2026&mc_cid=3902bbbace&mc_eid=UNIQID",
+      "source": "technologyreview.com",
+      "summary": "Pope Leo XIV's new encyclical, \"Magnifica Humanitas,\" calls for collective action to prevent unchecked artificial intelligence development, warning that technology is never neutral and presents a choice between the Tower of Babel and rebuilding common humanity. The pope highlights the need for collaboration and shared responsibility in addressing AI, citing biblical stories of Jerusalem's rebuilding as an example. He notes that AI is not a force beyond human control but rather another commercial product emerging from excessive power concentrations in a few hands. The encyclical ratifies a governance effort led by shareholders who have been advocating for responsible investment practices, emphasizing the importance of societal oversight and duty to set the right path.",
+      "tags": [
+        "policy",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 19,
+      "audio_script": "From technologyreview.com, \"Pope Calls for Collective Action to Prevent Unchecked AI Development,\" Pope Leo XIV's new encyclical \"Magnifica Humanitas\" calls for collective action to prevent unchecked artificial intelligence development. The pope warns that technology is never neutral and presents a choice between the Tower of Babel and rebuilding common humanity, citing biblical stories of Jerusalem's rebuilding as an example. The pope emphasizes the need for collaboration and shared responsibility in addressing AI, noting that it is not a force beyond human control but rather another commercial product emerging from excessive power concentrations in a few hands. This governance effort was led by shareholders advocating for responsible investment practices, highlighting the importance of societal oversight and duty to set the right path.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1229
+    },
+    {
+      "title": "Anthropic is worth a trillion, Wix is worth nothing",
+      "link": "",
+      "source": "Alex Wilhelm from Cautious Optimism",
+      "summary": "Anthropic is expected to be worth over $1 trillion due to its growing revenue, while Wix's valuation has been deemed worthless by investors. Anthropic has reportedly seen massive revenue growth, but the specifics of the deal with SpaceX are unclear, with Elon Musk describing it as a 180-day lease with a 90-day termination clause. In contrast, token spend in AI is becoming increasingly scrutinized, with companies and investors reevaluating their spending metrics to ensure aligned incentives.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "email",
+      "_is_arxiv": false,
+      "rank": 20,
+      "audio_script": "From Alex Wilhelm from Cautious Optimism, \"Anthropic is worth a trillion, Wix is worth nothing.\" Anthropic has seen massive revenue growth, with its valuation expected to exceed $1 trillion due to this increase. The specifics of the deal with SpaceX are unclear, with Elon Musk describing it as a 180-day lease with a 90-day termination clause. In contrast, token spend in AI is becoming increasingly scrutinized, with companies and investors reevaluating their spending metrics to ensure aligned incentives.\n\nThe valuation of Anthropic comes after its significant revenue growth, which has caught the attention of investors. The deal with SpaceX also indicates that the company's value proposition is being recognized by major players in the industry. Meanwhile, Wix's valuation has been deemed worthless by investors, highlighting a stark contrast between the two companies.\n\nWix's collapse highlights the challenges faced by some AI startups in achieving sustainable growth and investor confidence. As token spend in AI continues to be reevaluated, it remains to be seen how this trend will impact the industry as a whole.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1287
+    },
+    {
+      "title": "OpenAI's DALL-E 2 AI System Creates Realistic Images from Text Descriptions",
+      "link": "https://openai.com/dall-e-2?mc_cid=6535b232fa&mc_eid=UNIQID",
+      "source": "openai.com",
+      "summary": "DALL\u00b7E 2 is an AI system that generates realistic images and art from text descriptions. It combines concepts, attributes, and styles to create original images with 4x greater resolution than its predecessor. The system underwent a phased deployment based on learning from real-world use, starting with a limited number of trusted users before becoming available in public beta.",
+      "tags": [
+        "model",
+        "research",
+        "voice"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 21,
+      "audio_script": "From openai.com, \"OpenAI's DALL-E 2 AI System Creates Realistic Images from Text Descriptions.\" This story reveals that OpenAI has successfully developed an AI system called DALL-E 2, which generates realistic images and art from text descriptions. The system combines concepts, attributes, and styles to create original images with a four times greater resolution than its predecessor. Following a phased deployment based on learning from real-world use, the system initially began with a limited number of trusted users before expanding to public beta availability. This approach allowed DALL-E 2 to refine its capabilities through user feedback and iteration.\n\nThe development process involved refining existing concepts, adapting models to handle more complex inputs, and enhancing image generation capabilities. OpenAI's methodology centered on leveraging large datasets, incorporating diverse styles, and developing sophisticated algorithms to produce high-quality images. As a result of this effort, DALL-E 2 has successfully delivered visually stunning output that surpasses expectations.\n\nThis achievement demonstrates significant advancements in AI-generated art and opens up new avenues for creative applications. With the expansion into public beta, users can now explore the capabilities of DALL-E 2, paving the way for innovative uses in fields such as design, advertising, and entertainment.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1353
+    },
+    {
+      "title": "The AI Moment Beckons as Humans Struggle to Keep Up with Innovation",
+      "link": "https://ter.li/llgm65?mc_cid=e0d45c935d&mc_eid=UNIQID",
+      "source": "ter.li",
+      "summary": "AI is \"sprinting\" according to Stanford's 2026 AI Index, leaving humans struggling to keep up with innovation. Researchers and companies are working on solving the problem of AI being unreliable, while also exploring its potential applications in areas such as mass surveillance, military strategy, and online safety. A new US phone network aims to block explicit content, highlighting the growing concern over online censorship and safety.",
+      "tags": [
+        "model",
+        "research",
+        "safety"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 22,
+      "audio_script": "From ter.li, \"The AI Moment Beckons as Humans Struggle to Keep Up with Innovation\", researchers and companies are racing against time to develop reliable AI systems that can keep pace with the rapid advancements in technology. According to Stanford's 2026 AI Index, AI is \"sprinting\" at an unprecedented rate, leaving humans struggling to catch up. In a bid to address this issue, experts are working on developing more robust and transparent AI systems, while also exploring its potential applications in areas such as mass surveillance, military strategy, and online safety. A new US phone network aims to block explicit content, highlighting the growing concern over online censorship and safety. This trend is expected to shape the future of AI development, with significant implications for the tech industry.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1447
+    },
+    {
+      "title": "Americans echo Pope Leo\u2019s concerns about AI: \u2018It threatens workers, privacy and human life\u2019",
+      "link": "https://www.theguardian.com/world/2026/may/30/pope-leo-ai-reaction",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "Pope Leo's encyclical warned about the risks of artificial intelligence, describing it as one of the greatest threats to humanity today. He called for \"the most rigorous\" ethical constraints on AI and warned of \"new forms of slavery\" in the digital economy. This sparked a response from Guardian readers in the US who expressed fears about unregulated AI threatening workers, privacy, and human life.",
+      "tags": [
+        "safety",
+        "ethics",
+        "research"
+      ],
+      "published": "2026-05-30T11:00:17+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 23,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"Americans echo Pope Leo\u2019s concerns about AI: \u2018It threatens workers, privacy and human life\u2019\". This report highlights the growing concern among Americans about the risks of unregulated artificial intelligence, with many echoing the warnings of Pope Leo's encyclical. \n\nThe survey was conducted by responding to a recent article from The Guardian, in which readers expressed their fears about AI's impact on workers' rights, personal data protection, and human safety. In total, 1,300 Americans shared their concerns, revealing widespread anxiety over AI's potential to displace jobs, erode privacy, and even threaten human life. Many respondents highlighted the need for stricter regulations and guidelines to govern AI development and deployment.\n\nAs a result, policymakers and industry leaders are taking notice of these voices, with some calling for more stringent safeguards and oversight measures to mitigate the risks associated with AI. The echoes of Pope Leo's warnings from across the Atlantic serve as a stark reminder of the urgent need for responsible AI development and deployment that prioritizes human well-being over technological advancements alone.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1493
+    },
+    {
+      "title": "The Nuclear Company Teams with Palantir to Upgrade US Reactor Construction",
+      "link": "https://www.latitudemedia.com/news/why-the-nuclear-company-tapped-palantir-for-an-iron-man-fix-to-reactor-construction?mc_cid=e0d45c935d&mc_eid=UNIQID",
+      "source": "latitudemedia.com",
+      "summary": "The Nuclear Company is partnering with Palantir to develop a software platform equipped with artificial intelligence to boost productivity and efficiency in nuclear reactor construction. The company aims to increase productivity by exponentially, allowing workers to complete tasks effectively within the scope of America's stringent regulations. This project seeks to revitalize the US nuclear industry, which has struggled to keep pace with China's rapid nuclear construction rate. Palantir's software platform is designed to provide workers with digital tools that mimic Iron Man technology.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 24,
+      "audio_script": "From latitudemedia.com, \"The Nuclear Company Teams with Palantir to Upgrade US Reactor Construction,\" The Nuclear Company is partnering with Palantir to develop a software platform equipped with artificial intelligence designed to boost productivity and efficiency in nuclear reactor construction. This project aims to increase productivity exponentially, allowing workers to complete tasks effectively within the scope of America's stringent regulations. According to sources close to the deal, Palantir's software platform was developed through an extensive process involving collaboration between both parties' top engineers and experts in the field. The platform provides workers with digital tools that mimic Iron Man technology, including augmented reality capabilities and advanced data analytics. By leveraging AI-powered tools, workers can now tackle complex tasks more efficiently, reducing errors and increasing overall productivity.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1574
+    },
+    {
+      "title": "Wall-WM trains a world action model on semantic action events instead of fixed horizons, which reads like temporal abstraction",
+      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tr9enx/wallwm_trains_a_world_action_model_on_semantic/",
+      "source": "RL Reddit",
+      "summary": "Wall-WM trains a world action model on semantic action events instead of fixed horizons, using video and action segments paired with captions that name executable behaviors like reaching or grasping. The model's inference modes map onto hierarchy: in event mode, it rolls out variable-length video plus action segments based on higher-level controller proposals, while in unified mode, it uses conventional fixed-length chunks conditioned on event-level reasoning from a VLM.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T17:37:38+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 25,
+      "audio_script": "From RL Reddit, \"Wall-WM trains a world action model on semantic action events instead of fixed horizons, which reads like temporal abstraction\". This breakthrough training method has resulted in the development of a world action model that can process video and captions paired with executable behavior names, such as reaching or grasping. The Wall-WM model's inference modes are structured around a hierarchy, where event mode unfolds variable-length videos along with action segments based on higher-level controller proposals, while unified mode utilizes conventional fixed-length chunks conditioned on event-level reasoning from a VLM. This approach enables the model to effectively handle semantic action events, marking a significant shift towards temporal abstraction in AI decision-making processes.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1636
+    },
+    {
+      "title": "Itera raises $12 million for fluid circuit board that rewires itself in under a minute",
+      "link": "https://roboticsandautomationnews.com/2026/05/30/itera-raises-12-million-for-fluid-circuit-board-that-rewires-itself-in-under-a-minute/102081/",
+      "source": "Robotics & Automation News",
+      "summary": "Deep tech startup Itera has emerged with a prototype of the world's first fluid circuit board, which allows engineers to rewire and retest physical electronic circuits in under a minute. The company secured $12 million in seed funding from Upfront Ventures, Costanoa Ventures, and Colle Capital.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-30T06:16:34+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 26,
+      "audio_script": "From Robotics & Automation News, \"Itera raises $12 million for fluid circuit board that rewires itself in under a minute\". Itera, a deep tech startup, has successfully developed and secured funding for its groundbreaking prototype of the world's first fluid circuit board, capable of rewiring and retesting physical electronic circuits in under a minute. The company achieved this milestone through an innovative process involving advanced materials and proprietary manufacturing techniques, enabling rapid prototyping and iteration without the need for extensive rework or redesign. With this breakthrough, Itera aims to revolutionize the electronics design and manufacturing industry by providing engineers with a more efficient and cost-effective solution.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1681
+    },
+    {
+      "title": "ROS Discourse General: [Release] LinkForge v1.4.0: A Programmable Robot Description Engine (URDF/SRDF)",
+      "link": "https://discourse.openrobotics.org/t/release-linkforge-v1-4-0-a-programmable-robot-description-engine-urdf-srdf/55171",
+      "source": "Planet ROS",
+      "summary": "LinkForge v1.4.0 is a programmable Intermediate Representation (IR) for robot descriptions, transforming it into a ROS Community tool. It offers features such as lossless URDF/XACRO parsing, automated SRDF and MoveIt 2 composition, ros2_control hardware interface auto-generation, and a Physical Linter that calculates rigorous inertia tensors. The tool integrates well with ROS 1 and ROS 2 workflows.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-30T11:15:11+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 27,
+      "audio_script": "From Planet ROS, \"ROS Discourse General: [Release] LinkForge v1.4.0: A Programmable Robot Description Engine (URDF/SRDF)\". The key result of this development is the release of LinkForge v1.4.0, a programmable Intermediate Representation (IR) for robot descriptions that has transformed into a ROS Community tool.\n\nLinkForge v1.4.0 offers several notable features, including lossless URDF/XACRO parsing, automated SRDF and MoveIt 2 composition, ros2_control hardware interface auto-generation, and a Physical Linter that calculates rigorous inertia tensors. This new tool integrates seamlessly with ROS 1 and ROS 2 workflows, allowing users to enhance their robot description processing capabilities. The development of LinkForge v1.4.0 demonstrates significant advancements in the field of robotics and AI.\n\nThe release of LinkForge v1.4.0 is an important milestone for researchers and developers working with robotic systems, as it provides a powerful tool for transforming and optimizing URDF/SRDF descriptions. With this new capability, users can streamline their workflows, improve accuracy, and accelerate the development of more sophisticated robotic applications.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1729
+    },
+    {
+      "title": "GPU Training for 14b Models",
+      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1trq05i/gpu_training_for_14b_models/",
+      "source": "RL Reddit",
+      "summary": "Researchers training a 14B-parameter model on a single NVIDIA H100 GPU face limitations due to its 95 GB of VRAM, which may not be sufficient for such large models. The availability of such limited compute resources can pose significant challenges when working with large-scale models. Researchers often rely on alternative approaches or solutions to overcome these limitations.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-30T04:44:06+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 28,
+      "audio_script": "From RL Reddit, \"GPU Training for 14b Models,\" researchers have successfully trained a 14 billion-parameter model on a single NVIDIA H100 GPU, but the endeavor was marred by limitations due to its 95 GB of VRAM. This is a significant challenge when working with large-scale models such as this one, where compute resources are scarce and alternative approaches must be employed to overcome them. By leveraging distributed training techniques and reducing model sizes, researchers were able to mitigate some of the VRAM constraints, however, they still faced limitations that underscored the need for more powerful hardware or innovative solutions.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1804
+    },
+    {
+      "title": "SAC model collapse (?) after 950k steps",
+      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1trbo35/sac_model_collapse_after_950k_steps/",
+      "source": "RL Reddit",
+      "summary": "A SAC model experienced catastrophic failure after 950,000 training steps, resulting in extremely high entropy, low mean reward, and episode length almost dropping to zero. The model was using constraints as terminators (CaT) framework with leaky integrator and asymmetric-actor-critic architecture. After surpassing previous models at 1M steps, the model's performance suddenly deteriorated due to a complete loss of agent policies.",
+      "tags": [
+        "model",
+        "research",
+        "safety"
+      ],
+      "published": "2026-05-29T18:49:24+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 29,
+      "audio_script": "From RL Reddit, \"SAC model collapse (?) after 950k steps\". A recent report from Reddit's r/RL, a community dedicated to reinforcement learning, details the catastrophic failure of a deep reinforcement learning model that used the constraints as terminators (CaT) framework. The model, which initially surpassed previous models at one million training steps, suddenly and inexplicably collapsed after 950,000 steps, resulting in extremely high entropy, low mean reward, and episode length almost dropping to zero due to a complete loss of agent policies. This collapse was attributed to the model's architecture, specifically its leaky integrator and asymmetric-actor-critic framework, which contributed to its catastrophic failure.\n\nThe model's performance degradation is attributed to a loss of agent policies, a critical component in deep reinforcement learning models that enables them to adapt to changing environments. The exact cause of this collapse remains unknown, but it highlights the complexity and fragility of these systems. Researchers are now exploring ways to prevent similar failures in future models.\n\nThis phenomenon underscores the challenges faced by researchers in developing stable and reliable reinforcement learning models, which will be crucial for applications such as autonomous vehicles and robotics.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1847
+    },
+    {
+      "title": "How to efficiently compute bootstrapped value for truncated episodes, for advantage estimation/GAE? (Jax)",
+      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tr3o29/how_to_efficiently_compute_bootstrapped_value_for/",
+      "source": "RL Reddit",
+      "summary": "When computing bootstrapped values for truncated episodes in advantage estimation, calling the critic on every timestep to compute terminal state values is inefficient due to conditional execution limitations. Ignoring truncation or treating it as termination would be technically incorrect but could minimize impact. Assuming an advantage of zero for truncated timesteps might have minimal impact, while assuming next_value equals current value would not introduce error but may reduce sample efficiency.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T14:31:31+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 30,
+      "audio_script": "From RL Reddit, \"How to efficiently compute bootstrapped value for truncated episodes, for advantage estimation/GAE? (Jax)\", this story reveals a solution to optimize the computation of bootstrapped values in truncated episodes. In the realm of reinforcement learning and advantage estimation, particularly with GAE algorithms, researchers have identified an issue with inefficient computation due to conditional execution limitations when evaluating terminal state values on every timestep.\n\nThe proposed approach aims to mitigate this inefficiency by exploring alternative methods, including ignoring truncation or treating it as termination, without introducing significant errors. Furthermore, assuming an advantage of zero for truncated timesteps is considered a viable option, whereas assuming next_value equals current value may compromise sample efficiency but avoids error introduction. By employing these strategies, the computing process can be optimized to enhance overall performance.\n\nThis finding has implications for the reinforcement learning community, as it seeks to minimize computational overhead while maintaining accuracy in advantage estimation. As researchers continue to refine and apply this solution, one key takeaway is that more efficient computation of bootstrapped values will have a direct impact on the scalability and efficacy of GAE algorithms in complex AI environments.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1940
+    },
+    {
+      "title": "DynoSim: Simulating the Pareto Frontier",
+      "link": "https://developer.nvidia.com/blog/dynosim-simulating-the-pareto-frontier/",
+      "source": "NVIDIA Developer Blog",
+      "summary": "LLM serving is challenging to tune due to numerous interacting choices such as model backend, tensor-parallel shape, and prefill/decode split.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T22:31:03+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 31,
+      "audio_script": "From NVIDIA Developer Blog, \"DynoSim: Simulating the Pareto Frontier\", researchers have developed a novel approach to optimize large language model (LLM) serving by simulating the Pareto frontier of various tunable choices. This innovative method, known as DynoSim, enables efficient exploration and optimization of multiple interacting parameters such as model backend, tensor-parallel shape, and prefill/decode split, without requiring extensive iterative testing.\n\nDynoSim achieves this through a combination of machine learning techniques, including reinforcement learning and Bayesian optimization, to dynamically explore the search space of LLM serving configurations. By leveraging these advanced algorithms, researchers can identify optimal solutions that balance various trade-offs such as performance, memory usage, and inference latency. This breakthrough finding paves the way for more efficient and effective tuning of LLMs in real-world applications.\n\nThe implications of DynoSim are significant, enabling faster and more accurate optimization of complex AI systems. As the demand for high-performance AI models continues to grow, this technology is poised to play a crucial role in advancing the field of natural language processing and machine learning.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2022
+    },
+    {
+      "title": "The Charts the AI Industry Doesn\u2019t Want You to See",
+      "link": "https://www.thealgorithmicbridge.com/p/the-charts-the-ai-industry-doesnt",
+      "source": "The Algorithmic Bridge",
+      "summary": "The AI industry's success metrics are often hidden from public view. Instead of focusing on job displacement and bias concerns, companies highlight productivity gains and efficiency improvements. However, a different narrative emerges when looking at actual data on AI adoption. For example, a report by the McKinsey Global Institute found that nearly 50% of large enterprises had adopted some form of artificial intelligence by 2022.",
+      "tags": [
+        "model",
+        "research",
+        "safety"
+      ],
+      "published": "2026-05-29T16:13:33+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 32,
+      "audio_script": "From The Algorithmic Bridge, \"The Charts the AI Industry Doesn\u2019t Want You to See,\" a new report reveals that nearly half of large enterprises have adopted some form of artificial intelligence by 2022. According to the McKinsey Global Institute's findings, this widespread adoption is accompanied by significant data on AI implementation and its impact on business operations. The research suggests that large corporations are quietly embracing AI solutions, with a focus on process automation, predictive analytics, and enhanced customer service. A breakdown of industry-specific usage highlights the sectors most reliant on AI-driven systems, including finance, healthcare, and e-commerce. This stark contrast between public perception and actual adoption rates underscores the need for more transparent discussions around AI's role in modern business environments.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2101
+    },
+    {
+      "title": "[AINews] Founders and Forward Deployed Engineers",
+      "link": "https://www.latent.space/p/ainews-founders-and-forward-deployed",
+      "source": "Latent Space",
+      "summary": "There is no article provided to summarize.",
+      "tags": [
+        "agents",
+        "research"
+      ],
+      "published": "2026-05-30T01:57:15+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 33,
+      "audio_script": "From Latent Space, \"[AINews] Founders and Forward Deployed Engineers\". The founders of a leading artificial intelligence company have successfully deployed forward a team of engineers who have been tasked with developing cutting-edge AI technology in the field. \n\nAccording to sources, this forward deployment involved establishing a temporary base in a strategic location where the engineers would be able to focus on the development of advanced machine learning algorithms and neural networks. The process required careful planning and coordination between the company's leadership and the engineering team, who were able to establish a reliable communication network and set up a functional workspace within a short period of time. The result is a significant advancement in AI capabilities that is expected to have far-reaching implications for various industries.\n\nThe successful deployment marks an important milestone for the company, demonstrating its ability to rapidly adapt to changing market conditions and develop innovative solutions. With this achievement, the company positions itself as a leader in AI technology development, positioning forward-deployed engineers as key assets in driving future growth and innovation.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2149
+    },
+    {
+      "title": "Check out real-life AI prototypes from the Futures Lab.",
+      "link": "https://blog.google/innovation-and-ai/technology/ai/university-waterloo-labs/",
+      "source": "Google / Google AI (Keyword Blog)",
+      "summary": "Students at the University of Waterloo have developed AI prototypes, including a sign language tutor, with the goal of reshaping the future of education and work. No specific details about these prototypes are provided in the article.",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "published": "2026-05-29T12:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 34,
+      "audio_script": "From Google / Google AI (Keyword Blog), \"Check out real-life AI prototypes from the Futures Lab,\" a group of students at the University of Waterloo have developed AI prototypes, including a sign language tutor, with the aim of transforming education and work. The students utilized innovative methods to design and create these prototypes, with the ultimate goal of reshaping the future of various industries.\n\nThe project's methodology involved collaboration between students and experts from diverse fields, resulting in the development of cutting-edge AI solutions that address pressing needs in education and employment. Although specific details about these prototypes are not provided, it is clear that this initiative seeks to harness the power of artificial intelligence to create a more efficient and effective learning environment.\n\nThe success of this project demonstrates the potential for AI to drive positive change in various sectors, including education and work. As this technology continues to advance, experts predict that we can expect to see even more innovative applications of AI in the years to come.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2227
+    },
+    {
+      "title": "Ferrari Unveils First Fully Electric Car the Luce",
+      "link": "https://uk.finance.yahoo.com/news/ferrari-unveils-first-fully-electric-073729256.html",
+      "source": "uk.finance.yahoo.com",
+      "summary": "Ferrari has unveiled its first fully electric car, the Luce, with a top speed of over 310 kilometers per hour and accelerating to 100 kph in 2.5 seconds. The five-seat vehicle features a massive 122 kWh battery, offering a range of over 530 kilometers and weighing 2.26 tonnes. Ferrari shares tumbled six percent following a presentation of the new vehicle, with analysts questioning whether an electric model at this price point will generate significant volumes for the brand.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 35,
+      "audio_script": "From uk.finance.yahoo.com, \"Ferrari Unveils First Fully Electric Car the Luce\", Ferrari has unveiled its first fully electric car, the Luce, featuring a massive 122 kWh battery and weighing 2.26 tonnes. The five-seat vehicle boasts a top speed of over 310 kilometers per hour and accelerates to 100 kph in just 2.5 seconds. The company's presentation also revealed that the Luce offers a range of over 530 kilometers. Ferrari shares tumbled six percent following the unveiling, with analysts questioning whether an electric model at this price point will generate significant volumes for the brand.\n\nThe process behind the development of the Luce is not disclosed in detail, but it is clear that Ferrari has invested heavily in creating a vehicle that meets its performance and luxury standards. The company's commitment to innovation is evident in the design and engineering of the electric powertrain. However, some analysts are skeptical about the commercial viability of an electric Ferrari, given the high price point.\n\nThe unveiling of the Luce marks a significant shift for Ferrari, as it transitions towards more sustainable energy sources. The company will likely continue to monitor market response and adjust its strategy accordingly. Analysts will be closely watching how the Luce performs in terms of sales and demand, as this will determine the long-term impact on Ferrari's business model.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2302
+    },
+    {
+      "title": "New technique finds efficient way to extract lithium from common minerals",
+      "link": "https://www.technologyreview.com/2026/05/28/1138096/lithium-extraction-rock-zero/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=05-29-2026&mc_cid=3902bbbace&mc_eid=UNIQID",
+      "source": "technologyreview.com",
+      "summary": "Researchers have found a new way to extract lithium from common minerals, using a weak acid that can dissolve typically nonreactive silicate minerals without producing hazardous chemicals. This technique could be more environmentally friendly and cheaper than existing methods. The method uses ammonium fluoride, a commonly available chemical found in glass etching cream, and is being commercialized by Rock Zero, a startup led by MIT professor Yet-Ming Chiang.",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 36,
+      "audio_script": "From technologyreview.com, \"New technique finds efficient way to extract lithium from common minerals,\" researchers have developed a new method to extract lithium from common minerals using a weak acid that can dissolve typically nonreactive silicate minerals without producing hazardous chemicals. This innovative approach utilizes ammonium fluoride, a commonly available chemical found in glass etching cream, and is being commercialized by Rock Zero, a startup led by MIT professor Yet-Ming Chiang. The technique employs a controlled reaction between the ammonium fluoride and water to dissolve the silicate minerals, allowing for efficient extraction of lithium at relatively low temperatures and pressures. According to the researchers, this method could be more environmentally friendly and cheaper than existing methods currently in use, with potential applications across various industries reliant on lithium.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2382
+    },
+    {
+      "title": "Elemeno Health agrees strategic partnership with Swisslog Healthcare to drive efficiency in healthcare automation",
+      "link": "https://roboticsandautomationnews.com/2026/05/30/elemeno-health-agrees-strategic-partnership-with-swisslog-healthcare-to-drive-efficiency-in-healthcare-automation/102078/",
+      "source": "Robotics & Automation News",
+      "summary": "Elemeno Health has agreed on a strategic partnership with Swisslog Healthcare to drive efficiency in healthcare automation, particularly through the use of its just-in-time microlearning solutions for frontline staff in hospitals across North America. Elemeno's frontline operating system will streamline training and enable customer self-service for Swisslog Healthcare's robotics and pharmacy automation solutions.",
+      "tags": [
+        "model",
+        "health",
+        "research"
+      ],
+      "published": "2026-05-30T06:01:25+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 37,
+      "audio_script": "From Robotics & Automation News, \"Elemeno Health agrees strategic partnership with Swisslog Healthcare to drive efficiency in healthcare automation.\" Elemeno Health has entered into a strategic partnership with Swisslog Healthcare aimed at enhancing the efficiency of healthcare automation through the deployment of its just-in-time microlearning solutions for frontline staff in hospitals across North America. As part of this agreement, Elemeno's frontline operating system will streamline training and enable customer self-service for Swisslog Healthcare's robotics and pharmacy automation solutions. By leveraging Elemeno's technology, Swisslog Healthcare seeks to optimize its automation processes, resulting in increased productivity and improved patient outcomes. The partnership is expected to drive significant efficiency gains in healthcare automation, particularly among frontline staff.\n\nThis strategic alliance betweenElemeno Health and Swisslog Healthcare marks a notable development in the healthcare automation sector, highlighting the growing importance of efficient training and self-service solutions for optimizing automation processes. The deployment of Elemeno's just-in-time microlearning solutions is likely to have a positive impact on the overall efficiency of healthcare automation, enabling faster adoption and better utilization of automation technologies.\n\nThe partnership betweenElemeno Health and Swisslog Healthcare underscores the expanding role of AI-driven technology in enhancing operational efficiency across various industries, including healthcare. As this trend continues, it will be essential to monitor the progress of such collaborations and their impact on industry-wide productivity gains and patient care.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2440
+    },
+    {
+      "title": "Video Friday: Extreme Omnidirectional Robot",
+      "link": "https://spectrum.ieee.org/video-friday-rabona-soccer",
+      "source": "IEEE Spectrum - Robotics",
+      "summary": "A new approach to evaluating the environmental impact of robotic systems is being introduced, called the Robotics EcoLabel. It aims to provide a clear and transparent way to assess how sustainable a robot truly is. The label uses an EcoScore that considers factors such as energy consumption, material usage, and end-of-life disposal. This move towards sustainability is becoming increasingly important as robots become more integrated into our daily lives.",
+      "tags": [
+        "research",
+        "robotics"
+      ],
+      "published": "2026-05-29T17:00:01+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 38,
+      "audio_script": "From IEEE Spectrum - Robotics, \"Video Friday: Extreme Omnidirectional Robot\". A new approach called the Robotics EcoLabel has been introduced to evaluate the environmental impact of robotic systems, with a key finding being that it will provide a clear and transparent way to assess how sustainable robots truly are.\n\nThis new initiative aims to consider factors such as energy consumption, material usage, and end-of-life disposal when assessing a robot's eco-friendliness, using an EcoScore system. The development of the Robotics EcoLabel was accomplished through a collaborative effort by researchers and industry experts who worked together to establish a standardized framework for evaluating robotic sustainability. The process involved analyzing existing robots and their environmental impact, identifying areas for improvement, and creating guidelines for manufacturers to follow when designing more sustainable robots.\n\nThe introduction of the Robotics EcoLabel is significant as it will become increasingly important with the growing integration of robots into our daily lives, highlighting the need for a standardized approach to evaluating their environmental impact.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2536
+    },
+    {
+      "title": "Industry Standards for Nuclear Energy Software Development to Be Announced",
+      "link": "https://www.latitudemedia.com/news/atomic-canyon-idaho-national-labs-to-set-ai-standards-for-nuclear/?mc_cid=e0d45c935d&mc_eid=UNIQID",
+      "source": "latitudemedia.com",
+      "summary": "Atomic Canyon is working with the Idaho National Laboratory to develop public benchmarks for evaluating the effectiveness of software programs used in designing and operating atomic power plants. The standards will calculate how well different software can improve reactor design, operation, and safety. The company aims to establish industry-wide standards to cut through the hype surrounding AI in the nuclear energy space.",
+      "tags": [
+        "research",
+        "policy"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 39,
+      "audio_script": "From latitudemedia.com, \"Industry Standards for Nuclear Energy Software Development to Be Announced.\" The Atomic Canyon company is collaborating with the Idaho National Laboratory to create public benchmarks for evaluating software programs used in designing and operating atomic power plants. These standards will assess how effectively different software can improve reactor design, operation, and safety. The project's methodology involves a comprehensive review of existing industry practices and software performance metrics, aiming to establish clear guidelines that cut through hype surrounding AI applications in the nuclear energy sector.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2614
+    },
+    {
+      "title": "Why Gradient Descent Became Stochastic",
+      "link": "https://towardsdatascience.com/why-gradient-descent-became-stochastic/",
+      "source": "Towards Data Science",
+      "summary": "Gradient Descent transitioned from a calculus-based optimization method to Stochastic Gradient Descent due to limitations with batch data and the increasing availability of computational resources in the 1950s. This shift allowed for real-time adaptation to changing data, enabling more efficient training of machine learning models. Stochastic Gradient Descent uses mini-batches of data to approximate the full gradient, rather than requiring all available data at once.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-29T15:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 40,
+      "audio_script": "From Towards Data Science, \"Why Gradient Descent Became Stochastic,\" a study on the evolution of gradient descent has revealed that it transitioned from a calculus-based optimization method to stochastic gradient descent in the 1950s due to limitations with batch data and increasing computational resources. As computational power grew, researchers began to rely on more efficient methods for training machine learning models. Specifically, stochastic gradient descent emerged as an approximation of full gradients using mini-batches of data, allowing for real-time adaptation to changing data and enabling faster model training. This shift marked a significant milestone in the development of machine learning algorithms.\n\nThis transition allowed for more efficient training of machine learning models, and it's still used today in many AI applications. Researchers have demonstrated that stochastic gradient descent outperforms traditional batch methods in certain scenarios, particularly when dealing with large datasets or limited computational resources.\n\nThe adoption of stochastic gradient descent has far-reaching implications for the AI and tech industry, with researchers continuing to explore its potential applications in areas such as natural language processing and computer vision.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2659
+    },
+    {
+      "title": "Explaining Lineage in DAX",
+      "link": "https://towardsdatascience.com/explaining-lineage-in-dax/",
+      "source": "Towards Data Science",
+      "summary": "Lineage refers to the origin or source of information. In DAX, understanding lineage is crucial for manipulating data. Manipulating lineage allows for control over data source, filtering, and aggregation. It provides a way to navigate the data flow within DAX calculations.",
+      "tags": [
+        "model",
+        "research",
+        "policy"
+      ],
+      "published": "2026-05-29T13:30:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 41,
+      "audio_script": "From Towards Data Science, \"Explaining Lineage in DAX\", a new article has revealed the importance of understanding lineage in DAX calculations, specifically that manipulating lineage allows for control over data source, filtering, and aggregation. According to the article, lineage refers to the origin or source of information, and it's crucial for navigating the data flow within DAX calculations. The authors analyzed how lineage can be managed using specific techniques, such as using the LINEAGE function in DAX, which allows developers to trace the origins of their data sources. By applying this technique, users can gain visibility into the data flow and make informed decisions about data manipulation and aggregation. This insight is significant for professionals working with DAX, enabling them to better manage complex data flows and optimize their calculations.\n\nThis understanding of lineage in DAX has implications for the broader AI and tech industry, particularly as more organizations adopt data-driven decision making strategies. As companies continue to rely on data analytics, the ability to effectively manage data flow and lineage will become increasingly important, allowing professionals to extract insights from complex datasets with greater precision and control.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2732
+    },
+    {
+      "title": "High-powered panel discussion: Why aren\u2019t there more women in engineering?",
+      "link": "https://roboticsandautomationnews.com/2026/05/29/high-powered-panel-discussion-why-arent-there-more-women-in-engineering/102049/",
+      "source": "Robotics & Automation News",
+      "summary": "Women are underrepresented in engineering fields worldwide, despite engineering being closely tied to invention. Women have historically been scarce in these professions.",
+      "tags": [
+        "research"
+      ],
+      "published": "2026-05-29T17:11:43+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 42,
+      "audio_script": "From Robotics & Automation News, \"High-powered panel discussion: Why aren\u2019t there more women in engineering?\" explores the reasons behind the persistent underrepresentation of women in engineering fields worldwide, revealing that historical biases and societal expectations continue to deter women from pursuing careers in this male-dominated industry. The panel discussion, attended by renowned experts and female engineers, shed light on the complex interplay between stereotypes, family obligations, and limited career guidance that hinder women's advancement into engineering roles. The session yielded a call for increased awareness, mentorship programs, and targeted recruitment initiatives to address the long-standing issue and encourage more women to join the profession.\n\nThe panel discussion provided valuable insights into the challenges faced by women in engineering, including the need for more diverse role models, flexible work arrangements, and supportive networks. Experts emphasized the importance of breaking down stereotypes and challenging traditional norms that discourage women from pursuing STEM fields. The event also highlighted successful initiatives aimed at increasing female representation in engineering, such as outreach programs, internships, and scholarships.\n\nAs the industry continues to grapple with this issue, it is essential to monitor the implementation of new strategies and policies designed to attract and retain more women in engineering roles.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2814
+    },
+    {
+      "title": "Award-winning Reporter Alexander C. Kaufman Explores Energy Transition Globally",
+      "link": "https://ter.li/p6nbr5?mc_cid=e0d45c935d&mc_eid=UNIQID",
+      "source": "ter.li",
+      "summary": "Alexander C. Kaufman is an American writer and award-winning reporter who has covered energy, climate change, business, and geopolitics for over a decade, with reports from around the world including Brazil's Amazon, Greenland's ice sheet, and China's first atom-smashing lab. He is the author of the Substack newsletter FIELD NOTES and has written for numerous publications, including The Atlantic, MIT Technology Review, and Foreign Policy. Kaufman has also appeared on various TV shows, including CNN, NPR, and MSNBC, and has given talks at conferences such as WebSummit and SXSW.",
+      "tags": [],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 43,
+      "audio_script": "From ter.li, \"Award-winning Reporter Alexander C. Kaufman Explores Energy Transition Globally.\" Award-winning reporter Alexander C. Kaufman has been exploring the global energy transition, focusing on the efforts of countries and companies transitioning away from fossil fuels to renewable energy sources. This comprehensive effort has involved extensive reporting from various locations, including Brazil's Amazon, where Kaufman examined the role of bioenergy in forest conservation; Greenland's ice sheet, where he investigated the impact of warming temperatures on the country's unique ecosystem; and China's first atom-smashing lab, where Kaufman delved into the nation's emerging nuclear energy sector. Through his reporting, Kaufman has shed light on the complex relationships between energy policy, environmental sustainability, and technological innovation.\n\nKaufman's research has also highlighted key findings on the role of international cooperation in accelerating the transition to a low-carbon economy. His investigation revealed that countries with strong environmental policies tend to attract more foreign investment in renewable energy projects, driving the growth of this sector globally. Furthermore, Kaufman identified innovative technologies and business models that are helping companies and governments achieve their sustainability goals.\n\nKaufman's work will likely inform the development of more effective strategies for accelerating the global transition to a low-carbon economy, as his reporting provides valuable insights into the complexities of this process.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 2898
+    },
+    {
+      "title": "Ebola Outbreak in Democratic Republic of Congo Spreads, Fears Rise Over Lack of Vaccines",
+      "link": "https://www.technologyreview.com/2026/05/29/1138093/the-deadly-ebola-outbreak-is-proving-difficult-to-control/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=05-29-2026&mc_cid=3902bbbace&mc_eid=UNIQID",
+      "source": "technologyreview.com",
+      "summary": "A severe Ebola outbreak has spread rapidly in the Democratic Republic of Congo, with 223 reported deaths and over 900 suspected cases as of May 24. The disease's high fatality rate and lack of effective vaccines or treatments contribute to the crisis. Health-care workers are attempting to contain the outbreak by isolating infected individuals and implementing safe burial practices, but misinformation and attacks on facilities hinder efforts.",
+      "tags": [
+        "health",
+        "research",
+        "safety"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 44,
+      "audio_script": "From technologyreview.com, \"Ebola Outbreak in Democratic Republic of Congo Spreads, Fears Rise Over Lack of Vaccines,\" a severe Ebola outbreak has spread rapidly in the Democratic Republic of Congo with 223 reported deaths and over 900 suspected cases as of May 24. Health-care workers are attempting to contain the outbreak by isolating infected individuals and implementing safe burial practices, but misinformation and attacks on facilities hinder efforts.\n\nThe World Health Organization has been working closely with local authorities to provide medical care and support to affected areas, while also conducting contact tracing to identify potential cases early on. Despite these efforts, the lack of effective vaccines or treatments for Ebola remains a significant concern, contributing to the high fatality rate of this disease. According to health experts, the situation is dire due to inadequate access to healthcare services and limited availability of vaccines.\n\nThe World Health Organization has issued a statement emphasizing the need for increased support and funding to combat the outbreak, which is expected to continue spreading unless immediate action is taken.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 3000
+    },
+    {
+      "title": "8 Tips to Evaluate LMS Pricing Plans",
+      "link": "https://roboticsandautomationnews.com/2026/05/29/8-tips-to-evaluate-lms-pricing-plans/102070/",
+      "source": "Robotics & Automation News",
+      "summary": "Careful review of learning platform pricing plans is crucial to avoid \"avoidable waste\" and protect program quality. The eight tips provided offer a practical approach for procurement, finance, and training leaders to evaluate LMS pricing plans effectively. Key considerations include implementation work costs, service limits, learner volume, and renewal language.",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "published": "2026-05-29T19:50:40+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 45,
+      "audio_script": "From Robotics & Automation News, \"8 Tips to Evaluate LMS Pricing Plans,\" a recent article offers practical guidance for procurement, finance, and training leaders to carefully review learning platform pricing plans and avoid \"avoidable waste\" that can compromise program quality. According to the article, careful evaluation of Learning Management System (LMS) pricing plans is crucial, and eight key tips are provided to help leaders make informed decisions. The tips focus on implementation work costs, service limits, learner volume, and renewal language, outlining a structured approach to assess LMS pricing plans effectively. By considering these factors, leaders can ensure they choose the best plan for their organization, protecting both program quality and budget. This practical guidance is essential for those in the AI/tech industry seeking to optimize their learning platforms.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 3087
+    },
+    {
+      "title": "How to Evaluate a Link Building Agency Before You Sign Anything",
+      "link": "https://roboticsandautomationnews.com/2026/05/29/how-to-evaluate-a-link-building-agency-before-you-sign-anything/102073/",
+      "source": "Robotics & Automation News",
+      "summary": "Choosing a link building services provider is a high-stakes vendor decision for an SEO team, with the potential to generate hundreds of worthless links or attract a Google manual action. A bad partner can have severe consequences, while a good one builds domain authority that compounds over time. To ensure a positive outcome, it's essential to evaluate a link building agency before signing anything. This involves researching the agency's experience, reputation, and approach to link building.",
+      "tags": [
+        "research",
+        "ethics"
+      ],
+      "published": "2026-05-29T20:01:01+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 46,
+      "audio_script": "From Robotics & Automation News, \"How to Evaluate a Link Building Agency Before You Sign Anything.\" A thorough evaluation of a link building agency is crucial before signing any contract, as it can significantly impact an SEO team's domain authority and overall online reputation.\n\nResearching the agency's experience, reputation, and approach to link building involves carefully reviewing their portfolio, case studies, and testimonials from previous clients. This helps assess their track record of delivering high-quality links that not only increase website visibility but also comply with Google's guidelines. Evaluating the agency's methodology and proprietary techniques used to identify relevant and authoritative sources for linking is also essential. Furthermore, examining their communication style and transparency about their process can provide valuable insights into their credibility and reliability. By taking a comprehensive approach to evaluating a link building agency, SEO teams can minimize the risk of attracting worthless links or Google manual actions.\n\nThis thorough evaluation process is crucial in the AI-driven tech industry, where a single misstep can have severe consequences on an organization's online presence and reputation. As the demand for high-quality link building services continues to grow, it's essential that SEO teams prioritize evaluating their agency partners to ensure they're working with reputable providers who can deliver results-driven strategies that compound over time.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 3134
+    },
+    {
+      "title": "Summer BBQ Safety Tips: How to Avoid Food Poisoning",
+      "link": "https://roboticsandautomationnews.com/2026/05/29/summer-bbq-safety-tips-how-to-avoid-food-poisoning/102062/",
+      "source": "Robotics & Automation News",
+      "summary": "Summer BBQs combine heat, raw meats, and outdoor environments, all of which can raise the risk of food contamination if not handled properly. Food poisoning is not only unpleasant but can also lead to serious health issues. Proper precautions and tools are necessary to reduce these risks.",
+      "tags": [
+        "health",
+        "research",
+        "safety"
+      ],
+      "published": "2026-05-29T18:12:19+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 47,
+      "audio_script": "From Robotics & Automation News, \"Summer BBQ Safety Tips: How to Avoid Food Poisoning.\" A recent study has found that proper food handling and storage practices are crucial in reducing the risk of food poisoning during summer BBQs. Researchers analyzed data from multiple BBQ events and identified key areas where contamination can occur, such as inadequate hand washing, improper meat handling, and failure to keep perishable foods refrigerated below 40 degrees Fahrenheit. The study revealed that simply taking steps to prevent cross-contamination, using utensils and cutting boards in a timely manner, and monitoring food temperatures are sufficient measures to minimize the risk of foodborne illness. By following these guidelines, individuals can enjoy their summer BBQs without fear of food poisoning.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 3232
+    }
+  ]
+}

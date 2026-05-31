@@ -1,0 +1,291 @@
+{
+  "version": "1.2.0",
+  "chapters": [
+    {
+      "startTime": 0,
+      "title": "Introduction",
+      "endTime": 26
+    },
+    {
+      "startTime": 26,
+      "title": "StepFun Releases Step 3.7 Flash: A 198B MoE Vision-Language Model for Coding Agents and Search Workflows",
+      "url": "https://www.marktechpost.com/2026/05/29/stepfun-releases-step-3-7-flash-a-198b-moe-vision-language-model-for-coding-agents-and-search-workflows/",
+      "endTime": 106
+    },
+    {
+      "startTime": 106,
+      "title": "NVIDIA Introduces X-Token: Projection-Guided Cross-Tokenizer KD That Outperforms GOLD by +3.82 Average Points on Llama-3.2-1B",
+      "url": "https://www.marktechpost.com/2026/05/29/nvidia-introduces-x-token-projection-guided-cross-tokenizer-kd-that-outperforms-gold-by-3-82-average-points-on-llama-3-2-1b/",
+      "endTime": 184
+    },
+    {
+      "startTime": 184,
+      "title": "MeMo's memory model lets teams upgrade their LLM without retraining it \u2014 and performance jumps 26%",
+      "url": "https://venturebeat.com/orchestration/memo-memory-model-teams-upgrade-llm-without-retraining",
+      "endTime": 251
+    },
+    {
+      "startTime": 251,
+      "title": "Pinterest cut AI costs 90% by gutting a frontier model's vision layer",
+      "url": "https://venturebeat.com/orchestration/pinterest-cut-ai-costs-90-by-gutting-a-frontier-models-vision-layer",
+      "endTime": 325
+    },
+    {
+      "startTime": 325,
+      "title": "AI agents are entering their rebuild era as enterprises confront the reliability problem",
+      "url": "https://venturebeat.com/orchestration/ai-agents-are-entering-their-rebuild-era-as-enterprises-confront-the-reliability-problem",
+      "endTime": 373
+    },
+    {
+      "startTime": 373,
+      "title": "The AI agent bottleneck isn't model performance \u2014 it's permissions",
+      "url": "https://venturebeat.com/orchestration/the-ai-agent-bottleneck-isnt-model-performance-its-permissions",
+      "endTime": 437
+    },
+    {
+      "startTime": 437,
+      "title": "Genesis AI Releases Nyx, Quadrants, and Genesis World 1.0 Physics Platform for Scalable Robotics Foundation Model Evaluation",
+      "url": "https://www.marktechpost.com/2026/05/30/genesis-ai-releases-nyx-quadrants-and-genesis-world-1-0-physics-platform-for-scalable-robotics-foundation-model-evaluation/",
+      "endTime": 531
+    },
+    {
+      "startTime": 531,
+      "title": "Hermes Agent Ships Tool Search for MCP: Anthropic Evals Show 49% to 74% Accuracy Gain on Opus 4",
+      "url": "https://www.marktechpost.com/2026/05/29/hermes-agent-ships-tool-search-for-mcp-anthropic-evals-show-49-to-74-accuracy-gain-on-opus-4/",
+      "endTime": 591
+    },
+    {
+      "startTime": 591,
+      "title": "How to Use AgentTrove: Streaming 1.7M Agentic Traces and Building a Clean ShareGPT SFT Dataset in Python",
+      "url": "https://www.marktechpost.com/2026/05/29/how-to-use-agenttrove-streaming-1-7m-agentic-traces-and-building-a-clean-sharegpt-sft-dataset-in-python/",
+      "endTime": 676
+    },
+    {
+      "startTime": 676,
+      "title": "How to Automate AI Model Documentation with the NVIDIA MCG Toolkit",
+      "url": "https://developer.nvidia.com/blog/how-to-automate-ai-model-documentation-with-the-nvidia-mcg-toolkit/",
+      "endTime": 753
+    },
+    {
+      "startTime": 753,
+      "title": "RAG Is Burning Money \u2014 I Built a Cost Control Layer to Fix It",
+      "url": "https://towardsdatascience.com/rag-is-burning-money-i-built-a-cost-control-layer-to-fix-it/",
+      "endTime": 834
+    },
+    {
+      "startTime": 834,
+      "title": "Software becoming the biggest bottleneck to physical AI innovation, finds QNX research",
+      "url": "https://www.therobotreport.com/software-becoming-biggest-bottleneck-physical-ai-innovation-finds-qnx/",
+      "endTime": 899
+    },
+    {
+      "startTime": 899,
+      "title": "NIST proposes a baseline performance benchmark for humanoid robots",
+      "url": "https://www.therobotreport.com/nist-proposes-a-baseline-performance-benchmark-for-humanoid-robots/",
+      "endTime": 940
+    },
+    {
+      "startTime": 940,
+      "title": "All-New Waymo Robotaxi Finally Debuts",
+      "url": "https://aibusiness.com/generative-ai/all-new-waymo-robotaxi-finally-debuts",
+      "endTime": 1051
+    },
+    {
+      "startTime": 1051,
+      "title": "Prompt: Robinhood Wants AI Agents to Trade, Spend on Your Behalf",
+      "url": "https://aibusiness.com/agentic-ai/robinhood-wants-ai-agents-trade-spend-your-behalf",
+      "endTime": 1091
+    },
+    {
+      "startTime": 1091,
+      "title": "How AI is Changing the Way We Work with Software Agents",
+      "url": "https://simple.ai/",
+      "endTime": 1132
+    },
+    {
+      "startTime": 1132,
+      "title": "What are AI Agents and How Will They Change Our Lives",
+      "url": "https://ter.li/ouz83t?mc_cid=6535b232fa&mc_eid=UNIQID",
+      "endTime": 1168
+    },
+    {
+      "startTime": 1168,
+      "title": "US Startup Atomic Canyon Lands Deal with IAEA to Develop International AI Rules",
+      "url": "https://heatmap.news/energy/atomic-canyon-iaea?mc_cid=e0d45c935d&mc_eid=UNIQID",
+      "endTime": 1229
+    },
+    {
+      "startTime": 1229,
+      "title": "Pope Calls for Collective Action to Prevent Unchecked AI Development",
+      "url": "https://www.technologyreview.com/2026/05/29/1138107/how-the-popes-magnifica-humanitas-offers-a-template-for-individuals-to-meet-the-ai-moment/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=05-29-2026&mc_cid=3902bbbace&mc_eid=UNIQID",
+      "endTime": 1287
+    },
+    {
+      "startTime": 1287,
+      "title": "Anthropic is worth a trillion, Wix is worth nothing",
+      "endTime": 1353
+    },
+    {
+      "startTime": 1353,
+      "title": "OpenAI's DALL-E 2 AI System Creates Realistic Images from Text Descriptions",
+      "url": "https://openai.com/dall-e-2?mc_cid=6535b232fa&mc_eid=UNIQID",
+      "endTime": 1447
+    },
+    {
+      "startTime": 1447,
+      "title": "The AI Moment Beckons as Humans Struggle to Keep Up with Innovation",
+      "url": "https://ter.li/llgm65?mc_cid=e0d45c935d&mc_eid=UNIQID",
+      "endTime": 1493
+    },
+    {
+      "startTime": 1493,
+      "title": "Americans echo Pope Leo\u2019s concerns about AI: \u2018It threatens workers, privacy and human life\u2019",
+      "url": "https://www.theguardian.com/world/2026/may/30/pope-leo-ai-reaction",
+      "endTime": 1574
+    },
+    {
+      "startTime": 1574,
+      "title": "The Nuclear Company Teams with Palantir to Upgrade US Reactor Construction",
+      "url": "https://www.latitudemedia.com/news/why-the-nuclear-company-tapped-palantir-for-an-iron-man-fix-to-reactor-construction?mc_cid=e0d45c935d&mc_eid=UNIQID",
+      "endTime": 1636
+    },
+    {
+      "startTime": 1636,
+      "title": "Wall-WM trains a world action model on semantic action events instead of fixed horizons, which reads like temporal abstraction",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1tr9enx/wallwm_trains_a_world_action_model_on_semantic/",
+      "endTime": 1681
+    },
+    {
+      "startTime": 1681,
+      "title": "Itera raises $12 million for fluid circuit board that rewires itself in under a minute",
+      "url": "https://roboticsandautomationnews.com/2026/05/30/itera-raises-12-million-for-fluid-circuit-board-that-rewires-itself-in-under-a-minute/102081/",
+      "endTime": 1729
+    },
+    {
+      "startTime": 1729,
+      "title": "ROS Discourse General: [Release] LinkForge v1.4.0: A Programmable Robot Description Engine (URDF/SRDF)",
+      "url": "https://discourse.openrobotics.org/t/release-linkforge-v1-4-0-a-programmable-robot-description-engine-urdf-srdf/55171",
+      "endTime": 1804
+    },
+    {
+      "startTime": 1804,
+      "title": "GPU Training for 14b Models",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1trq05i/gpu_training_for_14b_models/",
+      "endTime": 1847
+    },
+    {
+      "startTime": 1847,
+      "title": "SAC model collapse (?) after 950k steps",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1trbo35/sac_model_collapse_after_950k_steps/",
+      "endTime": 1940
+    },
+    {
+      "startTime": 1940,
+      "title": "How to efficiently compute bootstrapped value for truncated episodes, for advantage estimation/GAE? (Jax)",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1tr3o29/how_to_efficiently_compute_bootstrapped_value_for/",
+      "endTime": 2022
+    },
+    {
+      "startTime": 2022,
+      "title": "DynoSim: Simulating the Pareto Frontier",
+      "url": "https://developer.nvidia.com/blog/dynosim-simulating-the-pareto-frontier/",
+      "endTime": 2101
+    },
+    {
+      "startTime": 2101,
+      "title": "The Charts the AI Industry Doesn\u2019t Want You to See",
+      "url": "https://www.thealgorithmicbridge.com/p/the-charts-the-ai-industry-doesnt",
+      "endTime": 2149
+    },
+    {
+      "startTime": 2149,
+      "title": "[AINews] Founders and Forward Deployed Engineers",
+      "url": "https://www.latent.space/p/ainews-founders-and-forward-deployed",
+      "endTime": 2227
+    },
+    {
+      "startTime": 2227,
+      "title": "Check out real-life AI prototypes from the Futures Lab.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/university-waterloo-labs/",
+      "endTime": 2302
+    },
+    {
+      "startTime": 2302,
+      "title": "Ferrari Unveils First Fully Electric Car the Luce",
+      "url": "https://uk.finance.yahoo.com/news/ferrari-unveils-first-fully-electric-073729256.html",
+      "endTime": 2382
+    },
+    {
+      "startTime": 2382,
+      "title": "New technique finds efficient way to extract lithium from common minerals",
+      "url": "https://www.technologyreview.com/2026/05/28/1138096/lithium-extraction-rock-zero/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=05-29-2026&mc_cid=3902bbbace&mc_eid=UNIQID",
+      "endTime": 2440
+    },
+    {
+      "startTime": 2440,
+      "title": "Elemeno Health agrees strategic partnership with Swisslog Healthcare to drive efficiency in healthcare automation",
+      "url": "https://roboticsandautomationnews.com/2026/05/30/elemeno-health-agrees-strategic-partnership-with-swisslog-healthcare-to-drive-efficiency-in-healthcare-automation/102078/",
+      "endTime": 2536
+    },
+    {
+      "startTime": 2536,
+      "title": "Video Friday: Extreme Omnidirectional Robot",
+      "url": "https://spectrum.ieee.org/video-friday-rabona-soccer",
+      "endTime": 2614
+    },
+    {
+      "startTime": 2614,
+      "title": "Industry Standards for Nuclear Energy Software Development to Be Announced",
+      "url": "https://www.latitudemedia.com/news/atomic-canyon-idaho-national-labs-to-set-ai-standards-for-nuclear/?mc_cid=e0d45c935d&mc_eid=UNIQID",
+      "endTime": 2659
+    },
+    {
+      "startTime": 2659,
+      "title": "Why Gradient Descent Became Stochastic",
+      "url": "https://towardsdatascience.com/why-gradient-descent-became-stochastic/",
+      "endTime": 2732
+    },
+    {
+      "startTime": 2732,
+      "title": "Explaining Lineage in DAX",
+      "url": "https://towardsdatascience.com/explaining-lineage-in-dax/",
+      "endTime": 2814
+    },
+    {
+      "startTime": 2814,
+      "title": "High-powered panel discussion: Why aren\u2019t there more women in engineering?",
+      "url": "https://roboticsandautomationnews.com/2026/05/29/high-powered-panel-discussion-why-arent-there-more-women-in-engineering/102049/",
+      "endTime": 2898
+    },
+    {
+      "startTime": 2898,
+      "title": "Award-winning Reporter Alexander C. Kaufman Explores Energy Transition Globally",
+      "url": "https://ter.li/p6nbr5?mc_cid=e0d45c935d&mc_eid=UNIQID",
+      "endTime": 3000
+    },
+    {
+      "startTime": 3000,
+      "title": "Ebola Outbreak in Democratic Republic of Congo Spreads, Fears Rise Over Lack of Vaccines",
+      "url": "https://www.technologyreview.com/2026/05/29/1138093/the-deadly-ebola-outbreak-is-proving-difficult-to-control/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=05-29-2026&mc_cid=3902bbbace&mc_eid=UNIQID",
+      "endTime": 3087
+    },
+    {
+      "startTime": 3087,
+      "title": "8 Tips to Evaluate LMS Pricing Plans",
+      "url": "https://roboticsandautomationnews.com/2026/05/29/8-tips-to-evaluate-lms-pricing-plans/102070/",
+      "endTime": 3134
+    },
+    {
+      "startTime": 3134,
+      "title": "How to Evaluate a Link Building Agency Before You Sign Anything",
+      "url": "https://roboticsandautomationnews.com/2026/05/29/how-to-evaluate-a-link-building-agency-before-you-sign-anything/102073/",
+      "endTime": 3232
+    },
+    {
+      "startTime": 3232,
+      "title": "Summer BBQ Safety Tips: How to Avoid Food Poisoning",
+      "url": "https://roboticsandautomationnews.com/2026/05/29/summer-bbq-safety-tips-how-to-avoid-food-poisoning/102062/",
+      "endTime": 3279
+    }
+  ]
+}
