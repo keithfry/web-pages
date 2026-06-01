@@ -1,0 +1,190 @@
+{
+  "version": "1.2.0",
+  "chapters": [
+    {
+      "startTime": 0,
+      "title": "Introduction",
+      "endTime": 23
+    },
+    {
+      "startTime": 23,
+      "title": "OpenAI Pivots Directly Into Hardware, Launching Internal Robotics Division",
+      "url": "https://www.humanoidsdaily.com/news/openai-pivots-directly-into-hardware-launching-internal-robotics-division",
+      "endTime": 91
+    },
+    {
+      "startTime": 91,
+      "title": "China has approved the world\u2019s first invasive brain-computer chip\u2014here\u2019s what\u2019s next",
+      "url": "https://www.technologyreview.com/2026/06/01/1138133/china-world-first-brain-chip/",
+      "endTime": 188
+    },
+    {
+      "startTime": 188,
+      "title": "Welcome NVIDIA Cosmos 3: The First Open Omni-model for Physical AI Reasoning and Action",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai",
+      "endTime": 264
+    },
+    {
+      "startTime": 264,
+      "title": "Develop Physical AI Reasoning, World, and Action Models with NVIDIA Cosmos 3",
+      "url": "https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3/",
+      "endTime": 384
+    },
+    {
+      "startTime": 384,
+      "title": "How Cosmos 3 Helps Physical AI Think Before It Acts",
+      "url": "https://blogs.nvidia.com/blog/cosmos-3-physical-ai-open-world-foundation-model/",
+      "endTime": 433
+    },
+    {
+      "startTime": 433,
+      "title": "\"The Coverage Principle: How Pre-Training Enables Post-Training\", Chen et al 2025",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1tt5y13/the_coverage_principle_how_pretraining_enables/",
+      "endTime": 500
+    },
+    {
+      "startTime": 500,
+      "title": "NVIDIA Vera CPU Sets a New Standard for Agentic Workloads in AI Factories",
+      "url": "https://developer.nvidia.com/blog/nvidia-vera-cpu-sets-a-new-standard-for-agentic-workloads-in-ai-factories/",
+      "endTime": 550
+    },
+    {
+      "startTime": 550,
+      "title": "NVIDIA DSX OS Delivers Open, Modular Software for Operating AI Factories at Scale",
+      "url": "https://developer.nvidia.com/blog/nvidia-dsx-os-delivers-open-modular-software-for-operating-ai-factories-at-scale/",
+      "endTime": 632
+    },
+    {
+      "startTime": 632,
+      "title": "NVIDIA Levels Up Local AI Agents Across RTX PCs and DGX Spark",
+      "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-computex-spark-local-agents/",
+      "endTime": 720
+    },
+    {
+      "startTime": 720,
+      "title": "How to Post-Train Autonomous Vehicle Models in Closed-Loop with NVIDIA Alpamayo",
+      "url": "https://developer.nvidia.com/blog/how-to-post-train-autonomous-vehicle-models-in-closed-loop-with-nvidia-alpamayo/",
+      "endTime": 764
+    },
+    {
+      "startTime": 764,
+      "title": "NVIDIA Factory Operations Blueprint Gives Factories a New AI Brain",
+      "url": "https://blogs.nvidia.com/blog/factory-operations-fox-blueprint-ai-brain/",
+      "endTime": 885
+    },
+    {
+      "startTime": 885,
+      "title": "Taiwan\u2019s Industry Titans Turbocharge World\u2019s AI Infrastructure Buildout With NVIDIA",
+      "url": "https://blogs.nvidia.com/blog/taiwan-ecosystem-ai-infrastructure/",
+      "endTime": 967
+    },
+    {
+      "startTime": 967,
+      "title": "NVIDIA AI Cloud Ecosystem Expands Worldwide to Meet Global AI Compute Demand",
+      "url": "https://blogs.nvidia.com/blog/ai-cloud-ecosystem/",
+      "endTime": 1014
+    },
+    {
+      "startTime": 1014,
+      "title": "AI doesn't break security. Complexity does",
+      "url": "https://venturebeat.com/security/ai-doesnt-break-security-complexity-does",
+      "endTime": 1060
+    },
+    {
+      "startTime": 1060,
+      "title": "AI's next dataset is your apartment",
+      "url": "https://www.therundown.ai/p/ai-next-dataset-is-your-apartment",
+      "endTime": 1125
+    },
+    {
+      "startTime": 1125,
+      "title": "Man or a Machine? UBTECH\u2019s UWORLD Teases a Humanoid So Lifelike It Wears a Suit",
+      "url": "https://www.humanoidsdaily.com/news/man-or-a-machine-ubtech-s-uworld-teases-a-humanoid-so-lifelike-it-wears-a-suit",
+      "endTime": 1209
+    },
+    {
+      "startTime": 1209,
+      "title": "Interview with Christina Gomez-Terry of Plus One Robotics: Why warehouse robotics succeeds or fails at scale",
+      "url": "https://roboticsandautomationnews.com/2026/06/01/why-warehouse-robotics-succeeds-or-fails-at-scale-a-qa-with-christina-gomez-terry-of-plus-one-robotics/102105/",
+      "endTime": 1337
+    },
+    {
+      "startTime": 1337,
+      "title": "Scaling automation in contract manufacturing: Interview with Rodrigo DallOglio of Flex",
+      "url": "https://roboticsandautomationnews.com/2026/06/01/scaling-automation-in-contract-manufacturing-interview-with-rodrigo-dalloglio-of-flex/102095/",
+      "endTime": 1450
+    },
+    {
+      "startTime": 1450,
+      "title": "Open source hardware for robotics: Democratizing robot building",
+      "url": "https://roboticsandautomationnews.com/2026/06/01/open-source-hardware-for-robotics-democratizing-robot-building/102089/",
+      "endTime": 1521
+    },
+    {
+      "startTime": 1521,
+      "title": "Why robotic arms are now being integrated with CNC machines",
+      "url": "https://www.therobotreport.com/why-robotic-arms-are-now-being-integrated-cnc-machines/",
+      "endTime": 1562
+    },
+    {
+      "startTime": 1562,
+      "title": "This DIY Bipedal Robot Used Pneumatic \u201cAir-Muscles\u201d Instead of Motors",
+      "url": "https://spectrum.ieee.org/shadow-walker-biped-humanoid-robot",
+      "endTime": 1620
+    },
+    {
+      "startTime": 1620,
+      "title": "Claude Mythos exposed a hard truth: Your enterprise patching process is way too slow",
+      "url": "https://venturebeat.com/security/claude-mythos-exposed-a-hard-truth-your-enterprise-patching-process-is-way-too-slow",
+      "endTime": 1710
+    },
+    {
+      "startTime": 1710,
+      "title": "The dating apps that failed to deliver the joys of sex and romance now offer AI as cupid. No thanks | Tatum Hunter",
+      "url": "https://www.theguardian.com/commentisfree/2026/jun/01/dating-apps-failed-sex-romance-ai-cupid-swiping-bumble",
+      "endTime": 1753
+    },
+    {
+      "startTime": 1753,
+      "title": "AI is devoid of meaning and humanity. That\u2019s why its vapid voice suits this political moment | Nesrine Malik",
+      "url": "https://www.theguardian.com/commentisfree/2026/jun/01/ai-meaning-humanity-political-moment-trust-humans-over-machines",
+      "endTime": 1854
+    },
+    {
+      "startTime": 1854,
+      "title": "The solution might be cancelling my AI subscription",
+      "url": "https://simonwillison.net/2026/May/31/the-solution-might-be-cancelling-my-ai-subscription/#atom-everything",
+      "endTime": 1920
+    },
+    {
+      "startTime": 1920,
+      "title": "CEO salaries skyrocket in 2025",
+      "url": "https://thehustle.co/art-for-free-3?ecid=ACsprvtIPeGr_35ply9HCy20PfMZQfR27HLRbmiz_QBWMhRtCm2TjCX7ryi8f9YD38lrvb2wpbHg&_hsenc=p2ANqtz-_HxsdqqSPqMiEXrUu0h4qccBwVvMBKCLe8wxEY6jPZyhHFScjkoDxzCOwYPc_FnTXgglOOA9fUZ62D3jXI7LIR8clSLw&_hsmi=421338403",
+      "endTime": 1962
+    },
+    {
+      "startTime": 1962,
+      "title": "Get hands dirty on VLA+Immitation + RL",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1tt40fw/get_hands_dirty_on_vlaimmitation_rl/",
+      "endTime": 2034
+    },
+    {
+      "startTime": 2034,
+      "title": "What\u2019s your biggest pain point when debugging RL policies right now?",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1tsucm3/whats_your_biggest_pain_point_when_debugging_rl/",
+      "endTime": 2107
+    },
+    {
+      "startTime": 2107,
+      "title": "Does anyone here have experience in building RL for HVAC control system?",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1ttooov/does_anyone_here_have_experience_in_building_rl/",
+      "endTime": 2218
+    },
+    {
+      "startTime": 2218,
+      "title": "question about archiving",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1tt2z9e/question_about_archiving/",
+      "endTime": 2310
+    }
+  ]
+}
