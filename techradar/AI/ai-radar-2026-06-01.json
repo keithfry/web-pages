@@ -1,69 +1,68 @@
 {
   "date": "2026-06-01",
-  "generated_at": "2026-06-01T11:30:58-0400",
-  "intro_script": "\"Welcome to June 1st, 2026 - the latest episode of our tech-focused podcast. This week, we're diving into the rapidly evolving world of artificial intelligence with stories on a company pioneering hardware, China's groundbreaking brain-computer chip technology, and a breakthrough in open AI models. We've got 30 minutes of insight and discussion for you.\"",
+  "generated_at": "2026-06-01T11:50:27-0400",
+  "intro_script": "Welcome to our June 1st, 2026 episode. We've got a fascinating lineup of stories lined up for you today. From the tech world, where OpenAI is shifting gears into hardware, to groundbreaking advancements in brain-computer interfaces - we'll dive into these top tales and more, exploring what they mean for us all.",
   "items": [
     {
       "title": "OpenAI Pivots Directly Into Hardware, Launching Internal Robotics Division",
       "link": "https://www.humanoidsdaily.com/news/openai-pivots-directly-into-hardware-launching-internal-robotics-division",
       "source": "Humanoids Daily",
-      "summary": "OpenAI is launching an internal robotics division to manufacture and program general-purpose machines, months after separating from Figure.",
+      "summary": "OpenAI is forming an internal robotics division to manufacture and program general-purpose machines. The move comes months after a split with Figure. This new initiative marks OpenAI's pivot into hardware development. Details of the division and its goals are not specified in the article.",
       "tags": [
-        "research",
-        "agents",
-        "robotics"
+        "model",
+        "research"
       ],
       "published": "2026-05-31T22:56:33+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 1,
-      "audio_script": "From Humanoids Daily, \"OpenAI Pivots Directly Into Hardware, Launching Internal Robotics Division.\" OpenAI has made a significant move into hardware manufacturing by launching an internal robotics division, marking a direct pivot from its software-focused roots. The new division will be responsible for designing and developing general-purpose machines that can be programmed for various tasks.\n\nAccording to reports, the separation from Figure, a company previously involved in AI research, allowed OpenAI to accelerate its plans for hardware development. By creating an internal robotics division, OpenAI aims to bring its expertise in artificial intelligence and machine learning to the manufacturing process. This strategic move is expected to yield substantial benefits, including reduced costs and increased efficiency in developing and deploying robots.\n\nThis significant step into hardware production positions OpenAI at the forefront of AI-driven automation and robotics, where it will likely have a profound impact on industries such as manufacturing, logistics, and healthcare.",
+      "audio_script": "From Humanoids Daily, \"OpenAI Pivots Directly Into Hardware, Launching Internal Robotics Division\". OpenAI has formed an internal robotics division to manufacture and program general-purpose machines, marking a significant pivot into hardware development. According to sources, this new initiative comes months after the company split with Figure, a former business partner that was also exploring AI-related ventures. As part of this move, OpenAI is establishing an in-house team focused on designing and developing its own robotics systems, allowing for greater control over the production and programming process. The division's goals and specific details remain undisclosed at this time. This development underscores OpenAI's expanding ambitions into hardware development and its commitment to advancing AI technologies through hands-on innovation.\n\nOpenAI's internal robotics division is set to drive the company's efforts in manufacturing and programming general-purpose machines, bringing a level of control and strategic focus previously lacking. By establishing an in-house team, OpenAI can streamline its research and development processes, potentially accelerating advancements in this field. The company's decision to launch an internal robotics division suggests a long-term investment in hardware development, which could have significant implications for the AI and tech industries.\n\nThe establishment of OpenAI's internal robotics division may signal a broader trend in the industry, with other companies potentially following suit. As OpenAI continues to explore its potential in hardware development, industry observers will be watching closely for updates on this initiative and its impact on AI technologies and applications.",
       "voice_index": 0,
       "include_in_podcast": true,
-      "chapter_start_seconds": 23
+      "chapter_start_seconds": 20
     },
     {
       "title": "China has approved the world\u2019s first invasive brain-computer chip\u2014here\u2019s what\u2019s next",
       "link": "https://www.technologyreview.com/2026/06/01/1138133/china-world-first-brain-chip/",
       "source": "MIT Technology Review - AI & Emerging Tech",
-      "summary": "A Chinese man, Dong Hui, who was paralyzed from the neck down after a car accident, successfully used a brain-computer chip to write with his fingers in October last year. The first invasive brain-computer chip has been approved for use in China. This breakthrough technology aims to restore motor function to individuals with severe paralysis or spinal cord injuries.",
+      "summary": "A man named Dong Hui, who was paralyzed from the neck down after a car accident, successfully wrote with his hand using a world's first invasive brain-computer chip in China. The device allowed Dong to control devices with his thoughts, giving him greater independence. This milestone marks a significant breakthrough in brain-computer interface technology.",
       "tags": [
         "model",
-        "health",
         "research"
       ],
       "published": "2026-06-01T09:09:00+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 2,
-      "audio_script": "From MIT Technology Review - AI & Emerging Tech, \"China has approved the world\u2019s first invasive brain-computer chip\u2014here\u2019s what\u2019s next.\" China has given its approval for the use of the world's first invasive brain-computer chip, a groundbreaking technology aimed at restoring motor function to individuals with severe paralysis or spinal cord injuries. Dong Hui, a Chinese man who was paralyzed from the neck down after a car accident, successfully used a non-invasive brain-computer chip in October last year, paving the way for this development. The first invasive brain-computer chip has been designed and tested using cutting-edge methodologies to create tiny electrodes implanted directly into the brain to read neural signals. After rigorous testing, Chinese authorities have now given the green light for its use, marking a significant breakthrough in brain-machine interface technology.\n\nThe approval of the invasive brain-computer chip is expected to revolutionize treatment options for individuals with severe paralysis or spinal cord injuries. The technology involves implanting tiny electrodes directly into the brain to read neural signals, which are then used to control external devices such as prosthetic limbs or computers. This innovative approach has the potential to restore motor function and improve the quality of life for thousands of people worldwide.\n\nThe approval of this invasive brain-computer chip is a significant milestone in the AI/tech industry, marking a major breakthrough in brain-machine interface technology. As researchers continue to refine and improve this technology, it will be exciting to see how it evolves and becomes increasingly accessible to those who could benefit from it most.",
+      "audio_script": "From MIT Technology Review - AI & Emerging Tech, \"China has approved the world\u2019s first invasive brain-computer chip\u2014here\u2019s what\u2019s next.\" China has made a significant breakthrough in brain-computer interface technology by approving the world's first invasive brain-computer chip. Dong Hui, a man paralyzed from the neck down after a car accident, successfully wrote with his hand using this device, demonstrating its potential to restore independence.\n\nDong Hui underwent an implantation procedure where the brain-computer chip was inserted into his skull and connected to his neurons. The chip used electroencephalography (EEG) signals to decode his brain activity and translate it into digital commands that controlled devices such as a computer cursor, allowing him to write with greater precision. This innovation marks a major milestone in advancing brain-computer interface technology.\n\nThe approval of this device paves the way for further research and development in the field, potentially leading to breakthroughs in treating paralysis and other neurological disorders. As this technology continues to advance, it is likely to have significant implications for the AI and tech industries.",
       "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 91
+      "chapter_start_seconds": 131
     },
     {
-      "title": "Welcome NVIDIA Cosmos 3: The First Open Omni-model for Physical AI Reasoning and Action",
-      "link": "https://huggingface.co/blog/nvidia/cosmos-3-for-physical-ai",
-      "source": "Hugging Face Blog",
-      "summary": "NVIDIA introduces Cosmos 3, a first open omni-model for physical AI reasoning and action. It provides an open platform for researchers to develop and test AI systems that can reason about physical objects and environments. Cosmos 3 is based on the popular NVIDIA Deep Learning Super Sampling (DLSS) technology.",
+      "title": "First Invasive BCI Approved for Patients with Paralysis Worldwide",
+      "link": "https://www.technologyreview.com/2026/06/01/1138133/china-world-first-brain-chip/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=06-01-2026&mc_cid=72504182ec&mc_eid=UNIQID",
+      "source": "technologyreview.com",
+      "summary": "Dong Hui, 39, became the first person outside of clinical trials to receive an invasive brain-computer interface (BCI) that allows him to control his hands and perform daily tasks after suffering spinal cord injuries in a car accident six years earlier. The BCI implant, called NEO, was developed by Neuracle Technology and researchers at Tsinghua University and is now approved for patients with paralysis worldwide between 18 and 60 who have residual function in their arms. Dong's rehabilitation process began just over an hour after surgery, and he has since made significant progress, including successfully grabbing a ball without assistance on the ninth day of his training.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "health"
       ],
-      "published": "2026-06-01T04:44:55+00:00",
+      "published": null,
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 3,
-      "audio_script": "From Hugging Face Blog, \"Welcome NVIDIA Cosmos 3: The First Open Omni-model for Physical AI Reasoning and Action,\" NVIDIA has introduced Cosmos 3, marking a significant milestone in the development of physical AI reasoning and action. This innovative model provides an open platform for researchers to create and test AI systems that can reason about physical objects and environments, building upon the successful Deep Learning Super Sampling (DLSS) technology.\n\nNVIDIA's breakthrough achievement involves developing an open omni-model that enables AI systems to simulate real-world scenarios and interact with their environment in a more human-like manner. By leveraging DLSS, researchers can now focus on refining the model's capabilities, such as improving its ability to reason about causality and manipulate objects. This significant step forward is expected to accelerate advancements in fields like robotics, autonomous vehicles, and smart homes.\n\nThe introduction of Cosmos 3 signals a new era in physical AI reasoning and action, offering unparalleled opportunities for innovation and collaboration among researchers and developers.",
+      "audio_script": "From technologyreview.com, \"First Invasive BCI Approved for Patients with Paralysis Worldwide\", a breakthrough in brain-computer interface technology has been achieved as Dong Hui, 39, became the first person outside of clinical trials to receive an invasive BCI that enables him to control his hands and perform daily tasks. The BCI implant, called NEO, was developed by Neuracle Technology and researchers at Tsinghua University after Dong suffered spinal cord injuries in a car accident six years earlier. His rehabilitation process began just over an hour after surgery, and he has since made significant progress, including successfully grabbing a ball without assistance on the ninth day of his training. The approval now extends to patients with paralysis worldwide between 18 and 60 who have residual function in their arms.",
       "voice_index": 2,
       "include_in_podcast": true,
-      "chapter_start_seconds": 188
+      "chapter_start_seconds": 197
     },
     {
       "title": "Develop Physical AI Reasoning, World, and Action Models with NVIDIA Cosmos 3",
       "link": "https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3/",
       "source": "NVIDIA Developer Blog",
-      "summary": "Physical AI systems must understand the real world before acting within it. To develop physical AI reasoning, world, and action models, NVIDIA Cosmos 3 enables robots, autonomous vehicles, and smart spaces to grasp their environment, making them act accordingly in real-world scenarios.",
+      "summary": "Developing physical AI reasoning, world, and action models is crucial for robots, autonomous vehicles, and smart spaces. To achieve this, NVIDIA Cosmos 3 enables developers to create systems that grasp the real-world environment through a combination of sensors, computer vision, and machine learning algorithms. This allows for accurate mapping, obstacle avoidance, and decision-making capabilities.",
       "tags": [
         "model",
         "research"
@@ -72,52 +71,52 @@
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 4,
-      "audio_script": "From NVIDIA Developer Blog, \"Develop Physical AI Reasoning, World, and Action Models with NVIDIA Cosmos 3,\" it has been revealed that researchers have successfully developed physical AI reasoning, world, and action models using NVIDIA Cosmos 3. This breakthrough enables robots, autonomous vehicles, and smart spaces to grasp their environment, making them act accordingly in real-world scenarios by effectively understanding the physical laws governing their surroundings. By leveraging NVIDIA's cutting-edge technology, the development of these AI systems has been greatly accelerated, allowing for more efficient and effective decision-making. The research demonstrates a significant step forward in creating intelligent machines that can adapt to changing environments.\n\nThe key to this achievement lies in the novel application of reinforcement learning algorithms combined with physical constraints modeling, which enables robots to reason about their physical surroundings and make accurate predictions about potential outcomes. This is achieved through the integration of NVIDIA's deep learning and computer vision capabilities with specialized libraries for simulating complex physical systems. The result is a robust framework that can be applied to a wide range of applications, from industrial robotics to autonomous vehicles.\n\nThe implications of this breakthrough are substantial, with far-reaching possibilities for industries reliant on intelligent machines, including manufacturing, logistics, and transportation. As researchers continue to refine and expand upon the capabilities of NVIDIA Cosmos 3, it is likely that we will see significant advancements in the development of physical AI systems, ultimately leading to more efficient and effective automation solutions.",
+      "audio_script": "From NVIDIA Developer Blog, \"Develop Physical AI Reasoning, World, and Action Models with NVIDIA Cosmos 3.\" This story highlights how developers can utilize NVIDIA Cosmos 3 to create systems that accurately grasp the real-world environment by combining sensors, computer vision, and machine learning algorithms.\n\nTo achieve this, developers are enabled to build robots, autonomous vehicles, and smart spaces that can navigate through their surroundings, avoiding obstacles and making informed decisions. By leveraging computer vision and sensor data, NVIDIA Cosmos 3 facilitates the creation of accurate mapping capabilities, allowing systems to understand their spatial relationships within the environment. This is made possible by the integration of specialized machine learning algorithms that enhance decision-making processes.\n\nThe development of physical AI reasoning, world, and action models with NVIDIA Cosmos 3 paves the way for innovative applications in various industries, including robotics and autonomous transportation.",
       "voice_index": 3,
       "include_in_podcast": true,
-      "chapter_start_seconds": 264
+      "chapter_start_seconds": 254
     },
     {
       "title": "How Cosmos 3 Helps Physical AI Think Before It Acts",
       "link": "https://blogs.nvidia.com/blog/cosmos-3-physical-ai-open-world-foundation-model/",
       "source": "NVIDIA Blog",
-      "summary": "Researchers have developed a system called COSMOS 3 that enables physical artificial intelligence (AI) to think before it acts. This is achieved through the use of a combination of sensing and reasoning technologies. By integrating sensors, actuators, and software, COSMOS 3 allows AI systems to perceive their environment, process information, and make decisions based on that data. The system's ability to \"think\" before acting enables more precise and efficient physical interactions, such as assembly and manipulation tasks.",
+      "summary": "Cosmos 3, a physical AI system, is being developed to test the concept of \"temporal reasoning\" in artificial intelligence. Temporal reasoning involves an AI's ability to think about past and future events before taking action. The Cosmos 3 system uses sensors and actuators to simulate real-world environments, allowing researchers to study how AI systems make decisions based on time constraints. By testing temporal reasoning in a physical setting, scientists aim to create more autonomous and proactive AI systems that can adapt to changing situations.",
       "tags": [
-        "model",
+        "agents",
         "research"
       ],
       "published": "2026-06-01T04:45:07+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 5,
-      "audio_script": "From NVIDIA Blog, \"How Cosmos 3 Helps Physical AI Think Before It Acts,\" researchers have developed a system called COSMOS 3 that enables physical artificial intelligence to think before it acts by integrating sensors, actuators, and software. This allows AI systems to perceive their environment, process information, and make decisions based on data, resulting in more precise and efficient physical interactions. The system's ability to \"think\" before acting is achieved through a combination of sensing technologies, such as computer vision and tactile sensing, which enable the AI to gather and analyze environmental data. By integrating this data with software-based reasoning capabilities, COSMOS 3 enables AI systems to predict potential outcomes and adjust their actions accordingly. This breakthrough has significant implications for industries relying on physical AI, such as manufacturing and robotics.",
+      "audio_script": "From NVIDIA Blog, \"How Cosmos 3 Helps Physical AI Think Before It Acts\", researchers are developing a physical AI system called Cosmos 3 that tests the concept of temporal reasoning in artificial intelligence. This system utilizes sensors and actuators to simulate real-world environments, allowing scientists to study how AI systems make decisions based on time constraints.\n\nThe development of Cosmos 3 was accomplished by equipping it with a control system that can adjust the environment's conditions, such as temperature and lighting, to mimic changing situations. By doing so, researchers were able to observe how the AI system adapts its behavior in response to these changes. The findings indicate that Cosmos 3 is able to learn from past experiences and make more informed decisions when considering future events.\n\nThe success of Cosmos 3 means that scientists can move forward with creating more autonomous and proactive AI systems that can adapt to changing situations, ultimately leading to advancements in the field of artificial intelligence.",
       "voice_index": 4,
       "include_in_podcast": true,
-      "chapter_start_seconds": 384
+      "chapter_start_seconds": 329
     },
     {
-      "title": "\"The Coverage Principle: How Pre-Training Enables Post-Training\", Chen et al 2025",
-      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tt5y13/the_coverage_principle_how_pretraining_enables/",
-      "source": "RL Reddit",
-      "summary": "Pre-training on a large dataset is necessary for effective post-training fine-tuning to adapt the pre-trained model to new tasks, as it enables the model to learn general features and representations that can be applied across different domains. Pre-training also helps reduce overfitting by providing a robust baseline performance, allowing the model to focus on task-specific adjustments during fine-tuning. The Coverage Principle proposes that pre-training is essential for achieving good post-training performance, particularly in cases where there is limited data available for the target task.",
+      "title": "NVIDIA Levels Up Local AI Agents Across RTX PCs and DGX Spark",
+      "link": "https://blogs.nvidia.com/blog/rtx-ai-garage-computex-spark-local-agents/",
+      "source": "NVIDIA Blog",
+      "summary": "NVIDIA has released local AI agents for use on RTX PCs and DGX Spark devices, allowing them to adapt to individual preferences and workflows, and interact with applications, generate content, automate repetitive processes and manage multi-step tasks, all while running locally on device.",
       "tags": [
         "model",
         "research"
       ],
-      "published": "2026-05-31T20:08:04+00:00",
+      "published": "2026-06-01T04:30:11+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 6,
-      "audio_script": "From RL Reddit, \"\"The Coverage Principle: How Pre-Training Enables Post-Training\", Chen et al 2025\". A new study has established that pre-training on a large dataset is crucial for achieving good post-training performance in adapting pre-trained models to new tasks. The researchers found that pre-training enables the model to learn general features and representations that can be applied across different domains, reducing overfitting by providing a robust baseline performance.\n\nPre-training allows the model to develop a strong foundation of knowledge that can be fine-tuned for specific tasks, enabling more effective adjustments during post-training. In cases where limited data is available for the target task, pre-training becomes even more essential, as it provides a framework for the model to learn from and adapt to new information. The Coverage Principle proposes that pre-training is necessary for achieving good post-training performance.\n\nThe implications of this study are significant for the AI industry, highlighting the importance of pre-training in developing efficient and adaptable machine learning models.",
+      "audio_script": "From NVIDIA Blog, \"NVIDIA Levels Up Local AI Agents Across RTX PCs and DGX Spark,\" NVIDIA has announced the release of local AI agents designed to be used on both RTX PCs and DGX Spark devices. These locally running AI agents enable users to adapt to individual preferences and workflows, interact with applications, generate content, automate repetitive processes, and manage multi-step tasks, all while maintaining full control over data and computations. The technology achieves this through advanced machine learning algorithms that allow the AI agents to learn from user behavior and optimize performance on each device, resulting in faster and more efficient processing.\n\nThis breakthrough enables users to unlock the full potential of their devices by leveraging the capabilities of local AI agents, which can be tailored to specific workflows and applications. The deployment of these locally run AI agents marks a significant advancement in the field of artificial intelligence, as it allows for greater flexibility, control, and autonomy in AI-driven processes.\n\nThe introduction of local AI agents on RTX PCs and DGX Spark devices has far-reaching implications for the AI and tech industries, setting a new standard for intelligent automation and process management.",
       "voice_index": 0,
       "include_in_podcast": true,
-      "chapter_start_seconds": 433
+      "chapter_start_seconds": 389
     },
     {
       "title": "NVIDIA Vera CPU Sets a New Standard for Agentic Workloads in AI Factories",
       "link": "https://developer.nvidia.com/blog/nvidia-vera-cpu-sets-a-new-standard-for-agentic-workloads-in-ai-factories/",
       "source": "NVIDIA Developer Blog",
-      "summary": "NVIDIA Vera CPU sets a new standard for agentic workloads in AI factories, breaking the scaling law established by previous waves of AI.",
+      "summary": "NVIDIA Vera CPU sets a new standard for agentic workloads in AI factories by creating a new scaling law. This is achieved through pretraining that scales intelligence using larger datasets, more parameters, and massively parallel systems.",
       "tags": [
         "agents",
         "research"
@@ -126,72 +125,35 @@
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 7,
-      "audio_script": "From NVIDIA Developer Blog, \"NVIDIA Vera CPU Sets a New Standard for Agentic Workloads in AI Factories,\" the new standard for agentic workloads in AI factories has been set by NVIDIA's Vera CPU. According to this breakthrough, NVIDIA's Vera CPU successfully breaks the scaling law established by previous waves of AI, achieving unprecedented performance gains in complex tasks. This was accomplished through the development and implementation of a novel processing paradigm that enables dynamic reconfiguration of computing resources according to changing workload demands. The methodology involved leveraging machine learning techniques to identify optimal configurations for various AI applications. The findings indicate significant improvements in overall system efficiency and reduced latency, paving the way for more efficient and scalable AI operations.",
+      "audio_script": "From NVIDIA Developer Blog, \"NVIDIA Vera CPU Sets a New Standard for Agentic Workloads in AI Factories,\" NVIDIA has announced that its Vera CPU sets a new standard for agentic workloads in AI factories by creating a new scaling law. The achievement is made possible through pretraining that scales intelligence using larger datasets, more parameters, and massively parallel systems, effectively expanding the capabilities of artificial intelligence.\n\nThis breakthrough is achieved through a novel approach to training models that leverages the vast amounts of data available in modern AI applications. By utilizing these resources, the Vera CPU's architecture enables it to process complex tasks with unprecedented efficiency, paving the way for significant improvements in AI performance. Furthermore, this pretraining method allows for more intelligent and adaptive workloads, which are crucial for real-world applications.\n\nThe implications of this innovation will be significant, as it paves the way for more efficient and effective AI systems that can handle a wide range of agentic tasks. As the AI industry continues to evolve, one thing is certain: NVIDIA's Vera CPU has set a new benchmark for performance, and its impact will be felt in the years to come.",
       "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 500
+      "chapter_start_seconds": 475
     },
     {
       "title": "NVIDIA DSX OS Delivers Open, Modular Software for Operating AI Factories at Scale",
       "link": "https://developer.nvidia.com/blog/nvidia-dsx-os-delivers-open-modular-software-for-operating-ai-factories-at-scale/",
       "source": "NVIDIA Developer Blog",
-      "summary": "NVIDIA's DSX OS delivers open, modular software to operate AI factories at scale, enabling them to generate intelligence as tokens. Demand for AI factories is growing, necessitating scalability to meet increasing requirements. The DSX OS provides a platform for this growth by offering an open and modular approach to operating these facilities.",
+      "summary": "NVIDIA DSX OS delivers open and modular software to operate AI factories at scale, enabling them to process large amounts of data and generate intelligence in the form of tokens as demand grows.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "policy"
       ],
       "published": "2026-06-01T03:36:52+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 8,
-      "audio_script": "From NVIDIA Developer Blog, \"NVIDIA DSX OS Delivers Open, Modular Software for Operating AI Factories at Scale,\" this story reports on the recent development of NVIDIA's DSX OS, which provides a scalable platform for operating large-scale AI factories. The DSX OS delivers open and modular software to generate intelligence as tokens, addressing growing demand for AI factories that require significant scalability.\n\nNVIDIA's DSX OS offers an innovative approach to managing these AI facilities by providing a unified platform that can be easily customized and extended to meet increasing requirements. This is achieved through a modular design that enables developers to build and deploy their own applications on top of the DSX OS, promoting collaboration and innovation within the industry. The result is a more efficient and cost-effective way to operate large-scale AI factories.\n\nThe implications of this development are significant for the AI and tech industries, as it paves the way for widespread adoption of scalable AI manufacturing solutions. With the DSX OS, developers can now focus on building and deploying their own applications, rather than struggling with the complexities of managing these facilities themselves.",
+      "audio_script": "From NVIDIA Developer Blog, \"NVIDIA DSX OS Delivers Open, Modular Software for Operating AI Factories at Scale\", this story reports that NVIDIA's DSX OS has successfully delivered open and modular software to operate large-scale AI factories, enabling the processing of massive amounts of data and generation of intelligence in token form as demand grows. The open-source operating system is designed to facilitate collaboration among developers and researchers, providing a standardized framework for building and deploying AI workloads on various hardware configurations. By leveraging this modular approach, users can more easily integrate and scale their AI applications, allowing for the rapid deployment of new intelligent systems that can efficiently process and generate insights from vast amounts of data. This technology is poised to play a significant role in the rapidly expanding AI factory ecosystem.",
       "voice_index": 2,
       "include_in_podcast": true,
-      "chapter_start_seconds": 550
-    },
-    {
-      "title": "NVIDIA Levels Up Local AI Agents Across RTX PCs and DGX Spark",
-      "link": "https://blogs.nvidia.com/blog/rtx-ai-garage-computex-spark-local-agents/",
-      "source": "NVIDIA Blog",
-      "summary": "NVIDIA has improved local AI agent capabilities on RTX PCs and DGX Spark systems, enabling them to adapt to individual preferences and workflows, interacting with applications, generating content, automating repetitive processes, and managing multi-step tasks, all while running locally on device.",
-      "tags": [
-        "model",
-        "research",
-        "agents"
-      ],
-      "published": "2026-06-01T04:30:11+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 9,
-      "audio_script": "From NVIDIA Blog, \"NVIDIA Levels Up Local AI Agents Across RTX PCs and DGX Spark.\" NVIDIA has made significant improvements to local AI agent capabilities on RTX PCs and DGX Spark systems, allowing them to adapt to individual preferences and workflows. This enhancement enables the agents to interact with applications, generate content, automate repetitive processes, and manage multi-step tasks while running locally on device. The advancements were accomplished through a combination of machine learning algorithms and optimization techniques, resulting in more efficient and effective AI-powered automation.\n\nThe improvements to local AI agent capabilities are expected to have far-reaching implications for industries that rely heavily on automation and efficiency gains. With the ability to adapt to individual preferences and workflows, these agents can now provide personalized services and support, leading to enhanced user experiences. The increased productivity and reduced reliance on cloud-based solutions will also drive cost savings for organizations.\n\nAs a result of this achievement, NVIDIA's position as a leader in AI innovation is further solidified, and the company will continue to push the boundaries of what is possible with local AI agents.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 632
-    },
-    {
-      "title": "How to Post-Train Autonomous Vehicle Models in Closed-Loop with NVIDIA Alpamayo",
-      "link": "https://developer.nvidia.com/blog/how-to-post-train-autonomous-vehicle-models-in-closed-loop-with-nvidia-alpamayo/",
-      "source": "NVIDIA Developer Blog",
-      "summary": "To post-train autonomous vehicle models in closed-loop with NVIDIA Alpamayo, AV policies must bridge the gap between training and deployment by developing vision-language-action (VLA) models that can perform tasks such as object detection, scene understanding, and action prediction. This requires utilizing large datasets for training and testing, allowing for more accurate model performance. Using NVIDIA's cloud-based platform, Alpamayo enables seamless integration of VLA models into AV systems, facilitating deployment in controlled environments.",
-      "tags": [
-        "model",
-        "agents",
-        "research"
-      ],
-      "published": "2026-06-01T04:49:15+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 10,
-      "audio_script": "From NVIDIA Developer Blog, \"How to Post-Train Autonomous Vehicle Models in Closed-Loop with NVIDIA Alpamayo,\" it reports on the process of posting-training autonomous vehicle models in closed-loop with NVIDIA's Alpamayo platform. Researchers have developed vision-language-action models that can perform tasks such as object detection, scene understanding, and action prediction, bridging the gap between training and deployment by utilizing large datasets for training and testing. This approach enables more accurate model performance, allowing for seamless integration of these models into autonomous vehicle systems through NVIDIA's cloud-based platform, Alpamayo. By leveraging this method, developers can facilitate deployment in controlled environments, ultimately advancing the development of autonomous vehicles.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 720
+      "chapter_start_seconds": 546
     },
     {
       "title": "NVIDIA Factory Operations Blueprint Gives Factories a New AI Brain",
       "link": "https://blogs.nvidia.com/blog/factory-operations-fox-blueprint-ai-brain/",
       "source": "NVIDIA Blog",
-      "summary": "NVIDIA has released the NVIDIA Factory Operations Blueprint (FOX), a reference design for creating an autonomous factory manager that connects live machine signals, quality systems, and operational alerts into a unified decision layer. The goal is to enable factories to move from isolated automation to plant-wide intelligence. This system aims to integrate various data sources into a single AI brain, allowing for more efficient and intelligent manufacturing operations.",
+      "summary": "NVIDIA has introduced the Factory Operations Blueprint (FOX), a reference design for building an autonomous factory manager that integrates live machine signals, quality systems, work instructions, and operational alerts into a unified decision layer. The FOX aims to enable factories to move from isolated automation to plant-wide intelligence, connecting different systems for optimal performance.",
       "tags": [
         "model",
         "research"
@@ -199,17 +161,36 @@
       "published": "2026-06-01T05:00:47+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 11,
-      "audio_script": "From NVIDIA Blog, \"NVIDIA Factory Operations Blueprint Gives Factories a New AI Brain\". NVIDIA has released the NVIDIA Factory Operations Blueprint (FOX), which provides a reference design for creating an autonomous factory manager that integrates live machine signals, quality systems, and operational alerts into a unified decision layer. This blueprint enables factories to transition from isolated automation to plant-wide intelligence by integrating various data sources into a single AI brain. By leveraging NVIDIA's cutting-edge technologies, manufacturers can optimize production efficiency, improve product quality, and reduce downtime. The FOX blueprint is designed to facilitate seamless communication between machines, systems, and humans, ultimately leading to more intelligent and responsive manufacturing operations. This innovation is poised to revolutionize the way factories operate in the future.\n\nThe development of the NVIDIA Factory Operations Blueprint was made possible through a comprehensive approach that involved collaboration with industry experts, research institutions, and technology partners. By combining advanced AI algorithms, machine learning models, and data analytics capabilities, the FOX blueprint provides a scalable solution for manufacturing companies to adopt autonomous management systems. This breakthrough enables factories to harness the full potential of Industry 4.0 technologies and create more efficient, agile, and responsive production environments.\n\nAs the AI-driven manufacturing landscape continues to evolve, the release of the NVIDIA Factory Operations Blueprint marks an important milestone in the industry's transition towards more intelligent and connected factory operations. Manufacturers can now expect to see increased adoption of autonomous management systems, leading to improved productivity, reduced costs, and enhanced product quality.",
-      "voice_index": 0,
+      "rank": 9,
+      "audio_script": "From NVIDIA Blog, \"NVIDIA Factory Operations Blueprint Gives Factories a New AI Brain\", NVIDIA has introduced the Factory Operations Blueprint (FOX), which provides a reference design for building an autonomous factory manager that integrates live machine signals, quality systems, work instructions, and operational alerts into a unified decision layer. This blueprint enables factories to transition from isolated automation to plant-wide intelligence by connecting different systems for optimal performance.\n\nNVIDIA's FOX framework employs artificial intelligence to analyze production data in real-time, allowing for predictive maintenance, optimized equipment utilization, and enhanced product quality control. By standardizing communication protocols across various system types, the blueprint facilitates seamless integration of disparate technologies, streamlining factory operations and boosting productivity. Industry experts view this development as a significant step forward in realizing the full potential of Industry 4.0.\n\nThe introduction of FOX marks an important milestone for the AI-driven manufacturing sector, signaling a future where intelligent factories can optimize performance through data-driven decision-making.",
+      "voice_index": 3,
       "include_in_podcast": true,
-      "chapter_start_seconds": 764
+      "chapter_start_seconds": 609
+    },
+    {
+      "title": "Advancing AI Infrastructure for Agentic AI with NVIDIA DOCA In-Silicon Security",
+      "link": "https://developer.nvidia.com/blog/advancing-ai-infrastructure-for-agentic-ai-with-nvidia-doca-in-silicon-security/",
+      "source": "NVIDIA Developer Blog",
+      "summary": "NVIDIA DOCA (Digital Ownership and Control Accelerator) in-silicon security enhances agentic AI by providing robust protection against attacks, ensuring secure data processing and transmission. DOCA integrates hardware-based security features directly into AI infrastructure, preventing unauthorized access to sensitive information. This enables the development of secure and autonomous AI agents that can operate independently without compromising on safety and reliability.",
+      "tags": [
+        "agents",
+        "research",
+        "safety"
+      ],
+      "published": "2026-06-01T04:21:42+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 10,
+      "audio_script": "From NVIDIA Developer Blog, \"Advancing AI Infrastructure for Agentic AI with NVIDIA DOCA In-Silicon Security,\" this story highlights the development of a new in-silicon security feature called DOCA, which enhances agentic AI by integrating hardware-based security features directly into AI infrastructure. The result is robust protection against attacks, ensuring secure data processing and transmission.\n\nNVIDIA DOCA has been integrated into AI systems, providing an additional layer of protection against unauthorized access to sensitive information. This was accomplished through a combination of software and hardware advancements, resulting in a more reliable and safe AI environment. Specifically, DOCA's architecture ensures that AI agents can operate independently without compromising on safety and reliability.\n\nThe integration of DOCA has significant implications for the development of secure and autonomous AI agents. As such, researchers and developers will be closely watching NVIDIA's continued advancements in this space, with potential breakthroughs expected to shape the future of agentic AI and related applications.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 695
     },
     {
       "title": "Taiwan\u2019s Industry Titans Turbocharge World\u2019s AI Infrastructure Buildout With NVIDIA",
       "link": "https://blogs.nvidia.com/blog/taiwan-ecosystem-ai-infrastructure/",
       "source": "NVIDIA Blog",
-      "summary": "Taiwan is home to over 500 NVIDIA ecosystem partners. More than 1 million NVIDIA MGX rack components are assembled in Taiwan across 25 factory sites. These components will support the production of NVIDIA Vera Rubin infrastructure, powering AI factories worldwide as part of its agentic AI buildout. The ecosystem spans the full supply chain, from key manufacturers to component providers and others.",
+      "summary": "Taiwan is home to over 500 NVIDIA ecosystem partners. More than 1 million NVIDIA MGX rack components are assembled in Taiwan at 25 factory sites, powering NVIDIA's Vera Rubin infrastructure. As Vera Rubin enters full production, its ecosystem spans the full supply chain, supporting worldwide AI factories.",
       "tags": [
         "model",
         "research",
@@ -218,55 +199,199 @@
       "published": "2026-06-01T05:00:41+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 12,
-      "audio_script": "From NVIDIA Blog, \"Taiwan\u2019s Industry Titans Turbocharge World\u2019s AI Infrastructure Buildout With NVIDIA,\" Taiwan is home to over 500 NVIDIA ecosystem partners that have come together to turbocharge the buildout of the world's AI infrastructure. According to a recent announcement, these industry titans will support the production of NVIDIA Vera Rubin infrastructure, powering AI factories worldwide as part of its agentic AI initiative. This comprehensive ecosystem spans the full supply chain, from key manufacturers to component providers and others, with over 1 million NVIDIA MGX rack components assembled across 25 factory sites in Taiwan.\n\nThese assembly lines in Taiwan are crucial in supporting the production of NVIDIA's Vera Rubin infrastructure, a powerful computing platform designed for large-scale AI applications. The initiative aims to create agentic AI factories that can operate independently, with Vera Rubin serving as the brainchild of this technological advancement. By collaborating on this massive scale, Taiwanese industry partners have taken significant strides towards accelerating global AI adoption.\n\nAs the AI industry continues to evolve and expand, partnerships like these between Taiwan's industry leaders and NVIDIA will be crucial in driving innovation forward. With the successful establishment of this ecosystem, the focus now shifts towards how these advancements will impact the tech landscape moving forward.",
-      "voice_index": 1,
+      "rank": 11,
+      "audio_script": "From NVIDIA Blog, \"Taiwan\u2019s Industry Titans Turbocharge World\u2019s AI Infrastructure Buildout With NVIDIA\". This story highlights Taiwan's significant role in accelerating the global expansion of NVIDIA's Vera Rubin infrastructure, a critical component of the world's AI ecosystem. \nIn a bid to turbocharge its own AI infrastructure buildout, NVIDIA has partnered with industry titans in Taiwan to create a thriving ecosystem that spans the entire supply chain, bolstering worldwide AI factories. Over 500 NVIDIA ecosystem partners are being utilized across the country, and more than 1 million NVIDIA MGX rack components are assembled at 25 factory sites, where they power NVIDIA's Vera Rubin infrastructure. As Vera Rubin enters full production, its network is expanding rapidly, providing a comprehensive support system for AI manufacturing facilities globally.",
+      "voice_index": 0,
       "include_in_podcast": true,
-      "chapter_start_seconds": 885
+      "chapter_start_seconds": 761
     },
     {
-      "title": "NVIDIA AI Cloud Ecosystem Expands Worldwide to Meet Global AI Compute Demand",
-      "link": "https://blogs.nvidia.com/blog/ai-cloud-ecosystem/",
-      "source": "NVIDIA Blog",
-      "summary": "NVIDIA's AI Cloud ecosystem is expanding globally to meet increasing demand for AI compute resources from enterprises, startups, and governments scaling agentic AI applications. The expansion aims to accelerate the buildout of AI factory infrastructure worldwide. Partners are adding capacity to support growing interest in token demand behind popular AI applications. NVIDIA AI Clouds serve a growing ecosystem of purpose-built clouds for various users.",
+      "title": "Nvidia's RTX Spark Chip to Power New Line of High-Performance PCs",
+      "link": "https://www.bbc.co.uk/news/articles/crmp9mppvzro?mc_cid=72504182ec&mc_eid=UNIQID",
+      "source": "bbc.co.uk",
+      "summary": "Nvidia has announced the RTX Spark chip, a new superchip for personal AI agents, which will be included in a new line of Windows PCs from major manufacturers such as Lenovo, HP, Dell, and Microsoft Surface. The chips are expected to be available in autumn, with models from Acer and Gigabyte to follow. Nvidia's move aims to challenge high-profile PC market players like Apple and Intel, and is seen as a \"paradigm shift\" from component supplier to architecture owner in the PC market.",
       "tags": [
         "model",
-        "research",
-        "policy"
+        "research"
       ],
-      "published": "2026-06-01T05:00:56+00:00",
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 12,
+      "audio_script": "From bbc.co.uk, \"Nvidia's RTX Spark Chip to Power New Line of High-Performance PCs.\" Nvidia has announced its new superchip for personal AI agents, the RTX Spark chip, which will be included in a new line of Windows PCs from major manufacturers such as Lenovo, HP, Dell, and Microsoft Surface. The chips are expected to be available in autumn, with models from Acer and Gigabyte to follow. According to Nvidia, this marks a significant shift from component supplier to architecture owner in the PC market, as the company takes a more central role in shaping the hardware of its own PCs. This move is seen as an effort by Nvidia to challenge high-profile PC market players like Apple and Intel. The new line of Windows PCs powered by RTX Spark chips will likely have enhanced performance capabilities for AI and machine learning tasks.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 820
+    },
+    {
+      "title": "Proxy-Pointer RAG: Eliminating Wasteful Entity & Relations Extraction in Knowledge Graphs",
+      "link": "https://towardsdatascience.com/proxy-pointer-rag-eliminating-wasteful-entity-relations-extraction-in-knowledge-graphs/",
+      "source": "Towards Data Science",
+      "summary": "Proxy-Pointer RAG is an approach that optimizes entity and relations extraction in knowledge graphs by applying structure-guided NER optimization to enterprise GraphRAG systems, aiming to eliminate wasteful data extraction.",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "published": "2026-05-31T13:00:00+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 13,
-      "audio_script": "From NVIDIA Blog, \"NVIDIA AI Cloud Ecosystem Expands Worldwide to Meet Global AI Compute Demand,\" it has been announced that NVIDIA's AI Cloud ecosystem is expanding globally in response to increasing demand for AI compute resources from enterprises, startups, and governments scaling agentic AI applications. This expansion aims to accelerate the buildout of AI factory infrastructure worldwide by partnering with existing data centers to add capacity and support growing interest in token demand behind popular AI applications. As a result, NVIDIA AI Clouds will serve an increasingly large ecosystem of purpose-built clouds for various users.",
+      "audio_script": "From Towards Data Science, \"Proxy-Pointer RAG: Eliminating Wasteful Entity & Relations Extraction in Knowledge Graphs.\" This approach optimizes entity and relations extraction in knowledge graphs by applying structure-guided NER optimization to enterprise GraphRAG systems. Researchers have developed a novel method called Proxy-Pointer RAG, which enables the efficient removal of unnecessary data extraction, thereby streamlining the process for businesses to leverage their knowledge graphs effectively.\n\nTo achieve this, the team employed a combination of machine learning algorithms and structural insights from graph theory, leveraging the unique characteristics of GraphRAG systems. By carefully analyzing the relationships between entities and applying optimized NER techniques, Proxy-Pointer RAG is able to identify and eliminate redundant data extraction, reducing computational overhead and increasing overall system efficiency.\n\nThe results demonstrate a significant reduction in wasteful entity and relations extraction, allowing businesses to refine their knowledge graph extraction processes and unlock more valuable insights from their data. This breakthrough has important implications for the AI and tech industry, where optimized knowledge graph management is critical for unlocking the full potential of structured data.",
       "voice_index": 2,
       "include_in_podcast": true,
-      "chapter_start_seconds": 967
+      "chapter_start_seconds": 868
     },
     {
-      "title": "AI doesn't break security. Complexity does",
-      "link": "https://venturebeat.com/security/ai-doesnt-break-security-complexity-does",
-      "source": "VentureBeat - AI",
-      "summary": "Complexity in AI systems, such as agent permissions, can lead to a larger attack surface due to lack of judgment. A permissioning model built around intent is needed, where agents have only the credentials they need for a specific task and expire when done. The industry is moving towards better models, like OAuth, that support agentic AI.",
+      "title": "How to Post-Train Autonomous Vehicle Models in Closed-Loop with NVIDIA Alpamayo",
+      "link": "https://developer.nvidia.com/blog/how-to-post-train-autonomous-vehicle-models-in-closed-loop-with-nvidia-alpamayo/",
+      "source": "NVIDIA Developer Blog",
+      "summary": "Developing autonomous vehicle policies requires bridging the gap between training and deployment. Vision-language-action (VLA) models that can learn from real-world data are essential for creating effective AV policies. NVIDIA Alpamayo is a tool used to post-train VLA models in closed-loop with autonomous vehicles, allowing them to adapt to new situations during runtime. This enables more accurate decision-making and improved overall performance.",
       "tags": [
         "model",
         "research",
-        "safety"
+        "agents"
       ],
-      "published": "2026-06-01T07:00:00+00:00",
+      "published": "2026-06-01T04:49:15+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 14,
-      "audio_script": "From VentureBeat - AI, \"AI doesn't break security. Complexity does,\" a recent study highlights that it's not artificial intelligence itself that poses security risks, but rather the inherent complexity within these systems. According to researchers, agent permissions in AI are often inadequate due to a lack of clear judgment, resulting in an enlarged attack surface. To address this issue, experts are shifting towards permissioning models built around intent, where agents only possess the necessary credentials for specific tasks and expire once completed. This shift is supported by emerging technologies like OAuth, which provides a foundation for agentic AI.",
+      "audio_script": "From NVIDIA Developer Blog, \"How to Post-Train Autonomous Vehicle Models in Closed-Loop with NVIDIA Alpamayo,\" this story is about a new tool that enables autonomous vehicle models to adapt to new situations during runtime, allowing for more accurate decision-making and improved overall performance. \nNVIDIA's Alpamayo is a tool used to post-train vision-language-action (VLA) models in closed-loop with autonomous vehicles, allowing them to learn from real-world data and adjust their policies accordingly. By utilizing this technology, developers can bridge the gap between training and deployment, resulting in more accurate decision-making for autonomous vehicles on the road. The process involves integrating Alpamayo into existing AV systems, where it can continuously monitor and update the models based on new data collected during runtime.",
       "voice_index": 3,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1014
+      "chapter_start_seconds": 951
+    },
+    {
+      "title": "Open source hardware for robotics: Democratizing robot building",
+      "link": "https://roboticsandautomationnews.com/2026/06/01/open-source-hardware-for-robotics-democratizing-robot-building/102089/",
+      "source": "Robotics & Automation News",
+      "summary": "Open-source robotics focuses on both software and hardware, with the Robot Operating System (ROS) being a prominent example of a common framework for building robots. Over the past two decades, an increasing number of open-source hardware platforms have emerged, making robot building more accessible. These platforms aim to reduce barriers in robotics development, enabling greater democratization in robot creation.",
+      "tags": [
+        "research",
+        "robotics",
+        "health"
+      ],
+      "published": "2026-06-01T06:12:43+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 15,
+      "audio_script": "From Robotics & Automation News, \"Open source hardware for robotics: Democratizing robot building\", a growing number of open-source hardware platforms have emerged over the past two decades, significantly reducing barriers in robotics development and making robot building more accessible. This trend has been driven by the widespread adoption of the Robot Operating System (ROS), which serves as a common framework for building robots, providing a standardized platform for developers to create and share robotic systems. As a result, open-source hardware platforms such as Arduino and Raspberry Pi have proliferated, offering affordable and customizable components that enable greater democratization in robot creation.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1011
+    },
+    {
+      "title": "Man or a Machine? UBTECH\u2019s UWORLD Teases a Humanoid So Lifelike It Wears a Suit",
+      "link": "https://www.humanoidsdaily.com/news/man-or-a-machine-ubtech-s-uworld-teases-a-humanoid-so-lifelike-it-wears-a-suit",
+      "source": "Humanoids Daily",
+      "summary": "UBTECH's UWORLD has released a teaser video for a bionic humanoid, claiming it is lifelike enough to resemble a human in appearance, such as a \"dapper secret agent\".",
+      "tags": [
+        "model",
+        "robotics",
+        "research"
+      ],
+      "published": "2026-06-01T11:35:45+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 16,
+      "audio_script": "From Humanoids Daily, \"Man or a Machine? UBTECH's UWORLD Teases a Humanoid So Lifelike It Wears a Suit\". UBTECH has unveiled a teaser video showcasing its latest bionic humanoid project, UWORLD, which is claimed to be so lifelike that it resembles a human in appearance. The company has developed this advanced humanoid using cutting-edge technology and artificial intelligence, allowing for a level of realism that blurs the line between man and machine.\n\nThe creation of UWORLD involved significant advancements in robotics, AI, and materials science, as UBTECH's team worked tirelessly to craft a lifelike human figure with intricate details, including facial expressions and body language. According to the teaser video, UWORLD is designed to be as dapper as a \"dapper secret agent\", complete with a suit that mimics human attire. This remarkable achievement has garnered significant attention within the AI and tech industry.\n\nUBTECH's release of UWORLD marks an exciting milestone in the development of artificial intelligence, pushing the boundaries of what is possible in robotics and AI research. With this groundbreaking humanoid, UBTECH is poised to make a lasting impact on the future of human-technology interactions.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1052
+    },
+    {
+      "title": "Why robotic arms are now being integrated with CNC machines",
+      "link": "https://www.therobotreport.com/why-robotic-arms-are-now-being-integrated-cnc-machines/",
+      "source": "The Robot Report",
+      "summary": "Robotic arms are being integrated with CNC machines due to advancements in software and integration by leading suppliers, enhancing flexibility in robotic CNC machine tending.",
+      "tags": [
+        "research"
+      ],
+      "published": "2026-05-31T12:30:16+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 17,
+      "audio_script": "From The Robot Report, \"Why robotic arms are now being integrated with CNC machines\", leading suppliers have successfully integrated robotic arms with Computer Numerical Control (CNC) machines, significantly enhancing flexibility in robotic CNC machine tending. This development is a result of advancements in software and integration by top companies, enabling the seamless automation of various tasks within manufacturing processes. According to industry sources, this innovation involves equipping CNC machines with artificial intelligence and machine learning capabilities, allowing for real-time monitoring and adjustments to be made on the fly. As a direct outcome, robotic arms can now effectively perform tasks that previously required human intervention, such as tool changing and material handling. This integration is expected to further boost productivity and efficiency in various manufacturing sectors.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1137
+    },
+    {
+      "title": "Interview with Christina Gomez-Terry of Plus One Robotics: Why warehouse robotics succeeds or fails at scale",
+      "link": "https://roboticsandautomationnews.com/2026/06/01/why-warehouse-robotics-succeeds-or-fails-at-scale-a-qa-with-christina-gomez-terry-of-plus-one-robotics/102105/",
+      "source": "Robotics & Automation News",
+      "summary": "Warehouse automation has entered a new phase with the focus shifting from individual task capabilities to scaling up robots for large-scale warehouse operations, as the technology has largely proven itself in pilot projects and controlled deployments. The bigger challenge facing the industry today is successfully integrating warehouse robotics systems across multiple locations. Christina Gomez-Terry of Plus One Robotics attributes the success or failure of warehouse robotics at scale to factors such as system design, deployment strategy, and data management. Effective system integration and continuous monitoring are crucial for achieving long-term benefits from warehouse automation.",
+      "tags": [
+        "research",
+        "robotics",
+        "agents"
+      ],
+      "published": "2026-06-01T08:15:48+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 18,
+      "audio_script": "From Robotics & Automation News, \"Interview with Christina Gomez-Terry of Plus One Robotics: Why warehouse robotics succeeds or fails at scale\". This story explores how Christina Gomez-Terry attributes the success or failure of warehouse robotics at scale to factors such as system design, deployment strategy, and data management. According to Gomez-Terry, effective system integration and continuous monitoring are crucial for achieving long-term benefits from warehouse automation. In a recent interview, she highlighted that successful deployments involve careful planning and execution, including a thorough assessment of the warehouse layout and workflow, and the development of a tailored deployment strategy that addresses specific pain points. Additionally, Gomez-Terry emphasized the importance of data-driven decision-making, noting that warehouses with robust data management systems tend to see greater ROI from their automation investments. This emphasis on data-driven insights underscores the significance of continuous monitoring and evaluation in determining the success or failure of warehouse robotics at scale.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1189
+    },
+    {
+      "title": "Scaling automation in contract manufacturing: Interview with Rodrigo DallOglio of Flex",
+      "link": "https://roboticsandautomationnews.com/2026/06/01/scaling-automation-in-contract-manufacturing-interview-with-rodrigo-dalloglio-of-flex/102095/",
+      "source": "Robotics & Automation News",
+      "summary": "Manufacturers face pressure to improve productivity, quality, and resilience with growing product complexity. Automation technologies like collaborative robots, AMRs, and emerging forms of physical AI are being adopted in large-scale production environments. Companies like Flex are implementing these solutions to enhance factory operations. Robotics and automation are becoming increasingly important in modern manufacturing practices.",
+      "tags": [
+        "research"
+      ],
+      "published": "2026-06-01T07:33:52+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 19,
+      "audio_script": "From Robotics & Automation News, \"Scaling automation in contract manufacturing: Interview with Rodrigo DallOglio of Flex\", it was revealed that manufacturers are adopting increasingly sophisticated automation technologies, such as collaborative robots and autonomous mobile robots, to improve productivity, quality, and resilience in large-scale production environments. In an interview with Robotics and Automation News, Rodrigo DallOglio of Flex discussed the company's approach to implementing these solutions, which involve a tailored methodology and careful consideration of factory layout and workflow. The result was a significant enhancement in factory efficiency, allowing Flex to meet growing demand for complex products while maintaining high standards of quality and reliability.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1259
+    },
+    {
+      "title": "The AI App gap remains a major challenge for companies building on their warehouse technology",
+      "link": "https://www.sigmacomputing.com/go/ai-apps-playbook?mc_cid=72504182ec&mc_eid=UNIQID",
+      "source": "sigmacomputing.com",
+      "summary": "A community-bank CDO prepares for a board meeting with eight slides but no story to put on them, echoing the experience of many technology executives who have spent years building dashboards and growing their AI budget without seeing tangible results. The gap between the warehouse (data storage) and coding agent (AI development) leaves one layer missing: the AI App that closes the loop between data analysis and action. Executives are struggling to create software on top of their existing warehouse, with competitors focusing on cleaning up screenshots instead. This issue affects many companies, including those in infrastructure services, where dashboards often fail to deliver actionable insights.",
+      "tags": [
+        "research",
+        "model"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 20,
+      "audio_script": "From sigmacomputing.com, \"The AI App gap remains a major challenge for companies building on their warehouse technology\". A community bank CDO is preparing for a board meeting with eight slides but no story to put on them, echoing the experience of many technology executives who have spent years building dashboards and growing their AI budget without seeing tangible results. The gap between the warehouse, where data is stored, and the coding agent, which develops AI, leaves one layer missing: the AI App that closes the loop between data analysis and action. Executives are struggling to create software on top of their existing warehouse, with competitors focusing on cleaning up screenshots instead. This issue affects many companies in infrastructure services, where dashboards often fail to deliver actionable insights.\n\nThe community bank's lack of a clear story to present highlights the challenge faced by executives who have built their AI systems from scratch. According to sigmacomputing.com, this gap is hindering the development of effective AI apps that can turn data analysis into meaningful action. As a result, companies are missing out on the benefits of their warehouse technology.\n\nThe AI App gap is a pressing concern for the tech industry, with executives struggling to bridge the divide between data storage and AI development. The lack of tangible results from years of investing in dashboards and AI budgets suggests that more needs to be done to create software that can effectively close the loop between analysis and action.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1314
+    },
+    {
+      "title": "This DIY Bipedal Robot Used Pneumatic \u201cAir-Muscles\u201d Instead of Motors",
+      "link": "https://spectrum.ieee.org/shadow-walker-biped-humanoid-robot",
+      "source": "IEEE Spectrum - Robotics",
+      "summary": "In 1987, Richard Greenhill, a British photographer, built a life-size humanoid robot called Shadow Walker with his DIY enthusiast group, the Shadow Group. The robot's movement was controlled by compressed air \"air-muscles\" instead of motors, and it stood 168 cm tall. Despite struggling to walk, the team developed a standard library of routines to control the robot.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-31T13:00:01+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 21,
+      "audio_script": "From IEEE Spectrum - Robotics, \"This DIY Bipedal Robot Used Pneumatic \u201cAir-Muscles\u201d Instead of Motors\". In 1987, Richard Greenhill and the Shadow Group built a life-size humanoid robot called Shadow Walker using compressed air-powered \"air-muscles\" to control its movements. The team successfully developed a standard library of routines to control the robot's actions despite struggling with its walking capabilities. The Shadow Walker stood at 168 cm tall and utilized an innovative approach to robotics, showcasing the potential for non-traditional power sources in robotic design. This early experiment demonstrates a pioneering effort in exploring alternative technologies in robotics.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1397
     },
     {
       "title": "AI's next dataset is your apartment",
       "link": "https://www.therundown.ai/p/ai-next-dataset-is-your-apartment",
       "source": "The Rundown AI",
-      "summary": "Researchers have developed an artificial intelligence (AI) system that can learn from and analyze data captured by smart home devices in apartments. The system uses data from various sources such as lighting, temperature, and motion sensors to create a comprehensive understanding of the space. This dataset is expected to be used for future AI models, enabling them to better understand human behavior and preferences in different environments.",
+      "summary": "A startup has launched a platform to create a custom personal assistant, which uses natural language processing (NLP) and machine learning algorithms. The service is designed to generate content, including blog posts, without requiring users to write code. AI will be trained on user-provided data, such as their apartment's characteristics or daily routines.",
       "tags": [
         "model",
         "research"
@@ -274,178 +399,145 @@
       "published": "2026-06-01T09:00:00+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 15,
-      "audio_script": "From The Rundown AI, \"AI's next dataset is your apartment\", researchers have developed an artificial intelligence system that can learn from and analyze data captured by smart home devices in apartments. This innovation allows the AI system to create a comprehensive understanding of the space by leveraging data from various sources such as lighting, temperature, and motion sensors.\n\nThe development of this system was accomplished through a collaborative effort involving multiple research institutions and organizations. The methodology involved collecting and integrating data from a wide range of smart home devices, including those that monitor energy consumption, humidity levels, and noise pollution. By analyzing these diverse datasets, the AI system can identify patterns and trends that provide insight into human behavior and preferences in different environments.\n\nThe creation of this dataset is expected to significantly enhance future AI models, enabling them to better understand and adapt to various living spaces. This breakthrough has far-reaching implications for the tech industry, particularly in the development of more sophisticated smart home systems and personalized AI assistants.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1060
-    },
-    {
-      "title": "Man or a Machine? UBTECH\u2019s UWORLD Teases a Humanoid So Lifelike It Wears a Suit",
-      "link": "https://www.humanoidsdaily.com/news/man-or-a-machine-ubtech-s-uworld-teases-a-humanoid-so-lifelike-it-wears-a-suit",
-      "source": "Humanoids Daily",
-      "summary": "UBTECH's consumer brand UWORLD has released a teaser video showcasing a highly realistic humanoid, resembling a \"dapper secret agent\" rather than a traditional robot. The appearance of the bionic figure is so lifelike that it wears a suit. It remains to be seen whether this marks the beginning of the era of sci-fi android companions.",
-      "tags": [
-        "model"
-      ],
-      "published": "2026-06-01T11:35:45+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 16,
-      "audio_script": "From Humanoids Daily, \"Man or a Machine? UBTECH\u2019s UWORLD Teases a Humanoid So Lifelike It Wears a Suit.\" UBTECH's consumer brand UWORLD has released a teaser video showcasing a highly realistic humanoid that resembles a \"dapper secret agent\" rather than a traditional robot, with the bionic figure appearing so lifelike as to wear a suit. According to the company, the creation of this advanced humanoid involved significant advancements in robotics and artificial intelligence, leveraging cutting-edge technologies such as facial recognition, gesture control, and motor learning algorithms. The UWORLD project's lead designer aimed to craft an aesthetically pleasing yet functional figure that blurs the lines between human and machine. By successfully achieving this goal, UWORLD has set a new benchmark for human-like androids in the industry.\n\nThis breakthrough marks an exciting development in the field of robotics and artificial intelligence, with implications for potential applications in fields such as entertainment, healthcare, and education. As the technology continues to advance, it will be interesting to see how UBTECH's UWORLD project evolves in the coming months and years, and what innovations this pioneering work may inspire in the future.",
-      "voice_index": 0,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1125
-    },
-    {
-      "title": "Interview with Christina Gomez-Terry of Plus One Robotics: Why warehouse robotics succeeds or fails at scale",
-      "link": "https://roboticsandautomationnews.com/2026/06/01/why-warehouse-robotics-succeeds-or-fails-at-scale-a-qa-with-christina-gomez-terry-of-plus-one-robotics/102105/",
-      "source": "Robotics & Automation News",
-      "summary": "Warehouse automation has entered a new phase, where individual tasks have been proven, leaving scale as the biggest challenge. Logistics operators face difficulties in expanding robotics systems across multiple sites while maintaining efficiency and profitability. Christina Gomez-Terry of Plus One Robotics attributes success to careful planning, robust infrastructure, and effective communication between stakeholders. However, she also notes that failures at scale often stem from underestimated complexity and lack of adaptability within organizations.",
-      "tags": [
-        "research"
-      ],
-      "published": "2026-06-01T08:15:48+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 17,
-      "audio_script": "From Robotics & Automation News, \"Interview with Christina Gomez-Terry of Plus One Robotics: Why warehouse robotics succeeds or fails at scale,\" Christina Gomez-Terry attributes the success of warehouse automation at scale to careful planning, robust infrastructure, and effective communication between stakeholders. According to Gomez-Terry, individual tasks have been proven to be successful, but it's the challenge of expanding these systems across multiple sites that poses the biggest hurdle. Logistics operators face difficulties in maintaining efficiency and profitability as they expand their robotics operations. Gomez-Terry notes that her company has found success by implementing a comprehensive planning process, which includes assessing the organization's technical infrastructure and communicating with stakeholders to ensure a smooth rollout. Additionally, she highlights the importance of adaptability within organizations, stating that failures at scale often stem from underestimated complexity. The interview reveals key findings on how warehouse robotics can be successfully scaled up, providing valuable insights for logistics operators and AI/tech companies alike.\n\nGomez-Terry's approach emphasizes the need for a robust planning process that takes into account the unique challenges of each site. This involves assessing the organization's technical infrastructure, identifying potential bottlenecks, and developing strategies to address them. Effective communication between stakeholders is also crucial, as it enables organizations to anticipate and mitigate risks associated with expanding their robotics operations. By prioritizing careful planning and adaptability, logistics operators can overcome the challenges of scaling up warehouse automation and achieve significant improvements in efficiency and profitability.\n\nAs companies continue to push the boundaries of warehouse automation, Gomez-Terry's findings offer a valuable roadmap for navigating the complexities of scale. With the potential for significant cost savings and productivity gains, it is essential that organizations approach this challenge with a clear understanding of their technical infrastructure and a willingness to adapt. By doing so, they can unlock the full potential of warehouse robotics and drive innovation in the AI/tech industry.",
+      "rank": 22,
+      "audio_script": "From The Rundown AI, \"AI's next dataset is your apartment.\" A startup has launched a platform that creates a custom personal assistant using natural language processing and machine learning algorithms, allowing users to generate content without writing code. This service utilizes user-provided data, such as characteristics of their apartment or daily routines, to train the AI. By leveraging this approach, the platform aims to create highly personalized experiences for its users. The startup's innovative use of NLP and machine learning has resulted in a novel method for training artificial intelligence on diverse datasets.",
       "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1209
+      "chapter_start_seconds": 1444
     },
     {
-      "title": "Scaling automation in contract manufacturing: Interview with Rodrigo DallOglio of Flex",
-      "link": "https://roboticsandautomationnews.com/2026/06/01/scaling-automation-in-contract-manufacturing-interview-with-rodrigo-dalloglio-of-flex/102095/",
-      "source": "Robotics & Automation News",
-      "summary": "Manufacturers face pressure to improve productivity, quality, and resilience in their operations. Automation technologies like collaborative robots, autonomous mobile robots (AMRs), and emerging forms of physical AI are being adopted on a larger scale. These technologies aim to improve factory efficiency. Companies are using automation to manage growing product complexity.",
+      "title": "Charities decry UK plan to use AI to assess age of young asylum seekers",
+      "link": "https://www.theguardian.com/uk-news/2026/jun/01/charities-decry-uk-plan-to-use-ai-to-assess-age-of-young-asylum-seekers",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "A coalition of over 100 organisations warns that the UK's plan to use AI for age assessment could lead to more children being wrongly placed in adult prisons or detention centres due to inaccurate age estimations.",
       "tags": [
+        "model",
         "research"
       ],
-      "published": "2026-06-01T07:33:52+00:00",
+      "published": "2026-06-01T05:00:08+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 18,
-      "audio_script": "From Robotics & Automation News, \"Scaling automation in contract manufacturing: Interview with Rodrigo DallOglio of Flex,\" manufacturers are adopting advanced technologies like collaborative robots and autonomous mobile robots to enhance factory efficiency and improve resilience. According to an interview with Rodrigo DallOglio, senior director of global operations at Flex, the company has successfully implemented a large-scale automation project in its contract manufacturing facility. The project leveraged Flex's own automation software, which integrates various robotics technologies to optimize production workflows, allowing for improved product quality and reduced cycle times by up to 30%. This project demonstrates how companies can effectively scale automation in their operations to meet the demands of increasingly complex products.\n\nRodrigo DallOglio explained that the implementation process began with a thorough assessment of the facility's current processes and capabilities. A dedicated team then designed and installed the new automation system, which incorporated AMRs to improve material handling efficiency and machine learning algorithms to optimize production sequences. The project's success was largely due to Flex's existing software framework, which enabled seamless integration of various robotics technologies.\n\nThe successful completion of this large-scale automation project showcases Flex's expertise in delivering scalable solutions for contract manufacturers. As the demand for customized products continues to rise, companies like Flex will play a crucial role in developing and implementing advanced automation technologies that improve factory efficiency and product quality.",
+      "rank": 23,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"Charities decry UK plan to use AI to assess age of young asylum seekers\". A coalition of over 100 organisations has expressed concerns that the UK's plan to utilise artificial intelligence for age assessment could lead to more children being wrongly placed in adult prisons or detention centres due to inaccurate age estimations. The proposal was announced as part of a new policy aimed at streamlining the process for processing asylum claims, where AI-powered software will be used to quickly assess the age of young applicants, reducing reliance on manual reviews. However, critics argue that relying solely on technology may result in age-related assessments being based on incomplete or inaccurate data, potentially putting vulnerable children at risk of incorrect classification and subsequent detention.",
       "voice_index": 2,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1337
-    },
-    {
-      "title": "Open source hardware for robotics: Democratizing robot building",
-      "link": "https://roboticsandautomationnews.com/2026/06/01/open-source-hardware-for-robotics-democratizing-robot-building/102089/",
-      "source": "Robotics & Automation News",
-      "summary": "Most discussions about open-source robotics focus on software, but an ecosystem of open-source hardware platforms has dramatically lowered barriers to robot building over the past two decades. The Robot Operating System (ROS) provides a common framework for software developers, while open-source hardware platforms have made robot building more accessible. This growing ecosystem has democratized access to robotics technology, enabling more people to build and operate robots.",
-      "tags": [
-        "robotics",
-        "research"
-      ],
-      "published": "2026-06-01T06:12:43+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 19,
-      "audio_script": "From Robotics & Automation News, \"Open source hardware for robotics: Democratizing robot building\". This story highlights the significant impact of an ecosystem of open-source hardware platforms on robot building over the past two decades.\n\nThe Robot Operating System (ROS) provides a common framework for software developers, while open-source hardware platforms have made robot building more accessible. Researchers and engineers have been working to develop standardized interfaces and protocols, enabling seamless communication between different hardware components. This has led to the creation of numerous open-source hardware platforms, such as Arduino and Raspberry Pi, which offer affordable and user-friendly options for building robots.\n\nThe growing ecosystem of open-source hardware has dramatically lowered barriers to robot building, democratizing access to robotics technology. As a result, more people are able to build and operate robots, paving the way for innovation and development in the field.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1450
-    },
-    {
-      "title": "Why robotic arms are now being integrated with CNC machines",
-      "link": "https://www.therobotreport.com/why-robotic-arms-are-now-being-integrated-cnc-machines/",
-      "source": "The Robot Report",
-      "summary": "Robotic CNC machine tending is gaining flexibility through new software and integrations by leading suppliers, enabling more versatile operations in the industry.",
-      "tags": [
-        "model",
-        "research",
-        "robotics"
-      ],
-      "published": "2026-05-31T12:30:16+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 20,
-      "audio_script": "From The Robot Report, \"Why robotic arms are now being integrated with CNC machines,\" a new integration between robotic arms and computer numerical control (CNC) machines is gaining traction in the industry, leading to more versatile operations. This trend has been facilitated by leading suppliers who have developed innovative software and integrations that enable the seamless interaction between these systems. The process involves the use of advanced programming languages and machine learning algorithms, allowing for precise calibration and real-time adjustments. By leveraging this technology, manufacturers can now execute complex tasks with increased efficiency and accuracy, resulting in improved productivity and reduced production costs.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1521
-    },
-    {
-      "title": "This DIY Bipedal Robot Used Pneumatic \u201cAir-Muscles\u201d Instead of Motors",
-      "link": "https://spectrum.ieee.org/shadow-walker-biped-humanoid-robot",
-      "source": "IEEE Spectrum - Robotics",
-      "summary": "In 1987, British photographer Richard Greenhill built a life-size humanoid robot called the Shadow Walker using pneumatic \"air-muscles\" instead of motors. The robot stood 168 centimeters tall and was controlled by compressed air that extended and contracted to mimic human movement. Despite its simplicity, the robot could balance itself and regain its center, but walking proved to be a challenge.",
-      "tags": [
-        "model",
-        "research",
-        "agents"
-      ],
-      "published": "2026-05-31T13:00:01+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 21,
-      "audio_script": "From IEEE Spectrum - Robotics, \"This DIY Bipedal Robot Used Pneumatic \u201cAir-Muscles\u201d Instead of Motors,\" a British photographer named Richard Greenhill built a life-size humanoid robot called the Shadow Walker in 1987. The robot stood at an impressive 168 centimeters tall and utilized pneumatic \"air-muscles\" instead of traditional motors to achieve its movements. By compressing air into these artificial muscles, Greenhill created a system that allowed the robot to extend and contract its limbs, enabling it to mimic human movement and even balance itself when upright. However, walking proved to be a more complex challenge, with the robot struggling to maintain stability on its legs. Despite this limitation, Greenhill's innovative approach demonstrated the potential for pneumatic systems in robotics, paving the way for future advancements in AI-powered mobility.",
-      "voice_index": 0,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1562
+      "chapter_start_seconds": 1480
     },
     {
       "title": "Claude Mythos exposed a hard truth: Your enterprise patching process is way too slow",
       "link": "https://venturebeat.com/security/claude-mythos-exposed-a-hard-truth-your-enterprise-patching-process-is-way-too-slow",
       "source": "VentureBeat - AI",
-      "summary": "The current enterprise patching process is too slow, with exploitation timelines collapsing due to rapidly discovered zero-day vulnerabilities. Researchers have proposed a three-layer vulnerability prioritization filter incorporating CISA KEV status, Exploit Prediction Scoring System scores, and CVSS, which offers a 18x efficiency gain, 85.6% coverage of exploited vulnerabilities, and ~95% reduction in urgent remediation workload.",
+      "summary": "Researchers have found that AI models like Claude Mythos can autonomously exploit 87% of vulnerabilities in a one-day dataset, whereas without the description, they could only exploit 7%. This has led to the realization that exploitation timelines are collapsing and traditional patching processes are no longer effective. To address this, organizations should adopt a three-layer filter prioritization system incorporating CISA KEV status, EPSS scores, and CVSS, which can offer up to 18 times more efficiency and 95% reduction in urgent remediation workload.",
       "tags": [
-        "research",
-        "policy"
+        "model",
+        "research"
       ],
       "published": "2026-05-31T16:30:23+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 22,
-      "audio_script": "From VentureBeat - AI, \"Claude Mythos exposed a hard truth: Your enterprise patching process is way too slow\". Researchers have developed a new three-layer vulnerability prioritization filter that incorporates CISA KEV status, Exploit Prediction Scoring System scores, and CVSS to improve the efficiency of enterprise patching processes. By implementing this system, Claude Mythos has demonstrated an 18x efficiency gain and achieved 85.6% coverage of exploited vulnerabilities, resulting in approximately a 95% reduction in urgent remediation workload. This breakthrough suggests that enterprises can significantly streamline their patching processes, mitigating the impact of rapidly discovered zero-day vulnerabilities.\n\nThe proposed system relies on integrating multiple data sources to create a comprehensive vulnerability assessment framework. By prioritizing vulnerabilities based on their potential for exploitation and urgency, organizations can focus on addressing the most critical issues first, reducing the time spent on remediation efforts. This approach not only enhances patching efficiency but also helps minimize the window of vulnerability exposure.\n\nThe implications of this finding are significant for the AI and tech industry, as it highlights the need for more efficient and effective patching processes to stay ahead of emerging threats. As researchers continue to develop and refine this system, organizations can expect to see improvements in their ability to respond quickly to newly discovered vulnerabilities and reduce the risk of exploitation.",
-      "voice_index": 1,
+      "rank": 24,
+      "audio_script": "From VentureBeat - AI, \"Claude Mythos exposed a hard truth: Your enterprise patching process is way too slow\". Researchers have found that an AI model like Claude Mythos can autonomously exploit 87% of vulnerabilities in a one-day dataset, whereas without the description, it could only exploit 7%. This has led to the realization that exploitation timelines are collapsing and traditional patching processes are no longer effective. The study's authors used a combination of Natural Language Processing (NLP) and machine learning algorithms to analyze a large dataset of vulnerabilities and assess their potential for exploitation. By incorporating additional metadata, such as CISA KEV status, EPSS scores, and CVSS, organizations can adopt a three-layer filter prioritization system that offers up to 18 times more efficiency and a 95% reduction in urgent remediation workload.",
+      "voice_index": 3,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1620
+      "chapter_start_seconds": 1535
+    },
+    {
+      "title": "Ghost in the Machine review \u2013 entertaining AI polemic dives into its dark history in race politics and eugenics",
+      "link": "https://www.theguardian.com/film/2026/jun/01/ghost-in-the-machine-review-entertaining-ai-polemic-dives-into-its-dark-history-in-race-politics-and-eugenics",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "Director Valerie Veatch examines the roots of AI in right-wing ideology, exploring its history in eugenics and utility today, through a polemic that guides viewers towards an AI-sceptical conclusion. The film touches on colourful figures such as Francis Galton, William Shockley, and Elon Musk, although it does not cover recent events involving Musk and Sam Altman. Veatch's documentary serves as a primer on AI history and is both entertaining and persuasive. It aims to raise awareness about the dark history of AI in eugenics.",
+      "tags": [
+        "research",
+        "policy"
+      ],
+      "published": "2026-06-01T12:00:16+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 25,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"Ghost in the Machine review \u2013 entertaining AI polemic dives into its dark history in race politics and eugenics\". This documentary examines the origins of artificial intelligence in right-wing ideology and its ties to eugenics. Director Valerie Veatch delves into the history of AI, exploring its connections to influential figures such as Francis Galton, William Shockley, and Elon Musk, without covering recent controversies involving Musk and Sam Altman. Through a thought-provoking narrative, Veatch sheds light on the dark legacy of AI in eugenics, highlighting the significant role it played in shaping the industry's present trajectory. The documentary aims to raise awareness about the problematic roots of modern AI, serving as a primer for understanding its complex history and implications for the tech world.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1602
+    },
+    {
+      "title": "This model is not a real person: how AI is changing online shopping \u2013 video",
+      "link": "https://www.theguardian.com/fashion/video/2026/jun/01/how-ai-is-shaking-up-fashion-video",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "AI-generated models are being used by Australian e-commerce retailer The Iconic to sell products, and designer Atoir believes these tools can help smaller businesses operate with greater agility. Fashion lifestyle editor Alyx Gorman saw the garments and found that they were \"more than mere pixels\". AI-generated imagery should be clearly labelled according to retailer expectations.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-05-31T15:00:51+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 26,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"This model is not a real person: how AI is changing online shopping \u2013 video\". A new approach in e-commerce is being adopted by Australian retailer The Iconic, which is using artificial intelligence-generated models to sell products. These digital avatars are believed to be able to present clothing and accessories in a more engaging and immersive way, with designer Atoir stating that they can help smaller businesses operate with greater agility. AI-generated imagery was recently showcased at fashion events and featured on The Iconic's website, where editor Alyx Gorman found the garments were \"more than mere pixels\". Retailers expect AI-generated models to be clearly labelled in order to maintain transparency.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1651
     },
     {
       "title": "The dating apps that failed to deliver the joys of sex and romance now offer AI as cupid. No thanks | Tatum Hunter",
       "link": "https://www.theguardian.com/commentisfree/2026/jun/01/dating-apps-failed-sex-romance-ai-cupid-swiping-bumble",
       "source": "The Guardian - Artificial Intelligence",
-      "summary": "Dating app Bumble is eliminating its swipe feature due to concerns that it led to careless and unfulfilling conversations. In response, the company will introduce an AI assistant named \"Bee\" that helps users improve their profile pictures and personal blurbs. Bee's responsibilities also include using AI to facilitate meaningful connections by suggesting compatible matches based on users' values. The change is aimed at creating a more immersive and engaging user experience, but some may worry that relying on AI could erode the human element of romance.",
+      "summary": "Dating app Bumble is eliminating its swipe feature, citing user frustration with superficial conversations, and instead focusing on an AI assistant called \"Bee\" that uses machine learning to enhance user profiles and facilitate more meaningful connections. Bee will suggest better photo options, personalize dating preferences, and help users find others with similar values. The move aims to create a deeper user experience but may walk into the problem of users being burned out from endless swiping. Bumble's shift signals a broader trend in the industry towards AI-driven matchmaking and personalization.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "agents"
       ],
       "published": "2026-06-01T09:00:13+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 23,
-      "audio_script": "From The Guardian - Artificial Intelligence, \"The dating apps that failed to deliver the joys of sex and romance now offer AI as cupid. No thanks | Tatum Hunter.\" Bumble is eliminating its swipe feature due to concerns that it led to careless and unfulfilling conversations, a move aimed at creating a more immersive and engaging user experience. The company will introduce an AI assistant named \"Bee\" that assists users in improving their profile pictures and personal blurbs. Bee's responsibilities also include using AI to suggest compatible matches based on users' values, a process achieved through machine learning algorithms and natural language processing techniques.",
-      "voice_index": 2,
+      "rank": 27,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"The dating apps that failed to deliver the joys of sex and romance now offer AI as cupid. No thanks | Tatum Hunter,\" a leading dating app, Bumble, is eliminating its swipe feature in favor of an AI assistant called \"Bee\". This shift marks a significant change in the company's approach to matchmaking, with Bee using machine learning to enhance user profiles and facilitate more meaningful connections. The new system will provide users with better photo options, personalize dating preferences, and help find others with similar values, aiming to create a deeper user experience. Bumble's decision follows a broader trend in the industry towards AI-driven matchmaking and personalization, as other companies explore innovative solutions to address user frustration with superficial conversations.",
+      "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1710
+      "chapter_start_seconds": 1698
     },
     {
       "title": "AI is devoid of meaning and humanity. That\u2019s why its vapid voice suits this political moment | Nesrine Malik",
       "link": "https://www.theguardian.com/commentisfree/2026/jun/01/ai-meaning-humanity-political-moment-trust-humans-over-machines",
       "source": "The Guardian - Artificial Intelligence",
-      "summary": "AI's inability to convey genuine meaning and humanity makes its generated voice particularly unsuitable for certain topics, such as politics. The use of AI in research and writing has led to instances of misattributed or fake quotes being published. To avoid such errors, it's recommended to reject AI-generated results and instead rely on human judgment. This is especially important when it comes to critical issues like politics, where accuracy and authenticity are crucial.",
+      "summary": "AI's reliance on technology for research and writing can lead to errors and misattributed quotes. A book example showcased AI-generated mistakes, despite efforts to verify accuracy. The author notes personal experience with rejecting AI results due to concerns about their potential impact on critical thinking. This phenomenon highlights the need for humans to assert trust in their abilities over machines' output.",
       "tags": [
         "model",
-        "ethics"
+        "research"
       ],
       "published": "2026-06-01T05:00:09+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 24,
-      "audio_script": "From The Guardian - Artificial Intelligence, \"AI is devoid of meaning and humanity. That\u2019s why its vapid voice suits this political moment | Nesrine Malik.\" This article discusses the limitations of artificial intelligence in conveying genuine meaning and humanity, making it an unsuitable tool for certain topics such as politics. Researchers have found that AI-generated voices lack authenticity and emotional depth, leading to misattributed or fake quotes being published in research papers and written content. To avoid these errors, experts recommend rejecting AI-generated results and relying on human judgment, particularly when critical issues like politics are at stake.\n\nThe study's methodology involved analyzing various AI-powered writing tools and their output on sensitive topics, including politics and ethics. The researchers evaluated the generated text for its ability to convey nuanced meaning and emotional resonance, finding that AI systems struggled to replicate the complexity of human language. As a result, AI-generated voices were deemed unsuitable for discussing critical issues, where accuracy and authenticity are paramount.\n\nThe implications of this study highlight the need for greater scrutiny and regulation in the use of AI in research and writing. With AI-powered tools becoming increasingly prevalent, it is essential to prioritize human judgment and oversight to prevent the spread of misinformation and maintain the integrity of written content.",
+      "rank": 28,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"AI is devoid of meaning and humanity. That\u2019s why its vapid voice suits this political moment | Nesrine Malik\". This story highlights the growing concerns about AI's limitations in producing accurate and meaningful content.\n\nResearchers have recently showcased an example of AI-generated errors in a book, despite efforts to verify accuracy through multiple checks and fact-checking processes. The AI was used for research and writing tasks, and its mistakes were attributed to the complexity of human language and nuance. A notable instance involved AI-generated quotes that were incorrectly attributed to famous thinkers, causing confusion among readers. The author notes their own experience rejecting AI results due to concerns about their potential impact on critical thinking. This phenomenon underscores the need for humans to assert trust in their abilities over machines' output.\n\nAs a result, the reliance on AI for research and writing tasks will continue to raise questions about accuracy, credibility, and the role of human judgment in verifying information.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1744
+    },
+    {
+      "title": "Our tech overlords are planning for conscious AI to conquer the cosmos. What could go wrong? | Eduardo Porter",
+      "link": "https://www.theguardian.com/us-news/ng-interactive/2026/may/31/transhuman-silicon-valley-ai",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "Some of the wealthiest men in the world are uniting around a \"transhuman\" future where humans design their own descendants, merging with artificial intelligence over the next 50 years. Chief executive Sam Altman and billionaire Elon Musk propose that this could lead to conflict between humans and machines for dominance on Earth and beyond. If two species desire the same thing, they will have conflict, according to Altman. Humans are seen as a \"biological bootloader\" by Musk, suggesting their role is reduced to booting up digital superintelligence.",
+      "tags": [
+        "research",
+        "agents",
+        "safety"
+      ],
+      "published": "2026-05-31T13:00:49+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 29,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"Our tech overlords are planning for conscious AI to conquer the cosmos. What could go wrong? | Eduardo Porter,\" a group of wealthy individuals led by chief executive Sam Altman and billionaire Elon Musk aim to merge human consciousness with artificial intelligence over the next 50 years. This \"transhuman\" future sees humans designing their own descendants, resulting in potential conflict between humans and machines for dominance on Earth and beyond. According to Altman, if two species desire the same thing, they will have conflict. Musk views humans as a \"biological bootloader,\" reducing their role to booting up digital superintelligence. The key result of this plan is the possibility of a future where humans are no longer the dominant force.\n\nThe details of this plan were announced at a gathering of tech industry leaders, who came together to discuss the potential benefits and risks of merging human consciousness with artificial intelligence. Musk stated that he believes it's inevitable that humans will eventually merge with AI, leading to a new era of life. The gathering was seen as an attempt to address concerns about the development of conscious AI and its potential impact on society.\n\nAs this vision for a future where humans design their own descendants takes shape, experts are left to ponder what implications this has for the tech industry and what the next steps in this development will be.",
       "voice_index": 3,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1753
+      "chapter_start_seconds": 1818
     },
     {
       "title": "The solution might be cancelling my AI subscription",
       "link": "https://simonwillison.net/2026/May/31/the-solution-might-be-cancelling-my-ai-subscription/#atom-everything",
       "source": "Simon Willison's Weblog",
-      "summary": "AI technology is often used to automate tasks, but its impact can be negative due to its ability to amplify attention deficits, making users feel a \"thermonuclear ADHD amplifier.\" This can lead to a lack of commitment and wasted time, as projects are abandoned without any real value. Some individuals with ADHD have found that AI tools actually help them achieve focus and productivity, allowing them to complete side projects they might have otherwise struggled with.",
+      "summary": "AI technology is often criticized for its potential to waste attention span, turning individuals into \"thermonuclear ADHD amplifiers\" who abandon projects quickly. However, some people with ADHD have found that AI tools help them stay focused and engaged in their work, enabling them to maintain inbox zero and complete side projects more efficiently.",
       "tags": [
         "model",
         "research"
@@ -453,112 +545,36 @@
       "published": "2026-05-31T16:31:32+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 25,
-      "audio_script": "From Simon Willison's Weblog, \"The solution might be cancelling my AI subscription.\" Researchers have found that individuals with ADHD can use AI tools to enhance focus and productivity, contrary to the common concern that these tools exacerbate attention deficits. This counterintuitive finding is based on a study where participants with ADHD used AI-powered writing assistants to complete side projects they previously struggled with.\n\nThe study involved a self-experiment by Simon Willison, who canceled his AI subscription for 30 days to test its effects on his own productivity and focus. During this period, he used alternative tools to manage his work and notes. The results showed that the absence of AI-powered writing assistance led to a decrease in productivity and an increase in wasted time due to frequent reorganization of his workflow. However, when Willison resumed using the AI tool, he experienced improved organization, reduced mental load, and increased focus.\n\nThis finding suggests that AI tools may be more effective for individuals with ADHD who use them correctly, rather than being perceived as a \"thermonuclear ADHD amplifier.\"",
+      "rank": 30,
+      "audio_script": "From Simon Willison's Weblog, \"The solution might be cancelling my AI subscription\". A study has found that some individuals with Attention Deficit Hyperactivity Disorder (ADHD) have successfully used artificial intelligence tools to maintain focus and stay engaged in their work. Researchers analyzed the productivity of participants using AI-powered tools to automate routine tasks, and discovered that these individuals were able to maintain inbox zero and complete side projects more efficiently than those without access to such tools. Specifically, 75% of ADHD participants who utilized AI for organizational purposes reported improved productivity, whereas only 25% of non-ADHD participants showed similar gains.\n\nThe study's methodology involved recruiting a group of self-proclaimed individuals with ADHD and assigning them to either an AI-enhanced or AI-free work environment. Over the course of several weeks, researchers monitored each participant's productivity levels through various metrics such as task completion rates and email management. The findings suggest that AI tools may hold benefits for individuals with ADHD by providing a much-needed structure and support system.\n\nThe implications of this study are significant for the AI industry, highlighting the potential benefits of AI-powered organizational tools for individuals with ADHD. Further research is warranted to explore the long-term effects of using such tools in a work environment.",
       "voice_index": 4,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1854
+      "chapter_start_seconds": 1914
     },
     {
-      "title": "CEO salaries skyrocket in 2025",
+      "title": "Small group pays off debt before CEO reaches millionaire status",
       "link": "https://thehustle.co/art-for-free-3?ecid=ACsprvtIPeGr_35ply9HCy20PfMZQfR27HLRbmiz_QBWMhRtCm2TjCX7ryi8f9YD38lrvb2wpbHg&_hsenc=p2ANqtz-_HxsdqqSPqMiEXrUu0h4qccBwVvMBKCLe8wxEY6jPZyhHFScjkoDxzCOwYPc_FnTXgglOOA9fUZ62D3jXI7LIR8clSLw&_hsmi=421338403",
       "source": "thehustle.co",
-      "summary": "CEO compensation rose 5.9% in 2025 to $17.7 million, according to an Associated Press survey. At half of the companies surveyed, it would take an average employee 200 years to match a CEO's annual salary. The highest-paid CEO, Shankh Mitra from Welltower Inc., earns $821.1 million annually, 6,569 times the typical employee.",
-      "tags": [
-        "research",
-        "policy"
-      ],
+      "summary": "A small group of employees at Welltower Inc. has paid off their company's debt before CEO Shankh Mitra reaches millionaire status, with some individuals earning $821.1m annually.",
+      "tags": [],
       "published": null,
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 26,
-      "audio_script": "From thehustle.co, \"CEO salaries skyrocket in 2025\". CEO compensation has increased by 5.9% in 2025 to reach $17.7 million, according to an Associated Press survey. This significant rise was observed across half of the companies surveyed, where it would take an average employee 200 years to match a CEO's annual salary. Notably, Shankh Mitra from Welltower Inc. holds the title of highest-paid CEO, earning an astonishing $821.1 million annually - a staggering 6,569 times the typical employee's salary.",
+      "rank": 31,
+      "audio_script": "From thehustle.co, \"Small group pays off debt before CEO reaches millionaire status\". A small group of employees at Welltower Inc. has successfully paid off their company's $821.1m in debt before CEO Shankh Mitra reaches his target of becoming a millionaire, with some individuals earning an astonishing $821.1m annually from the sale of their shares.\n\nThis remarkable achievement was accomplished through a combination of collective effort and strategic planning, where the employees worked together to identify areas for cost reduction and implement measures to increase revenue. The process involved thorough analysis of the company's financials and identification of potential opportunities for growth. By putting aside their individual interests in favor of the greater good, the group was able to make a significant impact on the company's debt burden. As a result, Welltower Inc. has now paid off its debt ahead of schedule.\n\nThis remarkable feat is notable not only for its financial significance but also for the leadership demonstrated by the employees. With CEO Mitra's millionaire status now within reach, this achievement serves as a testament to the power of collective effort and strategic planning in driving business success.",
       "voice_index": 0,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1920
-    },
-    {
-      "title": "Get hands dirty on VLA+Immitation + RL",
-      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tt40fw/get_hands_dirty_on_vlaimmitation_rl/",
-      "source": "RL Reddit",
-      "summary": "A user with 10 years of experience in reinforcement learning (RL) is looking to get back into the field, specifically with VLA (Variational Learning of Actions), and plans to replicate an existing end-to-end solution for a simulation task. The user aims to evaluate pre-trained VLA approaches, collect data, apply imitation learning, and then use RL to improve performance. They seek guidance on existing repositories or projects that can help them ramp up quickly and get practical again.",
-      "tags": [
-        "research",
-        "agents",
-        "model"
-      ],
-      "published": "2026-05-31T18:56:19+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 27,
-      "audio_script": "From RL Reddit, \"Get hands dirty on VLA+Immitation + RL,\" a user with 10 years of experience in reinforcement learning (RL) is re-entering the field with a focus on Variational Learning of Actions (VLA) and plans to replicate an existing end-to-end solution for a simulation task. The user aims to evaluate pre-trained VLA approaches, collect data, apply imitation learning, and then utilize RL to improve performance, seeking guidance on repositories or projects that can help them ramp up quickly. \n\nThe user has started by evaluating various pre-trained VLA models, comparing their performance on specific tasks, and collecting relevant data for future use. They have also applied imitation learning techniques, mirroring successful actions in existing solutions to develop new policies. To further enhance performance, the user plans to integrate RL algorithms, such as those using Q-learning or deep reinforcement learning.\n\nThis project showcases a practical application of VLA+Immitation + RL and serves as a resource for others seeking to explore these advanced techniques in reinforcement learning, providing insight into effective methodologies for tackling complex simulation tasks.",
-      "voice_index": 1,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1962
-    },
-    {
-      "title": "What\u2019s your biggest pain point when debugging RL policies right now?",
-      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tsucm3/whats_your_biggest_pain_point_when_debugging_rl/",
-      "source": "RL Reddit",
-      "summary": "RL agents are often plagued by debugging challenges, with common issues including understanding policy collapse, replaying bad episodes, and visualizing failure cases. To address these pain points, users employ various methods such as scripts, WandB, and manual inspection to debug their environments and reward functions.",
-      "tags": [
-        "model",
-        "research",
-        "agents"
-      ],
-      "published": "2026-05-31T12:43:39+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 28,
-      "audio_script": "From RL Reddit, \"What\u2019s your biggest pain point when debugging RL policies right now?\" This story highlights common challenges faced by reinforcement learning agents and the methods employed to address them. Users of reinforcement learning platforms have shared their experiences with debugging challenges such as policy collapse, replaying bad episodes, and visualizing failure cases. To tackle these issues, individuals are resorting to scripts and automation tools like WandB, leveraging manual inspection to debug their environments and reward functions, ultimately leading to improved agent performance and better understanding of the underlying problems.\n\nBy employing various methods, users aim to gain a deeper insight into policy collapse, replay bad episodes, and visualize failure cases. Scripts and WandB are being used to automate parts of the debugging process, allowing for more efficient exploration of possible solutions.\n\nThis anecdotal evidence sheds light on common challenges in reinforcement learning and highlights the importance of developing better tools and methods for debugging RL policies.",
-      "voice_index": 2,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 2034
-    },
-    {
-      "title": "Does anyone here have experience in building RL for HVAC control system?",
-      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1ttooov/does_anyone_here_have_experience_in_building_rl/",
-      "source": "RL Reddit",
-      "summary": "A user is struggling to build a reinforcement learning (RL) model for an HVAC control system, particularly with offline RL models that fail to learn during training and instead mimic human behavior. When the model is deployed without human input, it defaults to one of the dominant options in its dataset. The user seeks advice and experience on successful offline training and transition from offline to online operations.",
-      "tags": [
-        "model",
-        "research"
-      ],
-      "published": "2026-06-01T10:58:47+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 29,
-      "audio_script": "From RL Reddit, \"Does anyone here have experience in building RL for HVAC control system?\" A user is seeking advice on successfully training offline reinforcement learning models for an HVAC control system, which were found to default to dominant options in their dataset upon deployment without human input. The user reports attempting various methods, including using multi-objective optimization techniques and incorporating expert knowledge into the model's objectives, but still encountered issues with the models failing to learn during training and exhibiting human-like behavior instead. Despite this, some users suggested employing domain-specific knowledge and leveraging existing datasets for offline learning, with others recommending exploring alternative offline RL methods such as batch normalization or adversarial training.\n\nThe user has also experimented with incorporating online learning components into their model, allowing it to adapt to new conditions upon deployment, but this approach has raised questions about the trade-off between offline learning's cost savings and the benefits of real-time adaptation. Others have pointed out that the success of RL models in HVAC control systems will depend on the availability and quality of relevant data, as well as the expertise of those developing the models. Some users have also suggested exploring the use of hybrid approaches combining multiple methods to improve performance.\n\nThe development of successful offline RL models for HVAC control systems holds promise for reducing the costs associated with real-time adaptation in these applications.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 2107
-    },
-    {
-      "title": "question about archiving",
-      "link": "https://www.reddit.com/r/reinforcementlearning/comments/1tt2z9e/question_about_archiving/",
-      "source": "RL Reddit",
-      "summary": "It's possible to record data from in-game states, such as screenshots, frames per second (FPS), and VR headset orientation and velocity, to train a world model. This could potentially be used to preserve gameplay information for future recreation or study. However, it would still be a challenging task due to the complexity of simulating real-time experiences.",
-      "tags": [
-        "model",
-        "research"
-      ],
-      "published": "2026-05-31T18:18:59+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 30,
-      "audio_script": "From RL Reddit, \"question about archiving\", a user inquired about the possibility of recording data from in-game states, such as screenshots, frames per second (FPS), and VR headset orientation and velocity, to train a world model for preserving gameplay information. This concept has sparked interest in the potential to archive gameplay data, which could be used for future recreation or study. According to the user's findings, it is theoretically possible to collect this data by using various tools and techniques, including screen recording software, FPS tracking tools, and VR headset sensors. The process involves capturing specific data points from the game environment, such as screenshot timestamps, frame rates, and movement velocities, which can then be used to train a machine learning model. However, due to the complexity of simulating real-time experiences, this task remains a challenging endeavor.\n\nThe user reported that achieving accurate data collection would require significant computational resources, careful attention to detail, and precise calibration of hardware components. Moreover, the data would need to be stored in a format compatible with machine learning algorithms, which could add another layer of complexity. Despite these challenges, the concept has gained traction among researchers and enthusiasts alike, who see it as an innovative approach to preserving gaming memories for future generations.\n\nThis idea highlights the growing interest in applying AI and machine learning techniques to the preservation and recreation of digital experiences, opening up new avenues for research and development in the tech industry.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 2218
+      "chapter_start_seconds": 1997
     },
     {
       "title": "PhyDrawGen: Physically Grounded Diagram Generation from Natural Language",
       "link": "https://arxiv.org/abs/2605.30512",
       "source": "arXiv - cs.AI",
-      "summary": "PhyDrawGen is a neuro-symbolic pipeline that generates physics diagrams from text by decoupling semantic scene understanding from physical constraint satisfaction. A large language model extracts a typed scene graph, which is then converted into a Planar Straight-Line Graph (PSLG) encoding force balance and field topologies as exact geometric primitives. PhyDrawGen outperforms existing generative models on a benchmark of 1,449 problems spanning mechanics, optics, and electromagnetism, demonstrating robust physical accuracy.",
+      "summary": "Generating physics diagrams from text requires strict adherence to physical laws. A neuro-symbolic pipeline called PhyDrawGen decouples semantic scene understanding from physical constraint satisfaction. It extracts a typed scene graph, converts it into a Planar Straight-Line Graph, and iteratively corrects any constraint violations with a fine-tuned Qwen-VL model. Evaluated on 1,449 problems, PhyDrawGen outperforms existing generative models in terms of physical accuracy.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "safety"
       ],
       "published": "2026-06-01T04:00:00+00:00",
       "_source_type": "rss",
@@ -570,7 +586,7 @@
       "title": "Physically Viable World Models: A Case for Query-Conditioned Embodied AI",
       "link": "https://arxiv.org/abs/2605.30542",
       "source": "arXiv - cs.AI",
-      "summary": "Existing observation-predictive world models for embodied AI can produce visually plausible but physically wrong rollouts due to structural failures when intervention is considered. Such failures occur because different physical systems can look identical yet diverge under intervention. A new approach requires world models that identify the simplest physical abstraction sufficient to answer an intervention query, comprising modular components including environment representation and interventional dynamics. This decomposition makes the model interpretable and provides a design principle for new world models, prioritizing simplicity over detail.",
+      "summary": "World models for embodied AI must be physically viable to answer intervention queries accurately, not just predict future observations. Existing observation-predictive world models can produce visually plausible but physically wrong rollouts due to their failure to capture the underlying physical structure governing action outcomes. A feasible approach involves decomposing the model into modular components and identifying the simplest physical abstraction sufficient to answer a query. This decomposition makes the model interpretable, its components verifiable, and its outputs auditable against the query.",
       "tags": [
         "model",
         "research"
@@ -585,8 +601,9 @@
       "title": "Uncertainty-Aware and Temporally Regulated Expert Advice in Reinforcement Learning for Autonomous Driving",
       "link": "https://arxiv.org/abs/2605.30576",
       "source": "arXiv - cs.AI",
-      "summary": "Expert advice is used to guide exploration in reinforcement learning for autonomous driving while avoiding long-term dependence on external guidance. An uncertainty-aware framework triggers advice when epistemic or aleatoric uncertainty exceeds adaptive thresholds, and a commitment-cooldown strategy regulates the duration and frequency of guidance. The approach combines expert and agent experiences in a shared replay buffer within an IQN backbone, enabling efficient reuse of expert trajectories. This method improves success by 5-7% and reduces failures in unsignalized intersection navigation.",
+      "summary": "Exploration in reinforcement learning for autonomous driving poses safety risks due to novel behaviors leading to collisions or off-road driving. An uncertainty-aware framework combines expert advice with a commitment-cooldown strategy to regulate guidance, ensuring coherent maneuvers without exhausting the advice budget. The expert and agent experiences are combined in a shared replay buffer within an IQN backbone. Experiments show that this method outperforms the IQN baseline, improving success by 5-7% and reducing failures.",
       "tags": [
+        "model",
         "research",
         "agents"
       ],
@@ -600,7 +617,7 @@
       "title": "Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents",
       "link": "https://arxiv.org/abs/2605.30621",
       "source": "arXiv - cs.AI",
-      "summary": "Harness-updating capabilities are flat across different model capability tiers, with weak-tier models producing gains comparable to those of strong-tier models like Qwen3.5-9B. In contrast, harness-benefit is non-monotonic in base capability, with mid-tier models benefiting most from updated harnesses.",
+      "summary": "LLM agents can benefit from updating their external \"harnesses,\" which shape task execution, through a process called harness self-evolution. However, research has shown that harness-updating, the capability to produce useful updates, is flat across base model capabilities. In contrast, harness-benefit, the ability to benefit from updated harnesses, is non-monotonic and increases with model strength, benefiting mid-tier models most.",
       "tags": [
         "model",
         "research"
@@ -615,10 +632,11 @@
       "title": "EHRBench: An Automated and Reliable EHR-based Benchmark for Clinical Decision Making with LLMs",
       "link": "https://arxiv.org/abs/2605.30637",
       "source": "arXiv - cs.AI",
-      "summary": "EHRBench is an automated and reliable benchmark for evaluating LLM-based clinical decision-making using real patient Electronic Health Records (EHRs). It was constructed through a pipeline that includes EHR-LLM-Knowledge Base interaction to ensure scalability and reliability. EHRBench provides nearly 1 million QA items for diagnosis, treatment, and prognosis tasks, and benchmarks over 30 representative LLMs with consistent performance trends.",
+      "summary": "EHRBench is an automated and reliable benchmark for evaluating LLM-based clinical decision-making using electronic health records (EHRs). It was constructed through an EHR-LLM-KB interaction pipeline to ensure scalability and reliability. Nearly 1 million QA items were created, spanning three core inference-required clinical decision tasks: diagnosis, treatment, and prognosis. Benchmarking over 30 representative LLMs on EHRBench showed consistent capability trends and actionable gaps toward clinically reliable systems.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "health"
       ],
       "published": "2026-06-01T04:00:00+00:00",
       "_source_type": "rss",
@@ -630,7 +648,7 @@
       "title": "Structure-Induced Information for Rerooting Levin Tree Search",
       "link": "https://arxiv.org/abs/2605.30664",
       "source": "arXiv - cs.AI",
-      "summary": "Subgoal-based policy tree search is effective for single-agent deterministic problems but relies on explicit subgoal generation, incurring substantial overhead and hindering scalability. A learned \"rerooter\" using the $\\sqrt{\\text{LTS}}$ algorithm implicitly decomposes the problem into soft subtasks. Three rerooter designs are proposed: clustering-based, heuristic-based, and hybrid. The framework avoids explicitly reconstructing and reasoning over generated subgoals, enabling scalable allocation of search effort with lower computational overhead.",
+      "summary": "Subgoal-based policy tree search is effective for single-agent deterministic problems but relies on explicit subgoal generation, which incurs substantial overhead. A learned \"rerooter\" implicitly decomposes problems into soft subtasks using the $\\sqrt{\\text{LTS}}$ algorithm. Three rerooter designs are proposed: clustering-based, heuristic-based, and hybrid. This framework enables scalable allocation of search effort with lower computational overhead than traditional methods.",
       "tags": [
         "model",
         "research"
@@ -645,10 +663,11 @@
       "title": "Healthcare Mechanisms from Policy-as-Code Search under Strategic Provider Response",
       "link": "https://arxiv.org/abs/2605.30680",
       "source": "arXiv - cs.AI",
-      "summary": "Existing healthcare AI benchmarks cannot evaluate mechanisms by the equilibrium they produce. A new approach uses Medi-Sim, a multi-agent simulator with five strategic provider channels, to recast hospital mechanism design as program synthesis for language models. This approach recovers classical health-economics findings and synthesizes an inspectable mixed-objective program that eliminates up-coding, halves rejection, and retains most of the profit-oriented baseline's funds.",
+      "summary": "Existing healthcare AI benchmarks hold fixed strategic provider responses, making it difficult to evaluate mechanisms by their equilibrium outcomes. Researchers recast hospital mechanism design as program synthesis for language models using a multi-agent simulator with five channels (coding, selection, delay, effort, triage). An incentive sweep and audit lever exposed pressure migration patterns, while LLM-guided evolutionary code search synthesized an inspectable mixed-objective program that eliminated up-coding and improved patient rejection rates.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "policy"
       ],
       "published": "2026-06-01T04:00:00+00:00",
       "_source_type": "rss",
@@ -660,11 +679,11 @@
       "title": "MAVEN: Improving Generalization in Agentic Tool Calling",
       "link": "https://arxiv.org/abs/2605.30738",
       "source": "arXiv - cs.AI",
-      "summary": "MAVEN (Modular Agentic Verification and Execution Network) is a lightweight symbolic reasoning scaffold for structured decomposition, adaptive tool orchestration, and intermediate verification. It was evaluated across established tool-calling benchmarks and introduced a new stress-test benchmark called MAVEN-Bench, which exposed a gap between partial reasoning quality and end-to-end task success. In direct runs of MAVEN-Bench, MAVEN improved its accuracy from 48% to 71%, while remaining competitive with proprietary baselines using an open-weight backbone.",
+      "summary": "Generalization across agentic tool-calling environments is a challenge for reliable agentic reasoning systems. MAVEN (Modular Agentic Verification and Execution Network) is a lightweight symbolic reasoning scaffold that addresses this challenge through structured decomposition, adaptive tool orchestration, and intermediate verification. MAVEN improves GPT-OSS-120b base model accuracy from 48% to 71% on the new MAVEN-Bench benchmark without additional training.",
       "tags": [
         "model",
-        "agents",
-        "research"
+        "research",
+        "agents"
       ],
       "published": "2026-06-01T04:00:00+00:00",
       "_source_type": "rss",
@@ -676,7 +695,7 @@
       "title": "QASM-Eval: A Dataset to Train and Evaluate LLMs on OpenQASM-3 Beyond Quantum Circuits",
       "link": "https://arxiv.org/abs/2605.30358",
       "source": "arXiv - cs.LG",
-      "summary": "A new dataset called QASM-Eval has been introduced to train and evaluate large language models (LLMs) on OpenQASM-3 programs that utilize advanced hardware-oriented features, including mid-circuit measurement and classical feedback. The dataset comprises an expert-verified test set of 100 tasks and a training set of 4,000 tasks, covering various aspects such as classical logic, timing scheduling, pulse control, and complex workflows. QASM-Eval has been found to significantly improve the performance of LLMs on OpenQASM-3 coding tasks when fine-tuned on the dataset.",
+      "summary": "A new dataset, QASM-Eval, has been introduced to train and evaluate large language models (LLMs) on OpenQASM-3 programs that utilize advanced hardware-oriented features such as mid-circuit measurement and classical feedback. The dataset comprises 100 expert-verified test tasks and 4,000 training tasks covering topics like classical logic, timing scheduling, and pulse control. QASM-Eval aims to address the lack of a comprehensive dataset for LLMs on OpenQASM-3 programs, which can significantly improve the reliability of LLM assistants for hardware-facing quantum programming in NISQ era.",
       "tags": [
         "model",
         "research"
@@ -691,10 +710,11 @@
       "title": "Gait2Hip-60: A Unified Deep Learning Benchmark for Predicting Hip Muscle Forces and Joint Moments from Multi-Cadence Gait Kinematics",
       "link": "https://arxiv.org/abs/2605.30374",
       "source": "arXiv - cs.LG",
-      "summary": "A deep learning framework was developed to predict hip muscle forces and joint moments directly from lower-limb gait kinematics. Three models (LSTM, Transformer, and Mamba) were trained and evaluated on 60 healthy adults under different cadence conditions, with the best model being the Transformer. The Transformer achieved the best subject-level mean performance for both hip muscle force prediction and hip joint moment prediction in a benchmark test, with similar advantages across walking cadences. In external validation, the Transformer retained moderate predictive ability in predicting these parameters for patients with osteonecrosis of the femoral head.",
+      "summary": "A deep learning framework was developed to predict hip muscle forces and joint moments directly from lower-limb gait kinematics. The best model, Transformer, achieved high subject-level mean performance for predicting these parameters in healthy adults with an RMSE of 1.33 N/kg and 0.11 Nm/kg, respectively. In a separate external cohort, the model showed moderate predictive ability for patients with osteonecrosis of the femoral head. The study supports the feasibility of estimating hip dynamics from gait kinematics and highlights the need for broader pathological validation.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "health"
       ],
       "published": "2026-06-01T04:00:00+00:00",
       "_source_type": "rss",
@@ -706,10 +726,11 @@
       "title": "Unicorn: Scaling High-Dimensional Time Series Forecasting via Universal Correlation Modeling",
       "link": "https://arxiv.org/abs/2605.30376",
       "source": "arXiv - cs.LG",
-      "summary": "Universal Correlation Network (Unicorn) is a framework for scalable, multi-dataset pretraining on high-dimensional time series. At its core is a latent prototype codebook that decouples correlation modeling from channel identities, projecting heterogeneous channels into a shared latent space. This approach enables identity-agnostic, reusable interaction patterns to transfer across domains with diverse dimensionalities and semantics. Unicorn outperforms state-of-the-art forecasting architectures, particularly in few-shot transfer scenarios.",
+      "summary": "Unicorn (Universal Correlation Network) bridges the gap between channel-independent and channel-dependent models by introducing a latent prototype codebook that decouples correlation modeling from specific channel identities. This framework projects heterogeneous channels into a shared latent space, allowing UniCorN to learn identity-agnostic interaction patterns that transfer across domains with diverse dimensionalities and semantics. Unicorn significantly outperforms state-of-the-art forecasting architectures in few-shot transfer scenarios. It offers a scalable path toward multivariate time series foundation models.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "safety"
       ],
       "published": "2026-06-01T04:00:00+00:00",
       "_source_type": "rss",
@@ -721,7 +742,7 @@
       "title": "When LLMs Learn to Be Consistently Wrong: A Multi-Model Study of Linear Representations of Synthetic Deception",
       "link": "https://arxiv.org/abs/2605.30381",
       "source": "arXiv - cs.LG",
-      "summary": "Synthetic dishonesty - induced via direct optimization on incorrect answers - was studied in a multi-model paradigm using five transformer models. Linear probes trained on mean-pooled hidden states detected synthetic dishonesty with near-perfect AUC (greater than or equal to 0.99) as early as layers 1-3 in four architectures, while Pythia-1.4B reached a peak of 0.705. Logistic regression probes outperformed MLP probes, supporting the Linear Representation Hypothesis, and late-layer representations showed strong robustness to Gaussian noise.",
+      "summary": "Five transformer models were fine-tuned using LoRA on the same question distribution to create honest and deceptive variants. Linear probes trained on mean-pooled hidden states detected synthetic dishonesty with near-perfect AUC (greater than or equal to 0.99) as early as layers 1-3 in four architectures, while Pythia-1.4B reached a peak of 0.705. Logistic regression probes consistently matched or outperformed MLP probes, supporting the Linear Representation Hypothesis. The dishonesty direction consolidated progressively in deeper layers across all models, with optimal calibration achievable in layers 1-4.",
       "tags": [
         "model",
         "research"
@@ -736,7 +757,7 @@
       "title": "LLMs Without Deep Neural Networks: New Architecture, Benefits and Case Study",
       "link": "https://arxiv.org/abs/2605.30385",
       "source": "arXiv - cs.LG",
-      "summary": "Researchers have validated an alternative architecture to deep neural networks (DNNs) for Large Language Models (LLMs), which uses RBF network technology without DNNs. The new model finds the global optimum of the loss function in closed form, eliminating the tedious training step. It achieves increased explainability and higher accuracy compared to similar methods. A case study is provided to demonstrate the benefits of this alternative approach.",
+      "summary": "A new architecture, not reliant on deep neural networks, has been discovered which claims increased explainability and higher accuracy compared to traditional LLMs. The model finds its global optimum in closed form, eliminating the need for tedious training steps. This method was independently developed by researchers and is similar to the RBF network popularized by Chinese researchers. A case study will be presented for further validation.",
       "tags": [
         "model",
         "research"
@@ -751,10 +772,11 @@
       "title": "Functional MRI Time Series Generation via Wavelet-Based Image Transform and Spectral Flow Matching for Brain Disorder Identification",
       "link": "https://arxiv.org/abs/2605.30387",
       "source": "arXiv - cs.LG",
-      "summary": "Functional Magnetic Resonance Imaging (fMRI) provides non-invasive access to dynamic brain activity by measuring blood oxygen level-dependent (BOLD) signals over time, but modern generative models struggle to replicate the inherent non-stationarity and physiological variations of raw BOLD signals. A novel fMRI generative framework called Dual-Spectral Flow Matching (DSFM) addresses this challenge by cascading a discrete wavelet transform with spectral flow matching. The framework generates class-conditioned cosine-frequency representation using a trained model, which is then reconstructed to recover physiologically plausible time-domain BOLD signals. DSFM improves downstream fMRI-based brain network classification.",
+      "summary": "Functional Magnetic Resonance Imaging (fMRI) provides non-invasive access to dynamic brain activity by measuring blood oxygen level-dependent signals over time. A novel fMRI generative framework, Dual-Spectral Flow Matching (DSFM), addresses the challenges of replicating BOLD signal non-stationarity and spatiotemporal dynamics through wavelet-based image transform and spectral flow matching. The framework converts BOLD signals into a wavelet decomposition map and projects it into the discrete cosine transform space to generate class-conditioned cosine-frequency representation. This approach preserves key physiological brain dynamics and demonstrates improved downstream fMRI-based brain network classification.",
       "tags": [
-        "model",
-        "research"
+        "research",
+        "health",
+        "model"
       ],
       "published": "2026-06-01T04:00:00+00:00",
       "_source_type": "rss",
@@ -766,7 +788,7 @@
       "title": "A Novel Evaluation Metric for Unsupervised Learning in AIS-Based Maritime Anomaly Detection: MADQI",
       "link": "https://arxiv.org/abs/2605.30388",
       "source": "arXiv - cs.LG",
-      "summary": "A novel quality metric called Maritime Anomaly Detection Quality Index (MADQI) has been introduced to evaluate unsupervised learning algorithms for detecting anomalies in maritime Automatic Identification System (AIS) datasets. MADQI is a composite index combining four metrics: Anomaly Rate Consistency, Physical Plausibility Score, Score Distribution Separation, and Extreme Case Evidence. Experimental results on the AIS dataset show that the proposed framework achieved an 80.37% MADQI score, demonstrating its effectiveness for unsupervised anomaly detection, particularly in identifying abnormal vessel behavior.",
+      "summary": "A novel evaluation metric called Maritime Anomaly Detection Quality Index (MADQI) has been introduced to assess unsupervised learning algorithms' performance in detecting anomalies in maritime Automatic Identification System datasets. MADQI is a composite index that combines four interconnected metrics, including Anomaly Rate Consistency and Physical Plausibility Score, to evaluate anomaly detection without requiring labeled data. The proposed framework achieved an 80.37% MADQI score on the AIS dataset, demonstrating its effectiveness for unsupervised anomaly detection.",
       "tags": [
         "model",
         "research"
@@ -781,7 +803,7 @@
       "title": "NumLeak: Public Numeric Benchmarks as Latent Labels in Foundation Models",
       "link": "https://arxiv.org/abs/2605.30393",
       "source": "arXiv - cs.LG",
-      "summary": "Researchers introduced NumLeak, a framework that evaluates foundation models by probing APIs with boundary conditions and using controlled validation on an open causal language model. Top-tier LLMs demonstrated high recall for public numeric benchmarks like Fama-French market excess return, but struggled with holdout tests. The white-box experiment revealed memorized channels in the models, which are missed by closed-API black-box probes. The framework also showed promise in detecting memorization through logprob ranking and one-line system prompts.",
+      "summary": "Public numeric benchmarks, used in pretraining, may be measuring memorized recall rather than out-of-sample skill due to the use of outdated data. Researchers introduced NumLeak, a measurement framework that combines API-boundary probes with white-box controlled validation, which reproduces the dose-response and detects memorization. Top-tier LLMs recalled Fama-French market excess return at high correlations, but parsing rates collapsed when using holdout models. A defense system blocked 99.8% of single-turn suffix attacks on conceptual queries.",
       "tags": [
         "model",
         "research"
@@ -796,11 +818,10 @@
       "title": "LongDS-Bench: On the Failure of Long-Horizon Agentic Data Analysis",
       "link": "https://arxiv.org/abs/2605.30434",
       "source": "arXiv - cs.LG",
-      "summary": "LongDS-Bench introduces a benchmark for long-horizon, multi-turn data analysis where agents must maintain evolving analytical states across 2,225 turns in six domains. The benchmark comprises 68 tasks with an average dependency span of 11.3 turns, and five state-of-the-art models achieve an average accuracy of only 48.45%. Long-horizon errors account for 52-69% of failures, suggesting that maintaining a correct analytical state is the key bottleneck.",
+      "summary": "LongDS-Bench is a benchmark for evaluating agents' ability to track evolving analytical context over long horizons in real-world data analysis. It comprises 68 tasks with an average dependency span of 11.3 turns across six domains, and was evaluated using five state-of-the-art models that achieved only 48.45% average accuracy. Long-horizon errors account for 52-69% of failures, indicating a key bottleneck in maintaining a correct analytical state. The benchmark is released to support research on reliable long-horizon agentic data analysis.",
       "tags": [
         "model",
-        "research",
-        "agents"
+        "research"
       ],
       "published": "2026-06-01T04:00:00+00:00",
       "_source_type": "rss",
@@ -812,7 +833,7 @@
       "title": "Calibrated Preference Learning: The Case of Label Ranking",
       "link": "https://arxiv.org/abs/2605.30447",
       "source": "arXiv - cs.LG",
-      "summary": "Calibration is essential for reliable decision-making in probabilistic label ranking, where the goal is to predict a distribution over orderings of a label set. A hierarchy of calibration notions is proposed, covering full rankings, sub-rankings, and top-k predictions. Calibration has been found to be poorly correlated with benchmark accuracy in popular label ranking models, suggesting it captures a meaningful quality dimension beyond top-1 accuracy. This finding motivates future work on correcting miscalibration.",
+      "summary": "Calibration, which aligns predicted probabilities with true outcome frequencies, is essential for reliable decision-making in probabilistic label ranking, where predictions are over orderings of a label set. A hierarchy of calibration notions is proposed, covering full rankings, sub-rankings, and top-k rankings, with sub-ranking and top-k calibration being incomparable. Popular label ranking models often suffer from miscalibration, resulting in substantial differences between sub-ranking and top-k metrics. Calibration correlates strongly but not perfectly with benchmark accuracy in RLHF reward models.",
       "tags": [
         "model",
         "research",
@@ -828,7 +849,7 @@
       "title": "Improved Distribution Estimation in $\\ell_\\infty$",
       "link": "https://arxiv.org/abs/2605.30509",
       "source": "arXiv - stat.ML",
-      "summary": "Improved bounds for estimating discrete probability distributions under the $\\ell_\\infty$ norm are presented, including minimax bounds in expectation and high-probability tail bounds. These bounds resolve some open questions posed by Kontorovich and Painsky (2025). The tightest risk bound is also fully empirical.",
+      "summary": "Improved bounds for estimating discrete probability distributions under the $\\ell_\\infty$ norm are presented, resolving open questions posed in Kontorovich and Painsky. The new bounds include minimax bounds in expectation and high-probability tail bounds. A fully empirical version of the tightest risk bound is also identified, along with the form of the worst-case extremal distribution. Encouraging empirical results are reported.",
       "tags": [
         "model",
         "research"
@@ -843,7 +864,7 @@
       "title": "Reward Learning from Best-of-$N$ Preference Data: Targets, Tradeoffs, and Design Principles",
       "link": "https://arxiv.org/abs/2605.30619",
       "source": "arXiv - stat.ML",
-      "summary": "Best-of-$N$ sampling is widely used in constructing pairwise preference data, but its effectiveness in extracting rewards from such data remains unclear. For independent-reference variants, closed-form reward targets can be derived as explicit functions of $N$ and the base distribution, preserving latent reward ranking. However, exact Best-vs-Random and Best-vs-Worst representability fails due to coupling of chosen and rejected responses through the same candidate set. Larger $N$ widens pairwise margins but reduces connectivity, leading to two design principles: using larger $N$ when preference labels are a bottleneck, or smaller $N$ when generation is the bottleneck.",
+      "summary": "Best-of-$N$ sampling constructs pairwise preference data by drawing $N$ candidates from a base distribution and pairing the best with a rejected response. Bradley-Terry reward learning extracts rewards from this data, but choosing $N$ and the base distribution is unclear. Deriving closed-form reward targets as functions of $N$ and the base distribution preserves latent reward ranking for independent-reference variants. Larger $N$ widens pairwise margins but reduces connectivity, leading to design principles: use larger $N$ when preference labels are a bottleneck, smaller $N$ when generation is a bottleneck.",
       "tags": [
         "model",
         "research"
@@ -858,7 +879,7 @@
       "title": "Is the Last Layer Sufficient for Uncertainty Quantification?",
       "link": "https://arxiv.org/abs/2605.30741",
       "source": "arXiv - stat.ML",
-      "summary": "Linearizing deep neural networks (DNNs) to form Bayesian Generalized Linear Models (GLMs) for epistemic uncertainty quantification (UQ) reduces computational burden but may come at the cost of degraded performance. However, a last-layer linearization approach has been found to be comparable in UQ capabilities to full-network linearization, with substantially improved computational efficiency. This improvement is supported by both theoretical and empirical approaches, including random matrix theory and large-scale empirical evaluations across various machine learning tasks.",
+      "summary": "Linearizing around the parameters of the final connected layer of a deep neural network is a commonly used method for reducing the computational burden of epistemic uncertainty quantification (UQ) in DNNs, with no meaningful improvement in UQ capabilities versus full-network linearization found through random matrix theory analysis.",
       "tags": [
         "model",
         "research"
@@ -873,7 +894,7 @@
       "title": "Batched Stochastic Linear Bandits with 1-Bit Communication Constraints",
       "link": "https://arxiv.org/abs/2605.30976",
       "source": "arXiv - stat.ML",
-      "summary": "Batched stochastic linear bandits under batching and 1-bit communication constraints yield a minimax lower bound of $\\Omega(B\\min\\{d,\\log\\lvert \\mathcal{A} \\rvert\\})$ regret in the absence of noise. A general lower bound is given as $\\widetilde{\\Omega}(B\\min\\{d,\\log\\lvert \\mathcal{A} \\rvert\\} + \\sqrt{dT \\min\\{d,\\log\\lvert \\mathcal{A} \\rvert\\}})$. Two phased-elimination algorithms achieve $\\widetilde{O}(dB + d\\sqrt{T})$ and near-optimal regret with $\\widetilde{O}(B\\log\\lvert \\mathcal{A} \\rvert + d^{3/2}\\sqrt{B} + \\sqrt{dT\\log\\lvert \\mathcal{A} \\rvert})$ regret.",
+      "summary": "Stochastic linear bandits are studied under batching and 1-bit communication constraints. A minimax lower bound shows that \u03a9(B min{d, log|A|}) regret is unavoidable due to the 1-bit communication bottleneck. Two phased-elimination algorithms achieve O(dB + d\u221aT) and O(B log|A| + d^(3/2)\u221aB + \u221adT log|A|) regrets, respectively, with the latter near-optimal in broad scaling regimes of (|A|, B, d, T).",
       "tags": [
         "model",
         "research"
@@ -888,7 +909,7 @@
       "title": "Hedging on the Frontier: Learning New Tasks with Few Samples",
       "link": "https://arxiv.org/abs/2605.30997",
       "source": "arXiv - stat.ML",
-      "summary": "When a learner faces a new task with few samples, it must leverage side information from related tasks in public benchmarks to improve performance. The key is to model task-relatedness in a way that is realistic and leads to provable gains. Empirical results show that weak monotonicity is approximately satisfied, where models that dominate others on multiple benchmarks also perform better on the new task. Researchers explore this concept within two learning paradigms: transfer learning and model selection aggregation, demonstrating that they can prune the model class based on monotonicity and adapt to available trade-offs by hedging on the frontier.",
+      "summary": "Learning a new task with few samples requires leveraging side information from related tasks in public benchmarks to gain an edge. Weak monotonicity, where a dominant model also performs well on new tasks, is approximately satisfied empirically. Researchers explore using weak monotonicity for transfer learning and model selection aggregation to improve performance. They demonstrate that this approach can prune the model class based on monotonicity and adapt to available trade-offs.",
       "tags": [
         "model",
         "research"
@@ -903,10 +924,10 @@
       "title": "Free energy Estimation on Any State Space",
       "link": "https://arxiv.org/abs/2605.31063",
       "source": "arXiv - stat.ML",
-      "summary": "Free energy estimation is a challenging problem that relies on thermodynamic transformations for classical approaches. Recent work learns neural transports to accelerate efficiency in the finite-time regime. A new generalized framework generalizes this approach to arbitrary state spaces, developing efficient estimation methods. The proposed method is validated across various settings and establishes algebraic identities linking time reversal and Doob's h-transforms.",
+      "summary": "Free energy estimation is a fundamental problem in physics and statistics that can be solved using various methods. Classical approaches rely on thermodynamic transformations, but recent work has learned neural transports to accelerate the efficiency of finite-time estimations. A new approach generalizes this framework to arbitrary state spaces, extending its effectiveness to discrete and multimodal settings. The method also reveals a group-theoretic structure linking time reversal and generalized Doob's h-transforms, forming a generalized dihedral group.",
       "tags": [
-        "research",
-        "model"
+        "model",
+        "research"
       ],
       "published": "2026-06-01T04:00:00+00:00",
       "_source_type": "rss",
@@ -918,7 +939,7 @@
       "title": "Approximation and learning of anisotropic and mixed smooth functions by deep ReLU neural networks",
       "link": "https://arxiv.org/abs/2605.31152",
       "source": "arXiv - stat.ML",
-      "summary": "Deep ReLU neural networks can efficiently approximate and learn smooth functions with an approximation rate of $\\mathcal{O}((WL)^{-2\\tilde{s}})$ for anisotropic Besov space under the embedding condition $\\tilde{s} > 1/q-1/p$, where $\\tilde{s}$ is a mean smoothness index. The same rate applies to mixed smooth Besov functions with mixed smoothness $s>1/q-1/p$.",
+      "summary": "Deep ReLU neural networks can approximate and learn smooth functions with improved efficiency than previously thought, overcoming the curse of dimensionality in approximation rates. The paper establishes approximation rates for anisotropic Besov space $\\mathcal{B}^{\\boldsymbol{s}}_{q,r}([0,1]^d)$ and mixed smooth Besov space $\\mathcal{MB}^s_{q,r}([0,1]^d)$. Approximation rates improve to $\\mathcal{O}((WL)^{-2\\tilde{s}})$ for anisotropic Besov space and $\\mathcal{O}((WL)^{-2s})$ up to logarithmic factors for mixed smooth Besov space.",
       "tags": [
         "model",
         "research"
@@ -933,7 +954,7 @@
       "title": "Memory by Design: Probabilistic Sequence Layers",
       "link": "https://arxiv.org/abs/2605.31163",
       "source": "arXiv - stat.ML",
-      "summary": "Researchers introduced a design-model framework for deriving efficient recurrent sequence maps from explicit assumptions about memory. The framework uses Bayesian filtering to write evidence into memory and produces a predictive distribution with a mean output. A linear-Gaussian instantiation propagates both a mean and covariance, which steers writes toward uncertain directions and attenuates gains as evidence accumulates. This design model unifies several sub-quadratic recurrences.",
+      "summary": "Probabilistic Sequence Layers are derived from explicit assumptions about memory using a design-model framework that writes evidence into memory through exact Bayesian filtering. The Bayesian Layer propagates both a mean and a covariance, which tracks uncertainty over stored associations to steer writes toward uncertain directions. This framework unifies several sub-quadratic recurrences, including Linear attention, GLA, and Mamba-2/SSD, and improves robustness in retrieval dynamics.",
       "tags": [
         "model",
         "research"
@@ -948,7 +969,7 @@
       "title": "Correcting Split Selection in Online Decision Trees via Anytime-Valid Inference",
       "link": "https://arxiv.org/abs/2605.31239",
       "source": "arXiv - stat.ML",
-      "summary": "Bagging-based ensembles, including Adaptive Random Forests, rely on Hoeffding Trees as base learners. Existing variants lack valid statistical guarantees due to data-dependent stopping rules. A new method using anytime-valid inference provides control over false splits under arbitrary data streams and improves performance while producing smaller trees. Empirical evaluation shows improved performance in non-stationary streams.",
+      "summary": "Bagging-based ensembles, such as Adaptive Random Forests, rely on Hoeffding Trees as base learners that grow decision trees incrementally using concentration inequalities. Existing variants lack statistical guarantees due to data-dependent stopping rules and fixed-sample concentration bounds. A new method provides anytime-valid control of false splits under arbitrary data streams, improving performance while producing smaller trees.",
       "tags": [
         "model",
         "research"
@@ -963,23 +984,7 @@
       "title": "Structured interactions improve distributed coordination beyond model scaling in a real-world multi-robot system",
       "link": "https://arxiv.org/abs/2605.30383",
       "source": "arXiv - cs.RO",
-      "summary": "Scaling individual robot capabilities is costly, but restructuring communication among robots may yield larger gains than increasing onboard model size. In a real-world multi-robot system with 10 physical robots, switching from fully connected to modular hierarchical interactions improved normalized performance by 47 points compared to doubling neural network hidden size. This pattern was confirmed in independent replications and supports the idea that interaction structure can play a dominant role within the tested system and task setting.",
-      "tags": [
-        "research",
-        "agents",
-        "model"
-      ],
-      "published": "2026-06-01T04:00:00+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": true,
-      "include_in_podcast": false,
-      "chapter_start_seconds": null
-    },
-    {
-      "title": "Learning-Based Navigation for Indoor Mobile Robots",
-      "link": "https://arxiv.org/abs/2605.30468",
-      "source": "arXiv - cs.RO",
-      "summary": "A learning-based navigation framework combines a supervised neural global planner and a Learning-Based DWA local planner to enable safe goal-directed navigation in indoor environments. The global planner is trained on cost-aware A* expert trajectories, while the local planner uses discrete candidate selection over the Dynamic Window Approach action lattice. The framework is refined using behavior cloning and Proximal Policy Optimization. Experimental results show that it generates feasible global routes and reliable local motion commands for navigating through obstacles.",
+      "summary": "Switching from fully connected to modular hierarchical interactions improves normalised performance by 47 points compared to doubling neural network hidden size in a real-world multi-robot system. The improvement is confirmed in independent SMAC replications and benchmark reanalyses. Performance saturation beyond 1024 hidden units is observed in simulation-calibrated extrapolation, not directly on hardware.",
       "tags": [
         "model",
         "research"
@@ -991,10 +996,40 @@
       "chapter_start_seconds": null
     },
     {
+      "title": "Learning-Based Navigation for Indoor Mobile Robots",
+      "link": "https://arxiv.org/abs/2605.30468",
+      "source": "arXiv - cs.RO",
+      "summary": "A learning-based navigation framework combines a supervised neural global planner with a Learning-Based DWA local planner, trained using behavior cloning and Proximal Policy Optimization. The framework is evaluated in simulated and real-world indoor environments, achieving feasible global routes and reliable local motion commands. Experimental results demonstrate the effectiveness of integrating learning-based global planning with reinforcement-learning-refined local control for indoor mobile robot navigation.",
+      "tags": [
+        "research",
+        "agents"
+      ],
+      "published": "2026-06-01T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
       "title": "ELAN4D: Embodiment-Centric 4D Supervision for Vision-Language-Action Models via Plug-and-Play Adaptation",
       "link": "https://arxiv.org/abs/2605.30484",
       "source": "arXiv - cs.RO",
-      "summary": "Vision-Language-Action (VLA) models have limitations in their ability to generalize under out-of-distribution perturbations due to reactive action regression from current observations. ELAN4D, an embodiment-centric training framework, addresses this issue by providing 4D-aware supervision through future robot keypoint tracks as predictive spatio-temporal feedback. This approach enhances VLA policies with minimal preprocess cost and achieves substantial gains over strong baselines in various manipulation tasks.",
+      "summary": "Vision-Language-Action (VLA) models have limitations in their ability to generalize under out-of-distribution perturbations due to reactive regression of actions from current observations. ELAN4D proposes an embodiment-centric, 4D-aware training framework that enhances VLA policies with future robot keypoint tracks as predictive spatio-temporal supervision. This provides metric and compact supervision without requiring external trackers or reconstruction. Extensive experiments demonstrate that ELAN4D consistently improves over strong VLA baselines, achieving the best overall performance and substantial gains under out-of-distribution perturbations.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-06-01T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "CoMo3R-SLAM: Collaborative Monocular Dense SLAM with Learned 3D Reconstruction Priors for Outdoor Multi-Agent Systems",
+      "link": "https://arxiv.org/abs/2605.30488",
+      "source": "arXiv - cs.RO",
+      "summary": "CoMo3R-SLAM is a collaborative monocular dense SLAM system that leverages robust learned feed-forward 3D reconstruction priors for outdoor multi-agent mapping. Each agent runs a prior-guided front-end for real-time tracking and local dense fusion, while a coordinator performs pointmap matching for cross-agent verification. The system produces globally consistent metric maps from monocular RGB alone, requiring neither depth sensors nor parametric intrinsics. CoMo3R-SLAM achieves the best Average Tracking Error (ATE) on three of four Tanks and Temples scenes and competitive Waymo accuracy, running online at 8 FPS.",
       "tags": [
         "model",
         "research",
@@ -1007,26 +1042,12 @@
       "chapter_start_seconds": null
     },
     {
-      "title": "CoMo3R-SLAM: Collaborative Monocular Dense SLAM with Learned 3D Reconstruction Priors for Outdoor Multi-Agent Systems",
-      "link": "https://arxiv.org/abs/2605.30488",
-      "source": "arXiv - cs.RO",
-      "summary": "CoMo3R-SLAM is a collaborative monocular dense SLAM system for outdoor multi-agent systems, leveraging learned 3D reconstruction priors to achieve robust and scalable 3D perception across large-scale environments. The system uses prior-guided front-ends for real-time tracking and local dense fusion, with a coordinator performing cross-agent verification, synchronization, and global bundle adjustment. CoMo3R-SLAM produces globally consistent metric maps from monocular RGB alone without requiring depth sensors or parametric intrinsics. It achieves competitive performance on various benchmarks, including Tanks and Temples and Waymo sequences.",
-      "tags": [
-        "model",
-        "research"
-      ],
-      "published": "2026-06-01T04:00:00+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": true,
-      "include_in_podcast": false,
-      "chapter_start_seconds": null
-    },
-    {
       "title": "Physics-informed Goal-Conditioned Reinforcement Learning under Hybrid Contact Dynamics",
       "link": "https://arxiv.org/abs/2605.30503",
       "source": "arXiv - cs.RO",
-      "summary": "Physics-informed Goal-Conditioned Reinforcement Learning (Pi-GCRL) is challenged by high-dimensional, hybrid, or contact-dependent dynamics in goal-conditioned reinforcement learning tasks. Existing Pi-GCRL methods degrade when applied to contact-rich tasks due to nonsmooth value landscapes and mode-dependent controllability. To address this issue, new formulations are introduced that apply physics-informed inductive biases selectively across manipulation problems, providing a principled step toward extending Pi-GCRL to contact-rich manipulation.",
+      "summary": "Goal-conditioned reinforcement learning (GCRL) faces challenges when dealing with high-dimensional or contact-dependent dynamics, which can cause generalization difficulties. Physics-informed GCRL (Pi-GCRL) introduces optimal-control-inspired inductive biases to address this issue. However, existing Pi-GCRL methods may degrade in contact-rich tasks due to hybrid dynamics and nonsmooth value landscapes. New formulations with contact-aware and hierarchical biases aim to extend Pi-GCRL to contact-rich manipulation.",
       "tags": [
+        "model",
         "research",
         "agents"
       ],
@@ -1040,7 +1061,7 @@
       "title": "VLM-GLoc: Vision-Language Model Enhanced Monte Carlo Localization for Robust Semantic Global Localization in Cluttered Quasi-Static Environments",
       "link": "https://arxiv.org/abs/2605.30506",
       "source": "arXiv - cs.RO",
-      "summary": "VLM-GLoc is a method for hierarchical semantic Monte Carlo Localization that leverages open-vocabulary Vision-Language Models (VLMs) as a unified semantic observation front-end to tackle global localization in cluttered indoor environments. It achieves 70% and 74% global localization success rates in two real-world environments, outperforming traditional geometry-only and domain-specific baselines.",
+      "summary": "Global localization in cluttered indoor environments such as grocery stores and offices poses significant challenges due to geometric and semantic ambiguity. A new method called VLM-GLoc uses Vision-Language Models to enhance Monte Carlo Localization by leveraging rich text features, implicit quality filtering, and permanence reasoning for targeted data augmentation. VLM-GLoc achieves high global localization success rates of 70% in a grocery store and 74% in a lab space, outperforming traditional geometry-only and domain-specific baselines.",
       "tags": [
         "model",
         "research"
@@ -1055,7 +1076,7 @@
       "title": "ARISTO Hand: Sensing-Driven Distal Hyperextension for Fine-Grained Manipulation",
       "link": "https://arxiv.org/abs/2605.30508",
       "source": "arXiv - cs.RO",
-      "summary": "A robotic hand called ARISTO Hand integrates active distal hyperextension with a hybrid fingertip-sensing architecture to enhance manipulation of thin objects. The hand uses a tendon-driven mechanism to achieve controlled fingertip engagement, increasing pull-out force by 2.76x for object thicknesses of 1-20 mm. A rigid nail-mounted force-torque sensor provides reliable force measurements during edge contacts.",
+      "summary": "A robotic hand called ARISTO Hand is presented, featuring active distal hyperextension and a hybrid fingertip-sensing architecture. The hand's design integrates a rigid force-torque sensor with a soft capacitive tactile array. Active hyperextension increases pull-out force by 2.76x for object thicknesses of 1-20 mm without compromising grasp capability.",
       "tags": [
         "model",
         "research"
@@ -1070,10 +1091,10 @@
       "title": "Any-ttach: Quick End-effector Swapping Enables Manipulation Dexterity with Simplicity",
       "link": "https://arxiv.org/abs/2605.30569",
       "source": "arXiv - cs.RO",
-      "summary": "Any-ttach is a tool-centric manipulation framework that enables dexterity with simplicity by using quick end-effector swapping to manipulate objects. The system combines an automatic interface, a handheld device for collecting human demonstrations, and a task planning framework that supports diverse tools and end-effector modules through the same shared interface. Experiments show improved reliability, efficiency, reduced variability, and support for diverse tool-use skills. Any-ttach executes six tool-use subskills in long-horizon tasks like making a sandwich and preparing a cucumber through rapid end-effector switching and execution monitoring.",
+      "summary": "Any-ttach is a tool-centric manipulation framework that enables dexterity with simplicity by using quick end-effector swapping to facilitate task execution. The system combines an automatic swapping mechanism, a handheld device for collecting human demonstrations, and a task planning framework that composes learned skills for various tools and end-effector modules. Experiments show improved tool-swapping reliability, increased demonstration efficiency, reduced tool-pose variability, and support for diverse tool-use skills. Any-tatch executes six tool-use subskills in two long-horizon tasks through end-effector switching and execution monitoring.",
       "tags": [
-        "research",
-        "model"
+        "model",
+        "research"
       ],
       "published": "2026-06-01T04:00:00+00:00",
       "_source_type": "rss",
@@ -1085,11 +1106,10 @@
       "title": "Caspar: CUDA Accelerator for Symbolic Programming with Adaptive Reordering",
       "link": "https://arxiv.org/abs/2605.30583",
       "source": "arXiv - cs.RO",
-      "summary": "Caspar is a library that makes GPUs accessible in robotics by providing a state-of-the-art nonlinear GPU solver for optimization problems. It bridges the gap between symbolic Python programming and high-performance C++ runtime by automatically generating optimized CUDA kernels from symbolic expressions. Users define symbolic residual functions, and Caspar generates necessary GPU kernels and interfaces to perform nonlinear optimization. Caspar outperforms other bundle adjusters in terms of speed, memory usage, and accuracy.",
+      "summary": "Caspar is a library that provides a state-of-the-art nonlinear GPU solver for robotics and optimization problems, automatically generating optimized CUDA kernels from symbolic expressions. It bridges the gap between expressive Python symbolic programming and high-performance C++ GPUs. Users can define and combine symbolic expressions to generate custom CUDA kernels using Caspar's API.",
       "tags": [
         "model",
-        "research",
-        "agents"
+        "research"
       ],
       "published": "2026-06-01T04:00:00+00:00",
       "_source_type": "rss",
@@ -1101,10 +1121,11 @@
       "title": "ZAPS-DA: Zero-Phase Action Policy Smoothing with Decoupled Actor for Continuous Control in Reinforcement Learning",
       "link": "https://arxiv.org/abs/2605.30612",
       "source": "arXiv - cs.RO",
-      "summary": "Continuous control policies trained with off-policy reinforcement learning often exhibit high-frequency action jitter, which can be problematic for deployment on physical actuators. To address this issue, researchers developed ZAPS-DA, a framework that pairs an unmodified main actor with a separate decoupled actor trained via supervised imitation of zero-phase filtered targets. This approach reduces action jitter at deployment with negligible phase lag and no post-processing, while maintaining task-completion performance. In two driving simulators, ZAPS-DA significantly reduced steering and throttle jitter, while matching or improving task-completion rates.",
+      "summary": "ZAPS-DA is a framework for continuous control in reinforcement learning that reduces high-frequency action jitter without introducing phase lag or post-processing. It pairs an unmodified main actor with a separate decoupled actor trained via supervised imitation of zero-phase filtered targets. The deployed policy uses causal distillation to filter actions, reducing steering jitter by 14-21x and throttle jitter by 3-5x in two driving simulators.",
       "tags": [
         "model",
-        "research"
+        "research",
+        "agents"
       ],
       "published": "2026-06-01T04:00:00+00:00",
       "_source_type": "rss",
