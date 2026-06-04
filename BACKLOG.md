@@ -20,3 +20,4 @@
 ## AI Techradar Agent
 
 - [ ] Filter Gmail "Security alert" emails from Google (subject: "Security alert", sender: no-reply@accounts.google.com) before classification — these are OAuth setup notifications, not news content.
+- [ ] Research Miso TTS for alternative TTS agent.
