@@ -1,0 +1,524 @@
+{
+  "version": "1.2.0",
+  "chapters": [
+    {
+      "startTime": 0,
+      "title": "Introduction",
+      "endTime": 25
+    },
+    {
+      "startTime": 25,
+      "title": "The Sequence Opinion #872: The Cake Is a Battlefield: Who Really Controls the AI Stack",
+      "endTime": 123
+    },
+    {
+      "startTime": 123,
+      "title": "[AINews] Reve 2 and Ideogram 4: Layouts in Imagegen",
+      "endTime": 211
+    },
+    {
+      "startTime": 211,
+      "title": "\ud83d\udd2cScaling Past Informal AI - Carina Hong, Axiom Math",
+      "endTime": 279
+    },
+    {
+      "startTime": 279,
+      "title": "\u26a1\ufe0fSatya Nadella: No Priors x Latent Space Crossover Special at Microsoft Build",
+      "endTime": 353
+    },
+    {
+      "startTime": 353,
+      "title": "Microsoft, I owe you an apology, I wasn\u2019t familiar with your game",
+      "endTime": 434
+    },
+    {
+      "startTime": 434,
+      "title": "\ud83e\udd16 What's a Super High Agency Human?",
+      "endTime": 510
+    },
+    {
+      "startTime": 510,
+      "title": "Codex Sites \ud83d\udcbb, Microsoft models \ud83e\udd16, Anthropic cost backlash \ud83d\udcb8",
+      "endTime": 566
+    },
+    {
+      "startTime": 566,
+      "title": "5 key points in Trump's new AI order",
+      "endTime": 648
+    },
+    {
+      "startTime": 648,
+      "title": "AI Stack Showdown: Who Owns the Scarce Layer of Code",
+      "url": "https://thesequence.substack.com/p/the-sequence-opinion-872-the-cake",
+      "endTime": 747
+    },
+    {
+      "startTime": 747,
+      "title": "Axiom Math's Verification Approach May Be Key to Scaling AI Brilliance",
+      "url": "https://www.latent.space/p/axiom",
+      "endTime": 815
+    },
+    {
+      "startTime": 815,
+      "title": "Small company in California popularizes tandems and outlasts industry giants.",
+      "url": "https://thehustle.co/home/?_hsenc=p2ANqtz-9bkWHFyAqpEqrBCGknUrYxb_r4iWXMVFYi5EScp9TFrjPUIH_mxwQe1PQ-w-IcrfL0vJ4VYUvgSkG3ftn29Ah3J9WJVw&_hsmi=422097396",
+      "endTime": 860
+    },
+    {
+      "startTime": 860,
+      "title": "Goldman Sees Spain as Favorite to Win World Cup This Year",
+      "url": "https://thehustle.co/the-new-cost-of-happiness-1?ecid=ACsprvsxA_wnjpsp-7WmK-pl8JtwBdeMM0x0kE9FNX7X8beL8M2upap8ptMwxjBJOfXiVo__ZGa5&_hsenc=p2ANqtz-9bkWHFyAqpEqrBCGknUrYxb_r4iWXMVFYi5EScp9TFrjPUIH_mxwQe1PQ-w-IcrfL0vJ4VYUvgSkG3ftn29Ah3J9WJVw&_hsmi=422097396",
+      "endTime": 900
+    },
+    {
+      "startTime": 900,
+      "title": "Satya Nadella Discusses AI and Innovation as Microsoft Shifts to Ecosystem Focus",
+      "url": "https://www.latent.space/p/satya-2026",
+      "endTime": 997
+    },
+    {
+      "startTime": 997,
+      "title": "Learning to Thrive in the AI Age as an Agent Builder",
+      "url": "https://simple.ai/",
+      "endTime": 1055
+    },
+    {
+      "startTime": 1055,
+      "title": "How to Evaluate and Choose the Right AI Tools for Your Team",
+      "url": "https://info.notion.so/download-ultimate-ai-buyers-guide?utm_source=tldr&utm_medium=newsletter&utm_campaign=2026Q2_ai-buyers-guide&utm_content=ai-buyers-guide_header_most_teams_approach",
+      "endTime": 1093
+    },
+    {
+      "startTime": 1093,
+      "title": "OpenAI Releases New Codex Capabilities and Role-Specific Plug-Ins",
+      "url": "https://a.tldrnewsletter.com/web-version?ep=1&lc=52ea334c-19be-11f1-8763-91ac65d324b5&p=f3e233f2-5f38-11f1-9a59-0586e47faa6c&pt=campaign&t=1780493193&s=aecac3a0f96b2e5e312a0c3ed51666ebaf7c0b4d2e2c83f2a6bba21ce77fe038",
+      "endTime": 1192
+    },
+    {
+      "startTime": 1192,
+      "title": "Dharmesh Shah Founder of HubSpot Explores AI's Impact on Business",
+      "url": "https://linkedin.com/in/dharmesh",
+      "endTime": 1254
+    },
+    {
+      "startTime": 1254,
+      "title": "Trump Unveils AI Plan That Undermines Policies that Helped US Lead",
+      "url": "https://www.technologyreview.com/2025/07/24/1120639/trumps-ai-action-plan-is-a-distraction/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=06-03-2026&mc_cid=194d958a8e&mc_eid=UNIQID",
+      "endTime": 1376
+    },
+    {
+      "startTime": 1376,
+      "title": "AI-powered Ransomware Marks New Frontier in Malicious Software Attacks",
+      "url": "https://www.technologyreview.com/2026/02/12/1132386/ai-already-making-online-swindles-easier/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=06-03-2026&mc_cid=194d958a8e&mc_eid=UNIQID",
+      "endTime": 1442
+    },
+    {
+      "startTime": 1442,
+      "title": "How courts are coping with a flood of AI-generated lawsuits",
+      "url": "https://www.technologyreview.com/2026/06/04/1138391/courts-coping-ai-lawsuits/",
+      "endTime": 1512
+    },
+    {
+      "startTime": 1512,
+      "title": "The Download: Trump\u2019s new AI order, and smart glasses for warfare",
+      "url": "https://www.technologyreview.com/2026/06/03/1138322/the-download-trump-ai-order-smart-glasses-warfare/",
+      "endTime": 1614
+    },
+    {
+      "startTime": 1614,
+      "title": "How Endava is redesigning software delivery around AI agents",
+      "url": "https://openai.com/index/endava-frontiers",
+      "endTime": 1653
+    },
+    {
+      "startTime": 1653,
+      "title": "Introducing new capabilities to GPT-Rosalind",
+      "url": "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
+      "endTime": 1712
+    },
+    {
+      "startTime": 1712,
+      "title": "5 ways Google Search can level up your thrift and vintage shopping",
+      "url": "https://blog.google/products-and-platforms/products/search/thrifting-tips/",
+      "endTime": 1781
+    },
+    {
+      "startTime": 1781,
+      "title": "NVIDIA Research Unlocks Advanced Grasping, Smarter Autonomous Driving and Agent Training at Scale",
+      "url": "https://blogs.nvidia.com/blog/cvpr-research-grasping-driving-agent-training/",
+      "endTime": 1822
+    },
+    {
+      "startTime": 1822,
+      "title": "NVIDIA Enables the Next Era Of Physical AI Research With Agent Skills For Autonomous Vehicles, Robotics And Vision AI",
+      "url": "https://blogs.nvidia.com/blog/cvpr-physical-ai-research-agent-skills/",
+      "endTime": 1911
+    },
+    {
+      "startTime": 1911,
+      "title": "Safeguarding SaaS Success in the Changing AI Market",
+      "url": "https://aibusiness.com/generative-ai/safeguarding-saas-success-the-changing-ai-market",
+      "endTime": 1995
+    },
+    {
+      "startTime": 1995,
+      "title": "Mythos Scaled to 150 Organizations in 15 Countries",
+      "url": "https://aibusiness.com/cybersecurity/mythos-scaled-150-organizations-15-countries",
+      "endTime": 2072
+    },
+    {
+      "startTime": 2072,
+      "title": "Google's new open source Gemma 4 12B analyzes audio, video \u2014 and runs entirely locally on a typical 16GB enterprise laptop",
+      "url": "https://venturebeat.com/technology/googles-new-open-source-gemma-4-12b-analyzes-audio-video-and-runs-entirely-locally-on-a-typical-16gb-enterprise-laptop",
+      "endTime": 2142
+    },
+    {
+      "startTime": 2142,
+      "title": "Miso Labs Releases MisoTTS: An 8B Emotive Text-to-Speech Model with Open Weights",
+      "url": "https://www.marktechpost.com/2026/06/04/miso-labs-releases-misotts-an-8b-emotive-text-to-speech-model-with-open-weights/",
+      "endTime": 2194
+    },
+    {
+      "startTime": 2194,
+      "title": "Meet OpenJarvis: A Local-First Framework for On-Device Personal AI Agents with Tools, Memory, and Learning",
+      "url": "https://www.marktechpost.com/2026/06/03/meet-openjarvis-a-local-first-framework-for-on-device-personal-ai-agents-with-tools-memory-and-learning/",
+      "endTime": 2290
+    },
+    {
+      "startTime": 2290,
+      "title": "Google DeepMind Releases Gemma 4 12B: An Encoder-Free Multimodal Model with Native audio that runs on a 16 GB laptop",
+      "url": "https://www.marktechpost.com/2026/06/03/google-deepmind-releases-gemma-4-12b-an-encoder-free-multimodal-model-with-native-audio-that-runs-on-a-16-gb-laptop/",
+      "endTime": 2378
+    },
+    {
+      "startTime": 2378,
+      "title": "My year with the robots: how Joanna Stern let AI into her home, work \u2013 and heart",
+      "url": "https://www.theguardian.com/technology/2026/jun/04/my-year-with-robots-joanna-stern-ai",
+      "endTime": 2465
+    },
+    {
+      "startTime": 2465,
+      "title": "\u2018Happiness is not just about GDP\u2019: ambitious plan or utopia?",
+      "url": "https://www.theguardian.com/environment/2026/jun/04/happiness-is-not-just-about-gdp-ambitious-plan-or-utopia",
+      "endTime": 2563
+    },
+    {
+      "startTime": 2563,
+      "title": "Smartglasses and earpieces may worsen exam cheating in schools, says Ofqual",
+      "url": "https://www.theguardian.com/education/2026/jun/04/smartglasses-earpieces-exam-cheating-schools-ofqual-england",
+      "endTime": 2599
+    },
+    {
+      "startTime": 2599,
+      "title": "Seattle, home to Amazon and Microsoft, poised to pass moratorium on new datacenters",
+      "url": "https://www.theguardian.com/technology/2026/jun/03/seattle-datacenter-moratorium",
+      "endTime": 2694
+    },
+    {
+      "startTime": 2694,
+      "title": "In first, California city overwhelmingly votes to permanently ban datacenters",
+      "url": "https://www.theguardian.com/us-news/2026/jun/03/california-monterey-park-datacenters-ban",
+      "endTime": 2744
+    },
+    {
+      "startTime": 2744,
+      "title": "Colorado governor vetoes block on surveillance pricing as other states push for bans",
+      "url": "https://www.theguardian.com/technology/2026/jun/03/colorado-governor-veto-ban-surveillance-pricing",
+      "endTime": 2814
+    },
+    {
+      "startTime": 2814,
+      "title": "Labour MP sues Elon Musk\u2019s xAI company over fake sexualised images",
+      "url": "https://www.theguardian.com/technology/2026/jun/03/labour-mp-sues-elon-musks-ai-company-over-fake-sexualised-images",
+      "endTime": 2874
+    },
+    {
+      "startTime": 2874,
+      "title": "What do UK watchdog\u2019s new rules on Google AI results mean for publishers?",
+      "url": "https://www.theguardian.com/business/2026/jun/03/what-does-uk-watchdog-new-google-ai-results-rule-means-publishers",
+      "endTime": 2937
+    },
+    {
+      "startTime": 2937,
+      "title": "EU aims to ensure foreign governments or firms cannot disrupt tech services with \u2018kill switch\u2019",
+      "url": "https://www.theguardian.com/world/2026/jun/03/eu-commission-foreign-providers-kill-switch-disrupt-tech-europe",
+      "endTime": 2989
+    },
+    {
+      "startTime": 2989,
+      "title": "The risks of inviting AI into the heart of our economy, society and governance | Letters",
+      "url": "https://www.theguardian.com/technology/2026/jun/03/the-risks-of-inviting-ai-into-the-heart-of-our-economy-society-and-governance",
+      "endTime": 3062
+    },
+    {
+      "startTime": 3062,
+      "title": "Former police officer in hiding after being falsely linked to Henry Nowak arrest",
+      "url": "https://www.theguardian.com/uk-news/2026/jun/03/former-officer-hampshire-hiding-after-being-falsely-linked-henry-nowak-arrest",
+      "endTime": 3149
+    },
+    {
+      "startTime": 3149,
+      "title": "Thousands sign petition against cuts to tech support for disabled students in England",
+      "url": "https://www.theguardian.com/world/2026/jun/03/petition-tech-support-cuts-disabled-students-england-dsa",
+      "endTime": 3198
+    },
+    {
+      "startTime": 3198,
+      "title": "Martin Scorsese accused of \u2018throwing artists under bus\u2019 with AI storyboards",
+      "url": "https://www.theguardian.com/film/2026/jun/03/martin-scorsese-accused-of-throwing-artists-under-bus-with-ai-storyboards",
+      "endTime": 3242
+    },
+    {
+      "startTime": 3242,
+      "title": "The Sequence Opinion #872: The Cake Is a Battlefield: Who Really Controls the AI Stack",
+      "url": "https://thesequence.substack.com/p/the-sequence-opinion-872-the-cake",
+      "endTime": 3311
+    },
+    {
+      "startTime": 3311,
+      "title": "Ideogram and Reve rethink how AI images get made",
+      "url": "https://www.therundown.ai/p/ideogram-and-reve-rethink-how-ai-images-get-made",
+      "endTime": 3352
+    },
+    {
+      "startTime": 3352,
+      "title": "\ud83d\udd2cScaling Past Informal AI - Carina Hong, Axiom Math",
+      "url": "https://www.latent.space/p/axiom",
+      "endTime": 3435
+    },
+    {
+      "startTime": 3435,
+      "title": "Is an Online Master\u2019s Degree in AI a Good Idea?",
+      "url": "https://towardsdatascience.com/is-an-online-masters-degree-in-ai-a-good-idea/",
+      "endTime": 3551
+    },
+    {
+      "startTime": 3551,
+      "title": "Why AI Is NOT Stealing Your\u00a0Job",
+      "url": "https://towardsdatascience.com/why-ai-is-not-stealing-your-job/",
+      "endTime": 3617
+    },
+    {
+      "startTime": 3617,
+      "title": "I Built a C++ Backend So My GPU Would Stop Eating Air",
+      "url": "https://towardsdatascience.com/i-built-a-c-backend-so-my-gpu-would-stop-eating-air/",
+      "endTime": 3713
+    },
+    {
+      "startTime": 3713,
+      "title": "What AI Agents Should Never Do on Their Own",
+      "url": "https://towardsdatascience.com/what-ai-agents-should-never-do-on-their-own/",
+      "endTime": 3756
+    },
+    {
+      "startTime": 3756,
+      "title": "Task-Seeded Synthetic Q&A Generation for Nemotron Pretraining",
+      "url": "https://huggingface.co/blog/nvidia/task-seeded-sdg",
+      "endTime": 3834
+    },
+    {
+      "startTime": 3834,
+      "title": "Best Open Source OCR for AI Agents: The 2026 Document Pipeline",
+      "url": "https://www.madebyagents.com/blog/best-open-source-ocr-for-ai-agents",
+      "endTime": 3967
+    },
+    {
+      "startTime": 3967,
+      "title": "Best Open Source OCR for AI Agents: The 2026 Document Pipeline",
+      "url": "https://www.madebyagents.com/blog/best-open-source-ocr-for-ai-agents",
+      "endTime": 4039
+    },
+    {
+      "startTime": 4039,
+      "title": "How to Build a Multimodal AI Knowledge Base With Gemini Embedding 2",
+      "url": "https://www.madebyagents.com/blog/build-multimodal-rag-gemini-embedding-2",
+      "endTime": 4098
+    },
+    {
+      "startTime": 4098,
+      "title": "Teaching AI agents to ask better questions by playing \u201cBattleship\u201d",
+      "url": "https://news.mit.edu/2026/teaching-ai-agents-ask-better-questions-playing-battleship-0603",
+      "endTime": 4139
+    },
+    {
+      "startTime": 4139,
+      "title": "Reinforcement Learning Handbook",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1twasj8/reinforcement_learning_handbook/",
+      "endTime": 4209
+    },
+    {
+      "startTime": 4209,
+      "title": "Repo for implementations of various Transformer Attn mechanisms [P]",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1twhj60/repo_for_implementations_of_various_transformer/",
+      "endTime": 4289
+    },
+    {
+      "startTime": 4289,
+      "title": "[D] Architectural mitigation of Goodhart's Law in autonomous AI coding agents",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1twfxrr/d_architectural_mitigation_of_goodharts_law_in/",
+      "endTime": 4358
+    },
+    {
+      "startTime": 4358,
+      "title": "MuJoCo / RoboSuite QACC instability warning with UR5e during RL training \u2014 how serious is it?",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1twfdt6/mujoco_robosuite_qacc_instability_warning_with/",
+      "endTime": 4416
+    },
+    {
+      "startTime": 4416,
+      "title": "Deeplearning.AI's course on reinforcement learning is confusing me here.",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1tw4p29/deeplearningais_course_on_reinforcement_learning/",
+      "endTime": 4494
+    },
+    {
+      "startTime": 4494,
+      "title": "[Advice] Master's/PhD Research Topic: RL vs Efficient AI for building broad AI research intuition?",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1twbisg/advice_mastersphd_research_topic_rl_vs_efficient/",
+      "endTime": 4579
+    },
+    {
+      "startTime": 4579,
+      "title": "\"Playing With AI: How Do State-Of-The-Art Large Language Models Perform in the 1977 Text-Based Adventure Game Zork?\", Gerrits 2026 (very badly)",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1tw6y5a/playing_with_ai_how_do_stateoftheart_large/",
+      "endTime": 4690
+    },
+    {
+      "startTime": 4690,
+      "title": "Analysis of AlphaZero training data [D]",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1tvw7cc/analysis_of_alphazero_training_data_d/",
+      "endTime": 4778
+    },
+    {
+      "startTime": 4778,
+      "title": "Autonomous defense manufacturer Mach Industries raises $300M",
+      "url": "https://www.therobotreport.com/autonomous-defense-manufacturer-mach-industries-raises-300m/",
+      "endTime": 4848
+    },
+    {
+      "startTime": 4848,
+      "title": "RoboBusiness 2026 opens call for speakers",
+      "url": "https://www.therobotreport.com/robobusiness-2026-opens-call-for-speakers/",
+      "endTime": 4884
+    },
+    {
+      "startTime": 4884,
+      "title": "Festo launches lightweight pneumatic gripper and tests GripperAI",
+      "url": "https://www.therobotreport.com/festo-launches-pneumatic-gripper-tests-gripperai/",
+      "endTime": 4964
+    },
+    {
+      "startTime": 4964,
+      "title": "Boston University team wins MassRobotics Form & Function Challenge at Robotics Summit",
+      "url": "https://www.therobotreport.com/boston-university-team-wins-massrobotics-form-function-challenge-2026-robotics-summit/",
+      "endTime": 5033
+    },
+    {
+      "startTime": 5033,
+      "title": "7 Ways New Engineers Can Flourish in the Age of AI",
+      "url": "https://spectrum.ieee.org/7-ways-engineers-flourish-ai",
+      "endTime": 5083
+    },
+    {
+      "startTime": 5083,
+      "title": "Beyond the Backflip: Agility\u2019s Jonathan Hurst on the Pragmatic Path to a Humanoid Future",
+      "url": "https://www.humanoidsdaily.com/news/beyond-the-backflip-agility-s-jonathan-hurst-on-the-pragmatic-path-to-a-humanoid-future",
+      "endTime": 5175
+    },
+    {
+      "startTime": 5175,
+      "title": "Persona AI Takes Gen 1 Humanoid for a Stroll in the Houston Heat\u2014and It\u2019s Wearing Under Armour",
+      "url": "https://www.humanoidsdaily.com/news/persona-ai-takes-gen-1-humanoid-for-a-stroll-in-the-houston-heat-and-it-s-wearing-under-armour",
+      "endTime": 5229
+    },
+    {
+      "startTime": 5229,
+      "title": "Deep Robotics Showcases Agile, Firefighting DR02 Humanoid in Dynamic New Demo",
+      "url": "https://www.humanoidsdaily.com/news/deep-robotics-showcases-agile-firefighting-dr02-humanoid-in-dynamic-new-demo",
+      "endTime": 5310
+    },
+    {
+      "startTime": 5310,
+      "title": "Interview with CreateMe CEO Campbell Myers: From stitching to bonding \u2013\u00a0physical AI could transform the way clothes are made",
+      "url": "https://roboticsandautomationnews.com/2026/06/04/interview-with-createme-ceo-campbell-myers-from-stitching-to-bonding-physical-ai-could-transform-the-way-clothes-are-made/102258/",
+      "endTime": 5386
+    },
+    {
+      "startTime": 5386,
+      "title": "Serve Robotics expands beyond food delivery with autonomous laundry service",
+      "url": "https://roboticsandautomationnews.com/2026/06/04/serve-robotics-expands-beyond-food-delivery-with-autonomous-laundry-service/102255/",
+      "endTime": 5428
+    },
+    {
+      "startTime": 5428,
+      "title": "Interview with Workr Robotics CEO Ken Macken: \u2018Paying for automation by the hour\u2019",
+      "url": "https://roboticsandautomationnews.com/2026/06/04/interview-with-workr-robotics-ceo-ken-macken-paying-for-automation-by-the-hour/102249/",
+      "endTime": 5522
+    },
+    {
+      "startTime": 5522,
+      "title": "Appetronix acquires Cibotica to expand robotic foodservice automation beyond pizza",
+      "url": "https://roboticsandautomationnews.com/2026/06/04/appetronix-acquires-cibotica-to-expand-robotic-foodservice-automation-beyond-pizza/102246/",
+      "endTime": 5585
+    },
+    {
+      "startTime": 5585,
+      "title": "Genesis AI launches simulation platform to accelerate robotics development",
+      "url": "https://roboticsandautomationnews.com/2026/06/04/genesis-ai-launches-simulation-platform-to-accelerate-robotics-development/102243/",
+      "endTime": 5674
+    },
+    {
+      "startTime": 5674,
+      "title": "Inbolt to launch vision-enabled robot programming at Automate event",
+      "url": "https://roboticsandautomationnews.com/2026/06/04/inbolt-to-launch-vision-enabled-robot-programming-at-automate-event/102239/",
+      "endTime": 5731
+    },
+    {
+      "startTime": 5731,
+      "title": "Japan promotes Osaka as a gateway for robotics and technology investment",
+      "url": "https://roboticsandautomationnews.com/2026/06/04/japan-promotes-osaka-as-a-gateway-for-robotics-and-technology-investment/102234/",
+      "endTime": 5825
+    },
+    {
+      "startTime": 5825,
+      "title": "ABB and Salzburg researchers patent AI system to cut energy use in industrial robots",
+      "url": "https://roboticsandautomationnews.com/2026/06/03/abb-and-salzburg-researchers-patent-ai-system-to-cut-energy-use-in-industrial-robots/102231/",
+      "endTime": 5932
+    },
+    {
+      "startTime": 5932,
+      "title": "Robotiq launches AI platform to automate robotic workcell integration",
+      "url": "https://roboticsandautomationnews.com/2026/06/03/robotiq-launches-ai-platform-to-automate-robotic-workcell-integration/102227/",
+      "endTime": 6000
+    },
+    {
+      "startTime": 6000,
+      "title": "Fanuc launches 11 kg \u2018lightest\u2019 collaborative welding robot",
+      "url": "https://roboticsandautomationnews.com/2026/06/03/fanuc-launches-11-kg-lightest-collaborative-welding-robot/102223/",
+      "endTime": 6044
+    },
+    {
+      "startTime": 6044,
+      "title": "Schindler expands elevator installation robot fleet as demand for construction automation grows",
+      "url": "https://roboticsandautomationnews.com/2026/06/03/schindler-expands-elevator-installation-robot-fleet-as-demand-for-construction-automation-grows/102216/",
+      "endTime": 6104
+    },
+    {
+      "startTime": 6104,
+      "title": "Locus Robotics expands European headquarters with new automation demo and customer hub",
+      "url": "https://roboticsandautomationnews.com/2026/06/03/locus-robotics-expands-european-headquarters-with-new-automation-demo-and-customer-hub/102211/",
+      "endTime": 6151
+    },
+    {
+      "startTime": 6151,
+      "title": "Why Reliable Backup Power is Becoming Essential for Modern Robotics Systems",
+      "url": "https://roboticsandautomationnews.com/2026/06/03/why-reliable-backup-power-is-becoming-essential-for-modern-robotics-systems/102208/",
+      "endTime": 6204
+    },
+    {
+      "startTime": 6204,
+      "title": "5 Best Audio to Video AI Generators for Modern Content Workflows",
+      "url": "https://roboticsandautomationnews.com/2026/06/03/5-best-audio-to-video-ai-generators-for-modern-content-workflows/102202/",
+      "endTime": 6292
+    }
+  ]
+}
