@@ -7,12 +7,21 @@
     <link>https://keithfry.github.io/web-pages/techradar/AI/</link>
     <description>Daily AI and Robotics news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2026 02:19:21 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 12:16:32 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
+  <item>
+    <title>June 5, 2026 : AI Advances Reach Edge</title>
+    <pubDate>Fri, 05 Jun 2026 08:00:00 +0000</pubDate>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/AI/ai-radar-2026-06-05.mp3" type="audio/mpeg" length="39341730"/>
+    <itunes:duration>01:21:50</itunes:duration>
+    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/AI/ai-radar-2026-06-05.mp3</guid>
+    <description>AI and Robotics Radar for June 5, 2026. 81 minutes of AI and robotics news.</description>
+      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/AI/ai-radar-2026-06-05.chapters.json" type="application/json+chapters"/>
+  </item>
   <item>
     <title>AI &amp; Robotics Radar — June 4, 2026</title>
     <pubDate>Thu, 04 Jun 2026 08:00:00 +0000</pubDate>
