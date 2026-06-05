@@ -339,6 +339,23 @@ def generate_audio_script(item: dict, model: str = SUMMARIZE_MODEL) -> str:
     return _chat(prompt, model).strip()
 
 
+def generate_episode_tagline(items: list[dict], model: str = SUMMARIZE_MODEL) -> str:
+    """Generate a 2-4 word episode tagline from top stories, e.g. 'New Gemini, Faster Learning'."""
+    top3 = [item["title"] for item in items[:3]]
+    top3_str = "\n".join(f"- {t}" for t in top3)
+    prompt = (
+        "Write a 2 to 4 word episode tagline that captures the key themes from these top stories. "
+        "Use title case. No punctuation at start or end. No quotes. Examples: "
+        "'New Gemini, Faster Learning' or 'Robots Learn to Walk' or 'Claude 4, AGI Debate'.\n\n"
+        f"Top stories:\n{top3_str}\n\n"
+        "Tagline:"
+    )
+    raw = _chat(prompt, model).strip()
+    # Take only the first line in case the model leaks explanation text
+    first_line = raw.splitlines()[0].strip().strip('"').strip("'")
+    return first_line
+
+
 def generate_intro_script(items: list[dict], date: "datetime", model: str = SUMMARIZE_MODEL) -> str:
     """Generate a podcast intro mentioning date, item count, and top-3 topics."""
     date_str = f"{date.strftime('%B')} {date.day}, {date.year}"

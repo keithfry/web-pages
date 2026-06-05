@@ -31,6 +31,15 @@ def _duration_from_chapters(chapters_path: Path) -> int:
     return 0
 
 
+def _tagline_from_chapters(chapters_path: Path) -> str:
+    """Return episode tagline stored in chapters JSON, or empty string."""
+    try:
+        data = json.loads(chapters_path.read_text())
+        return data.get("title", "")
+    except Exception:
+        return ""
+
+
 def _date_from_filename(mp3_path: Path) -> datetime | None:
     """Parse YYYY-MM-DD from filename ai-radar-YYYY-MM-DD.mp3."""
     stem = mp3_path.stem  # e.g. "ai-radar-2026-05-21"
@@ -64,13 +73,21 @@ def build_rss_feed(output_dir: Path, base_url: str, max_episodes: int = MAX_EPIS
         pub_date = format_datetime(date)
         title_date = f"{date.strftime('%B')} {date.day}, {date.year}"
 
+        tagline = _tagline_from_chapters(chap_json) if chap_json.exists() else ""
+        # Use stored episode title (e.g. "June 7, 2026 : New Gemini, Faster Learning")
+        # or fall back to the tagline-free format for older episodes
+        if tagline and tagline != f"AI & Robotics Radar — {title_date}":
+            episode_title = tagline
+        else:
+            episode_title = f"AI &amp; Robotics Radar — {title_date}"
+
         chap_tag = (
             f'      <podcast:chapters url="{chap_url}" type="application/json+chapters"/>\n'
             if chap_json.exists() else ""
         )
 
         items_xml.append(f"""  <item>
-    <title>AI &amp; Robotics Radar — {title_date}</title>
+    <title>{episode_title}</title>
     <pubDate>{pub_date}</pubDate>
     <enclosure url="{mp3_url}" type="audio/mpeg" length="{file_size}"/>
     <itunes:duration>{duration // 3600:02d}:{(duration % 3600) // 60:02d}:{duration % 60:02d}</itunes:duration>

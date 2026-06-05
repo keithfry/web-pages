@@ -19,9 +19,13 @@ def _voice_for(voice_index: int) -> str:
     return KOKORO_VOICES[voice_index % len(KOKORO_VOICES)]
 
 
-def _build_chapters_json(chapters: list[dict]) -> str:
+def _build_chapters_json(chapters: list[dict], episode_title: str | None = None) -> str:
     """Build Podcasting 2.0 chapters JSON string."""
-    return json.dumps({"version": "1.2.0", "chapters": chapters}, indent=2)
+    data: dict = {"version": "1.2.0"}
+    if episode_title:
+        data["title"] = episode_title
+    data["chapters"] = chapters
+    return json.dumps(data, indent=2)
 
 
 def _tts_segment(text: str, voice: str, out_wav: Path, pipeline) -> float:
@@ -68,7 +72,7 @@ def _concat_wavs_to_mp3(wav_files: list[Path], out_mp3: Path) -> None:
         concat_file.unlink(missing_ok=True)
 
 
-def _write_id3_chapters(mp3_path: Path, chapters: list[dict]) -> None:
+def _write_id3_chapters(mp3_path: Path, chapters: list[dict], episode_title: str | None = None) -> None:
     """Write ID3v2 CHAP frames to an MP3 file for chapter navigation."""
     from mutagen.id3 import ID3, CHAP, CTOC, TIT2
     from mutagen.id3 import ID3NoHeaderError
@@ -77,7 +81,9 @@ def _write_id3_chapters(mp3_path: Path, chapters: list[dict]) -> None:
         tags = ID3(str(mp3_path))
     except ID3NoHeaderError:
         tags = ID3()
-    # ID3() with no args creates a new header object; tags.save(path) writes it to file.
+
+    if episode_title:
+        tags.add(TIT2(encoding=3, text=[episode_title]))
 
     # Remove existing chapter tags
     for key in list(tags.keys()):
@@ -124,6 +130,10 @@ def generate_podcast(
     date_str = date.strftime("%Y-%m-%d")
     mp3_path = output_dir / f"ai-radar-{date_str}.mp3"
     chapters_json_path = output_dir / f"ai-radar-{date_str}.chapters.json"
+
+    tagline = enriched_data.get("episode_tagline", "")
+    title_date = f"{date.strftime('%B')} {date.day}, {date.year}"
+    episode_title = f"{title_date} : {tagline}" if tagline else f"AI & Robotics Radar — {title_date}"
 
     podcast_items = [i for i in enriched_data["items"] if i.get("include_in_podcast")]
     intro_script = enriched_data["intro_script"]
@@ -185,11 +195,11 @@ def generate_podcast(
             chap["endTime"] = total_duration
 
     # Write Podcasting 2.0 chapters JSON
-    chapters_json_path.write_text(_build_chapters_json(chapters), encoding="utf-8")
+    chapters_json_path.write_text(_build_chapters_json(chapters, episode_title), encoding="utf-8")
     log(f"  Wrote chapters JSON: {chapters_json_path}")
 
     # Embed ID3 chapter tags in MP3
-    _write_id3_chapters(mp3_path, chapters)
+    _write_id3_chapters(mp3_path, chapters, episode_title)
     log(f"  Wrote ID3 chapters to: {mp3_path}")
 
     return mp3_path, chapters_json_path

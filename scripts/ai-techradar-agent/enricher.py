@@ -49,11 +49,12 @@ def _estimate_chapter_times(intro_script: str, audio_scripts: list[str]) -> list
     return times
 
 
-def _build_enriched_dict(date: datetime, intro_script: str, items: list[dict]) -> dict:
+def _build_enriched_dict(date: datetime, intro_script: str, episode_tagline: str, items: list[dict]) -> dict:
     return {
         "date": date.strftime("%Y-%m-%d"),
         "generated_at": datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M:%S%z"),
         "intro_script": intro_script,
+        "episode_tagline": episode_tagline,
         "items": items,
     }
 
@@ -83,7 +84,7 @@ def enrich(
     Returns:
         enriched dict (same structure as JSON file)
     """
-    from llm import rank_items, generate_audio_script, generate_intro_script, unload_all_models
+    from llm import rank_items, generate_audio_script, generate_intro_script, generate_episode_tagline, unload_all_models
 
     # Separate podcast candidates (emails + articles) from papers
     podcast_candidates = [i for i in all_items if not i.get("_is_arxiv")]
@@ -108,9 +109,12 @@ def enrich(
         item["include_in_podcast"] = True
         log(f"    [{item['rank']}] scripted: {item['title'][:60]}")
 
-    # Generate intro script
+    # Generate intro script and episode tagline
     log("  Generating intro script...")
     intro_script = generate_intro_script(ranked, date, model=summarize_model)
+    log("  Generating episode tagline...")
+    episode_tagline = generate_episode_tagline(ranked, model=summarize_model)
+    log(f"  Episode tagline: {episode_tagline}")
 
     # Estimate chapter times
     audio_scripts = [item["audio_script"] for item in ranked]
@@ -126,7 +130,7 @@ def enrich(
 
     all_enriched = ranked + papers
 
-    data = _build_enriched_dict(date, intro_script, all_enriched)
+    data = _build_enriched_dict(date, intro_script, episode_tagline, all_enriched)
     write_enriched_json(data, output_path)
     log(f"  Wrote enriched JSON: {output_path}")
 
