@@ -220,16 +220,82 @@ def classify_ad(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> tuple
         return False, "parse error"
 
 
+_STOPWORDS = {
+    "a", "an", "the", "and", "or", "of", "to", "in", "is", "are", "for",
+    "on", "at", "by", "with", "that", "this", "from", "its", "it", "be",
+    "as", "was", "has", "have", "how", "why", "what", "can", "new", "about",
+    "up", "out", "into", "will", "more", "than", "but", "not", "all",
+}
+
+
+def _title_tokens(title: str) -> set[str]:
+    """Lowercase words stripped of punctuation, minus stopwords."""
+    words = re.findall(r"[a-z0-9]+", title.lower())
+    return {w for w in words if w not in _STOPWORDS and len(w) > 1}
+
+
+def _overlap_coefficient(a: set, b: set) -> float:
+    if not a or not b:
+        return 0.0
+    return len(a & b) / min(len(a), len(b))
+
+
+def _keyword_duplicate_groups(items: list[dict], threshold: float = 0.40, min_shared: int = 4) -> list[list[int]]:
+    """Fast pre-pass: group items whose title token overlap exceeds threshold.
+
+    Requires at least `min_shared` tokens in common to avoid short-title false positives.
+    """
+    token_sets = [_title_tokens(item.get("title", "")) for item in items]
+    parent = list(range(len(items)))
+
+    def find(x: int) -> int:
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    for i in range(len(items)):
+        for j in range(i + 1, len(items)):
+            shared = token_sets[i] & token_sets[j]
+            if len(shared) >= min_shared and _overlap_coefficient(token_sets[i], token_sets[j]) >= threshold:
+                ri, rj = find(i), find(j)
+                if ri != rj:
+                    parent[ri] = rj
+
+    groups: dict[int, list[int]] = {}
+    for i in range(len(items)):
+        r = find(i)
+        groups.setdefault(r, []).append(i)
+    return [g for g in groups.values() if len(g) >= 2]
+
+
 def deduplicate(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
     """Remove near-duplicate items, keeping the one with the longer summary."""
     if len(items) <= 1:
         return items
 
+    # Fast pre-pass: catch obvious title overlaps without LLM
+    pre_groups = _keyword_duplicate_groups(items)
+    pre_drop: set[int] = set()
+    for group in pre_groups:
+        best = max(group, key=lambda i: len(items[i].get("summary", "")))
+        pre_drop.update(i for i in group if i != best)
+
+    if pre_drop:
+        print(f"[dedup] keyword pre-pass removed {len(pre_drop)} items", file=sys.stderr)
+
+    # Re-index surviving items for LLM pass
+    surviving = [(orig_i, item) for orig_i, item in enumerate(items) if orig_i not in pre_drop]
+    if len(surviving) <= 1:
+        return [item for _, item in surviving]
+
     # Build a compact index for the LLM
-    index_lines = "\n".join(f"{i}: {item['title']}" for i, item in enumerate(items))
+    index_lines = "\n".join(f"{i}: {item['title']}" for i, (_, item) in enumerate(surviving))
     prompt = (
         "The following is a numbered list of article titles. "
-        "Identify groups of items that cover the same story or announcement. "
+        "Identify groups of items that cover the same story, product release, or announcement — "
+        "even if the titles are phrased differently or come from different sources. "
+        "A product name + version (e.g. 'Gemma 4 12B') appearing in multiple titles means duplicate. "
         "Return a JSON object with key 'duplicates' — a list of lists, where each inner list "
         "contains the indices of items that are duplicates of each other.\n\n"
         "Only include groups with 2 or more items. If there are no duplicates, return "
@@ -239,26 +305,28 @@ def deduplicate(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
     raw = _chat(prompt, model, json_mode=True)
 
     try:
-        groups: list[list[int]] = json.loads(_extract_json(raw)).get("duplicates", [])
+        llm_groups: list[list[int]] = json.loads(_extract_json(raw)).get("duplicates", [])
     except (json.JSONDecodeError, AttributeError):
         print(f"[warn] deduplicate() failed to parse JSON: {raw!r}", file=sys.stderr)
-        return items
+        return [item for _, item in surviving]
 
-    # For each duplicate group, keep the item with the longest summary
-    to_drop: set[int] = set()
-    for group in groups:
+    # LLM indices are into `surviving`; map back to original indices
+    llm_drop: set[int] = set()
+    for group in llm_groups:
         if not isinstance(group, list) or len(group) < 2:
             continue
-        # Clamp indices to valid range
-        group = [i for i in group if isinstance(i, int) and 0 <= i < len(items)]
+        group = [i for i in group if isinstance(i, int) and 0 <= i < len(surviving)]
         if len(group) < 2:
             continue
-        best = max(group, key=lambda i: len(items[i].get("summary", "")))
-        for i in group:
-            if i != best:
-                to_drop.add(i)
+        orig_group = [surviving[i][0] for i in group]
+        best_orig = max(orig_group, key=lambda i: len(items[i].get("summary", "")))
+        llm_drop.update(i for i in orig_group if i != best_orig)
 
-    return [item for i, item in enumerate(items) if i not in to_drop]
+    if llm_drop:
+        print(f"[dedup] LLM pass removed {len(llm_drop)} items", file=sys.stderr)
+
+    all_drop = pre_drop | llm_drop
+    return [item for i, item in enumerate(items) if i not in all_drop]
 
 
 def rank_items(items: list[dict], model: str = RANK_MODEL) -> list[dict]:
