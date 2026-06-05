@@ -21,7 +21,7 @@ from zoneinfo import ZoneInfo
 
 ET = ZoneInfo("America/New_York")
 
-from config import LOOKBACK_HOURS, SUMMARIZE_MODEL, RANK_MODEL, GENERATE_MODEL, LLM_WORKERS, URL_WORKERS, AD_DETECTOR_MODEL, AD_GATE_ENABLED, OUTPUT_DIR
+from config import LOOKBACK_HOURS, SUMMARIZE_MODEL, RANK_MODEL, DEDUP_MODEL, GENERATE_MODEL, LLM_WORKERS, URL_WORKERS, AD_DETECTOR_MODEL, AD_GATE_ENABLED, OUTPUT_DIR
 from feed_fetcher import fetch_all_feeds, is_arxiv
 from email_fetcher import fetch_emails
 from article_fetcher import fetch_article_text, source_name_from_url
@@ -341,6 +341,7 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
     log(f"Lookback:        {args.hours}h")
     log(f"Summarize model: {SUMMARIZE_MODEL}")
     log(f"Rank model:      {RANK_MODEL}")
+    log(f"Dedup model:     {DEDUP_MODEL}")
     log(f"Generate model:  {GENERATE_MODEL}")
     log(f"LLM workers:     {LLM_WORKERS}  (set OLLAMA_NUM_PARALLEL={LLM_WORKERS} to match)")
     log(f"URL workers:     {URL_WORKERS}")
@@ -437,7 +438,7 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
     # --- Step 5: Deduplicate ---
     log(f"── Step 5: Deduplicating {len(all_items)} items "
         f"({len(processed_emails)} newsletters + {len(processed_links)} linked + {len(processed_rss)} RSS) ──")
-    all_items = deduplicate(all_items, SUMMARIZE_MODEL)
+    all_items = deduplicate(all_items, DEDUP_MODEL)
     log(f"  {len(all_items)} items after deduplication")
     log("")
 

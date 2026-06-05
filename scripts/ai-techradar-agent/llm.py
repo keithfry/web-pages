@@ -269,58 +269,79 @@ def _keyword_duplicate_groups(items: list[dict], threshold: float = 0.40, min_sh
     return [g for g in groups.values() if len(g) >= 2]
 
 
-def deduplicate(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
-    """Remove near-duplicate items, keeping the one with the longer summary."""
-    if len(items) <= 1:
-        return items
+_DEDUP_BATCH_SIZE = 40
+_DEDUP_CONFIDENCE_THRESHOLD = 0.5
 
-    # Fast pre-pass: catch obvious title overlaps without LLM
-    pre_groups = _keyword_duplicate_groups(items)
-    pre_drop: set[int] = set()
-    for group in pre_groups:
-        best = max(group, key=lambda i: len(items[i].get("summary", "")))
-        pre_drop.update(i for i in group if i != best)
 
-    if pre_drop:
-        print(f"[dedup] keyword pre-pass removed {len(pre_drop)} items", file=sys.stderr)
+def _dedup_batch(batch: list[tuple[int, dict]], model: str) -> set[int]:
+    """Send one batch to LLM. Returns original indices to DROP."""
+    if len(batch) <= 1:
+        return set()
 
-    # Re-index surviving items for LLM pass
-    surviving = [(orig_i, item) for orig_i, item in enumerate(items) if orig_i not in pre_drop]
-    if len(surviving) <= 1:
-        return [item for _, item in surviving]
-
-    # Build a compact index for the LLM
-    index_lines = "\n".join(f"{i}: {item['title']}" for i, (_, item) in enumerate(surviving))
+    payload = [{"id": str(orig_i), "title": item["title"]} for orig_i, item in batch]
     prompt = (
-        "The following is a numbered list of article titles. "
-        "Identify groups of items that cover the same story, product release, or announcement — "
-        "even if the titles are phrased differently or come from different sources. "
-        "A product name + version (e.g. 'Gemma 4 12B') appearing in multiple titles means duplicate. "
-        "Return a JSON object with key 'duplicates' — a list of lists, where each inner list "
-        "contains the indices of items that are duplicates of each other.\n\n"
-        "Only include groups with 2 or more items. If there are no duplicates, return "
-        '{"duplicates": []}.\n\n'
-        f"Articles:\n{index_lines}"
+        "You are a news deduplication filter. Given a list of article titles, "
+        "identify and remove duplicates — articles covering the same story, product release, "
+        "or announcement, even if phrased differently or from different sources. "
+        "A shared product name + version (e.g. 'Gemma 4 12B') means duplicate.\n\n"
+        "Return a JSON object with key 'keep': a list of objects for each UNIQUE article to keep. "
+        "Each object: {\"id\": \"<original id>\", \"confidence\": <0.0-1.0>} "
+        "where confidence is how certain you are this item is unique. "
+        "When duplicates exist, keep the one with the most informative title.\n\n"
+        f"Articles:\n{json.dumps(payload, indent=2)}\n\n"
+        "Response (JSON only):"
     )
     raw = _chat(prompt, model, json_mode=True)
 
     try:
-        llm_groups: list[list[int]] = json.loads(_extract_json(raw)).get("duplicates", [])
+        keep_list = json.loads(_extract_json(raw)).get("keep", [])
     except (json.JSONDecodeError, AttributeError):
-        print(f"[warn] deduplicate() failed to parse JSON: {raw!r}", file=sys.stderr)
+        print(f"[warn] _dedup_batch() failed to parse JSON: {raw!r}", file=sys.stderr)
+        return set()
+
+    valid_ids = {str(orig_i) for orig_i, _ in batch}
+    kept_ids: set[str] = set()
+    for entry in keep_list:
+        if not isinstance(entry, dict):
+            continue
+        item_id = str(entry.get("id", ""))
+        confidence = float(entry.get("confidence", 1.0))
+        if item_id in valid_ids and confidence >= _DEDUP_CONFIDENCE_THRESHOLD:
+            kept_ids.add(item_id)
+
+    # If LLM returned nothing valid, keep everything (safe fallback)
+    if not kept_ids:
+        print(f"[warn] _dedup_batch() returned no valid ids — keeping all", file=sys.stderr)
+        return set()
+
+    return {orig_i for orig_i, _ in batch if str(orig_i) not in kept_ids}
+
+
+def deduplicate(items: list[dict], model: str = SUMMARIZE_MODEL) -> list[dict]:
+    """Remove near-duplicate items using keyword pre-pass + batched LLM filter."""
+    if len(items) <= 1:
+        return items
+
+    # Keyword pre-pass disabled — LLM handles all dedup
+    # pre_groups = _keyword_duplicate_groups(items)
+    # pre_drop: set[int] = set()
+    # for group in pre_groups:
+    #     best = max(group, key=lambda i: len(items[i].get("summary", "")))
+    #     pre_drop.update(i for i in group if i != best)
+    # if pre_drop:
+    #     print(f"[dedup] keyword pre-pass removed {len(pre_drop)} items", file=sys.stderr)
+    pre_drop: set[int] = set()
+
+    surviving = [(orig_i, item) for orig_i, item in enumerate(items) if orig_i not in pre_drop]
+    if len(surviving) <= 1:
         return [item for _, item in surviving]
 
-    # LLM indices are into `surviving`; map back to original indices
+    # Batched LLM pass over surviving items
     llm_drop: set[int] = set()
-    for group in llm_groups:
-        if not isinstance(group, list) or len(group) < 2:
-            continue
-        group = [i for i in group if isinstance(i, int) and 0 <= i < len(surviving)]
-        if len(group) < 2:
-            continue
-        orig_group = [surviving[i][0] for i in group]
-        best_orig = max(orig_group, key=lambda i: len(items[i].get("summary", "")))
-        llm_drop.update(i for i in orig_group if i != best_orig)
+    for start in range(0, len(surviving), _DEDUP_BATCH_SIZE):
+        batch = surviving[start:start + _DEDUP_BATCH_SIZE]
+        dropped = _dedup_batch(batch, model)
+        llm_drop |= dropped
 
     if llm_drop:
         print(f"[dedup] LLM pass removed {len(llm_drop)} items", file=sys.stderr)
