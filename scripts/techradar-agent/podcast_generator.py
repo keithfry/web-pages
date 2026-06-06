@@ -118,6 +118,8 @@ def generate_podcast(
     enriched_data: dict,
     date: datetime,
     output_dir: Path,
+    file_prefix: str = "ai-radar",
+    topic_label: str = "AI",
     log=print,
 ) -> tuple[Path, Path]:
     """Generate MP3 + chapters.json from enriched data.
@@ -128,12 +130,12 @@ def generate_podcast(
         (mp3_path, chapters_json_path)
     """
     date_str = date.strftime("%Y-%m-%d")
-    mp3_path = output_dir / f"ai-radar-{date_str}.mp3"
-    chapters_json_path = output_dir / f"ai-radar-{date_str}.chapters.json"
+    mp3_path = output_dir / f"{file_prefix}-{date_str}.mp3"
+    chapters_json_path = output_dir / f"{file_prefix}-{date_str}.chapters.json"
 
     tagline = enriched_data.get("episode_tagline", "")
     title_date = f"{date.strftime('%B')} {date.day}, {date.year}"
-    episode_title = f"{title_date} : {tagline}" if tagline else f"AI & Robotics Radar — {title_date}"
+    episode_title = f"{title_date} : {tagline}" if tagline else f"{topic_label} Radar — {title_date}"
 
     podcast_items = [i for i in enriched_data["items"] if i.get("include_in_podcast")]
     intro_script = enriched_data["intro_script"]

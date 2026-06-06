@@ -493,13 +493,14 @@ def generate_episode_tagline(items: list[dict], model: str = SUMMARIZE_MODEL) ->
     return first_line
 
 
-def generate_intro_script(items: list[dict], date: "datetime", model: str = SUMMARIZE_MODEL) -> str:
+def generate_intro_script(items: list[dict], date: "datetime", model: str = SUMMARIZE_MODEL, topic: str = "AI") -> str:
     """Generate a podcast intro mentioning date, item count, and top-3 topics."""
     date_str = f"{date.strftime('%B')} {date.day}, {date.year}"
     top3 = [item["title"] for item in items[:3]]
     top3_str = "\n".join(f"- {t}" for t in top3)
+    topic_desc = "robotics and automation" if topic == "Robotics" else "AI and machine learning"
     prompt = (
-        f"Write a short podcast intro (under 45 words). "
+        f"Write a short podcast intro (under 45 words) for a daily {topic_desc} news digest. "
         f"Date: {date_str}. Total items: {len(items)}. "
         f"Mention up to 3 top stories by topic (not exact title). "
         f"Sound natural and welcoming. No markdown. End naturally, don't say 'let's get started'.\n\n"

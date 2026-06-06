@@ -153,7 +153,11 @@ def generate_html(
     papers: list[dict],
     errors: list[dict],
     date: datetime,
+    topic: str = "AI",
 ) -> str:
+    topic_label = "AI" if topic == "AI" else "Robotics"
+    digest_title = f"{topic_label} Daily Digest"
+
     day_str = date.strftime("%A, %B %-d, %Y")
     time_str = date.strftime("%-I:%M %p ET")
     dateline = f"{day_str} &mdash; {time_str}"
@@ -180,7 +184,7 @@ def generate_html(
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI &amp; Robotics Daily Digest &mdash; {date_title}</title>
+<title>{digest_title} &mdash; {date_title}</title>
 <style>
 {_CSS}
 </style>
@@ -189,7 +193,7 @@ def generate_html(
 
 <div class="page-header">
   <div class="eyebrow">⚡ Daily Briefing</div>
-  <h1>AI &amp; Robotics Daily Digest</h1>
+  <h1>{digest_title}</h1>
   <div class="dateline">{dateline}</div>
   <div class="header-stats">
 {stats}  </div>
@@ -279,8 +283,8 @@ def generate_html(
     footer_date = date.strftime("%A, %B %-d, %Y — %-I:%M %p ET")
     parts.append(
         f"<footer>\n"
-        f"  AI &amp; Robotics Daily Digest &bull; {footer_date} &bull; "
-        f"Sources: Gmail + {feed_count} RSS items via ai-techradar-agent\n"
+        f"  {digest_title} &bull; {footer_date} &bull; "
+        f"Sources: Gmail + {feed_count} RSS items via techradar-agent\n"
         f"</footer>\n\n"
         f"<script>\n(function(){{\n"
         f"  const active = new Set();\n"

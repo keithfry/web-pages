@@ -423,7 +423,7 @@ def _run_topic(
         enriched_data = _json.loads(json_path.read_text())
         log("── Generating podcast audio ──")
         try:
-            mp3_path, chap_path = generate_podcast(enriched_data, as_of, output_dir, log=log)
+            mp3_path, chap_path = generate_podcast(enriched_data, as_of, output_dir, file_prefix=file_prefix, topic_label=topic, log=log)
             log(f"  Podcast generated: {mp3_path.name}")
         except Exception as e:
             log(f"ERROR: podcast generation failed: {e}")
@@ -480,7 +480,7 @@ def _run_topic(
     # --- Step 6: Enrich — rank, audio scripts, chapter times, write JSON ---
     log(f"── Step 6: Enriching {len(all_items)} items ──")
     json_path = output_dir / f"{file_prefix}-{as_of.strftime('%Y-%m-%d')}.json"
-    enriched_data = enrich(all_items, as_of, json_path, summarize_model=SUMMARIZE_MODEL, rank_model=RANK_MODEL, log=log)
+    enriched_data = enrich(all_items, as_of, json_path, summarize_model=SUMMARIZE_MODEL, rank_model=RANK_MODEL, topic=topic, log=log)
     podcast_count = len([i for i in enriched_data["items"] if i.get("include_in_podcast")])
     log(f"  Enrichment complete — {podcast_count} podcast items")
     log("")
@@ -501,7 +501,7 @@ def _run_topic(
             log(f"  Newsletters: {len(newsletters)}, Articles: {len(articles)}, Papers: {len(papers)}, Errors: {len(rss_errors)}")
             html = generate_html(
                 newsletters=newsletters, articles=articles,
-                papers=papers, errors=rss_errors, date=as_of,
+                papers=papers, errors=rss_errors, date=as_of, topic=topic,
             )
             html_result.append(html)
             log(f"  HTML generated ({len(html):,} chars)")
@@ -514,7 +514,7 @@ def _run_topic(
             return
         try:
             log("── Step 7b: Generating podcast audio ──")
-            mp3, chap_json = generate_podcast(enriched_data, as_of, output_dir, log=log)
+            mp3, chap_json = generate_podcast(enriched_data, as_of, output_dir, file_prefix=file_prefix, topic_label=topic, log=log)
             podcast_result.append((mp3, chap_json))
             log(f"  Podcast generated: {mp3.name}")
         except Exception as e:

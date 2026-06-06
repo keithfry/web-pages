@@ -69,6 +69,7 @@ def enrich(
     output_path: Path,
     summarize_model: str = SUMMARIZE_MODEL,
     rank_model: str = RANK_MODEL,
+    topic: str = "AI",
     log=print,
 ) -> dict:
     """Rank, script, and time-estimate all items. Write JSON. Return enriched dict.
@@ -111,7 +112,7 @@ def enrich(
 
     # Generate intro script and episode tagline
     log("  Generating intro script...")
-    intro_script = generate_intro_script(ranked, date, model=summarize_model)
+    intro_script = generate_intro_script(ranked, date, model=summarize_model, topic=topic)
     log("  Generating episode tagline...")
     episode_tagline = generate_episode_tagline(ranked, model=summarize_model)
     log(f"  Episode tagline: {episode_tagline}")
