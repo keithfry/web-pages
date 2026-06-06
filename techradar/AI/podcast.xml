@@ -7,19 +7,19 @@
     <link>https://keithfry.github.io/web-pages/techradar/AI/</link>
     <description>Daily AI and Robotics news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jun 2026 12:14:48 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 12:46:58 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
   <item>
-    <title>June 6, 2026 : AIs Break Free Evolve</title>
+    <title>June 6, 2026 : AI Sovereignty Superintelligence Race</title>
     <pubDate>Sat, 06 Jun 2026 08:00:00 +0000</pubDate>
-    <enclosure url="https://keithfry.github.io/web-pages/techradar/AI/ai-radar-2026-06-06.mp3" type="audio/mpeg" length="36489738"/>
-    <itunes:duration>01:15:54</itunes:duration>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/AI/ai-radar-2026-06-06.mp3" type="audio/mpeg" length="32167865"/>
+    <itunes:duration>01:06:55</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/AI/ai-radar-2026-06-06.mp3</guid>
-    <description>AI and Robotics Radar for June 6, 2026. 75 minutes of AI and robotics news.</description>
+    <description>AI and Robotics Radar for June 6, 2026. 66 minutes of AI and robotics news.</description>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/AI/ai-radar-2026-06-06.chapters.json" type="application/json+chapters"/>
   </item>
   <item>
