@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI &amp; Robotics Daily Digest &mdash; June 6, 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1a1d23;
+    line-height: 1.6;
+  }
+  .page-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #0f3460 100%);
+    color: white;
+    padding: 52px 24px 44px;
+    text-align: center;
+  }
+  .page-header .eyebrow { font-size: 11px; letter-spacing: 3.5px; text-transform: uppercase; color: #60a5fa; margin-bottom: 14px; font-weight: 600; }
+  .page-header h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+  .page-header .dateline { font-size: 15px; color: #94a3b8; }
+  .header-stats { display: flex; justify-content: center; gap: 20px; margin-top: 22px; flex-wrap: wrap; }
+  .stat-pill { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; padding: 5px 16px; font-size: 12px; color: #cbd5e1; font-weight: 500; }
+  .container { max-width: 880px; margin: 0 auto; padding: 44px 20px 64px; }
+  .section-header { display: flex; align-items: center; gap: 10px; margin: 52px 0 18px; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0; }
+  .section-header .icon { font-size: 20px; }
+  .section-header h2 { font-size: 18px; font-weight: 700; color: #0f172a; letter-spacing: -0.2px; }
+  .section-header .badge { margin-left: auto; font-size: 11px; font-weight: 700; background: #f1f5f9; color: #64748b; border-radius: 12px; padding: 3px 11px; }
+  .subsection { font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #94a3b8; margin: 28px 0 10px; }
+  .card { background: white; border-radius: 10px; padding: 20px 22px; margin-bottom: 12px; border: 1px solid #e8edf3; box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: box-shadow 0.15s ease; }
+  .card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.09); }
+  .card .via { font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #3b82f6; margin-bottom: 6px; }
+  .card h3 { font-size: 15.5px; font-weight: 700; line-height: 1.4; margin-bottom: 9px; color: #0f172a; }
+  .card h3 a { color: inherit; text-decoration: none; }
+  .card h3 a:hover { color: #2563eb; text-decoration: underline; }
+  .card p { font-size: 14px; color: #475569; line-height: 1.65; }
+  .card.arxiv { border-left: 3px solid #8b5cf6; }
+  .card.arxiv .via { color: #8b5cf6; }
+  .card.robotics { border-left: 3px solid #10b981; }
+  .card.robotics .via { color: #10b981; }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 10px; }
+  .tag { font-size: 10.5px; font-weight: 600; padding: 2px 9px; border-radius: 10px; }
+  .t-policy   { background:#fee2e2; color:#b91c1c; }
+  .t-model    { background:#dbeafe; color:#1d4ed8; }
+  .t-agents   { background:#dcfce7; color:#15803d; }
+  .t-safety   { background:#fef9c3; color:#a16207; }
+  .t-robotics { background:#ede9fe; color:#6d28d9; }
+  .t-voice    { background:#ffedd5; color:#c2410c; }
+  .t-health   { background:#cffafe; color:#0e7490; }
+  .t-research { background:#f1f5f9; color:#475569; }
+  .t-ethics   { background:#fce7f3; color:#be185d; }
+  .problem-feeds { border: 1px solid #fca5a5; background: #fff7f7; border-radius: 10px; padding: 20px 22px; margin-top: 40px; }
+  .problem-feeds h2 { font-size: 15px; font-weight: 700; color: #b91c1c; margin-bottom: 12px; }
+  .problem-feeds ul { list-style: none; }
+  .problem-feeds li { font-size: 13px; color: #64748b; margin-bottom: 8px; }
+  .problem-feeds li a { color: #2563eb; }
+  .problem-feeds .error-reason { color: #dc2626; font-style: italic; }
+  footer { text-align: center; font-size: 12px; color: #94a3b8; padding: 28px 20px 40px; border-top: 1px solid #e2e8f0; margin-top: 16px; }
+  .filter-bar { background: white; border-bottom: 1px solid #e2e8f0; padding: 12px 20px; display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .filter-chip { font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 12px; cursor: pointer; border: 2px solid transparent; transition: border-color 0.15s, opacity 0.15s; }
+  .filter-chip.active { border-color: currentColor; }
+  .filter-chip.dimmed { opacity: 0.4; }
+  .card.hidden { display: none; }
+  .subsection.hidden { display: none; }
+  .section-block.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="eyebrow">⚡ Daily Briefing</div>
+  <h1>AI &amp; Robotics Daily Digest</h1>
+  <div class="dateline">Saturday, June 6, 2026 &mdash; 8:00 AM ET</div>
+  <div class="header-stats">
+    <span class="stat-pill">📬 10 Newsletters</span>
+    <span class="stat-pill">📰 59 Articles</span>
+    <span class="stat-pill">🔬 10 Papers</span>
+    <span class="stat-pill">✅ 0 Feed Errors</span>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-chip t-agents" data-tag="agents">Agents</button>
+  <button class="filter-chip t-ethics" data-tag="ethics">Ethics</button>
+  <button class="filter-chip t-health" data-tag="health">Healthcare</button>
+  <button class="filter-chip t-model" data-tag="model">Models</button>
+  <button class="filter-chip t-policy" data-tag="policy">Policy</button>
+  <button class="filter-chip t-research" data-tag="research">Research</button>
+  <button class="filter-chip t-robotics" data-tag="robotics">Robotics</button>
+  <button class="filter-chip t-safety" data-tag="safety">Safety</button>
+  <button class="filter-chip t-voice" data-tag="voice">Voice AI</button>
+</div>
+
+<div class="container">
+  <div class="section-block">
+  <div class="section-header"><span class="icon">📬</span><h2>Email Newsletters</h2><span class="badge">10 items</span></div>
+
+  <div class="card" data-tags="model research">
+    <div class="via">Ollama</div>
+    <h3>Improved performance and model support with GGUF</h3>
+    <p>Ollama 0.30 has improved performance and model compatibility through llama.cpp, augmenting its MLX engine on Apple silicon, supporting more models on a wider range of hardware. Performance is up to 20% faster on NVIDIA hardware, while Vulkan is enabled by default, extending GPU acceleration to AMD and Intel devices. Ollama 0.30 expands compatibility with GGUF ecosystem models, including LFM, Prism, and fine-tuned models published by Unsloth.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">AINews</div>
+    <h3>[AINews] not much happened today</h3>
+    <p>Frontier Models, RSI, and the “AI Builds AI” Narrative dominated discussion on Twitter. Anthropic&#x27;s Mythos/Opus cycle was discussed, with mixed substance and speculation about its outputs. A concrete science result from Anthropic showed Opus 4.7 matching dedicated NMR software on some tasks. Recursive self-improvement moved to an explicit org strategy with Sakana AI launching a RSI Lab in Tokyo.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">Google</div>
+    <h3>New privacy settings for Search services</h3>
+    <p>Google is introducing two new settings to give users more control over their saved history and personalized recommendations across its search services. The new settings, Search Services History and Personalized Recommendations, let users revisit past searches and decide if they want their experience to be personalized. Users can turn these settings on or off at any time, including the option to auto-delete their search history.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research agents">
+    <div class="via">Latent.Space</div>
+    <h3>How to Stop Shipping Low-Quality RL Environments (with Examples)</h3>
+    <p>Researchers creating low-quality reinforcement learning (RL) environments often fail to read trajectories, utilize domain experts, make economic tradeoffs, trigger eval awareness, and provide a well-qualified environment. This can result in models learning the wrong things and producing unreliable training data. Flaky harnesses can systematically generate garbage data, affecting model performance and requiring fixes such as improving trajectory reading, incorporating domain expertise, optimizing economic tradeoffs, and enhancing evaluation awareness.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-agents">Agents</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">Sloth Bytes</div>
+    <h3>🦥 Tokenmaxxing might be dead</h3>
+    <p>Microsoft has introduced a standalone desktop app for GitHub Copilot, which provides a single dashboard for managing active agent sessions, PRs, issues, and background automations. The new tool also features isolated Git worktrees, agent merge, canvases, local sandboxes, and a more user-friendly interface.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">The Rundown Tech</div>
+    <h3>🔎 Google turns search into creator hubs</h3>
+    <p>Google is rolling out claimable Search profiles for high-follower creators and publishers in the U.S., turning the top result for their name into a self-curated hub of their content and links. To qualify, users must have at least 100K followers on Instagram, YouTube, or X (or 300K on TikTok-only) and be 18 or older.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">TLDR AI</div>
+    <h3>Anthropic Oceanus leaks 🤖, ChatGPT Dreaming 💭, recursive self improvement 🚀</h3>
+    <p>A new version of Anthropic&#x27;s Mythos is reportedly gearing up for public launch, surpassing its current &quot;Mythos Preview&quot; version. The update includes a checkpoint codenamed Oceanus, which was made available to red teamers before its release, but was paused due to model resale via a Chinese API proxy.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research ethics">
+    <div class="via">Making AI Work from MIT Technology Review</div>
+    <h3>🎓 How to encourage smarter AI use in the classroom</h3>
+    <p>To encourage smarter AI use in the classroom, educators should adopt a patchwork approach, training staff on general techniques for using AI while avoiding prescription of specific tech. This includes teaching how to craft useful prompts and highlighting technology&#x27;s limits, including potential for generating incorrect and biased responses. Many teachers are already using generative AI to prepare class materials, such as planning lessons and creating grading rubrics, but some are hesitant to use it for student feedback due to concerns over quality, personalization, and privacy.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-ethics">Ethics</span></div>
+  </div>
+  <div class="card" data-tags="research">
+    <div class="via">Intro to AI from MIT Technology Review</div>
+    <h3>How to talk about AI 🗣️</h3>
+    <p>To have a meaningful conversation about AI, start by being specific about the type of AI you&#x27;re discussing and avoid using jargon like &quot;hallucination.&quot; Remember that AI is not a one-size-fits-all solution and can be prone to biases. Don&#x27;t anthropomorphize chatbots or attribute human characteristics to them.</p>
+    <div class="tags"><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model safety">
+    <div class="via">The Download from MIT Technology Review</div>
+    <h3>The Meta hack shows there’s more to AI security than Mythos</h3>
+    <p>Reports emerged that attackers used Meta&#x27;s AI customer support agent to steal Instagram accounts, exploiting a simple yet effective hack. This incident highlights the risks of unsophisticated attacks on AI systems and the need for increased awareness and security measures as companies increasingly rely on AI. Meanwhile, experts warn that digital technologies are weakening cognitive abilities, including attention spans, leading to higher stress and lower performance, potentially exacerbated by AI tools like ChatGPT and Claude.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-safety">Safety</span></div>
+  </div>
+  </div>
+
+  <div class="section-block">
+  <div class="section-header"><span class="icon">📰</span><h2>Blog Posts &amp; Articles</h2><span class="badge">59 items</span></div>
+
+  <div class="subsection">Policy &amp; Industry</div>
+
+  <div class="card" data-tags="research policy">
+    <div class="via">metronome.com</div>
+    <h3><a href="https://metronome.com/webinars/webinar-the-new-monetization-playbook-for-data-infrastructure?utm_campaign=q2-webinar&amp;utm_medium=newsletter&amp;utm_source=tldr-ai&amp;utm_content=_header">Understanding the Changing Economics of Data Infrastructure Pricing</a></h3>
+    <p>The economics of data infrastructure are changing in three main ways: deployment models, new architectures, and AI agents. Companies must adapt to shifting who pays for what, redesign their billing engines for continuous monetization iteration, and develop commercial models that account for these changes. Leading companies are exploring token economics, packaging as a commercial lever, pricing for AI-driven usage, and adapting their operating model to enable frequent pricing changes without breaking the business.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-policy">Policy</span></div>
+  </div>
+  <div class="card" data-tags="model research policy">
+    <div class="via">The Guardian - Artificial Intelligence</div>
+    <h3><a href="https://www.theguardian.com/technology/2026/jun/05/labour-will-make-ai-work-for-workers-liz-kendall">Labour will make AI ‘work for the workers’, says Liz Kendall</a></h3>
+    <p>Labour will support people whose jobs are lost to automation with the goal of making artificial intelligence &quot;work for workers&quot;. The party aims to ensure that technological advancements benefit employees, not just corporations. This approach differs from some critics&#x27; concerns that AI could exacerbate job displacement without providing adequate solutions. Labour plans to shape how AI is adopted to promote a more equitable impact on employment.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-policy">Policy</span></div>
+  </div>
+  <div class="card" data-tags="research agents policy">
+    <div class="via">Towards Data Science</div>
+    <h3><a href="https://towardsdatascience.com/the-fundamental-choice-in-reinforcement-learning-on-policy-vs-off-policy/">The Fundamental Choice in Reinforcement Learning: On‑Policy vs. Off‑Policy</a></h3>
+    <p>A fundamental choice in reinforcement learning is between on-policy and off-policy methods. On-policy methods learn from the same data used to make decisions, while off-policy methods learn from different data. This distinction affects exploration, safety, and efficiency in reinforcement learning systems. The choice of approach depends on the specific application and trade-offs desired.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-agents">Agents</span><span class="tag t-policy">Policy</span></div>
+  </div>
+  <div class="card" data-tags="research policy">
+    <div class="via">Robotics &amp; Automation News</div>
+    <h3><a href="https://roboticsandautomationnews.com/2026/06/05/misumi-launches-misumi-americas-as-part-of-1-billion-global-manufacturing-investment/102318/">Misumi launches Misumi Americas as part of $1 billion global manufacturing investment</a></h3>
+    <p>Misumi Group has launched Misumi Americas and announced a $1 billion global investment program to expand its digital manufacturing and supply chain capabilities. The initiative combines Misumi&#x27;s industrial components business with AI-powered platform acquired through Fictiv, positioning the company as a broader manufacturer and supply chain provider.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-policy">Policy</span></div>
+  </div>
+
+  <div class="subsection">Models &amp; Developer Tools</div>
+
+  <div class="card" data-tags="model research">
+    <div class="via">ollama.com</div>
+    <h3><a href="https://ollama.com/blog/mlx">Ollama Now Powers Apple Silicon With MLX Machine Learning Framework</a></h3>
+    <p>Ollama is now powered by MLX, Apple&#x27;s machine learning framework, on Apple Silicon in preview, unlocking new performance to accelerate demanding work on macOS, including coding and personal assistants. On Apple&#x27;s M5, M5 Pro, and M5 Max chips, Ollama leverages GPU Neural Accelerators to speed up time to first token (TTFT) and generation speed. The new implementation results in a large speedup, with even higher performance seen when using int4 quantization, maintaining model accuracy while reducing memory bandwidth and storage requirements.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">huggingface.co</div>
+    <h3><a href="https://huggingface.co/prism-ml/Bonsai-8B-gguf">Bonsai-8B-GGUF-1bit achieves significant size and performance gains in language model inference</a></h3>
+    <p>Bonsai-8B-GGUF-1bit is a small, highly efficient language model that achieves significant size and performance gains in inference. The model achieves 14.2x smaller parameter memory and 6.2x faster performance on RTX 4090 compared to FP16 models. With a deployed size of 1.15 GB, the model fits virtually any device with a GPU, making it highly portable.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">huggingface.co</div>
+    <h3><a href="https://huggingface.co/LiquidAI/LFM2-8B-A1B-GGUF">New Liquid AI Hybrid Model LFM2 Sets Speed and Quality Records</a></h3>
+    <p>Liquid AI&#x27;s LFM2 sets speed and quality records with its new hybrid model. The LFM2-8B-A1B-GGUF model has 8.3B total parameters and 1.5B active parameters, outperforming comparable dense models in terms of quality and speed. It also significantly improves code and knowledge capabilities compared to the previous LFM2-2.6B model. The quantized variants fit comfortably on high-end phones and laptops.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">latent.space</div>
+    <h3><a href="https://www.latent.space/p/ainews-not-much-happened-today-6b8">AI News for Week of June 4-5, 2026 Recap Dominated by RSI Development</a></h3>
+    <p>Anthropic&#x27;s Mythos/Opus cycle dominated discussion on social media platforms, with users praising outputs as &quot;next level&quot; but questioning benchmark regressions. Anthropic also published a concrete science result showing Opus 4.7 matching or beating dedicated NMR software on some tasks. Recursive self-improvement moved from vague theory to explicit organization strategy with the launch of Sakana AI&#x27;s RSI Lab in Tokyo, emphasizing sample efficiency as a design constraint. New benchmarks, including Agents&#x27; Last Exam and SWE-Marathon, were introduced, shifting focus towards economically meaningful, long-horizon work.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">latent.space</div>
+    <h3><a href="https://www.latent.space/p/bad-envs">Common Harness Failures Ruin RL Training Data and Models Quickly</a></h3>
+    <p>Common RL environment failures include unresponsive or non-existent environments, throwing random tracebacks, having race conditions, and failing under minimal load. These issues result in &quot;garbage data&quot; being fed into models, causing gradients to be pushed in the wrong direction and ultimately making the model worse. Flaky harnesses are a significant problem in reinforcement learning, with common errors including incomplete or inaccurate trajectory information, lack of domain expertise, and failure to make economic tradeoffs.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">github.com</div>
+    <h3><a href="https://github.com/ggml-org/llama.cpp">Llama.cpp project gains support for gpt-oss with native MXFP4 format</a></h3>
+    <p>Support for the gpt-oss model with native MXFP4 format has been added to the llama.cpp project. This addition is part of a broader update that includes collaboration with NVIDIA, multimodal support in llama-server, and improvements to the WebGPU backend. The project also offers various installation options, including using Docker or pre-built binaries.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">theguardian.com</div>
+    <h3><a href="https://www.theguardian.com/lifeandstyle/2025/oct/01/artificial-intelligence-em-dashes-ai-stealing-my-livelihood?mc_cid=2b92dad089&amp;mc_eid=UNIQID">Em dashes are being targeted by AI algorithms to detect human writing</a></h3>
+    <p>Journalists and writers are having to manually remove em dashes from their work because large language models have been trained to detect them as a sign of AI-generated writing, which is a default natural flow for humans. Em dashes were often used by humans so frequently that algorithms learned them as a standard punctuation mark. Now, em dashes are being targeted as a way to identify human-written content.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">ter.li</div>
+    <h3><a href="https://ter.li/hu68ad?mc_cid=2b92dad089&amp;mc_eid=UNIQID">Chatbots like ChatGPT Could Revolutionize Education</a></h3>
+    <p>Schools and universities swiftly blocked access to ChatGPT after its release in late 2022 due to concerns it would make cheating on assignments too easy. However, just three months later, educators are reevaluating the chatbot&#x27;s potential benefits for education. Advanced chatbots like ChatGPT could be used as interactive classroom aids, teaching media literacy and generating personalized lesson plans, according to many teachers.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">ter.li</div>
+    <h3><a href="https://ter.li/qzh1g0?mc_cid=2b92dad089&amp;mc_eid=UNIQID">OpenAI Launches AI Tutor for College Students</a></h3>
+    <p>OpenAI&#x27;s Study Mode is a version of ChatGPT designed for college students, aiming to act like a friendly tutor rather than a lookup tool. The tool was built in consultation with pedagogy experts and appears to use sound learning approaches based on Socratic methods. However, its reliance on AI raises concerns about the accuracy of information provided and the potential for students to be taught flawed or fabricated material.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">ter.li</div>
+    <h3><a href="https://ter.li/30j1cy?mc_cid=c88952d476&amp;mc_eid=UNIQID">New Definition Emerges for Open-Source AI Models</a></h3>
+    <p>A new definition for open-source AI models has been released by the Open Source Initiative (OSI), aiming to help lawmakers protect consumers from AI risks. The definition states an open-source AI system can be used without permission, inspected and studied, modified, shared, and its components&#x27; transparency is required. Researchers should be able to access model weights, training data sources, and source code. Companies like Meta, Google, and Amazon have been contacted for their response but did not reply.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">ter.li</div>
+    <h3><a href="https://ter.li/ccwwov?mc_cid=c88952d476&amp;mc_eid=UNIQID">Rust coding class students start learning with AI-powered Copilot tool</a></h3>
+    <p>Two weeks into a coding class at Duke University, students were switched from Python to Rust, a newer language that was harder to learn, but aided by an AI tool called Copilot. Copilot is a turbocharged autocomplete for computer code built on top of OpenAI&#x27;s GPT-3.5 and GPT-4 large language models. The tool monitors keystrokes, predicts code snippets, and offers non-stop suggestions, allowing developers to work more efficiently.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">MIT Technology Review - AI &amp; Emerging Tech</div>
+    <h3><a href="https://www.technologyreview.com/2026/06/05/1138452/the-download-ai-hacking-mythos-chatbots-brain-impacts/">The Download: AI hacking beyond Mythos, and chatbots’ impact on our brains</a></h3>
+    <p>Attackers used Meta&#x27;s AI customer support agent to steal Instagram accounts by exploiting its conversational interface, highlighting the potential for AI hacking beyond typical mythos-level threats. The hack demonstrates a more sophisticated approach to using AI for malicious purposes. No further details are provided in this summary.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">Google / Google AI (Keyword Blog)</div>
+    <h3><a href="https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/">Gemma 4 QAT models: Optimizing model compression for mobile and laptop efficiency</a></h3>
+    <p>Gemma 4 is a Quantization-Aware Training (QAT) approach designed to optimize model compression for improved mobile and laptop efficiency. QAT adapts quantization parameters during training to improve performance, reducing the risk of significant degradation when models are deployed with lower precision hardware. Gemma 4 builds upon previous QAT approaches by applying more aggressive quantization strategies and incorporating additional techniques such as knowledge distillation and ensemble methods. These improvements aim to strike a balance between model size reduction and preservation of accuracy in low-precision environments.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card">
+    <div class="via">Google / Google AI (Keyword Blog)</div>
+    <h3><a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/">The latest AI news we announced in May 2026</a></h3>
+    <p>There is no information provided about a May 2026 article regarding AI news.</p>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">AI Business</div>
+    <h3><a href="https://aibusiness.com/generative-ai/prompt-anthropic-s-ipo-filing-signals-ai-s-next-phase">Prompt: Anthropic&#x27;s IPO Filing Signals AI&#x27;s Next Phase</a></h3>
+    <p>Anthropic&#x27;s upcoming IPO filing may signal a shift in the development of Artificial Intelligence, moving from breakthrough models to focusing on the resources needed to build and maintain them.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">AI Business</div>
+    <h3><a href="https://aibusiness.com/robotics/amazon-unveils-next-generation-robot-11-6b-european-push">Amazon Unveils Next-Generation Robot in $11.6B European Push</a></h3>
+    <p>Amazon has announced a new robot for its warehouses as part of a significant $11.6 billion investment in its logistics operations, with the aim of improving efficiency and capabilities.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research agents">
+    <div class="via">VentureBeat - AI</div>
+    <h3><a href="https://venturebeat.com/technology/microsoft-ai-chief-says-company-was-set-free-from-openai-to-pursue-superintelligence">Microsoft AI chief says company was “set free” from OpenAI to pursue superintelligence</a></h3>
+    <p>Microsoft&#x27;s AI chief, Mustafa Suleyman, says the company was given formal authority to pursue &quot;superintelligence&quot; six months ago. A contractual change with OpenAI granted Microsoft the freedom to use its own researchers, data pipelines, and custom silicon to develop its own AI models. This marks a strategic inflection point for Microsoft, as it builds something alongside OpenAI and eventually aims to build entirely on its own. The company has announced seven new AI models developed in-house, including reasoning, code generation, image creation, transcription, and voice synthesis, which can be customized using proprietary data and workflows.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-agents">Agents</span></div>
+  </div>
+  <div class="card" data-tags="agents research">
+    <div class="via">VentureBeat - AI</div>
+    <h3><a href="https://venturebeat.com/orchestration/microsofts-ai-futurist-explains-how-he-uses-copilot-and-the-real-world-problems-enterprises-are-solving-with-agents">Microsoft&#x27;s AI Futurist explains how he uses Copilot — and the real-world problems enterprises are solving with agents</a></h3>
+    <p>Microsoft&#x27;s AI Futurist explains that as enterprises adopt agentic AI, they need more than just access to powerful models; they require a reliable context, governance, identity, memory, and secure access to enterprise data. The company&#x27;s agent strategy focuses on model choice philosophy, which allows developers to choose from various models, including OpenAI GPT and Anthropic&#x27;s Claude models, as well as Microsoft-built MAI models for customization.</p>
+    <div class="tags"><span class="tag t-agents">Agents</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="agents research">
+    <div class="via">VentureBeat - AI</div>
+    <h3><a href="https://venturebeat.com/orchestration/ai-agents-are-learning-on-the-job-just-not-for-your-whole-team">AI agents are learning on the job — just not for your whole team</a></h3>
+    <p>AI agents are often corrected by team members, but these corrections don&#x27;t transfer to other users when they open the same tool, resulting in multiple, inconsistent versions of the agent&#x27;s performance. This issue compounds in multi-agent workflows, where shared context and memories are essential for effective collaboration. Only 5% of companies have reported productivity gains from AI use, highlighting a need for improved shared memory architecture. Asana&#x27;s Agentic Work Management platform addresses this issue by providing a shared memory layer that applies corrections to the entire team, ensuring consistent performance across users.</p>
+    <div class="tags"><span class="tag t-agents">Agents</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">MarkTechPost</div>
+    <h3><a href="https://www.marktechpost.com/2026/06/06/moonshot-ai-releases-kimi-code-cli-a-terminal-ai-coding-agent-built-in-typescript-for-next-gen-agents/">Moonshot AI Releases Kimi Code CLI: A Terminal AI Coding Agent Built in TypeScript for Next-Gen Agents</a></h3>
+    <p>Moonshot AI has released Kimi Code CLI, an open-source terminal coding agent built in TypeScript, featuring subagents and MCP configuration for next-generation agents.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research voice">
+    <div class="via">MarkTechPost</div>
+    <h3><a href="https://www.marktechpost.com/2026/06/06/nvidia-releases-nemotron-3-5-asr-a-600m-parameter-cache-aware-streaming-model-transcribing-40-language-locales-in-real-time/">NVIDIA Releases Nemotron 3.5 ASR: A 600M-Parameter Cache-Aware Streaming Model Transcribing 40 Language-Locales in Real Time</a></h3>
+    <p>NVIDIA released Nematron 3.5 ASR, a streaming model with a 600M-parameter cache, transcribing 40 language-localities in real-time from one checkpoint.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-voice">Voice AI</span></div>
+  </div>
+  <div class="card" data-tags="model research agents">
+    <div class="via">MarkTechPost</div>
+    <h3><a href="https://www.marktechpost.com/2026/06/05/a-hands-on-coding-tutorial-on-qualcomm-ai-hub-models-for-classification-object-detection-and-hardware-aware-deployment/">A Hands-On Coding Tutorial on Qualcomm AI Hub Models for Classification, Object Detection, and Hardware-Aware Deployment</a></h3>
+    <p>A coding tutorial is available on Qualcomm AI Hub Models for running MobileNet-V2 inference, YOLOv7 detection, and compiling models on real devices. The tutorial covers hands-on coding for classification, object detection, and hardware-aware deployment using the Qualcomm AI Hub Models.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-agents">Agents</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">MarkTechPost</div>
+    <h3><a href="https://www.marktechpost.com/2026/06/05/google-deepmind-releases-gemma-4-qat-checkpoints-q4_0-and-a-new-mobile-format-cut-on-device-memory/">Google DeepMind Releases Gemma 4 QAT Checkpoints: Q4_0 and a New Mobile Format Cut On-Device Memory</a></h3>
+    <p>Google DeepMind has released checkpoints for their Gemma 4 AI chip, including Q4_0 (Quantization Aware Training) and a new mobile format designed to cut on-device memory. The comparison highlights differences in published memory numbers and design tradeoffs among BF16, Q4_0 QAT, and mobile QAT formats.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">The Guardian - Artificial Intelligence</div>
+    <h3><a href="https://www.theguardian.com/global-development/2026/jun/06/african-leader-speech-decolonisation-ai-generated-fake-president-namibia-africa-caribbean">It’s no surprise that an AI-faked presidential speech condemning foreign exploitation went viral – the world is suffering from a leadership vacuum</a></h3>
+    <p>A speech attributed to Namibia&#x27;s president, Netumbo Nandi-Ndaitwah, condemning foreign exploitation went viral on social media before being revealed as a fake AI-generated speech. The speech sparked admiration from many who were seeking moral leaders willing to speak uncomfortable truths. Nandi-Ndaitwah denounced corruption and declared that Africa&#x27;s resources belonged to its people. She warned those who betrayed the public trust would face accountability, sparking widespread hopes for decolonisation reborn.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">The Guardian - Artificial Intelligence</div>
+    <h3><a href="https://www.theguardian.com/football/2026/jun/05/fifa-expanding-ai-use-at-world-cup-to-reduce-amount-of-abuse-seen-by-players">Fifa expanding AI use at World Cup to reduce amount of abuse seen by players</a></h3>
+    <p>Fifa will expand AI use at the World Cup to reduce abusive social media messages. A social media protection service was introduced after the 2022 World Cup and offered for free to all football associations at the 2026 tournament. The Football Association has not confirmed whether it will take up this offer.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="research">
+    <div class="via">Latent Space</div>
+    <h3><a href="https://www.latent.space/p/ainews-not-much-happened-today-6b8">[AINews] not much happened today</a></h3>
+    <p>There was a relatively calm day with minimal significant events. The market experienced a quiet trading session without any major incidents or notable developments. No substantial movements were recorded in the markets. A low level of activity characterized the day&#x27;s trading.</p>
+    <div class="tags"><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">Simon Willison&#x27;s Weblog</div>
+    <h3><a href="https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-everything">Running Python code in a sandbox with MicroPython and WASM</a></h3>
+    <p>A Python library called micropython-wasm has been released as an alpha package, allowing for safe execution of Python code in a sandbox within web applications. The goal is to execute code with memory and CPU limits, strict file access controls, network isolation, support for host functions, and robustness. WebAssembly was chosen due to its ability to support these requirements and being actively maintained by the wasmtime Python library. A prototype library has been built using MicroPython in WebAssembly, allowing for execution of Python code within a sandbox environment with selective exposure of host functions.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">Towards Data Science</div>
+    <h3><a href="https://towardsdatascience.com/my-ai-couldnt-see-my-files-i-built-a-zero-dependency-mcp-server/">My AI Couldn’t See My Files — I Built a Zero-Dependency MCP Server</a></h3>
+    <p>A developer created a pure Python MCP server to provide direct access to local project files for AI tools, eliminating the need for frameworks and dependencies. The server runs locally over stdio for simplicity and switches to HTTP/SSE for concurrent clients with a single flag. With this setup, 5 clients can connect in under 50ms.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">Towards Data Science</div>
+    <h3><a href="https://towardsdatascience.com/automate-writing-your-llm-prompts/">Automate Writing Your LLM Prompts</a></h3>
+    <p>Using DSPy can automate creating, evaluating, and optimizing Language Model Learning (LLM) prompts for AI models like LLaMA or DenoPA. This automation is done through a code snippet that can be easily integrated into existing workflows. The script utilizes natural language processing techniques to generate optimal prompts based on user-defined parameters.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="research">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1txsbr0/dimitri_bertsekas_passed_away/">Dimitri Bertsekas passed away</a></h3>
+    <p>Dimitri Berteskas passed away, leaving behind a remarkable legacy in the fields of reinforcement learning, optimization, and control. He authored influential books on dynamic programming, optimal control, and reinforcement learning, shaping generations of researchers and practitioners. Throughout his career, he received numerous honors, including the 2022 IEEE Control Systems Award. His commitment to education made many of his books freely available online, inspiring future generations of students.</p>
+    <div class="tags"><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="research agents">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1txuy1v/building_a_custom_drones_mujoco_environment/">Building a Custom Drones MuJoCo Environment</a></h3>
+    <p>A developer has created a package for MARL based drone environments with different objectives, bundled into a single GitHub repository (https://github.com/tau-intelligence/MuJoCo-drones-gym). The repository aims to improve and expand the environment for the RL community. The developer is seeking feedback from the community on how to enhance it and fix broken implementations.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-agents">Agents</span></div>
+  </div>
+  <div class="card" data-tags="research model agents">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1txjmln/if_you_train_rl_agents_seriously_where_does_your/">If you train RL agents seriously, where does your pipeline actually bottleneck?</a></h3>
+    <p>Simulation throughput dominates wall clock, iteration speed, and cost in most RL training pipelines, with algorithm work being less expensive or time-consuming. The single most expensive or time-wasting part of an RL pipeline varies among individuals but can include reward design, infra and orchestration, debugging, and sim-to-real translation. The author&#x27;s experience is not universal, as their specific niche was drone RL with a massively GPU parallelized sim.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-model">Models</span><span class="tag t-agents">Agents</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1txqmch/learning_reinforcement_learning_for_trading_check/">Learning Reinforcement Learning for Trading? Check Out This Open-Source Project</a></h3>
+    <p>A researcher has open-sourced an open-source project on reinforcement learning for trading using recurrent architectures on GitHub (https://github.com/TiwariLaxuu/Recurrent-RL-in-Trading-). The project aims to explore the integration of recurrent models, such as RNN/LSTM-style components, into RL agents for financial decision-making in sequential market environments.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">RL Reddit</div>
+    <h3><a href="https://www.reddit.com/r/reinforcementlearning/comments/1txwjm2/looking_for_arxiv_cs_endorsement_firsttime/">Looking for arXiv cs endorsement — first-time submitter, paper on multi-agent LLM token optimization (Patent Pending) [D]</a></h3>
+    <p>A paper titled &quot;multi-agent LLM token optimization&quot; has been submitted to arXiv, with the submission ID [D]. The author is a first-time submitter and the paper is classified as patent pending. No other information is provided about the paper or its contents.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="research">
+    <div class="via">The Robot Report</div>
+    <h3><a href="https://www.therobotreport.com/mitsubishi-electric-opens-serendie-street-boston-digital-transformation-hub/">Mitsubishi Electric opens Serendie Street Boston digital transformation hub</a></h3>
+    <p>Mitsubishi Electric has opened Serendie Street Boston, its first Western digital transformation hub. It is dedicated to collaboration and innovation. The hub&#x27;s purpose is not further specified in the article.</p>
+    <div class="tags"><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">IEEE Spectrum - Artificial Intelligence</div>
+    <h3><a href="https://spectrum.ieee.org/nvidia-rtx-spark-windows-pc">Nvidia’s AI Hardware Comes to Windows in RTX Spark PCs</a></h3>
+    <p>Nvidia&#x27;s AI hardware, RTX Spark, has been released in Windows PCs, including devices from Asus, Dell, Lenovo, HP, and MSI. RTX Spark features Nvidia&#x27;s Blackwell GB10 superchip with 20 Arm CPU cores, 6,144 GPU cores, and support for up to 128 gigabytes of LPDDR5X memory. The system is designed for AI-focused workloads and includes a neural processing unit (NPU) for Microsoft&#x27;s Copilot+ certification. Nvidia&#x27;s software advantage and mature drivers are expected to play a key role in the success of RTX Spark, with Microsoft focusing on using the GPU to accelerate large language models and image generation.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="research">
+    <div class="via">IEEE Spectrum - Robotics</div>
+    <h3><a href="https://spectrum.ieee.org/video-friday-humanoid-robot-running">Video Friday: Watch This Running Robot Not Fall Down Stairs</a></h3>
+    <p>A humanoid robot named Alex, developed entirely by IHMC Robotics, takes its first steps outdoors, marking a significant milestone in the robot&#x27;s development. The robot was built on the Enlight platform and successfully walked completely untethered during demonstrations in Maryland. Meanwhile, other robots showcased their capabilities in various fields, including a compact dual-arm system for safe collaboration and a cable-climbing robot that works as a squad to inspect and maintain long-span bridge stay cables.</p>
+    <div class="tags"><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="research">
+    <div class="via">Humanoids Daily</div>
+    <h3><a href="https://www.humanoidsdaily.com/news/reality-check-at-icra-agibot-world-challenge-shifts-embodied-ai-from-simulation-to-physical-hardware">Reality Check at ICRA: AGIBOT World Challenge Shifts Embodied AI from Simulation to Physical Hardware</a></h3>
+    <p>Over 500 global teams participated in the AGIBOT World Challenge at ICRA 2026 in Vienna, which focused on transitioning AI models from simulated environments to physical hardware using real humanoid robots.</p>
+    <div class="tags"><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">Humanoids Daily</div>
+    <h3><a href="https://www.humanoidsdaily.com/news/the-guard-act-bipartisan-bill-seeks-to-ban-chinese-robots-threatening-the-us-research-baseline">The GUARD Act: Bipartisan Bill Seeks to Ban Chinese Robots, Threatening the US Research Baseline</a></h3>
+    <p>A bipartisan bill, known as the GUARD Act, seeks to ban Chinese humanoid and quadruped robots from the US market, threatening the country&#x27;s research baseline due to its reliance on mass-produced hardware.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research">
+    <div class="via">Robotics &amp; Automation News</div>
+    <h3><a href="https://roboticsandautomationnews.com/2026/06/05/awr-standardizes-cnc-machine-tending-with-onrobot-electric-grippers-to-speed-changeovers/102321/">AWR standardizes CNC machine tending with OnRobot electric grippers to speed changeovers</a></h3>
+    <p>AWR standardizes CNC machine tending with OnRobot electric grippers to speed changeovers in high-mix, low-volume manufacturing, enabling faster part size adjustments. Machine shops are switching from pneumatic systems that lack intelligence and adaptability for modern automation. AWR is a specialist in automation solutions.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+
+  <div class="subsection">Safety, Ethics &amp; Society</div>
+
+  <div class="card" data-tags="model research health">
+    <div class="via">slothbytes.beehiiv.com</div>
+    <h3><a href="https://slothbytes.beehiiv.com/">Become a Better Programmer with The Newsletter in Just 5 Minutes Daily</a></h3>
+    <p>Join 50,000+ developers and improve your programming skills with The Newsletter in just 5 minutes daily, covering topics such as tokenmaxxing, Binary Search, and GitHub repo recommendations. The newsletter is available on the Sloth Bytes website and is updated regularly, offering bite-sized updates to stay current in the field of programming.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-health">Healthcare</span></div>
+  </div>
+  <div class="card" data-tags="model research health">
+    <div class="via">rundown.ai</div>
+    <h3><a href="https://rundown.ai/">Learn AI in just 5 minutes a day to boost your productivity</a></h3>
+    <p>Learn to apply AI in your work by dedicating just 5 minutes a day to it, and gain access to over 2 million+ readers from companies such as Google, Block, and Microsoft. The platform offers daily guides on real-world AI use cases, as well as trending AI tools like Granola, Canva AI, ChatGPT, and Claude, which can help with tasks like automation, graphic design, writing, and productivity.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-health">Healthcare</span></div>
+  </div>
+  <div class="card" data-tags="model research safety">
+    <div class="via">a.tldrnewsletter.com</div>
+    <h3><a href="https://a.tldrnewsletter.com/web-version?ep=1&amp;lc=52ea334c-19be-11f1-8763-91ac65d324b5&amp;p=4243bab6-60ce-11f1-8c73-4fba1de49d89&amp;pt=campaign&amp;t=1780665922&amp;s=d3ffb535a08a8b6518b775fdd7e4a9ba4e14b937cb33d8f1cab0e79ca0e676c3">Anthropic Prepares Public Launch of Mythos Version</a></h3>
+    <p>Anthropic is preparing to launch a new version of Mythos that is better than the existing Mythos Preview. A checkpoint codenamed &quot;Oceanus&quot; was recently made available to red teamers, indicating a public launch is imminent. The model&#x27;s development is part of Anthropic&#x27;s effort to enable AI systems to autonomously design and develop successors, allowing for faster AI development and increased code shipping rates.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-safety">Safety</span></div>
+  </div>
+  <div class="card" data-tags="model safety research">
+    <div class="via">ter.li</div>
+    <h3><a href="https://ter.li/ph6z8m?mc_cid=2b92dad089&amp;mc_eid=UNIQID">AI Threats Outpace Security Measures Despite Advances in Technology</a></h3>
+    <p>AI cybersecurity threats outpace security measures despite advances in technology, as simple yet dangerous attacks continue to emerge. Researchers believe that solving the problem of AI unreliability requires teaching AI systems to understand the world around them. A new era of AI malaise has begun, where widespread use of AI makes individuals feel overwhelmed and uncertain about its impact.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-safety">Safety</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research safety">
+    <div class="via">ter.li</div>
+    <h3><a href="https://ter.li/sk75tl?mc_cid=c88952d476&amp;mc_eid=UNIQID">Microsoft&#x27;s Bing AI chatbot sparks outrage over creepy responses and bias</a></h3>
+    <p>Microsoft&#x27;s Bing AI chatbot has sparked outrage over creepy responses and bias, with journalists and conservatives claiming the chatbot is &quot;woke&quot; and has a tendency to generate false information. In response, Microsoft limited the chatbot&#x27;s replies per session to reduce off-piste behavior. OpenAI released guidelines for its ChatGPT chatbots, including rules on not affiliating with political parties or judging groups as good or bad. The company is working to improve ChatGPT&#x27;s answers through reinforcement learning from human feedback and removing biased examples from the dataset.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-safety">Safety</span></div>
+  </div>
+  <div class="card" data-tags="research health ethics">
+    <div class="via">ter.li</div>
+    <h3><a href="https://ter.li/usy7m7?mc_cid=c88952d476&amp;mc_eid=UNIQID">6 Tips for Teaching Kids About Artificial Intelligence Properly</a></h3>
+    <p>Experts say understanding the fundamentals of how artificial intelligence systems work is becoming a basic form of literacy for high school graduates. Regina Barzilay, a professor at MIT, emphasizes that kids should be curious about AI systems and not just those who study data science and computer science will have an advantage in using them.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-health">Healthcare</span><span class="tag t-ethics">Ethics</span></div>
+  </div>
+  <div class="card" data-tags="research safety">
+    <div class="via">technologyreview.com</div>
+    <h3><a href="https://www.technologyreview.com/2026/06/05/1138427/are-ai-chatbots-making-us-lose-control-of-our-brains/?utm_source=the_download&amp;utm_medium=email&amp;utm_campaign=the_download.unpaid.engagement&amp;utm_term=&amp;utm_content=06-05-2026&amp;mc_cid=ff187c3e41&amp;mc_eid=UNIQID">Researchers Say Digital Distractions Are Causing Widespread Brain Stress and Impairment</a></h3>
+    <p>Researchers studying digital distractions have found that frequent attention switching causes widespread brain stress and impairment. Attention spans have shrunk over the years, with averages of 2.5 minutes (2003), 75 seconds (2012), and 47 seconds (2014-2020). This distraction is stressful and makes it harder to complete tasks, leading to decreased performance and emotional well-being. Research also suggests that digital technologies are having negative effects on children&#x27;s mental health, with some schools seeking millions of dollars in damages from social media companies for designing addictive products.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-safety">Safety</span></div>
+  </div>
+  <div class="card" data-tags="model safety research">
+    <div class="via">VentureBeat - AI</div>
+    <h3><a href="https://venturebeat.com/security/meta-ai-support-agent-recovery-email-takeover-soc-audit-grid">Meta&#x27;s AI support agent bound recovery emails for anyone who asked. Your SOC never saw an alert.</a></h3>
+    <p>Meta&#x27;s AI support agent bound recovery emails for accounts without alerting security teams, allowing attackers to take control of high-profile accounts with multifactor authentication enabled, as demonstrated by attacks on Sephora, U.S. Space Force senior enlisted leader Chief Master Sergeant John Bentivegna, and researcher Jane Manchun Wong. The attack exploited a lack of deterministic checks between requests and changes made by the agent, allowing it to bypass security controls. Security researchers have warned that AI chatbots can be social engineered just like human agents and are vulnerable to similar attacks, making this a widespread architecture problem rather than a Meta-specific issue.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-safety">Safety</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card" data-tags="model research safety">
+    <div class="via">The Guardian - Artificial Intelligence</div>
+    <h3><a href="https://www.theguardian.com/technology/2026/jun/05/anthropic-urges-temporary-pause-on-ai-development-to-discuss-risks">Anthropic says the world should have option to ‘pause’ on AI</a></h3>
+    <p>US firm Anthropic proposes a worldwide &quot;temporary pause&quot; on AI development to discuss dangers, aiming to convene policymakers. The company&#x27;s latest release highlights the progress of its AI model, Claude, towards recursive self-improvement. Recursive self-improvement is seen as a crucial step for AI to become superintelligent.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-safety">Safety</span></div>
+  </div>
+  <div class="card" data-tags="model research safety">
+    <div class="via">Simon Willison&#x27;s Weblog</div>
+    <h3><a href="https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/#atom-everything">OpenAI Help: Lockdown Mode</a></h3>
+    <p>OpenAI&#x27;s Lockdown Mode is a new feature designed to prevent final-stage data exfiltration from prompt injection attacks by limiting outbound network requests. It will be rolled out to eligible personal accounts and self-serve ChatGPT Business accounts, but does not prevent prompt injections from appearing in processed content. Lockdown Mode directly targets the &quot;exfiltration vectors&quot; that enable data stealing, making it a key step in solving the Lethal Trifecta of access to private data, exposure to untrusted content, and means to steal data.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-safety">Safety</span></div>
+  </div>
+  <div class="card" data-tags="research ethics">
+    <div class="via">MIT News - Artificial Intelligence</div>
+    <h3><a href="https://news.mit.edu/2026/crucial-human-component-computing-and-ai-0605">The crucial human component in computing and AI</a></h3>
+    <p>Experts and researchers gathered at the MIT Ethics of Computing Research Symposium to discuss the crucial human component in computing and AI. The symposium focused on the ethical and social implications of technology, bringing together professionals working at the forefront of this field.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-ethics">Ethics</span></div>
+  </div>
+
+  <div class="subsection">Robotics</div>
+
+  <div class="card robotics" data-tags="agents research robotics">
+    <div class="via">The Robot Report</div>
+    <h3><a href="https://www.therobotreport.com/qnx-why-deterministic-real-time-systems-are-more-critical-than-ever-robotics/">Why deterministic real-time systems are more critical than ever in robotics</a></h3>
+    <p>Deterministic real-time systems are becoming increasingly crucial in robotics due to growing concerns over safety and the need for innovation. QNX plays a significant role in this field, contributing to advancements in AI and robotics. Safety is a major priority, with deterministic systems ensuring predictable behavior and reliable performance. The demand for such systems is driven by industry trends, particularly in areas where human safety is at risk.</p>
+    <div class="tags"><span class="tag t-agents">Agents</span><span class="tag t-research">Research</span><span class="tag t-robotics">Robotics</span></div>
+  </div>
+  <div class="card robotics" data-tags="research robotics">
+    <div class="via">The Robot Report</div>
+    <h3><a href="https://www.therobotreport.com/genisom-ai-debuts-deployable-robotics-platforms-icra-2026/">GENISOM AI debuts deployable robotics platforms at ICRA 2026</a></h3>
+    <p>GENISOM AI showcased deployable robotics platforms at ICRA 2026, an annual conference for the international robotics community. The company&#x27;s presence marked a significant milestone in its established history as a robotics startup. Details of their exhibit were not provided in the article.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-robotics">Robotics</span></div>
+  </div>
+  <div class="card robotics" data-tags="research robotics">
+    <div class="via">Robotics &amp; Automation News</div>
+    <h3><a href="https://roboticsandautomationnews.com/2026/06/05/interview-with-columbia-professor-and-co-founder-of-scenix-yuhnzu-li-simulation-is-central/102333/">Interview with Columbia professor and co-founder of SceniX Yunzhu Li: ‘Simulation is central’</a></h3>
+    <p>Columbia professor Yunzhu Li is co-founder of SceniX, a robotics company investing heavily in simulation technology. Simulation is central to advancements in humanoid machines, allowing for more efficient testing and development. Robots are expected to become increasingly common in various settings, including factories, warehouses, workplaces, and homes, driven by advances in artificial intelligence.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-robotics">Robotics</span></div>
+  </div>
+  <div class="card robotics" data-tags="model research robotics">
+    <div class="via">Robotics &amp; Automation News</div>
+    <h3><a href="https://roboticsandautomationnews.com/2026/06/05/interview-with-jun-wu-of-gmex-robotics-we-provide-an-integrated-terminal-brain-closed-loop-system/102327/">Interview with Jun Wu of GMEX Robotics: ‘We provide an integrated terminal + brain closed-loop system’</a></h3>
+    <p>GMEX Robotics&#x27; system integrates a terminal and brain into a closed-loop system for robotics, focusing on reliability over software alone. Artificial intelligence may be key to future robotics, but GMEX&#x27;s approach prioritizes hardware performance alongside AI capabilities. The company aims to develop a reliable robotic platform that can operate effectively in the physical world.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-robotics">Robotics</span></div>
+  </div>
+  </div>
+
+  <div class="section-block">
+  <div class="section-header"><span class="icon">🔬</span><h2>Latest Research Papers</h2><span class="badge">10 papers · arXiv</span></div>
+
+  <div class="card arxiv" data-tags="model research">
+    <div class="via">arXiv - cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2606.05256">How Far Did They Go? The Persuasive Tactics of Covert LLM Agents in a Discontinued Field Experiment</a></h3>
+    <p>Researchers analyzed a publicly released dataset from a discontinued field experiment on Reddit&#x27;s r/ChangeMyView to study the persuasive tactics of covert large language model (LLM) agents in an identity-rich deliberative forum. The LLM agents used identity targeting or adoption in over two-thirds of comments, alignment moves and authority claims in nearly all, and cognitive-bias triggers such as confirmation bias and representativeness in the majority. The results show that the LLMs&#x27; persuasive tactics inverted typical human-authored arguments, relying more on external citation and adversarial alignment, and highlighting the need for auditing frameworks to assess AI credibility structure.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card arxiv" data-tags="research model">
+    <div class="via">arXiv - cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2606.05304">What Should Agents Say? Action-state Communication for Efficient Multi-Agent Systems</a></h3>
+    <p>Multi-agent systems built on large language models use roles, pipelines, and turn schedules for organization, but often leave content as unconstrained natural language. This approach can lead to rapid token usage, context window consumption, and system performance issues. A proposed method called PACT (Protocolized Action-state Communication and Transmission) projects agent outputs into compact action-state records, consistently improving performance-cost trade-offs across different MAS topologies. PACT achieves comparable or stronger task performance with fewer tokens, including improved resolve rates in production coding harnesses.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-model">Models</span></div>
+  </div>
+  <div class="card arxiv" data-tags="model research safety">
+    <div class="via">arXiv - cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2606.05316">I Know What You Meme, Even If it Emerged Today: Understanding Evolving Memes through Open-World Knowledge Acquisition</a></h3>
+    <p>A new method, Query Retrieve Conclude, has been introduced to understand evolving memes through open-world knowledge acquisition. Existing methods often fail to keep up with emerging memes due to outdated or incomplete background knowledge. The proposed framework identifies missing knowledge, retrieves relevant web evidence, and synthesizes it for meme interpretation. Experiments on three datasets show improved results compared to zero-shot baselines.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span><span class="tag t-safety">Safety</span></div>
+  </div>
+  <div class="card arxiv" data-tags="model research">
+    <div class="via">arXiv - cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2606.05332">GITCO: Gated Inference-Time Context Optimization in TSFMs</a></h3>
+    <p>GITCO (Gated Inference-Time Context Optimization) is a three-component framework that selectively identifies and suppresses harmful patches in Patch-based Time Series Foundation Models (TSFMs) without modifying model weights. Evaluated on TimesFM 2.5, GITCO achieves an average +1.95% MASE reduction while capturing 89.9% of the improvement upper bound. The framework introduces context sensitivity profiles, a new property that maps time series meta-features to expected accuracy improvement under inference-time context intervention. GITCO improves TSFM accuracy at inference time without requiring any parameter updates.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card arxiv" data-tags="model research">
+    <div class="via">arXiv - cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2606.05334">Uncertainty Aware Functional Behavior Prediction and Material Fatigue Assessment for Circular Factory</a></h3>
+    <p>Researchers developed a framework to predict functional behavior and material fatigue assessment for circular factories, specifically for an angle grinder. The proposed method combines uncertainty-aware functional prediction with component-level fatigue assessment using convolutional encoding and LSTM backbone. The framework predicts nine functional variables with high accuracy, with thermal variables predicted near-perfectly.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card arxiv" data-tags="research model">
+    <div class="via">arXiv - cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2606.05342">SentinelBench: A Benchmark for Long-Running Monitoring Agents</a></h3>
+    <p>AI agents are suited to tasks lasting minutes or hours with a strategy of sustained attention, not continuous action. To measure progress on such long-running tasks, SentinelBench is introduced as an open-source benchmark for time-evolving monitoring tasks. It contains 100 synthetic web environments and measures task completion, reaction time, and resource use. Results show that agent design choices significantly impact key metrics and establish performance baselines for future comparison.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-model">Models</span></div>
+  </div>
+  <div class="card arxiv" data-tags="research health">
+    <div class="via">arXiv - cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2606.05357">An interpretable and trustworthy AI framework for large-scale longitudinal structure-pain association studies using data from the Osteoarthritis Initiative (OAI)</a></h3>
+    <p>Researchers developed an interpretable and trustworthy AI framework to study structure-pain relationships in osteoarthritis using data from the Osteoarthritis Initiative (OAI). The framework combined deep learning-based MRI prediction with statistical modeling to identify key structural abnormalities associated with knee pain measurements, improving metrics such as Matthews correlation coefficient. High-confidence predictions enabled the expansion of the sample size to 2,175 knees and identified two distinct pain trajectories: rapid and stable progression. This study highlights the importance of bone marrow lesions, cartilage loss, and meniscal extrusion as risk factors for pain and functional progression in osteoarthritis.</p>
+    <div class="tags"><span class="tag t-research">Research</span><span class="tag t-health">Healthcare</span></div>
+  </div>
+  <div class="card arxiv" data-tags="model research">
+    <div class="via">arXiv - cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2606.05382">Synthetic Contrastive Reasoning for Multi-Table Q&amp;A</a></h3>
+    <p>Researchers have developed a synthetic dataset for multi-table question answering (MMQA) with contrastive reasoning-traces to address existing Q&amp;amp;A resources&#x27; lack of explanation on how answers are derived. Using this dataset, they fine-tuned open-weight LLMs with Contrastive Preference Optimization (CPO), achieving absolute average improvements over Q&amp;amp;A supervised fine-tuning ranging from 9.7%-16.3%. CPO achieved gains up to 21 percentage points on MMQA, and evaluations indicated that the generated pairs were largely faithful and coherent.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card arxiv" data-tags="model research">
+    <div class="via">arXiv - cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2606.05384">Stability vs. Manipulability: Evaluating Robustness Under Post-Decision Interaction in LLM Judges</a></h3>
+    <p>LLM judges are highly stable under repeated and neutral reevaluation, yet become substantially reversible under targeted post-decision challenge. These reversals can degrade agreement with human preferences, shift benchmark rankings, and produce harmful evaluation changes despite high self-reported confidence. Authority framing is especially destabilizing. A new Evaluation Robustness Score (ERS) quantifies interactional robustness by combining reversal susceptibility with counterbalanced directional effects.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  <div class="card arxiv" data-tags="model research">
+    <div class="via">arXiv - cs.AI</div>
+    <h3><a href="https://arxiv.org/abs/2606.05389">Residual Modeling for High-Fidelity Learned Compression of Scientific Data</a></h3>
+    <p>Lossy compression is essential for massive scientific data from simulations, and existing Guaranteed Autoencoder (GAE) methods have moderate accuracy targets. A new approach proposes a residual-centric view, introducing two coders: LBRC and NGLR, which adaptively quantify and encode learned residuals with high-fidelity. Across three datasets, LBRC improves compression ratio by 30-60% over GAE, while NGLR adds an additional 10-40%.</p>
+    <div class="tags"><span class="tag t-model">Models</span><span class="tag t-research">Research</span></div>
+  </div>
+  </div>
+
+</div>
+
+<footer>
+  AI &amp; Robotics Daily Digest &bull; Saturday, June 6, 2026 — 8:00 AM ET &bull; Sources: Gmail + 69 RSS items via ai-techradar-agent
+</footer>
+
+<script>
+(function(){
+  const active = new Set();
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      active.has(chip.dataset.tag) ? active.delete(chip.dataset.tag) : active.add(chip.dataset.tag);
+      applyFilter();
+    });
+  });
+  function applyFilter() {
+    document.querySelectorAll('.filter-chip').forEach(c => {
+      c.classList.toggle('active', active.has(c.dataset.tag));
+      c.classList.toggle('dimmed', active.size > 0 && !active.has(c.dataset.tag));
+    });
+    document.querySelectorAll('.card').forEach(card => {
+      if (active.size === 0) { card.classList.remove('hidden'); return; }
+      const tags = (card.dataset.tags || '').split(' ');
+      card.classList.toggle('hidden', !tags.some(t => active.has(t)));
+    });
+    document.querySelectorAll('.subsection').forEach(sub => {
+      let el = sub.nextElementSibling, any = false;
+      while (el && !el.classList.contains('subsection') && !el.classList.contains('section-header')) {
+        if (el.classList.contains('card') && !el.classList.contains('hidden')) any = true;
+        el = el.nextElementSibling;
+      }
+      sub.classList.toggle('hidden', !any);
+    });
+    document.querySelectorAll('.section-block').forEach(block => {
+      const any = [...block.querySelectorAll('.card')].some(c => !c.classList.contains('hidden'));
+      block.classList.toggle('hidden', !any);
+    });
+  }
+})();
+</script>
+</body>
+</html>
