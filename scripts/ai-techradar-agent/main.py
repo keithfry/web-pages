@@ -435,6 +435,9 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
 
     all_items = processed_emails + processed_links + processed_rss
 
+    _stop_models(log)
+    log("")
+
     # --- Step 5: Deduplicate ---
     log(f"── Step 5: Deduplicating {len(all_items)} items "
         f"({len(processed_emails)} newsletters + {len(processed_links)} linked + {len(processed_rss)} RSS) ──")
