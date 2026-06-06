@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""AI Techradar Agent — daily AI/Robotics digest generator.
+"""Techradar Agent — daily AI and/or Robotics digest generator.
 
 Usage:
-    uv run main.py                          # 24h lookback ending now, commit and push
+    uv run main.py                          # run both AI and Robotics (default)
+    uv run main.py --topic ai               # AI digest only
+    uv run main.py --topic robotics         # Robotics digest only
     uv run main.py --hours 48               # override lookback window
     uv run main.py --date 2026-04-13        # use a specific date (time defaults to now)
     uv run main.py --time 08:00             # cut off at 08:00 ET today
@@ -21,11 +23,15 @@ from zoneinfo import ZoneInfo
 
 ET = ZoneInfo("America/New_York")
 
-from config import LOOKBACK_HOURS, SUMMARIZE_MODEL, RANK_MODEL, DEDUP_MODEL, GENERATE_MODEL, LLM_WORKERS, URL_WORKERS, AD_DETECTOR_MODEL, AD_GATE_ENABLED, OUTPUT_DIR
+from config import (
+    LOOKBACK_HOURS, SUMMARIZE_MODEL, RANK_MODEL, DEDUP_MODEL, GENERATE_MODEL,
+    LLM_WORKERS, URL_WORKERS, AD_DETECTOR_MODEL, AD_GATE_ENABLED,
+    AI_OUTPUT_DIR, ROBOTICS_OUTPUT_DIR,
+)
 from feed_fetcher import fetch_all_feeds, is_arxiv
 from email_fetcher import fetch_emails
 from article_fetcher import fetch_article_text, source_name_from_url
-from llm import summarize, summarize_title, tag, classify_ai, classify_ad, deduplicate, llm_stats
+from llm import summarize, summarize_title, tag, classify_ai, classify_robotics, classify_ad, deduplicate, llm_stats
 from html_generator import generate_html
 from publisher import save_html, commit_and_push
 from enricher import enrich
@@ -42,7 +48,7 @@ _REPO_ROOT = Path(__file__).resolve().parents[2]
 def _open_log_file(date: datetime) -> io.TextIOWrapper:
     log_dir = _REPO_ROOT / "logs"
     log_dir.mkdir(parents=True, exist_ok=True)
-    log_path = log_dir / f"ai-techradar-agent-{date.strftime('%Y-%m-%d')}.log"
+    log_path = log_dir / f"techradar-agent-{date.strftime('%Y-%m-%d')}.log"
     return open(log_path, "a", buffering=1)
 
 
@@ -65,6 +71,13 @@ _AI_KEYWORDS = {
     "reinforcement learning", "transformer model", "diffusion model",
     "anthropic", "openai", "google deepmind", "nvidia ai", "nvidia cuda",
     "hugging face",
+}
+
+_ROBOTICS_KEYWORDS = {
+    "robot", "robotics", "drone", "uav", "uas", "autonomous vehicle",
+    "humanoid", "manipulation", "ros", "servo", "actuator", "end effector",
+    "sim-to-real", "embodied", "locomotion", "gripper", "lidar",
+    "autonomous systems", "physical ai", "boston dynamics", "spot",
 }
 
 # Patterns that strongly indicate promotional/advertisement content
@@ -103,17 +116,10 @@ def _is_advertisement(title: str, text: str) -> bool:
 
 
 def _is_webinar_summary(summary: str) -> bool:
-    """Return True if the summary is primarily about attending a webinar or promotional event.
-
-    Called after summarization so the LLM-generated text is checked, catching cases
-    where the raw feed body didn't trigger the pre-filter.
-    """
+    """Return True if the summary is primarily about attending a webinar or promotional event."""
     lowered = summary.lower()
-    # Must mention a webinar/event term at all
     if not any(phrase in lowered for phrase in _WEBINAR_PHRASES):
         return False
-    # Additionally require a call-to-action or registration signal — avoids dropping
-    # legitimate news articles that merely mention a conference in passing.
     cta_signals = {
         "register", "sign up", "sign-up", "rsvp", "attend", "join us",
         "reserve", "claim your", "save your seat", "free to attend",
@@ -122,7 +128,7 @@ def _is_webinar_summary(summary: str) -> bool:
     return any(signal in lowered for signal in cta_signals)
 
 
-def _process_one(idx: int, total: int, item: dict, source_type: str) -> dict | None:
+def _process_one(idx: int, total: int, item: dict, source_type: str, topic: str) -> dict | None:
     """Process a single item: classify, optionally derive title, summarize, tag.
     Returns enriched dict or None if the item should be dropped.
     Runs safely in a thread — all state is local.
@@ -151,26 +157,29 @@ def _process_one(idx: int, total: int, item: dict, source_type: str) -> dict | N
         log(f"    [{idx}] → skip (advertisement)")
         return None
 
-    # LLM ad gate — catches contextual ads the heuristic misses (referrals, lead-gen, newsletter CTAs)
+    # LLM ad gate — catches contextual ads the heuristic misses
     if AD_GATE_ENABLED:
         is_ad, ad_reason = classify_ad(title, existing_text[:1000], AD_DETECTOR_MODEL)
         if is_ad:
             log(f"    [{idx}] → skip (ad gate: {ad_reason})")
             return None
 
-    # Keyword pre-filter — avoid an LLM call for obvious AI content
+    # Topic keyword pre-filter — avoid LLM call for obvious matches
     lowered = (title + " " + existing_text).lower()
-    if not any(kw in lowered for kw in _AI_KEYWORDS):
-        log(f"    [{idx}] → classifying with LLM (no keywords matched)...")
-        if not classify_ai(title, existing_text[:500], SUMMARIZE_MODEL):
-            log(f"    [{idx}] → skip (not AI-related)")
+    topic_keywords = _AI_KEYWORDS if topic == "AI" else _ROBOTICS_KEYWORDS
+    classifier_fn = classify_ai if topic == "AI" else classify_robotics
+
+    if not any(kw in lowered for kw in topic_keywords):
+        log(f"    [{idx}] → classifying with LLM (no {topic} keywords matched)...")
+        if not classifier_fn(title, existing_text[:500], SUMMARIZE_MODEL):
+            log(f"    [{idx}] → skip (not {topic}-related)")
             return None
-        log(f"    [{idx}] → classified as AI-related")
+        log(f"    [{idx}] → classified as {topic}-related")
 
     log(f"    [{idx}] → summarizing...")
     summary_text = summarize(title, existing_text, SUMMARIZE_MODEL)
 
-    # Post-summarization webinar filter — drop if summary is primarily about attending an event
+    # Post-summarization webinar filter
     if _is_webinar_summary(summary_text):
         log(f"    [{idx}] → skip (webinar/promotional event)")
         return None
@@ -191,10 +200,8 @@ def _process_one(idx: int, total: int, item: dict, source_type: str) -> dict | N
     }
 
 
-def _process_items(raw_items: list[dict], source_type: str) -> list[dict]:
-    """Process all items in parallel using LLM_WORKERS threads.
-    Results are returned in original input order.
-    """
+def _process_items(raw_items: list[dict], source_type: str, topic: str) -> list[dict]:
+    """Process all items in parallel using LLM_WORKERS threads."""
     if not raw_items:
         return []
 
@@ -203,14 +210,13 @@ def _process_items(raw_items: list[dict], source_type: str) -> list[dict]:
 
     with ThreadPoolExecutor(max_workers=LLM_WORKERS) as executor:
         futures = {
-            executor.submit(_process_one, idx, total, item, source_type): idx
+            executor.submit(_process_one, idx, total, item, source_type, topic): idx
             for idx, item in enumerate(raw_items, 1)
         }
         for future in as_completed(futures):
             idx = futures[future]
             results[idx] = future.result()
 
-    # Reassemble in original order, dropping None (filtered) items
     return [results[i] for i in sorted(results) if results[i] is not None]
 
 
@@ -220,8 +226,6 @@ def _process_items(raw_items: list[dict], source_type: str) -> list[dict]:
 
 def _fetch_links_parallel(email_items: list[dict]) -> list[dict]:
     """Fetch all email links in parallel. Returns flat list of article dicts."""
-
-    # Build work list: (email_source, url)
     work = []
     for email in email_items:
         links = email.get("links", [])[:MAX_LINKS_PER_EMAIL]
@@ -270,7 +274,7 @@ def _stop_models(log_fn) -> None:
     import subprocess
     models = {SUMMARIZE_MODEL, RANK_MODEL, AD_DETECTOR_MODEL, GENERATE_MODEL}
     log_fn("")
-    log_fn("── Step 10: Stopping Ollama models ──")
+    log_fn("── Stopping Ollama models ──")
     for model in sorted(models):
         result = subprocess.run(["ollama", "stop", model], capture_output=True, text=True)
         if result.returncode == 0:
@@ -284,7 +288,9 @@ def _stop_models(log_fn) -> None:
 def main() -> None:
     global _log_file
 
-    parser = argparse.ArgumentParser(description="Generate the daily AI Techradar digest.")
+    parser = argparse.ArgumentParser(description="Generate the daily AI/Robotics Techradar digest.")
+    parser.add_argument("--topic", choices=["ai", "robotics", "both"], default="both",
+                        help="Which digest(s) to generate (default: both)")
     parser.add_argument("--hours", type=int, default=LOOKBACK_HOURS,
                         help=f"Lookback window in hours (default: {LOOKBACK_HOURS})")
     parser.add_argument("--date", type=str, default=None,
@@ -317,7 +323,6 @@ def main() -> None:
 
     now = datetime.now(ET)
 
-    # Build the as_of reference time from --date / --time if provided
     if args.date or args.time:
         ref_date = datetime.strptime(args.date, "%Y-%m-%d").date() if args.date else now.date()
         ref_time_str = args.time or now.strftime("%H:%M")
@@ -329,16 +334,34 @@ def main() -> None:
 
     _log_file = _open_log_file(as_of)
     try:
-        _run(args, as_of)
+        topics = ["AI", "Robotics"] if args.topic == "both" else [args.topic.upper() if args.topic == "ai" else "Robotics"]
+        # Normalise topic names
+        topics = []
+        if args.topic in ("ai", "both"):
+            topics.append("AI")
+        if args.topic in ("robotics", "both"):
+            topics.append("Robotics")
+
+        for topic in topics:
+            log(f"\n{'='*60}")
+            log(f"  TOPIC: {topic}")
+            log(f"{'='*60}")
+            _run_topic(args, as_of, topic)
+
     finally:
         _log_file.close()
         _log_file = None
 
 
-def _run(args: argparse.Namespace, as_of: datetime) -> None:
-    log(f"=== AI Techradar Agent ===")
+def _run_topic(args: argparse.Namespace, as_of: datetime, topic: str) -> None:
+    output_dir = AI_OUTPUT_DIR if topic == "AI" else ROBOTICS_OUTPUT_DIR
+    file_prefix = "ai-radar" if topic == "AI" else "robotics-radar"
+
+    log(f"=== Techradar Agent — {topic} ===")
     log(f"As-of:           {as_of.strftime('%Y-%m-%d %H:%M ET')}")
     log(f"Lookback:        {args.hours}h")
+    log(f"Topic:           {topic}")
+    log(f"Output dir:      {output_dir}")
     log(f"Summarize model: {SUMMARIZE_MODEL}")
     log(f"Rank model:      {RANK_MODEL}")
     log(f"Dedup model:     {DEDUP_MODEL}")
@@ -348,12 +371,11 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
     log(f"Dry run:         {args.dry_run}")
     log("")
 
-    # as_of in UTC for fetchers
     as_of_utc = as_of.astimezone(timezone.utc)
 
     # --- Podcast-only shortcut ---
     if args.podcast_only:
-        json_path = OUTPUT_DIR / f"ai-radar-{as_of.strftime('%Y-%m-%d')}.json"
+        json_path = output_dir / f"{file_prefix}-{as_of.strftime('%Y-%m-%d')}.json"
         if not json_path.exists():
             log(f"ERROR: no JSON found at {json_path} — run without --podcast-only first")
             return
@@ -363,7 +385,7 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
         enriched_data = _json.loads(json_path.read_text())
         log("── Generating podcast audio ──")
         try:
-            mp3_path, chap_path = generate_podcast(enriched_data, as_of, OUTPUT_DIR, log=log)
+            mp3_path, chap_path = generate_podcast(enriched_data, as_of, output_dir, log=log)
             log(f"  Podcast generated: {mp3_path.name}")
         except Exception as e:
             log(f"ERROR: podcast generation failed: {e}")
@@ -372,14 +394,14 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
         log("  Updated JSON with actual chapter times")
         if not args.dry_run:
             log("── Committing and pushing ──")
-            commit_and_push([mp3_path, chap_path, json_path], as_of, log=log)
+            commit_and_push([mp3_path, chap_path, json_path], as_of, topic=topic, log=log)
         else:
             log("Dry run — skipping commit.")
         return
 
     # --- Step 1: Fetch RSS feeds ---
-    log("── Step 1: Fetching RSS feeds ──")
-    rss_articles, rss_errors = fetch_all_feeds(args.hours, as_of=as_of_utc)
+    log(f"── Step 1: Fetching {topic} RSS feeds ──")
+    rss_articles, rss_errors = fetch_all_feeds(args.hours, as_of=as_of_utc, topic=topic)
     log(f"  {len(rss_articles)} articles fetched, {len(rss_errors)} feed errors")
     if rss_errors:
         for e in rss_errors:
@@ -406,12 +428,12 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
                 return
             raise
     else:
-        log("── Step 2: Gmail skipped (--no-email) ──")
+        log(f"── Step 2: Gmail skipped (--no-email) ──")
     log("")
 
     # --- Step 3: Process emails ---
-    log(f"── Step 3: Processing {len(email_items)} emails ({LLM_WORKERS} workers) ──")
-    processed_emails = _process_items(email_items, "email")
+    log(f"── Step 3: Processing {len(email_items)} emails ({LLM_WORKERS} workers) [{topic} filter] ──")
+    processed_emails = _process_items(email_items, "email", topic)
     log(f"  {len(processed_emails)}/{len(email_items)} emails kept")
     log("")
 
@@ -422,19 +444,20 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
     log("")
 
     # --- Step 3c: Process linked articles ---
-    log(f"── Step 3c: Processing {len(linked_articles)} linked articles ({LLM_WORKERS} workers) ──")
-    processed_links = _process_items(linked_articles, "rss")
+    log(f"── Step 3c: Processing {len(linked_articles)} linked articles ({LLM_WORKERS} workers) [{topic} filter] ──")
+    processed_links = _process_items(linked_articles, "rss", topic)
     log(f"  {len(processed_links)}/{len(linked_articles)} linked articles kept")
     log("")
 
     # --- Step 4: Process RSS articles ---
-    log(f"── Step 4: Processing {len(rss_articles)} RSS articles ({LLM_WORKERS} workers) ──")
-    processed_rss = _process_items(rss_articles, "rss")
+    log(f"── Step 4: Processing {len(rss_articles)} RSS articles ({LLM_WORKERS} workers) [{topic} filter] ──")
+    processed_rss = _process_items(rss_articles, "rss", topic)
     log(f"  {len(processed_rss)}/{len(rss_articles)} articles kept")
     log("")
 
     all_items = processed_emails + processed_links + processed_rss
 
+    # --- Pre-step 5: Release processing models to free VRAM for dedup ---
     _stop_models(log)
     log("")
 
@@ -447,7 +470,7 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
 
     # --- Step 6: Enrich — rank, audio scripts, chapter times, write JSON ---
     log(f"── Step 6: Enriching {len(all_items)} items ──")
-    json_path = OUTPUT_DIR / f"ai-radar-{as_of.strftime('%Y-%m-%d')}.json"
+    json_path = output_dir / f"{file_prefix}-{as_of.strftime('%Y-%m-%d')}.json"
     enriched_data = enrich(all_items, as_of, json_path, summarize_model=SUMMARIZE_MODEL, rank_model=RANK_MODEL, log=log)
     podcast_count = len([i for i in enriched_data["items"] if i.get("include_in_podcast")])
     log(f"  Enrichment complete — {podcast_count} podcast items")
@@ -482,7 +505,7 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
             return
         try:
             log("── Step 7b: Generating podcast audio ──")
-            mp3, chap_json = generate_podcast(enriched_data, as_of, OUTPUT_DIR, log=log)
+            mp3, chap_json = generate_podcast(enriched_data, as_of, output_dir, log=log)
             podcast_result.append((mp3, chap_json))
             log(f"  Podcast generated: {mp3.name}")
         except Exception as e:
@@ -496,7 +519,7 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
     t_html.join()
     t_pod.join()
 
-    # Re-write JSON with actual chapter times from TTS (podcast updates items in-place)
+    # Re-write JSON with actual chapter times from TTS
     if podcast_result:
         from enricher import write_enriched_json
         write_enriched_json(enriched_data, json_path)
@@ -512,7 +535,7 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
 
     # --- Step 8: Save ---
     log("── Step 8: Saving ──")
-    html_path = save_html(html, as_of)
+    html_path = save_html(html, as_of, output_dir=output_dir, prefix=file_prefix)
     log(f"  Saved HTML: {html_path}")
 
     out_paths = [html_path, json_path]
@@ -524,7 +547,7 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
         call_count, total_duration = llm_stats()
         log(f"LLM calls: {call_count}  total time: {total_duration:.3f}s")
         log("")
-        log("Dry run complete — skipping git commit and push.")
+        log(f"Dry run complete — skipping git commit and push.")
         log(f"Preview: open {html_path}")
         _stop_models(log)
         return
@@ -532,14 +555,14 @@ def _run(args: argparse.Namespace, as_of: datetime) -> None:
     # --- Step 9: Commit and push ---
     log("")
     log("── Step 9: Committing and pushing ──")
-    commit_and_push(out_paths, as_of, log=log)
+    commit_and_push(out_paths, as_of, topic=topic, log=log)
 
     call_count, total_duration = llm_stats()
     log(f"LLM calls: {call_count}  total time: {total_duration:.3f}s")
 
     # --- Step 10: Release Ollama models ---
     _stop_models(log)
-    log("Done.")
+    log(f"Done — {topic} digest complete.")
 
 
 if __name__ == "__main__":

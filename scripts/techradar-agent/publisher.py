@@ -5,23 +5,28 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 
-from config import REPO_ROOT, OUTPUT_DIR, GIT_USER_NAME, GIT_USER_EMAIL
+from config import REPO_ROOT, AI_OUTPUT_DIR, GIT_USER_NAME, GIT_USER_EMAIL
+
+# kept for any external callers that imported OUTPUT_DIR from publisher
+OUTPUT_DIR = AI_OUTPUT_DIR
 
 
-def save_html(html: str, date: datetime) -> Path:
-    """Write HTML to techradar/AI/ai-radar-YYYY-MM-DD.html and return the path."""
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    filename = f"ai-radar-{date.strftime('%Y-%m-%d')}.html"
-    out_path = OUTPUT_DIR / filename
+def save_html(html: str, date: datetime, output_dir: Path | None = None, prefix: str = "ai-radar") -> Path:
+    """Write HTML digest and return the path."""
+    out_dir = output_dir or AI_OUTPUT_DIR
+    out_dir.mkdir(parents=True, exist_ok=True)
+    filename = f"{prefix}-{date.strftime('%Y-%m-%d')}.html"
+    out_path = out_dir / filename
     out_path.write_text(html, encoding="utf-8")
     return out_path
 
 
-def save_json(data: dict, date: datetime) -> Path:
-    """Write enriched JSON to techradar/AI/ai-radar-YYYY-MM-DD.json."""
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    filename = f"ai-radar-{date.strftime('%Y-%m-%d')}.json"
-    out_path = OUTPUT_DIR / filename
+def save_json(data: dict, date: datetime, output_dir: Path | None = None, prefix: str = "ai-radar") -> Path:
+    """Write enriched JSON digest and return the path."""
+    out_dir = output_dir or AI_OUTPUT_DIR
+    out_dir.mkdir(parents=True, exist_ok=True)
+    filename = f"{prefix}-{date.strftime('%Y-%m-%d')}.json"
+    out_path = out_dir / filename
     out_path.write_text(json.dumps(data, indent=2, default=str), encoding="utf-8")
     return out_path
 
@@ -41,7 +46,7 @@ def _run(
     return result
 
 
-def commit_and_push(out_paths: Path | list[Path], date: datetime, log=print) -> None:
+def commit_and_push(out_paths: Path | list[Path], date: datetime, topic: str = "AI", log=print) -> None:
     """git pull --rebase, add all out_paths, commit, push."""
     if isinstance(out_paths, Path):
         out_paths = [out_paths]
@@ -50,7 +55,8 @@ def commit_and_push(out_paths: Path | list[Path], date: datetime, log=print) -> 
         log("  no paths to commit, skipping")
         return
 
-    commit_msg = f"Add AI radar for {date.strftime('%Y-%m-%d')}"
+    topic_label = topic.capitalize()
+    commit_msg = f"Add {topic_label} radar for {date.strftime('%Y-%m-%d')}"
 
     lock = REPO_ROOT / ".git" / "index.lock"
     if lock.exists():

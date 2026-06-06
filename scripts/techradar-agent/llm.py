@@ -154,6 +154,28 @@ def classify_ai(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> bool:
         return True
 
 
+def classify_robotics(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> bool:
+    """Return True if the content is robotics/automation/physical-AI related."""
+    prompt = (
+        "Is the following content specifically about robotics, autonomous systems, drones/UAVs, "
+        "physical AI, robot hardware, manipulation, navigation, human-robot interaction, "
+        "industrial automation, or embodied AI?\n\n"
+        "Answer YES only if the primary topic involves physical systems or robots operating in "
+        "the real world. Physical AI (e.g. robot learning, sim-to-real transfer) counts.\n\n"
+        "Answer NO for: pure software AI/LLMs with no physical component, data science, "
+        "NLP, image classification, policy/regulation, product sales, finance, travel, "
+        "or any AI topic not involving physical/embodied systems.\n\n"
+        'Answer with a JSON object: {"relevant": true} or {"relevant": false}.\n\n'
+        f"Title: {title}\n"
+        f"Content: {summary[:3000]}"
+    )
+    raw = _chat(prompt, model, json_mode=True)
+    try:
+        return bool(json.loads(_extract_json(raw)).get("relevant", False))
+    except (json.JSONDecodeError, AttributeError):
+        return True
+
+
 def classify_ad(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> tuple[bool, str]:
     """Return (is_ad, reason). Fails open — returns (False, 'parse error') on JSON failure."""
     prompt = (

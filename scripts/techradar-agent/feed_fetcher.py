@@ -15,7 +15,13 @@ import feedparser
 from config import FEEDS_CSV, LOOKBACK_HOURS, ARXIV_MAX_PAPERS
 
 
-def load_feeds(csv_path: Path) -> list[dict]:
+def load_feeds(csv_path: Path, topic: str = "AI") -> list[dict]:
+    """Load verified feeds filtered by topic category.
+
+    topic: "AI" includes rows with Category=AI or Category=Both.
+            "Robotics" includes rows with Category=Robotics or Category=Both.
+            "Both" includes all verified rows regardless of category.
+    """
     feeds = []
     with open(csv_path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -24,7 +30,10 @@ def load_feeds(csv_path: Path) -> list[dict]:
                 continue
             url = row.get("Feed URL", "").strip()
             source = row.get("Company / Source", "").strip()
-            if url and source:
+            if not url or not source:
+                continue
+            category = row.get("Category", "AI").strip()
+            if topic == "Both" or category == topic or category == "Both":
                 feeds.append({"source": source, "feed_url": url})
     return feeds
 
@@ -74,19 +83,19 @@ def is_arxiv(source: str) -> bool:
     return "arxiv" in source.lower()
 
 
-def fetch_all_feeds(hours: int = LOOKBACK_HOURS, as_of: datetime | None = None) -> tuple[list[dict], list[dict]]:
-    """Fetch all verified feeds.
+def fetch_all_feeds(hours: int = LOOKBACK_HOURS, as_of: datetime | None = None, topic: str = "AI") -> tuple[list[dict], list[dict]]:
+    """Fetch verified feeds for the given topic.
 
     Args:
         hours:  Lookback window in hours.
         as_of:  Upper bound for item publication time (defaults to now).
-                Items published after this time are excluded.
+        topic:  "AI", "Robotics", or "Both" — filters feeds by Category column.
 
     Returns:
         (articles, errors) where articles is a flat list of item dicts and
         errors is a list of {source, feed_url, error} dicts.
     """
-    feeds = load_feeds(FEEDS_CSV)
+    feeds = load_feeds(FEEDS_CSV, topic=topic)
     reference = as_of or datetime.now(timezone.utc)
     cutoff = reference - timedelta(hours=hours)
 

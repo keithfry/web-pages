@@ -32,7 +32,7 @@ Server endpoints:
 
 ## RSS Feed Management
 
-Feed list: `data/ai-rss-feeds.csv` (columns: Company/Source, Verified, Feed URL, Summary). Only rows with `Verified = Y` are fetched by the server.
+Feed list: `data/ai-rss-feeds.csv` (columns: Company/Source, Verified, Feed URL, Summary, Category). Only rows with `Verified = Y` are fetched. `Category` is `AI`, `Robotics`, or `Both` — controls which digest each feed appears in.
 
 ## Techradar Agent Skill
 
@@ -41,20 +41,20 @@ Use `Skill(techradar-agent)` to run the daily AI/Robotics digest pipeline. The s
 The agent runs as a standalone Python script (no local server required):
 
 ```bash
-cd scripts/ai-techradar-agent
+cd scripts/techradar-agent
 uv run main.py --date YYYY-MM-DD --time HH:MM
 ```
 
-Default invocation uses today's date at 08:00 ET. Supports `--dry-run`, `--no-email`, and `--hours` overrides.
+Default invocation uses today's date at 08:00 ET and runs **both** AI and Robotics digests. Use `--topic ai` or `--topic robotics` to run a single topic. Supports `--dry-run`, `--no-email`, and `--hours` overrides.
 
-Pipeline steps:
-1. Fetches RSS feeds from `data/ai-rss-feeds.csv` (Verified=Y rows)
-2. Gathers AI-related emails from `kfopenclaw@gmail.com` via Gmail API
+Pipeline steps (run once per topic):
+1. Fetches RSS feeds filtered by `Category` column in `data/ai-rss-feeds.csv`
+2. Gathers emails from `kfopenclaw@gmail.com` via Gmail API (filtered by topic classifier)
 3. Classifies, summarizes, and deduplicates all content via local Ollama models
 4. Generates a styled HTML digest
-5. Saves to `techradar/AI/ai-radar-YYYY-MM-DD.html` and commits/pushes
+5. Saves to `techradar/AI/ai-radar-YYYY-MM-DD.html` or `techradar/Robotics/robotics-radar-YYYY-MM-DD.html` and commits/pushes
 
-Output log: `logs/ai-techradar-agent-YYYY-MM-DD.log`
+Output log: `logs/techradar-agent-YYYY-MM-DD.log`
 
 ## GitHub Actions Workflows
 

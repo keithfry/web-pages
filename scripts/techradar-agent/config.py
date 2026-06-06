@@ -35,9 +35,11 @@ GMAIL_TOKEN: Path = Path(
 GMAIL_SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 
 # --- Paths ---
-# Repo root is 2 levels up from this file (scripts/ai-techradar-agent/ → project root)
+# Repo root is 2 levels up from this file (scripts/techradar-agent/ → project root)
 REPO_ROOT: Path = Path(__file__).parent.parent.parent
-OUTPUT_DIR: Path = REPO_ROOT / "techradar" / "AI"
+AI_OUTPUT_DIR: Path = REPO_ROOT / "techradar" / "AI"
+ROBOTICS_OUTPUT_DIR: Path = REPO_ROOT / "techradar" / "Robotics"
+OUTPUT_DIR: Path = AI_OUTPUT_DIR  # backward-compat alias
 FEEDS_CSV: Path = REPO_ROOT / "data" / "ai-rss-feeds.csv"
 
 # --- Git identity (matches existing server.py convention) ---
