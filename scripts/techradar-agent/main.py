@@ -335,26 +335,63 @@ def main() -> None:
 
     _log_file = _open_log_file(as_of)
     try:
-        topics = ["AI", "Robotics"] if args.topic == "both" else [args.topic.upper() if args.topic == "ai" else "Robotics"]
-        # Normalise topic names
         topics = []
         if args.topic in ("ai", "both"):
             topics.append("AI")
         if args.topic in ("robotics", "both"):
             topics.append("Robotics")
 
+        as_of_utc = as_of.astimezone(timezone.utc)
+
+        # Fetch emails once — shared across all topics; each topic classifies independently
+        email_items: list[dict] = []
+        linked_articles: list[dict] = []
+        if not args.no_email and not args.podcast_only:
+            log("── Fetching Gmail (shared across topics) ──")
+            try:
+                email_items = fetch_emails(args.hours, as_of=as_of_utc)
+                log(f"  {len(email_items)} emails fetched")
+                for i, e in enumerate(email_items, 1):
+                    log(f"  {i}. [{e['source']}] {e['title'][:70]}")
+                log("")
+                log(f"── Fetching email links ({URL_WORKERS} workers) ──")
+                linked_articles = _fetch_links_parallel(email_items)
+                log(f"  {len(linked_articles)} linked articles fetched")
+            except FileNotFoundError as e:
+                log(f"  WARNING: {e}")
+                log("  Continuing without email. Run with --no-email to suppress.")
+            except Exception as e:
+                from google.auth.exceptions import RefreshError
+                if isinstance(e, RefreshError):
+                    log("  Gmail token is invalid or expired.")
+                    log("  Run: uv run main.py --refresh-token")
+                    return
+                raise
+        elif not args.podcast_only:
+            log("── Gmail skipped (--no-email) ──")
+        log("")
+
         for topic in topics:
             log(f"\n{'='*60}")
             log(f"  TOPIC: {topic}")
             log(f"{'='*60}")
-            _run_topic(args, as_of, topic)
+            _run_topic(args, as_of, topic, email_items=email_items, linked_articles=linked_articles)
 
     finally:
         _log_file.close()
         _log_file = None
 
 
-def _run_topic(args: argparse.Namespace, as_of: datetime, topic: str) -> None:
+def _run_topic(
+    args: argparse.Namespace,
+    as_of: datetime,
+    topic: str,
+    email_items: list[dict] | None = None,
+    linked_articles: list[dict] | None = None,
+) -> None:
+    email_items = email_items or []
+    linked_articles = linked_articles or []
+
     output_dir = AI_OUTPUT_DIR if topic == "AI" else ROBOTICS_OUTPUT_DIR
     file_prefix = "ai-radar" if topic == "AI" else "robotics-radar"
 
@@ -409,43 +446,14 @@ def _run_topic(args: argparse.Namespace, as_of: datetime, topic: str) -> None:
             log(f"  ERROR {e['source']}: {e['error']}")
     log("")
 
-    # --- Step 2: Fetch emails ---
-    email_items: list[dict] = []
-    if not args.no_email:
-        log("── Step 2: Fetching Gmail ──")
-        try:
-            email_items = fetch_emails(args.hours, as_of=as_of_utc)
-            log(f"  {len(email_items)} emails fetched")
-            for i, e in enumerate(email_items, 1):
-                log(f"  {i}. [{e['source']}] {e['title'][:70]}")
-        except FileNotFoundError as e:
-            log(f"  WARNING: {e}")
-            log("  Continuing without email. Run with --no-email to suppress.")
-        except Exception as e:
-            from google.auth.exceptions import RefreshError
-            if isinstance(e, RefreshError):
-                log("  Gmail token is invalid or expired.")
-                log("  Run: uv run main.py --refresh-token")
-                return
-            raise
-    else:
-        log(f"── Step 2: Gmail skipped (--no-email) ──")
-    log("")
-
-    # --- Step 3: Process emails ---
-    log(f"── Step 3: Processing {len(email_items)} emails ({LLM_WORKERS} workers) [{topic} filter] ──")
+    # --- Step 2: Process emails (fetched once in main, classified per topic) ---
+    log(f"── Step 2: Processing {len(email_items)} emails ({LLM_WORKERS} workers) [{topic} filter] ──")
     processed_emails = _process_items(email_items, "email", topic)
     log(f"  {len(processed_emails)}/{len(email_items)} emails kept")
     log("")
 
-    # --- Step 3b: Fetch links from emails (parallel HTTP) ---
-    log(f"── Step 3b: Fetching links from emails ({URL_WORKERS} workers) ──")
-    linked_articles = _fetch_links_parallel(email_items)
-    log(f"  {len(linked_articles)} linked articles fetched")
-    log("")
-
-    # --- Step 3c: Process linked articles ---
-    log(f"── Step 3c: Processing {len(linked_articles)} linked articles ({LLM_WORKERS} workers) [{topic} filter] ──")
+    # --- Step 3: Process linked articles (fetched once in main, classified per topic) ---
+    log(f"── Step 3: Processing {len(linked_articles)} linked articles ({LLM_WORKERS} workers) [{topic} filter] ──")
     processed_links = _process_items(linked_articles, "rss", topic)
     log(f"  {len(processed_links)}/{len(linked_articles)} linked articles kept")
     log("")
