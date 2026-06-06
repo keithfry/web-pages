@@ -7,19 +7,19 @@
     <link>https://keithfry.github.io/web-pages/techradar/Robotics/</link>
     <description>Daily Robotics news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jun 2026 14:29:56 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 14:30:04 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
   <item>
-    <title>June 6, 2026 : Physical AI Meets Real Laws</title>
+    <title>June 6, 2026 : Embodied AI Real World</title>
     <pubDate>Sat, 06 Jun 2026 08:00:00 +0000</pubDate>
-    <enclosure url="https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-06.mp3" type="audio/mpeg" length="3858849"/>
-    <itunes:duration>00:08:01</itunes:duration>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-06.mp3" type="audio/mpeg" length="4342429"/>
+    <itunes:duration>00:09:01</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-06.mp3</guid>
-    <description>Robotics Radar for June 6, 2026. 8 minutes of news.</description>
+    <description>Robotics Radar for June 6, 2026. 9 minutes of news.</description>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-06.chapters.json" type="application/json+chapters"/>
   </item>
   </channel>
