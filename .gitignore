@@ -1,11 +1,11 @@
 .DS_Store
 resume/certifications/images/images.json
 logs/
-scripts/ai-techradar-agent/credentials.json
-scripts/ai-techradar-agent/token.json
-scripts/ai-techradar-agent/.env
-scripts/ai-techradar-agent/.venv/
-scripts/ai-techradar-agent/uv.lock
+scripts/techradar-agent/credentials.json
+scripts/techradar-agent/token.json
+scripts/techradar-agent/.env
+scripts/techradar-agent/.venv/
+scripts/techradar-agent/uv.lock
 **/__pycache__/
 **/*.pyc
 worktrees/
