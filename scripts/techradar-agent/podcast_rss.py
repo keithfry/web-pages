@@ -94,13 +94,17 @@ def build_rss_feed(
     items_block = "\n".join(items_xml)
     now = format_datetime(datetime.now(timezone.utc))
 
+    feed_url = f"{base_url}/podcast.xml"
+
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
   xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-  xmlns:podcast="https://podcastindex.org/namespace/1.0">
+  xmlns:podcast="https://podcastindex.org/namespace/1.0"
+  xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{topic_label} Daily Radar</title>
     <link>{base_url}/</link>
+    <atom:link href="{feed_url}" rel="self" type="application/rss+xml"/>
     <description>Daily {topic_label} news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
     <lastBuildDate>{now}</lastBuildDate>
@@ -120,7 +124,7 @@ def generate_podcast_rss(output_dir: Path, topic: str, log=print) -> Path:
     if topic == "AI":
         file_prefix = "ai-radar"
         base_url = f"{BASE_URL_ROOT}/{AI_OUTPUT_DIR_REL}"
-        topic_label = "AI & Robotics"
+        topic_label = "AI"
     else:
         file_prefix = "robotics-radar"
         base_url = f"{BASE_URL_ROOT}/{ROBOTICS_OUTPUT_DIR_REL}"
