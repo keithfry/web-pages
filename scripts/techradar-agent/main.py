@@ -165,17 +165,24 @@ def _process_one(idx: int, total: int, item: dict, source_type: str, topic: str)
             log(f"    [{idx}] → skip (ad gate: {ad_reason})")
             return None
 
-    # Topic keyword pre-filter — avoid LLM call for obvious matches
     lowered = (title + " " + existing_text).lower()
-    topic_keywords = _AI_KEYWORDS if topic == "AI" else _ROBOTICS_KEYWORDS
     classifier_fn = classify_ai if topic == "AI" else classify_robotics
 
-    if not any(kw in lowered for kw in topic_keywords):
-        log(f"    [{idx}] → classifying with LLM (no {topic} keywords matched)...")
+    if topic == "AI":
+        # Keyword fast-path: AI keywords are distinctive enough to skip LLM
+        if not any(kw in lowered for kw in _AI_KEYWORDS):
+            log(f"    [{idx}] → classifying with LLM (no AI keywords matched)...")
+            if not classifier_fn(title, existing_text[:500], SUMMARIZE_MODEL):
+                log(f"    [{idx}] → skip (not AI-related)")
+                return None
+            log(f"    [{idx}] → classified as AI-related")
+    else:
+        # Robotics: always run LLM — keyword substring matching causes too many false passes
+        log(f"    [{idx}] → classifying with LLM (Robotics)...")
         if not classifier_fn(title, existing_text[:500], SUMMARIZE_MODEL):
-            log(f"    [{idx}] → skip (not {topic}-related)")
+            log(f"    [{idx}] → skip (not Robotics-related)")
             return None
-        log(f"    [{idx}] → classified as {topic}-related")
+        log(f"    [{idx}] → classified as Robotics-related")
 
     log(f"    [{idx}] → summarizing...")
     summary_text = summarize(title, existing_text, SUMMARIZE_MODEL)
