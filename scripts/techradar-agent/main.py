@@ -36,6 +36,7 @@ from html_generator import generate_html
 from publisher import save_html, commit_and_push
 from enricher import enrich
 from podcast_generator import generate_podcast
+from podcast_rss import generate_podcast_rss
 
 MAX_LINKS_PER_EMAIL = 5
 
@@ -542,6 +543,27 @@ def _run_topic(args: argparse.Namespace, as_of: datetime, topic: str) -> None:
     if podcast_result:
         mp3_path, chap_path = podcast_result[0]
         out_paths.extend([mp3_path, chap_path])
+
+    # --- Step 8b: Generate podcast RSS feed ---
+    log("── Step 8b: Generating podcast RSS ──")
+    rss_path = generate_podcast_rss(output_dir, topic, log=log)
+    out_paths.append(rss_path)
+
+    # --- Step 8c: Regenerate techradar index.html ---
+    log("── Step 8c: Regenerating techradar index ──")
+    import subprocess as _sp
+    _index_script = _REPO_ROOT / ".github" / "scripts" / "generate-index.sh"
+    _r = _sp.run(["bash", str(_index_script), "techradar"], capture_output=True, text=True, cwd=_REPO_ROOT)
+    if _r.stdout.strip():
+        log(f"  {_r.stdout.strip()}")
+    if _r.returncode != 0:
+        log(f"  WARNING: generate-index.sh failed: {_r.stderr.strip()}")
+    else:
+        # Stage all generated index.html files under techradar/
+        import glob as _glob
+        for idx_path in _glob.glob(str(_REPO_ROOT / "techradar" / "**" / "index.html"), recursive=True):
+            out_paths.append(Path(idx_path))
+        log(f"  index regenerated")
 
     if args.dry_run:
         call_count, total_duration = llm_stats()

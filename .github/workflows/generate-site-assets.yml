@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths-ignore:
       - "techradar/**/index.html"
+      - "techradar/**/podcast.xml"
       - "test/**/index.html"
       - "resume/certifications/images/images.json"
 
@@ -18,14 +19,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4
-
-      - name: Generate indexes
-        run: |
-          ./.github/scripts/generate-index.sh techradar
-
-      - name: Generate podcast RSS feed
-        run: |
-          python3 .github/scripts/generate_podcast_rss.py
 
       - name: Generate certification images manifest
         run: |
