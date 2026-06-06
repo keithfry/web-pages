@@ -1,427 +1,373 @@
 {
   "version": "1.2.0",
-  "title": "June 6, 2026 : AI Sovereignty Superintelligence Race",
+  "title": "June 6, 2026 : AI Power Explodes Forward",
   "chapters": [
     {
       "startTime": 0,
       "title": "Introduction",
-      "endTime": 14
+      "endTime": 16
     },
     {
-      "startTime": 14,
-      "title": "Microsoft AI chief says company was \u201cset free\u201d from OpenAI to pursue superintelligence",
-      "url": "https://venturebeat.com/technology/microsoft-ai-chief-says-company-was-set-free-from-openai-to-pursue-superintelligence",
-      "endTime": 73
-    },
-    {
-      "startTime": 73,
+      "startTime": 16,
       "title": "Prompt: Anthropic's IPO Filing Signals AI's Next Phase",
       "url": "https://aibusiness.com/generative-ai/prompt-anthropic-s-ipo-filing-signals-ai-s-next-phase",
-      "endTime": 109
+      "endTime": 68
     },
     {
-      "startTime": 109,
-      "title": "The GUARD Act: Bipartisan Bill Seeks to Ban Chinese Robots, Threatening the US Research Baseline",
-      "url": "https://www.humanoidsdaily.com/news/the-guard-act-bipartisan-bill-seeks-to-ban-chinese-robots-threatening-the-us-research-baseline",
-      "endTime": 161
+      "startTime": 68,
+      "title": "Microsoft AI chief says company was \u201cset free\u201d from OpenAI to pursue superintelligence",
+      "url": "https://venturebeat.com/technology/microsoft-ai-chief-says-company-was-set-free-from-openai-to-pursue-superintelligence",
+      "endTime": 124
     },
     {
-      "startTime": 161,
-      "title": "New Definition Establishes Open Source AI Standard For Lawmakers",
-      "url": "https://ter.li/30j1cy?mc_cid=c88952d476&mc_eid=UNIQID",
-      "endTime": 235
-    },
-    {
-      "startTime": 235,
+      "startTime": 124,
       "title": "Amazon Unveils Next-Generation Robot in $11.6B European Push",
       "url": "https://aibusiness.com/robotics/amazon-unveils-next-generation-robot-11-6b-european-push",
-      "endTime": 282
+      "endTime": 172
     },
     {
-      "startTime": 282,
-      "title": "Anthropic says the world should have option to \u2018pause\u2019 on AI",
-      "url": "https://www.theguardian.com/technology/2026/jun/05/anthropic-urges-temporary-pause-on-ai-development-to-discuss-risks",
-      "endTime": 337
+      "startTime": 172,
+      "title": "Anthropic plans superior Mythos model public launch soon",
+      "url": "https://a.tldrnewsletter.com/web-version?ep=1&lc=52ea334c-19be-11f1-8763-91ac65d324b5&p=4243bab6-60ce-11f1-8c73-4fba1de49d89&pt=campaign&t=1780665922&s=d3ffb535a08a8b6518b775fdd7e4a9ba4e14b937cb33d8f1cab0e79ca0e676c3",
+      "endTime": 231
     },
     {
-      "startTime": 337,
+      "startTime": 231,
+      "title": "Anthropic Oceanus leaks \ud83e\udd16, ChatGPT Dreaming \ud83d\udcad, recursive self improvement \ud83d\ude80",
+      "endTime": 291
+    },
+    {
+      "startTime": 291,
+      "title": "Liquid AI Unveils LFM2 Edge AI Model Weights",
+      "url": "https://huggingface.co/LiquidAI/LFM2-8B-A1B-GGUF",
+      "endTime": 358
+    },
+    {
+      "startTime": 358,
       "title": "Google DeepMind Releases Gemma 4 QAT Checkpoints: Q4_0 and a New Mobile Format Cut On-Device Memory",
       "url": "https://www.marktechpost.com/2026/06/05/google-deepmind-releases-gemma-4-qat-checkpoints-q4_0-and-a-new-mobile-format-cut-on-device-memory/",
-      "endTime": 393
+      "endTime": 408
     },
     {
-      "startTime": 393,
+      "startTime": 408,
       "title": "Gemma 4 QAT models: Optimizing model compression for mobile and laptop efficiency",
       "url": "https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/",
-      "endTime": 444
+      "endTime": 463
     },
     {
-      "startTime": 444,
-      "title": "OpenAI launches ChatGPT tutor aiming to revolutionize student learning",
-      "url": "https://ter.li/qzh1g0?mc_cid=2b92dad089&mc_eid=UNIQID",
-      "endTime": 519
-    },
-    {
-      "startTime": 519,
+      "startTime": 463,
       "title": "NVIDIA Releases Nemotron 3.5 ASR: A 600M-Parameter Cache-Aware Streaming Model Transcribing 40 Language-Locales in Real Time",
       "url": "https://www.marktechpost.com/2026/06/06/nvidia-releases-nemotron-3-5-asr-a-600m-parameter-cache-aware-streaming-model-transcribing-40-language-locales-in-real-time/",
-      "endTime": 558
+      "endTime": 515
     },
     {
-      "startTime": 558,
-      "title": "Liquid AI Unveils LFM2 Edge AI Model For On-Device Speed",
-      "url": "https://huggingface.co/LiquidAI/LFM2-8B-A1B-GGUF",
-      "endTime": 625
+      "startTime": 515,
+      "title": "OSI Unveils Definition for Open Source AI Models",
+      "url": "https://ter.li/30j1cy?mc_cid=c88952d476&mc_eid=UNIQID",
+      "endTime": 560
     },
     {
-      "startTime": 625,
-      "title": "Bonsai-8B Model Achieves High Performance at Tiny Size",
+      "startTime": 560,
+      "title": "OpenAI launches Study Mode AI tutor for college students",
+      "url": "https://ter.li/qzh1g0?mc_cid=2b92dad089&mc_eid=UNIQID",
+      "endTime": 620
+    },
+    {
+      "startTime": 620,
+      "title": "AI News Roundup Highlights Anthropic Models And Agent Benchmarks",
+      "url": "https://www.latent.space/p/ainews-not-much-happened-today-6b8",
+      "endTime": 677
+    },
+    {
+      "startTime": 677,
+      "title": "Bonsai 1-bit LLM Slashing Size and Boosting Speed for Local AI",
       "url": "https://huggingface.co/prism-ml/Bonsai-8B-gguf",
-      "endTime": 679
-    },
-    {
-      "startTime": 679,
-      "title": "Reality Check at ICRA: AGIBOT World Challenge Shifts Embodied AI from Simulation to Physical Hardware",
-      "url": "https://www.humanoidsdaily.com/news/reality-check-at-icra-agibot-world-challenge-shifts-embodied-ai-from-simulation-to-physical-hardware",
       "endTime": 743
     },
     {
       "startTime": 743,
-      "title": "GENISOM AI debuts deployable robotics platforms at ICRA 2026",
-      "url": "https://www.therobotreport.com/genisom-ai-debuts-deployable-robotics-platforms-icra-2026/",
-      "endTime": 804
+      "title": "Ollama gains major speed boost on Apple Silicon with MLX",
+      "url": "https://ollama.com/blog/mlx",
+      "endTime": 826
     },
     {
-      "startTime": 804,
+      "startTime": 826,
       "title": "Meta's AI support agent bound recovery emails for anyone who asked. Your SOC never saw an alert.",
       "url": "https://venturebeat.com/security/meta-ai-support-agent-recovery-email-takeover-soc-audit-grid",
-      "endTime": 853
+      "endTime": 878
     },
     {
-      "startTime": 853,
-      "title": "AI Security Threats Remain Simple Yet Dangerous After Meta Hack",
-      "url": "https://ter.li/ph6z8m?mc_cid=2b92dad089&mc_eid=UNIQID",
-      "endTime": 918
-    },
-    {
-      "startTime": 918,
+      "startTime": 878,
       "title": "The Meta hack shows there\u2019s more to AI security than Mythos",
-      "endTime": 967
+      "endTime": 929
     },
     {
-      "startTime": 967,
+      "startTime": 929,
+      "title": "AI Security Threats Range From Simple Bugs to Global Crises",
+      "url": "https://ter.li/ph6z8m?mc_cid=2b92dad089&mc_eid=UNIQID",
+      "endTime": 980
+    },
+    {
+      "startTime": 980,
       "title": "The Download: AI hacking beyond Mythos, and chatbots\u2019 impact on our brains",
       "url": "https://www.technologyreview.com/2026/06/05/1138452/the-download-ai-hacking-mythos-chatbots-brain-impacts/",
-      "endTime": 1028
+      "endTime": 1034
     },
     {
-      "startTime": 1028,
-      "title": "Anthropic Oceanus leaks \ud83e\udd16, ChatGPT Dreaming \ud83d\udcad, recursive self improvement \ud83d\ude80",
-      "endTime": 1111
-    },
-    {
-      "startTime": 1111,
-      "title": "AI News Roundup Anthropic Rivals Self-Improvement Benchmarks Shift Focus",
-      "url": "https://www.latent.space/p/ainews-not-much-happened-today-6b8",
-      "endTime": 1171
-    },
-    {
-      "startTime": 1171,
-      "title": "Anthropic gears up better Mythos public launch now",
-      "url": "https://a.tldrnewsletter.com/web-version?ep=1&lc=52ea334c-19be-11f1-8763-91ac65d324b5&p=4243bab6-60ce-11f1-8c73-4fba1de49d89&pt=campaign&t=1780665922&s=d3ffb535a08a8b6518b775fdd7e4a9ba4e14b937cb33d8f1cab0e79ca0e676c3",
-      "endTime": 1225
-    },
-    {
-      "startTime": 1225,
-      "title": "Moonshot AI Releases Kimi Code CLI: A Terminal AI Coding Agent Built in TypeScript for Next-Gen Agents",
-      "url": "https://www.marktechpost.com/2026/06/06/moonshot-ai-releases-kimi-code-cli-a-terminal-ai-coding-agent-built-in-typescript-for-next-gen-agents/",
-      "endTime": 1267
-    },
-    {
-      "startTime": 1267,
-      "title": "A Hands-On Coding Tutorial on Qualcomm AI Hub Models for Classification, Object Detection, and Hardware-Aware Deployment",
-      "url": "https://www.marktechpost.com/2026/06/05/a-hands-on-coding-tutorial-on-qualcomm-ai-hub-models-for-classification-object-detection-and-hardware-aware-deployment/",
-      "endTime": 1321
-    },
-    {
-      "startTime": 1321,
-      "title": "Ollama accelerates on Apple Silicon with MLX power",
-      "url": "https://ollama.com/blog/mlx",
-      "endTime": 1400
-    },
-    {
-      "startTime": 1400,
-      "title": "llama.cpp powers high-performance local LLM inference everywhere",
-      "url": "https://github.com/ggml-org/llama.cpp",
-      "endTime": 1461
-    },
-    {
-      "startTime": 1461,
-      "title": "Improved performance and model support with GGUF",
-      "endTime": 1513
-    },
-    {
-      "startTime": 1513,
-      "title": "\ud83d\udd0e Google turns search into creator hubs",
-      "endTime": 1571
-    },
-    {
-      "startTime": 1571,
+      "startTime": 1034,
       "title": "Microsoft's AI Futurist explains how he uses Copilot \u2014 and the real-world problems enterprises are solving with agents",
       "url": "https://venturebeat.com/orchestration/microsofts-ai-futurist-explains-how-he-uses-copilot-and-the-real-world-problems-enterprises-are-solving-with-agents",
-      "endTime": 1632
+      "endTime": 1095
     },
     {
-      "startTime": 1632,
+      "startTime": 1095,
       "title": "AI agents are learning on the job \u2014 just not for your whole team",
       "url": "https://venturebeat.com/orchestration/ai-agents-are-learning-on-the-job-just-not-for-your-whole-team",
-      "endTime": 1690
+      "endTime": 1143
     },
     {
-      "startTime": 1690,
-      "title": "Pricing Infrastructure in the Age of AI Agents and Change",
-      "url": "https://metronome.com/webinars/webinar-the-new-monetization-playbook-for-data-infrastructure?utm_campaign=q2-webinar&utm_medium=newsletter&utm_source=tldr-ai&utm_content=_header",
-      "endTime": 1741
+      "startTime": 1143,
+      "title": "Moonshot AI Releases Kimi Code CLI: A Terminal AI Coding Agent Built in TypeScript for Next-Gen Agents",
+      "url": "https://www.marktechpost.com/2026/06/06/moonshot-ai-releases-kimi-code-cli-a-terminal-ai-coding-agent-built-in-typescript-for-next-gen-agents/",
+      "endTime": 1198
     },
     {
-      "startTime": 1741,
-      "title": "Schools Adapt From Banning to Integrating AI Tools",
-      "url": "https://ter.li/hu68ad?mc_cid=2b92dad089&mc_eid=UNIQID",
-      "endTime": 1804
+      "startTime": 1198,
+      "title": "llama.cpp Powers LLM Inference Across Hardware Architectures",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "endTime": 1253
     },
     {
-      "startTime": 1804,
-      "title": "AI Code Tools Revolutionize Programming Education Now",
-      "url": "https://ter.li/ccwwov?mc_cid=c88952d476&mc_eid=UNIQID",
-      "endTime": 1851
+      "startTime": 1253,
+      "title": "Improved performance and model support with GGUF",
+      "endTime": 1315
     },
     {
-      "startTime": 1851,
-      "title": "\ud83c\udf93 How to encourage smarter AI use in the classroom",
-      "endTime": 1919
+      "startTime": 1315,
+      "title": "\ud83d\udd0e Google turns search into creator hubs",
+      "endTime": 1379
     },
     {
-      "startTime": 1919,
-      "title": "Teaching Kids Essential Literacy in the Age of AI",
-      "url": "https://ter.li/usy7m7?mc_cid=c88952d476&mc_eid=UNIQID",
-      "endTime": 1982
+      "startTime": 1379,
+      "title": "Anthropic says the world should have option to \u2018pause\u2019 on AI",
+      "url": "https://www.theguardian.com/technology/2026/jun/05/anthropic-urges-temporary-pause-on-ai-development-to-discuss-risks",
+      "endTime": 1423
     },
     {
-      "startTime": 1982,
-      "title": "Labour will make AI \u2018work for the workers\u2019, says Liz Kendall",
-      "url": "https://www.theguardian.com/technology/2026/jun/05/labour-will-make-ai-work-for-workers-liz-kendall",
-      "endTime": 2037
-    },
-    {
-      "startTime": 2037,
+      "startTime": 1423,
       "title": "It\u2019s no surprise that an AI-faked presidential speech condemning foreign exploitation went viral \u2013 the world is suffering from a leadership vacuum",
       "url": "https://www.theguardian.com/global-development/2026/jun/06/african-leader-speech-decolonisation-ai-generated-fake-president-namibia-africa-caribbean",
-      "endTime": 2096
+      "endTime": 1477
     },
     {
-      "startTime": 2096,
-      "title": "AI Chatbots Hallucinate Making Nonsensical Claims Now Fixed",
+      "startTime": 1477,
+      "title": "AI Chatbot Wildness Prompts Scrutiny Over Accuracy and Bias",
       "url": "https://ter.li/sk75tl?mc_cid=c88952d476&mc_eid=UNIQID",
-      "endTime": 2152
+      "endTime": 1545
     },
     {
-      "startTime": 2152,
+      "startTime": 1545,
+      "title": "AI Tools Radically Change Coding Education Forever",
+      "url": "https://ter.li/ccwwov?mc_cid=c88952d476&mc_eid=UNIQID",
+      "endTime": 1606
+    },
+    {
+      "startTime": 1606,
+      "title": "Schools Reassess Bans Finding New Uses for ChatGPT",
+      "url": "https://ter.li/hu68ad?mc_cid=2b92dad089&mc_eid=UNIQID",
+      "endTime": 1669
+    },
+    {
+      "startTime": 1669,
+      "title": "\ud83c\udf93 How to encourage smarter AI use in the classroom",
+      "endTime": 1727
+    },
+    {
+      "startTime": 1727,
+      "title": "Teaching kids basic AI literacy for the modern world",
+      "url": "https://ter.li/usy7m7?mc_cid=c88952d476&mc_eid=UNIQID",
+      "endTime": 1791
+    },
+    {
+      "startTime": 1791,
+      "title": "Labour will make AI \u2018work for the workers\u2019, says Liz Kendall",
+      "url": "https://www.theguardian.com/technology/2026/jun/05/labour-will-make-ai-work-for-workers-liz-kendall",
+      "endTime": 1834
+    },
+    {
+      "startTime": 1834,
+      "title": "Monetizing Data Infrastructure in the Age of AI Agents",
+      "url": "https://metronome.com/webinars/webinar-the-new-monetization-playbook-for-data-infrastructure?utm_campaign=q2-webinar&utm_medium=newsletter&utm_source=tldr-ai&utm_content=_header",
+      "endTime": 1884
+    },
+    {
+      "startTime": 1884,
+      "title": "Why Surface Rubrics Fail AI Models Real-World Testing",
+      "url": "https://substack.com/redirect/13dbdc52-2498-4e21-97da-3661ebe61453?j=eyJ1IjoiN3V5azBwIn0.9JxZHelvBOIuAy56QyV5ydF0a99uyO_4AH8_Rit5o0U",
+      "endTime": 1945
+    },
+    {
+      "startTime": 1945,
       "title": "The Fundamental Choice in Reinforcement Learning: On\u2011Policy vs. Off\u2011Policy",
       "url": "https://towardsdatascience.com/the-fundamental-choice-in-reinforcement-learning-on-policy-vs-off-policy/",
-      "endTime": 2208
+      "endTime": 1995
     },
     {
-      "startTime": 2208,
-      "title": "Fixing Broken RL Environments to Improve Model Training",
+      "startTime": 1995,
+      "title": "Fix Flaky RL Environments Before They Ruin Your Model Training",
       "url": "https://www.latent.space/p/bad-envs",
-      "endTime": 2265
+      "endTime": 2050
     },
     {
-      "startTime": 2265,
+      "startTime": 2050,
       "title": "How to Stop Shipping Low-Quality RL Environments (with Examples)",
-      "endTime": 2317
+      "endTime": 2101
     },
     {
-      "startTime": 2317,
+      "startTime": 2101,
       "title": "How to Stop Shipping Low-Quality RL Environments (with Examples)",
       "url": "https://www.latent.space/p/bad-envs",
-      "endTime": 2368
+      "endTime": 2146
     },
     {
-      "startTime": 2368,
+      "startTime": 2146,
       "title": "If you train RL agents seriously, where does your pipeline actually bottleneck?",
       "url": "https://www.reddit.com/r/reinforcementlearning/comments/1txjmln/if_you_train_rl_agents_seriously_where_does_your/",
-      "endTime": 2430
+      "endTime": 2206
     },
     {
-      "startTime": 2430,
-      "title": "Learning Reinforcement Learning for Trading? Check Out This Open-Source Project",
-      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1txqmch/learning_reinforcement_learning_for_trading_check/",
-      "endTime": 2486
+      "startTime": 2206,
+      "title": "A Hands-On Coding Tutorial on Qualcomm AI Hub Models for Classification, Object Detection, and Hardware-Aware Deployment",
+      "url": "https://www.marktechpost.com/2026/06/05/a-hands-on-coding-tutorial-on-qualcomm-ai-hub-models-for-classification-object-detection-and-hardware-aware-deployment/",
+      "endTime": 2251
     },
     {
-      "startTime": 2486,
+      "startTime": 2251,
       "title": "How to Fine-Tune an SLM for Emotion Recognition",
       "url": "https://towardsdatascience.com/how-to-fine-tune-an-slm-for-emotion-recognition/",
-      "endTime": 2534
+      "endTime": 2302
     },
     {
-      "startTime": 2534,
-      "title": "Automate Writing Your LLM Prompts",
-      "url": "https://towardsdatascience.com/automate-writing-your-llm-prompts/",
-      "endTime": 2578
-    },
-    {
-      "startTime": 2578,
-      "title": "My AI Couldn\u2019t See My Files \u2014 I Built a Zero-Dependency MCP Server",
-      "url": "https://towardsdatascience.com/my-ai-couldnt-see-my-files-i-built-a-zero-dependency-mcp-server/",
-      "endTime": 2642
-    },
-    {
-      "startTime": 2642,
-      "title": "Why deterministic real-time systems are more critical than ever in robotics",
-      "url": "https://www.therobotreport.com/qnx-why-deterministic-real-time-systems-are-more-critical-than-ever-robotics/",
-      "endTime": 2691
-    },
-    {
-      "startTime": 2691,
-      "title": "Video Friday: Watch This Running Robot Not Fall Down Stairs",
-      "url": "https://spectrum.ieee.org/video-friday-humanoid-robot-running",
-      "endTime": 2756
-    },
-    {
-      "startTime": 2756,
-      "title": "Interview with Columbia professor and co-founder of SceniX Yunzhu Li: \u2018Simulation is central\u2019",
-      "url": "https://roboticsandautomationnews.com/2026/06/05/interview-with-columbia-professor-and-co-founder-of-scenix-yuhnzu-li-simulation-is-central/102333/",
-      "endTime": 2807
-    },
-    {
-      "startTime": 2807,
-      "title": "Interview with Jun Wu of GMEX Robotics: \u2018We provide an integrated terminal + brain closed-loop system\u2019",
-      "url": "https://roboticsandautomationnews.com/2026/06/05/interview-with-jun-wu-of-gmex-robotics-we-provide-an-integrated-terminal-brain-closed-loop-system/102327/",
-      "endTime": 2860
-    },
-    {
-      "startTime": 2860,
-      "title": "AWR standardizes CNC machine tending with OnRobot electric grippers to speed changeovers",
-      "url": "https://roboticsandautomationnews.com/2026/06/05/awr-standardizes-cnc-machine-tending-with-onrobot-electric-grippers-to-speed-changeovers/102321/",
-      "endTime": 2920
-    },
-    {
-      "startTime": 2920,
-      "title": "Misumi launches Misumi Americas as part of $1 billion global manufacturing investment",
-      "url": "https://roboticsandautomationnews.com/2026/06/05/misumi-launches-misumi-americas-as-part-of-1-billion-global-manufacturing-investment/102318/",
-      "endTime": 2977
-    },
-    {
-      "startTime": 2977,
-      "title": "Mitsubishi Electric opens Serendie Street Boston digital transformation hub",
-      "url": "https://www.therobotreport.com/mitsubishi-electric-opens-serendie-street-boston-digital-transformation-hub/",
-      "endTime": 3027
-    },
-    {
-      "startTime": 3027,
-      "title": "New privacy settings for Search services",
-      "endTime": 3089
-    },
-    {
-      "startTime": 3089,
-      "title": "OpenAI Help: Lockdown Mode",
-      "url": "https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/#atom-everything",
-      "endTime": 3145
-    },
-    {
-      "startTime": 3145,
-      "title": "Fifa expanding AI use at World Cup to reduce amount of abuse seen by players",
-      "url": "https://www.theguardian.com/football/2026/jun/05/fifa-expanding-ai-use-at-world-cup-to-reduce-amount-of-abuse-seen-by-players",
-      "endTime": 3199
-    },
-    {
-      "startTime": 3199,
+      "startTime": 2302,
       "title": "Running Python code in a sandbox with MicroPython and WASM",
       "url": "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-everything",
-      "endTime": 3263
+      "endTime": 2359
     },
     {
-      "startTime": 3263,
+      "startTime": 2359,
       "title": "micropython-wasm 0.1a2",
       "url": "https://simonwillison.net/2026/Jun/6/micropython-wasm/#atom-everything",
-      "endTime": 3304
+      "endTime": 2410
     },
     {
-      "startTime": 3304,
+      "startTime": 2410,
+      "title": "My AI Couldn\u2019t See My Files \u2014 I Built a Zero-Dependency MCP Server",
+      "url": "https://towardsdatascience.com/my-ai-couldnt-see-my-files-i-built-a-zero-dependency-mcp-server/",
+      "endTime": 2473
+    },
+    {
+      "startTime": 2473,
       "title": "Building a Custom Drones MuJoCo Environment",
       "url": "https://www.reddit.com/r/reinforcementlearning/comments/1txuy1v/building_a_custom_drones_mujoco_environment/",
-      "endTime": 3357
+      "endTime": 2518
     },
     {
-      "startTime": 3357,
+      "startTime": 2518,
+      "title": "Learning Reinforcement Learning for Trading? Check Out This Open-Source Project",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1txqmch/learning_reinforcement_learning_for_trading_check/",
+      "endTime": 2563
+    },
+    {
+      "startTime": 2563,
+      "title": "Automate Writing Your LLM Prompts",
+      "url": "https://towardsdatascience.com/automate-writing-your-llm-prompts/",
+      "endTime": 2606
+    },
+    {
+      "startTime": 2606,
       "title": "The crucial human component in computing and AI",
       "url": "https://news.mit.edu/2026/crucial-human-component-computing-and-ai-0605",
-      "endTime": 3408
+      "endTime": 2668
     },
     {
-      "startTime": 3408,
-      "title": "Attention Spans Plummet Study Reveals Tech's Toll On Focus",
-      "url": "https://www.technologyreview.com/2026/06/05/1138427/are-ai-chatbots-making-us-lose-control-of-our-brains/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=06-05-2026&mc_cid=ff187c3e41&mc_eid=UNIQID",
-      "endTime": 3464
-    },
-    {
-      "startTime": 3464,
-      "title": "Em Dashes Targeted As Sign of AI Writing A Gripe",
-      "url": "https://www.theguardian.com/lifeandstyle/2025/oct/01/artificial-intelligence-em-dashes-ai-stealing-my-livelihood?mc_cid=2b92dad089&mc_eid=UNIQID",
-      "endTime": 3514
-    },
-    {
-      "startTime": 3514,
-      "title": "How to talk about AI \ud83d\udde3\ufe0f",
-      "endTime": 3581
-    },
-    {
-      "startTime": 3581,
-      "title": "Boost Coding Skills Fast Newsletter for Developers",
-      "url": "https://slothbytes.beehiiv.com/",
-      "endTime": 3636
-    },
-    {
-      "startTime": 3636,
-      "title": "Master AI daily news and real-world applications fast",
-      "url": "https://rundown.ai/",
-      "endTime": 3692
-    },
-    {
-      "startTime": 3692,
-      "title": "\ud83e\udda5 Tokenmaxxing might be dead",
-      "endTime": 3763
-    },
-    {
-      "startTime": 3763,
-      "title": "Dimitri Bertsekas passed away",
-      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1txsbr0/dimitri_bertsekas_passed_away/",
-      "endTime": 3810
-    },
-    {
-      "startTime": 3810,
+      "startTime": 2668,
       "title": "Looking for arXiv cs endorsement \u2014 first-time submitter, paper on multi-agent LLM token optimization (Patent Pending) [D]",
       "url": "https://www.reddit.com/r/reinforcementlearning/comments/1txwjm2/looking_for_arxiv_cs_endorsement_firsttime/",
-      "endTime": 3867
+      "endTime": 2728
     },
     {
-      "startTime": 3867,
-      "title": "[AINews] not much happened today",
-      "endTime": 3928
+      "startTime": 2728,
+      "title": "New privacy settings for Search services",
+      "endTime": 2777
     },
     {
-      "startTime": 3928,
-      "title": "[AINews] not much happened today",
-      "url": "https://www.latent.space/p/ainews-not-much-happened-today-6b8",
-      "endTime": 3966
+      "startTime": 2777,
+      "title": "OpenAI Help: Lockdown Mode",
+      "url": "https://simonwillison.net/2026/Jun/5/openai-help-lockdown-mode/#atom-everything",
+      "endTime": 2838
     },
     {
-      "startTime": 3966,
+      "startTime": 2838,
+      "title": "Fifa expanding AI use at World Cup to reduce amount of abuse seen by players",
+      "url": "https://www.theguardian.com/football/2026/jun/05/fifa-expanding-ai-use-at-world-cup-to-reduce-amount-of-abuse-seen-by-players",
+      "endTime": 2895
+    },
+    {
+      "startTime": 2895,
+      "title": "Em dashes losing meaning in AI writing era",
+      "url": "https://www.theguardian.com/lifeandstyle/2025/oct/01/artificial-intelligence-em-dashes-ai-stealing-my-livelihood?mc_cid=2b92dad089&mc_eid=UNIQID",
+      "endTime": 2959
+    },
+    {
+      "startTime": 2959,
+      "title": "How to talk about AI \ud83d\udde3\ufe0f",
+      "endTime": 3018
+    },
+    {
+      "startTime": 3018,
       "title": "The latest AI news we announced in May 2026",
       "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-may-2026/",
-      "endTime": 4015
+      "endTime": 3062
+    },
+    {
+      "startTime": 3062,
+      "title": "\ud83e\udda5 Tokenmaxxing might be dead",
+      "endTime": 3121
+    },
+    {
+      "startTime": 3121,
+      "title": "Attention Spans Shrink Rapidly Due to Digital Technology Use",
+      "url": "https://www.technologyreview.com/2026/06/05/1138427/are-ai-chatbots-making-us-lose-control-of-our-brains/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=06-05-2026&mc_cid=ff187c3e41&mc_eid=UNIQID",
+      "endTime": 3170
+    },
+    {
+      "startTime": 3170,
+      "title": "Lazy Programmers Stay Updated with Expert Tips Weekly",
+      "url": "https://slothbytes.beehiiv.com/",
+      "endTime": 3235
+    },
+    {
+      "startTime": 3235,
+      "title": "Master AI in Minutes Learn Tools and Trends Daily",
+      "url": "https://rundown.ai/",
+      "endTime": 3288
+    },
+    {
+      "startTime": 3288,
+      "title": "Dimitri Bertsekas passed away",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1txsbr0/dimitri_bertsekas_passed_away/",
+      "endTime": 3332
+    },
+    {
+      "startTime": 3332,
+      "title": "[AINews] not much happened today",
+      "endTime": 3395
+    },
+    {
+      "startTime": 3395,
+      "title": "[AINews] not much happened today",
+      "url": "https://www.latent.space/p/ainews-not-much-happened-today-6b8",
+      "endTime": 3435
     }
   ]
 }
