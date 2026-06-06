@@ -7,19 +7,19 @@
     <link>https://keithfry.github.io/web-pages/techradar/AI/</link>
     <description>Daily AI & Robotics news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jun 2026 13:25:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 14:05:27 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
   <item>
-    <title>June 6, 2026 : AI Power Explodes Forward</title>
+    <title>June 6, 2026 : AI Superintelligence New Frontier</title>
     <pubDate>Sat, 06 Jun 2026 08:00:00 +0000</pubDate>
-    <enclosure url="https://keithfry.github.io/web-pages/techradar/AI/ai-radar-2026-06-06.mp3" type="audio/mpeg" length="27520673"/>
-    <itunes:duration>00:57:15</itunes:duration>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/AI/ai-radar-2026-06-06.mp3" type="audio/mpeg" length="28434393"/>
+    <itunes:duration>00:59:09</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/AI/ai-radar-2026-06-06.mp3</guid>
-    <description>AI & Robotics Radar for June 6, 2026. 57 minutes of news.</description>
+    <description>AI & Robotics Radar for June 6, 2026. 59 minutes of news.</description>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/AI/ai-radar-2026-06-06.chapters.json" type="application/json+chapters"/>
   </item>
   <item>
