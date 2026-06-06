@@ -155,17 +155,42 @@ def classify_ai(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> bool:
 
 
 def classify_robotics(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> bool:
-    """Return True if the content is robotics/automation/physical-AI related."""
+    """Return True if the content is primarily about physical robotics or automation."""
     prompt = (
-        "Is the following content specifically about robotics, autonomous systems, drones/UAVs, "
-        "physical AI, robot hardware, manipulation, navigation, human-robot interaction, "
-        "industrial automation, or embodied AI?\n\n"
-        "Answer YES only if the primary topic involves physical systems or robots operating in "
-        "the real world. Physical AI (e.g. robot learning, sim-to-real transfer) counts.\n\n"
-        "Answer NO for: pure software AI/LLMs with no physical component, data science, "
-        "NLP, image classification, policy/regulation, product sales, finance, travel, "
-        "or any AI topic not involving physical/embodied systems.\n\n"
-        'Answer with a JSON object: {"relevant": true} or {"relevant": false}.\n\n'
+        "You are a strict robotics content filter. Your job is to decide if an article belongs "
+        "in a robotics digest. When in doubt, answer NO.\n\n"
+        "Answer YES only if the article's PRIMARY topic is one of:\n"
+        "  - Physical robots (humanoids, arms, mobile robots, cobots)\n"
+        "  - Drones / UAVs / UAS\n"
+        "  - Robot hardware, actuators, sensors, end-effectors\n"
+        "  - Industrial automation with physical machinery\n"
+        "  - Robot operating systems (ROS/ROS2) and robot-specific software\n"
+        "  - Autonomous vehicles (self-driving cars, AGVs)\n"
+        "  - Embodied AI where a physical robot is the subject\n"
+        "  - Robotics research (manipulation, navigation, HRI, SLAM)\n\n"
+        "Answer NO for ALL of the following — even if they mention robots in passing:\n"
+        "  - LLMs, chatbots, language models, text/image/audio AI\n"
+        "  - AI assistants (ChatGPT, Claude, Gemini, Copilot)\n"
+        "  - Reinforcement learning research with no physical robot\n"
+        "  - AI policy, regulation, ethics, copyright, deepfakes\n"
+        "  - Data science, MLOps, model training, quantization, inference\n"
+        "  - AI in education, healthcare, finance, or business strategy\n"
+        "  - Newsletter digests about general AI news\n"
+        "  - Cloud computing, APIs, developer tools (unless robot-specific)\n\n"
+        "Examples:\n"
+        "Title: 'Video Friday: Watch This Running Robot Not Fall Down Stairs'\n"
+        '→ {"relevant": true}\n\n'
+        "Title: 'AGIBOT Challenge Shifts Embodied AI to Physical Hardware at ICRA'\n"
+        '→ {"relevant": true}\n\n'
+        "Title: 'Tokenmaxxing might be dead'\n"
+        '→ {"relevant": false}\n\n'
+        "Title: 'Fix Your RL Environment Or Risk Bad Model Training'\n"
+        '→ {"relevant": false}\n\n'
+        "Title: 'Anthropic launches upgraded model for developers'\n"
+        '→ {"relevant": false}\n\n'
+        "Title: 'Schools Shift Views on Ban After ChatGPT Panic'\n"
+        '→ {"relevant": false}\n\n'
+        'Answer with JSON only: {"relevant": true} or {"relevant": false}.\n\n'
         f"Title: {title}\n"
         f"Content: {summary[:3000]}"
     )
@@ -173,7 +198,8 @@ def classify_robotics(title: str, summary: str, model: str = SUMMARIZE_MODEL) ->
     try:
         return bool(json.loads(_extract_json(raw)).get("relevant", False))
     except (json.JSONDecodeError, AttributeError):
-        return True
+        # Fail closed — uncertain = not robotics
+        return False
 
 
 def classify_ad(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> tuple[bool, str]:
