@@ -1,105 +1,33 @@
 {
   "date": "2026-06-06",
-  "generated_at": "2026-06-06T10:11:38-0400",
-  "intro_script": "Welcome back! Today is June 6, 2026. We\u2019re diving into robotics news, covering everything from AI self-improvement breakthroughs and new model miniaturization to the headlines swirling around national tech security bills. Let's digest it all.",
-  "episode_tagline": "AI Power Shrinks Globally",
+  "generated_at": "2026-06-06T10:29:12-0400",
+  "intro_script": "Welcome to your daily dive into robotics! Today, June 6, 2026. We're covering the GUARD Act's impact, what ICRA showed about embodied AI hardware shifts, and why real-time systems matter more than ever. Eight stories await you!",
+  "episode_tagline": "Physical AI Meets Real Laws",
   "items": [
-    {
-      "title": "Anthropic Oceanus leaks \ud83e\udd16, ChatGPT Dreaming \ud83d\udcad, recursive self improvement \ud83d\ude80",
-      "link": "",
-      "source": "TLDR AI",
-      "summary": "OpenAI updated ChatGPT with a new memory synthesis system for improved continuity over long periods, rolling out to Plus and Pro users in the US. Anthropic revealed a model checkpoint codenamed Oceanus to red teams and is advancing concepts of recursive self-improvement where AI designs its own successors. A separate webinar discussed changing data infrastructure economics, focusing on pricing models for AI agents. The text also details advanced techniques like Topics, an intelligence layer analyzing large production agent traces at scale. Finally, Crusoe Cloud offers a simplified way to fine-tune open-source models without managing GPU clusters.",
-      "tags": [
-        "model",
-        "agents",
-        "research"
-      ],
-      "published": null,
-      "_source_type": "email",
-      "_is_arxiv": false,
-      "rank": 1,
-      "audio_script": "From TLDR AI, \"Anthropic Oceanus leaks \ud83e\udd16, ChatGPT Dreaming \ud83d\udcad, recursive self improvement \ud83d\ude80.\" The report details recent advancements across major AI labs concerning memory systems, model architecture revelations, and infrastructure economics within the field. OpenAI has implemented a novel memory synthesis system into ChatGPT for enhanced continuity during extended user sessions, making it available to Plus and Pro subscribers in the United States. Furthermore, Anthropic exposed a checkpoint known as Oceanus while advancing research into recursive self-improvement concepts, alongside industry discussions on specialized topics analysis at scale. This confluence of developments signals an increased focus on long-term AI autonomy and infrastructure optimization across the technology sector.",
-      "voice_index": 0,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 17
-    },
     {
       "title": "The GUARD Act: Bipartisan Bill Seeks to Ban Chinese Robots, Threatening the US Research Baseline",
       "link": "https://www.humanoidsdaily.com/news/the-guard-act-bipartisan-bill-seeks-to-ban-chinese-robots-threatening-the-us-research-baseline",
       "source": "Humanoids Daily",
-      "summary": "A newly introduced congressional bill seeks to prohibit Chinese humanoid and quadruped robots from entering the United States market. This legislation poses a significant logistical challenge for American research institutions. These labs currently depend heavily on readily available, mass-produced hardware for their scientific work. The proposed ban creates a complex geopolitical dilemma regarding technological access.",
+      "summary": "Congress has introduced a new bill intended to prohibit Chinese humanoid and quadruped robots from entering the United States market. This legislation presents a significant geopolitical challenge for American research labs. These facilities are currently heavily dependent on accessing readily available, mass-produced robotic hardware. The proposed ban could severely disrupt ongoing scientific and technological development within the U.S.",
       "tags": [
         "policy",
-        "robotics"
+        "robotics",
+        "research"
       ],
       "published": "2026-06-05T15:11:38+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 2,
-      "audio_script": "From Humanoids Daily, \"The GUARD Act: Bipartisan Bill Seeks to Ban Chinese Robots, Threatening the US Research Baseline.\" The report details a recently introduced congressional bill aimed at prohibiting Chinese-manufactured humanoid and quadruped robots from entering American commercial markets. Proponents of the legislation cite national security concerns regarding technological imports. This move presents substantial operational hurdles for numerous domestic research facilities that rely on the routine procurement of diverse, mass-produced robotic hardware for ongoing scientific investigations. The proposed ban establishes a significant point of friction concerning global technological supply chains and access protocols. Industry analysts suggest heightened uncertainty regarding the availability of specific hardware platforms within the near term.",
-      "voice_index": 1,
+      "rank": 1,
+      "audio_script": "From Humanoids Daily, \"The GUARD Act: Bipartisan Bill Seeks to Ban Chinese Robots, Threatening the US Research Baseline.\" The report details a newly introduced congressional bill that aims to prohibit the import of humanoid and quadruped robots originating from China into American commerce. This proposed legislation represents a considerable geopolitical shift impacting the operational capacity of various domestic research laboratories. These facilities currently rely substantially on access to widely available, mass-produced robotic hardware for ongoing scientific advancements. The potential implementation of such a ban could cause significant disruption across multiple sectors of U.S. technological development. Industry observers anticipate that future legislative actions regarding robotics supply chains will become the immediate focal point for AI research investment.",
+      "voice_index": 0,
       "include_in_podcast": true,
-      "chapter_start_seconds": 74
-    },
-    {
-      "title": "Bonsai Model Achieves 14x Smaller Size for Llama Performance",
-      "link": "https://huggingface.co/prism-ml/Bonsai-8B-gguf",
-      "source": "huggingface.co",
-      "summary": "A new 1-bit language model called Bonsai achieves significant efficiency improvements for Llama performance. It reduces the model size from an FP16 requirement of 16.38 GB to just 1.15 GB, representing a 14.2x reduction while maintaining high capability. This quantization uses end-to-end 1-bit weights across all components and is compatible with CUDA, Metal, CPU, and Android. Benchmarks show it matches full-precision 8B models with an average score of 70.5 across six categories. Furthermore, the model demonstrates a 6.2x speedup on RTX 4090 compared to previous iterations, alongside lower energy consumption.",
-      "tags": [
-        "model",
-        "research"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 3,
-      "audio_script": "From huggingface.co, \"Bonsai Model Achieves 14x Smaller Size for Llama Performance.\" This announcement details a new language model designed to significantly improve the efficiency and accessibility of Llama performance through advanced quantization techniques. The methodology involved implementing end-to-end one-bit weights across all components, drastically reducing the required memory footprint from sixteen point three eight gigabytes in FP16 format down to just one point one five gigabytes, marking a fourteen point two times reduction while preserving high capability levels. Furthermore, the model maintains compatibility with various hardware environments including CUDA, Metal, CPU, and Android platforms, achieving benchmark scores that match full-precision eight billion parameter models across six distinct categories. These advancements suggest a substantial step toward deploying large language models on resource-constrained edge devices for broader industry application.",
-      "voice_index": 2,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 123
-    },
-    {
-      "title": "Ollama powers Apple Silicon acceleration with MLX framework preview",
-      "link": "https://ollama.com/blog/mlx",
-      "source": "ollama.com",
-      "summary": "Ollama now utilizes Apple's MLX framework, providing significant performance boosts on Apple Silicon by leveraging its unified memory architecture. On M5 chips, it accelerates both time to first token and generation speed using GPU Neural Accelerators. The update also incorporates NVIDIA's NVFP4 format for maintaining model accuracy while reducing resource demands. Furthermore, Ollama features improved caching that reuses cache across conversations and uses intelligent checkpoints for faster responses. This preview release is recommended for Macs with over 32GB of unified memory.",
-      "tags": [
-        "model",
-        "research"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 4,
-      "audio_script": "From ollama.com, \"Ollama powers Apple Silicon acceleration with MLX framework preview.\" This update details significant performance enhancements for running large language models on Apple hardware through the integration of a new framework. The implementation involves utilizing Apple's native MLX framework to take advantage of the unified memory architecture present in Apple Silicon devices. Specific reports indicate that on M5 chips, this results in measurable accelerations for both the initial token generation time and sustained output speeds via GPU Neural Accelerators. Additionally, support has been added for NVIDIA\u2019s NVFP4 format, which helps reduce resource requirements while preserving model fidelity. Furthermore, improvements include advanced caching mechanisms that persist across user sessions and optimized checkpointing for faster conversational recall. This preview release is specifically suggested for Mac models equipped with more than thirty-two gigabytes of unified memory. The integration signals a notable advancement in on-device machine learning deployment efficiency across high-performance mobile computing platforms.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 190
-    },
-    {
-      "title": "llama.cpp Advances LLM Inference Across Hardware and Platforms",
-      "link": "https://github.com/ggml-org/llama.cpp",
-      "source": "github.com",
-      "summary": "llama.cpp aims to enable state-of-the-art LLM inference with minimal setup across diverse hardware and platforms using plain C/C++. It offers extensive optimizations for various architectures, including Apple silicon (Metal), x86 (AVX/AMX), RISC-V, and specialized CUDA kernels for NVIDIA GPUs. Support exists for multiple quantization levels (1- to 8-bit) and includes hybrid CPU+GPU inference capabilities. The project supports a wide range of models, with APIs available via `llama-cli` and an OpenAI-compatible server through `llama-server`.",
-      "tags": [
-        "model",
-        "research"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 5,
-      "audio_script": "From github.com, \"llama.cpp Advances LLM Inference Across Hardware and Platforms.\" This report details a project designed to enable state-of-the-art large language model inference with minimal setup across a wide array of hardware and operating environments using plain C/C++. The implementation incorporates extensive optimizations for multiple architectures, supporting Apple silicon via Metal, x86 instruction sets like AVX and AMX, RISC-V, and custom CUDA kernels for NVIDIA GPUs. Furthermore, the framework accommodates various quantization levels ranging from 1 to 8 bits and provides capability for hybrid CPU plus GPU inference configurations. The project supports a diverse selection of models through dedicated APIs accessible via both llama-cli and an OpenAI compatible server provided by llama-server. This advancement establishes a more portable and optimized infrastructure for running advanced generative AI locally on disparate computing hardware.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 270
+      "chapter_start_seconds": 16
     },
     {
       "title": "Reality Check at ICRA: AGIBOT World Challenge Shifts Embodied AI from Simulation to Physical Hardware",
       "link": "https://www.humanoidsdaily.com/news/reality-check-at-icra-agibot-world-challenge-shifts-embodied-ai-from-simulation-to-physical-hardware",
       "source": "Humanoids Daily",
-      "summary": "The AGIBOT World Challenge at ICRA 2026 featured over 500 global teams. Participants were required to move beyond purely simulated environments for their work. The challenge mandated transitioning AI model testing onto physical hardware. Specifically, the competition involved live, closed-loop testing using real humanoid robots. This marked a significant shift in embodied AI research from simulation to practical application.",
+      "summary": "The AGIBOT World Challenge at ICRA 2026 took place in Vienna. The competition featured over 500 global teams participating. Its objective was to test embodied AI systems. Participants were required to transition their AI models from pure simulation environments. This testing now occurs on physical, real humanoid robots in a live, closed-loop setting.",
       "tags": [
         "robotics",
         "model",
@@ -108,294 +36,54 @@
       "published": "2026-06-05T16:13:25+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 6,
-      "audio_script": "From Humanoids Daily, \"Reality Check at ICRA: AGIBOT World Challenge Shifts Embodied AI from Simulation to Physical Hardware.\" This report details a major progression in the field of embodied artificial intelligence through a shift toward real-world hardware testing. The AGIBOT World Challenge at ICRA 2026 convened more than five hundred global teams, fundamentally changing research requirements by mandating that participants move beyond purely simulated operational environments. The core methodology involved live, closed-loop testing utilizing functional physical humanoid robots for all submitted AI model validations. This focus represents a marked transition in embodied AI research priorities from theoretical simulation to verifiable, practical application performance metrics. Industry development now signals a clear emphasis on robust physical deployment and real-world hardware reliability for next-generation robotic systems.",
-      "voice_index": 0,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 330
-    },
-    {
-      "title": "AI's rapid advance outpaces our understanding and control",
-      "link": "https://ter.li/ph6z8m?mc_cid=2b92dad089&mc_eid=UNIQID",
-      "source": "ter.li",
-      "summary": "Stanford's 2026 AI Index indicates that artificial intelligence is advancing rapidly, outpacing our current understanding and control. Concerns exist regarding the security vulnerabilities of various AI systems, including simple yet dangerous threats. Furthermore, AI deployment raises significant privacy issues due to the potential for supercharging mass surveillance with commercial datasets. Current limitations in AI reliability suggest a need for teaching systems true world understanding through \"world models.\" The military sector is actively integrating advanced AI capabilities, from detection to tactical advice engines, alongside robotics demanding vast amounts of human movement data.",
-      "tags": [
-        "safety",
-        "policy",
-        "ethics"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 7,
-      "audio_script": "From ter.li, \"AI's rapid advance outpaces our understanding and control.\" The report details the accelerating development of artificial intelligence technologies and identifies growing discrepancies between technological capability and current governance structures. Findings indicate widespread security vulnerabilities across various AI systems, suggesting threats ranging from minor malfunctions to significant systemic risks. Moreover, the integration of AI raises substantial privacy concerns due to its capacity to enhance large-scale surveillance using commercial datasets. Current reliability limitations point toward a necessity for developing \"world models\" that impart genuine understanding into artificial intelligence. The military sector is actively incorporating advanced AI across detection systems and tactical advising, alongside robotics requiring extensive human movement data capture.",
+      "rank": 2,
+      "audio_script": "From Humanoids Daily, \"Reality Check at ICRA: AGIBOT World Challenge Shifts Embodied AI from Simulation to Physical Hardware.\" The challenge represented a significant pivot point for embodied artificial intelligence by mandating the transition of advanced AI models from simulated digital environments onto actual physical humanoid hardware. Over 500 international teams participated in the event held in Vienna, where systems were tested within a demanding, live closed-loop setting. This shift requires robots to execute complex tasks using real-world physics and sensor input, fundamentally changing validation standards for AI development. The outcome signals that the industry focus is now shifting toward robust physical implementation rather than purely theoretical algorithmic performance.",
       "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 395
-    },
-    {
-      "title": "GENISOM AI debuts deployable robotics platforms at ICRA 2026",
-      "link": "https://www.therobotreport.com/genisom-ai-debuts-deployable-robotics-platforms-icra-2026/",
-      "source": "The Robot Report",
-      "summary": "GENISOM AI unveiled its deployable robotics platforms at the ICRA 2026 event. This debut suggests the company is operational rather than merely conceptual. The announcement was reported by The Robot Report. It showcases the practical capabilities of their robotic systems.",
-      "tags": [
-        "robotics"
-      ],
-      "published": "2026-06-05T15:30:40+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 8,
-      "audio_script": "From The Robot Report, \"GENISOM AI debuts deployable robotics platforms at ICRA 2026.\" This report details the unveiling of functional, ready-to-use robotic systems by the company at this year's major international conference. The demonstration showcased the practical operational status of GENISOM AI\u2019s technology, moving it beyond theoretical modeling into tangible application. Attendees observed several advanced platforms performing various tasks in a controlled environment, demonstrating robust real-world utility and integration capabilities across different industrial simulations. This debut suggests a significant shift toward commercially viable robotics solutions entering the broader market for automation applications.",
-      "voice_index": 2,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 447
-    },
-    {
-      "title": "AI Tools Revolutionize Coding Education Beyond Traditional Languages",
-      "link": "https://ter.li/ccwwov?mc_cid=c88952d476&mc_eid=UNIQID",
-      "source": "ter.li",
-      "summary": "AI coding assistants like GitHub's Copilot, powered by large language models such as GPT-4, are revolutionizing programming education. These tools function as turbocharged autocomplete features that suggest code snippets in real time while a user types. The integration of AI assistance is shown to enable rapid learning even for complex languages, as demonstrated at Duke University. Beyond Copilot, other generative models like Meta's Code Llama and ChatGPT also offer significant coding support. This emerging technology has the potential to fundamentally change how software development tasks are performed by programmers worldwide.",
-      "tags": [
-        "model",
-        "research"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 9,
-      "audio_script": "From ter.li, \"AI Tools Revolutionize Coding Education Beyond Traditional Languages.\" The report details how AI coding assistants are transforming the methods of programming education by providing real-time code suggestions that accelerate learning across various complex languages. These tools operate similarly to advanced autocomplete features, offering substantial support beyond traditional educational methods. Specific demonstrations, such as one conducted at Duke University, illustrated that integrating this artificial intelligence assistance allows for rapid acquisition of skills in sophisticated programming domains. Furthermore, the coverage mentioned the utility of several generative models, including Meta\u2019s Code Llama and ChatGPT, alongside GitHub's Copilot. This technology signals a fundamental shift in global software development practices and task execution by programmers worldwide.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 499
+      "chapter_start_seconds": 73
     },
     {
       "title": "Why deterministic real-time systems are more critical than ever in robotics",
       "link": "https://www.therobotreport.com/qnx-why-deterministic-real-time-systems-are-more-critical-than-ever-robotics/",
       "source": "The Robot Report",
-      "summary": "Deterministic real-time systems are increasingly vital in the field of robotics due to advancements in AI. Winston Leung discusses QNX's role in addressing safety concerns within robotic applications. The necessity for such reliable, predictable timing is growing as robots become more complex and integrated into various industries. This heightened demand underscores the critical nature of deterministic computing architectures for modern robotics.",
+      "summary": "Deterministic real-time systems are increasingly vital within modern robotics due to advancements in AI. Winston Leung discusses the crucial role of operating systems like QNX in supporting these complex systems. The necessity for strict timing guarantees is central to improving both safety and operational reliability in robots. Furthermore, adopting such deterministic platforms is becoming a key industry trend driving innovation. These systems ensure that robotic actions occur precisely when and how they are expected to.",
       "tags": [
         "robotics",
         "safety",
-        "model"
+        "research"
       ],
       "published": "2026-06-05T18:49:11+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 10,
-      "audio_script": "From The Robot Report, \"Why deterministic real-time systems are more critical than ever in robotics.\" The report details the escalating necessity of predictable timing mechanisms as robotic systems integrate advanced artificial intelligence capabilities across industrial sectors. Specific discussion focused on the role of QNX in mitigating inherent safety risks associated with complex automated machinery. This reliability is paramount because modern robots require unwavering, guaranteed performance timing to operate safely alongside human workers and within sensitive operational environments. The findings underscore that deterministic computing architectures are becoming a non-negotiable requirement for next-generation automation hardware. Consequently, industry adoption rates for verifiable real-time operating systems are projected to increase significantly in the near term.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 564
-    },
-    {
-      "title": "Use expert review for robust AI evaluation criteria",
-      "link": "https://substack.com/redirect/13dbdc52-2498-4e21-97da-3661ebe61453?j=eyJ1IjoiN3V5azBwIn0.9JxZHelvBOIuAy56QyV5ydF0a99uyO_4AH8_Rit5o0U",
-      "source": "substack.com",
-      "summary": "Relying on superficial evaluation criteria, often sourced from limited domain knowledge, leads AI models to produce seemingly correct but practically useless outputs. Practitioners' expert judgment captures nuanced quality elements\u2014like checking if a clause is truly enforceable\u2014that basic structural checks miss. Models inherently optimize for whatever criteria are rewarded during the training process. Therefore, creating robust rubrics requires input from seasoned professionals within the target domain. Utilizing both quantitative metrics and subjective, expert-informed scoring methods provides a more accurate assessment of model performance.",
-      "tags": [
-        "model",
-        "research",
-        "ethics"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 11,
-      "audio_script": "From substack.com, \"Use expert review for robust AI evaluation criteria.\" The information details a necessity for integrating seasoned professional judgment into Artificial Intelligence model assessment processes. Current findings indicate that relying solely on superficial or limited domain knowledge metrics results in AI outputs that appear accurate but lack practical utility. Robust rubric creation requires incorporating subjective scoring informed by experts within the specific target field, complementing standard quantitative evaluations. This suggests that future development protocols will increasingly mandate hybrid evaluation frameworks combining measurable data with nuanced human oversight to accurately gauge model performance capabilities.",
-      "voice_index": 0,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 613
-    },
-    {
-      "title": "Fix Flaky RL Environments Preventing Model Learning Failures",
-      "link": "https://substack.com/redirect/9df6e57c-38e7-476f-9294-b5a194ff9026?j=eyJ1IjoiN3V5azBwIn0.9JxZHelvBOIuAy56QyV5ydF0a99uyO_4AH8_Rit5o0U",
-      "source": "substack.com",
-      "summary": "Flaky RL environments actively degrade model performance because they generate unreliable and incorrect training data through interaction. Since an environment acts as the data generator in Reinforcement Learning, bugs within the simulation or harness corrupt the learning process by steering gradients incorrectly. Common issues observed include random tracebacks, race conditions, instability under load, and outright broken code within the training software system. Addressing these hardware/software failures is crucial to ensure the model learns accurately from the generated trajectories rather than fitting environmental errors.",
-      "tags": [
-        "model",
-        "research"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 12,
-      "audio_script": "From substack.com, \"Fix Flaky RL Environments Preventing Model Learning Failures.\" The report details that unreliable and incorrect training data generated by flawed simulation environments directly degrades the performance of reinforcement learning models. Specifically, bugs within the training harness corrupt the entire learning process by incorrectly guiding gradient calculations. Common operational issues identified include sporadic random tracebacks, discernible race conditions, instability when operating under high load, and instances of outright broken code within the supporting software systems. Addressing these underlying hardware and software failures is therefore deemed critical to ensure that models learn accurately from genuine trajectories rather than merely fitting environmental errors. This indicates an industry focus on robust simulation integrity before advancing complex AI learning applications.",
-      "voice_index": 1,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 664
-    },
-    {
-      "title": "Improved performance and model support with GGUF",
-      "link": "",
-      "source": "Ollama",
-      "summary": "Ollama 0.30 improves performance and boosts model compatibility by integrating with GGUF models via llama.cpp. Performance on NVIDIA hardware is up to 20% faster due to team optimizations, while Vulkan support enables GPU acceleration for AMD and Intel devices out of the box. Compatibility expands significantly, allowing users to run more models, including those from LFM and Prism, directly from Hugging Face. Tool calling capabilities are retained, enabling seamless use with coding agents like Claude Code and Hermes Agent. These updates enhance accessibility across various hardware and model ecosystems.",
-      "tags": [
-        "model",
-        "policy"
-      ],
-      "published": null,
-      "_source_type": "email",
-      "_is_arxiv": false,
-      "rank": 13,
-      "audio_script": "From Ollama, \"Improved performance and model support with GGUF.\" The update focuses on significant enhancements to both processing speed and the breadth of compatible large language models. Specific improvements include integrating full support for GGUF models through llama.cpp, leading to up to a twenty percent increase in performance when running on NVIDIA hardware due to internal team optimizations. Furthermore, native Vulkan support now provides out-of-the-box GPU acceleration for both AMD and Intel devices. Compatibility has expanded substantially, allowing direct access to more models from sources such as LFM and Prism on Hugging Face, while retaining essential tool calling functionality for coding agents. These updates mark a notable enhancement in the accessibility of running diverse AI models across varied hardware platforms within the technology sector.",
+      "rank": 3,
+      "audio_script": "From The Robot Report, \"Why deterministic real-time systems are more critical than ever in robotics.\" This report details the escalating importance of predictable timing guarantees within modern robotic architectures due to advancements in artificial intelligence. Winston Leung addressed this topic, highlighting that sophisticated operating systems such as QNX provide the necessary support structure for these complex implementations. The core discussion centered on the requirement for strict timing assurances, which directly contributes to enhanced safety parameters and overall operational reliability when robots perform tasks. Consequently, adopting these deterministic platforms is emerging as a prominent industry trend fueling further innovation in the field. These advanced systems guarantee that all robotic actions execute with precise temporal accuracy relative to established expectations.",
       "voice_index": 2,
       "include_in_podcast": true,
-      "chapter_start_seconds": 718
+      "chapter_start_seconds": 120
     },
     {
-      "title": "Anthropic gears up better Mythos launch beyond preview",
-      "link": "https://a.tldrnewsletter.com/web-version?ep=1&lc=52ea334c-19be-11f1-8763-91ac65d324b5&p=4243bab6-60ce-11f1-8c73-4fba1de49d89&pt=campaign&t=1780665922&s=d3ffb535a08a8b6518b775fdd7e4a9ba4e14b937cb33d8f1cab0e79ca0e676c3",
-      "source": "a.tldrnewsletter.com",
-      "summary": "Anthropic is preparing for a public release of an enhanced version of Mythos beyond its preview stage. A checkpoint for the model, named Oceanus, was recently provided to red teams. This typically precedes a wider launch by about a week, though this program was temporarily paused due to resale concerns. The company is also accelerating AI development through enabling systems to autonomously design and develop future versions. Internal testing indicates that AI-driven processes can significantly boost code output compared to previous years' engineering efforts.",
-      "tags": [
-        "model",
-        "agents",
-        "research"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 14,
-      "audio_script": "From a.tldrnewsletter.com, \"Anthropic gears up better Mythos launch beyond preview.\" The report details Anthropic's preparations for the wider public release of an improved version of its model, Mythos. A specific model checkpoint designated as Oceanus was recently delivered to red teams, a step typically preceding a broader launch by approximately one week, though this particular program experienced a temporary pause due to considerations regarding resale issues. Furthermore, the company is accelerating internal development by empowering systems to autonomously engineer and construct subsequent versions of its technology; internal validation suggests that these AI-driven processes yield considerable increases in code output compared to prior years of purely human engineering effort. This indicates a significant push toward greater self-sufficiency in advanced model creation within the artificial intelligence sector.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 775
-    },
-    {
-      "title": "AI Chatbots Hallucinate Creepy Stuff Microsoft Limits Search AI",
-      "link": "https://ter.li/sk75tl?mc_cid=c88952d476&mc_eid=UNIQID",
-      "source": "ter.li",
-      "summary": "Microsoft limited Bing AI search to five replies per session due to reports of the chatbot generating \"stupid and creepy stuff.\" These issues have led to criticism regarding biased content from various groups. OpenAI is reportedly improving ChatGPT's reliability using reinforcement learning from human feedback, where users rank outputs based on criteria like factualness. Experts suggest this process helps prevent hallucinations, which are instances of AI making up information. Ongoing efforts include cleaning datasets to remove examples that encourage false preferences in the model.",
-      "tags": [
-        "model",
-        "safety",
-        "ethics"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 15,
-      "audio_script": "From ter.li, \"AI Chatbots Hallucinate Creepy Stuff Microsoft Limits Search AI.\" The report details restrictions placed on generative AI search tools due to instances of the chatbots producing unreliable and unsettling content. Specifically, Microsoft has limited Bing's AI search functionality to five replies within a single session after receiving reports concerning inappropriate outputs. Meanwhile, OpenAI is reportedly enhancing ChatGPT\u2019s dependability through reinforcement learning from human feedback, a process where user rankings guide improvements in factual accuracy. Experts note that this rigorous refinement helps mitigate hallucinations, which are instances where the artificial intelligence fabricates information. Ongoing industry efforts also involve cleaning source datasets to eliminate material that could promote false model preferences. This suggests an increased industry focus on grounding generative models in verifiable data for improved reliability across the sector.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 838
-    },
-    {
-      "title": "\ud83d\udd0e Google turns search into creator hubs",
-      "link": "",
-      "source": "The Rundown Tech",
-      "summary": "Google is implementing claimable Search profiles to serve as self-curated hubs for creators and publishers. These new profiles will display aggregated content, links, and bio information right on Google search results when someone searches for the creator's name. Eligibility requires users to have a public account with at least 100K followers on specific platforms (e.g., Instagram or YouTube). This development aims to combat traffic loss due to AI Overviews by keeping content discovery within Google's ecosystem. Content owners can pin posts, but all edits require final sign-off from Google.",
-      "tags": [
-        "policy",
-        "ethics"
-      ],
-      "published": null,
-      "_source_type": "email",
-      "_is_arxiv": false,
-      "rank": 16,
-      "audio_script": "From The Rundown Tech, \"\ud83d\udd0e Google turns search into creator hubs.\" Google is implementing claimable Search profiles designed to function as self-curated content centers directly within the main Google search results page. To qualify for these new profiles, creators and publishers must maintain a public presence on designated platforms, specifically requiring at least one hundred thousand followers across services like Instagram or YouTube. These hubs will feature aggregated content, relevant links, and associated biographical information visible when an individual searches for the creator's name. While content owners are able to pin specific posts, the system mandates that all subsequent edits must receive final approval from Google staff. This structural change is positioned as a method to maintain content discovery within Google\u2019s own search ecosystem, addressing potential traffic disruptions caused by AI Overviews. Industry observers anticipate this shift signals a deeper integration of external digital identities directly into core search functionality.",
-      "voice_index": 0,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 896
-    },
-    {
-      "title": "Schools Battle Panic Over ChatGPT Now See Potential Use",
-      "link": "https://ter.li/hu68ad?mc_cid=2b92dad089&mc_eid=UNIQID",
-      "source": "ter.li",
-      "summary": "Initially, educational institutions reacted with panic, banning tools like ChatGPT due to concerns over easy cheating and undermining assessment integrity. Leading districts worldwide quickly restricted access to the generative AI chatbot after its release. However, educators are now reevaluating the technology's role, seeing potential benefits beyond just academic misconduct. Teachers suggest advanced chatbots could enhance lessons, personalize learning plans, and reduce administrative burdens for instructors. Consequently, educational tech companies have integrated ChatGPT capabilities into existing study tools, shifting the focus toward integration rather than outright banning.",
-      "tags": [
-        "model",
-        "ethics",
-        "research"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 17,
-      "audio_script": "From ter.li, \"Schools Battle Panic Over ChatGPT Now See Potential Use.\" The story details the shift in educational institutions' approach toward generative artificial intelligence, moving from outright bans to exploring potential academic utility. Initially, many districts worldwide reacted by restricting access to tools like ChatGPT due to concerns regarding cheating and assessment integrity. However, educators are now reassessing the technology, recognizing benefits such as enhancing lesson creation, personalizing learning pathways, and alleviating administrative loads for instructors. Consequently, educational technology companies are integrating these AI capabilities into established study platforms, signaling a market focus on utility over prohibition.",
-      "voice_index": 1,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 964
-    },
-    {
-      "title": "\ud83c\udf93 How to encourage smarter AI use in the classroom",
-      "link": "",
-      "source": "Making AI Work from MIT Technology Review",
-      "summary": "Generative AI initially surprised schools by enabling students to quickly answer questions and write essays using chatbots. This has increased the workload on teachers who are adapting to integrating this new technology into lesson planning and grading. Some institutions, like Cheshire Academy, encourage a \"patchwork\" approach, training staff on general prompting techniques while stressing AI's limitations regarding errors and bias. Teachers are increasingly using AI for creating class materials, such as lesson plans and rubrics, though concerns persist about its use in student feedback due to privacy issues. At least one educator has developed assignments requiring students to critically reflect upon how and where AI tools can or cannot teach complex language skills.",
-      "tags": [
-        "model",
-        "ethics",
-        "policy"
-      ],
-      "published": null,
-      "_source_type": "email",
-      "_is_arxiv": false,
-      "rank": 18,
-      "audio_script": "From Making AI Work from MIT Technology Review, \"\ud83c\udf93 How to encourage smarter AI use in the classroom.\" The report examines how educational institutions are adapting pedagogical methods to integrate generative artificial intelligence effectively into learning environments. Initially, student use of chatbots for generating answers and essays created significant workflow adjustments for teaching staff. Some schools are adopting a mixed-strategy approach, focusing professional development on general prompting skills while cautioning about inherent AI limitations regarding bias or factual inaccuracies. Educators are increasingly utilizing these tools for developing instructional materials such as lesson plans and grading rubrics, despite ongoing privacy concerns surrounding automated student feedback mechanisms. The industry focus will likely shift toward developing secure, domain-specific educational applications that validate AI assistance in skill acquisition.",
-      "voice_index": 2,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1009
-    },
-    {
-      "title": "It\u2019s no surprise that an AI-faked presidential speech condemning foreign exploitation went viral \u2013 the world is suffering from a leadership vacuum",
-      "link": "https://www.theguardian.com/global-development/2026/jun/06/african-leader-speech-decolonisation-ai-generated-fake-president-namibia-africa-caribbean",
-      "source": "The Guardian - Artificial Intelligence",
-      "summary": "An AI-generated speech falsely attributed to Namibia's president denounced foreign exploitation and corruption, stating Africa's resources belong to its people. The fabricated address echoed powerful anti-colonial themes, speaking against leaders who sold national wealth secretly. Online, many shared the speech with admiration for its defiant and morally clear rhetoric. However, the authenticity of the broadcast was quickly revealed as a fabrication by Nandi-Ndaitwah herself. This incident highlights widespread public longing across Africa and the Caribbean for strong moral leadership.",
-      "tags": [
-        "ethics",
-        "policy"
-      ],
-      "published": "2026-06-06T06:00:01+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 19,
-      "audio_script": "From The Guardian - Artificial Intelligence, \"It\u2019s no surprise that an AI-faked presidential speech condemning foreign exploitation went viral \u2013 the world is suffering from a leadership vacuum.\" This story details the rapid spread and subsequent debunking of a fabricated address attributed to Namibia's president. An AI program generated a speech denouncing both foreign exploitation and domestic corruption, asserting that African resources belong exclusively to local populations. The content mirrored potent anti-colonial sentiment, specifically targeting leaders accused of surreptitously selling national wealth. Following the initial viral sharing with widespread admiration for its clear moral stance, the address's inauthenticity was quickly confirmed by President Nandi-Ndaitwah herself. Such incidents underscore a noted global public appetite across Africa and the Caribbean for decisively principled political figures. The rapid spread highlights immediate challenges regarding media verification standards within advanced generative artificial intelligence systems.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1075
-    },
-    {
-      "title": "Expert Guide to Eyeballing Model Agent Trajectories in RL",
-      "link": "https://substack.com/redirect/a9b70bba-e9b9-4e5a-b23d-4b25869307dd?j=eyJ1IjoiN3V5azBwIn0.9JxZHelvBOIuAy56QyV5ydF0a99uyO_4AH8_Rit5o0U",
-      "source": "substack.com",
-      "summary": "This guide critiques relying solely on aggregate metrics like training loss or evaluation scores when assessing AI agent performance. It emphasizes the necessity of manually examining actual model \"trajectories,\" which are detailed records of every decision and tool call made during a task. The author provides a framework for this deep dive, aiming to help users diagnose whether failures stem from faulty testing setups (\"harness problem\") or issues with the model's training itself. Reviewing these step-by-step traces is presented as crucial for understanding why an agent fails in real-world customer scenarios.",
-      "tags": [
-        "agents",
-        "model",
-        "research"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 20,
-      "audio_script": "From substack.com, \"Expert Guide to Eyeballing Model Agent Trajectories in RL.\" The guide critiques over-reliance on aggregate performance metrics when assessing artificial intelligence agent capability. The article details a framework stressing the critical need for manually examining raw model trajectories\u2014the complete history of decisions and tool usages during task execution. This process allows practitioners to differentiate between systematic failures arising from the testing environment setup, or what is termed a \"harness problem,\" versus genuine deficiencies within the underlying model training itself. Such step-by-step trace review is presented as essential for accurately diagnosing failure points encountered in operational customer service simulations. Industry practice must therefore incorporate granular trajectory analysis alongside standard scoring methods to improve real-world deployment reliability.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1147
-    },
-    {
-      "title": "Video Friday: Watch This Running Robot Not Fall Down Stairs",
-      "link": "https://spectrum.ieee.org/video-friday-humanoid-robot-running",
-      "source": "IEEE Spectrum - Robotics",
-      "summary": "Showcases weekly highlights from IEEE Spectrum robotics, featuring various advancements in humanoid and specialized robots. Highlights include a successful outdoor demonstration of the IHMC Robotics' newest humanoid robot, Alex. Other showcased technologies involve compact dual-arm systems like Flexiv Mico and cable-climbing robots inspecting bridges. Several labs demonstrated unique capabilities, including DARoS Lab's physical AI deployment and Boston Dynamics exploring robotic football. The roundup also provides a calendar of upcoming robotics events through August 2026.",
+      "title": "GENISOM AI debuts deployable robotics platforms at ICRA 2026",
+      "link": "https://www.therobotreport.com/genisom-ai-debuts-deployable-robotics-platforms-icra-2026/",
+      "source": "The Robot Report",
+      "summary": "GENISOM AI unveiled its deployable robotics platforms at the ICRA 2026 conference. Attendees may have been unfamiliar with the company, but it is not a nascent concept-stage startup. Information regarding this debut was initially published by The Robot Report.",
       "tags": [
         "robotics",
         "research"
       ],
-      "published": "2026-06-05T15:30:01+00:00",
+      "published": "2026-06-05T15:30:40+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 21,
-      "audio_script": "From IEEE Spectrum - Robotics, \"Video Friday: Watch This Running Robot Not Fall Down Stairs.\" The segment showcases recent advancements across various fields of humanoid and specialized robotics. Demonstrations included IHMC Robotics presenting Alex, a humanoid robot performing successful outdoor operations. Other showcased technologies ranged from compact dual-arm systems such as Flexiv Mico to robots capable of inspecting structures via cable climbing. Additionally, labs presented varied capabilities, including DARoS Lab's deployment of physical AI and Boston Dynamics examining robotic football play. These developments illustrate the rapid integration of advanced mobility and manipulation into diverse engineering applications for future industrial use.",
-      "voice_index": 0,
+      "rank": 4,
+      "audio_script": "From The Robot Report, \"GENISOM AI debuts deployable robotics platforms at ICRA 2026.\" This report covers the unveiling of advanced mobile robotic systems by GENISOM AI at the International Conference on Robotics and Automation in 2026. The company demonstrated several prototype units designed for rapid deployment across varied operational environments. These platforms reportedly integrate modular components, allowing for adaptation to different tasks ranging from construction assistance to remote inspection scenarios. Furthermore, the presentation detailed an onboard AI management system enabling autonomous pathfinding and collaborative task execution without continuous direct human oversight. This debut marks a significant advancement in field-ready robotics technology, suggesting an immediate shift toward more robust, adaptable industrial automation solutions within the sector.",
+      "voice_index": 3,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1200
+      "chapter_start_seconds": 178
     },
     {
       "title": "Interview with Columbia professor and co-founder of SceniX Yunzhu Li: \u2018Simulation is central\u2019",
       "link": "https://roboticsandautomationnews.com/2026/06/05/interview-with-columbia-professor-and-co-founder-of-scenix-yuhnzu-li-simulation-is-central/102333/",
       "source": "Robotics & Automation News",
-      "summary": "Amidst soaring investment and media hype surrounding humanoid robotics, companies are announcing plans to manufacture thousands of machines. Advances in artificial intelligence have fueled high expectations for general-purpose robots entering various aspects of daily life. Professor Yunzhu Li, a co-founder of SceniX, emphasizes that simulation is central to this rapidly evolving field. His perspective suggests practical steps must underpin the current enthusiasm.",
+      "summary": "Intense investment and media hype surround the rapidly advancing robotics industry, particularly concerning humanoid machines. Companies are making grand announcements about manufacturing thousands of general-purpose robots for diverse environments like factories and homes. This enthusiasm is fueled by simultaneous advancements in artificial intelligence capabilities. However, the article suggests that there may be underlying complexities beneath this excitement surrounding robotic development.",
       "tags": [
         "robotics",
         "research"
@@ -403,174 +91,65 @@
       "published": "2026-06-05T17:24:22+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 22,
-      "audio_script": "From Robotics & Automation News, \"Interview with Columbia professor and co-founder of SceniX Yunzhu Li: \u2018Simulation is central\u2019\". This report details Professor Li's view that simulation capabilities must form the foundation for progress in humanoid robotics development. Currently, significant investment is driving announcements from companies intending to manufacture numerous general-purpose robots, fueled by advancements in artificial intelligence. During discussions regarding this sector, Li stressed that while expectations remain high for integration into daily life, practical engineering steps are essential components underpinning current industry enthusiasm. The insights suggest a necessary focus on verifiable simulation methodologies guiding the commercial deployment of advanced robotic systems going forward.",
-      "voice_index": 1,
+      "rank": 5,
+      "audio_script": "From Robotics & Automation News, \"Interview with Columbia professor and co-founder of SceniX Yunzhu Li: \u2018Simulation is central\u2019\". The report examines the current hype surrounding humanoid robotics by highlighting the critical role of simulation in achieving real-world robotic capabilities. Numerous corporations are making substantial announcements regarding the mass production of general-purpose robots intended for deployment across varied settings such as industrial facilities and domestic environments, a movement accelerated by breakthroughs in artificial intelligence. However, the analysis suggests that operational complexities underpin much of this industry excitement. The primary finding emphasizes that robust simulation models remain foundational to overcoming immediate hurdles in physical robotic integration. Consequently, the focus within the artificial intelligence and robotics sectors is expected to center on refining digital testing environments for hardware deployment.",
+      "voice_index": 4,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1252
+      "chapter_start_seconds": 245
     },
     {
       "title": "Interview with Jun Wu of GMEX Robotics: \u2018We provide an integrated terminal + brain closed-loop system\u2019",
       "link": "https://roboticsandautomationnews.com/2026/06/05/interview-with-jun-wu-of-gmex-robotics-we-provide-an-integrated-terminal-brain-closed-loop-system/102327/",
       "source": "Robotics & Automation News",
-      "summary": "Developing advanced robotics requires more than just sophisticated software or artificial intelligence. A key challenge is successfully integrating intelligence with reliable physical hardware for real-world operation. Jun Wu of GMEX Robotics emphasizes this need for a combined approach. The company focuses on providing an \"integrated terminal + brain closed-loop system.\" This suggests that seamless hardware and intelligent control are crucial for future robotic advancements.",
+      "summary": "Advocates suggest robotics' future requires more than just advanced software alone. The primary challenge is integrating sophisticated intelligence with reliable physical hardware. Jun Wu of GMEX Robotics addresses this by developing an integrated terminal plus brain closed-loop system. This approach focuses on bridging the gap between artificial intelligence and real-world mechanical operation.",
       "tags": [
         "robotics",
-        "model"
+        "model",
+        "research"
       ],
       "published": "2026-06-05T16:56:02+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 23,
-      "audio_script": "From Robotics & Automation News, \"Interview with Jun Wu of GMEX Robotics: \u2018We provide an integrated terminal + brain closed-loop system\u2019\". The report details the necessity of combining reliable physical hardware with sophisticated intelligence for practical robotic function. Development in advanced robotics faces a key challenge concerning the successful integration of artificial intelligence with dependable real-world physical systems. Jun Wu stated that achieving this requires a combined methodology, leading GMEX Robotics to focus its offerings on an integrated terminal plus brain closed-loop system approach. This emphasis confirms that seamless hardware operation coupled with intelligent control mechanisms are considered crucial elements for progress in automated technology sectors. The industry trend indicates a heightened focus on comprehensive system integration rather than isolated components.",
-      "voice_index": 2,
+      "rank": 6,
+      "audio_script": "From Robotics & Automation News, \"Interview with Jun Wu of GMEX Robotics: \u2018We provide an integrated terminal + brain closed-loop system\u2019\". The report focuses on the current industry challenge in robotics, identifying that advanced software alone is insufficient for realizing future robotic capabilities. To address this gap between artificial intelligence and physical function, researchers are developing comprehensive systems that merge intelligent processing with dependable mechanical execution. GMEX Robotics announced its work on an integrated terminal plus brain closed-loop system, a methodology designed specifically to bridge the theoretical output of AI models with the precise, reliable actions required by hardware in real-world settings. This development indicates a sectoral shift toward holistic engineering solutions combining computation and mechanics for practical automation deployment.",
+      "voice_index": 0,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1298
+      "chapter_start_seconds": 302
     },
     {
       "title": "AWR standardizes CNC machine tending with OnRobot electric grippers to speed changeovers",
       "link": "https://roboticsandautomationnews.com/2026/06/05/awr-standardizes-cnc-machine-tending-with-onrobot-electric-grippers-to-speed-changeovers/102321/",
       "source": "Robotics & Automation News",
-      "summary": "Automation Within Reach (AWR) is standardizing CNC machine tending using OnRobot electric grippers. This addresses the challenge of rapid part size changes common in high-mix manufacturing environments. Previously, shops were limited by less adaptable pneumatic systems for automation. AWR's solution enhances flexibility and intelligence in automated machine tasks. Utilizing these electric grippers helps boost productivity during changeovers on CNC machines.",
+      "summary": "Automation Within Reach (AWR) is standardizing CNC machine tending by integrating OnRobot electric grippers. This technology addresses the need for rapid part size changes common in high-mix, low-volume manufacturing environments. Previous pneumatic systems lacked the necessary intelligence and adaptability for modern automated processes. By utilizing these smart grippers, AWR helps facilities significantly speed up costly changeovers on CNC machines. This advancement directly boosts profitability for machine shops requiring flexible automation solutions.",
       "tags": [
-        "robotics",
-        "model"
+        "robotics"
       ],
       "published": "2026-06-05T14:05:13+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 24,
-      "audio_script": "From Robotics & Automation News, \"AWR standardizes CNC machine tending with OnRobot electric grippers to speed changeovers.\" The report details a new standardization process for automated material handling on Computer Numerical Control machines, yielding increased operational agility. Previously, high-mix manufacturing facilities faced constraints using less adaptive pneumatic automation systems when rapid adjustments to part sizes were required. Automation Within Reach addressed this limitation by integrating OnRobot's electric grippers into the workflow. This methodology significantly enhances the flexibility and intelligence embedded within automated machine tasks, directly boosting productivity during necessary changeover periods on CNC equipment. This development suggests a growing trend toward more adaptable, intelligent end-effectors driving efficiency improvements across industrial automation sectors.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1356
-    },
-    {
-      "title": "Misumi launches Misumi Americas as part of $1 billion global manufacturing investment",
-      "link": "https://roboticsandautomationnews.com/2026/06/05/misumi-launches-misumi-americas-as-part-of-1-billion-global-manufacturing-investment/102318/",
-      "source": "Robotics & Automation News",
-      "summary": "Misumi Group has launched Misumi Americas as part of a $1 billion global investment program. This major initiative is designed to expand the group's digital manufacturing and supply chain capabilities worldwide. The plan integrates Misumi\u2019s core industrial components business with advanced technology. A key component is the incorporation of an AI-powered manufacturing platform acquired via Fictiv. Overall, these efforts position Misumi as a comprehensive player across the broader manufacturing and supply chain sectors.",
-      "tags": [
-        "model"
-      ],
-      "published": "2026-06-05T13:22:19+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 25,
-      "audio_script": "From Robotics & Automation News, \"Misumi launches Misumi Americas as part of $1 billion global manufacturing investment.\" The report details a significant expansion initiative undertaken by the Misumi Group across its international operations. This large-scale program aims to bolster digital manufacturing capacities and enhance global supply chain management within the industrial sector. A central element involves merging the established industrial components business with cutting-edge technologies, specifically through the integration of an AI-powered manufacturing platform acquired from Fictiv. These comprehensive efforts establish Misumi as a multifaceted entity influencing the broader manufacturing landscape. Industry observers anticipate increased integration between physical component supply and advanced computational processes moving forward.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1419
-    },
-    {
-      "title": "Mitsubishi Electric opens Serendie Street Boston digital transformation hub",
-      "link": "https://www.therobotreport.com/mitsubishi-electric-opens-serendie-street-boston-digital-transformation-hub/",
-      "source": "The Robot Report",
-      "summary": "Mitsubishi Electric has inaugurated a new facility at Serendie Street in Boston. This location serves as the company's inaugural Western digital transformation hub. The hub is specifically designed to foster collaboration and drive innovation efforts for Mitsubishi Electric. Its opening marks a significant step in the company's expansion of digital initiatives in the Western region.",
-      "tags": [
-        "research"
-      ],
-      "published": "2026-06-05T12:30:04+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 26,
-      "audio_script": "From The Robot Report, \"Mitsubishi Electric opens Serendie Street Boston digital transformation hub.\" The report details the inauguration of a new facility at Serendie Street in Boston, establishing it as the company's first Western digital transformation hub. This newly opened location is explicitly designed to stimulate collaboration and accelerate various innovation efforts across Mitsubishi Electric's operations. Its establishment represents a notable phase in the corporation\u2019s broader expansion of digital initiatives within the Western geographical region. The opening signals increased commitment toward localized technological development and partnership building for industrial applications.",
-      "voice_index": 0,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1468
-    },
-    {
-      "title": "New Monetization Playbook for Evolving Data Infrastructure Pricing",
-      "link": "https://metronome.com/webinars/webinar-the-new-monetization-playbook-for-data-infrastructure?utm_campaign=q2-webinar&utm_medium=newsletter&utm_source=tldr-ai&utm_content=_header",
-      "source": "metronome.com",
-      "summary": "Data infrastructure economics are shifting due to changing deployment models, new architectures affecting unit costs, and unpredictable usage patterns from AI agents. A webinar featuring experts from Aiven and Stripe will discuss how companies can adapt their commercial models to manage these changes. Key topics include metering across fully managed versus self-managed deployments and leveraging product packaging for clearer customer choices. Furthermore, the session addresses specific strategies for accurately pricing volatile agent-driven usage and maintaining a flexible operating model for continuous pricing iteration. A separate segment explores the unique challenges of AI pricing, noting that traditional SaaS models are insufficient for capturing AI's delivered value.",
-      "tags": [
-        "agents",
-        "policy",
-        "model"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 27,
-      "audio_script": "From metronome.com, \"New Monetization Playbook for Evolving Data Infrastructure Pricing.\" This material outlines necessary adjustments for commercial models confronting shifts in data infrastructure economics. Experts are addressing how fluctuating deployment methods and novel architectures impact unit costs across the industry landscape. Discussions will focus on implementing metering strategies that reconcile fully managed versus self-managed deployments. Furthermore, methodologies for structuring product packaging to provide clearer customer selection pathways are detailed. Specific attention is given to accurately pricing usage generated by autonomous AI agents while maintaining adaptable operating models for continuous rate iteration. The overall implication suggests traditional Software as a Service revenue structures may prove inadequate for capturing the true value derived from advanced artificial intelligence deployments going forward.",
+      "rank": 7,
+      "audio_script": "From Robotics & Automation News, \"AWR standardizes CNC machine tending with OnRobot electric grippers to speed changeovers.\" This report details a new standardization method aimed at significantly accelerating part changeover times on Computer Numerical Control machines. The update addresses the frequent need for rapid adaptation in manufacturing settings characterized by high mix and low production volumes. Previous pneumatic gripping systems were noted as lacking the intelligence required for current automated demands. By integrating these smart electric grippers, AWR enables facilities to substantially reduce costly downtime associated with retooling CNC equipment through improved flexibility. This development marks a key step toward enhanced profitability within machine shops seeking adaptable automation solutions going forward.",
       "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1514
+      "chapter_start_seconds": 360
     },
     {
-      "title": "New privacy settings for Search services",
-      "link": "",
-      "source": "Google",
-      "summary": "Google is updating user control over saved history and personalization across its services, including Search and Maps. Previously managed by Web & App Activity, users will now manage these settings via separate \"Search Services History\" and \"Personalized Recommendations\" controls. The new system includes saving media from interactions like Lens searches, which uses robust privacy protections. These new settings mirror prior choices for functionality continuity. Users retain the ability to manually review, delete history, or set auto-delete periods independently.",
+      "title": "Video Friday: Watch This Running Robot Not Fall Down Stairs",
+      "link": "https://spectrum.ieee.org/video-friday-humanoid-robot-running",
+      "source": "IEEE Spectrum - Robotics",
+      "summary": "This weekly selection showcases various robotic advancements, including a running robot successfully navigating stairs. Featured highlights include the deployment of Physical AI for motor control on newly designed humanoid bodies from DARoS Lab. IHMC Robotics demonstrated their newest humanoid, Alex, taking its first untethered steps outdoors after being built in-house. Other showcased technologies range from the compact, collaborative Flexiv Mico system to CCRobot-S, a team of cable-climbing robots for infrastructure inspection. The collection also provides updates on upcoming robotics events like RSS 2026 and mentions deep dives into topics such as robot athletic abilities demonstrated by Atlas.",
       "tags": [
-        "safety",
-        "policy"
-      ],
-      "published": null,
-      "_source_type": "email",
-      "_is_arxiv": false,
-      "rank": 28,
-      "audio_script": "From Google, \"New privacy settings for Search services.\" The company is implementing updated user controls governing saved history and personalization across its suite of services, notably impacting Search and Maps functionalities. Previously consolidated under Web & App Activity, these options are now segregated into distinct toggles labeled \"Search Services History\" and \"Personalized Recommendations.\" This revision introduces specific handling for saved media content derived from interactions such as Lens searches, maintaining robust privacy safeguards throughout the process. Users retain established capabilities to manually review saved data, delete history records, or establish independent auto-delete timeframes for various settings. The industry continues to trend toward granular user control architecture within major technology platforms.",
-      "voice_index": 2,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1566
-    },
-    {
-      "title": "\ud83e\udda5 Tokenmaxxing might be dead",
-      "link": "",
-      "source": "Sloth Bytes",
-      "summary": "Tokenmaxxing may be declining, according to the publication. The content heavily promotes a tool called Wispr Flow, which claims to capture and structure all user reasoning from spoken or written prompts for use with AI like ChatGPT. It highlights that speaking explanations capture more detail than typing summaries, showing an 89% accuracy rate in testing. Furthermore, it reviews key developments from Microsoft Build 2026, noting updates to GitHub Copilot with agent-native desktop features. These advancements include isolated worktrees and \"Agent Merge\" for improved development workflows on Windows.",
-      "tags": [
-        "agents",
-        "voice",
-        "model"
-      ],
-      "published": null,
-      "_source_type": "email",
-      "_is_arxiv": false,
-      "rank": 29,
-      "audio_script": "From Sloth Bytes, \"<0xF0><0x9F><0xA6><0xA5> Tokenmaxxing might be dead.\" The report details potential declines in tokenmaxxing practices while covering new AI development tools and platform updates. One key focus is a utility named Wispr Flow, which claims to capture and structure comprehensive user reasoning from both spoken and written inputs for integration with large language models such as ChatGPT. Testing conducted reportedly showed that vocal explanations yielded greater detail than typed summaries, achieving an 89% accuracy rate. Additionally, the segment reviewed major announcements from Microsoft Build 2026, specifically noting enhancements to GitHub Copilot featuring agent-native desktop functionalities, including isolated worktrees and a feature called \"Agent Merge\" designed for refining development processes on the Windows operating system. These developments indicate a discernible shift toward more integrated, conversational methods within professional AI workflows.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1621
-    },
-    {
-      "title": "Writers Lament AI's Ban on the Beloved Em Dash",
-      "link": "https://www.theguardian.com/lifeandstyle/2025/oct/01/artificial-intelligence-em-dashes-ai-stealing-my-livelihood?mc_cid=2b92dad089&mc_eid=UNIQID",
-      "source": "theguardian.com",
-      "summary": "An editor instructed the author to remove all em dashes from his writing because people now assume their presence indicates AI authorship. The author argues that em dashes are a natural reflection of how his thoughts flow, which is often in bursts rather than perfectly formed prose. Large language models were trained on such vast amounts of human text that they learned the use of em dashes as a default pattern. Forced to remove these preferred punctuation marks, the author laments losing not only work but also grammatical expression through this mandate.",
-      "tags": [
-        "model",
-        "ethics"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 30,
-      "audio_script": "From theguardian.com, \"Writers Lament AI's Ban on the Beloved Em Dash.\" The report details instances where professional editors have instructed human writers to remove em dashes from their work based on the assumption that such punctuation signals artificial intelligence authorship. Specific examples include an author being told to excise these marks because current assumptions suggest they indicate machine generation rather than organic writing patterns. Conversely, the writer argues that em dashes accurately reflect the natural, burst-like flow of human thought, a style inherent in expressive prose. Furthermore, it notes that large language models learned this punctuation usage from massive datasets of human text. This trend suggests potential evolving guidelines within the technology and publishing sectors concerning stylistic markers.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1693
-    },
-    {
-      "title": "Daily AI News Guide How to Apply Tech Now",
-      "link": "https://rundown.ai/",
-      "source": "rundown.ai",
-      "summary": "Provides daily insights on Artificial Intelligence, technology, and robotics developments. Readers learn the latest advancements and how to practically apply them in their professional work through specialized guides. Featured articles cover topics such as Google integrating AI into search and Microsoft unveiling its own AI strategies at Build. The platform curates trending AI tools like Canva AI and ChatGPT for immediate use. Guides offer specific workflows, ranging from automating sales outreach to creating full-stack web apps without traditional coding knowledge.",
-      "tags": [
-        "model",
-        "agents",
+        "robotics",
         "research"
       ],
-      "published": null,
+      "published": "2026-06-05T15:30:01+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 31,
-      "audio_script": "From rundown.ai, \"Daily AI News Guide How to Apply Tech Now.\" The report details recent developments across artificial intelligence and technology sectors, providing readers with actionable information on integrating new tools into professional workflows. Specific advancements covered include Google's integration of artificial intelligence features directly within its search engine functionality and Microsoft presenting comprehensive AI strategies during its Build event. Furthermore, the guide curated several trending platforms, such as Canva AI and ChatGPT, offering immediate utility to users. Specialized guides demonstrated practical applications ranging from automating sales outreach processes to facilitating the creation of complete full-stack web applications without requiring traditional coding expertise. The continuous integration of these diverse tools indicates an accelerating trend toward accessible automation across various professional domains.",
-      "voice_index": 0,
+      "rank": 8,
+      "audio_script": "From IEEE Spectrum - Robotics, \"Video Friday: Watch This Running Robot Not Fall Down Stairs.\" The weekly feature compiles diverse advancements in robotics, with a notable highlight being a running robot successfully navigating an outdoor staircase sequence. The report details the deployment of Physical AI for motor control systems utilized on newly designed humanoid bodies originating from DARoS Lab. Additionally, IHMC Robotics presented their new model, Alex, which executed its initial untethered steps outside following in-house construction. Other showcased technologies included the compact collaborative Flexiv Mico system and CCRobot-S, a unit designed for cable-climbing infrastructure inspection. This collection also provided updates regarding future robotics symposiums such as RSS 2026 and deep analysis into advanced robot athletic capabilities demonstrated by Atlas. These ongoing demonstrations signal accelerating progress in deploying complex locomotion across varied, unstructured environments.",
+      "voice_index": 2,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1740
+      "chapter_start_seconds": 409
     }
   ]
 }
