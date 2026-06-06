@@ -1,0 +1,191 @@
+{
+  "version": "1.2.0",
+  "title": "June 6, 2026 : AI Power Shrinks Globally",
+  "chapters": [
+    {
+      "startTime": 0,
+      "title": "Introduction",
+      "endTime": 17
+    },
+    {
+      "startTime": 17,
+      "title": "Anthropic Oceanus leaks \ud83e\udd16, ChatGPT Dreaming \ud83d\udcad, recursive self improvement \ud83d\ude80",
+      "endTime": 74
+    },
+    {
+      "startTime": 74,
+      "title": "The GUARD Act: Bipartisan Bill Seeks to Ban Chinese Robots, Threatening the US Research Baseline",
+      "url": "https://www.humanoidsdaily.com/news/the-guard-act-bipartisan-bill-seeks-to-ban-chinese-robots-threatening-the-us-research-baseline",
+      "endTime": 123
+    },
+    {
+      "startTime": 123,
+      "title": "Bonsai Model Achieves 14x Smaller Size for Llama Performance",
+      "url": "https://huggingface.co/prism-ml/Bonsai-8B-gguf",
+      "endTime": 190
+    },
+    {
+      "startTime": 190,
+      "title": "Ollama powers Apple Silicon acceleration with MLX framework preview",
+      "url": "https://ollama.com/blog/mlx",
+      "endTime": 270
+    },
+    {
+      "startTime": 270,
+      "title": "llama.cpp Advances LLM Inference Across Hardware and Platforms",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "endTime": 330
+    },
+    {
+      "startTime": 330,
+      "title": "Reality Check at ICRA: AGIBOT World Challenge Shifts Embodied AI from Simulation to Physical Hardware",
+      "url": "https://www.humanoidsdaily.com/news/reality-check-at-icra-agibot-world-challenge-shifts-embodied-ai-from-simulation-to-physical-hardware",
+      "endTime": 395
+    },
+    {
+      "startTime": 395,
+      "title": "AI's rapid advance outpaces our understanding and control",
+      "url": "https://ter.li/ph6z8m?mc_cid=2b92dad089&mc_eid=UNIQID",
+      "endTime": 447
+    },
+    {
+      "startTime": 447,
+      "title": "GENISOM AI debuts deployable robotics platforms at ICRA 2026",
+      "url": "https://www.therobotreport.com/genisom-ai-debuts-deployable-robotics-platforms-icra-2026/",
+      "endTime": 499
+    },
+    {
+      "startTime": 499,
+      "title": "AI Tools Revolutionize Coding Education Beyond Traditional Languages",
+      "url": "https://ter.li/ccwwov?mc_cid=c88952d476&mc_eid=UNIQID",
+      "endTime": 564
+    },
+    {
+      "startTime": 564,
+      "title": "Why deterministic real-time systems are more critical than ever in robotics",
+      "url": "https://www.therobotreport.com/qnx-why-deterministic-real-time-systems-are-more-critical-than-ever-robotics/",
+      "endTime": 613
+    },
+    {
+      "startTime": 613,
+      "title": "Use expert review for robust AI evaluation criteria",
+      "url": "https://substack.com/redirect/13dbdc52-2498-4e21-97da-3661ebe61453?j=eyJ1IjoiN3V5azBwIn0.9JxZHelvBOIuAy56QyV5ydF0a99uyO_4AH8_Rit5o0U",
+      "endTime": 664
+    },
+    {
+      "startTime": 664,
+      "title": "Fix Flaky RL Environments Preventing Model Learning Failures",
+      "url": "https://substack.com/redirect/9df6e57c-38e7-476f-9294-b5a194ff9026?j=eyJ1IjoiN3V5azBwIn0.9JxZHelvBOIuAy56QyV5ydF0a99uyO_4AH8_Rit5o0U",
+      "endTime": 718
+    },
+    {
+      "startTime": 718,
+      "title": "Improved performance and model support with GGUF",
+      "endTime": 775
+    },
+    {
+      "startTime": 775,
+      "title": "Anthropic gears up better Mythos launch beyond preview",
+      "url": "https://a.tldrnewsletter.com/web-version?ep=1&lc=52ea334c-19be-11f1-8763-91ac65d324b5&p=4243bab6-60ce-11f1-8c73-4fba1de49d89&pt=campaign&t=1780665922&s=d3ffb535a08a8b6518b775fdd7e4a9ba4e14b937cb33d8f1cab0e79ca0e676c3",
+      "endTime": 838
+    },
+    {
+      "startTime": 838,
+      "title": "AI Chatbots Hallucinate Creepy Stuff Microsoft Limits Search AI",
+      "url": "https://ter.li/sk75tl?mc_cid=c88952d476&mc_eid=UNIQID",
+      "endTime": 896
+    },
+    {
+      "startTime": 896,
+      "title": "\ud83d\udd0e Google turns search into creator hubs",
+      "endTime": 964
+    },
+    {
+      "startTime": 964,
+      "title": "Schools Battle Panic Over ChatGPT Now See Potential Use",
+      "url": "https://ter.li/hu68ad?mc_cid=2b92dad089&mc_eid=UNIQID",
+      "endTime": 1009
+    },
+    {
+      "startTime": 1009,
+      "title": "\ud83c\udf93 How to encourage smarter AI use in the classroom",
+      "endTime": 1075
+    },
+    {
+      "startTime": 1075,
+      "title": "It\u2019s no surprise that an AI-faked presidential speech condemning foreign exploitation went viral \u2013 the world is suffering from a leadership vacuum",
+      "url": "https://www.theguardian.com/global-development/2026/jun/06/african-leader-speech-decolonisation-ai-generated-fake-president-namibia-africa-caribbean",
+      "endTime": 1147
+    },
+    {
+      "startTime": 1147,
+      "title": "Expert Guide to Eyeballing Model Agent Trajectories in RL",
+      "url": "https://substack.com/redirect/a9b70bba-e9b9-4e5a-b23d-4b25869307dd?j=eyJ1IjoiN3V5azBwIn0.9JxZHelvBOIuAy56QyV5ydF0a99uyO_4AH8_Rit5o0U",
+      "endTime": 1200
+    },
+    {
+      "startTime": 1200,
+      "title": "Video Friday: Watch This Running Robot Not Fall Down Stairs",
+      "url": "https://spectrum.ieee.org/video-friday-humanoid-robot-running",
+      "endTime": 1252
+    },
+    {
+      "startTime": 1252,
+      "title": "Interview with Columbia professor and co-founder of SceniX Yunzhu Li: \u2018Simulation is central\u2019",
+      "url": "https://roboticsandautomationnews.com/2026/06/05/interview-with-columbia-professor-and-co-founder-of-scenix-yuhnzu-li-simulation-is-central/102333/",
+      "endTime": 1298
+    },
+    {
+      "startTime": 1298,
+      "title": "Interview with Jun Wu of GMEX Robotics: \u2018We provide an integrated terminal + brain closed-loop system\u2019",
+      "url": "https://roboticsandautomationnews.com/2026/06/05/interview-with-jun-wu-of-gmex-robotics-we-provide-an-integrated-terminal-brain-closed-loop-system/102327/",
+      "endTime": 1356
+    },
+    {
+      "startTime": 1356,
+      "title": "AWR standardizes CNC machine tending with OnRobot electric grippers to speed changeovers",
+      "url": "https://roboticsandautomationnews.com/2026/06/05/awr-standardizes-cnc-machine-tending-with-onrobot-electric-grippers-to-speed-changeovers/102321/",
+      "endTime": 1419
+    },
+    {
+      "startTime": 1419,
+      "title": "Misumi launches Misumi Americas as part of $1 billion global manufacturing investment",
+      "url": "https://roboticsandautomationnews.com/2026/06/05/misumi-launches-misumi-americas-as-part-of-1-billion-global-manufacturing-investment/102318/",
+      "endTime": 1468
+    },
+    {
+      "startTime": 1468,
+      "title": "Mitsubishi Electric opens Serendie Street Boston digital transformation hub",
+      "url": "https://www.therobotreport.com/mitsubishi-electric-opens-serendie-street-boston-digital-transformation-hub/",
+      "endTime": 1514
+    },
+    {
+      "startTime": 1514,
+      "title": "New Monetization Playbook for Evolving Data Infrastructure Pricing",
+      "url": "https://metronome.com/webinars/webinar-the-new-monetization-playbook-for-data-infrastructure?utm_campaign=q2-webinar&utm_medium=newsletter&utm_source=tldr-ai&utm_content=_header",
+      "endTime": 1566
+    },
+    {
+      "startTime": 1566,
+      "title": "New privacy settings for Search services",
+      "endTime": 1621
+    },
+    {
+      "startTime": 1621,
+      "title": "\ud83e\udda5 Tokenmaxxing might be dead",
+      "endTime": 1693
+    },
+    {
+      "startTime": 1693,
+      "title": "Writers Lament AI's Ban on the Beloved Em Dash",
+      "url": "https://www.theguardian.com/lifeandstyle/2025/oct/01/artificial-intelligence-em-dashes-ai-stealing-my-livelihood?mc_cid=2b92dad089&mc_eid=UNIQID",
+      "endTime": 1740
+    },
+    {
+      "startTime": 1740,
+      "title": "Daily AI News Guide How to Apply Tech Now",
+      "url": "https://rundown.ai/",
+      "endTime": 1802
+    }
+  ]
+}

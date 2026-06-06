@@ -7,12 +7,20 @@
     <link>https://keithfry.github.io/web-pages/techradar/Robotics/</link>
     <description>Daily Robotics news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Jun 2026 13:33:26 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2026 14:13:30 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
-
+  <item>
+    <title>June 6, 2026 : AI Power Shrinks Globally</title>
+    <pubDate>Sat, 06 Jun 2026 08:00:00 +0000</pubDate>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-06.mp3" type="audio/mpeg" length="14445757"/>
+    <itunes:duration>00:30:02</itunes:duration>
+    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-06.mp3</guid>
+    <description>Robotics Radar for June 6, 2026. 30 minutes of news.</description>
+      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-06.chapters.json" type="application/json+chapters"/>
+  </item>
   </channel>
 </rss>
