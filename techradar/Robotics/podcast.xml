@@ -9,19 +9,19 @@
     <atom:link href="https://keithfry.github.io/web-pages/techradar/Robotics/podcast.xml" rel="self" type="application/rss+xml"/>
     <description>Daily Robotics news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jun 2026 12:33:10 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 12:59:44 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
   <item>
-    <title>June 8, 2026 : Physical AI Ascends Heights</title>
+    <title>June 8, 2026 : Physical AI Advances Further</title>
     <pubDate>Mon, 08 Jun 2026 08:00:00 +0000</pubDate>
-    <enclosure url="https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-08.mp3" type="audio/mpeg" length="3025511"/>
-    <itunes:duration>00:06:17</itunes:duration>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-08.mp3" type="audio/mpeg" length="3607495"/>
+    <itunes:duration>00:07:30</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-08.mp3</guid>
-    <description>Robotics Radar for June 8, 2026. 6 minutes of news.</description>
+    <description>Robotics Radar for June 8, 2026. 7 minutes of news.</description>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-08.chapters.json" type="application/json+chapters"/>
   </item>
   <item>
