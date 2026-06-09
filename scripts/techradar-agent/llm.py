@@ -339,7 +339,18 @@ def _dedup_batch(batch: list[tuple[int, dict]], model: str) -> set[int]:
         f"Articles:\n{json.dumps(payload, indent=2)}\n\n"
         "Response (JSON only):"
     )
-    raw = _chat(prompt, model, json_mode=True)
+
+    if model.startswith("claude"):
+        import shutil
+        import subprocess
+        claude_bin = shutil.which("claude") or "/usr/local/bin/claude"
+        result = subprocess.run(
+            [claude_bin, "-p", prompt, "--model", model, "--output-format", "text"],
+            capture_output=True, text=True, check=True,
+        )
+        raw = result.stdout
+    else:
+        raw = _chat(prompt, model, json_mode=True)
 
     try:
         keep_list = json.loads(_extract_json(raw)).get("keep", [])

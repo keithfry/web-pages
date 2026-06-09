@@ -284,9 +284,16 @@ def _stop_models(log_fn) -> None:
     log_fn("")
     log_fn("── Stopping Ollama models ──")
     for model in sorted(models):
-        result = subprocess.run(["ollama", "stop", model], capture_output=True, text=True)
-        if result.returncode == 0:
-            log_fn(f"  stopped: {model}")
+        try:
+            result = subprocess.run(
+                ["ollama", "stop", model], capture_output=True, text=True, timeout=10
+            )
+            if result.returncode == 0:
+                log_fn(f"  stopped: {model}")
+            else:
+                log_fn(f"  skip (not loaded): {model}")
+        except subprocess.TimeoutExpired:
+            log_fn(f"  timeout stopping {model} — skipped")
 
 
 # ---------------------------------------------------------------------------

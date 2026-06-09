@@ -7,12 +7,25 @@ import json
 import shutil
 import subprocess
 import tempfile
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 
 _FFMPEG = shutil.which("ffmpeg") or "/opt/homebrew/bin/ffmpeg"
 
 from enricher import KOKORO_VOICES
+from config import TTS_WORKERS
+
+_tts_thread_local = threading.local()
+
+
+def _get_pipeline():
+    """Return a thread-local KPipeline, creating it on first use per thread."""
+    if not hasattr(_tts_thread_local, "pipeline"):
+        from kokoro import KPipeline
+        _tts_thread_local.pipeline = KPipeline(lang_code="a")
+    return _tts_thread_local.pipeline
 
 
 def _voice_for(voice_index: int) -> str:
@@ -28,11 +41,12 @@ def _build_chapters_json(chapters: list[dict], episode_title: str | None = None)
     return json.dumps(data, indent=2)
 
 
-def _tts_segment(text: str, voice: str, out_wav: Path, pipeline) -> float:
-    """Synthesize text to WAV using Kokoro pipeline. Returns duration in seconds."""
+def _tts_segment(text: str, voice: str, out_wav: Path) -> float:
+    """Synthesize text to WAV using thread-local Kokoro pipeline. Returns duration in seconds."""
     import soundfile as sf
     import numpy as np
 
+    pipeline = _get_pipeline()
     audio_chunks = []
     sample_rate = 24000
 
@@ -140,39 +154,54 @@ def generate_podcast(
     podcast_items = [i for i in enriched_data["items"] if i.get("include_in_podcast")]
     intro_script = enriched_data["intro_script"]
 
-    log(f"  Generating audio for intro + {len(podcast_items)} items...")
-
-    log("  Loading Kokoro TTS model...")
-    from kokoro import KPipeline
-    pipeline = KPipeline(lang_code="a")
+    log(f"  Generating audio for intro + {len(podcast_items)} items ({TTS_WORKERS} workers)...")
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
+
+        # Build work list: (order_index, wav_path, text, voice, label)
+        # order_index 0 = intro, 1..N = items in rank order
+        work = [(0, tmp / "intro.wav", intro_script, _voice_for(0), "intro")]
+        for item in podcast_items:
+            work.append((
+                item["rank"],
+                tmp / f"item_{item['rank']:03d}.wav",
+                item["audio_script"],
+                _voice_for(item["voice_index"]),
+                f"item {item['rank']} ({item['title'][:40]})",
+            ))
+
+        # Synthesize all segments in parallel; results keyed by order_index
+        durations: dict[int, float] = {}
+
+        def _synth(order_idx: int, wav_path: Path, text: str, voice: str, label: str) -> tuple[int, float]:
+            log(f"  [tts] {label} ({voice})...")
+            dur = _tts_segment(text, voice, wav_path)
+            return order_idx, dur
+
+        with ThreadPoolExecutor(max_workers=TTS_WORKERS) as executor:
+            futures = {
+                executor.submit(_synth, *w): w[0] for w in work
+            }
+            for future in as_completed(futures):
+                order_idx, dur = future.result()
+                durations[order_idx] = dur
+
+        # Reconstruct ordered wav list and compute chapter start times
+        ordered = sorted(work, key=lambda w: w[0])
         wav_files: list[Path] = []
         actual_starts: list[float] = []
         cursor = 0.0
-
-        # Intro segment (always voice 0)
-        intro_wav = tmp / "intro.wav"
-        log(f"  [tts] intro ({_voice_for(0)}): {intro_script[:60]}...")
-        intro_dur = _tts_segment(intro_script, _voice_for(0), intro_wav, pipeline)
-        wav_files.append(intro_wav)
-        actual_starts.append(cursor)
-        cursor += intro_dur
-
-        # Item segments
-        for item in podcast_items:
-            wav_path = tmp / f"item_{item['rank']:03d}.wav"
-            voice = _voice_for(item["voice_index"])
-            script = item["audio_script"]
-            log(f"  [tts] item {item['rank']} ({voice}): {item['title'][:50]}...")
-            dur = _tts_segment(script, voice, wav_path, pipeline)
+        for order_idx, wav_path, _, _, _ in ordered:
             wav_files.append(wav_path)
             actual_starts.append(cursor)
-            item["chapter_start_seconds"] = int(cursor)
-            cursor += dur
+            cursor += durations[order_idx]
+
+        # Write actual chapter start times back to items (actual_starts[0] = intro)
+        for i, item in enumerate(podcast_items):
+            item["chapter_start_seconds"] = int(actual_starts[i + 1])
 
         total_duration = int(cursor)
         log(f"  Total audio: {total_duration}s ({total_duration // 60}m {total_duration % 60}s)")

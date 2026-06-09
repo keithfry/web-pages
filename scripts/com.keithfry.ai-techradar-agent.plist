@@ -13,7 +13,7 @@
     </array>
 
     <key>WorkingDirectory</key>
-    <string>/Users/keithfry/projects/web-pages/scripts/ai-techradar-agent</string>
+    <string>/Users/keithfry/projects/web-pages/scripts/techradar-agent</string>
 
     <!-- Run daily at 8:00 AM -->
     <key>StartCalendarInterval</key>

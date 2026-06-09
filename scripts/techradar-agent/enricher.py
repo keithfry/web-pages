@@ -5,10 +5,12 @@ html_generator and podcast_generator.
 """
 
 import json
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 
-from config import SUMMARIZE_MODEL, RANK_MODEL
+from config import SUMMARIZE_MODEL, RANK_MODEL, LLM_WORKERS
 
 # Words per minute for Kokoro TTS (approximate, used for time estimation)
 _TTS_WPM = 130
@@ -102,19 +104,40 @@ def enrich(
     log(f"  Ranking items by relevance (model: {rank_model})...")
     ranked = rank_items(podcast_candidates, model=rank_model)
 
-    # Generate audio script per item (in rank order)
-    log(f"  Generating {len(ranked)} audio scripts (model: {summarize_model})...")
-    for item in ranked:
-        item["audio_script"] = generate_audio_script(item, model=summarize_model)
-        item["voice_index"] = (item["rank"] - 1) % len(KOKORO_VOICES)
-        item["include_in_podcast"] = True
-        log(f"    [{item['rank']}] scripted: {item['title'][:60]}")
+    # Generate audio script per item in parallel (rank order preserved via futures dict)
+    log(f"  Generating {len(ranked)} audio scripts ({LLM_WORKERS} workers, model: {summarize_model})...")
+    with ThreadPoolExecutor(max_workers=LLM_WORKERS) as executor:
+        futures = {
+            executor.submit(generate_audio_script, item, summarize_model): item
+            for item in ranked
+        }
+        for future in as_completed(futures):
+            item = futures[future]
+            item["audio_script"] = future.result()
+            item["voice_index"] = (item["rank"] - 1) % len(KOKORO_VOICES)
+            item["include_in_podcast"] = True
+            log(f"    [{item['rank']}] scripted: {item['title'][:60]}")
 
-    # Generate intro script and episode tagline
-    log("  Generating intro script...")
-    intro_script = generate_intro_script(ranked, date, model=summarize_model, topic=topic)
-    log("  Generating episode tagline...")
-    episode_tagline = generate_episode_tagline(ranked, model=summarize_model)
+    # Generate intro script and episode tagline in parallel (independent of each other)
+    log("  Generating intro script and episode tagline in parallel...")
+    intro_result: list = []
+    tagline_result: list = []
+
+    def _gen_intro():
+        intro_result.append(generate_intro_script(ranked, date, model=summarize_model, topic=topic))
+
+    def _gen_tagline():
+        tagline_result.append(generate_episode_tagline(ranked, model=summarize_model))
+
+    t_intro   = threading.Thread(target=_gen_intro)
+    t_tagline = threading.Thread(target=_gen_tagline)
+    t_intro.start()
+    t_tagline.start()
+    t_intro.join()
+    t_tagline.join()
+
+    intro_script    = intro_result[0]
+    episode_tagline = tagline_result[0]
     log(f"  Episode tagline: {episode_tagline}")
 
     # Estimate chapter times

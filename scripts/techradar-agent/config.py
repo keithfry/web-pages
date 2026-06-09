@@ -13,7 +13,7 @@ load_dotenv(Path(__file__).parent / ".env")
 # --- LLM models ---
 SUMMARIZE_MODEL: str = os.environ.get("SUMMARIZE_MODEL", "llama3.2")
 RANK_MODEL: str = os.environ.get("RANK_MODEL", "qwen3.5:9b")
-DEDUP_MODEL: str = os.environ.get("DEDUP_MODEL", RANK_MODEL)
+DEDUP_MODEL: str = os.environ.get("DEDUP_MODEL", "claude-haiku-4-5")
 GENERATE_MODEL: str = os.environ.get("GENERATE_MODEL", "llama3.2")
 AD_DETECTOR_MODEL: str = os.environ.get("AD_DETECTOR_MODEL", "ad-detector")
 AD_GATE_ENABLED: bool = os.environ.get("AD_GATE_ENABLED", "1") not in ("0", "false", "False", "no")
@@ -55,3 +55,6 @@ LLM_WORKERS: int = int(os.environ.get("LLM_WORKERS", 2))
 
 # Parallel workers for URL fetching (I/O bound — can be higher than LLM_WORKERS)
 URL_WORKERS: int = int(os.environ.get("URL_WORKERS", 10))
+
+# Parallel workers for Kokoro TTS synthesis — each worker loads its own KPipeline instance
+TTS_WORKERS: int = int(os.environ.get("TTS_WORKERS", 2))
