@@ -9,12 +9,21 @@
     <atom:link href="https://keithfry.github.io/web-pages/techradar/Robotics/podcast.xml" rel="self" type="application/rss+xml"/>
     <description>Daily Robotics news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2026 13:05:42 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 13:14:40 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
+  <item>
+    <title>June 11, 2026 : Humanoid Robots Power Future</title>
+    <pubDate>Thu, 11 Jun 2026 08:00:00 +0000</pubDate>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-11.mp3" type="audio/mpeg" length="6131614"/>
+    <itunes:duration>00:12:45</itunes:duration>
+    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-11.mp3</guid>
+    <description>Robotics Radar for June 11, 2026. 12 minutes of news.</description>
+      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/robotics-radar-2026-06-11.chapters.json" type="application/json+chapters"/>
+  </item>
   <item>
     <title>June 10, 2026 : Dexter Hands Shape Future</title>
     <pubDate>Wed, 10 Jun 2026 08:00:00 +0000</pubDate>

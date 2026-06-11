@@ -1,0 +1,95 @@
+{
+  "version": "1.2.0",
+  "title": "June 11, 2026 : Humanoid Robots Power Future",
+  "chapters": [
+    {
+      "startTime": 0,
+      "title": "Introduction",
+      "endTime": 17
+    },
+    {
+      "startTime": 17,
+      "title": "Nvidia unveils open humanoid robot platform for robotics research",
+      "url": "https://roboticsandautomationnews.com/2026/06/11/nvidia-unveils-open-humanoid-robot-platform-for-robotics-research/102480/",
+      "endTime": 71
+    },
+    {
+      "startTime": 71,
+      "title": "NEURA Robotics Secures Record $1.4 Billion Series C, Led by Tether, to Build the \"Machine Economy\"",
+      "url": "https://www.humanoidsdaily.com/news/neura-robotics-secures-record-1-4-billion-series-c-led-by-tether-to-build-the-machine-economy",
+      "endTime": 116
+    },
+    {
+      "startTime": 116,
+      "title": "Robotics will not have a clean Llama moment",
+      "url": "https://www.therobotreport.com/robotics-will-not-have-a-clean-llama-moment/",
+      "endTime": 167
+    },
+    {
+      "startTime": 167,
+      "title": "AI Simulates Hyperrealistic Driving Environments for Autonomous Vehicles",
+      "url": "https://thehustle.co/%EF%B8%8F-pay-what-you-want-1?ecid=ACsprvszFHBVhzJKrPfE1UPlNTGpR1BEeuUopjcpy7SJj9dOMG1I8aS6wY71A6Flq4lZNML2WcXt&_hsenc=p2ANqtz-9UlztqGfeUzdb5M3ObnvZ2_m5caLZ2-iSRvn_GjbBnKeA_PpPxhnWPrFBTFQ62z4RChzN4nMzfTMmRimC0m8hlGU98sA&_hsmi=423277470",
+      "endTime": 229
+    },
+    {
+      "startTime": 229,
+      "title": "For Robotaxis, Safety Must Be Built In, Not Bolted On",
+      "url": "https://blogs.nvidia.com/blog/halos-os-robotaxi-safety/",
+      "endTime": 271
+    },
+    {
+      "startTime": 271,
+      "title": "ROS Discourse General: EpisodeVault: open source tool to debug why your LeRobot model regressed",
+      "url": "https://discourse.openrobotics.org/t/episodevault-open-source-tool-to-debug-why-your-lerobot-model-regressed/55401",
+      "endTime": 336
+    },
+    {
+      "startTime": 336,
+      "title": "Agile Robots showcases force-control technology, humanoids, and physical AI at Robot Technology Japan event",
+      "url": "https://roboticsandautomationnews.com/2026/06/11/agile-robots-showcases-force-control-technology-humanoids-and-physical-ai-at-robot-technology-japan-event/102464/",
+      "endTime": 394
+    },
+    {
+      "startTime": 394,
+      "title": "GENISOM AI steps into the global robotics spotlight at ICRA 2026 with real-world-ready robots",
+      "url": "https://roboticsandautomationnews.com/2026/06/10/genisom-ai-steps-into-the-global-robotics-spotlight-at-icra-2026-with-real-world-ready-robots/102436/",
+      "endTime": 451
+    },
+    {
+      "startTime": 451,
+      "title": "Autonomous truck company Einride now listed on Nasdaq",
+      "url": "https://roboticsandautomationnews.com/2026/06/10/autonomous-truck-company-einride-now-listed-on-nasdaq/102447/",
+      "endTime": 503
+    },
+    {
+      "startTime": 503,
+      "title": "Geekplus installs more than 400 autonomous mobile robots at multiple Toyota plants",
+      "url": "https://roboticsandautomationnews.com/2026/06/10/geekplus-intalls-more-than-400-autonomous-mobile-robots-at-multiple-toyota-plants/102450/",
+      "endTime": 552
+    },
+    {
+      "startTime": 552,
+      "title": "DSV partners with Exotec to modernise Dutch supply chain operations",
+      "url": "https://roboticsandautomationnews.com/2026/06/11/dsv-partners-with-exotec-to-modernise-dutch-supply-chain-operations/102470/",
+      "endTime": 603
+    },
+    {
+      "startTime": 603,
+      "title": "How Automated Container Gantry Cranes Are Reshaping Port Operations in 2026",
+      "url": "https://roboticsandautomationnews.com/2026/06/11/how-automated-container-gantry-cranes-are-reshaping-port-operations-in-2026/102455/",
+      "endTime": 651
+    },
+    {
+      "startTime": 651,
+      "title": "New imaging system sees through murky waters",
+      "url": "https://news.mit.edu/2026/new-imaging-system-sees-through-murky-waters-0611",
+      "endTime": 705
+    },
+    {
+      "startTime": 705,
+      "title": "Small Businesses Prop Up the Tandem Bike Industry",
+      "url": "https://thehustle.co/home/?_hsenc=p2ANqtz-9UlztqGfeUzdb5M3ObnvZ2_m5caLZ2-iSRvn_GjbBnKeA_PpPxhnWPrFBTFQ62z4RChzN4nMzfTMmRimC0m8hlGU98sA&_hsmi=423277470",
+      "endTime": 765
+    }
+  ]
+}
