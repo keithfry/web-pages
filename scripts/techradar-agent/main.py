@@ -31,7 +31,7 @@ from config import (
 from feed_fetcher import fetch_all_feeds, is_arxiv
 from email_fetcher import fetch_emails
 from article_fetcher import fetch_article_text, source_name_from_url
-from llm import summarize, summarize_title, tag, classify_ai, classify_robotics, classify_ad, deduplicate, llm_stats
+from llm import summarize, summarize_title, tag, classify_ai, classify_robotics, classify_ad, deduplicate, llm_stats, unload_all_models
 from html_generator import generate_html
 from publisher import save_html, commit_and_push
 from enricher import enrich
@@ -279,21 +279,16 @@ def _fetch_links_parallel(email_items: list[dict]) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def _stop_models(log_fn) -> None:
-    import subprocess
-    models = {SUMMARIZE_MODEL, RANK_MODEL, AD_DETECTOR_MODEL, GENERATE_MODEL}
     log_fn("")
     log_fn("── Stopping Ollama models ──")
-    for model in sorted(models):
-        try:
-            result = subprocess.run(
-                ["ollama", "stop", model], capture_output=True, text=True, timeout=10
-            )
-            if result.returncode == 0:
-                log_fn(f"  stopped: {model}")
-            else:
-                log_fn(f"  skip (not loaded): {model}")
-        except subprocess.TimeoutExpired:
-            log_fn(f"  timeout stopping {model} — skipped")
+    try:
+        unloaded = unload_all_models()
+        for name in unloaded:
+            log_fn(f"  stopped: {name}")
+        if not unloaded:
+            log_fn("  none loaded")
+    except Exception as e:
+        log_fn(f"  error unloading models: {e}")
 
 
 # ---------------------------------------------------------------------------

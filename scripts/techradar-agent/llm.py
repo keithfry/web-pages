@@ -1,11 +1,13 @@
 """Thin Ollama wrapper for all LLM operations in the pipeline."""
 
 import json
+import os
 import re
 import sys
 import threading
 import time
 
+import json_repair
 import ollama
 
 from config import SUMMARIZE_MODEL, RANK_MODEL
@@ -29,17 +31,8 @@ def unload_all_models() -> list[str]:
     return loaded
 
 
-def _extract_json(text: str) -> str:
-    """Extract the first JSON object from text that may contain prose or markdown code blocks."""
-    # Strip markdown code fences: ```json ... ``` or ``` ... ```
-    fence = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
-    if fence:
-        return fence.group(1)
-    # Fall back to first {...} block in the text
-    brace = re.search(r"\{.*?\}", text, re.DOTALL)
-    if brace:
-        return brace.group(0)
-    return text
+def _parse_json(text: str) -> dict:
+    return json_repair.loads(text)
 
 
 def _chat(prompt: str, model: str, json_mode: bool = False, think: bool = False) -> str:
@@ -114,7 +107,7 @@ def tag(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> list[str]:
     )
     raw = _chat(prompt, model, json_mode=True)
     try:
-        data = json.loads(_extract_json(raw))
+        data = _parse_json(raw)
         tags = data.get("tags", [])
         valid = {
             "policy",
@@ -148,7 +141,7 @@ def classify_ai(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> bool:
     )
     raw = _chat(prompt, model, json_mode=True)
     try:
-        return bool(json.loads(_extract_json(raw)).get("relevant", False))
+        return bool(_parse_json(raw).get("relevant", False))
     except (json.JSONDecodeError, AttributeError):
         # Default to keeping the item if classification fails
         return True
@@ -196,7 +189,7 @@ def classify_robotics(title: str, summary: str, model: str = SUMMARIZE_MODEL) ->
     )
     raw = _chat(prompt, model, json_mode=True)
     try:
-        return bool(json.loads(_extract_json(raw)).get("relevant", False))
+        return bool(_parse_json(raw).get("relevant", False))
     except (json.JSONDecodeError, AttributeError):
         # Fail closed — uncertain = not robotics
         return False
@@ -261,7 +254,7 @@ def classify_ad(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> tuple
     )
     raw = _chat(prompt, model, json_mode=True)
     try:
-        data = json.loads(_extract_json(raw))
+        data = _parse_json(raw)
         return bool(data.get("is_ad", False)), str(data.get("reason", ""))
     except (json.JSONDecodeError, AttributeError):
         print(f"[warn] classify_ad() failed to parse JSON: {raw!r}", file=sys.stderr)
@@ -343,7 +336,7 @@ def _dedup_batch(batch: list[tuple[int, dict]], model: str) -> set[int]:
     if model.startswith("claude"):
         import shutil
         import subprocess
-        claude_bin = shutil.which("claude") or "/usr/local/bin/claude"
+        claude_bin = shutil.which("claude") or os.path.expanduser("~/.local/bin/claude")
         result = subprocess.run(
             [claude_bin, "-p", prompt, "--model", model, "--output-format", "text"],
             capture_output=True, text=True, check=True,
@@ -353,7 +346,7 @@ def _dedup_batch(batch: list[tuple[int, dict]], model: str) -> set[int]:
         raw = _chat(prompt, model, json_mode=True)
 
     try:
-        keep_list = json.loads(_extract_json(raw)).get("keep", [])
+        keep_list = _parse_json(raw).get("keep", [])
     except (json.JSONDecodeError, AttributeError):
         print(f"[warn] _dedup_batch() failed to parse JSON: {raw!r}", file=sys.stderr)
         return set()
@@ -432,7 +425,7 @@ def rank_items(items: list[dict], model: str = RANK_MODEL) -> list[dict]:
     )
     raw = _chat(prompt, model, json_mode=True)
     try:
-        order: list[int] = json.loads(_extract_json(raw)).get("ranked", [])
+        order: list[int] = _parse_json(raw).get("ranked", [])
         order = [int(x) for x in order]
         # Deduplicate (keep first occurrence) and clamp to valid range
         seen: set[int] = set()
