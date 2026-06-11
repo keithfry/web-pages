@@ -54,7 +54,7 @@ def build_rss_feed(
     topic_label: str,
     max_episodes: int = MAX_EPISODES,
 ) -> str:
-    mp3_files = sorted(output_dir.glob(f"{file_prefix}-*.mp3"), reverse=True)[:max_episodes]
+    mp3_files = sorted(output_dir.glob(f"**/{file_prefix}-*.mp3"), reverse=True)[:max_episodes]
 
     items_xml = []
     for mp3 in mp3_files:
@@ -63,11 +63,12 @@ def build_rss_feed(
             continue
 
         date_str = f"{date.year:04d}-{date.month:02d}-{date.day:02d}"
-        chap_json = output_dir / f"{file_prefix}-{date_str}.chapters.json"
+        ym_dir = f"{date.year:04d}-{date.month:02d}"
+        chap_json = output_dir / ym_dir / f"{file_prefix}-{date_str}.chapters.json"
         duration = _duration_from_chapters(chap_json) if chap_json.exists() else 0
         file_size = mp3.stat().st_size
-        mp3_url = f"{base_url}/{file_prefix}-{date_str}.mp3"
-        chap_url = f"{base_url}/{file_prefix}-{date_str}.chapters.json"
+        mp3_url = f"{base_url}/{ym_dir}/{file_prefix}-{date_str}.mp3"
+        chap_url = f"{base_url}/{ym_dir}/{file_prefix}-{date_str}.chapters.json"
         pub_date = format_datetime(date)
         title_date = f"{date.strftime('%B')} {date.day}, {date.year}"
 

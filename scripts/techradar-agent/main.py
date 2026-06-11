@@ -401,7 +401,9 @@ def _run_topic(
     email_items = email_items or []
     linked_articles = linked_articles or []
 
-    output_dir = AI_OUTPUT_DIR if topic == "AI" else ROBOTICS_OUTPUT_DIR
+    base_dir = AI_OUTPUT_DIR if topic == "AI" else ROBOTICS_OUTPUT_DIR
+    output_dir = base_dir / as_of.strftime("%Y-%m")
+    output_dir.mkdir(parents=True, exist_ok=True)
     file_prefix = "ai-radar" if topic == "AI" else "robotics-radar"
 
     log(f"=== Techradar Agent — {topic} ===")
@@ -563,7 +565,7 @@ def _run_topic(
 
     # --- Step 8b: Generate podcast RSS feed ---
     log("── Step 8b: Generating podcast RSS ──")
-    rss_path = generate_podcast_rss(output_dir, topic, log=log)
+    rss_path = generate_podcast_rss(base_dir, topic, log=log)
     out_paths.append(rss_path)
 
     # --- Step 8c: Regenerate techradar index.html ---

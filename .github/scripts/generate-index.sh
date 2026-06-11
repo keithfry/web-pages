@@ -12,6 +12,15 @@ fi
 echo "Directories to process:"
 printf " - %s\n" "${TARGET_DIRS[@]}"
 
+_month_name() {
+  case "$1" in
+    01) echo "January" ;;  02) echo "February" ;; 03) echo "March" ;;
+    04) echo "April" ;;    05) echo "May" ;;       06) echo "June" ;;
+    07) echo "July" ;;     08) echo "August" ;;    09) echo "September" ;;
+    10) echo "October" ;;  11) echo "November" ;;  12) echo "December" ;;
+  esac
+}
+
 generate_index() {
   local dir="$1"
   local index="$dir/index.html"
@@ -33,7 +42,29 @@ generate_index() {
     fname=$(basename "$f")
     [[ "$fname" == favicon.* ]] && continue
 
-    # Skip non-HTML files and directories
+    # Year-month subdir (e.g. 2026-06): expand its HTML files with relative paths
+    if [[ -d "$f" ]] && [[ "$fname" =~ ^([0-9]{4})-([0-9]{2})$ ]]; then
+      ym="$fname"
+      ym_year="${BASH_REMATCH[1]}"
+      ym_month="${BASH_REMATCH[2]}"
+      ym_month_name="$(_month_name "$ym_month")"
+      ym_month_key="$ym_year-$ym_month"
+      ym_month_label="$ym_month_name $ym_year"
+
+      for sub_f in "$f"/*.html; do
+        [[ -e "$sub_f" ]] || continue
+        sub_fname=$(basename "$sub_f")
+        [[ "$sub_fname" == "index.html" ]] && continue
+        if [[ "$sub_fname" =~ ([0-9]{4})-([0-9]{2})-([0-9]{2}) ]]; then
+          sub_day="${BASH_REMATCH[3]}"
+          rel_path="$ym/$sub_fname"
+          files_list+=("$ym_month_key|$ym_year-$ym_month-$sub_day|$ym_month_label|$rel_path")
+        fi
+      done
+      continue
+    fi
+
+    # Skip non-HTML files and non-directories
     if [[ ! -d "$f" ]] && [[ "$fname" != *.html ]]; then continue; fi
 
     # Try to extract date in YYYY-MM-DD format from filename
@@ -41,27 +72,9 @@ generate_index() {
       year="${BASH_REMATCH[1]}"
       month="${BASH_REMATCH[2]}"
       day="${BASH_REMATCH[3]}"
-
-      # Convert month number to name
-      case "$month" in
-        01) month_name="January" ;;
-        02) month_name="February" ;;
-        03) month_name="March" ;;
-        04) month_name="April" ;;
-        05) month_name="May" ;;
-        06) month_name="June" ;;
-        07) month_name="July" ;;
-        08) month_name="August" ;;
-        09) month_name="September" ;;
-        10) month_name="October" ;;
-        11) month_name="November" ;;
-        12) month_name="December" ;;
-      esac
-
+      month_name="$(_month_name "$month")"
       month_key="$year-$month"
       month_label="$month_name $year"
-
-      # Store file with its month key and full date for sorting
       files_list+=("$month_key|$year-$month-$day|$month_label|$fname")
     else
       # No date found, use a default group
@@ -72,6 +85,7 @@ generate_index() {
   {
     echo "<html>"
     echo "<head>"
+    echo '<meta charset="UTF-8">'
     echo '<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">'
     echo '<meta http-equiv="Pragma" content="no-cache">'
     echo '<meta http-equiv="Expires" content="0">'
@@ -111,13 +125,23 @@ generate_index() {
         audio_badge=""
         if [[ "$fname" =~ ([0-9]{4}-[0-9]{2}-[0-9]{2}) ]]; then
           date_part="${BASH_REMATCH[1]}"
-          mp3_file=$(find "$dir" -maxdepth 1 -name "*-radar-${date_part}.mp3" | head -1)
+          # fname may be "2026-06/ai-radar-2026-06-11.html" or "ai-radar-2026-06-11.html"
+          fsubdir=$(dirname "$fname")
+          if [[ "$fsubdir" == "." ]]; then
+            mp3_search_dir="$dir"
+            mp3_prefix=""
+          else
+            mp3_search_dir="$dir/$fsubdir"
+            mp3_prefix="$fsubdir/"
+          fi
+          mp3_file=$(find "$mp3_search_dir" -maxdepth 1 -name "*-radar-${date_part}.mp3" | head -1)
           if [[ -n "$mp3_file" ]]; then
-            mp3_name=$(basename "$mp3_file")
-            audio_badge=" <a href=\"./${mp3_name}\" title=\"Listen to podcast\" style=\"text-decoration:none;\">🎙</a>"
+            mp3_name="${mp3_prefix}$(basename "$mp3_file")"
+            audio_badge=" <a href=\"./${mp3_name}\" title=\"Listen to podcast\" style=\"text-decoration:none;\">&#127897;</a>"
           fi
         fi
-        echo "<li><a href=\"./$fname\">$fname</a>${audio_badge}</li>"
+        display_name=$(basename "$fname")
+        echo "<li><a href=\"./$fname\">$display_name</a>${audio_badge}</li>"
       done
 
       # Close final list
