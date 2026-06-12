@@ -9,12 +9,21 @@
     <atom:link href="https://keithfry.github.io/web-pages/techradar/AI/podcast.xml" rel="self" type="application/rss+xml"/>
     <description>Daily AI news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jun 2026 18:57:41 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 12:33:37 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
+  <item>
+    <title>June 12, 2026 : Faster Smarter Local Agents</title>
+    <pubDate>Fri, 12 Jun 2026 08:00:00 +0000</pubDate>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-12.mp3" type="audio/mpeg" length="26730740"/>
+    <itunes:duration>00:55:36</itunes:duration>
+    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-12.mp3</guid>
+    <description>AI Radar for June 12, 2026. 55 minutes of news.</description>
+      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-12.chapters.json" type="application/json+chapters"/>
+  </item>
   <item>
     <title>June 11, 2026 : AI Models Battle Speed Power</title>
     <pubDate>Thu, 11 Jun 2026 08:00:00 +0000</pubDate>
@@ -185,15 +194,6 @@
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/AI/2026-05/ai-radar-2026-05-24.mp3</guid>
     <description>AI Radar for May 24, 2026. 17 minutes of news.</description>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/AI/2026-05/ai-radar-2026-05-24.chapters.json" type="application/json+chapters"/>
-  </item>
-  <item>
-    <title>AI Radar — May 23, 2026</title>
-    <pubDate>Sat, 23 May 2026 08:00:00 +0000</pubDate>
-    <enclosure url="https://keithfry.github.io/web-pages/techradar/AI/2026-05/ai-radar-2026-05-23.mp3" type="audio/mpeg" length="27181194"/>
-    <itunes:duration>00:56:36</itunes:duration>
-    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/AI/2026-05/ai-radar-2026-05-23.mp3</guid>
-    <description>AI Radar for May 23, 2026. 56 minutes of news.</description>
-      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/AI/2026-05/ai-radar-2026-05-23.chapters.json" type="application/json+chapters"/>
   </item>
   </channel>
 </rss>
