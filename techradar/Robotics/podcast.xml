@@ -9,7 +9,7 @@
     <atom:link href="https://keithfry.github.io/web-pages/techradar/Robotics/podcast.xml" rel="self" type="application/rss+xml"/>
     <description>Daily Robotics news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jun 2026 20:18:25 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 20:21:34 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
@@ -23,6 +23,7 @@
     <itunes:duration>00:04:27</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-14.mp3</guid>
     <description>Robotics Radar for June 14, 2026. 4 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-14.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-14.chapters.json" type="application/json+chapters"/>
   </item>
   <item>
@@ -32,6 +33,7 @@
     <itunes:duration>00:08:01</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-13.mp3</guid>
     <description>Robotics Radar for June 13, 2026. 8 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-13.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-13.chapters.json" type="application/json+chapters"/>
   </item>
   <item>
@@ -41,6 +43,7 @@
     <itunes:duration>00:06:12</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-12.mp3</guid>
     <description>Robotics Radar for June 12, 2026. 6 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-12.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-12.chapters.json" type="application/json+chapters"/>
   </item>
   <item>
@@ -50,6 +53,7 @@
     <itunes:duration>00:11:51</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-11.mp3</guid>
     <description>Robotics Radar for June 11, 2026. 11 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-11.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-11.chapters.json" type="application/json+chapters"/>
   </item>
   <item>
@@ -59,6 +63,7 @@
     <itunes:duration>00:12:29</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-10.mp3</guid>
     <description>Robotics Radar for June 10, 2026. 12 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-10.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-10.chapters.json" type="application/json+chapters"/>
   </item>
   <item>
@@ -68,6 +73,7 @@
     <itunes:duration>00:08:59</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-09.mp3</guid>
     <description>Robotics Radar for June 9, 2026. 8 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-09.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-09.chapters.json" type="application/json+chapters"/>
   </item>
   <item>
@@ -77,6 +83,7 @@
     <itunes:duration>00:07:30</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-08.mp3</guid>
     <description>Robotics Radar for June 8, 2026. 7 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-08.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-08.chapters.json" type="application/json+chapters"/>
   </item>
   <item>
@@ -86,6 +93,7 @@
     <itunes:duration>00:01:15</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-07.mp3</guid>
     <description>Robotics Radar for June 7, 2026. 1 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-07.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-07.chapters.json" type="application/json+chapters"/>
   </item>
   <item>
@@ -95,6 +103,7 @@
     <itunes:duration>00:09:01</itunes:duration>
     <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-06.mp3</guid>
     <description>Robotics Radar for June 6, 2026. 9 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-06.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-06.chapters.json" type="application/json+chapters"/>
   </item>
   </channel>
