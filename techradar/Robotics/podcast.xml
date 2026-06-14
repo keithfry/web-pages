@@ -9,12 +9,21 @@
     <atom:link href="https://keithfry.github.io/web-pages/techradar/Robotics/podcast.xml" rel="self" type="application/rss+xml"/>
     <description>Daily Robotics news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Jun 2026 18:16:14 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 13:31:45 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
+  <item>
+    <title>June 14, 2026 : Robots Sense Deeply Now</title>
+    <pubDate>Sun, 14 Jun 2026 08:00:00 +0000</pubDate>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-14.mp3" type="audio/mpeg" length="2147227"/>
+    <itunes:duration>00:04:27</itunes:duration>
+    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-14.mp3</guid>
+    <description>Robotics Radar for June 14, 2026. 4 minutes of news.</description>
+      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-14.chapters.json" type="application/json+chapters"/>
+  </item>
   <item>
     <title>June 13, 2026 : Autonomous Tech Moves Forward</title>
     <pubDate>Sat, 13 Jun 2026 08:00:00 +0000</pubDate>
