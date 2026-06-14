@@ -100,7 +100,11 @@ _CSS = """\
   .filter-chip.dimmed { opacity: 0.4; }
   .card.hidden { display: none; }
   .subsection.hidden { display: none; }
-  .section-block.hidden { display: none; }"""
+  .section-block.hidden { display: none; }
+  .podcast-player { margin-top: 22px; display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .podcast-player audio { max-width: 360px; width: 100%; height: 36px; border-radius: 18px; }
+  .podcast-subscribe { font-size: 11px; font-weight: 700; color: #60a5fa; text-decoration: none; letter-spacing: 0.5px; padding: 6px 16px; border: 1px solid rgba(96,165,250,0.4); border-radius: 14px; white-space: nowrap; transition: background 0.15s; }
+  .podcast-subscribe:hover { background: rgba(96,165,250,0.1); }"""
 
 
 def _card(item: dict, extra_class: str = "") -> str:
@@ -147,6 +151,21 @@ def _subsection_for(item: dict) -> str:
     return "Models &amp; Developer Tools"
 
 
+def _podcast_player_html(mp3_url: str | None, rss_url: str | None) -> str:
+    if not mp3_url:
+        return ""
+    subscribe = (
+        f'\n  <a class="podcast-subscribe" href="{rss_url}">🎙 Subscribe</a>'
+        if rss_url else ""
+    )
+    return (
+        f'\n  <div class="podcast-player">\n'
+        f'    <audio controls preload="none" src="{mp3_url}">'
+        f'Your browser does not support audio.</audio>{subscribe}\n'
+        f'  </div>'
+    )
+
+
 def generate_html(
     newsletters: list[dict],
     articles: list[dict],
@@ -154,6 +173,8 @@ def generate_html(
     errors: list[dict],
     date: datetime,
     topic: str = "AI",
+    mp3_url: str | None = None,
+    podcast_rss_url: str | None = None,
 ) -> str:
     topic_label = "AI" if topic == "AI" else "Robotics"
     digest_title = f"{topic_label} Daily Digest"
@@ -196,7 +217,7 @@ def generate_html(
   <h1>{digest_title}</h1>
   <div class="dateline">{dateline}</div>
   <div class="header-stats">
-{stats}  </div>
+{stats}  </div>{_podcast_player_html(mp3_url, podcast_rss_url)}
 </div>
 
 """)

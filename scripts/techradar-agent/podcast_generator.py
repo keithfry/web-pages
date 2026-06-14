@@ -86,9 +86,14 @@ def _concat_wavs_to_mp3(wav_files: list[Path], out_mp3: Path) -> None:
         concat_file.unlink(missing_ok=True)
 
 
-def _write_id3_chapters(mp3_path: Path, chapters: list[dict], episode_title: str | None = None) -> None:
-    """Write ID3v2 CHAP frames to an MP3 file for chapter navigation."""
-    from mutagen.id3 import ID3, CHAP, CTOC, TIT2
+def _write_id3_chapters(
+    mp3_path: Path,
+    chapters: list[dict],
+    episode_title: str | None = None,
+    cover_path: Path | None = None,
+) -> None:
+    """Write ID3v2 CHAP frames (and optional cover art) to an MP3 file."""
+    from mutagen.id3 import ID3, CHAP, CTOC, TIT2, APIC
     from mutagen.id3 import ID3NoHeaderError
 
     try:
@@ -98,6 +103,15 @@ def _write_id3_chapters(mp3_path: Path, chapters: list[dict], episode_title: str
 
     if episode_title:
         tags.add(TIT2(encoding=3, text=[episode_title]))
+
+    if cover_path and cover_path.exists():
+        tags.add(APIC(
+            encoding=3,
+            mime="image/jpeg",
+            type=3,
+            desc="Cover",
+            data=cover_path.read_bytes(),
+        ))
 
     # Remove existing chapter tags
     for key in list(tags.keys()):
@@ -135,13 +149,13 @@ def generate_podcast(
     file_prefix: str = "ai-radar",
     topic_label: str = "AI",
     log=print,
-) -> tuple[Path, Path]:
-    """Generate MP3 + chapters.json from enriched data.
+) -> tuple[Path, Path, Path | None]:
+    """Generate MP3 + chapters.json + episode cover from enriched data.
 
     Also updates enriched_data['items'] with actual chapter_start_seconds from audio timings.
 
     Returns:
-        (mp3_path, chapters_json_path)
+        (mp3_path, chapters_json_path, episode_cover_path_or_None)
     """
     date_str = date.strftime("%Y-%m-%d")
     mp3_path = output_dir / f"{file_prefix}-{date_str}.mp3"
@@ -229,8 +243,19 @@ def generate_podcast(
     chapters_json_path.write_text(_build_chapters_json(chapters, episode_title), encoding="utf-8")
     log(f"  Wrote chapters JSON: {chapters_json_path}")
 
-    # Embed ID3 chapter tags in MP3
-    _write_id3_chapters(mp3_path, chapters, episode_title)
-    log(f"  Wrote ID3 chapters to: {mp3_path}")
+    # Generate episode cover image
+    date_str = date.strftime("%Y-%m-%d")
+    cover_path = output_dir / f"{file_prefix}-{date_str}.jpg"
+    try:
+        from cover_generator import generate_episode_cover
+        generate_episode_cover(topic_label, tagline or episode_title, date, total_duration, cover_path)
+        log(f"  Episode cover: {cover_path.name}")
+    except Exception as e:
+        log(f"  WARNING: episode cover generation failed: {e}")
+        cover_path = None
 
-    return mp3_path, chapters_json_path
+    # Embed ID3 chapter tags and cover art in MP3
+    _write_id3_chapters(mp3_path, chapters, episode_title, cover_path)
+    log(f"  Wrote ID3 tags to: {mp3_path}")
+
+    return mp3_path, chapters_json_path, cover_path

@@ -83,6 +83,12 @@ def build_rss_feed(
             if chap_json.exists() else ""
         )
 
+        ep_cover_path = output_dir / ym_dir / f"{file_prefix}-{date_str}.jpg"
+        ep_cover_tag = (
+            f'      <itunes:image href="{base_url}/{ym_dir}/{file_prefix}-{date_str}.jpg"/>\n'
+            if ep_cover_path.exists() else ""
+        )
+
         items_xml.append(f"""  <item>
     <title>{episode_title}</title>
     <pubDate>{pub_date}</pubDate>
@@ -90,12 +96,16 @@ def build_rss_feed(
     <itunes:duration>{duration // 3600:02d}:{(duration % 3600) // 60:02d}:{duration % 60:02d}</itunes:duration>
     <guid isPermaLink="true">{mp3_url}</guid>
     <description>{topic_label} Radar for {title_date}. {duration // 60} minutes of news.</description>
-{chap_tag}  </item>""")
+{ep_cover_tag}{chap_tag}  </item>""")
 
     items_block = "\n".join(items_xml)
     now = format_datetime(datetime.now(timezone.utc))
 
     feed_url = f"{base_url}/podcast.xml"
+    channel_cover_tag = ""
+    channel_cover_path = output_dir / "podcast-cover.png"
+    if channel_cover_path.exists():
+        channel_cover_tag = f'    <itunes:image href="{base_url}/podcast-cover.png"/>\n'
 
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
@@ -114,7 +124,7 @@ def build_rss_feed(
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
-{items_block}
+{channel_cover_tag}{items_block}
   </channel>
 </rss>
 """
