@@ -248,7 +248,7 @@ def generate_podcast(
     cover_path = output_dir / f"{file_prefix}-{date_str}.jpg"
     try:
         from cover_generator import generate_episode_cover
-        generate_episode_cover(topic_label, tagline or episode_title, date, total_duration, cover_path)
+        generate_episode_cover(topic_label, tagline or topic_label, date, total_duration, cover_path)
         log(f"  Episode cover: {cover_path.name}")
     except Exception as e:
         log(f"  WARNING: episode cover generation failed: {e}")
