@@ -434,7 +434,7 @@ def _run_topic(
         enriched_data = _json.loads(json_path.read_text())
         log("── Generating podcast audio ──")
         try:
-            mp3_path, chap_path, cover_path = generate_podcast(enriched_data, as_of, output_dir, file_prefix=file_prefix, topic_label=topic, log=log)
+            mp3_path, chap_path, cover_path, og_path = generate_podcast(enriched_data, as_of, output_dir, file_prefix=file_prefix, topic_label=topic, log=log)
             log(f"  Podcast generated: {mp3_path.name}")
         except Exception as e:
             log(f"ERROR: podcast generation failed: {e}")
@@ -443,8 +443,8 @@ def _run_topic(
         log("  Updated JSON with actual chapter times")
         if not args.dry_run:
             log("── Committing and pushing ──")
-            extra = [cover_path] if cover_path else []
-            commit_and_push([mp3_path, chap_path, json_path] + extra, as_of, topic=topic, log=log)
+            extras = [p for p in [cover_path, og_path] if p]
+            commit_and_push([mp3_path, chap_path, json_path] + extras, as_of, topic=topic, log=log)
         else:
             log("Dry run — skipping commit.")
         return
@@ -516,10 +516,11 @@ def _run_topic(
             date_str = as_of.strftime("%Y-%m-%d")
             _mp3_url = None if args.no_podcast else f"{BASE_URL_ROOT}/{topic_dir_rel}/{ym_dir}/{file_prefix}-{date_str}.mp3"
             _rss_url = None if args.no_podcast else f"{BASE_URL_ROOT}/{topic_dir_rel}/podcast.xml"
+            _og_url = None if args.no_podcast else f"{BASE_URL_ROOT}/{topic_dir_rel}/{ym_dir}/{file_prefix}-{date_str}.og.jpg"
             html = generate_html(
                 newsletters=newsletters, articles=articles,
                 papers=papers, errors=rss_errors, date=as_of, topic=topic,
-                mp3_url=_mp3_url, podcast_rss_url=_rss_url,
+                mp3_url=_mp3_url, podcast_rss_url=_rss_url, og_image_url=_og_url,
             )
             html_result.append(html)
             log(f"  HTML generated ({len(html):,} chars)")
@@ -532,8 +533,8 @@ def _run_topic(
             return
         try:
             log("── Step 7b: Generating podcast audio ──")
-            mp3, chap_json, cover = generate_podcast(enriched_data, as_of, output_dir, file_prefix=file_prefix, topic_label=topic, log=log)
-            podcast_result.append((mp3, chap_json, cover))
+            mp3, chap_json, cover, og = generate_podcast(enriched_data, as_of, output_dir, file_prefix=file_prefix, topic_label=topic, log=log)
+            podcast_result.append((mp3, chap_json, cover, og))
             log(f"  Podcast generated: {mp3.name}")
         except Exception as e:
             podcast_error.append(e)
@@ -567,8 +568,8 @@ def _run_topic(
 
     out_paths = [html_path, json_path]
     if podcast_result:
-        mp3_path, chap_path, cover_path = podcast_result[0]
-        out_paths.extend([p for p in [mp3_path, chap_path, cover_path] if p])
+        mp3_path, chap_path, cover_path, og_path = podcast_result[0]
+        out_paths.extend([p for p in [mp3_path, chap_path, cover_path, og_path] if p])
 
     # --- Step 8b: Generate podcast RSS feed ---
     log("── Step 8b: Generating podcast RSS ──")

@@ -175,6 +175,7 @@ def generate_html(
     topic: str = "AI",
     mp3_url: str | None = None,
     podcast_rss_url: str | None = None,
+    og_image_url: str | None = None,
 ) -> str:
     topic_label = "AI" if topic == "AI" else "Robotics"
     digest_title = f"{topic_label} Daily Digest"
@@ -200,13 +201,27 @@ def generate_html(
     )
 
     parts: list[str] = []
+    og_meta = ""
+    if og_image_url:
+        og_desc = f"{topic_label} news digest — {date_title}"
+        og_meta = (
+            f'<meta property="og:title" content="{digest_title} — {date_title}"/>\n'
+            f'<meta property="og:description" content="{og_desc}"/>\n'
+            f'<meta property="og:image" content="{og_image_url}"/>\n'
+            f'<meta property="og:image:width" content="1200"/>\n'
+            f'<meta property="og:image:height" content="630"/>\n'
+            f'<meta property="og:type" content="website"/>\n'
+            f'<meta name="twitter:card" content="summary_large_image"/>\n'
+            f'<meta name="twitter:image" content="{og_image_url}"/>\n'
+        )
+
     parts.append(f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{digest_title} &mdash; {date_title}</title>
-<style>
+{og_meta}<style>
 {_CSS}
 </style>
 </head>

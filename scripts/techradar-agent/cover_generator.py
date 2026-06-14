@@ -206,6 +206,114 @@ def generate_episode_cover(
     img.save(str(out_path), "JPEG", quality=92, optimize=True)
 
 
+OG_W, OG_H = 1200, 630
+_OG_BAR_H = 140
+
+
+def _make_og_base_image(topic: str):
+    """1200×630 dark gradient base for OG social cards."""
+    from PIL import Image
+
+    c_top = np.array(_BG_TOP[topic], dtype=float)
+    c_mid = np.array(_BG_MID[topic], dtype=float)
+
+    pixels = np.zeros((OG_H, OG_W, 3), dtype=np.uint8)
+    for y in range(OG_H):
+        t = y / OG_H
+        if t < 0.55:
+            t2 = t / 0.55
+            row = c_top * (1 - t2) + c_mid * t2
+        else:
+            t2 = (t - 0.55) / 0.45
+            row = c_mid * (1 - t2) + c_top * t2
+        pixels[y] = row.astype(np.uint8)
+
+    # Radial glow at upper-right
+    accent = np.array(_ACCENT[topic], dtype=float)
+    cx, cy = int(OG_W * 0.82), int(OG_H * 0.22)
+    radius = OG_W * 0.38
+
+    y_g, x_g = np.mgrid[0:OG_H, 0:OG_W]
+    dist = np.sqrt((x_g - cx) ** 2 + (y_g - cy) ** 2)
+    alpha = np.clip(1.0 - dist / radius, 0, 1) ** 2.8 * 0.22
+    for c in range(3):
+        pixels[:, :, c] = np.clip(
+            pixels[:, :, c] * (1 - alpha) + accent[c] * alpha, 0, 255
+        ).astype(np.uint8)
+
+    return Image.fromarray(pixels, "RGB")
+
+
+def _og_center_text(draw, y: int, text: str, font, fill) -> int:
+    bbox = draw.textbbox((0, 0), text, font=font)
+    w = bbox[2] - bbox[0]
+    draw.text(((OG_W - w) // 2, y), text, font=font, fill=fill)
+    return y + (bbox[3] - bbox[1])
+
+
+def generate_og_card(
+    topic: str,
+    tagline: str,
+    date: datetime,
+    duration_sec: int,
+    out_path: Path,
+) -> None:
+    """1200×630 Open Graph social card for HTML digest pages (JPEG)."""
+    from PIL import Image, ImageDraw
+
+    img = _make_og_base_image(topic)
+    draw = ImageDraw.Draw(img)
+    accent = _ACCENT[topic]
+    light = _ACCENT_LIGHT[topic]
+
+    label = "AI DAILY RADAR" if topic == "AI" else "ROBOTICS DAILY RADAR"
+
+    # Eyebrow
+    f_eye = _font(26, bold=True)
+    _og_center_text(draw, 52, label, f_eye, accent)
+
+    # Accent rule
+    rx = OG_W // 2 - 44
+    draw.rectangle([(rx, 94), (rx + 88, 99)], fill=accent)
+
+    # Tagline — wrap to fit 960px wide, max 2 lines
+    f_tag = _font(72, bold=True)
+    pad = 120
+    lines = _wrap_lines(draw, tagline, f_tag, OG_W - pad * 2)[:2]
+    line_h = draw.textbbox((0, 0), "Ag", font=f_tag)[3] + 12
+    zone_top, zone_bot = 120, OG_H - _OG_BAR_H - 20
+    total_h = len(lines) * line_h - 12
+    y = zone_top + (zone_bot - zone_top - total_h) // 2
+    for line in lines:
+        bbox = draw.textbbox((0, 0), line, font=f_tag)
+        w = bbox[2] - bbox[0]
+        draw.text(((OG_W - w) // 2, y), line, font=f_tag, fill=(248, 250, 252))
+        y += line_h
+
+    # Bottom bar overlay
+    bar_top = OG_H - _OG_BAR_H
+    overlay = Image.new("RGBA", (OG_W, OG_H), (0, 0, 0, 0))
+    od = ImageDraw.Draw(overlay)
+    od.rectangle([(0, bar_top), (OG_W, OG_H)], fill=(*accent, 52))
+    od.line([(0, bar_top), (OG_W, bar_top)], fill=(*accent, 80), width=2)
+    img = Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB")
+    draw = ImageDraw.Draw(img)
+
+    # Date (centered)
+    f_date = _font(32, bold=True)
+    date_str = date.strftime("%B %-d, %Y")
+    _og_center_text(draw, bar_top + 22, date_str, f_date, light)
+
+    # Duration (centered)
+    f_dur = _font(26)
+    mins = duration_sec // 60
+    dur_str = f"{mins} minute{'s' if mins != 1 else ''}"
+    _og_center_text(draw, bar_top + 68, dur_str, f_dur, light)
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    img.save(str(out_path), "JPEG", quality=92, optimize=True)
+
+
 if __name__ == "__main__":
     repo_root = Path(__file__).resolve().parents[2]
     for topic, subdir in [("AI", "AI"), ("Robotics", "Robotics")]:

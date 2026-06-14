@@ -149,13 +149,13 @@ def generate_podcast(
     file_prefix: str = "ai-radar",
     topic_label: str = "AI",
     log=print,
-) -> tuple[Path, Path, Path | None]:
-    """Generate MP3 + chapters.json + episode cover from enriched data.
+) -> tuple[Path, Path, Path | None, Path | None]:
+    """Generate MP3 + chapters.json + episode cover + OG card from enriched data.
 
     Also updates enriched_data['items'] with actual chapter_start_seconds from audio timings.
 
     Returns:
-        (mp3_path, chapters_json_path, episode_cover_path_or_None)
+        (mp3_path, chapters_json_path, episode_cover_path_or_None, og_card_path_or_None)
     """
     date_str = date.strftime("%Y-%m-%d")
     mp3_path = output_dir / f"{file_prefix}-{date_str}.mp3"
@@ -243,19 +243,23 @@ def generate_podcast(
     chapters_json_path.write_text(_build_chapters_json(chapters, episode_title), encoding="utf-8")
     log(f"  Wrote chapters JSON: {chapters_json_path}")
 
-    # Generate episode cover image
+    # Generate episode cover + OG social card
     date_str = date.strftime("%Y-%m-%d")
     cover_path = output_dir / f"{file_prefix}-{date_str}.jpg"
+    og_path = output_dir / f"{file_prefix}-{date_str}.og.jpg"
     try:
-        from cover_generator import generate_episode_cover
-        generate_episode_cover(topic_label, tagline or topic_label, date, total_duration, cover_path)
-        log(f"  Episode cover: {cover_path.name}")
+        from cover_generator import generate_episode_cover, generate_og_card
+        display_tagline = tagline or topic_label
+        generate_episode_cover(topic_label, display_tagline, date, total_duration, cover_path)
+        generate_og_card(topic_label, display_tagline, date, total_duration, og_path)
+        log(f"  Episode cover: {cover_path.name}, OG card: {og_path.name}")
     except Exception as e:
-        log(f"  WARNING: episode cover generation failed: {e}")
+        log(f"  WARNING: cover generation failed: {e}")
         cover_path = None
+        og_path = None
 
     # Embed ID3 chapter tags and cover art in MP3
     _write_id3_chapters(mp3_path, chapters, episode_title, cover_path)
     log(f"  Wrote ID3 tags to: {mp3_path}")
 
-    return mp3_path, chapters_json_path, cover_path
+    return mp3_path, chapters_json_path, cover_path, og_path
