@@ -120,6 +120,23 @@ generate_index() {
     echo "</head>"
     echo "<body><h2>$page_title</h2>"
 
+    # Podcast link for techradar directories
+    if [[ -f "$dir/podcast.xml" ]]; then
+      local podcast_url
+      podcast_url="https://keithfry.github.io/web-pages/$(echo "$dir" | sed 's|^\./||')/podcast.xml"
+      echo '<style>'
+      echo '.podcast-bar{display:flex;align-items:center;gap:10px;margin:8px 0 24px;font-family:sans-serif;}'
+      echo '.podcast-bar a{color:#d4561d;font-weight:bold;text-decoration:none;}'
+      echo '.podcast-bar a:hover{text-decoration:underline;}'
+      echo '.copy-btn{background:#d4561d;color:#fff;border:none;border-radius:4px;padding:4px 10px;cursor:pointer;font-size:0.85em;}'
+      echo '.copy-btn:active{opacity:0.7;}'
+      echo '</style>'
+      echo "<div class=\"podcast-bar\">"
+      echo "  &#127897; <a href=\"./podcast.xml\" id=\"podcast-link\">Podcast RSS Feed</a>"
+      echo "  <button class=\"copy-btn\" onclick=\"(function(){var url='${podcast_url}';navigator.clipboard.writeText(url).then(function(){var b=document.querySelector('.copy-btn');var orig=b.textContent;b.textContent='Copied!';setTimeout(function(){b.textContent=orig;},1500);});})();\">Copy URL</button>"
+      echo "</div>"
+    fi
+
     # Sort files by date (latest first), then group by month
     printf '%s\n' "${files_list[@]}" | sort -t'|' -k2 -r | {
       current_month=""

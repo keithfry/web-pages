@@ -23,6 +23,17 @@
 </script>
 </head>
 <body><h2>AI Tech Radar</h2>
+<style>
+.podcast-bar{display:flex;align-items:center;gap:10px;margin:8px 0 24px;font-family:sans-serif;}
+.podcast-bar a{color:#d4561d;font-weight:bold;text-decoration:none;}
+.podcast-bar a:hover{text-decoration:underline;}
+.copy-btn{background:#d4561d;color:#fff;border:none;border-radius:4px;padding:4px 10px;cursor:pointer;font-size:0.85em;}
+.copy-btn:active{opacity:0.7;}
+</style>
+<div class="podcast-bar">
+  &#127897; <a href="./podcast.xml" id="podcast-link">Podcast RSS Feed</a>
+  <button class="copy-btn" onclick="(function(){var url='https://keithfry.github.io/web-pages/techradar/AI/podcast.xml';navigator.clipboard.writeText(url).then(function(){var b=document.querySelector('.copy-btn');var orig=b.textContent;b.textContent='Copied!';setTimeout(function(){b.textContent=orig;},1500);});})();">Copy URL</button>
+</div>
 <h2>June 2026</h2>
 <ul>
 <li><a href="./2026-06/ai-radar-2026-06-14.html">ai-radar-2026-06-14.html</a> <a href="./2026-06/ai-radar-2026-06-14.mp3" title="Listen to podcast" style="text-decoration:none;">&#127897;</a></li>
