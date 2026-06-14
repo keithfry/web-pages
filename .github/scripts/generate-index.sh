@@ -21,6 +21,15 @@ _month_name() {
   esac
 }
 
+_dir_title() {
+  case "$1" in
+    techradar/AI|./techradar/AI)         echo "AI Tech Radar" ;;
+    techradar/Robotics|./techradar/Robotics) echo "Robotics Tech Radar" ;;
+    resume/certifications|./resume/certifications) echo "Certifications" ;;
+    *) echo "$(basename "$1")" ;;
+  esac
+}
+
 generate_index() {
   local dir="$1"
   local index="$dir/index.html"
@@ -89,6 +98,9 @@ generate_index() {
     echo '<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">'
     echo '<meta http-equiv="Pragma" content="no-cache">'
     echo '<meta http-equiv="Expires" content="0">'
+    local page_title
+    page_title="$(_dir_title "$dir")"
+    echo "<title>$page_title</title>"
     echo '<script>'
     echo '(function() {'
     echo '  var reloadKey = "reload_" + window.location.pathname;'
@@ -106,7 +118,7 @@ generate_index() {
     echo '})();'
     echo '</script>'
     echo "</head>"
-    echo "<body><h2>Index of $dir</h2>"
+    echo "<body><h2>$page_title</h2>"
 
     # Sort files by date (latest first), then group by month
     printf '%s\n' "${files_list[@]}" | sort -t'|' -k2 -r | {

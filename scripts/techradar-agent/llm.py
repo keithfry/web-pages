@@ -7,6 +7,7 @@ import sys
 import threading
 import time
 
+import httpx
 import json_repair
 import ollama
 
@@ -35,7 +36,7 @@ def _parse_json(text: str) -> dict:
     return json_repair.loads(text)
 
 
-def _chat(prompt: str, model: str, json_mode: bool = False, think: bool = False) -> str:
+def _chat(prompt: str, model: str, json_mode: bool = False, think: bool = False, _retries: int = 3) -> str:
     global _llm_call_count, _llm_total_duration
 
     kwargs: dict = {"think": think}
@@ -43,11 +44,20 @@ def _chat(prompt: str, model: str, json_mode: bool = False, think: bool = False)
         kwargs["format"] = "json"
 
     t0 = time.perf_counter()
-    response = ollama.chat(
-        model=model,
-        messages=[{"role": "user", "content": prompt}],
-        **kwargs,
-    )
+    for attempt in range(_retries):
+        try:
+            response = ollama.chat(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+                **kwargs,
+            )
+            break
+        except (httpx.RemoteProtocolError, httpx.ConnectError) as exc:
+            if attempt == _retries - 1:
+                raise
+            wait = 10 * (attempt + 1)
+            print(f"  [llm] Ollama disconnected ({exc.__class__.__name__}), retry {attempt+1}/{_retries-1} in {wait}s...", flush=True)
+            time.sleep(wait)
     elapsed = time.perf_counter() - t0
 
     with _llm_call_lock:
