@@ -13,7 +13,7 @@ from pathlib import Path
 import numpy as np
 
 SIZE = 1400
-_BAR_H = 145  # bottom bar height (episode covers)
+_BAR_H = 195  # bottom bar height (episode covers)
 
 _ACCENT = {
     "AI":       (96, 165, 250),   # #60a5fa
@@ -113,31 +113,46 @@ def generate_channel_cover(topic: str, out_path: Path) -> None:
 
     label = "AI DAILY RADAR" if topic == "AI" else "ROBOTICS DAILY RADAR"
     title_lines = ("AI", "Daily", "Radar") if topic == "AI" else ("Robotics", "Daily", "Radar")
+    byline = (
+        "Daily AI news digest for your listening pleasure"
+        if topic == "AI" else
+        "Daily Robotics news digest for your listening pleasure"
+    )
 
     # Eyebrow label
-    f_eye = _font(30, bold=True)
-    _center_text(draw, 255, label, f_eye, accent)
+    f_eye = _font(45, bold=True)
+    _center_text(draw, 170, label, f_eye, accent)
 
     # Accent rule
     rx = SIZE // 2 - 44
-    draw.rectangle([(rx, 303), (rx + 88, 308)], fill=accent)
+    draw.rectangle([(rx, 238), (rx + 88, 245)], fill=accent)
+
+    # Measure title block height to center it vertically
+    f_title = _font(177, bold=True)
+    f_sub = _font(45)
+    line_heights = [draw.textbbox((0, 0), ln, font=f_title)[3] for ln in title_lines]
+    title_block_h = sum(h + 8 for h in line_heights) - 8
+    sub_h = draw.textbbox((0, 0), byline, font=f_sub)[3]
+    gap = 36
+    total_block_h = title_block_h + gap + sub_h
+
+    zone_top = 265       # below accent rule
+    zone_bot = SIZE - 160  # above Keith Fry
+    y = zone_top + (zone_bot - zone_top - total_block_h) // 2
 
     # Main title
-    f_title = _font(118, bold=True)
-    y = 340
-    for line in title_lines:
+    for line, lh in zip(title_lines, line_heights):
         bbox = draw.textbbox((0, 0), line, font=f_title)
         w = bbox[2] - bbox[0]
         draw.text(((SIZE - w) // 2, y), line, font=f_title, fill=(248, 250, 252))
-        y += bbox[3] - bbox[1] + 8
+        y += lh + 8
 
     # Subtitle
-    f_sub = _font(30)
-    _center_text(draw, y + 28, "Daily news digest in audio form", f_sub, (148, 163, 184))
+    _center_text(draw, y + gap - 8, byline, f_sub, (148, 163, 184))
 
     # Author
-    f_auth = _font(28, bold=True)
-    _center_text(draw, SIZE - 100, "Keith Fry", f_auth, light)
+    f_auth = _font(42, bold=True)
+    _center_text(draw, SIZE - 130, "Keith Fry", f_auth, light)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(str(out_path), "PNG", optimize=True)
@@ -161,20 +176,20 @@ def generate_episode_cover(
     label = "AI DAILY RADAR" if topic == "AI" else "ROBOTICS DAILY RADAR"
 
     # Eyebrow
-    f_eye = _font(28, bold=True)
-    _center_text(draw, 195, label, f_eye, accent)
+    f_eye = _font(84, bold=True)
+    _center_text(draw, 100, label, f_eye, accent)
 
     # Accent rule
     rx = SIZE // 2 - 44
-    draw.rectangle([(rx, 240), (rx + 88, 245)], fill=accent)
+    draw.rectangle([(rx, 218), (rx + 88, 225)], fill=accent)
 
     # Tagline (wrapped, vertically centered in upper zone)
-    f_tag = _font(74, bold=True)
+    f_tag = _font(111, bold=True)
     pad = 110
     lines = _wrap_lines(draw, tagline, f_tag, SIZE - pad * 2)
-    line_h = draw.textbbox((0, 0), "Ag", font=f_tag)[3] + 14
-    zone_top, zone_bot = 280, SIZE - _BAR_H - 40
-    total_h = len(lines) * line_h - 14
+    line_h = draw.textbbox((0, 0), "Ag", font=f_tag)[3] + 18
+    zone_top, zone_bot = 230, SIZE - _BAR_H - 40
+    total_h = len(lines) * line_h - 18
     y = zone_top + (zone_bot - zone_top - total_h) // 2
     for line in lines:
         bbox = draw.textbbox((0, 0), line, font=f_tag)
@@ -192,22 +207,22 @@ def generate_episode_cover(
     draw = ImageDraw.Draw(img)
 
     # Date (centered)
-    f_date = _font(34, bold=True)
+    f_date = _font(51, bold=True)
     date_str = date.strftime("%B %-d, %Y")
-    _center_text(draw, bar_top + 22, date_str, f_date, light)
+    _center_text(draw, bar_top + 20, date_str, f_date, light)
 
     # Duration (centered)
-    f_dur = _font(28)
+    f_dur = _font(42)
     mins = duration_sec // 60
     dur_str = f"{mins} minute{'s' if mins != 1 else ''}"
-    _center_text(draw, bar_top + 72, dur_str, f_dur, light)
+    _center_text(draw, bar_top + 100, dur_str, f_dur, light)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(str(out_path), "JPEG", quality=92, optimize=True)
 
 
 OG_W, OG_H = 1200, 630
-_OG_BAR_H = 140
+_OG_BAR_H = 185
 
 
 def _make_og_base_image(topic: str):
@@ -269,20 +284,20 @@ def generate_og_card(
     label = "AI DAILY RADAR" if topic == "AI" else "ROBOTICS DAILY RADAR"
 
     # Eyebrow
-    f_eye = _font(26, bold=True)
-    _og_center_text(draw, 52, label, f_eye, accent)
+    f_eye = _font(39, bold=True)
+    _og_center_text(draw, 38, label, f_eye, accent)
 
     # Accent rule
     rx = OG_W // 2 - 44
-    draw.rectangle([(rx, 94), (rx + 88, 99)], fill=accent)
+    draw.rectangle([(rx, 90), (rx + 88, 97)], fill=accent)
 
-    # Tagline — wrap to fit 960px wide, max 2 lines
-    f_tag = _font(72, bold=True)
-    pad = 120
+    # Tagline — wrap to fit, max 2 lines
+    f_tag = _font(108, bold=True)
+    pad = 100
     lines = _wrap_lines(draw, tagline, f_tag, OG_W - pad * 2)[:2]
-    line_h = draw.textbbox((0, 0), "Ag", font=f_tag)[3] + 12
-    zone_top, zone_bot = 120, OG_H - _OG_BAR_H - 20
-    total_h = len(lines) * line_h - 12
+    line_h = draw.textbbox((0, 0), "Ag", font=f_tag)[3] + 14
+    zone_top, zone_bot = 112, OG_H - _OG_BAR_H - 10
+    total_h = len(lines) * line_h - 14
     y = zone_top + (zone_bot - zone_top - total_h) // 2
     for line in lines:
         bbox = draw.textbbox((0, 0), line, font=f_tag)
@@ -300,15 +315,15 @@ def generate_og_card(
     draw = ImageDraw.Draw(img)
 
     # Date (centered)
-    f_date = _font(32, bold=True)
+    f_date = _font(48, bold=True)
     date_str = date.strftime("%B %-d, %Y")
-    _og_center_text(draw, bar_top + 22, date_str, f_date, light)
+    _og_center_text(draw, bar_top + 18, date_str, f_date, light)
 
     # Duration (centered)
-    f_dur = _font(26)
+    f_dur = _font(39)
     mins = duration_sec // 60
     dur_str = f"{mins} minute{'s' if mins != 1 else ''}"
-    _og_center_text(draw, bar_top + 68, dur_str, f_dur, light)
+    _og_center_text(draw, bar_top + 100, dur_str, f_dur, light)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     img.save(str(out_path), "JPEG", quality=92, optimize=True)
