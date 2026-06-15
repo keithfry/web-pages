@@ -51,12 +51,13 @@ def _estimate_chapter_times(intro_script: str, audio_scripts: list[str]) -> list
     return times
 
 
-def _build_enriched_dict(date: datetime, intro_script: str, episode_tagline: str, items: list[dict]) -> dict:
+def _build_enriched_dict(date: datetime, intro_script: str, episode_tagline: str, outro_script: str, items: list[dict]) -> dict:
     return {
         "date": date.strftime("%Y-%m-%d"),
         "generated_at": datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M:%S%z"),
         "intro_script": intro_script,
         "episode_tagline": episode_tagline,
+        "outro_script": outro_script,
         "items": items,
     }
 
@@ -87,7 +88,7 @@ def enrich(
     Returns:
         enriched dict (same structure as JSON file)
     """
-    from llm import rank_items, generate_audio_script, generate_intro_script, generate_episode_tagline, unload_all_models
+    from llm import rank_items, generate_audio_script, generate_intro_script, generate_episode_tagline, generate_outro_script, unload_all_models
 
     # Separate podcast candidates (emails + articles) from papers
     podcast_candidates = [i for i in all_items if not i.get("_is_arxiv")]
@@ -118,27 +119,36 @@ def enrich(
             item["include_in_podcast"] = True
             log(f"    [{item['rank']}] scripted: {item['title'][:60]}")
 
-    # Generate intro script and episode tagline in parallel (independent of each other)
-    log("  Generating intro script and episode tagline in parallel...")
+    # Generate intro, outro, and tagline in parallel (all independent)
+    log("  Generating intro, outro, and episode tagline in parallel...")
     intro_result: list = []
+    outro_result: list = []
     tagline_result: list = []
 
     def _gen_intro():
         intro_result.append(generate_intro_script(ranked, date, model=summarize_model, topic=topic))
 
+    def _gen_outro():
+        outro_result.append(generate_outro_script(ranked, date, model=summarize_model, topic=topic))
+
     def _gen_tagline():
         tagline_result.append(generate_episode_tagline(ranked, model=summarize_model))
 
     t_intro   = threading.Thread(target=_gen_intro)
+    t_outro   = threading.Thread(target=_gen_outro)
     t_tagline = threading.Thread(target=_gen_tagline)
     t_intro.start()
+    t_outro.start()
     t_tagline.start()
     t_intro.join()
+    t_outro.join()
     t_tagline.join()
 
     intro_script    = intro_result[0]
+    outro_script    = outro_result[0]
     episode_tagline = tagline_result[0]
     log(f"  Episode tagline: {episode_tagline}")
+    log(f"  Outro: {outro_script[:80]}{'...' if len(outro_script) > 80 else ''}")
 
     # Estimate chapter times
     audio_scripts = [item["audio_script"] for item in ranked]
@@ -154,7 +164,7 @@ def enrich(
 
     all_enriched = ranked + papers
 
-    data = _build_enriched_dict(date, intro_script, episode_tagline, all_enriched)
+    data = _build_enriched_dict(date, intro_script, episode_tagline, outro_script, all_enriched)
     write_enriched_json(data, output_path)
     log(f"  Wrote enriched JSON: {output_path}")
 

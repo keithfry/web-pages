@@ -167,16 +167,20 @@ def generate_podcast(
 
     podcast_items = [i for i in enriched_data["items"] if i.get("include_in_podcast")]
     intro_script = enriched_data["intro_script"]
+    outro_script = enriched_data.get("outro_script", "")
 
-    log(f"  Generating audio for intro + {len(podcast_items)} items ({TTS_WORKERS} workers)...")
+    log(f"  Generating audio for intro + {len(podcast_items)} items + outro ({TTS_WORKERS} workers)...")
 
     output_dir.mkdir(parents=True, exist_ok=True)
+
+    # outro order_index sits after all ranked items
+    _outro_idx = max((item["rank"] for item in podcast_items), default=0) + 1
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
 
         # Build work list: (order_index, wav_path, text, voice, label)
-        # order_index 0 = intro, 1..N = items in rank order
+        # order_index 0 = intro, 1..N = items in rank order, N+1 = outro
         work = [(0, tmp / "intro.wav", intro_script, _voice_for(0), "intro")]
         for item in podcast_items:
             work.append((
@@ -186,6 +190,8 @@ def generate_podcast(
                 _voice_for(item["voice_index"]),
                 f"item {item['rank']} ({item['title'][:40]})",
             ))
+        if outro_script:
+            work.append((_outro_idx, tmp / "outro.wav", outro_script, _voice_for(0), "outro"))
 
         # Synthesize all segments in parallel; results keyed by order_index
         durations: dict[int, float] = {}
@@ -231,6 +237,11 @@ def generate_podcast(
         if item.get("link"):
             chap["url"] = item["link"]
         chapters.append(chap)
+
+    # Outro chapter — starts at actual_starts[_outro_idx position]
+    if outro_script:
+        outro_start = int(actual_starts[len(podcast_items) + 1])
+        chapters.append({"startTime": outro_start, "title": "Sign Off"})
 
     # Add endTime to each chapter
     for i, chap in enumerate(chapters):

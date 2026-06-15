@@ -507,6 +507,24 @@ def generate_episode_tagline(items: list[dict], model: str = SUMMARIZE_MODEL) ->
     return first_line
 
 
+def generate_outro_script(items: list[dict], date: "datetime", model: str = SUMMARIZE_MODEL, topic: str = "AI") -> str:
+    """Generate a short, creative, varied sign-off outro for the podcast episode."""
+    date_str = f"{date.strftime('%B')} {date.day}, {date.year}"
+    topic_desc = "robotics and automation" if topic == "Robotics" else "AI and machine learning"
+    top_title = items[0]["title"] if items else ""
+    prompt = (
+        f"Write a short podcast outro (20 to 40 words) for a daily {topic_desc} news digest. "
+        f"Date: {date_str}. "
+        "Sign off warmly and thank the listener for tuning in. "
+        "Be creative and vary the style — it could be playful, punny, enthusiastic, philosophical, "
+        "cheeky, warm, or cleverly reference the day's biggest story. "
+        "Do not be generic. No markdown. No 'stay tuned'. Speak naturally as if signing off on air. "
+        f"Today's top story was about: {top_title}\n\n"
+        "Outro:"
+    )
+    return _chat(prompt, model).strip()
+
+
 def generate_intro_script(items: list[dict], date: "datetime", model: str = SUMMARIZE_MODEL, topic: str = "AI") -> str:
     """Generate a podcast intro mentioning date, item count, and top-3 topics."""
     date_str = f"{date.strftime('%B')} {date.day}, {date.year}"
