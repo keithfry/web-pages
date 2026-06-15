@@ -465,5 +465,6 @@
       "include_in_podcast": true,
       "chapter_start_seconds": 1379
     }
-  ]
+  ],
+  "outro_script": "That\u2019s your AI update for June 14th, friends! Since Anthropic locked down those big models today, remember: human ingenuity still runs the backend. Thanks for tuning in; keep learning and questioning everything! Bye for now."
 }
