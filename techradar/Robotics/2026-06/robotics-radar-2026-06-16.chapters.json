@@ -1,0 +1,64 @@
+{
+  "version": "1.2.0",
+  "title": "June 16, 2026 : World Action Aviation Future",
+  "chapters": [
+    {
+      "startTime": 0,
+      "title": "Introduction",
+      "endTime": 15
+    },
+    {
+      "startTime": 15,
+      "title": "Pretrained to Imagine, Fine-Tuned to Act: The Rise of World-Action Models",
+      "url": "https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/",
+      "endTime": 68
+    },
+    {
+      "startTime": 68,
+      "title": "Autonomous freight developer Einride goes public via SPAC",
+      "url": "https://www.therobotreport.com/autonomous-freight-developer-einride-goes-public-via-spac/",
+      "endTime": 104
+    },
+    {
+      "startTime": 104,
+      "title": "Indonesia grants world-first overseas certification validation to AutoFlight eVTOL",
+      "url": "https://roboticsandautomationnews.com/2026/06/15/autoflight-granted-worlds-first-evtol-overseas-certificate-in-indonesia/102559/",
+      "endTime": 158
+    },
+    {
+      "startTime": 158,
+      "title": "Built Robotics, Penn xLAB to develop physical AI for construction",
+      "url": "https://www.therobotreport.com/xlab-and-built-robotics-partner-to-advance-construction/",
+      "endTime": 221
+    },
+    {
+      "startTime": 221,
+      "title": "PSYONIC partners with ABB Robotics to apply human touch to robot dexterity",
+      "url": "https://www.therobotreport.com/psyonic-abb-robotics-partner-apply-human-touch-data-robot-dexterity/",
+      "endTime": 268
+    },
+    {
+      "startTime": 268,
+      "title": "AI, Robotics and Automated Mining: The Future of Excavators and Mining Machinery Parts",
+      "url": "https://roboticsandautomationnews.com/2026/06/15/ai-robotics-and-automated-mining-the-future-of-excavators-and-mining-machinery-parts/102555/",
+      "endTime": 329
+    },
+    {
+      "startTime": 329,
+      "title": "ROS Industrial: Bringing the ROS Community Together: Meetups in Heilbronn and Karlsruhe",
+      "url": "https://rosindustrial.org/news/2026/6/15/bringing-the-ros-community-together-meetups-in-heilbronn-and-karlsruhe",
+      "endTime": 379
+    },
+    {
+      "startTime": 379,
+      "title": "ROS Discourse General: Looking for a repository within ROS2 to support",
+      "url": "https://discourse.openrobotics.org/t/looking-for-a-repository-within-ros2-to-support/55489",
+      "endTime": 434
+    },
+    {
+      "startTime": 434,
+      "title": "Sign Off",
+      "endTime": 446
+    }
+  ]
+}
