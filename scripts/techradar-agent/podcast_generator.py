@@ -41,43 +41,35 @@ def _build_chapters_json(chapters: list[dict], episode_title: str | None = None)
     return json.dumps(data, indent=2)
 
 
-def _build_transcript_json(
-    intro_script: str,
-    podcast_items: list[dict],
-    actual_starts: list[float],
-    total_duration_seconds: float,
-    outro_script: str = "",
-) -> str:
-    """One segment per chapter: intro + each podcast item + optional outro."""
-    segments = []
+import re as _re
+_SENT_RE = _re.compile(r'(?<=[.!?])\s+(?=[A-Z"\'])')
 
-    intro_end = actual_starts[1] if len(actual_starts) > 1 else total_duration_seconds
-    segments.append({
-        "startTime": round(actual_starts[0], 3),
-        "endTime": round(intro_end, 3),
-        "text": intro_script,
-        "voice": _voice_for(0),
-    })
 
-    for i, item in enumerate(podcast_items):
-        start = actual_starts[i + 1]
-        end = actual_starts[i + 2] if i + 2 < len(actual_starts) else total_duration_seconds
-        segments.append({
-            "startTime": round(start, 3),
-            "endTime": round(end, 3),
-            "text": item["audio_script"],
-            "voice": _voice_for(item["voice_index"]),
-        })
+def _split_sentences(text: str) -> list[str]:
+    parts = _SENT_RE.split(text.strip())
+    return [p.strip() for p in parts if p.strip()]
 
-    if outro_script and len(actual_starts) > len(podcast_items) + 1:
-        outro_start = actual_starts[len(podcast_items) + 1]
-        segments.append({
-            "startTime": round(outro_start, 3),
-            "endTime": round(total_duration_seconds, 3),
-            "text": outro_script,
-            "voice": _voice_for(0),
-        })
 
+def _interpolate_sentences(
+    sentences: list[str], start: float, end: float
+) -> list[tuple[str, float, float]]:
+    """Distribute timestamps across sentences proportional to character count."""
+    if not sentences:
+        return []
+    if len(sentences) == 1:
+        return [(sentences[0], round(start, 3), round(end, 3))]
+    total_chars = sum(len(s) for s in sentences) or 1
+    duration = end - start
+    result = []
+    cursor = start
+    for sent in sentences:
+        sent_end = cursor + duration * len(sent) / total_chars
+        result.append((sent, round(cursor, 3), round(sent_end, 3)))
+        cursor = sent_end
+    return result
+
+
+def _build_transcript_json(segments: list[dict]) -> str:
     return json.dumps({"version": "1.0.0", "segments": segments}, indent=2)
 
 
@@ -219,52 +211,68 @@ def generate_podcast(
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
 
-        # Build work list: (order_index, wav_path, text, voice, label)
-        # order_index 0 = intro, 1..N = items in rank order, N+1 = outro
-        work = [(0, tmp / "intro.wav", intro_script, _voice_for(0), "intro")]
+        # Build sentence-level work list: (sort_key, wav_path, text, voice, label)
+        # sort_key = (item_order, sentence_idx); item_order: 0=intro, rank=items, _outro_idx=outro
+        work = []
+        for si, sent in enumerate(_split_sentences(intro_script)):
+            work.append(((0, si), tmp / f"intro_{si:03d}.wav", sent, _voice_for(0), f"intro[{si}]"))
         for item in podcast_items:
-            work.append((
-                item["rank"],
-                tmp / f"item_{item['rank']:03d}.wav",
-                item["audio_script"],
-                _voice_for(item["voice_index"]),
-                f"item {item['rank']} ({item['title'][:40]})",
-            ))
+            for si, sent in enumerate(_split_sentences(item["audio_script"])):
+                work.append(((item["rank"], si), tmp / f"item_{item['rank']:03d}_{si:03d}.wav", sent, _voice_for(item["voice_index"]), f"item {item['rank']}[{si}]"))
         if outro_script:
-            work.append((_outro_idx, tmp / "outro.wav", outro_script, _voice_for(0), "outro"))
+            for si, sent in enumerate(_split_sentences(outro_script)):
+                work.append(((_outro_idx, si), tmp / f"outro_{si:03d}.wav", sent, _voice_for(0), f"outro[{si}]"))
 
-        # Synthesize all segments in parallel; results keyed by order_index
-        durations: dict[int, float] = {}
+        # Synthesize all sentences in parallel; results keyed by sort_key
+        durations: dict[tuple, float] = {}
 
-        def _synth(order_idx: int, wav_path: Path, text: str, voice: str, label: str) -> tuple[int, float]:
+        def _synth(sort_key: tuple, wav_path: Path, text: str, voice: str, label: str) -> tuple[tuple, float]:
             log(f"  [tts] {label} ({voice})...")
             dur = _tts_segment(text, voice, wav_path)
-            return order_idx, dur
+            return sort_key, dur
 
         with ThreadPoolExecutor(max_workers=TTS_WORKERS) as executor:
             futures = {
                 executor.submit(_synth, *w): w[0] for w in work
             }
             for future in as_completed(futures):
-                order_idx, dur = future.result()
-                durations[order_idx] = dur
+                sort_key, dur = future.result()
+                durations[sort_key] = dur
 
-        # Reconstruct ordered wav list and compute chapter start times
+        # Reconstruct ordered wav list and compute sentence-level start times
         ordered = sorted(work, key=lambda w: w[0])
         wav_files: list[Path] = []
-        actual_starts: list[float] = []
+        sentence_starts: list[float] = []
         cursor = 0.0
-        for order_idx, wav_path, _, _, _ in ordered:
+        for sort_key, wav_path, _, _, _ in ordered:
             wav_files.append(wav_path)
-            actual_starts.append(cursor)
-            cursor += durations[order_idx]
+            sentence_starts.append(cursor)
+            cursor += durations[sort_key]
 
-        # Write actual chapter start times back to items (actual_starts[0] = intro)
-        for i, item in enumerate(podcast_items):
-            item["chapter_start_seconds"] = int(actual_starts[i + 1])
+        # Derive chapter-level starts: first sentence of each item_order
+        chapter_starts: dict[int, float] = {}
+        for i, (sort_key, _, _, _, _) in enumerate(ordered):
+            item_order, sentence_idx = sort_key
+            if sentence_idx == 0:
+                chapter_starts[item_order] = sentence_starts[i]
+
+        # Write chapter_start_seconds back to items
+        for item in podcast_items:
+            item["chapter_start_seconds"] = int(chapter_starts.get(item["rank"], 0))
 
         total_duration = int(cursor)
         log(f"  Total audio: {total_duration}s ({total_duration // 60}m {total_duration % 60}s)")
+
+        # Build sentence-level transcript segments
+        transcript_segments: list[dict] = []
+        for i, (_, _, text, voice, _) in enumerate(ordered):
+            seg_end = sentence_starts[i + 1] if i + 1 < len(sentence_starts) else float(total_duration)
+            transcript_segments.append({
+                "startTime": round(sentence_starts[i], 3),
+                "endTime": round(seg_end, 3),
+                "text": text,
+                "voice": voice,
+            })
 
         # Concat all WAV → MP3
         log("  Merging WAV segments → MP3...")
@@ -272,15 +280,16 @@ def generate_podcast(
 
     # Build chapters list
     chapters = [{"startTime": 0, "title": "Introduction"}]
-    for item, start in zip(podcast_items, actual_starts[1:]):
+    for item in podcast_items:
+        start = chapter_starts.get(item["rank"], 0)
         chap = {"startTime": int(start), "title": item["title"]}
         if item.get("link"):
             chap["url"] = item["link"]
         chapters.append(chap)
 
-    # Outro chapter — starts at actual_starts[_outro_idx position]
+    # Outro chapter
     if outro_script:
-        outro_start = int(actual_starts[len(podcast_items) + 1])
+        outro_start = int(chapter_starts.get(_outro_idx, total_duration))
         chapters.append({"startTime": outro_start, "title": "Sign Off"})
 
     # Add endTime to each chapter
@@ -299,7 +308,7 @@ def generate_podcast(
         ".chapters.json", ".transcript.json"
     )
     transcript_json_path.write_text(
-        _build_transcript_json(intro_script, podcast_items, actual_starts, float(total_duration), outro_script),
+        _build_transcript_json(transcript_segments),
         encoding="utf-8",
     )
     log(f"  Wrote transcript JSON: {transcript_json_path}")

@@ -432,33 +432,50 @@ def _run_topic(
             log(f"ERROR: no JSON found at {json_path}")
             return
         import json as _json
-        from podcast_generator import _build_transcript_json, _voice_for
+        from podcast_generator import _build_transcript_json, _voice_for, _split_sentences, _interpolate_sentences
         enriched_data = _json.loads(json_path.read_text())
         podcast_items = [i for i in enriched_data["items"] if i.get("include_in_podcast")]
         intro_script = enriched_data.get("intro_script", "")
         outro_script = enriched_data.get("outro_script", "")
 
-        # Reconstruct actual_starts from chapter_start_seconds (integer precision)
-        # actual_starts[0]=intro(0), actual_starts[1..N]=items, actual_starts[N+1]=outro
-        actual_starts: list[float] = [0.0] + [float(i["chapter_start_seconds"]) for i in podcast_items]
-
-        # Outro start and total duration from chapters.json
+        # Read chapter boundaries from chapters.json for interpolation windows
         total_duration = 0.0
+        outro_start = None
         if chap_path.exists():
             chap_data = _json.loads(chap_path.read_text())
-            chapters = chap_data.get("chapters", [])
-            if chapters:
-                total_duration = float(chapters[-1].get("endTime", 0))
-                sign_off = next((c for c in reversed(chapters) if c.get("title") == "Sign Off"), None)
+            chaps = chap_data.get("chapters", [])
+            if chaps:
+                total_duration = float(chaps[-1].get("endTime", 0))
+                sign_off = next((c for c in reversed(chaps) if c.get("title") == "Sign Off"), None)
                 if sign_off:
-                    actual_starts.append(float(sign_off["startTime"]))
+                    outro_start = float(sign_off["startTime"])
+
+        # Build sentence segments with character-proportional interpolation within each chapter window
+        segments: list[dict] = []
+
+        intro_end = float(podcast_items[0]["chapter_start_seconds"]) if podcast_items else total_duration
+        for sent, s, e in _interpolate_sentences(_split_sentences(intro_script), 0.0, intro_end):
+            segments.append({"startTime": s, "endTime": e, "text": sent, "voice": _voice_for(0)})
+
+        for idx, item in enumerate(podcast_items):
+            item_start = float(item["chapter_start_seconds"])
+            if idx + 1 < len(podcast_items):
+                item_end = float(podcast_items[idx + 1]["chapter_start_seconds"])
+            else:
+                item_end = outro_start if outro_start is not None else total_duration
+            for sent, s, e in _interpolate_sentences(_split_sentences(item["audio_script"]), item_start, item_end):
+                segments.append({"startTime": s, "endTime": e, "text": sent, "voice": _voice_for(item["voice_index"])})
+
+        if outro_script and outro_start is not None:
+            for sent, s, e in _interpolate_sentences(_split_sentences(outro_script), outro_start, total_duration):
+                segments.append({"startTime": s, "endTime": e, "text": sent, "voice": _voice_for(0)})
 
         transcript_path = output_dir / f"{file_prefix}-{as_of.strftime('%Y-%m-%d')}.transcript.json"
         transcript_path.write_text(
-            _build_transcript_json(intro_script, podcast_items, actual_starts, total_duration, outro_script),
+            _build_transcript_json(segments),
             encoding="utf-8",
         )
-        log(f"  Wrote transcript JSON: {transcript_path} ({len(podcast_items)+1} segments)")
+        log(f"  Wrote transcript JSON: {transcript_path} ({len(segments)} segments)")
         log("── Generating podcast RSS ──")
         rss_path = generate_podcast_rss(base_dir, topic, log=log)
         if not args.dry_run:
