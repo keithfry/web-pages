@@ -42,11 +42,21 @@ def _build_chapters_json(chapters: list[dict], episode_title: str | None = None)
 
 
 import re as _re
-_SENT_RE = _re.compile(r'(?<=[.!?])\s+(?=[A-Z"\'])')
+_SENT_RE = _re.compile(r'(?<=[.!?]["\'])\s+(?=[A-Z"\'])|(?<=[.!?])\s+(?=[A-Z"\'])')
+_FROM_HDR_RE = _re.compile(r'^(From [^"]+?"[^"]*")\s*')
 
 
 def _split_sentences(text: str) -> list[str]:
-    parts = _SENT_RE.split(text.strip())
+    text = text.strip()
+    # Peel off "From [source], \"[title]\"." header as its own segment before splitting the body
+    m = _FROM_HDR_RE.match(text)
+    if m:
+        header = m.group(1).strip()
+        rest = text[m.end():].strip()
+        body_parts = _SENT_RE.split(rest) if rest else []
+        parts = [header] + body_parts
+    else:
+        parts = _SENT_RE.split(text)
     return [p.strip() for p in parts if p.strip()]
 
 
