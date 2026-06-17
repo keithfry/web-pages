@@ -316,6 +316,8 @@ def main() -> None:
                         help="Skip podcast audio generation")
     parser.add_argument("--podcast-only", action="store_true",
                         help="Rebuild podcast from existing JSON (skip fetch/enrich/HTML)")
+    parser.add_argument("--transcript-only", action="store_true",
+                        help="Generate transcript.json from existing JSON (no TTS, no fetch)")
     parser.add_argument("--refresh-token", action="store_true",
                         help="Delete token.json and re-authenticate with Gmail, then exit")
     args = parser.parse_args()
@@ -355,7 +357,7 @@ def main() -> None:
         # Fetch emails once — shared across all topics; each topic classifies independently
         email_items: list[dict] = []
         linked_articles: list[dict] = []
-        if not args.no_email and not args.podcast_only:
+        if not args.no_email and not args.podcast_only and not args.transcript_only:
             log("── Fetching Gmail (shared across topics) ──")
             try:
                 email_items = fetch_emails(args.hours, as_of=as_of_utc)
@@ -376,7 +378,7 @@ def main() -> None:
                     log("  Run: uv run main.py --refresh-token")
                     return
                 raise
-        elif not args.podcast_only:
+        elif not args.podcast_only and not args.transcript_only:
             log("── Gmail skipped (--no-email) ──")
         log("")
 
@@ -421,6 +423,48 @@ def _run_topic(
     log("")
 
     as_of_utc = as_of.astimezone(timezone.utc)
+
+    # --- Transcript-only shortcut ---
+    if args.transcript_only:
+        json_path = output_dir / f"{file_prefix}-{as_of.strftime('%Y-%m-%d')}.json"
+        chap_path = output_dir / f"{file_prefix}-{as_of.strftime('%Y-%m-%d')}.chapters.json"
+        if not json_path.exists():
+            log(f"ERROR: no JSON found at {json_path}")
+            return
+        import json as _json
+        from podcast_generator import _build_transcript_json, _voice_for
+        enriched_data = _json.loads(json_path.read_text())
+        podcast_items = [i for i in enriched_data["items"] if i.get("include_in_podcast")]
+        intro_script = enriched_data.get("intro_script", "")
+        outro_script = enriched_data.get("outro_script", "")
+
+        # Reconstruct actual_starts from chapter_start_seconds (integer precision)
+        # actual_starts[0]=intro(0), actual_starts[1..N]=items, actual_starts[N+1]=outro
+        actual_starts: list[float] = [0.0] + [float(i["chapter_start_seconds"]) for i in podcast_items]
+
+        # Outro start and total duration from chapters.json
+        total_duration = 0.0
+        if chap_path.exists():
+            chap_data = _json.loads(chap_path.read_text())
+            chapters = chap_data.get("chapters", [])
+            if chapters:
+                total_duration = float(chapters[-1].get("endTime", 0))
+                sign_off = next((c for c in reversed(chapters) if c.get("title") == "Sign Off"), None)
+                if sign_off:
+                    actual_starts.append(float(sign_off["startTime"]))
+
+        transcript_path = output_dir / f"{file_prefix}-{as_of.strftime('%Y-%m-%d')}.transcript.json"
+        transcript_path.write_text(
+            _build_transcript_json(intro_script, podcast_items, actual_starts, total_duration, outro_script),
+            encoding="utf-8",
+        )
+        log(f"  Wrote transcript JSON: {transcript_path} ({len(podcast_items)+1} segments)")
+        if not args.dry_run:
+            log("── Committing and pushing ──")
+            commit_and_push([transcript_path], as_of, topic=topic, log=log)
+        else:
+            log("Dry run — skipping commit.")
+        return
 
     # --- Podcast-only shortcut ---
     if args.podcast_only:
