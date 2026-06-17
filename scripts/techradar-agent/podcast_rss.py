@@ -1,7 +1,7 @@
-"""Generate podcast.xml RSS feed from radar MP3 files.
+"""Generate podcast.rss RSS feed from radar MP3 files.
 
 Scans output_dir for MP3 files matching file_prefix, reads paired
-.chapters.json for duration, writes podcast.xml. Keeps last 20 episodes.
+.chapters.json for duration, writes podcast.rss. Keeps last 20 episodes.
 """
 
 import json
@@ -108,7 +108,7 @@ def build_rss_feed(
     items_block = "\n".join(items_xml)
     now = format_datetime(datetime.now(timezone.utc))
 
-    feed_url = f"{base_url}/podcast.xml"
+    feed_url = f"{base_url}/podcast.rss"
     channel_cover_tag = ""
     channel_cover_path = output_dir / "podcast-cover.png"
     if channel_cover_path.exists():
@@ -138,7 +138,7 @@ def build_rss_feed(
 
 
 def generate_podcast_rss(output_dir: Path, topic: str, log=print) -> Path:
-    """Generate podcast.xml for the given topic output directory. Returns path written."""
+    """Generate podcast.rss for the given topic output directory. Returns path written."""
     if topic == "AI":
         file_prefix = "ai-radar"
         base_url = f"{BASE_URL_ROOT}/{AI_OUTPUT_DIR_REL}"
@@ -149,8 +149,8 @@ def generate_podcast_rss(output_dir: Path, topic: str, log=print) -> Path:
         topic_label = "Robotics"
 
     xml = build_rss_feed(output_dir, base_url, file_prefix, topic_label)
-    out = output_dir / "podcast.xml"
+    out = output_dir / "podcast.rss"
     out.write_text(xml, encoding="utf-8")
     episode_count = xml.count("<item>")
-    log(f"  podcast.xml: {episode_count} episodes → {out}")
+    log(f"  podcast.rss: {episode_count} episodes → {out}")
     return out

@@ -1042,12 +1042,12 @@ Expected: `ModuleNotFoundError: No module named 'generate_podcast_rss'`
 
 ```python
 #!/usr/bin/env python3
-"""Generate podcast.xml RSS feed from ai-radar-*.mp3 files.
+"""Generate podcast.rss RSS feed from ai-radar-*.mp3 files.
 
 Usage: python3 .github/scripts/generate-podcast-rss.py
 
 Scans techradar/AI/ for MP3 files, reads paired .chapters.json for duration,
-writes techradar/AI/podcast.xml. Keeps last 20 episodes.
+writes techradar/AI/podcast.rss. Keeps last 20 episodes.
 
 Run from repo root.
 """
@@ -1150,7 +1150,7 @@ def build_rss_feed(output_dir: Path, base_url: str, max_episodes: int = MAX_EPIS
 
 def main():
     xml = build_rss_feed(OUTPUT_DIR, BASE_URL)
-    out = OUTPUT_DIR / "podcast.xml"
+    out = OUTPUT_DIR / "podcast.rss"
     out.write_text(xml, encoding="utf-8")
     print(f"Wrote {out} ({len(xml):,} chars, {xml.count('<item>')} episodes)")
 
@@ -1219,7 +1219,7 @@ Note: Read the full `generate-index.sh` to find the exact line before editing �
 
 ```bash
 python3 .github/scripts/generate-podcast-rss.py
-head -30 techradar/AI/podcast.xml
+head -30 techradar/AI/podcast.rss
 ```
 Expected: valid XML with `<rss version="2.0"` and `xmlns:itunes` attributes
 
@@ -1297,9 +1297,9 @@ else:
 python3 .github/scripts/generate-podcast-rss.py
 python3 -c "
 import xml.etree.ElementTree as ET
-tree = ET.parse('techradar/AI/podcast.xml')
+tree = ET.parse('techradar/AI/podcast.rss')
 items = tree.findall('.//{http://www.w3.org/2005/Atom}item') or tree.findall('.//item')
-print(f'{len(items)} items in podcast.xml')
+print(f'{len(items)} items in podcast.rss')
 "
 ```
 
@@ -1307,7 +1307,7 @@ print(f'{len(items)} items in podcast.xml')
 
 After pushing to GitHub:
 1. Open Pocket Casts → Add Podcast → RSS URL
-2. Enter: `https://keithfry.github.io/web-pages/techradar/AI/podcast.xml`
+2. Enter: `https://keithfry.github.io/web-pages/techradar/AI/podcast.rss`
 3. Verify episode appears with chapter markers visible
 4. Test BT device previous/next to navigate chapters
 

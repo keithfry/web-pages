@@ -1,13 +1,13 @@
 # Podcast Feed Format
 
-Documents the RSS feed (`podcast.xml`) and all sidecar files produced by the techradar-agent pipeline. Two feeds exist: AI and Robotics.
+Documents the RSS feed (`podcast.rss`) and all sidecar files produced by the techradar-agent pipeline. Two feeds exist: AI and Robotics.
 
 ## Feed URLs
 
 | Feed | URL |
 |------|-----|
-| AI | `https://keithfry.github.io/web-pages/techradar/AI/podcast.xml` |
-| Robotics | `https://keithfry.github.io/web-pages/techradar/Robotics/podcast.xml` |
+| AI | `https://keithfry.github.io/web-pages/techradar/AI/podcast.rss` |
+| Robotics | `https://keithfry.github.io/web-pages/techradar/Robotics/podcast.rss` |
 
 ---
 
@@ -27,7 +27,7 @@ Where `{prefix}` is `ai-radar` or `robotics-radar`.
 
 ---
 
-## `podcast.xml` — RSS Feed
+## `podcast.rss` — RSS Feed
 
 ### Namespaces
 
@@ -175,7 +175,7 @@ Voices rotate across ranked items using `KOKORO_VOICES` from `enricher.py`. Intr
 ```
 enrich()                    → enriched JSON (audio_script, voice_index, chapter_start_seconds)
 generate_podcast()          → MP3 + chapters.json + transcript.json + cover.jpg + og.jpg
-generate_podcast_rss()      → podcast.xml (scans all MP3s in output_dir, last 20)
+generate_podcast_rss()      → podcast.rss (scans all MP3s in output_dir, last 20)
 ```
 
-`podcast.xml` is regenerated on every run — it always reflects the current state of files on disk. Sidecar files (`chapters.json`, `transcript.json`, cover) are emitted as optional tags only if the file exists at RSS generation time.
+`podcast.rss` is regenerated on every run — it always reflects the current state of files on disk. Sidecar files (`chapters.json`, `transcript.json`, cover) are emitted as optional tags only if the file exists at RSS generation time.

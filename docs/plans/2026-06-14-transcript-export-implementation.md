@@ -128,4 +128,4 @@ uv run main.py --date 2026-06-14 --topic ai --dry-run
 1. Confirm `techradar/AI/2026-06/ai-radar-2026-06-14.transcript.json` written
 2. Segment count = 1 (intro) + N podcast items; `startTime`/`endTime` match chapters.json
 3. Run with `--podcast-only` to test just the audio/transcript path
-4. Check `podcast.xml` contains `<podcast:transcript url="...transcript.json" type="application/json"/>` per item
+4. Check `podcast.rss` contains `<podcast:transcript url="...transcript.json" type="application/json"/>` per item

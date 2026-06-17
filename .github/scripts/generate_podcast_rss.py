@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Generate podcast.xml RSS feed from ai-radar-*.mp3 files.
+"""Generate podcast.rss RSS feed from ai-radar-*.mp3 files.
 
 Usage (from repo root):
     python3 .github/scripts/generate-podcast-rss.py
 
 Scans techradar/AI/ for MP3 files, reads paired .chapters.json for duration,
-writes techradar/AI/podcast.xml. Keeps last 20 episodes.
+writes techradar/AI/podcast.rss. Keeps last 20 episodes.
 """
 
 import json
@@ -121,7 +121,7 @@ def build_rss_feed(output_dir: Path, base_url: str, max_episodes: int = MAX_EPIS
 
 def main() -> None:
     xml = build_rss_feed(OUTPUT_DIR, BASE_URL)
-    out = OUTPUT_DIR / "podcast.xml"
+    out = OUTPUT_DIR / "podcast.rss"
     out.write_text(xml, encoding="utf-8")
     print(f"Wrote {out} ({len(xml):,} chars, {xml.count('<item>')} episodes)")
 

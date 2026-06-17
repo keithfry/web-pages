@@ -5,7 +5,7 @@ on:
     branches: ["main"]
     paths-ignore:
       - "techradar/**/index.html"
-      - "techradar/**/podcast.xml"
+      - "techradar/**/podcast.rss"
       - "test/**/index.html"
       - "resume/certifications/images/images.json"
 

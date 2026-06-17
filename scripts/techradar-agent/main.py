@@ -580,7 +580,7 @@ def _run_topic(
             ym_dir = as_of.strftime("%Y-%m")
             date_str = as_of.strftime("%Y-%m-%d")
             _mp3_url = None if args.no_podcast else f"{BASE_URL_ROOT}/{topic_dir_rel}/{ym_dir}/{file_prefix}-{date_str}.mp3"
-            _rss_url = None if args.no_podcast else f"{BASE_URL_ROOT}/{topic_dir_rel}/podcast.xml"
+            _rss_url = None if args.no_podcast else f"{BASE_URL_ROOT}/{topic_dir_rel}/podcast.rss"
             _og_url = None if args.no_podcast else f"{BASE_URL_ROOT}/{topic_dir_rel}/{ym_dir}/{file_prefix}-{date_str}.og.jpg"
             html = generate_html(
                 newsletters=newsletters, articles=articles,
