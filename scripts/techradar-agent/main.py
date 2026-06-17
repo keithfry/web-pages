@@ -459,9 +459,11 @@ def _run_topic(
             encoding="utf-8",
         )
         log(f"  Wrote transcript JSON: {transcript_path} ({len(podcast_items)+1} segments)")
+        log("── Generating podcast RSS ──")
+        rss_path = generate_podcast_rss(base_dir, topic, log=log)
         if not args.dry_run:
             log("── Committing and pushing ──")
-            commit_and_push([transcript_path], as_of, topic=topic, log=log)
+            commit_and_push([transcript_path, rss_path], as_of, topic=topic, log=log)
         else:
             log("Dry run — skipping commit.")
         return
@@ -485,10 +487,12 @@ def _run_topic(
             return
         write_enriched_json(enriched_data, json_path)
         log("  Updated JSON with actual chapter times")
+        log("── Generating podcast RSS ──")
+        rss_path = generate_podcast_rss(base_dir, topic, log=log)
         if not args.dry_run:
             log("── Committing and pushing ──")
             extras = [p for p in [transcript_path, cover_path, og_path] if p]
-            commit_and_push([mp3_path, chap_path, json_path] + extras, as_of, topic=topic, log=log)
+            commit_and_push([mp3_path, chap_path, json_path, rss_path] + extras, as_of, topic=topic, log=log)
         else:
             log("Dry run — skipping commit.")
         return
