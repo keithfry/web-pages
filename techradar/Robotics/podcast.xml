@@ -9,7 +9,7 @@
     <atom:link href="https://keithfry.github.io/web-pages/techradar/Robotics/podcast.xml" rel="self" type="application/rss+xml"/>
     <description>Daily Robotics news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Jun 2026 13:02:42 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 02:28:36 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
@@ -25,6 +25,7 @@
     <description>Robotics Radar for June 16, 2026. 7 minutes of news.</description>
       <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-16.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-16.chapters.json" type="application/json+chapters"/>
+      <podcast:transcript url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-16.transcript.json" type="application/json"/>
   </item>
   <item>
     <title>June 15, 2026 : AI Moves Into Action</title>
@@ -35,6 +36,7 @@
     <description>Robotics Radar for June 15, 2026. 10 minutes of news.</description>
       <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-15.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-15.chapters.json" type="application/json+chapters"/>
+      <podcast:transcript url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-15.transcript.json" type="application/json"/>
   </item>
   <item>
     <title>June 14, 2026 : Robots Sense Deeply Now</title>
