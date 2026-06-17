@@ -434,7 +434,7 @@ def _run_topic(
         enriched_data = _json.loads(json_path.read_text())
         log("── Generating podcast audio ──")
         try:
-            mp3_path, chap_path, cover_path, og_path = generate_podcast(enriched_data, as_of, output_dir, file_prefix=file_prefix, topic_label=topic, log=log)
+            mp3_path, chap_path, transcript_path, cover_path, og_path = generate_podcast(enriched_data, as_of, output_dir, file_prefix=file_prefix, topic_label=topic, log=log)
             log(f"  Podcast generated: {mp3_path.name}")
         except Exception as e:
             log(f"ERROR: podcast generation failed: {e}")
@@ -443,7 +443,7 @@ def _run_topic(
         log("  Updated JSON with actual chapter times")
         if not args.dry_run:
             log("── Committing and pushing ──")
-            extras = [p for p in [cover_path, og_path] if p]
+            extras = [p for p in [transcript_path, cover_path, og_path] if p]
             commit_and_push([mp3_path, chap_path, json_path] + extras, as_of, topic=topic, log=log)
         else:
             log("Dry run — skipping commit.")
@@ -533,8 +533,8 @@ def _run_topic(
             return
         try:
             log("── Step 7b: Generating podcast audio ──")
-            mp3, chap_json, cover, og = generate_podcast(enriched_data, as_of, output_dir, file_prefix=file_prefix, topic_label=topic, log=log)
-            podcast_result.append((mp3, chap_json, cover, og))
+            mp3, chap_json, transcript, cover, og = generate_podcast(enriched_data, as_of, output_dir, file_prefix=file_prefix, topic_label=topic, log=log)
+            podcast_result.append((mp3, chap_json, transcript, cover, og))
             log(f"  Podcast generated: {mp3.name}")
         except Exception as e:
             podcast_error.append(e)
@@ -568,8 +568,8 @@ def _run_topic(
 
     out_paths = [html_path, json_path]
     if podcast_result:
-        mp3_path, chap_path, cover_path, og_path = podcast_result[0]
-        out_paths.extend([p for p in [mp3_path, chap_path, cover_path, og_path] if p])
+        mp3_path, chap_path, transcript_path, cover_path, og_path = podcast_result[0]
+        out_paths.extend([p for p in [mp3_path, chap_path, transcript_path, cover_path, og_path] if p])
 
     # --- Step 8b: Generate podcast RSS feed ---
     log("── Step 8b: Generating podcast RSS ──")

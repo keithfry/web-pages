@@ -41,6 +41,46 @@ def _build_chapters_json(chapters: list[dict], episode_title: str | None = None)
     return json.dumps(data, indent=2)
 
 
+def _build_transcript_json(
+    intro_script: str,
+    podcast_items: list[dict],
+    actual_starts: list[float],
+    total_duration_seconds: float,
+    outro_script: str = "",
+) -> str:
+    """One segment per chapter: intro + each podcast item + optional outro."""
+    segments = []
+
+    intro_end = actual_starts[1] if len(actual_starts) > 1 else total_duration_seconds
+    segments.append({
+        "startTime": round(actual_starts[0], 3),
+        "endTime": round(intro_end, 3),
+        "text": intro_script,
+        "voice": _voice_for(0),
+    })
+
+    for i, item in enumerate(podcast_items):
+        start = actual_starts[i + 1]
+        end = actual_starts[i + 2] if i + 2 < len(actual_starts) else total_duration_seconds
+        segments.append({
+            "startTime": round(start, 3),
+            "endTime": round(end, 3),
+            "text": item["audio_script"],
+            "voice": _voice_for(item["voice_index"]),
+        })
+
+    if outro_script and len(actual_starts) > len(podcast_items) + 1:
+        outro_start = actual_starts[len(podcast_items) + 1]
+        segments.append({
+            "startTime": round(outro_start, 3),
+            "endTime": round(total_duration_seconds, 3),
+            "text": outro_script,
+            "voice": _voice_for(0),
+        })
+
+    return json.dumps({"version": "1.0.0", "segments": segments}, indent=2)
+
+
 def _tts_segment(text: str, voice: str, out_wav: Path) -> float:
     """Synthesize text to WAV using thread-local Kokoro pipeline. Returns duration in seconds."""
     import soundfile as sf
@@ -254,6 +294,16 @@ def generate_podcast(
     chapters_json_path.write_text(_build_chapters_json(chapters, episode_title), encoding="utf-8")
     log(f"  Wrote chapters JSON: {chapters_json_path}")
 
+    # Write transcript JSON (segment per chapter, exact text + float timestamps)
+    transcript_json_path = chapters_json_path.parent / chapters_json_path.name.replace(
+        ".chapters.json", ".transcript.json"
+    )
+    transcript_json_path.write_text(
+        _build_transcript_json(intro_script, podcast_items, actual_starts, float(total_duration), outro_script),
+        encoding="utf-8",
+    )
+    log(f"  Wrote transcript JSON: {transcript_json_path}")
+
     # Generate episode cover + OG social card
     date_str = date.strftime("%Y-%m-%d")
     cover_path = output_dir / f"{file_prefix}-{date_str}.jpg"
@@ -273,4 +323,4 @@ def generate_podcast(
     _write_id3_chapters(mp3_path, chapters, episode_title, cover_path)
     log(f"  Wrote ID3 tags to: {mp3_path}")
 
-    return mp3_path, chapters_json_path, cover_path, og_path
+    return mp3_path, chapters_json_path, transcript_json_path, cover_path, og_path

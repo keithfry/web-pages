@@ -83,6 +83,13 @@ def build_rss_feed(
             if chap_json.exists() else ""
         )
 
+        transcript_path = chap_json.parent / chap_json.name.replace(".chapters.json", ".transcript.json")
+        transcript_url = chap_url.replace(".chapters.json", ".transcript.json")
+        transcript_tag = (
+            f'      <podcast:transcript url="{transcript_url}" type="application/json"/>\n'
+            if transcript_path.exists() else ""
+        )
+
         ep_cover_path = output_dir / ym_dir / f"{file_prefix}-{date_str}.jpg"
         ep_cover_tag = (
             f'      <itunes:image href="{base_url}/{ym_dir}/{file_prefix}-{date_str}.jpg"/>\n'
@@ -96,7 +103,7 @@ def build_rss_feed(
     <itunes:duration>{duration // 3600:02d}:{(duration % 3600) // 60:02d}:{duration % 60:02d}</itunes:duration>
     <guid isPermaLink="true">{mp3_url}</guid>
     <description>{topic_label} Radar for {title_date}. {duration // 60} minutes of news.</description>
-{ep_cover_tag}{chap_tag}  </item>""")
+{ep_cover_tag}{chap_tag}{transcript_tag}  </item>""")
 
     items_block = "\n".join(items_xml)
     now = format_datetime(datetime.now(timezone.utc))
