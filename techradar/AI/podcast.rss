@@ -9,13 +9,24 @@
     <atom:link href="https://keithfry.github.io/web-pages/techradar/AI/podcast.rss" rel="self" type="application/rss+xml"/>
     <description>Daily AI news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jun 2026 12:53:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 13:01:36 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
     <itunes:image href="https://keithfry.github.io/web-pages/techradar/AI/podcast-cover.png"/>
+  <item>
+    <title>June 20, 2026 : AI Models Face Security Risks</title>
+    <pubDate>Sat, 20 Jun 2026 08:00:00 +0000</pubDate>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-20.mp3" type="audio/mpeg" length="19850273"/>
+    <itunes:duration>00:41:04</itunes:duration>
+    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-20.mp3</guid>
+    <description>AI Radar for June 20, 2026. 41 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-20.jpg"/>
+      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-20.chapters.json" type="application/json+chapters"/>
+      <podcast:transcript url="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-20.transcript.json" type="application/json"/>
+  </item>
   <item>
     <title>June 19, 2026 : AI Agents Orchestrate Creation</title>
     <pubDate>Fri, 19 Jun 2026 08:00:00 +0000</pubDate>
@@ -210,15 +221,6 @@
     <description>AI Radar for June 1, 2026. 34 minutes of news.</description>
       <itunes:image href="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-01.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-01.chapters.json" type="application/json+chapters"/>
-  </item>
-  <item>
-    <title>AI Radar — May 31, 2026</title>
-    <pubDate>Sun, 31 May 2026 08:00:00 +0000</pubDate>
-    <enclosure url="https://keithfry.github.io/web-pages/techradar/AI/2026-05/ai-radar-2026-05-31.mp3" type="audio/mpeg" length="8906511"/>
-    <itunes:duration>00:18:31</itunes:duration>
-    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/AI/2026-05/ai-radar-2026-05-31.mp3</guid>
-    <description>AI Radar for May 31, 2026. 18 minutes of news.</description>
-      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/AI/2026-05/ai-radar-2026-05-31.chapters.json" type="application/json+chapters"/>
   </item>
   </channel>
 </rss>
