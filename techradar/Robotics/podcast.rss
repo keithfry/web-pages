@@ -9,13 +9,24 @@
     <atom:link href="https://keithfry.github.io/web-pages/techradar/Robotics/podcast.rss" rel="self" type="application/rss+xml"/>
     <description>Daily Robotics news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 26 Jun 2026 12:20:52 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 13:05:58 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
     <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/podcast-cover.png"/>
+  <item>
+    <title>June 27, 2026 : Robots Learn Human Skills</title>
+    <pubDate>Sat, 27 Jun 2026 08:00:00 +0000</pubDate>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-27.mp3" type="audio/mpeg" length="6205405"/>
+    <itunes:duration>00:12:41</itunes:duration>
+    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-27.mp3</guid>
+    <description>Robotics Radar for June 27, 2026. 12 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-27.jpg"/>
+      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-27.chapters.json" type="application/json+chapters"/>
+      <podcast:transcript url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-27.transcript.json" type="application/json"/>
+  </item>
   <item>
     <title>June 26, 2026 : AI Smarts Build Future</title>
     <pubDate>Fri, 26 Jun 2026 08:00:00 +0000</pubDate>
@@ -217,16 +228,6 @@
     <description>Robotics Radar for June 8, 2026. 7 minutes of news.</description>
       <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-08.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-08.chapters.json" type="application/json+chapters"/>
-  </item>
-  <item>
-    <title>June 7, 2026 : Enhancing Work With Bots</title>
-    <pubDate>Sun, 07 Jun 2026 08:00:00 +0000</pubDate>
-    <enclosure url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-07.mp3" type="audio/mpeg" length="603954"/>
-    <itunes:duration>00:01:15</itunes:duration>
-    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-07.mp3</guid>
-    <description>Robotics Radar for June 7, 2026. 1 minutes of news.</description>
-      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-07.jpg"/>
-      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-07.chapters.json" type="application/json+chapters"/>
   </item>
   </channel>
 </rss>
