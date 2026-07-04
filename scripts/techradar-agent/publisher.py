@@ -46,7 +46,7 @@ def _run(
     return result
 
 
-def commit_and_push(out_paths: Path | list[Path], date: datetime, topic: str = "AI", log=print) -> None:
+def commit_and_push(out_paths: Path | list[Path], date: datetime, topic: str | list[str] = "AI", log=print) -> None:
     """git pull --rebase, add all out_paths, commit, push."""
     if isinstance(out_paths, Path):
         out_paths = [out_paths]
@@ -55,7 +55,8 @@ def commit_and_push(out_paths: Path | list[Path], date: datetime, topic: str = "
         log("  no paths to commit, skipping")
         return
 
-    topic_label = topic.capitalize()
+    topics = [topic] if isinstance(topic, str) else topic
+    topic_label = " + ".join(t.capitalize() for t in topics)
     commit_msg = f"Add {topic_label} radar for {date.strftime('%Y-%m-%d')}"
 
     lock = REPO_ROOT / ".git" / "index.lock"

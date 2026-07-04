@@ -382,11 +382,21 @@ def main() -> None:
             log("── Gmail skipped (--no-email) ──")
         log("")
 
+        all_out_paths: list[Path] = []
+        ran_topics: list[str] = []
         for topic in topics:
             log(f"\n{'='*60}")
             log(f"  TOPIC: {topic}")
             log(f"{'='*60}")
-            _run_topic(args, as_of, topic, email_items=email_items, linked_articles=linked_articles)
+            out_paths = _run_topic(args, as_of, topic, email_items=email_items, linked_articles=linked_articles)
+            if out_paths:
+                all_out_paths.extend(out_paths)
+                ran_topics.append(topic)
+
+        if not args.dry_run and all_out_paths:
+            log(f"\n{'='*60}")
+            log("── Committing and pushing (all topics) ──")
+            commit_and_push(all_out_paths, as_of, topic=ran_topics, log=log)
 
     finally:
         _log_file.close()
@@ -399,7 +409,7 @@ def _run_topic(
     topic: str,
     email_items: list[dict] | None = None,
     linked_articles: list[dict] | None = None,
-) -> None:
+) -> list[Path]:
     email_items = email_items or []
     linked_articles = linked_articles or []
 
@@ -430,7 +440,7 @@ def _run_topic(
         chap_path = output_dir / f"{file_prefix}-{as_of.strftime('%Y-%m-%d')}.chapters.json"
         if not json_path.exists():
             log(f"ERROR: no JSON found at {json_path}")
-            return
+            return []
         import json as _json
         from podcast_generator import _build_transcript_json, _voice_for, _split_sentences, _interpolate_sentences
         enriched_data = _json.loads(json_path.read_text())
@@ -478,19 +488,17 @@ def _run_topic(
         log(f"  Wrote transcript JSON: {transcript_path} ({len(segments)} segments)")
         log("── Generating podcast RSS ──")
         rss_path = generate_podcast_rss(base_dir, topic, log=log)
-        if not args.dry_run:
-            log("── Committing and pushing ──")
-            commit_and_push([transcript_path, rss_path], as_of, topic=topic, log=log)
-        else:
+        if args.dry_run:
             log("Dry run — skipping commit.")
-        return
+            return []
+        return [transcript_path, rss_path]
 
     # --- Podcast-only shortcut ---
     if args.podcast_only:
         json_path = output_dir / f"{file_prefix}-{as_of.strftime('%Y-%m-%d')}.json"
         if not json_path.exists():
             log(f"ERROR: no JSON found at {json_path} — run without --podcast-only first")
-            return
+            return []
         log(f"── Podcast-only mode: loading {json_path.name} ──")
         import json as _json
         from enricher import write_enriched_json
@@ -501,18 +509,16 @@ def _run_topic(
             log(f"  Podcast generated: {mp3_path.name}")
         except Exception as e:
             log(f"ERROR: podcast generation failed: {e}")
-            return
+            return []
         write_enriched_json(enriched_data, json_path)
         log("  Updated JSON with actual chapter times")
         log("── Generating podcast RSS ──")
         rss_path = generate_podcast_rss(base_dir, topic, log=log)
-        if not args.dry_run:
-            log("── Committing and pushing ──")
-            extras = [p for p in [transcript_path, cover_path, og_path] if p]
-            commit_and_push([mp3_path, chap_path, json_path, rss_path] + extras, as_of, topic=topic, log=log)
-        else:
+        if args.dry_run:
             log("Dry run — skipping commit.")
-        return
+            return []
+        extras = [p for p in [transcript_path, cover_path, og_path] if p]
+        return [mp3_path, chap_path, json_path, rss_path] + extras
 
     # --- Step 1: Fetch RSS feeds ---
     log(f"── Step 1: Fetching {topic} RSS feeds ──")
@@ -657,26 +663,20 @@ def _run_topic(
             out_paths.append(Path(idx_path))
         log(f"  index regenerated")
 
+    call_count, total_duration = llm_stats()
+    log(f"LLM calls: {call_count}  total time: {total_duration:.3f}s")
+
     if args.dry_run:
-        call_count, total_duration = llm_stats()
-        log(f"LLM calls: {call_count}  total time: {total_duration:.3f}s")
         log("")
         log(f"Dry run complete — skipping git commit and push.")
         log(f"Preview: open {html_path}")
         _stop_models(log)
-        return
+        return []
 
-    # --- Step 9: Commit and push ---
-    log("")
-    log("── Step 9: Committing and pushing ──")
-    commit_and_push(out_paths, as_of, topic=topic, log=log)
-
-    call_count, total_duration = llm_stats()
-    log(f"LLM calls: {call_count}  total time: {total_duration:.3f}s")
-
-    # --- Step 10: Release Ollama models ---
+    # --- Step 9: Release Ollama models ---
     _stop_models(log)
     log(f"Done — {topic} digest complete.")
+    return out_paths
 
 
 if __name__ == "__main__":
