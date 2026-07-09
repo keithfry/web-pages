@@ -14,7 +14,6 @@ load_dotenv(Path(__file__).parent / ".env")
 SUMMARIZE_MODEL: str = os.environ.get("SUMMARIZE_MODEL", "llama3.2")
 RANK_MODEL: str = os.environ.get("RANK_MODEL", "qwen3.5:9b")
 DEDUP_MODEL: str = os.environ.get("DEDUP_MODEL", "claude-haiku-4-5")
-GENERATE_MODEL: str = os.environ.get("GENERATE_MODEL", "llama3.2")
 AD_DETECTOR_MODEL: str = os.environ.get("AD_DETECTOR_MODEL", "ad-detector")
 AD_GATE_ENABLED: bool = os.environ.get("AD_GATE_ENABLED", "1") not in ("0", "false", "False", "no")
 

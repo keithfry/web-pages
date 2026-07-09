@@ -24,7 +24,7 @@ from zoneinfo import ZoneInfo
 ET = ZoneInfo("America/New_York")
 
 from config import (
-    LOOKBACK_HOURS, SUMMARIZE_MODEL, RANK_MODEL, DEDUP_MODEL, GENERATE_MODEL,
+    LOOKBACK_HOURS, SUMMARIZE_MODEL, RANK_MODEL, DEDUP_MODEL,
     LLM_WORKERS, URL_WORKERS, AD_DETECTOR_MODEL, AD_GATE_ENABLED,
     AI_OUTPUT_DIR, ROBOTICS_OUTPUT_DIR,
 )
@@ -426,7 +426,6 @@ def _run_topic(
     log(f"Summarize model: {SUMMARIZE_MODEL}")
     log(f"Rank model:      {RANK_MODEL}")
     log(f"Dedup model:     {DEDUP_MODEL}")
-    log(f"Generate model:  {GENERATE_MODEL}")
     log(f"LLM workers:     {LLM_WORKERS}  (set OLLAMA_NUM_PARALLEL={LLM_WORKERS} to match)")
     log(f"URL workers:     {URL_WORKERS}")
     log(f"Dry run:         {args.dry_run}")
