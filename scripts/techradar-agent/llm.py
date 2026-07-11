@@ -455,7 +455,7 @@ def rank_items(items: list[dict], model: str = RANK_MODEL) -> list[dict]:
             item["rank"] = rank
             ranked.append(item)
         return ranked
-    except (json.JSONDecodeError, AttributeError) as e:
+    except (json.JSONDecodeError, AttributeError, TypeError, ValueError) as e:
         print(f"[warn] rank_items() failed ({e}), using original order", file=sys.stderr)
         return [dict(item, rank=i + 1) for i, item in enumerate(items)]
 

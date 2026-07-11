@@ -24,7 +24,7 @@ def _get_pipeline():
     """Return a thread-local KPipeline, creating it on first use per thread."""
     if not hasattr(_tts_thread_local, "pipeline"):
         from kokoro import KPipeline
-        _tts_thread_local.pipeline = KPipeline(lang_code="a")
+        _tts_thread_local.pipeline = KPipeline(lang_code="a", repo_id="hexgrad/Kokoro-82M")
     return _tts_thread_local.pipeline
 
 
