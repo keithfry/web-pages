@@ -116,7 +116,7 @@ def _card(item: dict, extra_class: str = "") -> str:
     summary = escape(item.get("summary", ""))
 
     title_block = (
-        f'<h3><a href="{escape(link)}">{title_html}</a></h3>'
+        f'<h3><a href="{escape(link)}" target="_blank" rel="noopener">{title_html}</a></h3>'
         if link else
         f"<h3>{title_html}</h3>"
     )
@@ -307,7 +307,7 @@ def generate_html(
             reason = escape(err.get("error", "Unknown error"))
             parts.append(
                 f'      <li><strong>{src}</strong> — '
-                f'<a href="{url}">{url}</a> — '
+                f'<a href="{url}" target="_blank" rel="noopener">{url}</a> — '
                 f'<span class="error-reason">{reason}</span></li>\n'
             )
         parts.append('    </ul>\n  </div>\n')
