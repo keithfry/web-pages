@@ -9,13 +9,24 @@
     <atom:link href="https://keithfry.github.io/web-pages/techradar/Robotics/podcast.rss" rel="self" type="application/rss+xml"/>
     <description>Daily Robotics news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jul 2026 12:27:04 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2026 12:50:20 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
     <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/podcast-cover.png"/>
+  <item>
+    <title>July 11, 2026 : Robots Powering Industry Forward</title>
+    <pubDate>Sat, 11 Jul 2026 08:00:00 +0000</pubDate>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-07/robotics-radar-2026-07-11.mp3" type="audio/mpeg" length="5485880"/>
+    <itunes:duration>00:11:10</itunes:duration>
+    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-07/robotics-radar-2026-07-11.mp3</guid>
+    <description>Robotics Radar for July 11, 2026. 11 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-07/robotics-radar-2026-07-11.jpg"/>
+      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-07/robotics-radar-2026-07-11.chapters.json" type="application/json+chapters"/>
+      <podcast:transcript url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-07/robotics-radar-2026-07-11.transcript.json" type="application/json"/>
+  </item>
   <item>
     <title>July 10, 2026 : Robots Redefining Human Potential</title>
     <pubDate>Fri, 10 Jul 2026 08:00:00 +0000</pubDate>
@@ -224,17 +235,6 @@
       <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-22.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-22.chapters.json" type="application/json+chapters"/>
       <podcast:transcript url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-22.transcript.json" type="application/json"/>
-  </item>
-  <item>
-    <title>June 21, 2026 : Autonomy Drives Robotics Forward</title>
-    <pubDate>Sun, 21 Jun 2026 08:00:00 +0000</pubDate>
-    <enclosure url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-21.mp3" type="audio/mpeg" length="2499875"/>
-    <itunes:duration>00:04:57</itunes:duration>
-    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-21.mp3</guid>
-    <description>Robotics Radar for June 21, 2026. 4 minutes of news.</description>
-      <itunes:image href="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-21.jpg"/>
-      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-21.chapters.json" type="application/json+chapters"/>
-      <podcast:transcript url="https://keithfry.github.io/web-pages/techradar/Robotics/2026-06/robotics-radar-2026-06-21.transcript.json" type="application/json"/>
   </item>
   </channel>
 </rss>
