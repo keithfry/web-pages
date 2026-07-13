@@ -1,0 +1,229 @@
+{
+  "date": "2026-07-13",
+  "generated_at": "2026-07-13T09:10:55-0400",
+  "intro_script": "Welcome to your daily robotics digest, July 13th, 2026! Today, we cover massive AI rollouts in China, a new line of tireless humanoid robots, and key industry investments. Five essential updates await you right now.",
+  "episode_tagline": "AI Powers Workforce Evolution",
+  "outro_script": "And that's your July 13th dispatch! Seems like the algorithms are really kicking into high gear today. Thanks for tuning in, makers and minds, until next time when we decode the robots' latest moves. Bye!",
+  "items": [
+    {
+      "title": "China\u2019s massive AI rollout - podcast",
+      "link": "https://www.theguardian.com/news/audio/2026/jul/13/chinas-massive-ai-rollout-podcast",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "China is enthusiastically adopting artificial intelligence across various sectors, contrasting with Western skepticism. Examples of adoption range from medical avatars and factory robots to food delivery drones operating on the Great Wall of China. State involvement has also heavily embraced AI capabilities. This state utilization presents significant opportunities for increased surveillance within the country.",
+      "tags": [
+        "robotics",
+        "policy",
+        "safety"
+      ],
+      "published": "2026-07-13T02:00:34+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 1,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"China\u2019s massive AI rollout - podcast.\" This report details China's expansive integration of artificial intelligence across numerous sectors, contrasting this progress with noticeable skepticism observed in Western economies. Specific applications noted include medical avatars and industrial factory robots, alongside the deployment of food delivery drones operating near historical sites such as the Great Wall of China. State involvement is also heavily leveraging these new AI capabilities. This robust state utilization suggests significant pathways for augmented internal surveillance infrastructure within the country. The trend indicates a rapid acceleration in state-directed technology integration across civil and industrial sectors globally.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 16
+    },
+    {
+      "title": "Robot.com launches humanoid \u2018built for the work that burns people out\u2019",
+      "link": "https://roboticsandautomationnews.com/2026/07/13/robot-com-launches-humanoid-built-for-the-work-that-burns-people-out/103259/",
+      "source": "Robotics & Automation News",
+      "summary": "Robot.com has launched R-noid, a new humanoid robot designed for challenging labor environments. This robot is specifically built to handle repetitive, multi-shift jobs that often face staffing shortages. The deployment of R-noid operates under a Robot-as-a-Service (RaaS) model. Under this service, Robot.com can manage the entire process from initial site visits to autonomous on-site operation. This launch signals the company's focus on integrating advanced robotics into real-world workplaces.",
+      "tags": [
+        "robotics",
+        "agents"
+      ],
+      "published": "2026-07-13T07:14:19+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 2,
+      "audio_script": "From Robotics & Automation News, \"Robot.com launches humanoid \u2018built for the work that burns people out\u2019.\" The report details the introduction of a new robotic unit aimed at difficult labor sectors and outlines its operational framework. This new robot, named R-noid, is engineered specifically to manage repetitive tasks across multiple shifts, addressing noted industry staffing gaps. Robot.com facilitates deployment through a Robot-as-a-Service model, managing all aspects from initial site assessments through autonomous on-site operation. This development signals an increased corporate commitment toward embedding sophisticated robotics directly within operational commercial settings. Industry observers suggest this marks a notable progression in the practical integration of advanced artificial intelligence into industrial workplaces.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 71
+    },
+    {
+      "title": "STMicroelectronics acquires stake in humanoid robot developer Oversonic Robotics",
+      "link": "https://roboticsandautomationnews.com/2026/07/13/stmicroelectronics-acquires-stake-in-humanoid-robot-developer-oversonic-robotics/103263/",
+      "source": "Robotics & Automation News",
+      "summary": "STMicroelectronics has acquired a stake in Oversonic Robotics, an Italian cognitive robotics firm. Oversonic Robotics developed RoBee, notable for being the first certified cognitive humanoid robot for complex environments. This investment also includes Fondazione ENEA Tech Biomedical and SpotInvest. The shared goal of these new shareholders is to accelerate the company's development across industrial, technological, and international sectors.",
+      "tags": [
+        "robotics",
+        "agents"
+      ],
+      "published": "2026-07-13T07:23:40+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 3,
+      "audio_script": "From Robotics & Automation News, \"STMicroelectronics acquires stake in humanoid robot developer Oversonic Robotics.\" The report details a significant investment in an Italian cognitive robotics firm and the strategic goals moving forward for its development. STMicroelectronics has officially acquired a financial stake in Oversonic Robotics, which is recognized for engineering RoBee, cited as the first certified cognitive humanoid robot capable of operating within complex environments. This substantial investment was also bolstered by participation from Fondazione ENEA Tech Biomedical and SpotInvest. The collective aim among these new shareholders is to facilitate accelerated development for Oversonic across diverse industrial applications, technological advancements, and global markets. Industry observers should monitor this collaboration as it suggests an increased acceleration in the deployment scope of advanced humanoid robotics technology.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 126
+    },
+    {
+      "title": "Wristband enables wearers to control a robotic hand with their own movements",
+      "link": "https://robohub.org/wristband-enables-wearers-to-control-a-robotic-hand-with-their-own-movements/",
+      "source": "Robohub",
+      "summary": "A specialized wristband allows individuals to operate a robotic hand using natural movements. Users can physically guide the robot to perform complex tasks such as playing the piano or shooting a basketball. Furthermore, the technology enables the manipulation of objects within virtual environments. Essentially, direct body movement translates into precise control over the robotic apparatus. This offers users intuitive interaction with robotic capabilities.",
+      "tags": [
+        "robotics",
+        "agents",
+        "research"
+      ],
+      "published": "2026-07-13T08:27:45+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 4,
+      "audio_script": "From Robohub, \"Wristband enables wearers to control a robotic hand with their own movements.\" The research details a specialized wristband system that grants users the capability to operate an attached robotic hand using natural body movements. This technology allows for precise physical guidance of the robot through complex actions, including simulating tasks like playing the piano or shooting a basketball. Moreover, the apparatus can manipulate objects effectively within simulated virtual environments, demonstrating a direct translation from human gesture to robotic control. The development suggests a significant step toward more intuitive and integrated human-machine interaction in robotics applications.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 194
+    },
+    {
+      "title": "5 Ways Automation is Eliminating Errors at the Shipping Desk",
+      "link": "https://roboticsandautomationnews.com/2026/07/13/5-ways-automation-is-eliminating-errors-at-the-shipping-desk/103268/",
+      "source": "Robotics & Automation News",
+      "summary": "Shipping errors frequently occur during manual data transfers between various systems, particularly under time constraints. Modern automation solutions minimize the need for staff to manually key in or interpret data across different stages. By streamlining these handoffs, technology significantly reduces points where human error can be introduced. Automation directly addresses the vulnerability of information as it moves from order processing to physical packing and finally to carrier submission. Implementing these digital tools enhances accuracy throughout the entire shipping workflow.",
+      "tags": [
+        "agents",
+        "model"
+      ],
+      "published": "2026-07-13T07:35:05+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 5,
+      "audio_script": "From Robotics & Automation News, \"5 Ways Automation is Eliminating Errors at the Shipping Desk.\" The report details how modern automation solutions are significantly reducing shipping errors that typically arise during manual data transfers between various operational systems. These technologies accomplish this by minimizing the requirement for staff to physically key in or interpret shipment information across multiple handling stages. By streamlining these critical handoffs, the implementation of digital tools directly reduces the points where human error can be introduced throughout the entire workflow, from initial order processing through to final carrier submission. The findings suggest a quantifiable enhancement in overall accuracy within logistical operations. Industry analysts anticipate that this trend will accelerate the shift toward fully digitized and self-correcting supply chain infrastructure.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 245
+    },
+    {
+      "title": "AgenticFocus: Object-Preserving Mixed Reality Synthesis from Human FPV Video for Dexterous Humanoid Learning",
+      "link": "https://arxiv.org/abs/2607.08857",
+      "source": "arXiv - cs.RO",
+      "summary": "AgenticFocus is a Mixed Reality synthesis pipeline designed to improve humanoid policy learning from standard first-person human videos. It addresses limitations in current methods by restoring occluded object geometry and reconstructing detailed hand motion. The system retargets these reconstructed motions onto a humanoid body using camera-relative alignment and layered compositing techniques. This process generates high-quality datasets pairing focused visual observations with synchronized robot actions and states. Evaluations show AgenticFocus achieving lower trajectory error and smoother wrist motion compared to existing cross-embodiment baselines.",
+      "tags": [
+        "agents",
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-13T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space",
+      "link": "https://arxiv.org/abs/2607.08877",
+      "source": "arXiv - cs.RO",
+      "summary": "Generative robot policies show potential but struggle with failure modes outside their training data distribution. Collecting large amounts of new data or using online reinforcement learning is often impractical for quick, safe adaptation. FlowDAgger addresses this by efficiently adapting frozen generative policies using limited human demonstrations in the latent space. The method employs action inversion, mapping expert actions to the corresponding noise required under the base policy via reverse-time integration. This generates supervision for a lightweight latent policy that guides the main model during deployment, achieving rapid skill transfer while maintaining prior behavior.",
+      "tags": [
+        "model",
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-13T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "SplatCtrl: Perception-Action Coupling via Gaussian Scene Representations and Reactive Robot Control",
+      "link": "https://arxiv.org/abs/2607.08948",
+      "source": "arXiv - cs.RO",
+      "summary": "SplatCtrl is a novel framework designed for collision-free robotic arm control in unstructured and changing environments. It integrates real-time scene reconstruction using 3D Gaussian Splatting (3D-GS) augmented with a hybrid filtering and relocation strategy. The system derives continuous signed distance functions from the Gaussians to estimate collision probability reliably. These metrics are then incorporated into control barrier functions for safe motion planning. Validation across simulation, physical robots, and human workspaces confirms its effectiveness in dynamic settings.",
+      "tags": [
+        "robotics",
+        "research",
+        "safety"
+      ],
+      "published": "2026-07-13T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "Dec-MARVEL: Decentralized Multi-Agent Exploration without Communication under Budget Constraints",
+      "link": "https://arxiv.org/abs/2607.09060",
+      "source": "arXiv - cs.RO",
+      "summary": "Dec-MARVEL is a decentralized framework enabling multi-UAV exploration without relying on communication, addressing constraints like limited sensing and finite budgets. Robots coordinate solely through incidental observations, using any teammate visible within their field of view as a coordination signal. The system employs a graph-attention actor that integrates local frontier geometry, teammate motion, and budget constraints to select feasible waypoints. Training utilizes phase-conditioned critics and a mixture-based budget curriculum for robust learning. Evaluation across various team sizes and budgets showed Dec-MARVEL achieving top or tied-top exploration rates compared to baselines, with successful sim-to-real transfer demonstrated in physical experiments.",
+      "tags": [
+        "agents",
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-13T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "Residual Physics-Informed Neural Networks for High-Fidelity BLDC Motor Modeling",
+      "link": "https://arxiv.org/abs/2607.09136",
+      "source": "arXiv - cs.RO",
+      "summary": "Accurate dynamics modeling of Brushless DC (BLDC) motors is essential for advanced robotic joint control. Researchers propose a Physics-Informed Neural Network (PINN) incorporating a deep residual (ResNet) architecture to model the motor's continuous-time behavior. This network takes voltages and parameters as input to predict all six state variables, ensuring adherence to governing electromechanical and thermal differential equations via a composite loss function. The methodology uses curriculum scheduling to stabilize training. Trained PINN inference demonstrates exceptional speed, achieving latencies of 0.1\u201322 $\\mu$s per query, significantly outpacing traditional ODE solvers for real-time control applications.",
+      "tags": [
+        "model",
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-13T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "BeyondSight: Object Permanence for End-to-End Autonomous Driving",
+      "link": "https://arxiv.org/abs/2607.09138",
+      "source": "arXiv - cs.RO",
+      "summary": "Autonomous driving faces challenges in partially observable environments due to occluded actors, which cause current systems to lose track of critical agents. BeyondSight is introduced, a framework that addresses this by decoupling actor existence from immediate observation through persistent actor hypotheses. It propagates temporal actor queries and updates them using observation-conditioned evidence for joint perception, prediction, and planning. To support training, nuScenes-Permanence extends the nuScenes dataset with supervision for unobservable actors. Experiments demonstrate BeyondSight substantially improves reasoning during occlusion, boosting detection mAP from zero to 0.249 and lowering planning error from 0.61 to 0.54 L2avg.",
+      "tags": [
+        "robotics",
+        "research",
+        "model"
+      ],
+      "published": "2026-07-13T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "TactiDex: A Real-World Tactile-Guided Benchmark for Human-Like Dexterous Manipulation",
+      "link": "https://arxiv.org/abs/2607.09190",
+      "source": "arXiv - cs.RO",
+      "summary": "Tactile feedback is vital for achieving human-like dexterity during hand-object interaction, surpassing limitations in purely kinematic motion transfer. Researchers introduce TactiDex, a novel real-world benchmark dataset that integrates whole-hand tactile signals with multi-granularity kinematic and object states. The work proposes TactiSkill, a new framework utilizing a tri-component tactile reward function. This structured supervision unifies guidance, human alignment, and contact constraints into one objective for robot learning. Experiments confirm that TactiSkill demonstrates superior performance in both manipulation success and physical realism on single and bimanual tasks.",
+      "tags": [
+        "robotics",
+        "research",
+        "model"
+      ],
+      "published": "2026-07-13T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "GenVid2Robot: From Video Generation to Robot Manipulation via Rigid-Geometric Consistency",
+      "link": "https://arxiv.org/abs/2607.09191",
+      "source": "arXiv - cs.RO",
+      "summary": "Generative videos offer motion priors for robotics but lack physical executability due to missing geometric details. GenVid2Robot addresses this with a framework ensuring rigid-geometric consistency when translating video motion to real-world trajectories. It processes an initial RGB-D observation and task instruction by tracking semantic anchors across candidate generated videos. The method verifies if the predicted 2D movement is geometrically consistent with the first frame's anchors using a sparse relative $SE(3)$ model, treating videos as uncertain hypotheses. Ultimately, it generates executable grasp-conditioned trajectories by applying only the geometrically validated motion and includes a depth-compensation module for improved robustness during real-robot execution.",
+      "tags": [
+        "robotics",
+        "model",
+        "research"
+      ],
+      "published": "2026-07-13T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    }
+  ]
+}

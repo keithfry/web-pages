@@ -1,0 +1,221 @@
+{
+  "version": "1.0.0",
+  "segments": [
+    {
+      "startTime": 0.0,
+      "endTime": 5.25,
+      "text": "Welcome to your daily robotics digest, July 13th, 2026!",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 5.25,
+      "endTime": 13.725,
+      "text": "Today, we cover massive AI rollouts in China, a new line of tireless humanoid robots, and key industry investments.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 13.725,
+      "endTime": 16.7,
+      "text": "Five essential updates await you right now.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 16.7,
+      "endTime": 22.35,
+      "text": "From The Guardian - Artificial Intelligence, \"China\u2019s massive AI rollout - podcast.\"",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 22.35,
+      "endTime": 35.3,
+      "text": "This report details China's expansive integration of artificial intelligence across numerous sectors, contrasting this progress with noticeable skepticism observed in Western economies.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 35.3,
+      "endTime": 49.1,
+      "text": "Specific applications noted include medical avatars and industrial factory robots, alongside the deployment of food delivery drones operating near historical sites such as the Great Wall of China.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 49.1,
+      "endTime": 54.075,
+      "text": "State involvement is also heavily leveraging these new AI capabilities.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 54.075,
+      "endTime": 62.775,
+      "text": "This robust state utilization suggests significant pathways for augmented internal surveillance infrastructure within the country.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 62.775,
+      "endTime": 71.7,
+      "text": "The trend indicates a rapid acceleration in state-directed technology integration across civil and industrial sectors globally.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 71.7,
+      "endTime": 78.65,
+      "text": "From Robotics & Automation News, \"Robot.com launches humanoid \u2018built for the work that burns people out\u2019.\"",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 78.65,
+      "endTime": 87.075,
+      "text": "The report details the introduction of a new robotic unit aimed at difficult labor sectors and outlines its operational framework.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 87.075,
+      "endTime": 97.025,
+      "text": "This new robot, named R-noid, is engineered specifically to manage repetitive tasks across multiple shifts, addressing noted industry staffing gaps.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 97.025,
+      "endTime": 106.9,
+      "text": "Robot.com facilitates deployment through a Robot-as-a-Service model, managing all aspects from initial site assessments through autonomous on-site operation.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 106.9,
+      "endTime": 116.2,
+      "text": "This development signals an increased corporate commitment toward embedding sophisticated robotics directly within operational commercial settings.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 116.2,
+      "endTime": 126.225,
+      "text": "Industry observers suggest this marks a notable progression in the practical integration of advanced artificial intelligence into industrial workplaces.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 126.225,
+      "endTime": 135.2,
+      "text": "From Robotics & Automation News, \"STMicroelectronics acquires stake in humanoid robot developer Oversonic Robotics.\"",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 135.2,
+      "endTime": 144.625,
+      "text": "The report details a significant investment in an Italian cognitive robotics firm and the strategic goals moving forward for its development.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 144.625,
+      "endTime": 161.025,
+      "text": "STMicroelectronics has officially acquired a financial stake in Oversonic Robotics, which is recognized for engineering RoBee, cited as the first certified cognitive humanoid robot capable of operating within complex environments.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 161.025,
+      "endTime": 170.45,
+      "text": "This substantial investment was also bolstered by participation from Fondazione ENEA Tech Biomedical and SpotInvest.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 170.45,
+      "endTime": 183.325,
+      "text": "The collective aim among these new shareholders is to facilitate accelerated development for Oversonic across diverse industrial applications, technological advancements, and global markets.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 183.325,
+      "endTime": 194.175,
+      "text": "Industry observers should monitor this collaboration as it suggests an increased acceleration in the deployment scope of advanced humanoid robotics technology.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 194.175,
+      "endTime": 201.15,
+      "text": "From Robohub, \"Wristband enables wearers to control a robotic hand with their own movements.\"",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 201.15,
+      "endTime": 212.4,
+      "text": "The research details a specialized wristband system that grants users the capability to operate an attached robotic hand using natural body movements.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 212.4,
+      "endTime": 223.9,
+      "text": "This technology allows for precise physical guidance of the robot through complex actions, including simulating tasks like playing the piano or shooting a basketball.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 223.9,
+      "endTime": 236.65,
+      "text": "Moreover, the apparatus can manipulate objects effectively within simulated virtual environments, demonstrating a direct translation from human gesture to robotic control.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 236.65,
+      "endTime": 245.925,
+      "text": "The development suggests a significant step toward more intuitive and integrated human-machine interaction in robotics applications.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 245.925,
+      "endTime": 252.525,
+      "text": "From Robotics & Automation News, \"5 Ways Automation is Eliminating Errors at the Shipping Desk.\"",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 252.525,
+      "endTime": 263.75,
+      "text": "The report details how modern automation solutions are significantly reducing shipping errors that typically arise during manual data transfers between various operational systems.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 263.75,
+      "endTime": 273.75,
+      "text": "These technologies accomplish this by minimizing the requirement for staff to physically key in or interpret shipment information across multiple handling stages.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 273.75,
+      "endTime": 287.275,
+      "text": "By streamlining these critical handoffs, the implementation of digital tools directly reduces the points where human error can be introduced throughout the entire workflow, from initial order processing through to final carrier submission.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 287.275,
+      "endTime": 294.425,
+      "text": "The findings suggest a quantifiable enhancement in overall accuracy within logistical operations.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 294.425,
+      "endTime": 302.825,
+      "text": "Industry analysts anticipate that this trend will accelerate the shift toward fully digitized and self-correcting supply chain infrastructure.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 302.825,
+      "endTime": 305.5,
+      "text": "And that's your July 13th dispatch!",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 305.5,
+      "endTime": 309.775,
+      "text": "Seems like the algorithms are really kicking into high gear today.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 309.775,
+      "endTime": 316.25,
+      "text": "Thanks for tuning in, makers and minds, until next time when we decode the robots' latest moves.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 316.25,
+      "endTime": 317.0,
+      "text": "Bye!",
+      "voice": "af_heart"
+    }
+  ]
+}
