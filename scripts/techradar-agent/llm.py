@@ -143,8 +143,12 @@ def classify_ai(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> bool:
         "robotics, or LLMs? Answer YES only if the primary topic is AI/ML/robotics technology.\n\n"
         "Answer NO for: travel, lifestyle, product sales, referral programs, real estate, "
         "finance, sports, gaming, cloud gaming, advertisements, promotional emails, merchandise "
-        "listings, gift guides, product catalogs, sponsored content, or any tech topic not "
-        "primarily about AI/ML/robotics.\n\n"
+        "listings, gift guides, product catalogs, sponsored content, politics, elections, "
+        "campaigns, live streams/videos not primarily about AI/ML/robotics, or any tech topic "
+        "not primarily about AI/ML/robotics.\n\n"
+        "Example:\n"
+        "Title: 'Live video with Prof G Media now: Can Dems Take the Senate?'\n"
+        '→ {"relevant": false}\n\n'
         'Answer with a JSON object: {"relevant": true} or {"relevant": false}.\n\n'
         f"Title: {title}\n"
         f"Content: {summary[:3000]}"

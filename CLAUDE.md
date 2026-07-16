@@ -10,25 +10,11 @@ A personal AI/Robotics news aggregation platform published to GitHub Pages. The 
 
 This project has no package.json, Makefile, or traditional build tooling. It's Python scripts + shell scripts + GitHub Actions.
 
-## Local Development Server
+## Local Automation
 
-A Python HTTP server runs at `http://127.0.0.1:5999` as a macOS LaunchAgent that auto-starts on login.
+The techradar agent runs daily at 8:00 AM ET via a macOS LaunchAgent (`scripts/com.keithfry.ai-techradar-agent.plist`), which wakes the machine if asleep and runs `uv run main.py` in `scripts/techradar-agent/`. See `scripts/README.md` for install/uninstall/update commands. Logs: `logs/ai-techradar-agent.log`.
 
-```bash
-# Check if server is running
-curl http://127.0.0.1:5999/health
-
-# Start manually if needed
-python3 scripts/server.py
-
-# View logs
-tail -f logs/server.log
-```
-
-Server endpoints:
-- `GET /health` — returns `{"status": "ok"}`
-- `GET /fetch-feeds[?hours=N]` — fetches all Verified=Y RSS feeds from `data/ai-rss-feeds.csv`, default 24h lookback
-- `GET /git-push?file=<path>&message=<msg>` — runs git pull --rebase, add, commit, push
+There is no local HTTP server or build step — invoke the agent directly (see Techradar Agent Skill below).
 
 ## RSS Feed Management
 
@@ -45,14 +31,15 @@ cd scripts/techradar-agent
 uv run main.py --date YYYY-MM-DD --time HH:MM
 ```
 
-Default invocation uses today's date at 08:00 ET and runs **both** AI and Robotics digests. Use `--topic ai` or `--topic robotics` to run a single topic. Supports `--dry-run`, `--no-email`, and `--hours` overrides.
+Default invocation uses today's date at 08:00 ET and runs **both** AI and Robotics digests. Use `--topic ai` or `--topic robotics` to run a single topic. Supports `--dry-run`, `--no-email`, `--hours`, `--no-podcast`, `--podcast-only`, `--transcript-only`, and `--refresh-token` overrides (see `scripts/techradar-agent/main.py` for the full flag list).
 
 Pipeline steps (run once per topic):
 1. Fetches RSS feeds filtered by `Category` column in `data/ai-rss-feeds.csv`
 2. Gathers emails from `kfopenclaw@gmail.com` via Gmail API (filtered by topic classifier)
 3. Classifies, summarizes, and deduplicates all content via local Ollama models
-4. Generates a styled HTML digest
-5. Saves to `techradar/AI/ai-radar-YYYY-MM-DD.html` or `techradar/Robotics/robotics-radar-YYYY-MM-DD.html` and commits/pushes
+4. Generates a styled HTML digest, podcast audio/RSS, and cover image
+5. Saves to `techradar/AI/ai-radar-YYYY-MM-DD.html` or `techradar/Robotics/robotics-radar-YYYY-MM-DD.html` (plus JSON/MP3/chapters/podcast.rss in the same directory)
+6. Runs `.github/scripts/generate-index.sh` locally, then commits/pushes everything
 
 Output log: `logs/techradar-agent-YYYY-MM-DD.log`
 
@@ -60,13 +47,13 @@ Output log: `logs/techradar-agent-YYYY-MM-DD.log`
 
 Two workflows run on push to `main`:
 
-1. **`generate-site-assets.yml`**: Generates `index.html` for all directories (via `.github/scripts/generate-index.sh`) and creates `resume/certifications/images/images.json`. Auto-commits generated assets.
+1. **`generate-site-assets.yml`**: Creates `resume/certifications/images/images.json` from files in `resume/certifications/images/`. Auto-commits the manifest. (Directory `index.html` generation is NOT done here — the techradar agent runs `generate-index.sh` itself as the last pipeline step before it commits/pushes, per above.)
 
-2. **`deploy-pages.yml`**: Triggered after asset generation completes. Deploys to GitHub Pages, excluding `data/`, `scripts/`, `skills/`, and `push.sh`.
+2. **`deploy-pages.yml`**: Triggered after asset generation completes. Deploys to GitHub Pages, excluding `data/`, `scripts/`, `skills/`, `test/`, `push.sh`, `fetch_errors.txt`, `.claude/`, `.github/`, and `.venv/`.
 
 ## Directory Index Generation
 
-`.github/scripts/generate-index.sh` recursively creates `index.html` files for all subdirectories. It parses `YYYY-MM-DD` dates from filenames and groups entries by month, newest first. Run it locally to test:
+`.github/scripts/generate-index.sh` recursively creates `index.html` files for all subdirectories. It parses `YYYY-MM-DD` dates from filenames and groups entries by month, newest first. Called automatically by `main.py` at the end of each techradar run. Run it locally to test:
 
 ```bash
 bash .github/scripts/generate-index.sh
