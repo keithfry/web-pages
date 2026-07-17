@@ -1,0 +1,458 @@
+{
+  "date": "2026-07-17",
+  "generated_at": "2026-07-17T09:14:19-0400",
+  "intro_script": "Welcome to your daily digest, July 17th, 2026! We\u2019re covering major leaps in robotics today\u2014from next-gen foundation models powering physical AI, to incredible advancements in assistive tech. Seven minutes of the latest news awaits.",
+  "episode_tagline": "Embodied Intelligence Powers Lives",
+  "outro_script": "That's your tech wrap-up for July 17th, 2026! From multimodal models to robot arms reaching new heights. Thanks for tuning in\u2014keep exploring the future with us next time!",
+  "items": [
+    {
+      "title": "Noetra launches development of Japan\u2019s multimodal AI foundation model for physical AI and robotics",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/noetra-launches-development-of-japans-multimodal-ai-foundation-model-for-physical-ai-and-robotics/103351/",
+      "source": "Robotics & Automation News",
+      "summary": "Noetra has initiated comprehensive research and development for a Japanese multimodal foundation model. This new model is designed to underpin advanced AI systems for both robotics and general physical artificial intelligence. The effort involves collaboration among Noetra's core members, including Sony, SoftBank, NEC, and Honda Motor. Furthermore, the development incorporates participation from numerous partners specializing in sovereign AI applications. Ultimately, the goal is to build a foundational AI layer specifically for advanced physical implementations of artificial intelligence within Japan.",
+      "tags": [
+        "model",
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-17T08:42:41+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 1,
+      "audio_script": "From Robotics & Automation News, \"Noetra launches development of Japan\u2019s multimodal AI foundation model for physical AI and robotics.\" This report details the commencement of a major national initiative to develop a foundational artificial intelligence framework tailored for advanced robotic applications across Japan. The research effort involves core industry partners including Sony, SoftBank, NEC, and Honda Motor, alongside numerous specialists focusing on sovereign AI implementations. Through this collaborative methodology, the goal is the creation of an underlying AI layer specifically designed to support complex physical manifestations of artificial intelligence within Japanese infrastructure. This development signals a significant push toward integrating advanced multimodal processing directly into real-world physical automation systems nationwide.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 17
+    },
+    {
+      "title": "Robbyant unveils LingBot-VLA 2.0 universal AI model for embodied robots",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/robbyant-unveils-lingbot-vla-2-0-universal-ai-model-for-embodied-robots/103355/",
+      "source": "Robotics & Automation News",
+      "summary": "Robbyant, an embodied AI company under Ant Group, has unveiled the upgraded and open-source LingBot-VLA 2.0. This next-generation model is a vision-language-action (VLA) architecture designed to serve as a universal brain for robots. Compared to its January 2026 predecessor, it demonstrates substantial improvements in several key areas. Specifically, the new version offers advanced morphological generalization capabilities. Furthermore, it supports increased degrees of freedom and boasts enhanced deployment efficiency.",
+      "tags": [
+        "model",
+        "robotics",
+        "agents"
+      ],
+      "published": "2026-07-17T09:01:03+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 2,
+      "audio_script": "From Robotics & Automation News, \"Robbyant unveils LingBot-VLA 2.0 universal AI model for embodied robots.\" The report details the launch of an upgraded, open-source vision-language-action or VLA architecture intended to function as a comprehensive cognitive system for robotic platforms. This next-generation model exhibits notable advancements when benchmarked against its earlier iteration from January 2026. Key technical improvements include enhanced morphological generalization capabilities and expanded support for greater degrees of freedom, coupled with an increase in operational deployment efficiency. The availability of this sophisticated framework signals a significant development trajectory within the field of physical AI robotics research.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 76
+    },
+    {
+      "title": "Brain implant helps paralysed man to feed himself and drink from cup",
+      "link": "https://www.theguardian.com/science/2026/jul/16/neural-bypass-brain-implant-paralysed-man-feed-himself-drink-from-cup",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "A man previously paralyzed from the chest down following a swimming accident has regained significant function. Using a brain implant, which bypasses his spinal cord injury, Keith Thomas can now feed himself and drink from a cup. Initially unable to lift his arms, he underwent surgery to implant electrodes directly into his brain. Through subsequent months of rigorous training, he successfully regained the ability to move his limbs. This technology represents a significant breakthrough for individuals with severe spinal cord injuries.",
+      "tags": [
+        "health",
+        "research"
+      ],
+      "published": "2026-07-16T15:00:41+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 3,
+      "audio_script": "From The Guardian - Artificial Intelligence, \"Brain implant helps paralysed man to feed himself and drink from cup\". The story details how a paralyzed individual has regained significant function using a novel brain implant system. The subject, who suffered paralysis following a swimming accident, underwent surgery involving the implantation of electrodes directly into the brain. Subsequent months involved rigorous training protocols, leading to the successful regaining of limb movement capabilities. This technological advancement marks a notable breakthrough for individuals suffering from severe spinal cord injuries. Developments in neural interfaces suggest a pathway toward restoring motor function previously thought irreversible for many patients.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 127
+    },
+    {
+      "title": "Has AI Agent Autonomy Redefined Robotics Safety and Control?",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/has-ai-agent-autonomy-redefined-robotics-safety-and-control/103342/",
+      "source": "Robotics & Automation News",
+      "summary": "Robotic systems are gaining the ability to perceive and change their behavior independently across various environments like warehouses and industries. While this autonomy enhances production and adaptability, it introduces complex issues regarding safety and control. To manage these risks, agent governance establishes guidelines for system capabilities, decision monitoring, and necessary human oversight. Safety measures are being developed, ranging from physical barriers to emergency protocols. Therefore, increased robot autonomy necessitates a refined framework for ensuring robust operational safety.",
+      "tags": [
+        "agents",
+        "safety",
+        "robotics"
+      ],
+      "published": "2026-07-17T06:17:59+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 4,
+      "audio_script": "From Robotics & Automation News, \"Has AI Agent Autonomy Redefined Robotics Safety and Control?\". The report details how advancing autonomous robotic systems necessitate a complete overhaul of current safety protocols to manage enhanced operational capabilities. These sophisticated robots are demonstrating the ability to perceive environments and modify behavior independently across diverse settings such as industrial warehouses. To govern this increased capability, agent governance structures are being implemented, establishing formal guidelines for monitoring decision-making processes and defining necessary levels of human supervision alongside developing physical and procedural emergency safeguards. Consequently, the industry faces a requirement to integrate these evolving safety standards into every layer of robotic deployment architecture.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 179
+    },
+    {
+      "title": "Medicaroid receives CE marking for hinotori surgical robot system",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/medicaroid-receives-ce-marking-for-hinotori-surgical-robot-system/103379/",
+      "source": "Robotics & Automation News",
+      "summary": "Medicaroid secured CE marking for its hinotori Surgical Robot System. This certification adheres to the European Union's Medical Device Regulation (MDR 2017/745). The approval permits Medicaroid to market the robotic surgery platform across all EU member states. Furthermore, it allows sales in select non-EU countries as well. This achievement significantly supports Medicaroid's plans for international expansion.",
+      "tags": [
+        "robotics",
+        "health"
+      ],
+      "published": "2026-07-17T10:45:22+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 5,
+      "audio_script": "From Robotics & Automation News, \"Medicaroid receives CE marking for hinotori surgical robot system.\" The report details that Medicaroid has secured the necessary CE marking for its hinotori Surgical Robot System. This certification confirms adherence to the European Union's stringent Medical Device Regulation, or MDR 2017/745. The approval grants permission to market the robotic surgery platform across all member states within the EU, and furthermore facilitates sales in select non-EU markets. This achievement constitutes a significant milestone supporting the company's international expansion objectives. Industry observers anticipate this marking will accelerate the broader adoption curve for advanced surgical robotics technologies globally.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 243
+    },
+    {
+      "title": "TerraFirma raises $115M to build robotic infrastructure for construction",
+      "link": "https://www.therobotreport.com/terrafirma-raises-115m-build-robotic-infrastructure-construction/",
+      "source": "The Robot Report",
+      "summary": "TerraFirma announced it raised $115 million in funding. This capital is designated for developing robotic infrastructure within the construction industry. Their proprietary platform integrates several advanced components. These elements include AI-enabled software and a dedicated remote command-and-control center. Furthermore, the system utilizes retrofitted heavy machinery to enhance construction operations.",
+      "tags": [
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-16T18:51:40+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 6,
+      "audio_script": "From The Robot Report, \"TerraFirma raises $115M to build robotic infrastructure for construction.\" The announcement details a significant infusion of capital aimed at overhauling construction methods through advanced robotics. The company intends to develop sophisticated robotic infrastructure utilizing a proprietary platform that combines several key technological elements. This system incorporates artificial intelligence-enabled software alongside the development of a dedicated remote command-and-control center. Additionally, the technology focuses on integrating these digital systems with retrofitted heavy machinery to substantially enhance operational capabilities within construction sites. This funding signals a notable acceleration in applying advanced AI and automation technologies directly into heavy industrial sectors.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 293
+    },
+    {
+      "title": "Monumental raises $32 million to expand autonomous construction robots",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/monumental-raises-32m-led-by-khosla-ventures-to-scale-the-robots-already-building-the-physical-world/103373/",
+      "source": "Robotics & Automation News",
+      "summary": "Amsterdam-based tech company Monumental secured $32 million in a Series B funding round. Khosla Ventures led the investment, with Plural and Hummingbird also participating. The capital infusion will support growth in the construction robotics sector. Funds are designated to expand Monumental's global team of engineers. Furthermore, the money will scale robot deployment across Europe and the UK.",
+      "tags": [
+        "robotics"
+      ],
+      "published": "2026-07-17T10:25:44+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 7,
+      "audio_script": "From Robotics & Automation News, \"Monumental raises $32 million to expand autonomous construction robots.\" The report details that the Amsterdam-based technology firm Monumental has successfully secured thirty-two million dollars in a recent Series B funding round. Khosla Ventures spearheaded this investment, with participation also recorded from Plural and Hummingbird. This capital infusion is earmarked specifically to fuel expansion within the rapidly developing sector of construction robotics. The funds will support the growth of Monumental's global engineering workforce and enable an increased scale of robot deployment across both European markets and the United Kingdom. The funding highlights continued significant venture capital interest in automating manual labor processes within the infrastructure technology space.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 351
+    },
+    {
+      "title": "Lockheed Martin taps Machina\u2019s robots for mission-critical missile parts",
+      "link": "https://www.therobotreport.com/lockheed-martin-taps-machinas-robots-for-mission-critical-missile-parts/",
+      "source": "The Robot Report",
+      "summary": "Lockheed Martin has contracted Machina Labs services. This agreement involves qualifying robotically formed metal components. The specialized parts are intended for use in the JASSM missile program. These advanced manufacturing techniques represent a significant technological step for defense hardware.",
+      "tags": [
+        "robotics",
+        "model"
+      ],
+      "published": "2026-07-16T12:30:12+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 8,
+      "audio_script": "From The Robot Report, \"Lockheed Martin taps Machina\u2019s robots for mission-critical missile parts.\" This development centers on a major contract awarding robotic fabrication services for essential components within advanced defense systems. Lockheed Martin has entered into an agreement with Machina Labs to qualify robotically formed metal components. These specialized parts are earmarked specifically for integration into the JASSM missile program. The engagement signals the adoption of sophisticated manufacturing techniques directly into high-stakes defense hardware production. This trend indicates a continued industrial shift toward automated precision manufacturing across critical technological sectors.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 406
+    },
+    {
+      "title": "\ud83d\udd2c The Lab of the Future Should Feel Like a Data Center \u2014 Andy Beam & Rafa G\u00f3mez-Bombarelli, Lila Sciences",
+      "link": "",
+      "source": "Latent.Space",
+      "summary": "Lila Sciences envisions a \"lab of the future\" operating like an AI data center, utilizing automated robotics and equipment for continuous experimentation. Their ambitious goal is developing a scientific superintelligence wired directly into the wet lab environment. They aim to treat science as an infinite token generator by producing vast amounts of experimentally validated reasoning data across biology, chemistry, and materials science. This process involves building massive libraries of \"scientific tokens\" through high-throughput, iterative experimentation rather than solely focusing on raw volume. Ultimately, they seek a general model capable of solving diverse scientific problems through broad data generation.",
+      "tags": [
+        "robotics",
+        "research",
+        "model"
+      ],
+      "published": null,
+      "_source_type": "email",
+      "_is_arxiv": false,
+      "rank": 9,
+      "audio_script": "From Latent.Space, \"\ud83d\udd2c The Lab of the Future Should Feel Like a Data Center \u2014 Andy Beam & Rafa G\u00f3mez-Bombarelli, Lila Sciences.\" This report outlines a concept for reimagining scientific research by integrating automated robotics and AI to create self-perpetuating experimental systems. Lila Sciences envisions treating science as an infinite data source by building a \"scientific superintelligence\" directly into the wet lab environment. The methodology involves conducting high-throughput, iterative experimentation across biology, chemistry, and materials science to generate libraries of validated reasoning data, termed scientific tokens. This approach shifts focus from merely generating large volumes of raw data to creating deeply structured, experimentally proven knowledge sets. These efforts point toward a future where general artificial models can solve diverse scientific problems through systematic, automated data generation.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 456
+    },
+    {
+      "title": "How to Benchmark Your Development System Before Running Robotics Simulations",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/how-to-benchmark-your-development-system-before-running-robotics-simulations/103338/",
+      "source": "Robotics & Automation News",
+      "summary": "Engineers utilize robotics simulations extensively before physical construction of robots. These virtual environments are crucial for validating designs and refining complex control algorithms. Simulations allow engineers to proactively identify potential issues that might arise during real-world operation. The computational demands of these simulation processes can be significant, requiring proper benchmarking. Benchmarking the development system is necessary to ensure accurate and reliable simulation results prior to testing.",
+      "tags": [
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-17T06:09:26+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 10,
+      "audio_script": "From Robotics & Automation News, \"How to Benchmark Your Development System Before Running Robotics Simulations.\" This report details the critical necessity of benchmarking development systems before executing robotics simulations. Engineers rely heavily on these virtual environments for design validation and refining complex control algorithms, enabling proactive identification of potential real-world operational issues. The computational intensity associated with running detailed simulations necessitates thorough system assessment to guarantee accurate and reliable results throughout the testing pipeline. This procedural focus signals an increasing industry standard for rigorous pre-deployment verification in advanced automation systems.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 527
+    },
+    {
+      "title": "Opinion: Exotec managing director highlights key warehouse automation trends for 2026",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/opinion-exotec-managing-director-highlights-key-warehouse-automation-trends-for-2026/103366/",
+      "source": "Robotics & Automation News",
+      "summary": "Exotec's managing director notes that e-commerce growth necessitates significant updates to logistics operations. Automation and Artificial Intelligence have become fundamental requirements for achieving operational excellence and agility within warehouses. Innovation is now critical in modern warehousing environments. Three core principles are shaping current industry trends: resilience, reliability, and operational continuity. These factors drive the need for advanced warehouse automation solutions.",
+      "tags": [
+        "robotics",
+        "agents",
+        "research"
+      ],
+      "published": "2026-07-17T10:04:56+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 11,
+      "audio_script": "From Robotics & Automation News, \"Opinion: Exotec managing director highlights key warehouse automation trends for 2026.\" The report indicates that sustained e-commerce expansion mandates substantial upgrades to existing logistics infrastructures. Discussions centered on how the integration of automation and artificial intelligence has transitioned from being optional improvements to essential components for achieving high levels of operational excellence and agility within storage facilities. Key industry trends are currently being guided by three core principles: building resilience, ensuring system reliability, and maintaining continuous operational function. These factors collectively establish the demand for advanced automated warehouse solutions moving forward. Industry stakeholders should anticipate continued emphasis on adaptive AI technologies capable of managing complex, fluctuating supply chain demands.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 575
+    },
+    {
+      "title": "Xpanner rolls out X1 Panel Lift for automated solar panel installation",
+      "link": "https://www.therobotreport.com/xpanner-rolls-out-x1-panel-lift-automated-solar-panel-installation/",
+      "source": "The Robot Report",
+      "summary": "Xpanner has released the X1 Panel Lift to automate solar panel installation processes. This new equipment is designed to integrate with existing excavator machinery. By utilizing a single workflow, the system streamlines several stages of the installation process. Solar crews can thus dedicate their focus to crucial tasks like alignment, fastening, and quality checks. The announcement was originally reported on The Robot Report.",
+      "tags": [
+        "robotics"
+      ],
+      "published": "2026-07-16T13:08:40+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 12,
+      "audio_script": "From The Robot Report, \"Xpanner rolls out X1 Panel Lift for automated solar panel installation.\" This story details a new piece of equipment designed to automate several stages of the solar panel setup process. The X1 Panel Lift integrates directly with existing excavator machinery, allowing crews to utilize a single streamlined workflow for installation tasks. This automation significantly alters the division of labor on site; specifically, solar crews are now able to concentrate their efforts exclusively on specialized activities such as precise alignment, securing fastenings, and conducting quality assurance inspections. The deployment of this technology represents an advancement in construction robotics, suggesting further integration of heavy machinery with specialized automated tooling across renewable energy infrastructure build-outs.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 637
+    },
+    {
+      "title": "Mondo Robotics unveils Beni, an all-terrain AI camera robot for consumers",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/mondo-robotics-unveils-beni-an-all-terrain-ai-camera-robot-for-consumers/103385/",
+      "source": "Robotics & Automation News",
+      "summary": "Mondo Robotics has launched its debut consumer robot, Beni, via Kickstarter. This portable device is designed to autonomously film and follow users across various terrains. Beni features advanced capabilities that allow it to auto-capture life's moments using cinema-grade camera movements. The robot aims to solve the inconvenience of needing tripods or a person to operate a camera. It offers consumers an accessible way to document memories independently.",
+      "tags": [
+        "robotics",
+        "agents"
+      ],
+      "published": "2026-07-17T11:04:52+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 13,
+      "audio_script": "From Robotics & Automation News, \"Mondo Robotics unveils Beni, an all-terrain AI camera robot for consumers.\" The report details the introduction of a new autonomous device intended for personal use to capture video footage. Mondo Robotics launched this portable unit through the Kickstarter platform. This robot is engineered to independently film and track individuals across diverse outdoor landscapes, utilizing cinema-grade movement emulation. The technology seeks to eliminate the necessity of manual operation or physical equipment like tripods for capturing memories.\n\nThe device incorporates advanced artificial intelligence to autonomously capture life\u2019s moments without direct user intervention. Its design focuses on providing consumers an accessible means of documenting personal experiences independently of human assistance. This represents a move toward highly automated, portable content creation tools in the consumer electronics sector. Industry focus is now shifting toward wearable and ambient recording systems powered by robotics.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 692
+    },
+    {
+      "title": "Logistics firms, robotics startups and brands set up shop in Industry City, fueling a retail tech hub in Brooklyn",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/logistics-firms-robotics-startups-and-brands-set-up-shop-in-industry-city-fueling-a-retail-tech-hub-in-brooklyn/103345/",
+      "source": "Robotics & Automation News",
+      "summary": "E-commerce represents a rapidly expanding sector within New York City's retail landscape, characterized by constant new brand launches. The daily delivery volume across the city reaches an impressive 2.5 million packages. Consequently, companies involved in manufacturing, printing, fulfilling, and automating for these brands are highly competitive regarding available real estate. These various entities\u2014including logistics firms, robotics startups, and established brands\u2014are establishing themselves in Industry City. This concentration of businesses is actively fueling the development of a significant retail technology hub in Brooklyn.",
+      "tags": [
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-17T08:30:11+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 14,
+      "audio_script": "From Robotics & Automation News, \"Logistics firms, robotics startups and brands set up shop in Industry City, fueling a retail tech hub in Brooklyn.\" The segment reports on the concentration of technology-adjacent businesses establishing themselves within Industry City due to the rapid growth of e-commerce operations across New York City. Daily delivery volumes in the city currently account for an estimated two point five million packages, creating intense real estate competition among manufacturing, fulfillment, and automation service providers. Consequently, logistics companies, robotics startups, and established retail brands are all choosing to situate their operations within this area, thereby accelerating the development of a major retail technology center in Brooklyn. This influx signifies increased investment and convergence across the operational backbone of urban commerce for advanced automation technologies.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 768
+    },
+    {
+      "title": "Delta D-Bot collaborative robots win BIG SEE Product Design Award 2026",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/delta-d-bot-collaborative-robots-win-big-see-product-design-award-2026/103382/",
+      "source": "Robotics & Automation News",
+      "summary": "Delta Electronics secured the BIG SEE Product Design Award 2026 for its Delta D-Bot series of collaborative robots. The internationally recognized awards honor exceptional accomplishments across architecture, product design, and industrial design. This recognition highlights the advanced engineering behind the D-Bot line from the power management specialist. Winning this award marks a significant achievement for Delta Electronics in robotics technology.",
+      "tags": [
+        "robotics"
+      ],
+      "published": "2026-07-17T10:57:03+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 15,
+      "audio_script": "From Robotics & Automation News, \"Delta D-Bot collaborative robots win BIG SEE Product Design Award 2026.\" This report details the recognition received by Delta Electronics' D-Bot series of collaborative robots for its design excellence. The internationally recognized BIG SEE Product Design Awards honor notable achievements spanning architecture, product design, and industrial design sectors across various technological fields. Delta Electronics secured this accolade recognizing the advanced engineering incorporated within the D-Bot line from the power management specialist. This award represents a significant technical milestone for Delta Electronics within the broader robotics technology market. The achievement underscores continued advancements in industrial automation hardware capabilities moving into the next cycle of integration.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 836
+    },
+    {
+      "title": "Undergrads\u2019 weed-killing robot wins top prize",
+      "link": "https://robohub.org/undergrads-weed-killing-robot-wins-top-prize/",
+      "source": "Robohub",
+      "summary": "A team of Cornell undergraduates secured the top prize at The Farm Robotics Challenge by developing a weed-killing robot prototype. Andrew James, Neil Morrison, Natalia Kurz, and Michael Neiss were members of the winning group. Their creation successfully competed against ninety-five other teams. The win was achieved on May 21st during the competition. This victory highlights student ingenuity in agricultural technology.",
+      "tags": [
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-17T10:15:46+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 16,
+      "audio_script": "From Robohub, \"Undergrads\u2019 weed-killing robot wins top prize.\" The story details a victory achieved by a team of Cornell undergraduates at The Farm Robotics Challenge with their prototype weed-killing robot. This winning group comprised Andrew James, Neil Morrison, Natalia Kurz, and Michael Neiss. Their creation successfully competed against ninety-five other teams during the event held on May 21st. The achievement demonstrated significant student ingenuity within the field of agricultural technology. This success signals continued advancement in developing automated solutions for modern farming challenges.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 890
+    },
+    {
+      "title": "How to Make an Invisible Drone",
+      "link": "https://spectrum.ieee.org/invisible-spinning-drone",
+      "source": "IEEE Spectrum - Robotics",
+      "summary": "Northwestern University roboticists demonstrated Phantom Twist, a drone designed for near-invisibility using computational design. The drone achieves its stealth by spinning rapidly (15 to 25 Hz), causing motion blur that leverages the human eye's \"persistence of vision.\" This technique requires careful structural design so components align with empty space as it spins. The optimization process used a metric minimizing perceived image differences between background and drone overlays, achieving an LPIPS score far better than human-designed versions. While currently requiring an optical tracking system, future applications could include covert surveillance or 360-degree wildlife observation.",
+      "tags": [
+        "robotics",
+        "research",
+        "safety"
+      ],
+      "published": "2026-07-16T16:09:21+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 17,
+      "audio_script": "From IEEE Spectrum - Robotics, \"How to Make an Invisible Drone.\" The report details a system called Phantom Twist, which represents a breakthrough in stealth technology by designing a drone engineered for near-invisibility. Northwestern University roboticists achieved this effect by having the drone spin rapidly between fifteen and twenty-five cycles per second. This high-speed rotation generates motion blur that exploits the human eye's inherent persistence of vision. The structural design process involved optimizing components so they align precisely with empty background space while spinning, utilizing a metric that minimized perceived image differences. Currently necessitating an optical tracking system, future uses for this technology include covert surveillance applications and advanced 360-degree wildlife observation platforms.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 931
+    },
+    {
+      "title": "Adaptive Control of Motor-Position-Controlled Flexible Joint Robots with Uncertain Joint Stiffness",
+      "link": "https://arxiv.org/abs/2607.14177",
+      "source": "arXiv - cs.RO",
+      "summary": "Model-based control of flexible joint robots using actuators that control position requires knowing the precise joint stiffness, which is often uncertain or changes over time due to wear. To address this, the paper proposes an adaptive control method to continuously estimate the unknown, nonlinear torque-deflection relationship at each joint. Unlike methods for non-elastic robots, this approach utilizes an implicit control law and a regressor matrix dependent on the control input. The proposed technique accounts for the uncertainties introduced by variable joint stiffness. Experimental validation on a flexible joint with non-linear stiffness confirms the effectiveness of this adaptive strategy.",
+      "tags": [
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-17T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "Semantic Audio-driven Understanding for Dynamic Humanoid Whole Body Control",
+      "link": "https://arxiv.org/abs/2607.14182",
+      "source": "arXiv - cs.RO",
+      "summary": "Introduces a novel multi-modal framework for autonomous humanoid control driven by semantic audio input. The system processes continuous audio streams, splitting them into music and speech branches for specialized handling. Music input uses audio fingerprinting to map musical segments to appropriate motion policies. Speech input grounds direct human-robot interaction within a library of imitation-learned skills. This unified interface schedules skill execution through an RL control pipeline, demonstrating successful sim-to-real transfer on a physical humanoid robot.",
+      "tags": [
+        "robotics",
+        "model",
+        "agents"
+      ],
+      "published": "2026-07-17T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "Open-AoE: An Open Egocentric Manipulation Dataset and Toolchain for Embodied Learning",
+      "link": "https://arxiv.org/abs/2607.14183",
+      "source": "arXiv - cs.RO",
+      "summary": "Open-AoE is an open, community-oriented dataset and toolchain designed for embodied learning from egocentric manipulation videos. It features a first release of approximately 2,000 hours of footage collected by over 500 contributors using numerous smartphones. The resource provides rich annotations including text descriptions, MANO hand poses, camera trajectories, and atomic actions. A specialized data processing pipeline structures raw recordings through segmentation, semantic annotation, and reconstruction steps. Finally, an accompanying toolchain supports visualization, cross-embodiment retargeting, and training for various embodied AI policies.",
+      "tags": [
+        "robotics",
+        "research",
+        "model"
+      ],
+      "published": "2026-07-17T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "Never Too Late for Force: Accelerating VLA Post-Training with Reactive Force Injection",
+      "link": "https://arxiv.org/abs/2607.14236",
+      "source": "arXiv - cs.RO",
+      "summary": "Pretrained Vision-Language-Action (VLA) policies struggle in contact states due to limitations with visual input or minor errors. LIFT introduces a force-aware post-training framework by grafting a reactive action expert onto the existing VLA policy. This system injects real-time 6D end-effector force through a causal force memory and cross-attention mechanism for action refreshment during execution. To handle distribution shift from contact feedback, LIFT incorporates an online DAgger loop training on both offline data and human corrections. Experiments show LIFT surpasses vision-only methods in complex tasks like towel folding and book insertion, confirming the necessity of reactive force modeling.",
+      "tags": [
+        "model",
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-17T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "MEMORA: Embodied Action Memory from Egocentric Videos for Reasoning and Planning",
+      "link": "https://arxiv.org/abs/2607.14252",
+      "source": "arXiv - cs.RO",
+      "summary": "Developing long-horizon robot planning requires embodied action memory beyond immediate scene prediction, incorporating past experiences like object changes and prior procedures. MEMORA implements this capability through a formation-consolidation-retrieval lifecycle utilizing four distinct memory stores: Environment, Entity, Activity, and Inferred Knowledge. Online editing updates memory with new observations while offline consolidation abstracts repeated actions into reusable patterns. Testing on EPIC-KITCHENS-100 data demonstrated that full MEMORA significantly improved both memory assessment accuracy (up to 20.5 points) and out-of-distribution planning scores (up to 16.6%). These results confirm that editable, consolidated memory effectively supplies remembered context for robust robot decision-making.",
+      "tags": [
+        "robotics",
+        "agents",
+        "research"
+      ],
+      "published": "2026-07-17T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "Stochastic Filtering for Quorum Sensing in Robot Swarms under Anonymous Communication",
+      "link": "https://arxiv.org/abs/2607.14262",
+      "source": "arXiv - cs.RO",
+      "summary": "Quorum Sensing (QS) is vital for robot swarm coordination, requiring individuals to accurately estimate the group quorum level through communication. Using anonymous protocols allows for scalability by exchanging local neighbor information without revealing identities. However, these anonymous methods can incorrectly double-count messages, biasing the overall quorum estimates. The study proposes a stochastic filtering protocol inspired by $k$-priority sampling ($\\text{AN}^k$) to enhance estimate stability compared to baseline and randomized alternatives. $\\text{AN}^k$ successfully stabilizes the estimate by actively filtering the message buffer, though it increases recovery time after errors.",
+      "tags": [
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-17T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "DiMaS: Distribution Matching for Steering Vision-Language-Action Models",
+      "link": "https://arxiv.org/abs/2607.14280",
+      "source": "arXiv - cs.RO",
+      "summary": "Flow-matching vision-language-action (VLA) models lack effective fine-grained behavioral control through internal representation manipulation. Existing linear steering techniques fail in the VLA setting because behavioral features are not linearly steerable, despite being linearly decodable. The paper introduces DiMaS, a Distribution-Matching Steering strategy designed specifically for flow-matching VLAs. DiMaS controls behavior by transporting between entire representation distributions rather than shifting along a fixed direction. Experiments demonstrate that this method effectively controls behavior in state-of-the-art VLAs and analyzes the generalizability of behavioral control across diverse tasks.",
+      "tags": [
+        "model",
+        "research"
+      ],
+      "published": "2026-07-17T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "Beyond Visual Grasping: Benchmarking Complex Grasping from Detection to Execution",
+      "link": "https://arxiv.org/abs/2607.14341",
+      "source": "arXiv - cs.RO",
+      "summary": "Robust robotic grasping requires more than just visual grasp pose detection for real-world complexity. Existing benchmarks fail to test multi-step reasoning and semantic understanding during execution phases. Authors propose GCA-Bench, a new benchmark focusing on challenging \"grasping with complex action\" scenarios involving scene reasoning. Evaluating various baseline methods against this set revealed success rates below 70% in complex grasping tasks. The work also introduces new evaluation metrics to guide the development of more robust grasping strategies.",
+      "tags": [
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-17T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    },
+    {
+      "title": "ConFlow: Constraints-Guided Learning with Flow Matching for Motion Generation",
+      "link": "https://arxiv.org/abs/2607.14424",
+      "source": "arXiv - cs.RO",
+      "summary": "Proposes ConFlow, a novel framework for generative robot motion modeling that addresses the limitations of current Flow Matching methods by integrating constraints directly into the training objective. It achieves this by employing differentiable barrier or cost functions to incorporate desired task-specific rules. Additionally, ConFlow replaces the standard Gaussian source distribution with a conditional Gaussian Process for improved specification adherence. The method utilizes infeasible demonstrations as negative supervision to enhance constraint satisfaction without extra expert data. Experiments on two-robot navigation show that ConFlow reduces collision rates and improves trajectory quality compared to standard flow matching baselines.",
+      "tags": [
+        "model",
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-17T04:00:00+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": true,
+      "include_in_podcast": false,
+      "chapter_start_seconds": null
+    }
+  ]
+}

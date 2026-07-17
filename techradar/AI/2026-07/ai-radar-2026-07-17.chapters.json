@@ -1,0 +1,359 @@
+{
+  "version": "1.2.0",
+  "title": "July 17, 2026 : AI Models Prove Powerful Risk",
+  "chapters": [
+    {
+      "startTime": 0,
+      "title": "Introduction",
+      "endTime": 15
+    },
+    {
+      "startTime": 15,
+      "title": "[AINews] Kimi K3 2.8T-A50B: the largest open model ever released; Opus 4.8-class at Sonnet 5 pricing",
+      "endTime": 78
+    },
+    {
+      "startTime": 78,
+      "title": "OpenAI Details GPT-Red: An Internal Automated Red-Teaming Model That Beat Human Red-Teamers 84% To 13% On Prompt Injection",
+      "url": "https://www.marktechpost.com/2026/07/16/openai-details-gpt-red-an-internal-automated-red-teaming-model-that-beat-human-red-teamers-84-to-13-on-prompt-injection/",
+      "endTime": 141
+    },
+    {
+      "startTime": 141,
+      "title": "The agent security gap: 54% of enterprises have already had an AI agent incident, and most still let agents share credentials",
+      "url": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials",
+      "endTime": 219
+    },
+    {
+      "startTime": 219,
+      "title": "Scaling Agentic AI Factories Through Extreme Co-Design with NVIDIA BlueField",
+      "url": "https://developer.nvidia.com/blog/scaling-agentic-ai-factories-through-extreme-co-design-with-nvidia-bluefield/",
+      "endTime": 289
+    },
+    {
+      "startTime": 289,
+      "title": "NVIDIA Nemotron 3 Embed Ranks #1 Overall on RTEB, Advancing Agentic Retrieval",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb",
+      "endTime": 337
+    },
+    {
+      "startTime": 337,
+      "title": "NVIDIA AI Releases Nemotron 3 Embed: An Open Embedding Collection Whose 8B Checkpoint Ranks #1 on RTEB",
+      "url": "https://www.marktechpost.com/2026/07/17/nvidia-ai-releases-nemotron-3-embed-an-open-embedding-collection-whose-8b-checkpoint-ranks-1-on-rteb/",
+      "endTime": 407
+    },
+    {
+      "startTime": 407,
+      "title": "Inkling: Our open-weights model",
+      "url": "https://simonwillison.net/2026/Jul/16/inkling/#atom-everything",
+      "endTime": 454
+    },
+    {
+      "startTime": 454,
+      "title": "[AINews] Kimi K3 2.8T-A50B: the largest open model ever released; Opus 4.8-class at Sonnet 5 pricing",
+      "url": "https://www.latent.space/p/ainews-kimi-k3-28t-a50b-the-largest",
+      "endTime": 510
+    },
+    {
+      "startTime": 510,
+      "title": "The AI context gap: Enterprise AI organizations have a trust problem, not a retrieval problem \u2014 and most are still building the fix",
+      "url": "https://venturebeat.com/ai/the-ai-context-gap-enterprise-ai-organizations-have-a-trust-problem-not-a-retrieval-problem-and-most-are-still-building-the-fix",
+      "endTime": 585
+    },
+    {
+      "startTime": 585,
+      "title": "The agent evaluation gap: Enterprise AI organizations have a reality-alignment problem, not a coverage problem \u2014 and most are shipping to production anyway",
+      "url": "https://venturebeat.com/ai/the-agent-evaluation-gap-enterprise-ai-organizations-have-a-reality-alignment-problem-not-a-coverage-problem-and-most-are-shipping-to-production-anyway",
+      "endTime": 644
+    },
+    {
+      "startTime": 644,
+      "title": "The AI compute gap: Enterprises are buying infrastructure faster than they can measure what it costs",
+      "url": "https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs",
+      "endTime": 698
+    },
+    {
+      "startTime": 698,
+      "title": "Zero trust must now move at agent speed",
+      "url": "https://venturebeat.com/security/zero-trust-must-now-move-at-agent-speed",
+      "endTime": 751
+    },
+    {
+      "startTime": 751,
+      "title": "Visa Bets Stablecoins Powering Future AI Micropayments Infrastructure",
+      "url": "https://aibusinessweekly.net/p/visa-stablecoins-ai-agent-micropayments",
+      "endTime": 812
+    },
+    {
+      "startTime": 812,
+      "title": "Integrating Context-Aware Video AI Agents Into Enterprise Workflows",
+      "url": "https://developer.nvidia.com/blog/integrating-context-aware-video-ai-agents-into-enterprise-workflows/",
+      "endTime": 879
+    },
+    {
+      "startTime": 879,
+      "title": "Context Engineering for RAG Question Parsing: From a Raw Question to Typed Fields That Steer Retrieval and Generation",
+      "url": "https://towardsdatascience.com/context-engineering-for-rag-question-parsing-from-a-raw-question-to-typed-fields-that-steer-retrieval-and-generation/",
+      "endTime": 931
+    },
+    {
+      "startTime": 931,
+      "title": "One RAG Pipeline, Four Very Different PDFs: Same Four Bricks, Every Answer Typed and Cited",
+      "url": "https://towardsdatascience.com/one-rag-pipeline-four-very-different-pdfs-same-four-bricks-every-answer-typed-and-cited/",
+      "endTime": 985
+    },
+    {
+      "startTime": 985,
+      "title": "Prepare These 5 Assets Before Your AI Agents Take On More\u00a0Work",
+      "url": "https://towardsdatascience.com/prepare-these-5-assets-before-your-ai-agents-take-on-more-work/",
+      "endTime": 1045
+    },
+    {
+      "startTime": 1045,
+      "title": "Are Your AI Agents Underperforming? Optimize, Don't Overload",
+      "endTime": 1109
+    },
+    {
+      "startTime": 1109,
+      "title": "Where to Place Proprietary Data In Your Content So AI Actually Cites It",
+      "endTime": 1180
+    },
+    {
+      "startTime": 1180,
+      "title": "ChatGPT Sources Citations Primarily From Content's Beginning",
+      "url": "https://searchengineland.com/chatgpt-citations-content-study-469483",
+      "endTime": 1240
+    },
+    {
+      "startTime": 1240,
+      "title": "Analog AI Is Back, But Can It Survive Its Own Noise?",
+      "url": "https://towardsdatascience.com/analog-ai-is-back-can-it-survive-its-own-noise/",
+      "endTime": 1286
+    },
+    {
+      "startTime": 1286,
+      "title": "Brain implant helps paralysed man to feed himself and drink from cup",
+      "url": "https://www.theguardian.com/science/2026/jul/16/neural-bypass-brain-implant-paralysed-man-feed-himself-drink-from-cup",
+      "endTime": 1344
+    },
+    {
+      "startTime": 1344,
+      "title": "Toyota Spin-Out Launches From Stealth With $300M",
+      "url": "https://aibusiness.com/robotics/walden-robotics-emerges-from-stealth",
+      "endTime": 1397
+    },
+    {
+      "startTime": 1397,
+      "title": "Thinking Machines Rolls Out Broad but Efficient Model",
+      "url": "https://aibusiness.com/foundation-models/thinking-machines-inkling-model",
+      "endTime": 1450
+    },
+    {
+      "startTime": 1450,
+      "title": "Musk\u2019s xAI sues user who allegedly used Grok to create child sexual abuse material",
+      "url": "https://www.theguardian.com/technology/2026/jul/16/elon-musk-xai-sue-user-grok-csam",
+      "endTime": 1509
+    },
+    {
+      "startTime": 1509,
+      "title": "Reddit Fights Spam With Own AI Against Marketing Slop Tactics",
+      "url": "https://finance.yahoo.com/technology/ai/articles/reddit-cracking-down-ai-marketing-115000368.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAALF9wzKThtCcsTdRpvZckyieNgb2AiIC_HIizqAcCjN1aKVBGx9RiV6CfYAcuLtOTLBKQ76osgZY5B6TOM9x2IZTH6EEIMEBXPDzKAX2T2WQ6nFnTum2KOnDanNiUEsUfekFuj8yDjhvywZIArw7QvwZPmnkhMbcRcooTOCg1DH_",
+      "endTime": 1581
+    },
+    {
+      "startTime": 1581,
+      "title": "Canadian Universities Face Rising Tide of AI Cheating Cases",
+      "url": "https://aibusinessweekly.net/p/canadian-universities-ai-cheating-brown-university",
+      "endTime": 1655
+    },
+    {
+      "startTime": 1655,
+      "title": "Why force models to compute knowledge when they could just look it up?",
+      "url": "https://aimodels.substack.com/p/why-force-models-to-compute-knowledge",
+      "endTime": 1711
+    },
+    {
+      "startTime": 1711,
+      "title": "How to Get the Most Out of Claude Fable 5",
+      "url": "https://towardsdatascience.com/how-to-get-the-most-out-of-claude-fable-5/",
+      "endTime": 1767
+    },
+    {
+      "startTime": 1767,
+      "title": "Create, edit and star in videos with two Google Vids updates",
+      "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
+      "endTime": 1812
+    },
+    {
+      "startTime": 1812,
+      "title": "NotebookLM is now Gemini Notebook",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+      "endTime": 1864
+    },
+    {
+      "startTime": 1864,
+      "title": "Connect more of your apps to Search",
+      "url": "https://blog.google/products-and-platforms/products/search/connected-apps/",
+      "endTime": 1922
+    },
+    {
+      "startTime": 1922,
+      "title": "\ud83d\udd2c The Lab of the Future Should Feel Like a Data Center \u2014 Andy Beam & Rafa G\u00f3mez-Bombarelli, Lila Sciences",
+      "endTime": 1989
+    },
+    {
+      "startTime": 1989,
+      "title": "\ud83d\udd2c The Lab of the Future Should Feel Like a Data Center \u2014 Andy Beam & Rafa G\u00f3mez-Bombarelli, Lila Sciences",
+      "url": "https://www.latent.space/p/the-lab-of-the-future-should-feel",
+      "endTime": 2049
+    },
+    {
+      "startTime": 2049,
+      "title": "\u2018There\u2019s this deep mystery of what, actually, is this thing?\u2019: the philosopher inside Google DeepMind AI \u2013 podcast",
+      "url": "https://www.theguardian.com/news/audio/2026/jul/17/theres-this-deep-mystery-of-what-actually-is-this-thing-the-philosopher-inside-google-deepmind-ai-podcast",
+      "endTime": 2106
+    },
+    {
+      "startTime": 2106,
+      "title": "The risk of weather data sabotage is rising",
+      "url": "https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/",
+      "endTime": 2160
+    },
+    {
+      "startTime": 2160,
+      "title": "\u2018Adversarial clothing\u2019: are garments designed to confuse facial recognition systems about to go mainstream?",
+      "url": "https://www.theguardian.com/fashion/2026/jul/17/adversarial-clothing-are-garments-designed-to-confuse-facial-recognition-systems-about-to-go-mainstream",
+      "endTime": 2219
+    },
+    {
+      "startTime": 2219,
+      "title": "TikTok facing UK investigation amid fears over age checks and harm to children",
+      "url": "https://www.theguardian.com/technology/2026/jul/16/tiktok-uk-investigation-ofcom-child-protection-self-harm-suicide",
+      "endTime": 2275
+    },
+    {
+      "startTime": 2275,
+      "title": "Why teens deserve access to safe AI",
+      "url": "https://openai.com/index/why-teens-deserve-access-safe-ai",
+      "endTime": 2347
+    },
+    {
+      "startTime": 2347,
+      "title": "Smart glasses are deeply creepy. Why are celebrities like Kylie Jenner endorsing them?",
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/17/ai-meta-smart-glasses",
+      "endTime": 2399
+    },
+    {
+      "startTime": 2399,
+      "title": "AI Reliability Problem Explained By Expert CTO Dan Klein",
+      "url": "https://podcasts.apple.com/ca/podcast/the-ai-why-with-liam-lawson/id1723870953",
+      "endTime": 2449
+    },
+    {
+      "startTime": 2449,
+      "title": "I rebuilt AlphaGo's architecture for a game of hide-and-seek (Graph Neural Network)",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1uyvwbm/i_rebuilt_alphagos_architecture_for_a_game_of/",
+      "endTime": 2512
+    },
+    {
+      "startTime": 2512,
+      "title": "Qwen3 4b Instruct from 1% to 99% on wordle in 11 hours with a single 5090 with PPO.",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1uy8fj9/qwen3_4b_instruct_from_1_to_99_on_wordle_in_11/",
+      "endTime": 2571
+    },
+    {
+      "startTime": 2571,
+      "title": "Share your experience: How do you hyperparameter tune a complex RL model with a lot of moving parts?",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1uyx0kl/share_your_experience_how_do_you_hyperparameter/",
+      "endTime": 2629
+    },
+    {
+      "startTime": 2629,
+      "title": "Careers in RL: Anything beyond defense and robotics?",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1uy6vhz/careers_in_rl_anything_beyond_defense_and_robotics/",
+      "endTime": 2677
+    },
+    {
+      "startTime": 2677,
+      "title": "Bayesian RL, best resource for it?",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1uya52f/bayesian_rl_best_resource_for_it/",
+      "endTime": 2728
+    },
+    {
+      "startTime": 2728,
+      "title": "Firefox in WebAssembly",
+      "url": "https://simonwillison.net/2026/Jul/16/firefox-in-webassembly/#atom-everything",
+      "endTime": 2789
+    },
+    {
+      "startTime": 2789,
+      "title": "Q&amp;A: How Capcom Brought Path Tracing to RE ENGINE Across PRAGMATA and Resident Evil Requiem",
+      "url": "https://developer.nvidia.com/blog/qa-how-capcom-brought-path-tracing-to-re-engine-across-pragmata-and-resident-evil-requiem/",
+      "endTime": 2850
+    },
+    {
+      "startTime": 2850,
+      "title": "We\u2019re partnering with the Georgia Public Library Service for no-cost career and AI training.",
+      "url": "https://blog.google/company-news/outreach-and-initiatives/grow-with-google/free-ai-training-georgia-libraries/",
+      "endTime": 2916
+    },
+    {
+      "startTime": 2916,
+      "title": "Mermaid to ASCII art (mermaid-ascii)",
+      "url": "https://simonwillison.net/2026/Jul/16/mermaid-ascii/#atom-everything",
+      "endTime": 2962
+    },
+    {
+      "startTime": 2962,
+      "title": "Looking for feedback on my GPU-accelerated Snake AI project",
+      "url": "https://www.reddit.com/r/reinforcementlearning/comments/1uyig60/looking_for_feedback_on_my_gpuaccelerated_snake/",
+      "endTime": 3017
+    },
+    {
+      "startTime": 3017,
+      "title": "How to Make an Invisible Drone",
+      "url": "https://spectrum.ieee.org/invisible-spinning-drone",
+      "endTime": 3068
+    },
+    {
+      "startTime": 3068,
+      "title": "Spot birds not golf",
+      "url": "https://simonwillison.net/2026/Jul/17/spot-birds-not-golf/#atom-everything",
+      "endTime": 3124
+    },
+    {
+      "startTime": 3124,
+      "title": "Quoting Linus Torvalds",
+      "url": "https://simonwillison.net/2026/Jul/16/linus-torvalds/#atom-everything",
+      "endTime": 3181
+    },
+    {
+      "startTime": 3181,
+      "title": "Quoting Thibault Sottiaux",
+      "url": "https://simonwillison.net/2026/Jul/16/bad-codex-bug/#atom-everything",
+      "endTime": 3231
+    },
+    {
+      "startTime": 3231,
+      "title": "Scott Galloway, Ed Elson, and Mia Silverio posted new notes",
+      "endTime": 3291
+    },
+    {
+      "startTime": 3291,
+      "title": "Robert Laidlow: Reality Eaters album review",
+      "url": "https://www.theguardian.com/music/2026/jul/17/robert-laidlow-reality-eaters-album-review",
+      "endTime": 3349
+    },
+    {
+      "startTime": 3349,
+      "title": "Understanding Perimenopause Myths Beyond the Symptoms",
+      "url": "https://www.technologyreview.com/2026/07/17/1140608/theres-a-lot-of-hype-around-perimenopause-dont-buy-it/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=07-17-2026&mc_cid=cd446ceed4&mc_eid=UNIQID",
+      "endTime": 3422
+    },
+    {
+      "startTime": 3422,
+      "title": "Sign Off",
+      "endTime": 3436
+    }
+  ]
+}

@@ -1,0 +1,647 @@
+{
+  "version": "1.0.0",
+  "segments": [
+    {
+      "startTime": 0.0,
+      "endTime": 4.7,
+      "text": "Welcome to your daily digest, July 17th, 2026!",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 4.7,
+      "endTime": 14.35,
+      "text": "We\u2019re covering major leaps in robotics today\u2014from next-gen foundation models powering physical AI, to incredible advancements in assistive tech.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 14.35,
+      "endTime": 17.225,
+      "text": "Seven minutes of the latest news awaits.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 17.225,
+      "endTime": 27.1,
+      "text": "From Robotics & Automation News, \"Noetra launches development of Japan\u2019s multimodal AI foundation model for physical AI and robotics.\"",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 27.1,
+      "endTime": 39.425,
+      "text": "This report details the commencement of a major national initiative to develop a foundational artificial intelligence framework tailored for advanced robotic applications across Japan.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 39.425,
+      "endTime": 51.675,
+      "text": "The research effort involves core industry partners including Sony, SoftBank, NEC, and Honda Motor, alongside numerous specialists focusing on sovereign AI implementations.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 51.675,
+      "endTime": 65.9,
+      "text": "Through this collaborative methodology, the goal is the creation of an underlying AI layer specifically designed to support complex physical manifestations of artificial intelligence within Japanese infrastructure.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 65.9,
+      "endTime": 76.925,
+      "text": "This development signals a significant push toward integrating advanced multimodal processing directly into real-world physical automation systems nationwide.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 76.925,
+      "endTime": 84.95,
+      "text": "From Robotics & Automation News, \"Robbyant unveils LingBot-VLA 2.0 universal AI model for embodied robots.\"",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 84.95,
+      "endTime": 96.6,
+      "text": "The report details the launch of an upgraded, open-source vision-language-action or VLA architecture intended to function as a comprehensive cognitive system for robotic platforms.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 96.6,
+      "endTime": 105.75,
+      "text": "This next-generation model exhibits notable advancements when benchmarked against its earlier iteration from January 2026.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 105.75,
+      "endTime": 117.675,
+      "text": "Key technical improvements include enhanced morphological generalization capabilities and expanded support for greater degrees of freedom, coupled with an increase in operational deployment efficiency.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 117.675,
+      "endTime": 127.2,
+      "text": "The availability of this sophisticated framework signals a significant development trajectory within the field of physical AI robotics research.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 127.2,
+      "endTime": 135.05,
+      "text": "From The Guardian - Artificial Intelligence, \"Brain implant helps paralysed man to feed himself and drink from cup\"",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 135.05,
+      "endTime": 135.575,
+      "text": ".",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 135.575,
+      "endTime": 143.975,
+      "text": "The story details how a paralyzed individual has regained significant function using a novel brain implant system.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 143.975,
+      "endTime": 153.775,
+      "text": "The subject, who suffered paralysis following a swimming accident, underwent surgery involving the implantation of electrodes directly into the brain.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 153.775,
+      "endTime": 161.85,
+      "text": "Subsequent months involved rigorous training protocols, leading to the successful regaining of limb movement capabilities.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 161.85,
+      "endTime": 170.0,
+      "text": "This technological advancement marks a notable breakthrough for individuals suffering from severe spinal cord injuries.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 170.0,
+      "endTime": 179.4,
+      "text": "Developments in neural interfaces suggest a pathway toward restoring motor function previously thought irreversible for many patients.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 179.4,
+      "endTime": 187.45,
+      "text": "From Robotics & Automation News, \"Has AI Agent Autonomy Redefined Robotics Safety and Control?\"",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 187.45,
+      "endTime": 187.95,
+      "text": ".",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 187.95,
+      "endTime": 200.2,
+      "text": "The report details how advancing autonomous robotic systems necessitate a complete overhaul of current safety protocols to manage enhanced operational capabilities.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 200.2,
+      "endTime": 213.225,
+      "text": "These sophisticated robots are demonstrating the ability to perceive environments and modify behavior independently across diverse settings such as industrial warehouses.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 213.225,
+      "endTime": 232.85,
+      "text": "To govern this increased capability, agent governance structures are being implemented, establishing formal guidelines for monitoring decision-making processes and defining necessary levels of human supervision alongside developing physical and procedural emergency safeguards.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 232.85,
+      "endTime": 243.375,
+      "text": "Consequently, the industry faces a requirement to integrate these evolving safety standards into every layer of robotic deployment architecture.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 243.375,
+      "endTime": 250.325,
+      "text": "From Robotics & Automation News, \"Medicaroid receives CE marking for hinotori surgical robot system.\"",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 250.325,
+      "endTime": 257.7,
+      "text": "The report details that Medicaroid has secured the necessary CE marking for its hinotori Surgical Robot System.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 257.7,
+      "endTime": 267.35,
+      "text": "This certification confirms adherence to the European Union's stringent Medical Device Regulation, or MDR 2017/745.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 267.35,
+      "endTime": 277.825,
+      "text": "The approval grants permission to market the robotic surgery platform across all member states within the EU, and furthermore facilitates sales in select non-EU markets.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 277.825,
+      "endTime": 285.025,
+      "text": "This achievement constitutes a significant milestone supporting the company's international expansion objectives.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 285.025,
+      "endTime": 293.725,
+      "text": "Industry observers anticipate this marking will accelerate the broader adoption curve for advanced surgical robotics technologies globally.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 293.725,
+      "endTime": 301.7,
+      "text": "From The Robot Report, \"TerraFirma raises $115M to build robotic infrastructure for construction.\"",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 301.7,
+      "endTime": 310.05,
+      "text": "The announcement details a significant infusion of capital aimed at overhauling construction methods through advanced robotics.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 310.05,
+      "endTime": 320.475,
+      "text": "The company intends to develop sophisticated robotic infrastructure utilizing a proprietary platform that combines several key technological elements.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 320.475,
+      "endTime": 329.975,
+      "text": "This system incorporates artificial intelligence-enabled software alongside the development of a dedicated remote command-and-control center.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 329.975,
+      "endTime": 341.9,
+      "text": "Additionally, the technology focuses on integrating these digital systems with retrofitted heavy machinery to substantially enhance operational capabilities within construction sites.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 341.9,
+      "endTime": 351.975,
+      "text": "This funding signals a notable acceleration in applying advanced AI and automation technologies directly into heavy industrial sectors.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 351.975,
+      "endTime": 360.275,
+      "text": "From Robotics & Automation News, \"Monumental raises $32 million to expand autonomous construction robots.\"",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 360.275,
+      "endTime": 370.3,
+      "text": "The report details that the Amsterdam-based technology firm Monumental has successfully secured thirty-two million dollars in a recent Series B funding round.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 370.3,
+      "endTime": 377.45,
+      "text": "Khosla Ventures spearheaded this investment, with participation also recorded from Plural and Hummingbird.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 377.45,
+      "endTime": 386.1,
+      "text": "This capital infusion is earmarked specifically to fuel expansion within the rapidly developing sector of construction robotics.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 386.1,
+      "endTime": 397.025,
+      "text": "The funds will support the growth of Monumental's global engineering workforce and enable an increased scale of robot deployment across both European markets and the United Kingdom.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 397.025,
+      "endTime": 406.5,
+      "text": "The funding highlights continued significant venture capital interest in automating manual labor processes within the infrastructure technology space.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 406.5,
+      "endTime": 412.75,
+      "text": "From The Robot Report, \"Lockheed Martin taps Machina\u2019s robots for mission-critical missile parts.\"",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 412.75,
+      "endTime": 422.575,
+      "text": "This development centers on a major contract awarding robotic fabrication services for essential components within advanced defense systems.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 422.575,
+      "endTime": 430.4,
+      "text": "Lockheed Martin has entered into an agreement with Machina Labs to qualify robotically formed metal components.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 430.4,
+      "endTime": 437.65,
+      "text": "These specialized parts are earmarked specifically for integration into the JASSM missile program.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 437.65,
+      "endTime": 446.675,
+      "text": "The engagement signals the adoption of sophisticated manufacturing techniques directly into high-stakes defense hardware production.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 446.675,
+      "endTime": 456.15,
+      "text": "This trend indicates a continued industrial shift toward automated precision manufacturing across critical technological sectors.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 456.15,
+      "endTime": 466.725,
+      "text": "From Latent.Space, \"\ud83d\udd2c The Lab of the Future Should Feel Like a Data Center \u2014 Andy Beam & Rafa G\u00f3mez-Bombarelli, Lila Sciences.\"",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 466.725,
+      "endTime": 478.925,
+      "text": "This report outlines a concept for reimagining scientific research by integrating automated robotics and AI to create self-perpetuating experimental systems.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 478.925,
+      "endTime": 490.3,
+      "text": "Lila Sciences envisions treating science as an infinite data source by building a \"scientific superintelligence\" directly into the wet lab environment.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 490.3,
+      "endTime": 505.55,
+      "text": "The methodology involves conducting high-throughput, iterative experimentation across biology, chemistry, and materials science to generate libraries of validated reasoning data, termed scientific tokens.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 505.55,
+      "endTime": 516.075,
+      "text": "This approach shifts focus from merely generating large volumes of raw data to creating deeply structured, experimentally proven knowledge sets.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 516.075,
+      "endTime": 527.2,
+      "text": "These efforts point toward a future where general artificial models can solve diverse scientific problems through systematic, automated data generation.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 527.2,
+      "endTime": 534.575,
+      "text": "From Robotics & Automation News, \"How to Benchmark Your Development System Before Running Robotics Simulations.\"",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 534.575,
+      "endTime": 542.5,
+      "text": "This report details the critical necessity of benchmarking development systems before executing robotics simulations.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 542.5,
+      "endTime": 554.95,
+      "text": "Engineers rely heavily on these virtual environments for design validation and refining complex control algorithms, enabling proactive identification of potential real-world operational issues.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 554.95,
+      "endTime": 566.275,
+      "text": "The computational intensity associated with running detailed simulations necessitates thorough system assessment to guarantee accurate and reliable results throughout the testing pipeline.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 566.275,
+      "endTime": 575.1,
+      "text": "This procedural focus signals an increasing industry standard for rigorous pre-deployment verification in advanced automation systems.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 575.1,
+      "endTime": 584.4,
+      "text": "From Robotics & Automation News, \"Opinion: Exotec managing director highlights key warehouse automation trends for 2026.\"",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 584.4,
+      "endTime": 593.025,
+      "text": "The report indicates that sustained e-commerce expansion mandates substantial upgrades to existing logistics infrastructures.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 593.025,
+      "endTime": 608.95,
+      "text": "Discussions centered on how the integration of automation and artificial intelligence has transitioned from being optional improvements to essential components for achieving high levels of operational excellence and agility within storage facilities.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 608.95,
+      "endTime": 620.225,
+      "text": "Key industry trends are currently being guided by three core principles: building resilience, ensuring system reliability, and maintaining continuous operational function.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 620.225,
+      "endTime": 627.2,
+      "text": "These factors collectively establish the demand for advanced automated warehouse solutions moving forward.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 627.2,
+      "endTime": 637.75,
+      "text": "Industry stakeholders should anticipate continued emphasis on adaptive AI technologies capable of managing complex, fluctuating supply chain demands.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 637.75,
+      "endTime": 644.85,
+      "text": "From The Robot Report, \"Xpanner rolls out X1 Panel Lift for automated solar panel installation.\"",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 644.85,
+      "endTime": 652.375,
+      "text": "This story details a new piece of equipment designed to automate several stages of the solar panel setup process.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 652.375,
+      "endTime": 662.575,
+      "text": "The X1 Panel Lift integrates directly with existing excavator machinery, allowing crews to utilize a single streamlined workflow for installation tasks.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 662.575,
+      "endTime": 678.725,
+      "text": "This automation significantly alters the division of labor on site; specifically, solar crews are now able to concentrate their efforts exclusively on specialized activities such as precise alignment, securing fastenings, and conducting quality assurance inspections.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 678.725,
+      "endTime": 692.0,
+      "text": "The deployment of this technology represents an advancement in construction robotics, suggesting further integration of heavy machinery with specialized automated tooling across renewable energy infrastructure build-outs.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 692.0,
+      "endTime": 700.5,
+      "text": "From Robotics & Automation News, \"Mondo Robotics unveils Beni, an all-terrain AI camera robot for consumers.\"",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 700.5,
+      "endTime": 708.75,
+      "text": "The report details the introduction of a new autonomous device intended for personal use to capture video footage.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 708.75,
+      "endTime": 714.225,
+      "text": "Mondo Robotics launched this portable unit through the Kickstarter platform.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 714.225,
+      "endTime": 724.725,
+      "text": "This robot is engineered to independently film and track individuals across diverse outdoor landscapes, utilizing cinema-grade movement emulation.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 724.725,
+      "endTime": 733.6,
+      "text": "The technology seeks to eliminate the necessity of manual operation or physical equipment like tripods for capturing memories.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 733.6,
+      "endTime": 742.625,
+      "text": "The device incorporates advanced artificial intelligence to autonomously capture life\u2019s moments without direct user intervention.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 742.625,
+      "endTime": 752.75,
+      "text": "Its design focuses on providing consumers an accessible means of documenting personal experiences independently of human assistance.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 752.75,
+      "endTime": 761.125,
+      "text": "This represents a move toward highly automated, portable content creation tools in the consumer electronics sector.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 761.125,
+      "endTime": 768.375,
+      "text": "Industry focus is now shifting toward wearable and ambient recording systems powered by robotics.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 768.375,
+      "endTime": 779.65,
+      "text": "From Robotics & Automation News, \"Logistics firms, robotics startups and brands set up shop in Industry City, fueling a retail tech hub in Brooklyn.\"",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 779.65,
+      "endTime": 793.375,
+      "text": "The segment reports on the concentration of technology-adjacent businesses establishing themselves within Industry City due to the rapid growth of e-commerce operations across New York City.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 793.375,
+      "endTime": 808.975,
+      "text": "Daily delivery volumes in the city currently account for an estimated two point five million packages, creating intense real estate competition among manufacturing, fulfillment, and automation service providers.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 808.975,
+      "endTime": 825.5,
+      "text": "Consequently, logistics companies, robotics startups, and established retail brands are all choosing to situate their operations within this area, thereby accelerating the development of a major retail technology center in Brooklyn.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 825.5,
+      "endTime": 836.75,
+      "text": "This influx signifies increased investment and convergence across the operational backbone of urban commerce for advanced automation technologies.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 836.75,
+      "endTime": 844.625,
+      "text": "From Robotics & Automation News, \"Delta D-Bot collaborative robots win BIG SEE Product Design Award 2026.\"",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 844.625,
+      "endTime": 852.85,
+      "text": "This report details the recognition received by Delta Electronics' D-Bot series of collaborative robots for its design excellence.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 852.85,
+      "endTime": 864.725,
+      "text": "The internationally recognized BIG SEE Product Design Awards honor notable achievements spanning architecture, product design, and industrial design sectors across various technological fields.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 864.725,
+      "endTime": 873.875,
+      "text": "Delta Electronics secured this accolade recognizing the advanced engineering incorporated within the D-Bot line from the power management specialist.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 873.875,
+      "endTime": 881.85,
+      "text": "This award represents a significant technical milestone for Delta Electronics within the broader robotics technology market.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 881.85,
+      "endTime": 890.7,
+      "text": "The achievement underscores continued advancements in industrial automation hardware capabilities moving into the next cycle of integration.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 890.7,
+      "endTime": 895.25,
+      "text": "From Robohub, \"Undergrads\u2019 weed-killing robot wins top prize.\"",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 895.25,
+      "endTime": 904.375,
+      "text": "The story details a victory achieved by a team of Cornell undergraduates at The Farm Robotics Challenge with their prototype weed-killing robot.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 904.375,
+      "endTime": 910.475,
+      "text": "This winning group comprised Andrew James, Neil Morrison, Natalia Kurz, and Michael Neiss.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 910.475,
+      "endTime": 917.55,
+      "text": "Their creation successfully competed against ninety-five other teams during the event held on May 21st.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 917.55,
+      "endTime": 924.325,
+      "text": "The achievement demonstrated significant student ingenuity within the field of agricultural technology.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 924.325,
+      "endTime": 931.875,
+      "text": "This success signals continued advancement in developing automated solutions for modern farming challenges.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 931.875,
+      "endTime": 936.85,
+      "text": "From IEEE Spectrum - Robotics, \"How to Make an Invisible Drone.\"",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 936.85,
+      "endTime": 946.6,
+      "text": "The report details a system called Phantom Twist, which represents a breakthrough in stealth technology by designing a drone engineered for near-invisibility.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 946.6,
+      "endTime": 955.7,
+      "text": "Northwestern University roboticists achieved this effect by having the drone spin rapidly between fifteen and twenty-five cycles per second.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 955.7,
+      "endTime": 962.825,
+      "text": "This high-speed rotation generates motion blur that exploits the human eye's inherent persistence of vision.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 962.825,
+      "endTime": 974.775,
+      "text": "The structural design process involved optimizing components so they align precisely with empty background space while spinning, utilizing a metric that minimized perceived image differences.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 974.775,
+      "endTime": 987.125,
+      "text": "Currently necessitating an optical tracking system, future uses for this technology include covert surveillance applications and advanced 360-degree wildlife observation platforms.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 987.125,
+      "endTime": 991.3,
+      "text": "That's your tech wrap-up for July 17th, 2026!",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 991.3,
+      "endTime": 995.525,
+      "text": "From multimodal models to robot arms reaching new heights.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 995.525,
+      "endTime": 999.0,
+      "text": "Thanks for tuning in\u2014keep exploring the future with us next time!",
+      "voice": "af_heart"
+    }
+  ]
+}
