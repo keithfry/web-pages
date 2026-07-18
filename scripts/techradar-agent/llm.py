@@ -36,12 +36,14 @@ def _parse_json(text: str) -> dict:
     return json_repair.loads(text)
 
 
-def _chat(prompt: str, model: str, json_mode: bool = False, think: bool = False, _retries: int = 3) -> str:
+def _chat(prompt: str, model: str, json_mode: bool = False, think: bool = False, num_ctx: int | None = None, _retries: int = 3) -> str:
     global _llm_call_count, _llm_total_duration
 
     kwargs: dict = {"think": think}
     if json_mode:
         kwargs["format"] = "json"
+    if num_ctx is not None:
+        kwargs["options"] = {"num_ctx": num_ctx}
 
     t0 = time.perf_counter()
     for attempt in range(_retries):
@@ -70,15 +72,19 @@ def _chat(prompt: str, model: str, json_mode: bool = False, think: bool = False,
     return response["message"]["content"].strip()
 
 
+_ARTICLE_CHAR_LIMIT = 24000  # ~6k tokens, leaves headroom for prompt+output in a 32k ctx window
+_SUMMARIZE_NUM_CTX = 32768
+
+
 def summarize_title(text: str, model: str = SUMMARIZE_MODEL) -> str:
     """Derive a concise article title from body text."""
     prompt = (
         "Write a concise, specific headline (under 12 words) for the following article. "
         "Return only the headline, no punctuation at the end, no quotes.\n\n"
-        f"Article:\n{text[:8000]}\n\n"
+        f"Article:\n{text[:_ARTICLE_CHAR_LIMIT]}\n\n"
         "Headline:"
     )
-    return _chat(prompt, model).strip('"').strip()
+    return _chat(prompt, model, num_ctx=_SUMMARIZE_NUM_CTX).strip('"').strip()
 
 
 def summarize(title: str, text: str, model: str = SUMMARIZE_MODEL) -> str:
@@ -88,9 +94,9 @@ def summarize(title: str, text: str, model: str = SUMMARIZE_MODEL) -> str:
         f"Be specific and factual. Do not start with 'The article' or 'This article'. "
         f"Return only the summary text, no preamble.\n\n"
         f"Title: {title}\n\n"
-        f"Content:\n{text[:8000]}"
+        f"Content:\n{text[:_ARTICLE_CHAR_LIMIT]}"
     )
-    return _chat(prompt, model)
+    return _chat(prompt, model, num_ctx=_SUMMARIZE_NUM_CTX)
 
 
 def tag(title: str, summary: str, model: str = SUMMARIZE_MODEL) -> list[str]:
