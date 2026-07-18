@@ -9,13 +9,24 @@
     <atom:link href="https://keithfry.github.io/web-pages/techradar/AI/podcast.rss" rel="self" type="application/rss+xml"/>
     <description>Daily AI news digest in audio form. New episode each weekday.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jul 2026 00:45:37 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 23:26:37 +0000</lastBuildDate>
     <itunes:author>Keith Fry</itunes:author>
     <itunes:category text="Technology">
       <itunes:category text="Tech News"/>
     </itunes:category>
     <itunes:explicit>false</itunes:explicit>
     <itunes:image href="https://keithfry.github.io/web-pages/techradar/AI/podcast-cover.png"/>
+  <item>
+    <title>July 18, 2026 : AI Efficiency Realized</title>
+    <pubDate>Sat, 18 Jul 2026 08:00:00 +0000</pubDate>
+    <enclosure url="https://keithfry.github.io/web-pages/techradar/AI/2026-07/ai-radar-2026-07-18.mp3" type="audio/mpeg" length="20088157"/>
+    <itunes:duration>00:41:35</itunes:duration>
+    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/AI/2026-07/ai-radar-2026-07-18.mp3</guid>
+    <description>AI Radar for July 18, 2026. 41 minutes of news.</description>
+      <itunes:image href="https://keithfry.github.io/web-pages/techradar/AI/2026-07/ai-radar-2026-07-18.jpg"/>
+      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/AI/2026-07/ai-radar-2026-07-18.chapters.json" type="application/json+chapters"/>
+      <podcast:transcript url="https://keithfry.github.io/web-pages/techradar/AI/2026-07/ai-radar-2026-07-18.transcript.json" type="application/json"/>
+  </item>
   <item>
     <title>July 17, 2026 : Largest Models Safety Risks</title>
     <pubDate>Fri, 17 Jul 2026 08:00:00 +0000</pubDate>
@@ -224,17 +235,6 @@
       <itunes:image href="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-29.jpg"/>
       <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-29.chapters.json" type="application/json+chapters"/>
       <podcast:transcript url="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-29.transcript.json" type="application/json"/>
-  </item>
-  <item>
-    <title>June 28, 2026 : AI Bubble Shifts Focus</title>
-    <pubDate>Sun, 28 Jun 2026 08:00:00 +0000</pubDate>
-    <enclosure url="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-28.mp3" type="audio/mpeg" length="9133542"/>
-    <itunes:duration>00:18:47</itunes:duration>
-    <guid isPermaLink="true">https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-28.mp3</guid>
-    <description>AI Radar for June 28, 2026. 18 minutes of news.</description>
-      <itunes:image href="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-28.jpg"/>
-      <podcast:chapters url="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-28.chapters.json" type="application/json+chapters"/>
-      <podcast:transcript url="https://keithfry.github.io/web-pages/techradar/AI/2026-06/ai-radar-2026-06-28.transcript.json" type="application/json"/>
   </item>
   </channel>
 </rss>

@@ -1,0 +1,929 @@
+{
+  "version": "1.0.0",
+  "segments": [
+    {
+      "startTime": 0.0,
+      "endTime": 6.75,
+      "text": "Welcome to your daily dose of robotics and automation news from July 18th, 2026.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 6.75,
+      "endTime": 15.05,
+      "text": "We've got updates on new open AI tools, automotive AI partnerships, and physical AI advancements across the industry.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 15.05,
+      "endTime": 16.6,
+      "text": "Tune in now.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 16.6,
+      "endTime": 24.675,
+      "text": "From Robotics & Automation News, Nvidia and Hugging Face expand LeRobot with new open robotics AI tools.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 24.675,
+      "endTime": 33.225,
+      "text": "This report details the integration of new artificial intelligence models and frameworks into the open-source LeRobot platform.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 33.225,
+      "endTime": 46.7,
+      "text": "The collaboration involved incorporating Nvidia Isaac GR00T 1.7, a vision-language-action foundation model, alongside the Isaac Teleop framework into the existing system.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 46.7,
+      "endTime": 57.5,
+      "text": "This expansion establishes a standardized workflow for developers engaged in collecting data, training, and deploying artificial intelligence on robotic systems.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 57.5,
+      "endTime": 67.025,
+      "text": "Future developments are scheduled to integrate Nvidia Cosmos 3 for generating synthetic robotics data and simulations within the platform.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 67.025,
+      "endTime": 75.375,
+      "text": "This partnership aims to increase accessibility to physical artificial intelligence technologies across developer communities.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 75.375,
+      "endTime": 82.375,
+      "text": "The integration signals a move toward more accessible methods for robotics development and simulation.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 82.375,
+      "endTime": 90.75,
+      "text": "From Robotics & Automation News, Toyota and Nvidia expand partnership to develop AI for vehicles, factories and cities.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 90.75,
+      "endTime": 103.4,
+      "text": "This story details the expanded collaboration focusing on deploying Nvidia's computing, AI software, and simulation technologies across Toyota's business areas to create physical AI technologies.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 103.4,
+      "endTime": 115.55,
+      "text": "The collaboration involves applying Nvidia's technology to specific applications including advanced driver-assistance systems and AI-assisted software engineering utilizing Nvidia models.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 115.55,
+      "endTime": 127.5,
+      "text": "Furthermore, factory simulations are being conducted using Omniverse and Isaac Sim, while multimodal vision-language models are being used for urban traffic analysis within mobility systems.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 127.5,
+      "endTime": 136.85,
+      "text": "This effort aims to establish an AI infrastructure supporting autonomous vehicles, intelligent manufacturing, and responsive urban environments.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 136.85,
+      "endTime": 145.025,
+      "text": "The development signals a tangible integration of advanced computing into real-world industrial and transportation systems.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 145.025,
+      "endTime": 155.4,
+      "text": "From Robotics & Automation News, Fujitsu partners with Fanuc, Yaskawa and Kawasaki to advance physical AI using Nvidia technology.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 155.4,
+      "endTime": 168.325,
+      "text": "This collaboration focuses on developing a collaborative control platform connecting digital systems with robots and physical equipment across manufacturing, logistics, and healthcare sectors.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 168.325,
+      "endTime": 174.4,
+      "text": "The initiative aims to address workforce challenges through the adoption of physical AI.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 174.4,
+      "endTime": 187.2,
+      "text": "The project involves creating an open, sovereign platform integrating artificial intelligence, robotics, simulation, and data analysis to ensure interoperability and security.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 187.2,
+      "endTime": 194.9,
+      "text": "Nvidia tools are being utilized to accelerate robot learning and simulation workflows within this framework.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 194.9,
+      "endTime": 203.075,
+      "text": "This development establishes a unified approach for industrial automation using advanced computational methods.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 203.075,
+      "endTime": 209.775,
+      "text": "The advancement points toward widespread integration of physical AI into operational systems.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 209.775,
+      "endTime": 215.05,
+      "text": "From latent.space, Kimi K3 launch shifts AI frontier focus.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 215.05,
+      "endTime": 231.2,
+      "text": "This report details how the release of the Kimi K3 model prompted a reassessment of the current state of open-weight models relative to the AI frontier, emphasizing efficiency stacks as key determinants of capability.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 231.2,
+      "endTime": 245.275,
+      "text": "The launch instigated a shift in focus from raw computational power to advanced techniques such as Mixture of Experts routing and data curation methods as critical factors determining performance.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 245.275,
+      "endTime": 258.5,
+      "text": "Benchmarks indicate that Kimi K3 demonstrates strong performance in coding agents and frontend tasks, achieving results superior to some Western models in these specific domains.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 258.5,
+      "endTime": 271.225,
+      "text": "Technical advancements, including the introduction of Kimi Delta Attention, suggest substantial improvements in the speed and cost associated with processing long context.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 271.225,
+      "endTime": 282.95,
+      "text": "The resulting value is increasingly concentrated on orchestration systems, memory management, and workflow design rather than solely base model access.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 282.95,
+      "endTime": 293.55,
+      "text": "This development signals an industry trend toward prioritizing efficiency and system integration in future large language model development.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 293.55,
+      "endTime": 299.575,
+      "text": "From The Robot Report, Weave Robotics launches Isaac, its first mobile humanoid robot.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 299.575,
+      "endTime": 308.575,
+      "text": "This report details the introduction of Isaac 1, a wheeled, home humanoid designed for everyday chores such as folding laundry and tidying rooms.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 308.575,
+      "endTime": 319.225,
+      "text": "The robot is priced at seven thousand nine hundred ninety-nine dollars or offered through a monthly subscription and features a friendly appearance with soft fabric and adjustable height.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 319.225,
+      "endTime": 327.1,
+      "text": "Isaac 1 utilizes autonomous navigation to move between rooms and allows for remote control through an application.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 327.1,
+      "endTime": 337.875,
+      "text": "It is equipped with an eight-hour battery life and privacy shutters for its cameras during operation or charging, establishing itself as an accessible entry point into home robotics.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 337.875,
+      "endTime": 345.175,
+      "text": "This development indicates continued progression in the field of domestic automation and mobile robotics research.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 345.175,
+      "endTime": 353.05,
+      "text": "From Robotics & Automation News, mimic Robotics unveils full-stack platform for dexterous robot manipulation.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 353.05,
+      "endTime": 368.625,
+      "text": "This report details the introduction of a comprehensive system designed to advance general-purpose dexterous manipulation for industrial robots by addressing challenges in collecting high-quality artificial intelligence training data.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 368.625,
+      "endTime": 377.025,
+      "text": "The platform includes the mimic hand M1, a tendon-driven robotic hand, and the mimic wearable U1 exoskeleton.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 377.025,
+      "endTime": 386.575,
+      "text": "The design maintains consistent human hand morphology across the hardware, data collection, and model training to mitigate cross-embodiment gaps.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 386.575,
+      "endTime": 396.45,
+      "text": "The mimic hand M1 provides fifteen degrees of freedom along with force sensing and is capable of supporting payloads exceeding twenty-five kilograms.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 396.45,
+      "endTime": 406.175,
+      "text": "Custom middleware is integrated into the system to decrease latency for more rapid artificial intelligence inference and dependable robot control.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 406.175,
+      "endTime": 415.4,
+      "text": "This development signals a potential advancement in creating more realistic and robust training scenarios for advanced robotic systems.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 415.4,
+      "endTime": 424.1,
+      "text": "From MIT Technology Review - AI & Emerging Tech, \"The Download: perimenopause misinformation and China\u2019s latest AI leap\"",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 424.1,
+      "endTime": 424.5,
+      "text": ".",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 424.5,
+      "endTime": 435.475,
+      "text": "This report examines the proliferation of misinformation regarding perimenopause symptoms and details China's recent advancement in artificial intelligence capabilities.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 435.475,
+      "endTime": 447.625,
+      "text": "The discussion centers on the lack of definitive testing for perimenopause and the dissemination of unsubstantiated treatment advice as the conversation is increasingly shaped by inaccurate information.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 447.625,
+      "endTime": 458.2,
+      "text": "Concurrently, China has released the world's largest open AI model, intensifying the global competition with models developed by organizations such as OpenAI.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 458.2,
+      "endTime": 473.025,
+      "text": "Other technological developments include investigations into potential human life on nearby exoplanets and progress in brain-machine interfaces, alongside research exploring the transformation of human waste into agricultural resources.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 473.025,
+      "endTime": 478.5,
+      "text": "The pace of AI development continues to reshape the technological landscape.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 478.5,
+      "endTime": 487.175,
+      "text": "From Robotics & Automation News, Agility Robotics opens new Fremont facility to accelerate physical AI development.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 487.175,
+      "endTime": 499.7,
+      "text": "This report details the opening of a sixty thousand square foot facility in Fremont, California, established to advance physical artificial intelligence for customer operations.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 499.7,
+      "endTime": 513.2,
+      "text": "The new site functions as the central software and capabilities hub for training and testing artificial intelligence technologies designed to enhance the skills of the company's humanoid robot, Digit.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 513.2,
+      "endTime": 521.25,
+      "text": "This expansion places Agility Robotics development within Silicon Valley to leverage regional AI talent.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 521.25,
+      "endTime": 532.975,
+      "text": "The facility will accommodate nearly two hundred employees from diverse engineering and operations teams engaged in driving AI innovation for enterprise applications.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 532.975,
+      "endTime": 543.875,
+      "text": "This development addresses increasing market demand for humanoid robots in warehousing and manufacturing by focusing on improved safety and productivity.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 543.875,
+      "endTime": 549.9,
+      "text": "This move signals continued physical development within the advanced robotics sector.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 549.9,
+      "endTime": 557.7,
+      "text": "From The Robot Report, \"With new funding, Monumental plans to bring its construction robots to the U.S.\"",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 557.7,
+      "endTime": 566.175,
+      "text": "This segment details Monumental's recent financing and expansion plans for its construction robotics technology.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 566.175,
+      "endTime": 575.375,
+      "text": "Monumental secured thirty-two million dollars in Series B funding to expand its construction robotics into the United States.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 575.375,
+      "endTime": 585.7,
+      "text": "This financing will be utilized to grow the engineering team, facilitate the launch in the U.S., and increase robot deployment across Europe.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 585.7,
+      "endTime": 597.225,
+      "text": "The robots operate by employing advanced sensors and artificial intelligence software to autonomously lay bricks on construction sites with millimeter precision.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 597.225,
+      "endTime": 611.075,
+      "text": "The company's objective is to mitigate labor shortages by automating repetitive masonry tasks, thereby allowing skilled workers to concentrate on more valuable aspects of the construction process.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 611.075,
+      "endTime": 619.3,
+      "text": "Human operators are maintained as essential components for overseeing the entire construction procedure safely.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 619.3,
+      "endTime": 626.725,
+      "text": "This development signals further integration of advanced robotics into the physical construction sector.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 626.725,
+      "endTime": 634.9,
+      "text": "From Robotics & Automation News, McLaren Construction to deploy autonomous robots at scale in partnership with FieldAI.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 634.9,
+      "endTime": 646.95,
+      "text": "This report details the deployment of autonomous quadruped robots on UK construction sites to capture imagery and generate point cloud data for progress verification against design models.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 646.95,
+      "endTime": 656.3,
+      "text": "The initiative utilized FieldAI's Field Foundation Models enabling the robots to adapt effectively within complex, unstructured environments.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 656.3,
+      "endTime": 667.9,
+      "text": "This technology supports McLaren's digital transformation strategy by enhancing productivity, safety, and quality assurance through precise installation monitoring and deviation analysis.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 667.9,
+      "endTime": 674.7,
+      "text": "The partnership leverages advanced AI capabilities to improve on-site quality control processes.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 674.7,
+      "endTime": 683.425,
+      "text": "Future developments in field robotics integration with foundation models warrant observation within the construction technology sector.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 683.425,
+      "endTime": 695.15,
+      "text": "From Robotics & Automation News, Strider Robotics demonstrates a quadruped robot capable of carrying a forty kilogram payload while maintaining stability on difficult terrain.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 695.15,
+      "endTime": 708.55,
+      "text": "The company is advancing the development of autonomous quadruped robots supported by an artificial intelligence powered, hardware-agnostic software platform intended for diverse industrial tasks.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 708.55,
+      "endTime": 720.675,
+      "text": "During the demonstration, the robot successfully managed a forty kilogram load across challenging environments, showcasing its stability and operational capability in complex settings.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 720.675,
+      "endTime": 729.475,
+      "text": "Pilot programs are currently active with prominent clients in the oil and gas and automotive sectors utilizing this technology.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 729.475,
+      "endTime": 739.275,
+      "text": "Strider Robotics intends to position India as a leader in intelligent legged robotic systems for industrial and defense applications.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 739.275,
+      "endTime": 749.075,
+      "text": "This development signals further progression toward the commercial application of sophisticated legged robotics in demanding industrial environments.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 749.075,
+      "endTime": 756.625,
+      "text": "From Robotics & Automation News, Robbyant releases LingBot-World 2.0 with hour-long real-time world generation.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 756.625,
+      "endTime": 767.8,
+      "text": "This report details the release of an open-sourced interactive world model that supports continuous session generation lasting up to one hour while maintaining high visual quality.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 767.8,
+      "endTime": 780.175,
+      "text": "The update extends stable world generation from minutes to continuous sessions through a dual-agent architecture incorporating a Pilot Agent and a Director Agent designed for dynamic world evolution.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 780.175,
+      "endTime": 796.15,
+      "text": "Internal testing confirmed stable visual fidelity during these extended generation sessions, producing 720p video at sixty frames per second and enabling real-time user interaction via the Reactor platform, supporting multi-user collaboration.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 796.15,
+      "endTime": 806.025,
+      "text": "This advancement demonstrates significant progress in creating sustained, high-fidelity simulated environments with advanced artificial intelligence systems.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 806.025,
+      "endTime": 813.05,
+      "text": "From The Robot Report, Founder of Maximo discusses how robotics is accelerating solar construction.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 813.05,
+      "endTime": 826.75,
+      "text": "This report details how AI-enabled robotics is transforming solar construction through automated module installation using AI-based vision systems, resulting in increased speed and efficiency.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 826.75,
+      "endTime": 838.8,
+      "text": "Deise Yumi Asami, founder of Maximo, explained that the platform leverages robotics, AI vision, and smart field deployment to reshape renewable energy infrastructure.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 838.8,
+      "endTime": 848.475,
+      "text": "The methodology involves utilizing robotic systems guided by artificial intelligence vision to automate the placement of solar modules.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 848.475,
+      "endTime": 856.025,
+      "text": "This process yields faster, safer, and more efficient installation methods for solar panel construction.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 856.025,
+      "endTime": 862.575,
+      "text": "This work is informed by Asami's background in developing energy solutions at AES.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 862.575,
+      "endTime": 869.75,
+      "text": "The advancement signals a shift toward autonomous systems in large-scale renewable energy deployment.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 869.75,
+      "endTime": 884.7,
+      "text": "From Robotics & Automation News, Luyten opens early reservations for its Ascend A27 automated construction platform, which involves opening reservations following the global launch of the system.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 884.7,
+      "endTime": 911.15,
+      "text": "Luyten has initiated early reservations for the Ascend A27 automated construction platform, a system that converts conventional tower cranes into robotic systems capable of automated large-scale three-dimensional concrete printing through the integration of robotics, artificial intelligence, and digital manufacturing while utilizing existing crane infrastructure.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 911.15,
+      "endTime": 927.125,
+      "text": "Early reservation customers will receive priority production allocation and an introductory offer, with deposits credited toward the final price, and these individuals will constitute the first commercial deployment group for the system.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 927.125,
+      "endTime": 935.525,
+      "text": "This development signals a tangible step toward integrating advanced automation into heavy construction processes.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 935.525,
+      "endTime": 943.2,
+      "text": "Further developments in the application of AI in large-scale physical manufacturing are anticipated.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 943.2,
+      "endTime": 948.95,
+      "text": "From IEEE Spectrum - Robotics, Video Friday: Your Robot Surgeon Will See You Now.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 948.95,
+      "endTime": 958.825,
+      "text": "This segment reviews research evaluating humanoid technology for laparoscopic surgery and details progress in quadrupedal locomotion using APT-RL.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 958.825,
+      "endTime": 966.925,
+      "text": "Researchers assessed the feasibility and challenges associated with deploying humanoid systems in clinical surgical settings.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 966.925,
+      "endTime": 976.8,
+      "text": "Progress in movement capabilities was demonstrated through the utilization of APT-RL, which facilitates high-speed, multi-skill movement within complex environments.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 976.8,
+      "endTime": 983.325,
+      "text": "Furthermore, new models such as Lumo-2 advance the field of generalist embodied robot learning.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 983.325,
+      "endTime": 991.725,
+      "text": "Research also provided clarification on the mechanisms by which winged animals achieve seamless transitions between air and water.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 991.725,
+      "endTime": 999.925,
+      "text": "This research indicates continued advancement in embodied AI systems and biological mimicry for robotic applications.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 999.925,
+      "endTime": 1006.8,
+      "text": "From IEEE Spectrum - Robotics, \"This Graduate Student Equips NASA\u2019s Robots With Assembly Skills\"",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1006.8,
+      "endTime": 1007.325,
+      "text": ".",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1007.325,
+      "endTime": 1022.775,
+      "text": "This report details the development of an algorithm enabling robotic assembly in space, which equips NASA's robots with the necessary skills to install satellite antennas by accurately inserting them into designated positions.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1022.775,
+      "endTime": 1028.225,
+      "text": "The work involved a collaboration between a graduate student and NASA and the U.S.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1028.225,
+      "endTime": 1033.425,
+      "text": "Air Force to create this novel algorithm for robotic assembly procedures.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1033.425,
+      "endTime": 1047.675,
+      "text": "The methodology focused on developing the computational framework that guides the robotic systems through the complex process of antenna installation, ensuring precise placement required for satellite functionality.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1047.675,
+      "endTime": 1057.875,
+      "text": "This advancement demonstrates significant progress in applying advanced algorithms to enhance the operational capabilities of space exploration robotics.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1057.875,
+      "endTime": 1065.2,
+      "text": "Further research in autonomous systems will likely build upon this foundation for future space applications.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1065.2,
+      "endTime": 1074.05,
+      "text": "From Robotics & Automation News, \"Interview with Jon Roberts of Inteq: \u2018The software layer is where automation investment is won or lost\u2019\"",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1074.05,
+      "endTime": 1080.625,
+      "text": "reports on the critical role of the software layer in determining the success of automation investment.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1080.625,
+      "endTime": 1093.95,
+      "text": "The core finding emphasizes that Warehouse Execution Systems function as the essential brain linking robotics and equipment, and software-first strategies offer operational flexibility beyond rigid hardware constraints.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1093.95,
+      "endTime": 1104.45,
+      "text": "Autonomous Mobile Robots are emerging as core infrastructure supported by scalable models such as Robotics-as-a-Service demonstrating significant growth potential.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1104.45,
+      "endTime": 1115.15,
+      "text": "Artificial intelligence enables predictive operations through real-time insights which necessitates a robust orchestration platform across all integrated systems.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1115.15,
+      "endTime": 1124.775,
+      "text": "Future success in this sector will depend on establishing automation as a flexible growth platform founded upon adaptable software architectures.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1124.775,
+      "endTime": 1134.025,
+      "text": "From Robotics & Automation News, \"Interview with Scott Zerkle of Panasonic Connect: \u2018AI is only as good as the data it receives\u2019\"",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 1134.025,
+      "endTime": 1134.55,
+      "text": ".",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 1134.55,
+      "endTime": 1151.225,
+      "text": "This report details the current application and future trajectory of artificial intelligence within electronics manufacturing, emphasizing that AI's present value lies in predictive maintenance and defect detection rather than workforce replacement.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 1151.225,
+      "endTime": 1163.575,
+      "text": "The next significant development involves integrating data across machines, materials, and processes to establish factories capable of continuous learning from production history.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 1163.575,
+      "endTime": 1174.025,
+      "text": "Component miniaturization necessitates extreme precision in printing and placement, driving the need for real-time correction during manufacturing runs.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 1174.025,
+      "endTime": 1186.8,
+      "text": "Automation supports consistency by monitoring the five Ms: human, machine, material, method, and measurement, allowing for deviation detection prior to defect formation.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 1186.8,
+      "endTime": 1195.0,
+      "text": "The future points toward an interconnected ecosystem built upon the convergence of AI, sensing, and automation.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 1195.0,
+      "endTime": 1203.5,
+      "text": "This shift indicates a focus on creating deeply integrated, self-optimizing manufacturing environments moving forward.",
+      "voice": "af_bella"
+    },
+    {
+      "startTime": 1203.5,
+      "endTime": 1220.0,
+      "text": "From Robotics & Automation News, Aetina adds support for Nvidia Jetson T3000 and T2000 AI modules, detailing the integration of new AI processing capabilities into existing robotics platforms.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 1220.0,
+      "endTime": 1233.5,
+      "text": "Aetina plans to expand its Nvidia Jetson Thor-based systems by supporting the new Jetson T3000 and T2000 AI modules for robotics and industrial edge AI.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 1233.5,
+      "endTime": 1259.7,
+      "text": "These support options will be integrated into Aetina's upcoming DeviceEdge AIE-KT fan-based and AIE-PT fanless platforms, with the Jetson T3000 module offering up to 865 FP4 TFLOPS and the T2000 offering up to 400 FP4 TFLOPS, targeting various AI agent applications.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 1259.7,
+      "endTime": 1268.775,
+      "text": "The support enables Aetina to scale robotics projects from development through production deployments utilizing these modules.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 1268.775,
+      "endTime": 1279.625,
+      "text": "Nvidia anticipates these modules will be available in the first quarter of 2027 and will support the Nvidia AI software ecosystem.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 1279.625,
+      "endTime": 1287.375,
+      "text": "This development signals an expansion of edge AI deployment options for industrial robotics systems.",
+      "voice": "am_michael"
+    },
+    {
+      "startTime": 1287.375,
+      "endTime": 1295.575,
+      "text": "From The Guardian - Artificial Intelligence, \"Smart glasses are deeply creepy. Why are celebrities like Kylie Jenner endorsing them?\"",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 1295.575,
+      "endTime": 1295.95,
+      "text": ".",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 1295.95,
+      "endTime": 1304.825,
+      "text": "This report examines the privacy and safety concerns surrounding smart glasses and the use of celebrity endorsements in the technology sector.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 1304.825,
+      "endTime": 1316.0,
+      "text": "Smart glasses introduce significant privacy and safety issues due to their inherent surveillance capabilities, raising particular concerns for women regarding non-consensual filming.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 1316.0,
+      "endTime": 1326.125,
+      "text": "While companies such as Meta have implemented safety features including LED lights and tamper detection, reports indicate these measures have been bypassed by some users.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 1326.125,
+      "endTime": 1336.4,
+      "text": "Face recognition technology integrated within the applications creates potential avenues for the misuse of biometric data by governmental or stalking entities.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 1336.4,
+      "endTime": 1345.525,
+      "text": "The endorsement strategy utilized by celebrities serves to normalize these concerns despite existing public backlash against the technology.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 1345.525,
+      "endTime": 1352.6,
+      "text": "The industry must address the integration of biometric surveillance and user consent protocols immediately.",
+      "voice": "af_nova"
+    },
+    {
+      "startTime": 1352.6,
+      "endTime": 1356.375,
+      "text": "From The Tech Buzz, \"Beyond Tech: Your Weekend Upgrade\"",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1356.375,
+      "endTime": 1361.025,
+      "text": "reports on recent developments across technology, health, and commerce.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1361.025,
+      "endTime": 1381.35,
+      "text": "New artificial intelligence features have been introduced including the launch of the new AI Siri, the OpenAI speaker, and Superhuman drafts, signaling a strong rebound in the technology sector driven by rising electric vehicle sales and increased integration of artificial intelligence across diverse fields.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1381.35,
+      "endTime": 1390.45,
+      "text": "Health and wellness trends are also seeing progress with developments in Biogen tau drugs and advancements in AI brain diagnostics.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1390.45,
+      "endTime": 1408.375,
+      "text": "Additionally, there is a growing focus on external traffic strategies for eCommerce brands to enhance return on investment beyond direct spending, with a playbook detailing seven proven methods for scaling traffic effectively without exclusive reliance on paid advertising.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1408.375,
+      "endTime": 1416.45,
+      "text": "This indicates continued innovation in applied artificial intelligence and evolving strategies for digital commerce growth.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1416.45,
+      "endTime": 1421.25,
+      "text": "From thehustle.co, \"Fragrance clubs create new social connections\"",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1421.25,
+      "endTime": 1421.65,
+      "text": ".",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1421.65,
+      "endTime": 1432.55,
+      "text": "This report details the emergence of fragrance clubs as a novel method for social interaction by transforming the solitary experience of scent into a collective activity.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1432.55,
+      "endTime": 1440.525,
+      "text": "These clubs encompass various formats including blind-sniff meetups workshops and fragrance swaps occurring across different cities.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1440.525,
+      "endTime": 1448.0,
+      "text": "The trend is supported by the expansion of the fragrance industry and a societal preference for in-person socialization.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1448.0,
+      "endTime": 1462.55,
+      "text": "These gatherings facilitate discussions focused on personal feelings and memories rather than technical terminology, drawing comparisons to book or wine clubs due to their accessible entry point and emphasis on shared emotional experiences.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1462.55,
+      "endTime": 1470.675,
+      "text": "The growth of these social phenomena suggests an increasing focus on sensory and experiential forms of community building.",
+      "voice": "am_echo"
+    },
+    {
+      "startTime": 1470.675,
+      "endTime": 1474.25,
+      "text": "And that's all for today's dose of the automated world!",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1474.25,
+      "endTime": 1476.75,
+      "text": "May your algorithms run smoothly.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1476.75,
+      "endTime": 1479.65,
+      "text": "Until tomorrow, keep building brilliantly.",
+      "voice": "af_heart"
+    },
+    {
+      "startTime": 1479.65,
+      "endTime": 1482.0,
+      "text": "Thanks for tuning in to Robotics Rundown!",
+      "voice": "af_heart"
+    }
+  ]
+}
