@@ -1,147 +1,153 @@
 {
   "version": "1.2.0",
-  "title": "July 18, 2026 : Physical AI Partnership",
+  "title": "July 18, 2026 : AI Powers Physical World",
   "chapters": [
     {
       "startTime": 0,
       "title": "Introduction",
-      "endTime": 16
+      "endTime": 20
     },
     {
-      "startTime": 16,
-      "title": "Nvidia and Hugging Face expand LeRobot with new open robotics AI tools",
-      "url": "https://roboticsandautomationnews.com/2026/07/18/nvidia-and-hugging-face-expand-lerobot-with-new-open-robotics-ai-tools/103491/",
-      "endTime": 82
-    },
-    {
-      "startTime": 82,
+      "startTime": 20,
       "title": "Toyota and Nvidia expand partnership to develop AI for vehicles, factories and cities",
       "url": "https://roboticsandautomationnews.com/2026/07/18/toyota-and-nvidia-expand-partnership-to-develop-ai-for-vehicles-factories-and-cities/103485/",
-      "endTime": 145
+      "endTime": 83
     },
     {
-      "startTime": 145,
+      "startTime": 83,
+      "title": "Nvidia and Hugging Face expand LeRobot with new open robotics AI tools",
+      "url": "https://roboticsandautomationnews.com/2026/07/18/nvidia-and-hugging-face-expand-lerobot-with-new-open-robotics-ai-tools/103491/",
+      "endTime": 143
+    },
+    {
+      "startTime": 143,
       "title": "Fujitsu partners with Fanuc, Yaskawa and Kawasaki to advance physical AI using Nvidia technology",
       "url": "https://roboticsandautomationnews.com/2026/07/18/fujitsu-partners-with-fanuc-yaskawa-and-kawasaki-to-advance-physical-ai-using-nvidia-technology/103488/",
-      "endTime": 209
+      "endTime": 222
     },
     {
-      "startTime": 209,
-      "title": "Kimi K3 launch shifts AI frontier focus",
-      "url": "https://www.latent.space/p/ainews-not-much-happened-today-830",
-      "endTime": 293
-    },
-    {
-      "startTime": 293,
+      "startTime": 222,
       "title": "Weave Robotics launches Isaac, its first mobile humanoid robot",
       "url": "https://www.therobotreport.com/weave-robotics-launches-isaac-first-mobile-humanoid-robot/",
-      "endTime": 345
+      "endTime": 281
     },
     {
-      "startTime": 345,
+      "startTime": 281,
       "title": "mimic Robotics unveils full-stack platform for dexterous robot manipulation",
       "url": "https://roboticsandautomationnews.com/2026/07/18/mimic-robotics-unveils-full-stack-platform-for-dexterous-robot-manipulation/103473/",
-      "endTime": 415
+      "endTime": 341
     },
     {
-      "startTime": 415,
-      "title": "The Download: perimenopause misinformation and China\u2019s latest AI leap",
-      "url": "https://www.technologyreview.com/2026/07/17/1140640/the-download-perimenopause-misinformation-china-moonshot-ai/",
-      "endTime": 478
+      "startTime": 341,
+      "title": "Kimi K3 launch shifts AI focus to efficiency stack",
+      "url": "https://www.latent.space/p/ainews-not-much-happened-today-830",
+      "endTime": 396
     },
     {
-      "startTime": 478,
+      "startTime": 396,
       "title": "Agility Robotics opens new Fremont facility to accelerate physical AI development",
       "url": "https://roboticsandautomationnews.com/2026/07/17/agility-robotics-opens-new-fremont-facility-to-accelerate-physical-ai-development/103426/",
-      "endTime": 549
+      "endTime": 451
     },
     {
-      "startTime": 549,
-      "title": "With new funding, Monumental plans to bring its construction robots to the U.S.",
-      "url": "https://www.therobotreport.com/with-new-funding-monumental-plans-bring-construction-robots-u-s/",
-      "endTime": 626
-    },
-    {
-      "startTime": 626,
+      "startTime": 451,
       "title": "McLaren Construction to deploy autonomous robots at scale in partnership with FieldAI",
       "url": "https://roboticsandautomationnews.com/2026/07/17/mclaren-construction-to-deploy-autonomous-robots-at-scale-in-partnership-with-fieldai/103422/",
-      "endTime": 683
+      "endTime": 515
     },
     {
-      "startTime": 683,
-      "title": "Strider Robotics demonstrates 40 kg payload quadruped robot as commercial pilots begin",
-      "url": "https://roboticsandautomationnews.com/2026/07/18/strider-robotics-demonstrates-40-kg-payload-quadruped-robot-as-commercial-pilots-begin/103453/",
-      "endTime": 749
+      "startTime": 515,
+      "title": "With new funding, Monumental plans to bring its construction robots to the U.S.",
+      "url": "https://www.therobotreport.com/with-new-funding-monumental-plans-bring-construction-robots-u-s/",
+      "endTime": 583
     },
     {
-      "startTime": 749,
-      "title": "Robbyant releases LingBot-World 2.0 with hour-long real-time world generation",
-      "url": "https://roboticsandautomationnews.com/2026/07/18/robbyant-releases-lingbot-world-2-0-with-hour-long-real-time-world-generation/103476/",
-      "endTime": 806
-    },
-    {
-      "startTime": 806,
+      "startTime": 583,
       "title": "Founder of Maximo discusses how robotics is accelerating solar construction",
       "url": "https://www.therobotreport.com/transforming-solar-construction-through-robotics-deise-yumi-asami-maximo/",
-      "endTime": 869
+      "endTime": 647
     },
     {
-      "startTime": 869,
-      "title": "Luyten opens early reservations for Ascend A27 automated construction platform",
-      "url": "https://roboticsandautomationnews.com/2026/07/17/luyten-opens-early-reservations-for-ascend-a27-automated-construction-platform/103417/",
-      "endTime": 943
+      "startTime": 647,
+      "title": "Robbyant releases LingBot-World 2.0 with hour-long real-time world generation",
+      "url": "https://roboticsandautomationnews.com/2026/07/18/robbyant-releases-lingbot-world-2-0-with-hour-long-real-time-world-generation/103476/",
+      "endTime": 705
     },
     {
-      "startTime": 943,
+      "startTime": 705,
+      "title": "Strider Robotics demonstrates 40 kg payload quadruped robot as commercial pilots begin",
+      "url": "https://roboticsandautomationnews.com/2026/07/18/strider-robotics-demonstrates-40-kg-payload-quadruped-robot-as-commercial-pilots-begin/103453/",
+      "endTime": 770
+    },
+    {
+      "startTime": 770,
       "title": "Video Friday: Your Robot Surgeon Will See You Now",
       "url": "https://spectrum.ieee.org/video-friday-robotic-surgery",
-      "endTime": 999
+      "endTime": 838
     },
     {
-      "startTime": 999,
+      "startTime": 838,
+      "title": "Luyten opens early reservations for Ascend A27 automated construction platform",
+      "url": "https://roboticsandautomationnews.com/2026/07/17/luyten-opens-early-reservations-for-ascend-a27-automated-construction-platform/103417/",
+      "endTime": 906
+    },
+    {
+      "startTime": 906,
       "title": "This Graduate Student Equips NASA\u2019s Robots With Assembly Skills",
       "url": "https://spectrum.ieee.org/graduate-student-nasas-robots-assembly",
-      "endTime": 1065
+      "endTime": 959
     },
     {
-      "startTime": 1065,
+      "startTime": 959,
       "title": "Interview with Jon Roberts of Inteq: \u2018The software layer is where automation investment is won or lost\u2019",
       "url": "https://roboticsandautomationnews.com/2026/07/18/interview-with-jon-roberts-of-inteq-the-software-layer-is-where-automation-investment-is-won-or-lost/103466/",
-      "endTime": 1124
+      "endTime": 1031
     },
     {
-      "startTime": 1124,
+      "startTime": 1031,
       "title": "Interview with Scott Zerkle of Panasonic Connect: \u2018AI is only as good as the data it receives\u2019",
       "url": "https://roboticsandautomationnews.com/2026/07/18/interview-with-scott-zerkle-of-panasonic-connect-ai-is-only-as-good-as-the-data-it-receives/103459/",
-      "endTime": 1203
+      "endTime": 1102
     },
     {
-      "startTime": 1203,
+      "startTime": 1102,
       "title": "Aetina adds support for Nvidia Jetson T3000 and T2000 AI modules",
       "url": "https://roboticsandautomationnews.com/2026/07/18/aetina-adds-support-for-nvidia-jetson-t3000-and-t2000-ai-modules/103456/",
-      "endTime": 1287
+      "endTime": 1184
     },
     {
-      "startTime": 1287,
-      "title": "Smart glasses are deeply creepy. Why are celebrities like Kylie Jenner endorsing them?",
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/17/ai-meta-smart-glasses",
-      "endTime": 1352
+      "startTime": 1184,
+      "title": "The Download: perimenopause misinformation and China\u2019s latest AI leap",
+      "url": "https://www.technologyreview.com/2026/07/17/1140640/the-download-perimenopause-misinformation-china-moonshot-ai/",
+      "endTime": 1254
     },
     {
-      "startTime": 1352,
+      "startTime": 1254,
+      "title": "TLDR AI Daily AI News for Technical Readers",
+      "url": "https://refer.tldr.tech/0bc55a30/2",
+      "endTime": 1313
+    },
+    {
+      "startTime": 1313,
       "title": "Beyond Tech: Your Weekend Upgrade",
-      "endTime": 1416
+      "endTime": 1373
     },
     {
-      "startTime": 1416,
-      "title": "Fragrance clubs create new social connections",
+      "startTime": 1373,
+      "title": "Monk wine booming amidst falling booze sales",
+      "url": "https://thehustle.co/home/?_hsenc=p2ANqtz-9bWEQ90Ve9pzBET9ATMf2n5B2g7Nnz9O-1J10xDMT9UrrG8qZGLeSkFs2myXxqy3WSWykn_weyzhOgV_-Tb1ppAhk97A&_hsmi=428918557",
+      "endTime": 1434
+    },
+    {
+      "startTime": 1434,
+      "title": "Fragrance Clubs Become New Social Connections",
       "url": "https://thehustle.co/news/fragrance-clubs-are-the-new-book-clubs?_hsenc=p2ANqtz-9bWEQ90Ve9pzBET9ATMf2n5B2g7Nnz9O-1J10xDMT9UrrG8qZGLeSkFs2myXxqy3WSWykn_weyzhOgV_-Tb1ppAhk97A&_hsmi=428918557",
-      "endTime": 1470
+      "endTime": 1497
     },
     {
-      "startTime": 1470,
+      "startTime": 1497,
       "title": "Sign Off",
-      "endTime": 1482
+      "endTime": 1507
     }
   ]
 }
