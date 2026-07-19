@@ -7,13 +7,20 @@ description: Use when the user asks to run, generate, or produce the AI or Robot
 
 Runs the AI and/or Robotics Techradar digest pipeline for a given date/time window.
 
+The pipeline itself lives in the standalone [`news-radar`](https://github.com/keithfry/news-radar)
+package (`/Users/keithfry/projects/news-radar`). The runtime consumer — config
+and the entrypoint that runs it — lives in its own repo,
+`/Users/keithfry/projects/techradar/` (NOT in this repo), which depends on
+`news-radar` as an editable local package and publishes generated output back
+into this repo's `techradar/` directory via a publish hook.
+
 ## How to Run
 
-**Working directory:** `scripts/techradar-agent/` (relative to repo root)
+**Working directory:** `/Users/keithfry/projects/techradar/` (a sibling of this repo, NOT a subdirectory of it)
 
 ```bash
-cd /Users/keithfry/projects/web-pages/scripts/techradar-agent
-uv run main.py --date YYYY-MM-DD --time HH:MM
+cd /Users/keithfry/projects/techradar
+uv run run.py --config config/topics.toml --date YYYY-MM-DD --time HH:MM
 ```
 
 ## Defaults
@@ -21,7 +28,7 @@ uv run main.py --date YYYY-MM-DD --time HH:MM
 Unless the user specifies otherwise, run with **today's date at 08:00 ET** and **both topics**:
 
 ```bash
-uv run main.py --date 2026-04-18 --time 08:00
+uv run run.py --config config/topics.toml --date 2026-04-18 --time 08:00
 ```
 
 Always substitute the actual current date from the `currentDate` context variable.
@@ -30,30 +37,31 @@ Always substitute the actual current date from the `currentDate` context variabl
 
 | Flag | Description | Default |
 |------|-------------|---------|
-| `--topic {ai,robotics,both}` | Which digest(s) to generate | both |
+| `--config PATH` | Path to the TOML config file | required |
+| `--topic ai,robotics` | Which topic(s) to generate, comma-separated | all configured topics |
 | `--date YYYY-MM-DD` | Reference date in ET | today |
 | `--time HH:MM` | Cut-off time in ET | current time |
-| `--hours N` | Lookback window in hours | 24 |
-| `--dry-run` | Generate HTML only, skip git push | off |
+| `--hours N` | Lookback window in hours | from config |
+| `--dry-run` | Generate output only, skip the publish hook (git commit/push) | off |
 | `--no-email` | Skip Gmail, RSS only | off |
 
 ## Examples
 
 ```bash
 # Both digests, today at 8 AM (default)
-uv run main.py --date 2026-04-18 --time 08:00
+uv run run.py --config config/topics.toml --date 2026-04-18 --time 08:00
 
 # AI digest only
-uv run main.py --date 2026-04-18 --time 08:00 --topic ai
+uv run run.py --config config/topics.toml --date 2026-04-18 --time 08:00 --topic ai
 
 # Robotics digest only
-uv run main.py --date 2026-04-18 --time 08:00 --topic robotics
+uv run run.py --config config/topics.toml --date 2026-04-18 --time 08:00 --topic robotics
 
 # Dry run (no commit/push)
-uv run main.py --date 2026-04-18 --time 08:00 --dry-run
+uv run run.py --config config/topics.toml --date 2026-04-18 --time 08:00 --dry-run
 
 # RSS only, no Gmail
-uv run main.py --date 2026-04-18 --time 08:00 --no-email
+uv run run.py --config config/topics.toml --date 2026-04-18 --time 08:00 --no-email
 ```
 
 ## Output

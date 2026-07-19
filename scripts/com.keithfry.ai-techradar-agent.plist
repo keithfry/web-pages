@@ -9,7 +9,9 @@
     <array>
         <string>/opt/homebrew/bin/uv</string>
         <string>run</string>
-        <string>main.py</string>
+        <string>run.py</string>
+        <string>--config</string>
+        <string>config/topics.toml</string>
     </array>
 
     <key>WorkingDirectory</key>

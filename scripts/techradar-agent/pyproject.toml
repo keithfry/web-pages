@@ -1,22 +1,15 @@
 [project]
-name = "ai-techradar-agent"
+name = "techradar-agent-consumer"
 version = "0.1.0"
+description = "web-pages' AI/Robotics digest — thin consumer of the news-radar package"
 requires-python = ">=3.13"
 dependencies = [
-    "feedparser",
-    "ollama",
-    "google-auth-oauthlib",
-    "google-auth-httplib2",
-    "google-api-python-client",
+    "newsradar",
     "python-dotenv",
-    "beautifulsoup4",
-    "matplotlib>=3.10.8",
-    "kokoro>=0.9.4,<1.0",
-    "mutagen>=1.47",
-    "soundfile>=0.12",
-    "json-repair>=0.60.1",
-    "Pillow>=10.0",
 ]
 
-[project.scripts]
-ai-techradar-agent = "main:main"
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+newsradar = { path = "../../../news-radar", editable = true }
