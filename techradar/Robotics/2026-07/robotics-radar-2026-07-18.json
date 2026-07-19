@@ -1,34 +1,34 @@
 {
   "date": "2026-07-18",
-  "generated_at": "2026-07-18T19:48:55-0400",
-  "intro_script": "Welcome to your daily robotics and automation digest from July 18th, 2026. Today we cover huge news, including the expanding Toyota-Nvidia AI partnership, new open robotics tools from Nvidia and Hugging Face, and advancements in physical AI through Fujitsu's collaboration.",
-  "episode_tagline": "AI Powers Physical World",
-  "outro_script": "And that's all the circuits for today! Hope your algorithms are running smoothly. Until tomorrow, keep innovating and enjoy the ride! See you then.",
+  "generated_at": "2026-07-18T20:17:03-0400",
+  "intro_script": "Welcome to your daily dose of robotics and automation news for July 18th, 2026. Today we cover Kimi's model breakthrough, new LeRobot AI tools, and major automotive partnerships. Stay informed with us.",
+  "episode_tagline": "AI Outpaces Giants",
+  "outro_script": "And that\u2019s all the circuits we have for today! Kimi just put on a masterclass, proving some models can really think outside the box. Thanks for powering up your curiosity with us. Until tomorrow, keep building!",
   "items": [
     {
-      "title": "Toyota and Nvidia expand partnership to develop AI for vehicles, factories and cities",
-      "link": "https://roboticsandautomationnews.com/2026/07/18/toyota-and-nvidia-expand-partnership-to-develop-ai-for-vehicles-factories-and-cities/103485/",
-      "source": "Robotics & Automation News",
-      "summary": "Toyota and Nvidia expanded their partnership to develop physical AI technologies across vehicles, factories, and cities. This collaboration focuses on deploying Nvidia's computing, AI software, and simulation technologies in various business areas. Applications include developing next-generation driver-assistance systems, accelerating software engineering with AI coding assistants, and creating digital twins for factory simulations. Furthermore, the partnership is being applied to urban mobility through vision-language models for traffic analysis. The goal is to build the AI infrastructure for more autonomous vehicles, intelligent manufacturing, and responsive urban environments.",
+      "title": "Kimi K3 Outperforms OpenAI and Anthropic Models",
+      "link": "https://gizmodo.com/china-just-dropped-another-bomb-on-americas-frontier-ai-companies-2000786670?mc_cid=cd446ceed4&mc_eid=UNIQID",
+      "source": "gizmodo.com",
+      "summary": "Moonshot's Kimi K3 model has shown performance that surpasses some OpenAI and Anthropic offerings in benchmarks. The model features 2.8 trillion parameters and is expected to be the largest open-weight model upon release. While it trails some proprietary models, independent testing places K3 highly on leaderboards. This achievement challenges assumptions about the pace of development between Chinese and US AI labs. The release has heightened national security concerns regarding the U.S.-China AI race and model distillation practices.",
       "tags": [
-        "agents",
-        "robotics",
-        "research"
+        "model",
+        "research",
+        "safety"
       ],
-      "published": "2026-07-18T10:28:04+00:00",
+      "published": null,
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 1,
-      "audio_script": "From Robotics & Automation News, Toyota and Nvidia expand partnership to develop AI for vehicles, factories and cities. This report details an expanded collaboration focusing on deploying Nvidia's computing, AI software, and simulation technologies across automotive, manufacturing, and urban planning sectors. The partnership involves utilizing Nvidia's technologies to develop next-generation driver-assistance systems, accelerate software engineering through AI coding assistants, and create digital twins for factory simulations. Additionally, the collaboration is being applied to urban mobility by using vision-language models for complex traffic analysis. This work aims to establish the necessary AI infrastructure for autonomous vehicles, intelligent manufacturing, and responsive city environments. The development signals a tangible progression toward integrating advanced artificial intelligence into physical world systems.",
+      "audio_script": "From gizmodo.com, \"Kimi K3 Outperforms OpenAI and Anthropic Models\". This report details the performance of Moonshot's Kimi K3 model in comparative benchmarks against models from OpenAI and Anthropic. Independent testing indicates that the Kimi K3 model achieved superior results on various leaderboards despite being an open-weight offering. The Kimi K3 model incorporates 2.8 trillion parameters and is anticipated to be the largest open-weight model upon its release, challenging existing assumptions regarding the comparative pace of development between Chinese and US artificial intelligence laboratories. This achievement has introduced heightened national security considerations concerning the ongoing competition in the AI race and the methods employed in model distillation. The release signals a significant shift in the landscape for large language model development.",
       "voice_index": 0,
       "include_in_podcast": true,
-      "chapter_start_seconds": 20
+      "chapter_start_seconds": 15
     },
     {
       "title": "Nvidia and Hugging Face expand LeRobot with new open robotics AI tools",
       "link": "https://roboticsandautomationnews.com/2026/07/18/nvidia-and-hugging-face-expand-lerobot-with-new-open-robotics-ai-tools/103491/",
       "source": "Robotics & Automation News",
-      "summary": "Nvidia and Hugging Face expanded their collaboration to integrate new AI models and robotics frameworks into the open-source LeRobot platform. This expansion includes integrating Nvidia Isaac GR00T 1.7 and the Isaac Teleop framework for standardized data collection, training, and deployment workflows. Future plans involve incorporating Nvidia Cosmos 3 to allow access to world foundation models for synthetic data generation and policy development. The partnership aims to make advanced physical AI technologies more accessible to the broader robotics community. These additions leverage existing Nvidia resources and increase access for both AI and robotics developers.",
+      "summary": "Nvidia and Hugging Face expanded their collaboration to integrate new AI tools into the open-source LeRobot platform. This expansion includes integrating Nvidia Isaac GR00T 1.7, an open vision-language-action model, and the Isaac Teleop framework. These additions aim to provide a standardized workflow for collecting data, training, and deploying AI-powered robots. Future plans involve incorporating Nvidia Cosmos 3 to allow access to world foundation models for synthetic data generation and policy development. The partnership seeks to broaden access to physical AI technologies by combining the developer communities of both companies.",
       "tags": [
         "robotics",
         "model",
@@ -38,34 +38,54 @@
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 2,
-      "audio_script": "From Robotics & Automation News, Nvidia and Hugging Face expand LeRobot with new open robotics AI tools. This report details an expansion of the LeRobot platform through the integration of new artificial intelligence models and robotics frameworks. The expansion involved incorporating Nvidia Isaac GR00T 1.7 and the Isaac Teleop framework to establish standardized workflows for data collection, training, and deployment in robotics applications. Future plans include integrating Nvidia Cosmos 3 to provide access to world foundation models for synthetic data generation and policy development within the system. This collaboration aims to increase accessibility to advanced physical AI technologies for the broader robotics community by leveraging existing Nvidia resources. The integration is expected to accelerate the development of open-source robotics AI tools.",
+      "audio_script": "From Robotics & Automation News, Nvidia and Hugging Face expand LeRobot with new open robotics AI tools. This report details the integration of new artificial intelligence tools into the open-source LeRobot platform. The expansion incorporates Nvidia Isaac GR00T 1.7, an open vision-language-action model, and the Isaac Teleop framework to establish a standardized workflow for data collection, training, and deployment of artificial intelligence powered robots. Future plans involve incorporating Nvidia Cosmos 3 to grant access to world foundation models for synthetic data generation and policy development. This partnership intends to increase access to physical artificial intelligence technologies by merging the developer communities of both organizations. The development indicates a push toward democratizing access to sophisticated robotics AI capabilities.",
       "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 83
+      "chapter_start_seconds": 76
+    },
+    {
+      "title": "Toyota and Nvidia expand partnership to develop AI for vehicles, factories and cities",
+      "link": "https://roboticsandautomationnews.com/2026/07/18/toyota-and-nvidia-expand-partnership-to-develop-ai-for-vehicles-factories-and-cities/103485/",
+      "source": "Robotics & Automation News",
+      "summary": "Toyota and Nvidia expanded their partnership to develop physical AI technologies for vehicles, factories, and cities. This collaboration involves deploying Nvidia's computing, AI software, and simulation tools across various business areas. Focus areas include advanced driver-assistance systems, using Nvidia models to accelerate automotive software engineering, and creating digital twins for factory simulation. Furthermore, the partnership includes developing multimodal vision-language models for urban traffic analysis through Woven by Toyota. The goal is to build the AI infrastructure for more autonomous vehicles, intelligent manufacturing, and responsive urban environments.",
+      "tags": [
+        "model",
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-18T10:28:04+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 3,
+      "audio_script": "From Robotics & Automation News, Toyota and Nvidia expand partnership to develop AI for vehicles, factories and cities. This collaboration focuses on deploying Nvidia's computing power, AI software, and simulation tools across automotive, industrial, and urban sectors. The partnership involves utilizing Nvidia models to accelerate automotive software engineering and the creation of digital twins for factory simulation. Furthermore, the effort includes developing multimodal vision-language models for urban traffic analysis through Woven by Toyota. This work targets the construction of the necessary AI infrastructure for autonomous vehicles, intelligent manufacturing processes, and responsive urban environments. The development signals a tangible progression toward integrated physical AI systems across complex operational domains.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 135
     },
     {
       "title": "Fujitsu partners with Fanuc, Yaskawa and Kawasaki to advance physical AI using Nvidia technology",
       "link": "https://roboticsandautomationnews.com/2026/07/18/fujitsu-partners-with-fanuc-yaskawa-and-kawasaki-to-advance-physical-ai-using-nvidia-technology/103488/",
       "source": "Robotics & Automation News",
-      "summary": "Fujitsu is collaborating with Fanuc, Yaskawa, and Kawasaki to develop physical AI using Nvidia technology for manufacturing, logistics, and healthcare applications. The goal is to create a collaborative control platform connecting digital systems with robots and physical equipment. This initiative aims to address challenges like labor shortages and aging workforces through the adoption of physical AI. The partnership will develop an open platform integrating AI, robotics, simulation, and data analysis technologies for interoperability and security. Fujitsu will utilize Nvidia's foundation models and Omniverse libraries to enhance robot learning and simulation workflows.",
+      "summary": "Fujitsu is collaborating with Fanuc, Yaskawa, and Kawasaki to develop physical AI using Nvidia technology across manufacturing, logistics, and healthcare. The goal is to create a collaborative control platform connecting digital systems with robots and physical equipment. This initiative aims to address challenges like labor shortages and aging workforces by optimizing production, automating material handling, and assisting in medical tasks. A sovereign platform will integrate AI, robotics, simulation, and data analysis while ensuring cybersecurity and operational resilience. The partnership seeks to accelerate physical AI adoption and strengthen Japan's position in the robotics industry.",
       "tags": [
         "robotics",
-        "model"
+        "agents",
+        "safety"
       ],
       "published": "2026-07-18T10:40:28+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 3,
-      "audio_script": "From Robotics & Automation News, Fujitsu partners with Fanuc, Yaskawa and Kawasaki to advance physical AI using Nvidia technology. This collaboration aims to develop a collaborative control platform connecting digital systems with robots and physical equipment through the application of physical artificial intelligence. The initiative involves integrating AI, robotics, simulation, and data analysis technologies into an open platform designed for interoperability and security across manufacturing, logistics, and healthcare sectors. Fujitsu will leverage Nvidia's foundation models and Omniverse libraries to improve robot learning and simulation workflows within this framework established by the consortium. This work seeks to address challenges related to labor shortages and aging workforces through the implementation of physical AI systems. The resulting platform establishes a methodology for integrating complex operational data with physical robotic execution. This development signals a pathway toward more tangible, real-world applications of advanced artificial intelligence in industrial settings.",
-      "voice_index": 2,
+      "rank": 4,
+      "audio_script": "From Robotics & Automation News, Fujitsu partners with Fanuc, Yaskawa and Kawasaki to advance physical AI using Nvidia technology. This initiative focuses on developing a collaborative control platform that connects digital systems with robots and physical equipment across manufacturing, logistics, and healthcare sectors. The collaboration involves integrating Nvidia technology to create a sovereign platform that incorporates artificial intelligence, robotics, simulation, and data analysis while ensuring cybersecurity and operational resilience. This framework is designed to optimize production processes, automate material handling, and assist in medical tasks, addressing challenges related to labor shortages and aging workforces. This partnership seeks to accelerate the adoption of physical AI and enhance Japan's standing in the robotics industry. The development signals a focus on tangible applications for advanced AI in industrial settings moving forward.",
+      "voice_index": 3,
       "include_in_podcast": true,
-      "chapter_start_seconds": 143
+      "chapter_start_seconds": 196
     },
     {
       "title": "Weave Robotics launches Isaac, its first mobile humanoid robot",
       "link": "https://www.therobotreport.com/weave-robotics-launches-isaac-first-mobile-humanoid-robot/",
       "source": "The Robot Report",
-      "summary": "Weave Robotics launched Isaac 1, a wheeled humanoid robot designed for household chores like folding laundry and tidying rooms. This consumer robot features a friendly, soft exterior, adjustable height, and autonomous navigation capabilities. It can be controlled remotely via an app and operates on an eight-hour battery with a two-hour recharge time. A unique feature includes shutters on the head cameras to indicate when the robot is working, and privacy screens for charging. Isaac 1 is positioned as an affordable entry into home robotics through purchase or subscription models.",
+      "summary": "Weave Robotics has introduced Isaac 1, a wheeled, humanoid robot designed for household chores like folding laundry and tidying rooms. This consumer robot is priced at $7,999 or $449 monthly and features a friendly, soft exterior with adjustable height from 3 ft to 5 ft 9 in. It possesses autonomous navigation and can be controlled remotely via an app to schedule tasks. Isaac 1 has an eight-hour battery life and includes privacy features like camera shutters. The company positions Isaac 1 as an affordable entry into home robotics, building on the experience of its predecessor, Isaac 0.",
       "tags": [
         "robotics",
         "agents"
@@ -73,17 +93,17 @@
       "published": "2026-07-17T17:35:02+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 4,
-      "audio_script": "From The Robot Report, Weave Robotics launches Isaac, its first mobile humanoid robot. This story details the introduction of Isaac 1, a wheeled humanoid robot designed for household chores such as folding laundry and tidying rooms, demonstrating autonomous navigation capabilities. The device features a friendly, soft exterior, adjustable height, and is controlled remotely through an application. Isaac 1 operates on an eight-hour battery with a two-hour recharge time, and includes unique features like shutters on the head cameras to indicate operation and privacy screens for charging. This robot is positioned as an affordable entry into home robotics via purchase or subscription models. The development indicates a growing trend toward accessible domestic automation in the robotics sector.",
-      "voice_index": 3,
+      "rank": 5,
+      "audio_script": "From The Robot Report, Weave Robotics launches Isaac, its first mobile humanoid robot. This report details the introduction of Isaac 1, a wheeled, humanoid robot designed for household chores, demonstrating advancements in consumer robotics accessibility. The new device is priced at seven thousand nine hundred ninety-nine dollars or four hundred forty-nine dollars monthly and features a soft exterior with adjustable height ranging from three feet to five feet nine inches. Isaac 1 incorporates autonomous navigation capabilities and allows for remote control through an application to schedule tasks, boasting an eight-hour battery life and privacy features such as camera shutters. Weave Robotics positions this model as an accessible entry point into home robotics, following the development of its prior iteration. This development suggests a growing trend toward integrating functional humanoid automation into domestic settings.",
+      "voice_index": 4,
       "include_in_podcast": true,
-      "chapter_start_seconds": 222
+      "chapter_start_seconds": 269
     },
     {
       "title": "mimic Robotics unveils full-stack platform for dexterous robot manipulation",
       "link": "https://roboticsandautomationnews.com/2026/07/18/mimic-robotics-unveils-full-stack-platform-for-dexterous-robot-manipulation/103473/",
       "source": "Robotics & Automation News",
-      "summary": "mimic Robotics introduced a full-stack platform featuring the mimic hand M1, a tendon-driven robotic hand, and the mimic wearable U1 exoskeleton. This system is designed to advance general-purpose dexterous manipulation for industrial robots by collecting high-quality training data. The design maintains a human hand morphology across hardware, data collection, and model training to avoid cross-embodiment gaps. The hardware includes force sensing, high backdrivability, and tactile sensors, supported by custom middleware to reduce latency. Ultimately, the platform aims to create a general-purpose robotics foundation model for physical AI.",
+      "summary": "mimic Robotics introduced a platform featuring the mimic hand M1, a tendon-driven robotic hand, and the mimic wearable U1 exoskeleton. This system aims to advance general-purpose dexterous manipulation by collecting high-quality training data for AI models that mimic human-like manipulation. The design maintains a constant hand morphology across hardware, data collection, and model training to avoid cross-embodiment gaps. The hardware includes 15 degrees of freedom with force sensing and tactile sensors, supported by custom middleware reducing latency. This integrated approach seeks to create a foundation for general-purpose robotics.",
       "tags": [
         "robotics",
         "model"
@@ -91,108 +111,17 @@
       "published": "2026-07-18T08:00:19+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 5,
-      "audio_script": "From Robotics & Automation News, mimic Robotics unveils full-stack platform for dexterous robot manipulation. This report details the introduction of a complete system designed to advance general-purpose dexterous manipulation for industrial robots through high-quality data collection. The system incorporates the mimic hand M1, a tendon-driven robotic hand, and the mimic wearable U1 exoskeleton. The design maintains a human hand morphology across hardware, data collection, and model training to mitigate cross-embodiment gaps. Hardware components include force sensing, high backdrivability, and tactile sensors, managed by custom middleware to minimize latency. This platform is intended to establish a general-purpose robotics foundation model for physical artificial intelligence. The development signals a significant step toward creating versatile physical AI systems in industrial applications moving forward.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 281
-    },
-    {
-      "title": "Kimi K3 launch shifts AI focus to efficiency stack",
-      "link": "https://www.latent.space/p/ainews-not-much-happened-today-830",
-      "source": "latent.space",
-      "summary": "The Kimi K3 launch prompted a reassessment of AI development, shifting the focus from raw compute to the efficiency stack. K3 demonstrated strong performance in coding and frontend tasks, challenging the \"compute moat\" thesis with advancements in methods like MoE routing and data curation. Technical interest focused on K3's use of Kimi Delta Attention for faster and cheaper context processing. The value is now seen moving toward orchestration, memory architectures, and workflow scaffolding rather than just base model access. Benchmarks indicate K3 achieved frontier-level results in coding agents and frontend evaluation.",
-      "tags": [
-        "model",
-        "research"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
       "rank": 6,
-      "audio_script": "From latent.space, Kimi K3 launch shifts AI focus to efficiency stack. This report details how the Kimi K3 demonstrated strong performance in coding and frontend tasks, challenging the compute moat thesis through advancements in methods like MoE routing and data curation. Technical interest centered on the K3's utilization of Kimi Delta Attention for faster and cheaper context processing. Benchmarks indicated that K3 achieved frontier-level results in coding agents and frontend evaluations by focusing computational resources efficiently. The value is now perceived to reside in orchestration, memory architectures, and workflow scaffolding rather than solely in base model access. Industry attention is now directed toward the development of these efficiency layers for future AI systems.",
+      "audio_script": "From Robotics & Automation News, mimic Robotics unveils full-stack platform for dexterous robot manipulation. This report details the introduction of a system designed to advance general-purpose dexterous manipulation by collecting high-quality training data for artificial intelligence models mimicking human manipulation. The system incorporates the mimic hand M1, a tendon-driven robotic hand, and the mimic wearable U1 exoskeleton. The design ensures constant hand morphology across hardware, data collection, and model training to mitigate cross-embodiment gaps. The hardware features fifteen degrees of freedom accompanied by force sensing and tactile sensors, supported by custom middleware that reduces latency. This integrated approach establishes a foundation for general-purpose robotics development. This development signals a step toward more realistic and generalized artificial intelligence in physical interaction systems.",
       "voice_index": 0,
       "include_in_podcast": true,
-      "chapter_start_seconds": 341
-    },
-    {
-      "title": "Agility Robotics opens new Fremont facility to accelerate physical AI development",
-      "link": "https://roboticsandautomationnews.com/2026/07/17/agility-robotics-opens-new-fremont-facility-to-accelerate-physical-ai-development/103426/",
-      "source": "Robotics & Automation News",
-      "summary": "Agility Robotics opened a 60,000-square-foot facility in Fremont, California, to accelerate physical AI development for customer operations. This new site will function as the company's software and capabilities hub for training and testing AI technologies for their humanoid robot, Digit. The location positions Agility's development efforts within Silicon Valley's leading AI talent and innovation ecosystem. The facility will house nearly 200 employees across engineering and operations to drive next-generation AI capabilities in enterprise environments. This expansion supports growing demand from customers looking for safer and more productive humanoid robots in logistics and manufacturing.",
-      "tags": [
-        "robotics",
-        "research"
-      ],
-      "published": "2026-07-17T18:56:09+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 7,
-      "audio_script": "From Robotics & Automation News, Agility Robotics opens new Fremont facility to accelerate physical AI development. This report details the opening of a sixty thousand square foot facility in Fremont, California, which serves as the company's software and capabilities hub for training and testing AI technologies for its humanoid robot Digit. The new site will house nearly two hundred employees across engineering and operations dedicated to driving next-generation AI capabilities within enterprise environments by leveraging Silicon Valley's AI talent ecosystem. This expansion directly addresses customer demand for safer and more productive humanoid robots in logistics and manufacturing. This development signals a tangible step forward in translating advanced artificial intelligence into practical, physical robotic applications.",
-      "voice_index": 1,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 396
-    },
-    {
-      "title": "McLaren Construction to deploy autonomous robots at scale in partnership with FieldAI",
-      "link": "https://roboticsandautomationnews.com/2026/07/17/mclaren-construction-to-deploy-autonomous-robots-at-scale-in-partnership-with-fieldai/103422/",
-      "source": "Robotics & Automation News",
-      "summary": "McLaren Construction partnered with FieldAI to deploy autonomous quadruped robots on UK construction sites. These robots will capture imagery, generate point cloud data, and perform progress verification and deviation analysis against design models. This technology aims to improve quality control, reduce rework, and ensure compliance by enabling real-time monitoring of installation work. FieldAI's AI foundation models allow robots to adapt to complex, unstructured environments quickly. The collaboration supports McLaren's broader digital transformation strategy in construction.",
-      "tags": [
-        "robotics",
-        "agents",
-        "research"
-      ],
-      "published": "2026-07-17T18:46:24+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 8,
-      "audio_script": "From Robotics & Automation News, McLaren Construction to deploy autonomous robots at scale in partnership with FieldAI. This report details the deployment of autonomous quadruped robots on UK construction sites to capture imagery, generate point cloud data, and perform progress verification against design models. The collaboration involves utilizing FieldAI's AI foundation models, which enable the robots to adapt swiftly to complex, unstructured environments. These robotic systems facilitate real-time monitoring of installation work, aiming to enhance quality control, reduce rework, and ensure compliance through deviation analysis. This integration directly supports McLaren Construction's ongoing digital transformation strategy in the building sector. The advancement signals a move toward integrating advanced AI for tangible quality assurance in large-scale physical environments.",
-      "voice_index": 2,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 451
-    },
-    {
-      "title": "With new funding, Monumental plans to bring its construction robots to the U.S.",
-      "link": "https://www.therobotreport.com/with-new-funding-monumental-plans-bring-construction-robots-u-s/",
-      "source": "The Robot Report",
-      "summary": "Monumental raised $32 million in Series B funding to expand its construction robotics to the U.S. The company plans to use this funding to grow its team, launch in the U.S., and increase robot deployment across Europe. Their electric, autonomous robots use sensors and AI software to precisely lay bricks and mortar on construction sites. Monumental's model positions them as a subcontractor, providing capacity while skilled workers focus on higher-value tasks. The company emphasizes that human operators remain essential for overseeing the entire construction process.",
-      "tags": [
-        "robotics",
-        "agents"
-      ],
-      "published": "2026-07-17T12:30:10+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 9,
-      "audio_script": "From The Robot Report, \"With new funding, Monumental plans to bring its construction robots to the U.S.\" This segment details Monumental's recent financial success and expansion plans for its construction robotics technology. Monumental secured thirty-two million dollars in Series B funding with the objective of expanding its deployment of construction robotics into the United States. The company intends to utilize these funds for team growth, a U.S. market launch, and increased robot deployment across Europe. These electric, autonomous robots employ sensors and artificial intelligence software to execute the precise laying of bricks and mortar on building sites. Monumental operates within a subcontractor model, offering capacity while human operators maintain oversight of the complete construction workflow. This development signals further integration of advanced robotics into the physical construction sector.",
-      "voice_index": 3,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 515
-    },
-    {
-      "title": "Founder of Maximo discusses how robotics is accelerating solar construction",
-      "link": "https://www.therobotreport.com/transforming-solar-construction-through-robotics-deise-yumi-asami-maximo/",
-      "source": "The Robot Report",
-      "summary": "Deise Yumi Asami, founder of Maximo, details how her AI-enabled robotics startup is accelerating solar construction. Maximo utilizes AI-based vision and robotics to automate the installation of solar modules, making the process faster, safer, and more efficient. As a result, robotics, AI vision, and smart field deployment are reshaping renewable energy infrastructure development. Asamini has over 15 years of experience scaling innovative technologies in the energy industry. She also shared experiences regarding innovation within her parent company, The AES Corp.",
-      "tags": [
-        "robotics",
-        "research"
-      ],
-      "published": "2026-07-17T19:17:39+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 10,
-      "audio_script": "From The Robot Report, Founder of Maximo discusses how robotics is accelerating solar construction. This report details how an AI-enabled robotics startup utilizes AI vision and robotics to automate the installation of solar modules, resulting in a faster, safer, and more efficient construction process. Deise Yumi Asami, founder of Maximo, shared that the technology automates the placement of solar modules through advanced vision systems integrated with robotic systems on construction sites. This methodology leverages AI vision for precise module positioning and robotics for automated installation tasks, significantly streamlining the deployment phase of solar energy infrastructure. Asamini brought forward experience from scaling these innovative technologies within her parent company, The AES Corp., highlighting the practical application of these advancements in the energy sector. This development indicates a trend toward increased integration of artificial intelligence and robotics within large-scale renewable energy infrastructure development.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 583
+      "chapter_start_seconds": 327
     },
     {
       "title": "Robbyant releases LingBot-World 2.0 with hour-long real-time world generation",
       "link": "https://roboticsandautomationnews.com/2026/07/18/robbyant-releases-lingbot-world-2-0-with-hour-long-real-time-world-generation/103476/",
       "source": "Robotics & Automation News",
-      "summary": "Robbyant has open-sourced LingBot-World 2.0, a new interactive world model supporting hour-long real-time generation. This update improves upon the previous version by maintaining visual quality and real-time interaction over extended sessions. The system generates 720p video at 60 frames per second while allowing users to control characters via a platform like Reactor. It features a dual-agent architecture with a Pilot Agent and a Director Agent for dynamic world evolution. This advancement allows for collaborative, persistent virtual environments and includes expanded interactive actions such as attacking and triggering events through text prompts.",
+      "summary": "Robbyant released LingBot-World 2.0, an open-sourced interactive world model supporting hour-long, real-time world generation. This advancement allows for continuous session stability and high-definition output at 720p and 60 frames per second. The system features a dual-agent architecture with a Pilot Agent for action execution and a Director Agent for dynamic event introduction. Users can control characters and trigger events like weather changes through text prompts within the environment. Furthermore, the model supports multiple users sharing a persistent virtual environment collaboratively.",
       "tags": [
         "model",
         "agents",
@@ -201,35 +130,17 @@
       "published": "2026-07-18T08:44:47+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 11,
-      "audio_script": "From Robotics & Automation News, Robbyant releases LingBot-World 2.0 with hour-long real-time world generation. This update introduces a new interactive world model capable of generating persistent environments over extended durations while maintaining visual quality and real-time interaction. The system generates seventy-two-hundredp video at sixty frames per second and permits user control of characters through interfaces like Reactor. It operates using a dual-agent architecture comprising a Pilot Agent and a Director Agent responsible for dynamic world evolution. This advancement incorporates expanded interactive actions allowing for the triggering of events via text prompts, facilitating collaborative and persistent virtual environments. The development signals a progression in creating complex, evolving simulations within artificial intelligence systems.",
-      "voice_index": 0,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 647
-    },
-    {
-      "title": "Strider Robotics demonstrates 40 kg payload quadruped robot as commercial pilots begin",
-      "link": "https://roboticsandautomationnews.com/2026/07/18/strider-robotics-demonstrates-40-kg-payload-quadruped-robot-as-commercial-pilots-begin/103453/",
-      "source": "Robotics & Automation News",
-      "summary": "Strider Robotics has demonstrated a quadruped robot capable of carrying a 40 kg payload while maintaining stability on difficult terrain. The company is transitioning from prototyping to commercial deployment, currently working with major oil and gas and automotive clients. Strider develops autonomous quadruped robots paired with an AI software platform for industrial inspection and navigation. Their robots are designed for demanding tasks like infrastructure monitoring, mining operations, and asset inspection. The company aims to establish India as a leader in intelligent legged robotic systems for industrial and defense applications.",
-      "tags": [
-        "robotics",
-        "agents"
-      ],
-      "published": "2026-07-18T06:24:33+00:00",
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 12,
-      "audio_script": "From Robotics & Automation News, Strider Robotics demonstrates a quadruped robot as commercial pilots begin, reporting that the system successfully carried a forty kilogram payload while maintaining stability across challenging terrain. The demonstration involved a quadruped robot designed for demanding tasks utilizing an integrated artificial intelligence software platform for autonomous navigation and industrial inspection. This research focuses on developing autonomous legged robotic systems paired with AI specifically for infrastructure monitoring, mining operations, and asset inspection in oil and gas and automotive sectors. Strider Robotics is actively working with major clients to transition this technology from prototyping toward commercial deployment. This development signals a shift toward practical application of advanced legged robotics in heavy industry and defense applications. Further developments in this area are anticipated as the company pursues leadership in intelligent robotic systems.",
+      "rank": 7,
+      "audio_script": "From Robotics & Automation News, Robbyant releases LingBot-World 2.0 with hour-long real-time world generation. This development introduces an open-sourced interactive world model capable of sustaining extended, real-time environment creation. The system operates on a dual-agent architecture incorporating a Pilot Agent for direct action execution and a Director Agent responsible for introducing dynamic events. This framework allows users to influence the simulated environment through text prompts, enabling actions such as modifying weather conditions within the virtual space. The model maintains session stability while producing high-definition output at 720p resolution and sixty frames per second, facilitating collaborative access for multiple users within a single persistent environment. This advancement signals significant progress in the capability of generative AI systems to manage complex, long-form interactive simulations.",
       "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 705
+      "chapter_start_seconds": 391
     },
     {
       "title": "Video Friday: Your Robot Surgeon Will See You Now",
       "link": "https://spectrum.ieee.org/video-friday-robotic-surgery",
       "source": "IEEE Spectrum - Robotics",
-      "summary": "Video Friday shares weekly robotics videos and a calendar of upcoming robotics events. A study evaluates humanoid technology for laparoscopic surgery using a teleoperation framework, assessing its feasibility and challenges. Research on quadrupedal locomotion in complex environments introduces APT-RL, a framework enabling high-speed, multi-skill movement. New models like Lumo-2 are being introduced for generalist embodied robot learning. Furthermore, research explores how biological systems achieve seamless transitions between air and water through wing and body kinematics.",
+      "summary": "Video Friday features robotics videos and a calendar of upcoming robotics events. A study evaluates humanoid technology for laparoscopic surgery, assessing technical feasibility and clinical readiness. Research presents APT-RL, a framework for high-speed, multi-skill locomotion in quadrupedal robots like KAIST HOUND. New models like Lumo-2 advance generalist embodied robot learning. The research also explores the biomechanics of flapping-wing locomotion in birds compared to robotic systems.",
       "tags": [
         "robotics",
         "research"
@@ -237,35 +148,109 @@
       "published": "2026-07-17T16:00:01+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 13,
-      "audio_script": "From IEEE Spectrum - Robotics, \"Video Friday: Your Robot Surgeon Will See You Now\" shares weekly robotics videos and a calendar of upcoming robotics events concerning humanoid technology for laparoscopic surgery using a teleoperation framework, assessing its feasibility and challenges. Research into this area evaluated humanoid systems employing a teleoperation framework to determine surgical feasibility and associated hurdles. Further advancements include research on quadrupedal locomotion in complex environments introducing the APT-RL framework which enables high-speed, multi-skill movement. New models such as Lumo-2 are being introduced for generalist embodied robot learning while other research explores biological systems achieving seamless transitions between air and water through wing and body kinematics. This ongoing work signals progress in dexterous robotic manipulation and advanced locomotion systems.",
+      "rank": 8,
+      "audio_script": "From IEEE Spectrum - Robotics, \"Video Friday: Your Robot Surgeon Will See You Now\" features an evaluation of humanoid technology for laparoscopic surgery, assessing technical feasibility and clinical readiness. Research presented in this feature investigates the potential of humanoid robots in surgical procedures by evaluating the necessary technical feasibility and clinical readiness for such applications. The study specifically evaluates advancements in locomotion and learning frameworks, including the APT-RL framework demonstrated in quadrupedal robots such as the KAIST HOUND, which facilitates high-speed, multi-skill movement. Furthermore, new models like Lumo-2 advance the field of generalist embodied robot learning, alongside an exploration of the biomechanics inherent in flapping-wing locomotion when compared to robotic systems. This research points toward advancing practical applications for robotic systems in both medical and general locomotion domains.",
       "voice_index": 2,
       "include_in_podcast": true,
-      "chapter_start_seconds": 770
+      "chapter_start_seconds": 453
     },
     {
-      "title": "Luyten opens early reservations for Ascend A27 automated construction platform",
-      "link": "https://roboticsandautomationnews.com/2026/07/17/luyten-opens-early-reservations-for-ascend-a27-automated-construction-platform/103417/",
+      "title": "Agility Robotics opens new Fremont facility to accelerate physical AI development",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/agility-robotics-opens-new-fremont-facility-to-accelerate-physical-ai-development/103426/",
       "source": "Robotics & Automation News",
-      "summary": "Luyten has opened early reservations for its Ascend A27 automated construction platform following its global launch. Early reservation customers receive priority access to production and an introductory offer, with deposits credited toward the final price. The Ascend A27 converts tower cranes into robotic systems capable of automated large-scale 3D concrete printing. The platform integrates robotics, AI, and digital manufacturing to automate construction while utilizing existing crane infrastructure. This new system expands Luyten's portfolio into larger vertical construction applications beyond their 3D printers.",
+      "summary": "Agility Robotics opened a 60,000-square-foot facility in Fremont, California to accelerate physical AI development for customer operations. This new site will function as the company's software and capabilities hub for training and testing AI that improves humanoid performance. The location establishes Agility\u2019s Bay Area Physical AI development hub within Silicon Valley. The facility will house nearly 200 employees focusing on developing AI capabilities for their humanoid robot, Digit. This move aims to meet growing enterprise demand for safe and productive humanoid robots in environments like warehouses and manufacturing.",
       "tags": [
         "robotics",
-        "agents"
+        "research"
       ],
-      "published": "2026-07-17T18:32:32+00:00",
+      "published": "2026-07-17T18:56:09+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
-      "rank": 14,
-      "audio_script": "From Robotics & Automation News, Luyten opens early reservations for its Ascend A27 automated construction platform. This report details the opening of early reservations for the Ascend A27 platform, which functions as a system to convert tower cranes into robotic systems capable of automated large-scale three-dimensional concrete printing. The platform integrates robotics, artificial intelligence, and digital manufacturing processes to automate construction while leveraging existing crane infrastructure. Early reservation customers receive priority access to production and an introductory offer with deposits credited toward the final price. This development expands Luyten's offering into larger vertical construction applications beyond their established three-dimensional printing capabilities. The advancement signals further integration of advanced robotics into heavy industry and construction sectors.",
+      "rank": 9,
+      "audio_script": "From Robotics & Automation News, Agility Robotics opens new Fremont facility to accelerate physical AI development. This report details the opening of a sixty thousand square foot facility in Fremont, California, which serves as the company's software and capabilities hub for training and testing artificial intelligence that enhances humanoid robot performance. The new site establishes Agility\u2019s Bay Area Physical AI development hub within Silicon Valley and will accommodate nearly two hundred employees dedicated to developing AI capabilities for the Digit humanoid robot. This expansion directly addresses growing enterprise demand for safe and productive humanoid robots suitable for warehouse and manufacturing environments through focused development in this new location. This move signals an increased focus on deploying physical AI solutions in industrial settings moving forward.",
       "voice_index": 3,
       "include_in_podcast": true,
-      "chapter_start_seconds": 838
+      "chapter_start_seconds": 521
+    },
+    {
+      "title": "McLaren Construction to deploy autonomous robots at scale in partnership with FieldAI",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/mclaren-construction-to-deploy-autonomous-robots-at-scale-in-partnership-with-fieldai/103422/",
+      "source": "Robotics & Automation News",
+      "summary": "McLaren Construction partnered with FieldAI to deploy autonomous quadruped robots on UK construction sites. These robots will capture imagery, generate point cloud data, and perform tasks like progress verification and deviation analysis against design models. This capability aims to improve quality control, reduce rework, and ensure correct installation at delivery. The collaboration leverages FieldAI's Field Foundation Models for flexible operation in complex environments. This initiative supports McLaren's broader digital transformation strategy in construction.",
+      "tags": [
+        "robotics",
+        "agents",
+        "research"
+      ],
+      "published": "2026-07-17T18:46:24+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 10,
+      "audio_script": "From Robotics & Automation News, McLaren Construction to deploy autonomous robots at scale in partnership with FieldAI. This story details a collaboration involving the deployment of autonomous quadruped robots on UK construction sites designed to capture imagery, generate point cloud data, and perform progress verification against design models. The initiative utilizes FieldAI's Field Foundation Models to enable flexible operation within complex environments, allowing the robots to execute tasks such as deviation analysis and quality control checks at delivery. This integration aims to enhance installation accuracy and reduce rework by providing precise spatial data directly from the construction environment. The successful deployment supports McLaren Construction's ongoing digital transformation strategy in the building sector. Future developments in field robotics are expected to drive further adoption of foundation models in industrial settings.",
+      "voice_index": 4,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 588
+    },
+    {
+      "title": "With new funding, Monumental plans to bring its construction robots to the U.S.",
+      "link": "https://www.therobotreport.com/with-new-funding-monumental-plans-bring-construction-robots-u-s/",
+      "source": "The Robot Report",
+      "summary": "Monumental raised $32 million in Series B funding to expand its construction robotics to the U.S. The company plans to use the funds to grow its team, launch in the U.S., and expand robot capabilities beyond bricklaying. Their autonomous robots use sensors and AI software to lay bricks with millimeter precision on construction sites. Monumental's robots act as a subcontractor, augmenting skilled workers by handling repetitive masonry tasks. The company is uniquely positioned for the fragmented U.S. market due to its adaptable, software-driven approach proven in Europe.",
+      "tags": [
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-17T12:30:10+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 11,
+      "audio_script": "From The Robot Report, \"With new funding, Monumental plans to bring its construction robots to the U.S.\" This report details how Monumental secured thirty-two million dollars in Series B funding with the objective of expanding its construction robotics into the United States. The company intends to utilize these funds for team growth, a market launch within the U.S., and broadening robot capabilities beyond bricklaying. These autonomous robots employ sensors and artificial intelligence software to place bricks with millimeter accuracy on construction sites, functioning as subcontractors to augment skilled laborers by managing repetitive masonry tasks. The company is noted for its adaptable, software-driven methodology, positioning it uniquely within the fragmented U.S. market based on European success. This expansion signals further integration of advanced robotics into traditional construction sectors.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 648
+    },
+    {
+      "title": "Founder of Maximo discusses how robotics is accelerating solar construction",
+      "link": "https://www.therobotreport.com/transforming-solar-construction-through-robotics-deise-yumi-asami-maximo/",
+      "source": "The Robot Report",
+      "summary": "Deise Yumi Asami, founder of Maximo, discusses how her AI-enabled robotics startup is accelerating solar construction. Maximo utilizes AI-based vision to automate the installation of solar modules, making the process faster and safer. This technology involves smart field deployment through robotics and AI vision to reshape renewable energy infrastructure. As a result, robotics is transforming utility-scale solar construction. Asami also shares her experience starting a company within The AES Corp. innovation group.",
+      "tags": [
+        "robotics",
+        "research"
+      ],
+      "published": "2026-07-17T19:17:39+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 12,
+      "audio_script": "From The Robot Report, Founder of Maximo discusses how robotics is accelerating solar construction. This segment details how an AI-enabled robotics startup is streamlining the installation of solar modules through automated vision systems to enhance speed and safety in renewable energy infrastructure development. Deise Yumi Asami, founder of Maximo, explains that the company utilizes AI-based vision technology to automate the placement of solar modules using smart field deployment robotics. This methodology employs advanced AI vision to guide robotic systems in executing complex installation tasks, thereby reshaping utility-scale solar construction processes. Asami also noted the context of establishing the company within The AES Corp. innovation group. This development indicates a significant trend toward integrating advanced artificial intelligence and robotics into large-scale energy infrastructure projects moving forward.",
+      "voice_index": 1,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 709
+    },
+    {
+      "title": "Strider Robotics demonstrates 40 kg payload quadruped robot as commercial pilots begin",
+      "link": "https://roboticsandautomationnews.com/2026/07/18/strider-robotics-demonstrates-40-kg-payload-quadruped-robot-as-commercial-pilots-begin/103453/",
+      "source": "Robotics & Automation News",
+      "summary": "Strider Robotics has demonstrated a quadruped robot capable of carrying a 40 kg payload while maintaining stability on difficult terrain. The Bengaluru-based company is transitioning from prototyping to commercial deployment with field pilots from an oil and gas company and an automotive manufacturer. They develop autonomous quadruped robots integrated with an AI software platform for industrial inspection, navigation, and analytics. The company emphasizes its focus on increasing domestic robotics manufacturing through indigenous component development. These robots are designed for applications in energy, mining, infrastructure inspection, and security patrols.",
+      "tags": [
+        "robotics",
+        "agents",
+        "safety"
+      ],
+      "published": "2026-07-18T06:24:33+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 13,
+      "audio_script": "From Robotics & Automation News, Strider Robotics demonstrates a quadruped robot capable of carrying a forty kilogram payload while maintaining stability on difficult terrain. The company is transitioning from prototyping to commercial deployment with field pilots from an oil and gas company and an automotive manufacturer. These robots are developed as autonomous quadruped systems integrated with an artificial intelligence software platform designed for industrial inspection, navigation, and analytics. The demonstration showcased the robot's ability to manage significant weight while traversing complex environments through sophisticated control algorithms and sensor integration. Strider Robotics maintains a focus on increasing domestic robotics manufacturing by developing indigenous components for these advanced systems. This development signals advancing capabilities for autonomous systems in heavy industry sectors. Future developments in this field will be monitored closely by the industry.",
+      "voice_index": 2,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 771
     },
     {
       "title": "This Graduate Student Equips NASA\u2019s Robots With Assembly Skills",
       "link": "https://spectrum.ieee.org/graduate-student-nasas-robots-assembly",
       "source": "IEEE Spectrum - Robotics",
-      "summary": "A graduate student named Sarah Downs developed an algorithm to enable robots to install antennas on satellites. This work was done in collaboration with NASA and the U.S. Air Force. The algorithm allows the robots to correctly position antennas on satellites in space. This achievement equips NASA's robots with essential assembly skills.",
+      "summary": "A graduate student named Sarah Downs developed an algorithm for robotic assembly. This algorithm allows robots to install antennas on satellites in space. The work was a collaboration between Sarah Downs, NASA, and the U.S. Air Force. The system enables these robots to correctly insert antennas into their designated locations on satellites. This demonstrates advanced skills in robotics and space technology applications.",
       "tags": [
         "robotics",
         "research"
@@ -273,53 +258,72 @@
       "published": "2026-07-17T18:00:01+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
+      "rank": 14,
+      "audio_script": "From IEEE Spectrum - Robotics, \"This Graduate Student Equips NASA\u2019s Robots With Assembly Skills\". This story details a method developed for robotic assembly that enables space robots to correctly install satellite antennas in orbit. The work involved the development of an algorithm by a graduate student in collaboration with NASA and the U.S. Air Force. This system allows the robots to execute the precise task of inserting antennas into their designated locations on satellites through sophisticated programming. The methodology involves an algorithm designed to manage the complex spatial requirements for assembly operations in the vacuum environment of space. This achievement demonstrates advanced capabilities in robotics applied to critical space technology applications. Future developments in autonomous systems and remote operations will build upon this demonstrated capability.",
+      "voice_index": 3,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 841
+    },
+    {
+      "title": "Luyten opens early reservations for Ascend A27 automated construction platform",
+      "link": "https://roboticsandautomationnews.com/2026/07/17/luyten-opens-early-reservations-for-ascend-a27-automated-construction-platform/103417/",
+      "source": "Robotics & Automation News",
+      "summary": "Luyten, an Australian construction robotics company, has opened early reservations for its Ascend A27 automated construction platform. This system converts conventional tower cranes into robotic systems capable of automated large-scale 3D concrete printing. The platform integrates robotics, AI, digital manufacturing, and machine control to automate building while utilizing existing crane infrastructure. Early reservation customers receive priority production allocation and an introductory launch offer. Luyten intends for these early customers to form the first commercial deployment group for the new platform.",
+      "tags": [
+        "robotics",
+        "agents"
+      ],
+      "published": "2026-07-17T18:32:32+00:00",
+      "_source_type": "rss",
+      "_is_arxiv": false,
       "rank": 15,
-      "audio_script": "From IEEE Spectrum - Robotics, This Graduate Student Equips NASA\u2019s Robots With Assembly Skills. This story details a development of an algorithm enabling robots to install satellite antennas with precise positioning. The work involved a graduate student named Sarah Downs collaborating with NASA and the United States Air Force to create an algorithm that allows robotic systems to correctly position antennas on satellites in space. The developed algorithm provides the necessary instructions for these robots to execute accurate assembly tasks in the space environment. This achievement successfully equips NASA's robots with essential assembly skills through advanced algorithmic programming. This advancement demonstrates the growing capability of artificial intelligence in facilitating complex, remote robotic operations across aerospace applications.",
+      "audio_script": "From Robotics & Automation News, Luyten opens early reservations for its Ascend A27 automated construction platform, marking a significant step in the commercial deployment of advanced construction robotics. The company has initiated early reservations for its Ascend A27 system, which transforms conventional tower cranes into robotic systems capable of automated large-scale three-dimensional concrete printing. This platform integrates robotics, artificial intelligence, digital manufacturing, and machine control to automate building processes while leveraging existing crane infrastructure. Early reservation customers will receive priority production allocation and an introductory launch offer, with Luyten intending for these initial customers to establish the first commercial deployment group for the new technology. This development signals a tangible progression toward integrating sophisticated AI and automation directly into heavy industrial construction methodologies.",
       "voice_index": 4,
       "include_in_podcast": true,
-      "chapter_start_seconds": 906
+      "chapter_start_seconds": 909
     },
     {
       "title": "Interview with Jon Roberts of Inteq: \u2018The software layer is where automation investment is won or lost\u2019",
       "link": "https://roboticsandautomationnews.com/2026/07/18/interview-with-jon-roberts-of-inteq-the-software-layer-is-where-automation-investment-is-won-or-lost/103466/",
       "source": "Robotics & Automation News",
-      "summary": "Automation investment success hinges on the software layer, with Warehouse Execution Systems acting as the \"brain\" connecting hardware and people for unified control. Software-first strategies are replacing hardware-led approaches to ensure flexibility and adaptability in evolving operational needs. Autonomous Mobile Robots (AMRs) have become core infrastructure, supported by accessible models like Robotics-as-a-Service. Predictive operations driven by AI require a strong orchestration platform for real-time visibility across all systems and data. Future success in automation will depend on creating hardware-agnostic software platforms that allow for seamless, flexible growth.",
+      "summary": "Automation investment success hinges on the software layer, with Warehouse Execution Systems acting as the crucial \"brain\" connecting hardware and people for real-time control. Software-first strategies are replacing hardware-led approaches to ensure flexibility and avoid system fragmentation. Autonomous mobile robots are becoming core infrastructure, supported by accessible models like Robotics-as-a-Service, demonstrating scalable results. AI drives predictive operations through tasks like maintenance and dynamic task allocation, requiring strong orchestration platforms for effectiveness. Future success depends on creating a hardware-agnostic, integrated software platform that allows automation to evolve with business needs.",
       "tags": [
         "agents",
-        "robotics"
+        "robotics",
+        "research"
       ],
       "published": "2026-07-18T07:48:28+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 16,
-      "audio_script": "From Robotics & Automation News, \"Interview with Jon Roberts of Inteq: \u2018The software layer is where automation investment is won or lost\u2019\" reports on the critical role of the software layer in determining the success of automation investments. The interview highlights that Warehouse Execution Systems function as the central intelligence connecting physical hardware and human workflows for unified control. This perspective indicates a shift away from hardware-led strategies toward software-first approaches to achieve greater flexibility and adaptability in response to changing operational requirements. Autonomous Mobile Robots are established as core infrastructure, increasingly supported by models such as Robotics-as-a-Service. Achieving predictive operations driven by artificial intelligence necessitates a robust orchestration platform that provides real-time visibility across all integrated systems and data streams. Future success in the automation sector depends on developing hardware-agnostic software platforms that facilitate seamless and flexible expansion.",
+      "audio_script": "From Robotics & Automation News, \"Interview with Jon Roberts of Inteq: \u2018The software layer is where automation investment is won or lost\u2019\" details how success in automation investment is determined by the software layer, emphasizing that Warehouse Execution Systems function as the central brain connecting hardware and personnel for real-time control. Software-first strategies are emerging as a replacement for hardware-led approaches to achieve greater flexibility and prevent system fragmentation within automation deployments. Autonomous mobile robots are establishing themselves as core infrastructure, supported by scalable models such as Robotics-as-a-Service which demonstrate measurable results. Artificial intelligence drives predictive operations concerning tasks like maintenance and dynamic task allocation, necessitating robust orchestration platforms for optimal effectiveness across these systems. Future success in the industry depends on developing a hardware-agnostic, integrated software platform allowing automation to adapt seamlessly to evolving business requirements.",
       "voice_index": 0,
       "include_in_podcast": true,
-      "chapter_start_seconds": 959
+      "chapter_start_seconds": 970
     },
     {
       "title": "Interview with Scott Zerkle of Panasonic Connect: \u2018AI is only as good as the data it receives\u2019",
       "link": "https://roboticsandautomationnews.com/2026/07/18/interview-with-scott-zerkle-of-panasonic-connect-ai-is-only-as-good-as-the-data-it-receives/103459/",
       "source": "Robotics & Automation News",
-      "summary": "AI's greatest current value in electronics manufacturing is predictive maintenance and defect detection, supporting workers rather than replacing them. The future of smart manufacturing involves connecting data across machines, materials, and processes to allow factories to learn and improve from their production history. Component miniaturization necessitates highly precise printing and placement that must adapt in real-time. Automation helps balance quality, throughput, and resilience by monitoring the 5Ms (human, machine, material, method, measurement). The major upcoming shift will be the convergence of AI, sensing, and automation to create interconnected, self-optimizing manufacturing ecosystems.",
+      "summary": "AI's value in electronics manufacturing lies in predictive maintenance and defect detection by analyzing machine data, not replacing workers. The future of smart manufacturing involves connecting data across machines, materials, and processes to allow factories to continuously learn from their production history. Manufacturers face challenges with component miniaturization, requiring real-time correction during SMT assembly. Automation helps ensure consistency across the 5Ms (human, machine, material, method, measurement) to maintain quality and resilience. The greatest future impact will come from converging AI, sensing, and automation into a unified, interconnected manufacturing ecosystem.",
       "tags": [
-        "model",
-        "research"
+        "research",
+        "model"
       ],
       "published": "2026-07-18T07:05:42+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 17,
-      "audio_script": "From Robotics & Automation News, \"Interview with Scott Zerkle of Panasonic Connect: \u2018AI is only as good as the data it receives\u2019\". This report details the current application and future trajectory of artificial intelligence within electronics manufacturing, highlighting that AI's primary value currently lies in predictive maintenance and defect detection supporting human workers. The future of smart manufacturing involves integrating data from machines, materials, and processes to allow factories to learn and improve based on production history. Component miniaturization demands highly precise printing and placement that must adapt in real time. Automation assists in balancing quality, throughput, and resilience by monitoring the five Ms of manufacturing: human, machine, material, method, and measurement. The major upcoming shift involves the convergence of artificial intelligence, sensing, and automation to form interconnected, self-optimizing manufacturing ecosystems. This development signals a move toward fully integrated, adaptive factory environments driven by comprehensive data streams.",
+      "audio_script": "From Robotics & Automation News, \"Interview with Scott Zerkle of Panasonic Connect: \u2018AI is only as good as the data it receives\u2019\" reports on how artificial intelligence finds its value in electronics manufacturing through the analysis of machine data for predictive maintenance and defect detection rather than worker replacement. The future of smart manufacturing involves connecting data across machines materials and processes enabling factories to learn from production history. Manufacturers are addressing challenges with component miniaturization by implementing real-time correction during surface mount technology assembly. Automation supports consistency across the five Ms human machine material method and measurement to maintain quality and resilience. The most significant future impact stems from converging artificial intelligence sensing and automation into a unified interconnected manufacturing ecosystem. This convergence signals a shift toward deeply integrated, data-driven operational systems in industrial settings.",
       "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1031
+      "chapter_start_seconds": 1043
     },
     {
       "title": "Aetina adds support for Nvidia Jetson T3000 and T2000 AI modules",
       "link": "https://roboticsandautomationnews.com/2026/07/18/aetina-adds-support-for-nvidia-jetson-t3000-and-t2000-ai-modules/103456/",
       "source": "Robotics & Automation News",
-      "summary": "Aetina plans to expand its portfolio by supporting the new Nvidia Jetson T3000 and T2000 AI modules for robotics and industrial edge AI. These modules will be integrated into Aetina's upcoming DeviceEdge AIE-KT and AIE-PT fan-based and fanless systems, respectively. The Jetson T3000 offers up to 865 FP4 TFLOPS at 70W, while the T2000 provides up to 400 FP4 TFLOPS for applications like autonomous robots. Aetina's hardware families will enable customers to scale robotics projects from development to production. Nvidia anticipates module availability in the first quarter of 2027 and full support for the AI software ecosystem.",
+      "summary": "Aetina is expanding its portfolio to support the new Nvidia Jetson T3000 and T2000 AI modules for robotics and industrial edge AI. These modules will be integrated into Aetina's upcoming DeviceEdge AIE-KT and AIE-PT fan-based and fanless systems, respectively. The Jetson T3000 offers 865 FP4 TFLOPS at up to 70W, while the T2000 provides 400 FP4 TFLOPS for applications like autonomous mobile robots. Aetina aims to provide scalable and power-efficient AI computing options across robotics deployments. Nvidia anticipates these modules will be available in the first quarter of 2027.",
       "tags": [
         "robotics",
         "model"
@@ -328,86 +332,89 @@
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 18,
-      "audio_script": "From Robotics & Automation News, Aetina adds support for Nvidia Jetson T3000 and T2000 AI modules. This report details Aetina's plan to expand its portfolio by supporting the new Nvidia Jetson T3000 and T2000 AI modules for robotics and industrial edge artificial intelligence applications. Aetina intends to integrate these modules into its upcoming DeviceEdge AIE-KT and AIE-PT fan-based and fanless systems, respectively. The Jetson T3000 module offers up to 865 FP4 TFLOPS at a power consumption of 70 watts, while the T2000 provides up to 400 FP4 TFLOPS suitable for applications such as autonomous robots. This integration enables hardware families to facilitate scaling robotics projects across development and production phases. Nvidia forecasts module availability in the first quarter of 2027 along with full support for the associated AI software ecosystem. This expansion positions Aetina to enhance the capabilities of edge AI systems in the industrial sector.",
+      "audio_script": "From Robotics & Automation News, Aetina adds support for Nvidia Jetson T3000 and T2000 AI modules, expanding its portfolio to support new Nvidia AI modules for robotics and industrial edge artificial intelligence. Aetina is integrating these modules into its forthcoming DeviceEdge AIE-KT and AIE-PT systems, which are fan-based and fanless designs, respectively. The Jetson T3000 offers 865 FP4 TFLOPS at up to seventy watts of power consumption, while the T2000 provides four hundred FP4 TFLOPS for applications such as autonomous mobile robots. This integration aims to deliver scalable and power-efficient AI computing options across various robotics deployments. Nvidia anticipates that these modules will be available starting in the first quarter of 2027. This development signals further integration of high-performance edge AI hardware into specialized industrial robotics platforms.",
       "voice_index": 2,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1102
+      "chapter_start_seconds": 1111
     },
     {
-      "title": "The Download: perimenopause misinformation and China\u2019s latest AI leap",
-      "link": "https://www.technologyreview.com/2026/07/17/1140640/the-download-perimenopause-misinformation-china-moonshot-ai/",
-      "source": "MIT Technology Review - AI & Emerging Tech",
-      "summary": "Misinformation is shaping the conversation around perimenopause, as there are no tests for the condition and treatment lacks scientific evidence. The newsletter highlights several technology stories, including China's advancement in open AI models and developments in brain implants. Other topics covered involve privacy concerns with period trackers, advancements in space exploration, and the transformation of waste into agricultural resources. Furthermore, there is discussion on how technology is impacting societal aspects, such as social media monetization and facial recognition. Ultimately, the content blends health awareness with significant technological breakthroughs.",
+      "title": "Smart glasses are deeply creepy. Why are celebrities like Kylie Jenner endorsing them?",
+      "link": "https://www.theguardian.com/commentisfree/2026/jul/17/ai-meta-smart-glasses",
+      "source": "The Guardian - Artificial Intelligence",
+      "summary": "Smart glasses raise significant privacy and safety concerns regarding surveillance technology. Women, in particular, face dangers from non-consensual recording, including sexual abuse, facilitated by this technology. Despite Meta's safety features and guidelines, misuse continues, and facial recognition technology is embedded within the smart glasses. Celebrities like Kylie Jenner are endorsed to promote these products, which helps normalize concerns about pervasive monitoring. The development of such systems creates fears about governmental surveillance and loss of personal agency.",
       "tags": [
-        "model",
-        "ethics"
+        "safety",
+        "ethics",
+        "policy"
       ],
-      "published": "2026-07-17T12:10:00+00:00",
+      "published": "2026-07-17T12:00:07+00:00",
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 19,
-      "audio_script": "From MIT Technology Review - AI & Emerging Tech, \"The Download: perimenopause misinformation and China\u2019s latest AI leap\". This story examines the intersection of health misinformation regarding perimenopause and recent technological advancements in artificial intelligence. Developments detailed include China's progress in open artificial intelligence models and research into brain implants. Further topics addressed privacy concerns related to period tracking devices and innovations in converting waste materials into agricultural resources. The report also discusses societal impacts stemming from social media monetization and facial recognition technology. This content integrates health awareness with substantial technological breakthroughs. The ongoing development in AI and neurotechnology signals continued shifts in both public health discourse and technological application across various sectors.",
+      "audio_script": "From The Guardian - Artificial Intelligence, \"Smart glasses are deeply creepy. Why are celebrities like Kylie Jenner endorsing them?\". This report examines the privacy and safety concerns surrounding smart glasses and the endorsement of such technology by public figures. The technology involves embedded facial recognition capabilities that introduce significant surveillance risks. Concerns have been raised regarding the potential for non-consensual recording and sexual abuse, particularly for women, facilitated by these devices. Despite safety features implemented by companies like Meta, the presence of facial recognition technology generates anxiety about pervasive monitoring and governmental oversight. The endorsement strategy by celebrities serves to normalize these concerns about continuous personal surveillance. Future development necessitates increased scrutiny regarding data governance within augmented reality systems.",
       "voice_index": 3,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1184
-    },
-    {
-      "title": "TLDR AI Daily AI News for Technical Readers",
-      "link": "https://refer.tldr.tech/0bc55a30/2",
-      "source": "refer.tldr.tech",
-      "summary": "TLDR AI is a free daily newsletter delivering AI news, research, and tools in a quick five-minute read. It has 1,100,000 subscribers and sends updates every weekday. The content focuses on summarizing model releases, research papers, and new tools with links to the sources. It is specifically aimed at engineers, researchers, and technical professionals seeking in-depth, engineering-focused information. TLDR AI distinguishes itself by being denser and more focused on technical signals compared to broader news formats.",
-      "tags": [
-        "research",
-        "model"
-      ],
-      "published": null,
-      "_source_type": "rss",
-      "_is_arxiv": false,
-      "rank": 20,
-      "audio_script": "From refer.tldr.tech, TLDR AI Daily AI News for Technical Readers is a free daily newsletter that delivers AI news, research, and tools in a quick five-minute read summarizing model releases, research papers, and new tools with links to the sources. This publication serves engineers, researchers, and technical professionals by providing dense and focused technical signals regarding advancements in artificial intelligence. The service maintains a subscriber base of one million one hundred thousand and disseminates updates every weekday focusing on the summarization of specific model releases and technical findings from the research community. The content emphasizes engineering-focused information rather than broad coverage, aiming to provide deep technical context for the AI landscape. This focus indicates an ongoing trend toward highly specialized and technically granular dissemination of AI developments within the professional community.",
-      "voice_index": 4,
-      "include_in_podcast": true,
-      "chapter_start_seconds": 1254
+      "chapter_start_seconds": 1182
     },
     {
       "title": "Beyond Tech: Your Weekend Upgrade",
       "link": "",
       "source": "The Tech Buzz",
-      "summary": "Consumer tech highlights include an EV sales rebound, the introduction of iOS 27 Siri AI, and new OpenAI hardware like a speaker. The section also touches upon various trends across Art/Culture (AI film backlash) and Sports (World Cup robots). Furthermore, wellness features mention Biogen drugs and AI diagnostics, alongside food trends like AI F&B ROI. A related strategy is presented for scaling external traffic beyond PPC by focusing on proven channel attribution.",
+      "summary": "Consumer tech highlights include an EV sales rebound and advancements like iOS 27 Siri AI powered by Apple Intelligence and Google Gemini. OpenAI has also released a new voice-first smart speaker. Other areas feature developments in art, sports, futurism, wellness, and food/drink innovations. Additionally, a strategy playbook is offered to help eCommerce brands scale external traffic effectively beyond spending. This playbook outlines proven strategies for optimizing traffic channels to drive revenue without overspending.",
       "tags": [
-        "robotics",
         "voice",
-        "ethics"
+        "model"
       ],
       "published": null,
       "_source_type": "email",
       "_is_arxiv": false,
-      "rank": 21,
-      "audio_script": "From The Tech Buzz, \"Beyond Tech: Your Weekend Upgrade\". This segment covers consumer technology highlights including an electric vehicle sales rebound, the release of iOS 27 with new Siri AI features, and novel OpenAI hardware such as a speaker. The reporting also addresses trends in art and culture, noting a backlash against artificial intelligence in film, alongside developments in sports concerning World Cup robotics. Further wellness trends involve Biogen drugs and AI diagnostics, while food trends focus on the return on investment for AI in the food and beverage sector. A related strategy discussed involves scaling external traffic beyond pay-per-click advertising by emphasizing proven channel attribution methods. These developments indicate a continuing integration of artificial intelligence across consumer goods, entertainment, and health sectors.",
-      "voice_index": 0,
+      "rank": 20,
+      "audio_script": "From The Tech Buzz, \"Beyond Tech: Your Weekend Upgrade\" highlights consumer technology developments, noting a rebound in electric vehicle sales and advancements in artificial intelligence across platforms. Developments include the release of iOS 27 featuring Siri AI powered by Apple Intelligence and Google Gemini, alongside OpenAI's introduction of a new voice-first smart speaker. Furthermore, innovations are present in the domains of art, sports, futurism, wellness, and food and drink sectors. A strategy playbook has also been offered to assist eCommerce brands in scaling external traffic effectively through optimized channel strategies. This playbook details methods for maximizing revenue generation while managing advertising expenditures responsibly. The ongoing integration of advanced AI systems signals a continued acceleration in personalized interaction and automated systems development across the industry.",
+      "voice_index": 4,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1313
+      "chapter_start_seconds": 1251
     },
     {
-      "title": "Monk wine booming amidst falling booze sales",
-      "link": "https://thehustle.co/home/?_hsenc=p2ANqtz-9bWEQ90Ve9pzBET9ATMf2n5B2g7Nnz9O-1J10xDMT9UrrG8qZGLeSkFs2myXxqy3WSWykn_weyzhOgV_-Tb1ppAhk97A&_hsmi=428918557",
-      "source": "thehustle.co",
-      "summary": "Wine made by British monks is currently performing well despite declining overall booze sales. This monk-made wine is noted as a successful product amidst the overall freefall in alcohol sales. The provided text juxtaposes this success against various other trending topics, including AI, tourism, and business ventures. Other subjects discussed involve various startups, economics of amusement parks, and biotech protein creation. Ultimately, the focus highlights niche success within an industry experiencing broader contraction.",
-      "tags": [],
+      "title": "Perimenopause misinformation and treatment realities",
+      "link": "https://www.technologyreview.com/2026/07/17/1140608/theres-a-lot-of-hype-around-perimenopause-dont-buy-it/?utm_source=the_download&utm_medium=email&utm_campaign=the_download.unpaid.engagement&utm_term=&utm_content=07-17-2026&mc_cid=cd446ceed4&mc_eid=UNIQID",
+      "source": "technologyreview.com",
+      "summary": "Perimenopause is the often confusing period before menopause, characterized by fluctuating hormone levels. Information surrounding perimenopause is abundant but often inaccurate, leading to misinformation about treatment options. Hormone Replacement Therapy (HRT) may help some symptoms but has limitations in perimenopausal women and carries risks like abnormal bleeding. Marketing for supplements lacks strong evidence, and not all midlife symptoms are directly caused by hormonal changes. Therefore, seeking medical advice rather than relying solely on social media trends is recommended for symptom management.",
+      "tags": [
+        "ethics",
+        "safety"
+      ],
+      "published": null,
+      "_source_type": "rss",
+      "_is_arxiv": false,
+      "rank": 21,
+      "audio_script": "From technologyreview.com, \"Perimenopause misinformation and treatment realities\" reports on the often inaccurate information surrounding perimenopause and the realities of available treatments. Hormone Replacement Therapy may offer some symptom relief for some individuals but presents limitations during this phase and carries risks such as abnormal bleeding. The report indicates that marketing for various supplements lacks robust evidence, and not all midlife symptoms are directly attributable to hormonal fluctuations. Therefore, seeking professional medical advice is advised over relying on social media trends for symptom management. This underscores the necessity of evidence-based information in health discussions. The technology and information sectors should focus on validating health data streams moving forward.",
+      "voice_index": 0,
+      "include_in_podcast": true,
+      "chapter_start_seconds": 1311
+    },
+    {
+      "title": "Debit card fights hunger funding meals through purchases",
+      "link": "https://www.techbuzz.ai/articles/eat-card-app-launch-visa-debit-card-funds-meals",
+      "source": "techbuzz.ai",
+      "summary": "A new debit card, the EAT Card, launched via an app aims to fight hunger by funding relief through merchant transaction fees. Two percent of every swipe funds hunger relief organizations without charging the cardholder any extra fees. The card also offers rewards, such as up to 15% cash back and points, to the user. Funds are loaded via standard ACH transfers from a US bank account, and the card is issued by i3 Bank under Visa licensing. The initiative extends to a separate business card for organizations through a partnership with Crowded.",
+      "tags": [
+        "ethics",
+        "policy"
+      ],
       "published": null,
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 22,
-      "audio_script": "From thehustle.co, \"Monk wine booming amidst falling booze sales\". This report examines the performance of wine produced by British monks and its success despite a decline in overall alcohol sales. The monk-made wine is noted as a successful product within the context of a general freefall in alcohol market figures. Reports indicate that this specific category of wine has maintained or increased market traction while broader alcohol consumption experiences a contraction across various sectors. This niche success contrasts with wider economic trends involving advancements in artificial intelligence, tourism development, and emerging business ventures such as various startups and the economics of amusement parks. Furthermore, developments in biotech protein creation are also noted within this broader context. The focus remains on localized market success amidst larger industry shifts in technology and consumption patterns.",
+      "audio_script": "From techbuzz.ai, \"Debit card fights hunger funding meals through purchases\". This report details the launch of a new debit card designed to combat hunger by utilizing merchant transaction fees for relief funding. The EAT Card operates through an application and allocates two percent of every swipe directly to hunger relief organizations without imposing any additional fees on the cardholder. Funds are disbursed via standard ACH transfers from a US bank account, and the card is issued under Visa licensing by i3 Bank. Furthermore, the system incorporates rewards for users, offering up to fifteen percent cash back and points. A separate business card initiative exists through a partnership with Crowded for organizational funding purposes. This development demonstrates the potential for consumer finance tools to integrate direct charitable mechanisms into daily transactions. Future developments in fintech integration are anticipated.",
       "voice_index": 1,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1373
+      "chapter_start_seconds": 1366
     },
     {
-      "title": "Fragrance Clubs Become New Social Connections",
+      "title": "Fragrance clubs connect people through scent",
       "link": "https://thehustle.co/news/fragrance-clubs-are-the-new-book-clubs?_hsenc=p2ANqtz-9bWEQ90Ve9pzBET9ATMf2n5B2g7Nnz9O-1J10xDMT9UrrG8qZGLeSkFs2myXxqy3WSWykn_weyzhOgV_-Tb1ppAhk97A&_hsmi=428918557",
       "source": "thehustle.co",
-      "summary": "Fragrance clubs are emerging as new forms of social connection by turning the solo experience of smelling into a collective one. These clubs take various forms, including blind-sniff meetups, workshops, and fragrance swaps, spreading across cities like LA, Berlin, and Shanghai. Behind this trend are a booming fragrance industry driven by Gen Zers and a desire for in-person socialization among lonely people. Scent clubs foster community through shared experiences focusing on how scents evoke feelings rather than complex technical knowledge. They offer accessible social activities similar to book or wine clubs with open invitations.",
+      "summary": "Fragrance clubs are emerging as a form of social connection, turning the solo experience of scent into a collective one. These clubs organize events like blind-sniff meetups, workshops, and fragrance swaps across various cities globally. The trend is fueled by a growing fragrance industry and a desire for in-person socialization among lonely individuals. These clubs foster community by focusing on personal feelings evoked by scents rather than complex technical knowledge. Similar to book or wine clubs, they offer an accessible and meaningful way to connect through shared sensory experiences.",
       "tags": [
         "ethics"
       ],
@@ -415,10 +422,10 @@
       "_source_type": "rss",
       "_is_arxiv": false,
       "rank": 23,
-      "audio_script": "From thehustle.co, \"Fragrance Clubs Become New Social Connections\". This report details the emergence of fragrance clubs as a novel method for social connection by transforming the individual experience of smelling into a collective activity. These clubs manifest in various formats such as blind-sniff meetups, workshops, and fragrance swaps, currently operating in metropolitan areas including Los Angeles, Berlin, and Shanghai. This trend is fueled by a growing fragrance industry interest among Generation Z and a documented desire for in-person socialization. The clubs establish community through shared sensory experiences focused on emotional evocation rather than technical knowledge, functioning similarly to established book or wine clubs with open invitations. This phenomenon indicates a consumer shift toward experiential social engagement within the wellness and lifestyle sectors.",
+      "audio_script": "From thehustle.co, \"Fragrance clubs connect people through scent\". This report details the emergence of fragrance clubs as a method for social connection by transforming individual scent experiences into collective group activities across various global cities. These clubs organize events such as blind-sniff meetups workshops and fragrance swaps. The trend is supported by growth in the fragrance industry and a recognized need for in-person socialization among some populations. These initiatives cultivate community by emphasizing personal emotional responses to scents rather than complex technical knowledge, establishing shared sensory experiences akin to book or wine clubs. The movement highlights a demand for accessible methods of interpersonal connection. Future developments may see integration of sensory technology into social platforms.",
       "voice_index": 2,
       "include_in_podcast": true,
-      "chapter_start_seconds": 1434
+      "chapter_start_seconds": 1428
     }
   ]
 }
