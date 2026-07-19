@@ -11,8 +11,11 @@ The pipeline itself lives in the standalone [`news-radar`](https://github.com/ke
 package (`/Users/keithfry/projects/news-radar`). The runtime consumer — config
 and the entrypoint that runs it — lives in its own repo,
 `/Users/keithfry/projects/techradar/` (NOT in this repo), which depends on
-`news-radar` as an editable local package and publishes generated output back
-into this repo's `techradar/` directory via a publish hook.
+`news-radar` as an editable local package and publishes generated output into
+its own `techradar/` directory (the GitHub Pages docroot for
+https://keithfry.github.io/techradar/), via a publish hook that commits/pushes
+that repo. This repo's only remaining role is `data/ai-rss-feeds.csv`, which
+`~/projects/techradar/config/topics.toml`'s `feeds_csv` reads.
 
 ## How to Run
 
@@ -66,8 +69,9 @@ uv run run.py --config config/topics.toml --date 2026-04-18 --time 08:00 --no-em
 
 ## Output
 
+All paths relative to `~/projects/techradar/` (its own repo, not this one):
 - AI HTML: `techradar/AI/ai-radar-YYYY-MM-DD.html`
 - Robotics HTML: `techradar/Robotics/robotics-radar-YYYY-MM-DD.html`
 - JSON/MP3/chapters: same directory as HTML, same date prefix
 - Log: `logs/techradar-agent-YYYY-MM-DD.log`
-- Committed and pushed automatically (unless `--dry-run`)
+- Committed and pushed to the `techradar` repo automatically (unless `--dry-run`)
