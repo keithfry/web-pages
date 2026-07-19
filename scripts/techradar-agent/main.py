@@ -25,12 +25,12 @@ ET = ZoneInfo("America/New_York")
 
 from config import (
     LOOKBACK_HOURS, SUMMARIZE_MODEL, RANK_MODEL, DEDUP_MODEL,
-    LLM_WORKERS, URL_WORKERS, AD_DETECTOR_MODEL, AD_GATE_ENABLED,
+    LLM_WORKERS, URL_WORKERS, ARTICLE_BODY_CHAR_CAP, AD_DETECTOR_MODEL, AD_GATE_ENABLED,
     AI_OUTPUT_DIR, ROBOTICS_OUTPUT_DIR,
 )
 from feed_fetcher import fetch_all_feeds, is_arxiv
 from email_fetcher import fetch_emails
-from article_fetcher import fetch_article_text, source_name_from_url
+from article_fetcher import fetch_article_text, source_name_from_url, enrich_with_full_text
 from llm import summarize, summarize_title, tag, classify_ai, classify_robotics, classify_ad, deduplicate, llm_stats, unload_all_models
 from html_generator import generate_html
 from publisher import save_html, commit_and_push
@@ -259,8 +259,8 @@ def _fetch_links_parallel(email_items: list[dict]) -> list[dict]:
             "title": "",
             "link": url,
             "source": source,
-            "summary": text[:3000],
-            "body": text[:3000],
+            "summary": text[:ARTICLE_BODY_CHAR_CAP],
+            "body": text[:ARTICLE_BODY_CHAR_CAP],
             "_from_email_link": True,
         }
 
@@ -526,6 +526,7 @@ def _run_topic(
     if rss_errors:
         for e in rss_errors:
             log(f"  ERROR {e['source']}: {e['error']}")
+    enrich_with_full_text(rss_articles, URL_WORKERS, ARTICLE_BODY_CHAR_CAP, log)
     log("")
 
     # --- Step 2: Process emails (fetched once in main, classified per topic) ---

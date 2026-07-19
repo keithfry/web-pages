@@ -55,5 +55,8 @@ LLM_WORKERS: int = int(os.environ.get("LLM_WORKERS", 2))
 # Parallel workers for URL fetching (I/O bound — can be higher than LLM_WORKERS)
 URL_WORKERS: int = int(os.environ.get("URL_WORKERS", 10))
 
+# Max chars of fetched article body text kept per article (post-extraction)
+ARTICLE_BODY_CHAR_CAP: int = int(os.environ.get("ARTICLE_BODY_CHAR_CAP", 20000))
+
 # Parallel workers for Kokoro TTS synthesis — each worker loads its own KPipeline instance
 TTS_WORKERS: int = int(os.environ.get("TTS_WORKERS", 2))

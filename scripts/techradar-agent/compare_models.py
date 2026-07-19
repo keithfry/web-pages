@@ -23,16 +23,38 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import ollama
 
-from config import LOOKBACK_HOURS
+from article_fetcher import enrich_with_full_text
+from config import ARTICLE_BODY_CHAR_CAP, LOOKBACK_HOURS, URL_WORKERS
 from feed_fetcher import fetch_all_feeds
 
-MODELS = ["gemma4:e4b", "gemma4:12b-mlx", "llama3.1:8b", "llama3.2:3b"]
-JUDGE_MODEL = "qwen3.6:35b-a3b"
+MODELS = ["gemma4:e4b", "gemma4:e2b", "gemma4:12b-mlx", "gemma3:4b", "granite3.2:2b"]
+JUDGE_MODEL = "nemotron-3-super:cloud"  # qwen3.5:397b-cloud requires paid Ollama subscription (403)
 ARTICLE_COUNT = 30
+JUDGE_TIMEOUT_SECONDS = 90
+JUDGE_MAX_RETRIES = 2
+
+_judge_client = ollama.Client(timeout=JUDGE_TIMEOUT_SECONDS)
+
+
+def _unload_model(model: str) -> None:
+    """Stop a running Ollama model and wait for VRAM to free before continuing."""
+    try:
+        ollama.generate(model=model, prompt="", keep_alive=0)
+    except Exception as e:
+        print(f"  (warn) could not unload {model}: {e}", flush=True)
+    time.sleep(5)
+    try:
+        loaded = [m["model"] for m in ollama.ps()["models"]]
+    except Exception:
+        loaded = []
+    if model in loaded:
+        print(f"  (warn) {model} still shows loaded after unload+5s wait", flush=True)
+    else:
+        print(f"  {model} unloaded, VRAM free", flush=True)
 
 
 def _get_model_size(model: str) -> str:
-    """Return human-readable model size from ollama."""
+    """Return human-readable disk size from ollama."""
     try:
         models = ollama.list()["models"]
         for m in models:
@@ -45,44 +67,71 @@ def _get_model_size(model: str) -> str:
     return "?"
 
 
+def _get_param_count(model: str) -> str:
+    """Return human-readable parameter count from ollama."""
+    try:
+        info = ollama.show(model)
+        return info.get("details", {}).get("parameter_size", "?")
+    except Exception:
+        return "?"
+
+
 def _summarize(
     article_num: int, title: str, text: str, model: str
 ) -> tuple[str, float]:
     prompt = (
         "Summarize the following article in 3-4 sentences. "
         "Be specific and factual. Return only the summary, no preamble.\n\n"
-        f"Title: {title}\n\nContent:\n{text[:2000]}"
+        f"Title: {title}\n\nContent:\n{text}"
     )
     t0 = time.perf_counter()
     response = ollama.chat(
         model=model,
         messages=[{"role": "user", "content": prompt}],
         think=False,
+        options={"num_ctx": 16384},
     )
     elapsed = time.perf_counter() - t0
     print(f"  [#{article_num}] {model} {elapsed:.2f}s", flush=True)
     return response["message"]["content"].strip(), elapsed
 
 
-def _judge(article_num: int, title: str, summaries: dict[str, str]) -> dict:
+def _judge(article_num: int, title: str, text: str, summaries: dict[str, str]) -> dict:
     sections = "\n\n".join(f"=== Model: {m} ===\n{s}" for m, s in summaries.items())
     prompt = (
-        "You are evaluating AI-generated article summaries. "
-        "Score each summary from 0.0 to 10.0 based on accuracy, clarity, "
+        "You are evaluating AI-generated article summaries against the source article. "
+        "Score each summary from 0.0 to 10.0 based on factual accuracy against the source "
+        "(penalize hallucinated or unsupported claims heavily), clarity, "
         "completeness, and conciseness. Then give a composite ranking.\n\n"
         f"Article #{article_num}: {title}\n\n"
+        f"Source content:\n{text}\n\n"
         f"{sections}\n\n"
         "Return a JSON object with this exact shape:\n"
         '{"scores": {"<model_name>": <score>, ...}, "winner": "<model_name>", '
         '"reasoning": "<one sentence>"}'
     )
     t0 = time.perf_counter()
-    response = ollama.chat(
-        model=JUDGE_MODEL,
-        messages=[{"role": "user", "content": prompt}],
-        format="json",
-        think=False,
-    )
+    for attempt in range(1, JUDGE_MAX_RETRIES + 2):
+        try:
+            response = _judge_client.chat(
+                model=JUDGE_MODEL,
+                messages=[{"role": "user", "content": prompt}],
+                format="json",
+                think=False,
+                options={"num_ctx": 16384},
+            )
+            break
+        except Exception as e:
+            print(
+                f"  [#{article_num}] {JUDGE_MODEL} (judge) attempt {attempt} failed: {e}",
+                flush=True,
+            )
+            if attempt == JUDGE_MAX_RETRIES + 1:
+                return {
+                    "scores": {m: 0.0 for m in summaries},
+                    "winner": "unknown",
+                    "reasoning": f"judge call failed after {attempt} attempts: {e}",
+                }
     elapsed = time.perf_counter() - t0
     print(f"  [#{article_num}] {JUDGE_MODEL} (judge) {elapsed:.2f}s", flush=True)
     try:
@@ -97,6 +146,7 @@ def _judge(article_num: int, title: str, summaries: dict[str, str]) -> dict:
 
 def _generate_image(
     models: list[str],
+    param_counts: dict[str, str],
     sizes: dict[str, str],
     avg_latency: dict[str, float],
     avg_scores: dict[str, float],
@@ -104,7 +154,8 @@ def _generate_image(
 ) -> None:
     col_labels = [
         "Model",
-        "Size",
+        "# Parameters",
+        "Disk Size",
         "Avg Latency",
         "Avg Quality\nScore (0–10)",
         "Final Score\n(0–10)",
@@ -114,6 +165,7 @@ def _generate_image(
         rows.append(
             [
                 m,
+                param_counts.get(m, "?"),
                 sizes.get(m, "?"),
                 f"{avg_latency[m]:.2f}s",
                 f"{avg_scores[m]:.2f}",
@@ -122,7 +174,7 @@ def _generate_image(
         )
 
     # Sort by final score descending
-    rows.sort(key=lambda r: float(r[4]), reverse=True)
+    rows.sort(key=lambda r: float(r[5]), reverse=True)
 
     fig, ax = plt.subplots(figsize=(10, 2.8 + len(rows) * 0.7))
     ax.axis("off")
@@ -150,14 +202,14 @@ def _generate_image(
         for col in range(len(col_labels)):
             cell = table[row_idx, col]
             cell.set_facecolor(bg)
-            if col == 4 and row_idx == 1:
+            if col == 5 and row_idx == 1:
                 cell.set_text_props(fontweight="bold", color="#0066cc")
 
     # Formula note — anchored just below the table
     ax.text(
         0.5,
         0.02,
-        "Final Score = 0.7 × Avg Quality Score  +  0.3 × Avg Latency",
+        "Final Score = 0.7 × Avg Quality Score  +  0.3 × Relative Avg Latency",
         transform=ax.transAxes,
         fontsize=10,
         ha="center",
@@ -193,7 +245,15 @@ def main() -> None:
         if a.get("title") and (a.get("body") or a.get("summary") or "").strip()
     ]
     articles = articles[:ARTICLE_COUNT]
-    print(f"Using {len(articles)} articles\n", flush=True)
+    enrich_with_full_text(articles, URL_WORKERS, ARTICLE_BODY_CHAR_CAP, print)
+    lengths = [len(a.get("body", "") or a.get("summary", "")) for a in articles]
+    avg_len = sum(lengths) / len(lengths) if lengths else 0
+    print(
+        f"Using {len(articles)} articles "
+        f"(avg content length: {avg_len:.0f} chars, "
+        f"min: {min(lengths, default=0)}, max: {max(lengths, default=0)})\n",
+        flush=True,
+    )
 
     # summaries[i] = {model: summary_text}
     summaries: dict[int, dict[str, str]] = {i: {} for i in range(len(articles))}
@@ -209,19 +269,22 @@ def main() -> None:
             summary, elapsed = _summarize(i + 1, title, text, model)
             summaries[i][model] = summary
             latencies[model].append(elapsed)
+        _unload_model(model)
         print(flush=True)
 
     # --- Phase 2: judge all articles sequentially with qwen ---
     print(f"── {JUDGE_MODEL}: judging {len(articles)} articles ──", flush=True)
     judgments: list[dict] = []
     for i, article in enumerate(articles):
-        judgment = _judge(i + 1, article["title"], summaries[i])
+        article_text = article.get("body", "") or article.get("summary", "")
+        judgment = _judge(i + 1, article["title"], article_text, summaries[i])
         judgments.append(judgment)
         print(
             f"  [#{i+1}] winner={judgment.get('winner')}  scores={judgment.get('scores')}",
             flush=True,
         )
     print(flush=True)
+    _unload_model(JUDGE_MODEL)
 
     # --- Write output file ---
     lines = [
@@ -310,7 +373,10 @@ def main() -> None:
 
     # --- Generate comparison image ---
     model_sizes = {m: _get_model_size(m) for m in MODELS}
-    _generate_image(MODELS, model_sizes, avg_latency, avg_scores, final_scores)
+    model_params = {m: _get_param_count(m) for m in MODELS}
+    _generate_image(
+        MODELS, model_params, model_sizes, avg_latency, avg_scores, final_scores
+    )
     print("Image written to compare_models.png")
 
 

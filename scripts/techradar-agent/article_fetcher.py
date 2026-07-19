@@ -1,10 +1,13 @@
 """Fetch and extract readable text from an article URL."""
 
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urlparse
 
 import requests
 from bs4 import BeautifulSoup
+
+from config import ARTICLE_BODY_CHAR_CAP, URL_WORKERS
 
 _HEADERS = {
     "User-Agent": (
@@ -77,3 +80,36 @@ def fetch_article_text(url: str, timeout: int = 10) -> str | None:
         return None
 
     return result
+
+
+def enrich_with_full_text(
+    articles: list[dict],
+    url_workers: int = URL_WORKERS,
+    char_cap: int = ARTICLE_BODY_CHAR_CAP,
+    log=print,
+) -> None:
+    """Fetch full article HTML for each entry in place, setting `body`.
+
+    Falls back to the RSS feed's own `summary` blurb if the page can't be
+    retrieved. Used by both the production pipeline and compare_models.py
+    so both read the same full-page content.
+    """
+    if not articles:
+        return
+
+    log(f"  Fetching full article text for {len(articles)} articles ({url_workers} workers)...")
+
+    def _fetch(article: dict) -> None:
+        url = article.get("link", "")
+        if not url:
+            return
+        text = fetch_article_text(url)
+        if text:
+            article["body"] = text[:char_cap]
+        else:
+            article["body"] = article.get("summary", "")[:char_cap]
+
+    with ThreadPoolExecutor(max_workers=url_workers) as executor:
+        futures = [executor.submit(_fetch, a) for a in articles]
+        for future in as_completed(futures):
+            future.result()
